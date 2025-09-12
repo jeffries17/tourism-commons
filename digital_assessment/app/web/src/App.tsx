@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
-import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchSectorContext, fetchJustifications, fetchOpportunities, type Participant, type Dashboard, type Plan } from './api';
+import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchSectorContext, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorRanking, fetchSectorLeaders, type Participant, type Dashboard, type Plan } from './api';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -39,10 +39,43 @@ function App() {
   const [opportunities, setOpportunities] = useState<any[]>([]);
   const [quickWins, setQuickWins] = useState<any[]>([]);
   const [loadingOpportunities, setLoadingOpportunities] = useState<boolean>(false);
+  
+  // Sector Intelligence Dashboard state
+  const [sectorOverview, setSectorOverview] = useState<any>(null);
+  const [sectorRanking, setSectorRanking] = useState<any>(null);
+  const [sectorLeaders, setSectorLeaders] = useState<any>(null);
+  const [loadingSectorData, setLoadingSectorData] = useState<boolean>(false);
+  const [selectedSectorForAnalysis, setSelectedSectorForAnalysis] = useState<string>('');
 
   useEffect(() => {
     fetchSectors().then(setSectors).catch(() => setSectors([]));
   }, []);
+
+  // Load sector intelligence data when sector is selected
+  useEffect(() => {
+    if (sectorTabFilter) {
+      setLoadingSectorData(true);
+      setSelectedSectorForAnalysis(sectorTabFilter);
+      
+      // Determine comparison type based on sector
+      const isCreativeIndustry = !sectorTabFilter.toLowerCase().includes('tour operator') && 
+                                !sectorTabFilter.toLowerCase().includes('tourism');
+      const comparisonType = isCreativeIndustry ? 'creative' : 'all';
+      
+      Promise.allSettled([
+        fetchSectorOverview(sectorTabFilter).then(setSectorOverview),
+        fetchSectorRanking(comparisonType as 'creative' | 'all').then(setSectorRanking),
+        fetchSectorLeaders(sectorTabFilter).then(setSectorLeaders)
+      ]).finally(() => {
+        setLoadingSectorData(false);
+      });
+    } else {
+      setSectorOverview(null);
+      setSectorRanking(null);
+      setSectorLeaders(null);
+      setSelectedSectorForAnalysis('');
+    }
+  }, [sectorTabFilter]);
 
   useEffect(() => {
     fetchParticipants(sectorFilter || undefined)
@@ -276,46 +309,211 @@ function App() {
               Sector:{' '}
               <select value={sectorTabFilter} onChange={e => setSectorTabFilter(e.target.value)}>
                 {([''] as string[]).concat(sectors).map(s => (
-                  <option key={s} value={s}>{s || 'All sectors'}</option>
+                  <option key={s} value={s}>{s || 'Select a sector for analysis'}</option>
                 ))}
               </select>
             </label>
           </div>
-          <div className="card" style={{ marginBottom: 12 }}>
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Sector Comparison</div>
-            {dashboard ? (
-              <Bar
-                data={{
-                  labels: dashboard.sectors.map(s => s.sector),
-                  datasets: [{
-                    label: 'Avg Combined',
-                    data: dashboard.sectors.map(s => s.avgCombined),
-                    backgroundColor: '#1565c0',
-                  }],
-                }}
-                options={{
-                  indexAxis: 'y' as const,
-                  responsive: true,
-                  plugins: { legend: { display: false } },
-                  scales: { x: { beginAtZero: true, max: 100 } },
-                }}
-              />
-            ) : '—'}
-          </div>
-          <div className="card">
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Stakeholders in Sector</div>
-            {!sectorTabFilter ? (
-              <div className="card">Select a sector to view stakeholders.</div>
-            ) : (
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {sectorParticipants.length ? sectorParticipants.map(p => (
-                  <button key={p.name} className="card" onClick={() => { setSelectedParticipant(p.name); navigate(`/creative-industries/${encodeURIComponent(p.name)}`); }}>
-                    {p.name}
-                  </button>
-                )) : <div>No stakeholders found in this sector.</div>}
+
+          {!sectorTabFilter ? (
+            <div className="card" style={{ textAlign: 'center', padding: 40 }}>
+              <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 8 }}>🏢 Sector Intelligence Dashboard</div>
+              <div style={{ color: '#666', marginBottom: 16 }}>Select a sector above to view comprehensive performance analysis, benchmarking, and actionable insights.</div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginTop: 24 }}>
+                <div className="card" style={{ padding: 16 }}>
+                  <div style={{ fontSize: 24, marginBottom: 8 }}>📊</div>
+                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Performance Overview</div>
+                  <div style={{ fontSize: 12, color: '#666' }}>Health scorecard, participation rates, and maturity distribution</div>
+                </div>
+                <div className="card" style={{ padding: 16 }}>
+                  <div style={{ fontSize: 24, marginBottom: 8 }}>🏆</div>
+                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Sector Ranking</div>
+                  <div style={{ fontSize: 12, color: '#666' }}>Competitive benchmarking and performance comparison</div>
+                </div>
+                <div className="card" style={{ padding: 16 }}>
+                  <div style={{ fontSize: 24, marginBottom: 8 }}>⭐</div>
+                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Sector Champions</div>
+                  <div style={{ fontSize: 12, color: '#666' }}>Top performers and success stories</div>
+                </div>
+                <div className="card" style={{ padding: 16 }}>
+                  <div style={{ fontSize: 24, marginBottom: 8 }}>💡</div>
+                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Actionable Insights</div>
+                  <div style={{ fontSize: 12, color: '#666' }}>Sector-specific recommendations and quick wins</div>
+                </div>
               </div>
-            )}
-          </div>
+            </div>
+          ) : loadingSectorData ? (
+            <div className="card" style={{ textAlign: 'center', padding: 40 }}>
+              <div className="muted">Loading sector intelligence data...</div>
+            </div>
+          ) : (
+            <div>
+              {/* Sector Health Scorecard */}
+              {sectorOverview && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>📊 {sectorOverview.sector} - Performance Overview</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
+                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
+                      <div style={{ fontSize: 24, fontWeight: 700, color: '#1565c0' }}>{sectorOverview.avgCombined}</div>
+                      <div style={{ fontSize: 12, color: '#666' }}>Overall Score</div>
+                    </div>
+                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
+                      <div style={{ fontSize: 24, fontWeight: 700, color: '#28a745' }}>{sectorOverview.participationRate}%</div>
+                      <div style={{ fontSize: 12, color: '#666' }}>Participation Rate</div>
+                    </div>
+                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
+                      <div style={{ fontSize: 24, fontWeight: 700, color: '#ffc107' }}>{sectorOverview.totalStakeholders}</div>
+                      <div style={{ fontSize: 12, color: '#666' }}>Total Stakeholders</div>
+                    </div>
+                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
+                      <div style={{ fontSize: 24, fontWeight: 700, color: '#17a2b8' }}>{sectorOverview.completionStats.complete}</div>
+                      <div style={{ fontSize: 12, color: '#666' }}>Complete Assessments</div>
+                    </div>
+                  </div>
+                  
+                  {/* Maturity Distribution */}
+                  <div style={{ marginTop: 16 }}>
+                    <div style={{ fontWeight: 600, marginBottom: 8 }}>Maturity Distribution</div>
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      {Object.entries(sectorOverview.maturityDistribution).map(([level, count]) => (
+                        <div key={level} style={{ 
+                          padding: '4px 12px', 
+                          backgroundColor: level === 'Expert' ? '#28a745' : 
+                                         level === 'Advanced' ? '#17a2b8' : 
+                                         level === 'Intermediate' ? '#ffc107' : 
+                                         level === 'Emerging' ? '#fd7e14' : '#6c757d',
+                          color: 'white',
+                          borderRadius: 16,
+                          fontSize: 12,
+                          fontWeight: 600
+                        }}>
+                          {level}: {count as number}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Sector Ranking & Benchmarking */}
+              {sectorRanking && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>🏆 Sector Ranking & Benchmarking</div>
+                  <div style={{ marginBottom: 16 }}>
+                    <Bar
+                      data={{
+                        labels: sectorRanking.sectors.slice(0, 10).map((s: any) => s.sector),
+                        datasets: [{
+                          label: 'Average Combined Score',
+                          data: sectorRanking.sectors.slice(0, 10).map((s: any) => s.avgCombined),
+                          backgroundColor: sectorRanking.sectors.slice(0, 10).map((s: any) => 
+                            s.sector === selectedSectorForAnalysis ? '#1565c0' : '#e9ecef'
+                          ),
+                        }],
+                      }}
+                      options={{
+                        indexAxis: 'y' as const,
+                        responsive: true,
+                        plugins: { 
+                          legend: { display: false },
+                          tooltip: {
+                            callbacks: {
+                              afterLabel: (context) => {
+                                const sector = sectorRanking.sectors[context.dataIndex];
+                                return [
+                                  `Rank: #${sector.rank}`,
+                                  `Participation: ${sector.participationRate}%`,
+                                  `Stakeholders: ${sector.totalStakeholders}`
+                                ];
+                              }
+                            }
+                          }
+                        },
+                        scales: { x: { beginAtZero: true, max: 100 } },
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Current Sector Position */}
+                  {selectedSectorForAnalysis && (
+                    <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
+                      <div style={{ fontWeight: 600, marginBottom: 4 }}>
+                        {selectedSectorForAnalysis} Position
+                      </div>
+                      <div style={{ fontSize: 14, color: '#666' }}>
+                        Ranked #{sectorRanking.sectors.find((s: any) => s.sector === selectedSectorForAnalysis)?.rank || 'N/A'} out of {sectorRanking.totalSectors} sectors
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Sector Leaders & Champions */}
+              {sectorLeaders && sectorLeaders.leaders.length > 0 && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>⭐ Sector Champions</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 12 }}>
+                    {sectorLeaders.leaders.map((leader: any, index: number) => (
+                      <div key={leader.name} style={{ 
+                        padding: 16, 
+                        backgroundColor: '#fff', 
+                        border: '1px solid #e7e7e9', 
+                        borderRadius: 8,
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                      }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+                          <div style={{ 
+                            width: 32, 
+                            height: 32, 
+                            borderRadius: '50%', 
+                            backgroundColor: index === 0 ? '#ffd700' : index === 1 ? '#c0c0c0' : '#cd7f32',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: 16,
+                            fontWeight: 700,
+                            color: 'white'
+                          }}>
+                            {index + 1}
+                          </div>
+                          <div style={{ fontWeight: 600, fontSize: 14 }}>{leader.name}</div>
+                        </div>
+                        <div style={{ fontSize: 12, color: '#666', marginBottom: 8 }}>
+                          {leader.region} • {leader.maturityLevel}
+                        </div>
+                        <div style={{ display: 'flex', gap: 12, fontSize: 12 }}>
+                          <div>
+                            <div style={{ fontWeight: 600 }}>Combined</div>
+                            <div style={{ color: '#1565c0' }}>{leader.combinedScore}</div>
+                          </div>
+                          <div>
+                            <div style={{ fontWeight: 600 }}>External</div>
+                            <div style={{ color: '#28a745' }}>{leader.externalScore}</div>
+                          </div>
+                          <div>
+                            <div style={{ fontWeight: 600 }}>Survey</div>
+                            <div style={{ color: '#17a2b8' }}>{leader.surveyScore}</div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Stakeholders in Sector */}
+              <div className="card">
+                <div style={{ fontWeight: 700, marginBottom: 6 }}>Stakeholders in {selectedSectorForAnalysis}</div>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {sectorParticipants.length ? sectorParticipants.map(p => (
+                    <button key={p.name} className="card" onClick={() => { setSelectedParticipant(p.name); navigate(`/creative-industries/${encodeURIComponent(p.name)}`); }}>
+                      {p.name}
+                    </button>
+                  )) : <div>No stakeholders found in this sector.</div>}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -576,14 +774,30 @@ function App() {
               </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>Evidence & Justifications</div>
+                <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 12, cursor: 'pointer' }}>▼ Show notes (assessor evidence per category)</div>
                 {justifications && Object.keys(justifications).length ? (
-                  <ul style={{ margin: 0, paddingLeft: 18 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {Object.entries(justifications).map(([k, v]) => (
-                      <li key={k}><strong>{k}</strong>: {v}</li>
+                      <div key={k} style={{ 
+                        backgroundColor: '#fff', 
+                        padding: 12, 
+                        borderRadius: 8, 
+                        border: '1px solid #e7e7e9',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                      }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4, color: '#333' }}>{k}</div>
+                        <div style={{ fontSize: 14, color: '#666', lineHeight: 1.4 }}>{v}</div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 ) : '—'}
+              </div>
+
+              <div style={{ gridColumn: '1 / span 2', height: 1, backgroundColor: '#e7e7e9', margin: '16px 0' }}></div>
+
+              <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
+                <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
               </div>
             </div>
             )
@@ -848,14 +1062,30 @@ function App() {
               </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>Evidence & Justifications</div>
+                <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 12, cursor: 'pointer' }}>▼ Show notes (assessor evidence per category)</div>
                 {justifications && Object.keys(justifications).length ? (
-                  <ul style={{ margin: 0, paddingLeft: 18 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {Object.entries(justifications).map(([k, v]) => (
-                      <li key={k}><strong>{k}</strong>: {v}</li>
+                      <div key={k} style={{ 
+                        backgroundColor: '#fff', 
+                        padding: 12, 
+                        borderRadius: 8, 
+                        border: '1px solid #e7e7e9',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                      }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4, color: '#333' }}>{k}</div>
+                        <div style={{ fontSize: 14, color: '#666', lineHeight: 1.4 }}>{v}</div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 ) : '—'}
+              </div>
+
+              <div style={{ gridColumn: '1 / span 2', height: 1, backgroundColor: '#e7e7e9', margin: '16px 0' }}></div>
+
+              <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
+                <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
               </div>
 
             </div>

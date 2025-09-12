@@ -253,10 +253,10 @@ export function createApp() {
       const name = (req.query.name || '').toString().trim();
       if (!name) return res.status(400).json({ error: 'Missing name' });
       const sheetId = requireEnv('SHEET_ID');
-      const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AD10000');
+      const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
       let rowsTourism: string[][] = [];
       try {
-        rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AD10000');
+        rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AI10000');
       } catch {
         rowsTourism = [];
       }
@@ -373,6 +373,180 @@ export function createApp() {
       res.json({
         opportunities,
         quickWins
+      });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message || String(e) });
+    }
+  });
+
+  // Sector Intelligence Dashboard Endpoints
+
+  // Get sector overview with health metrics
+  app.get('/sector/overview', async (req: Request, res: Response) => {
+    try {
+      const sectorName = (req.query.name || '').toString();
+      if (!sectorName) {
+        res.status(400).json({ error: 'Sector name required' });
+        return;
+      }
+      
+      const sheetId = requireEnv('SHEET_ID');
+      const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+      
+      // Filter participants by sector
+      const sectorParticipants = rows
+        .slice(1)
+        .map(row => mapRowToAssessment(row))
+        .filter(p => p.sector === sectorName && p.name);
+      
+      if (sectorParticipants.length === 0) {
+        res.status(404).json({ error: 'Sector not found' });
+        return;
+      }
+      
+      // Calculate sector metrics
+      const totalStakeholders = sectorParticipants.length;
+      const withExternal = sectorParticipants.filter(p => p.externalTotal > 0).length;
+      const withSurvey = sectorParticipants.filter(p => p.surveyTotal > 0).length;
+      const complete = sectorParticipants.filter(p => p.externalTotal > 0 && p.surveyTotal > 0).length;
+      
+      const avgExternal = withExternal ? sectorParticipants.reduce((sum, p) => sum + p.externalTotal, 0) / withExternal : 0;
+      const avgSurvey = withSurvey ? sectorParticipants.reduce((sum, p) => sum + p.surveyTotal, 0) / withSurvey : 0;
+      const avgCombined = complete ? sectorParticipants.reduce((sum, p) => sum + p.combinedScore, 0) / complete : 0;
+      
+      // Maturity distribution
+      const maturityDistribution = { Expert: 0, Advanced: 0, Intermediate: 0, Emerging: 0, Absent: 0 };
+      sectorParticipants.forEach(p => {
+        const maturity = normalizeMaturity(p.maturityLevel);
+        maturityDistribution[maturity] = (maturityDistribution[maturity] || 0) + 1;
+      });
+      
+      // Category averages
+      const categoryAverages = {
+        socialMedia: sectorParticipants.reduce((sum, p) => sum + p.socialMedia, 0) / totalStakeholders,
+        website: sectorParticipants.reduce((sum, p) => sum + p.website, 0) / totalStakeholders,
+        visualContent: sectorParticipants.reduce((sum, p) => sum + p.visualContent, 0) / totalStakeholders,
+        discoverability: sectorParticipants.reduce((sum, p) => sum + p.discoverability, 0) / totalStakeholders,
+        digitalSales: sectorParticipants.reduce((sum, p) => sum + p.digitalSales, 0) / totalStakeholders,
+        platformIntegration: sectorParticipants.reduce((sum, p) => sum + p.platformIntegration, 0) / totalStakeholders
+      };
+      
+      res.json({
+        sector: sectorName,
+        totalStakeholders,
+        participationRate: Math.round((complete / totalStakeholders) * 100),
+        avgExternal: Math.round(avgExternal * 10) / 10,
+        avgSurvey: Math.round(avgSurvey * 10) / 10,
+        avgCombined: Math.round(avgCombined * 10) / 10,
+        maturityDistribution,
+        categoryAverages: Object.fromEntries(
+          Object.entries(categoryAverages).map(([k, v]) => [k, Math.round(v * 10) / 10])
+        ),
+        completionStats: {
+          withExternal,
+          withSurvey,
+          complete,
+          externalRate: Math.round((withExternal / totalStakeholders) * 100),
+          surveyRate: Math.round((withSurvey / totalStakeholders) * 100)
+        }
+      });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message || String(e) });
+    }
+  });
+
+  // Get sector ranking and benchmarking
+  app.get('/sector/ranking', async (req: Request, res: Response) => {
+    try {
+      const type = (req.query.type || 'all').toString(); // 'creative' or 'all'
+      const sheetId = requireEnv('SHEET_ID');
+      const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+      
+      // Get all sectors
+      const allSectors = new Set<string>();
+      rows.slice(1).forEach(row => {
+        const sector = (row[1] || '').toString().trim();
+        if (sector) allSectors.add(sector);
+      });
+      
+      // Filter sectors based on type
+      let sectorsToCompare = Array.from(allSectors);
+      if (type === 'creative') {
+        sectorsToCompare = sectorsToCompare.filter(s => 
+          !s.toLowerCase().includes('tour operator') && 
+          !s.toLowerCase().includes('tourism')
+        );
+      }
+      
+      // Calculate sector metrics
+      const sectorMetrics = sectorsToCompare.map(sector => {
+        const sectorParticipants = rows
+          .slice(1)
+          .map(row => mapRowToAssessment(row))
+          .filter(p => p.sector === sector && p.name);
+        
+        const complete = sectorParticipants.filter(p => p.externalTotal > 0 && p.surveyTotal > 0);
+        const avgCombined = complete.length ? complete.reduce((sum, p) => sum + p.combinedScore, 0) / complete.length : 0;
+        const participationRate = sectorParticipants.length ? Math.round((complete.length / sectorParticipants.length) * 100) : 0;
+        
+        return {
+          sector,
+          avgCombined: Math.round(avgCombined * 10) / 10,
+          participationRate,
+          totalStakeholders: sectorParticipants.length,
+          completeAssessments: complete.length
+        };
+      });
+      
+      // Sort by average combined score
+      sectorMetrics.sort((a, b) => b.avgCombined - a.avgCombined);
+      
+      // Add ranking
+      const rankedSectors = sectorMetrics.map((sector, index) => ({
+        ...sector,
+        rank: index + 1
+      }));
+      
+      res.json({
+        type,
+        sectors: rankedSectors,
+        totalSectors: rankedSectors.length
+      });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message || String(e) });
+    }
+  });
+
+  // Get sector leaders and champions
+  app.get('/sector/leaders', async (req: Request, res: Response) => {
+    try {
+      const sectorName = (req.query.name || '').toString();
+      if (!sectorName) {
+        res.status(400).json({ error: 'Sector name required' });
+        return;
+      }
+      
+      const sheetId = requireEnv('SHEET_ID');
+      const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+      
+      // Filter participants by sector
+      const sectorParticipants = rows
+        .slice(1)
+        .map(row => mapRowToAssessment(row))
+        .filter(p => p.sector === sectorName && p.name && p.externalTotal > 0)
+        .sort((a, b) => b.combinedScore - a.combinedScore)
+        .slice(0, 3); // Top 3
+      
+      res.json({
+        sector: sectorName,
+        leaders: sectorParticipants.map(p => ({
+          name: p.name,
+          combinedScore: p.combinedScore,
+          externalScore: p.externalTotal,
+          surveyScore: p.surveyTotal,
+          maturityLevel: p.maturityLevel,
+          region: p.region
+        }))
       });
     } catch (e: any) {
       res.status(500).json({ error: e.message || String(e) });

@@ -100,4 +100,60 @@ export async function fetchOpportunities(name: string): Promise<{ opportunities:
   return res.json();
 }
 
+// Sector Intelligence Dashboard API functions
+export async function fetchSectorOverview(sectorName: string): Promise<{
+  sector: string;
+  totalStakeholders: number;
+  participationRate: number;
+  avgExternal: number;
+  avgSurvey: number;
+  avgCombined: number;
+  maturityDistribution: Record<string, number>;
+  categoryAverages: Record<string, number>;
+  completionStats: {
+    withExternal: number;
+    withSurvey: number;
+    complete: number;
+    externalRate: number;
+    surveyRate: number;
+  };
+}> {
+  const res = await fetch(`${API_URL}/sector/overview?name=${encodeURIComponent(sectorName)}`);
+  if (!res.ok) throw new Error('Failed to load sector overview');
+  return res.json();
+}
+
+export async function fetchSectorRanking(type: 'creative' | 'all' = 'all'): Promise<{
+  type: string;
+  sectors: Array<{
+    sector: string;
+    avgCombined: number;
+    participationRate: number;
+    totalStakeholders: number;
+    completeAssessments: number;
+    rank: number;
+  }>;
+  totalSectors: number;
+}> {
+  const res = await fetch(`${API_URL}/sector/ranking?type=${type}`);
+  if (!res.ok) throw new Error('Failed to load sector ranking');
+  return res.json();
+}
+
+export async function fetchSectorLeaders(sectorName: string): Promise<{
+  sector: string;
+  leaders: Array<{
+    name: string;
+    combinedScore: number;
+    externalScore: number;
+    surveyScore: number;
+    maturityLevel: string;
+    region: string;
+  }>;
+}> {
+  const res = await fetch(`${API_URL}/sector/leaders?name=${encodeURIComponent(sectorName)}`);
+  if (!res.ok) throw new Error('Failed to load sector leaders');
+  return res.json();
+}
+
 
