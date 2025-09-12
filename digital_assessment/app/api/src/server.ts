@@ -553,6 +553,86 @@ export function createApp() {
     }
   });
 
+  // Get sector category comparison for radar chart
+  app.get('/sector/category-comparison', async (req: Request, res: Response) => {
+    try {
+      const sectorName = (req.query.name || '').toString();
+      const compareWith = (req.query.compare || 'all').toString(); // 'creative' or 'all'
+      
+      if (!sectorName) {
+        res.status(400).json({ error: 'Sector name required' });
+        return;
+      }
+      
+      const sheetId = requireEnv('SHEET_ID');
+      const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+      
+      // Get all sectors for comparison
+      const allSectors = new Set<string>();
+      rows.slice(1).forEach(row => {
+        const sector = (row[1] || '').toString().trim();
+        if (sector) allSectors.add(sector);
+      });
+      
+      // Filter sectors based on comparison type
+      let sectorsToCompare = Array.from(allSectors);
+      if (compareWith === 'creative') {
+        sectorsToCompare = sectorsToCompare.filter(s => 
+          !s.toLowerCase().includes('tour operator') && 
+          !s.toLowerCase().includes('tourism')
+        );
+      }
+      
+      // Calculate category averages for each sector
+      const sectorCategoryData = sectorsToCompare.map(sector => {
+        const sectorParticipants = rows
+          .slice(1)
+          .map(row => mapRowToAssessment(row))
+          .filter(p => p.sector === sector && p.name && p.externalTotal > 0);
+        
+        if (sectorParticipants.length === 0) return null;
+        
+        const categoryAverages = {
+          socialMedia: sectorParticipants.reduce((sum, p) => sum + p.socialMedia, 0) / sectorParticipants.length,
+          website: sectorParticipants.reduce((sum, p) => sum + p.website, 0) / sectorParticipants.length,
+          visualContent: sectorParticipants.reduce((sum, p) => sum + p.visualContent, 0) / sectorParticipants.length,
+          discoverability: sectorParticipants.reduce((sum, p) => sum + p.discoverability, 0) / sectorParticipants.length,
+          digitalSales: sectorParticipants.reduce((sum, p) => sum + p.digitalSales, 0) / sectorParticipants.length,
+          platformIntegration: sectorParticipants.reduce((sum, p) => sum + p.platformIntegration, 0) / sectorParticipants.length
+        };
+        
+        return {
+          sector,
+          categoryAverages: Object.fromEntries(
+            Object.entries(categoryAverages).map(([k, v]) => [k, Math.round(v * 10) / 10])
+          ),
+          participantCount: sectorParticipants.length
+        };
+      }).filter(Boolean);
+      
+      // Find the target sector data
+      const targetSector = sectorCategoryData.find(s => s?.sector === sectorName);
+      const otherSectors = sectorCategoryData.filter(s => s?.sector !== sectorName);
+      
+      res.json({
+        targetSector,
+        otherSectors,
+        comparisonType: compareWith,
+        categories: ['socialMedia', 'website', 'visualContent', 'discoverability', 'digitalSales', 'platformIntegration'],
+        categoryLabels: {
+          socialMedia: 'Social Media',
+          website: 'Website',
+          visualContent: 'Visual Content',
+          discoverability: 'Discoverability',
+          digitalSales: 'Digital Sales',
+          platformIntegration: 'Platform Integration'
+        }
+      });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message || String(e) });
+    }
+  });
+
   return app;
 }
 

@@ -68,3 +68,20 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 tourism-development-*.json
+
+# Build outputs that may contain API keys
+**/dist/
+**/build/
+**/public/gambia-itc/
+**/hosting/public/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# API Keys and secrets
+**/api-keys.json
+**/secrets.json
+**/*-key.json
