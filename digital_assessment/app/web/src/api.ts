@@ -94,7 +94,7 @@ export async function fetchSectorContext(name: string): Promise<{ sector: string
   return res.json();
 }
 
-export async function fetchOpportunities(name: string): Promise<{ opportunities: any[]; quickWins: any[] }> {
+export async function fetchOpportunities(name: string): Promise<{ customOpportunities: any[]; generatedOpportunities: any[]; quickWins: any[] }> {
   const res = await fetch(`${API_URL}/participant/opportunities?name=${encodeURIComponent(name)}`);
   if (!res.ok) throw new Error('Failed to load opportunities');
   return res.json();
