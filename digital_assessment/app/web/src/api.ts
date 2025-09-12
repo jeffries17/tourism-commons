@@ -25,7 +25,8 @@ export async function fetchSectors(): Promise<string[]> {
 }
 
 export async function fetchParticipants(sector?: string): Promise<Participant[]> {
-  const url = new URL(`${API_URL}/participants`);
+  const baseUrl = API_URL.startsWith('http') ? API_URL : `${window.location.origin}${API_URL}`;
+  const url = new URL(`${baseUrl}/participants`);
   if (sector) url.searchParams.set('sector', sector);
   const res = await fetch(url);
   if (!res.ok) throw new Error('Failed to load participants');
@@ -66,7 +67,6 @@ export type Plan = {
   profile: { name: string; sector: string; region: string; maturity: string; scores: Record<string, number> };
   external: { breakdown: Array<{ key: string; label: string; score: number; sectorAvg: number; max: number }> };
   opportunities: Array<{ category: string; current: string; target: string; actions: string[]; timeframe: string; cost: string; impact: string }>;
-  quickWins: Array<{ opportunity: string; currentToTarget: string; actions: string[]; timeframe: string; cost: string; impact: string }>;
   reasons: any;
 };
 
@@ -94,7 +94,7 @@ export async function fetchSectorContext(name: string): Promise<{ sector: string
   return res.json();
 }
 
-export async function fetchOpportunities(name: string): Promise<{ customOpportunities: any[]; generatedOpportunities: any[]; quickWins: any[] }> {
+export async function fetchOpportunities(name: string): Promise<{ customOpportunities: any[]; generatedOpportunities: any[] }> {
   const res = await fetch(`${API_URL}/participant/opportunities?name=${encodeURIComponent(name)}`);
   if (!res.ok) throw new Error('Failed to load opportunities');
   return res.json();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchSectorContext, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorRanking, fetchSectorLeaders, fetchSectorCategoryComparison, type Participant, type Dashboard, type Plan } from './api';
+import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorLeaders, fetchSectorCategoryComparison, type Participant, type Dashboard, type Plan } from './api';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -31,24 +31,28 @@ function App() {
   const [plan, setPlan] = useState<Plan | null>(null);
   const [presence, setPresence] = useState<Record<string, string> | null>(null);
   const [justifications, setJustifications] = useState<Record<string, string> | null>(null);
-  const [sectorContext, setSectorContext] = useState<{ sector: string; priorityArea: string; recommendations: string[]; total: number } | null>(null);
   const [sectorTabFilter, setSectorTabFilter] = useState<string>('');
   const [sectorParticipants, setSectorParticipants] = useState<Participant[]>([]);
   const [loadingAllParticipants, setLoadingAllParticipants] = useState<boolean>(false);
   const [loadingPlan, setLoadingPlan] = useState<boolean>(false);
   const [loadingTourOps, setLoadingTourOps] = useState<boolean>(false);
   const [customOpportunities, setCustomOpportunities] = useState<any[]>([]);
-  const [generatedOpportunities, setGeneratedOpportunities] = useState<any[]>([]);
-  const [quickWins, setQuickWins] = useState<any[]>([]);
   const [loadingOpportunities, setLoadingOpportunities] = useState<boolean>(false);
   
   // Sector Intelligence Dashboard state
   const [sectorOverview, setSectorOverview] = useState<any>(null);
-  const [sectorRanking, setSectorRanking] = useState<any>(null);
   const [sectorLeaders, setSectorLeaders] = useState<any>(null);
   const [sectorCategoryComparison, setSectorCategoryComparison] = useState<any>(null);
   const [loadingSectorData, setLoadingSectorData] = useState<boolean>(false);
   const [selectedSectorForAnalysis, setSelectedSectorForAnalysis] = useState<string>('');
+  
+  // Modal state
+  const [showFeedbackModal, setShowFeedbackModal] = useState<boolean>(false);
+  const [showAddParticipantModal, setShowAddParticipantModal] = useState<boolean>(false);
+  const [feedbackForm, setFeedbackForm] = useState<{ type: string; participant?: string; message: string; contact?: string }>({ type: 'correction', message: '' });
+  const [participantForm, setParticipantForm] = useState<{ name: string; sector: string; contact: string; notes: string }>({ name: '', sector: '', contact: '', notes: '' });
+  const [submittingFeedback, setSubmittingFeedback] = useState<boolean>(false);
+  const [submittingParticipant, setSubmittingParticipant] = useState<boolean>(false);
 
   useEffect(() => {
     fetchSectors().then(setSectors).catch(() => setSectors([]));
@@ -67,7 +71,6 @@ function App() {
       
       Promise.allSettled([
         fetchSectorOverview(sectorTabFilter).then(setSectorOverview),
-        fetchSectorRanking(comparisonType as 'creative' | 'all').then(setSectorRanking),
         fetchSectorLeaders(sectorTabFilter).then(setSectorLeaders),
         fetchSectorCategoryComparison(sectorTabFilter, comparisonType as 'creative' | 'all').then(setSectorCategoryComparison)
       ]).finally(() => {
@@ -75,7 +78,6 @@ function App() {
       });
     } else {
       setSectorOverview(null);
-      setSectorRanking(null);
       setSectorLeaders(null);
       setSectorCategoryComparison(null);
       setSelectedSectorForAnalysis('');
@@ -83,9 +85,13 @@ function App() {
   }, [sectorTabFilter]);
 
   useEffect(() => {
-    fetchParticipants(sectorTabFilter || undefined)
-      .then(setAllParticipants)
-      .catch(() => setAllParticipants([]));
+    if (sectorTabFilter) {
+      fetchParticipants(sectorTabFilter)
+        .then(setSectorParticipants)
+        .catch(() => setSectorParticipants([]));
+    } else {
+      setSectorParticipants([]);
+    }
   }, [sectorTabFilter]);
 
   useEffect(() => {
@@ -103,21 +109,36 @@ function App() {
   useEffect(() => {
     // load all participants once for dropdown, excluding tour operators
     setLoadingAllParticipants(true);
+    console.log('Fetching all participants for creative industries dropdown');
     fetchParticipants(undefined)
       .then(participants => {
+        console.log('Received all participants:', participants);
         // Filter out tour operators from the creative industries dropdown
         const creativeIndustries = participants.filter(p => 
           !(p.sector || '').toLowerCase().includes('tour operator')
         );
+        console.log('Filtered creative industries:', creativeIndustries);
         setAllParticipants(creativeIndustries);
       })
-      .catch(() => setAllParticipants([]))
+      .catch(error => {
+        console.error('Error fetching all participants:', error);
+        setAllParticipants([]);
+      })
       .finally(() => setLoadingAllParticipants(false));
   }, []);
 
   useEffect(() => {
     if (sectorTabFilter) {
-      fetchParticipants(sectorTabFilter).then(setSectorParticipants).catch(() => setSectorParticipants([]));
+      console.log('Fetching participants for sector:', sectorTabFilter);
+      fetchParticipants(sectorTabFilter)
+        .then(participants => {
+          console.log('Received participants:', participants);
+          setSectorParticipants(participants);
+        })
+        .catch(error => {
+          console.error('Error fetching participants:', error);
+          setSectorParticipants([]);
+        });
     } else {
       setSectorParticipants([]);
     }
@@ -127,11 +148,9 @@ function App() {
     if (!selectedParticipant) {
       setPlan(null);
       setPresence(null);
-      setSectorContext(null);
       setJustifications(null);
       setCustomOpportunities([]);
-      setGeneratedOpportunities([]);
-      setQuickWins([]);
+      // setGeneratedOpportunities([]);
       return;
     }
     setLoadingPlan(true);
@@ -139,12 +158,9 @@ function App() {
     Promise.allSettled([
       fetchPlan(selectedParticipant).then(setPlan),
       fetchPresence(selectedParticipant).then(setPresence),
-      fetchSectorContext(selectedParticipant).then(setSectorContext),
       fetchJustifications(selectedParticipant).then(setJustifications),
       fetchOpportunities(selectedParticipant).then(data => {
         setCustomOpportunities(data.customOpportunities || []);
-        setGeneratedOpportunities(data.generatedOpportunities || []);
-        setQuickWins(data.quickWins || []);
       })
     ]).finally(() => {
       setLoadingPlan(false);
@@ -181,7 +197,60 @@ function App() {
   return (
     <div style={{ padding: 16 }}>
       <div className="topbar">
-        <h2>The Gambia — Creative Industries & Tourism Assessment</h2>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+          <h2 style={{ margin: 0, fontSize: 24, fontWeight: 700, letterSpacing: '-0.025em' }}>The Gambia — Creative Industries & Tourism Assessment</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <div style={{ fontSize: 12, opacity: 0.9, fontWeight: 500 }}>Digital Readiness Platform</div>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button
+                onClick={() => setShowFeedbackModal(true)}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  color: '#ffffff',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                  fontSize: '13px',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                }}
+              >
+                Submit Correction
+              </button>
+              <button
+                onClick={() => setShowAddParticipantModal(true)}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(255, 255, 255, 0.9)',
+                  color: 'var(--primary)',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                  fontSize: '13px',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#ffffff';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                Add Participant
+              </button>
+            </div>
+          </div>
+        </div>
         <div className="nav">
           {(['overview', 'sector', 'participant', 'tour', 'methodology'] as Tab[]).map(t => (
             <button
@@ -310,6 +379,11 @@ function App() {
 
       {active === 'sector' && (
         <div>
+          <div className="banner">
+            <div style={{ fontSize: 20, fontWeight: 700 }}>Sector Analysis</div>
+            <div className="muted">Compare performance across creative industry sectors. Select a sector to view detailed analytics, benchmarking, and sector-specific recommendations.</div>
+          </div>
+          
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12, alignItems: 'center' }}>
             <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span style={{ fontWeight: 600, color: '#333' }}>Sector:</span>
@@ -358,16 +432,6 @@ function App() {
               <div style={{ color: '#666', marginBottom: 16 }}>Select a sector above to view comprehensive performance analysis, benchmarking, and actionable insights.</div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginTop: 24 }}>
                 <div className="card" style={{ padding: 16 }}>
-                  <div style={{ fontSize: 24, marginBottom: 8 }}>📊</div>
-                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Performance Overview</div>
-                  <div style={{ fontSize: 12, color: '#666' }}>Health scorecard, participation rates, and maturity distribution</div>
-                </div>
-                <div className="card" style={{ padding: 16 }}>
-                  <div style={{ fontSize: 24, marginBottom: 8 }}>🏆</div>
-                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Sector Ranking</div>
-                  <div style={{ fontSize: 12, color: '#666' }}>Competitive benchmarking and performance comparison</div>
-                </div>
-                <div className="card" style={{ padding: 16 }}>
                   <div style={{ fontSize: 24, marginBottom: 8 }}>⭐</div>
                   <div style={{ fontWeight: 600, marginBottom: 4 }}>Sector Champions</div>
                   <div style={{ fontSize: 12, color: '#666' }}>Top performers and success stories</div>
@@ -385,105 +449,7 @@ function App() {
             </div>
           ) : (
             <div>
-              {/* Sector Health Scorecard */}
-              {sectorOverview && (
-                <div className="card" style={{ marginBottom: 16 }}>
-                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>📊 {sectorOverview.sector} - Performance Overview</div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
-                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-                      <div style={{ fontSize: 24, fontWeight: 700, color: '#1565c0' }}>{sectorOverview.avgCombined}</div>
-                      <div style={{ fontSize: 12, color: '#666' }}>Overall Score</div>
-                    </div>
-                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-                      <div style={{ fontSize: 24, fontWeight: 700, color: '#28a745' }}>{sectorOverview.participationRate}%</div>
-                      <div style={{ fontSize: 12, color: '#666' }}>Participation Rate</div>
-                    </div>
-                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-                      <div style={{ fontSize: 24, fontWeight: 700, color: '#ffc107' }}>{sectorOverview.totalStakeholders}</div>
-                      <div style={{ fontSize: 12, color: '#666' }}>Total Stakeholders</div>
-                    </div>
-                    <div style={{ textAlign: 'center', padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-                      <div style={{ fontSize: 24, fontWeight: 700, color: '#17a2b8' }}>{sectorOverview.completionStats.complete}</div>
-                      <div style={{ fontSize: 12, color: '#666' }}>Complete Assessments</div>
-                    </div>
-                  </div>
-                  
-                  {/* Maturity Distribution */}
-                  <div style={{ marginTop: 16 }}>
-                    <div style={{ fontWeight: 600, marginBottom: 8 }}>Maturity Distribution</div>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                      {Object.entries(sectorOverview.maturityDistribution).map(([level, count]) => (
-                        <div key={level} style={{ 
-                          padding: '4px 12px', 
-                          backgroundColor: level === 'Expert' ? '#28a745' : 
-                                         level === 'Advanced' ? '#17a2b8' : 
-                                         level === 'Intermediate' ? '#ffc107' : 
-                                         level === 'Emerging' ? '#fd7e14' : '#6c757d',
-                          color: 'white',
-                          borderRadius: 16,
-                          fontSize: 12,
-                          fontWeight: 600
-                        }}>
-                          {level}: {count as number}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
 
-              {/* Sector Ranking & Benchmarking */}
-              {sectorRanking && (
-                <div className="card" style={{ marginBottom: 16 }}>
-                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>🏆 Sector Ranking & Benchmarking</div>
-                  <div style={{ marginBottom: 16 }}>
-                    <Bar
-                      data={{
-                        labels: sectorRanking.sectors.slice(0, 10).map((s: any) => s.sector),
-                        datasets: [{
-                          label: 'Average Combined Score',
-                          data: sectorRanking.sectors.slice(0, 10).map((s: any) => s.avgCombined),
-                          backgroundColor: sectorRanking.sectors.slice(0, 10).map((s: any) => 
-                            s.sector === selectedSectorForAnalysis ? '#1565c0' : '#e9ecef'
-                          ),
-                        }],
-                      }}
-                      options={{
-                        indexAxis: 'y' as const,
-                        responsive: true,
-                        plugins: { 
-                          legend: { display: false },
-                          tooltip: {
-                            callbacks: {
-                              afterLabel: (context) => {
-                                const sector = sectorRanking.sectors[context.dataIndex];
-                                return [
-                                  `Rank: #${sector.rank}`,
-                                  `Participation: ${sector.participationRate}%`,
-                                  `Stakeholders: ${sector.totalStakeholders}`
-                                ];
-                              }
-                            }
-                          }
-                        },
-                        scales: { x: { beginAtZero: true, max: 100 } },
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Current Sector Position */}
-                  {selectedSectorForAnalysis && (
-                    <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-                      <div style={{ fontWeight: 600, marginBottom: 4 }}>
-                        {selectedSectorForAnalysis} Position
-                      </div>
-                      <div style={{ fontSize: 14, color: '#666' }}>
-                        Ranked #{sectorRanking.sectors.find((s: any) => s.sector === selectedSectorForAnalysis)?.rank || 'N/A'} out of {sectorRanking.totalSectors} sectors
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
 
               {/* Sector Leaders & Champions */}
               {sectorLeaders && sectorLeaders.leaders.length > 0 && (
@@ -814,6 +780,11 @@ function App() {
 
       {active === 'participant' && (
         <div>
+          <div className="banner">
+            <div style={{ fontSize: 20, fontWeight: 700 }}>Creative Industries</div>
+            <div className="muted">Explore individual creative industry participants and their digital readiness. Select a participant to view their detailed assessment and personalized improvement plan.</div>
+          </div>
+          
           <div className="card" style={{ marginBottom: 8 }}>
             <div style={{ fontWeight: 700, marginBottom: 6 }}>Find a creative industries participant</div>
             {loadingAllParticipants ? (
@@ -982,6 +953,27 @@ function App() {
               </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
+                <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 12, cursor: 'pointer' }}>▼ Show notes (assessor evidence per category)</div>
+                {justifications && Object.keys(justifications).length ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {Object.entries(justifications).map(([k, v]) => (
+                      <div key={k} style={{ 
+                        backgroundColor: '#fff', 
+                        padding: 12, 
+                        borderRadius: 8, 
+                        border: '1px solid #e7e7e9',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                      }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4, color: '#333' }}>{k}</div>
+                        <div style={{ fontSize: 14, color: '#666', lineHeight: 1.4 }}>{v}</div>
+                      </div>
+                    ))}
+                  </div>
+                ) : '—'}
+              </div>
+
+              <div className="card" style={{ gridColumn: '1 / span 2' }}>
                 <div style={{ fontWeight: 700, marginBottom: 6 }}>External vs Sector (normalized)</div>
                 {plan?.external?.breakdown?.length ? (
                   <Bar
@@ -1007,6 +999,10 @@ function App() {
                     }}
                   />
                 ) : '—'}
+              </div>
+              
+              <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
+                <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
               </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
@@ -1041,95 +1037,17 @@ function App() {
                       </div>
                     )}
 
-                    {/* Generated Opportunities Table */}
-                    {generatedOpportunities?.length > 0 && (
-                      <div>
-                        <div style={{ fontWeight: 600, marginBottom: 12, color: '#666' }}>Generated Opportunities</div>
-                        <div style={{ overflowX: 'auto' }}>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                      <thead>
-                        <tr>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Category</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Current → Target</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Actions</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Timeframe</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Cost</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Impact</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {generatedOpportunities.map((o, i) => (
-                          <tr key={i}>
-                            <td style={{ padding: 6 }}>{o.category}</td>
-                            <td style={{ padding: 6 }}>{o.current} → {o.target}</td>
-                            <td style={{ padding: 6 }}>{o.actions.join(', ')}</td>
-                            <td style={{ padding: 6 }}>{o.timeframe}</td>
-                            <td style={{ padding: 6 }}>{o.cost}</td>
-                            <td style={{ padding: 6 }}>{o.impact}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    )}
 
-                    {!customOpportunities?.length && !generatedOpportunities?.length && '—'}
+                    {!customOpportunities?.length && '—'}
                   </>
                 )}
               </div>
 
-              <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>Quick Wins</div>
-                {loadingOpportunities ? (
-                  <div className="muted">Loading quick wins…</div>
-                ) : quickWins?.length ? (
-                  <ul style={{ margin: 0, paddingLeft: 18 }}>
-                    {quickWins.map((w, i) => (
-                      <li key={i}><strong>{w.opportunity}</strong>: {w.currentToTarget} — {w.actions.join(', ')}</li>
-                    ))}
-                  </ul>
-                ) : '—'}
-              </div>
 
-              <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>Sector Context</div>
-                {sectorContext ? (
-                  <div>
-                    <div><strong>Priority area</strong>: {sectorContext.priorityArea}</div>
-                    <div style={{ marginTop: 4 }}>
-                      <strong>Recommendations</strong>: {sectorContext.recommendations?.join(', ') || '—'}
-                    </div>
-                  </div>
-                ) : '—'}
-              </div>
-
-              <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
-                <div style={{ fontSize: 12, color: '#666', marginBottom: 12, cursor: 'pointer' }}>▼ Show notes (assessor evidence per category)</div>
-                {justifications && Object.keys(justifications).length ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    {Object.entries(justifications).map(([k, v]) => (
-                      <div key={k} style={{ 
-                        backgroundColor: '#fff', 
-                        padding: 12, 
-                        borderRadius: 8, 
-                        border: '1px solid #e7e7e9',
-                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
-                      }}>
-                        <div style={{ fontWeight: 600, marginBottom: 4, color: '#333' }}>{k}</div>
-                        <div style={{ fontSize: 14, color: '#666', lineHeight: 1.4 }}>{v}</div>
-                      </div>
-                    ))}
-                  </div>
-                ) : '—'}
-              </div>
+              
 
               <div style={{ gridColumn: '1 / span 2', height: 1, backgroundColor: '#e7e7e9', margin: '16px 0' }}></div>
 
-              <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
-                <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
-              </div>
             </div>
             )
           )}
@@ -1138,6 +1056,11 @@ function App() {
 
       {active === 'tour' && (
         <div>
+          <div className="banner">
+            <div style={{ fontSize: 20, fontWeight: 700 }}>Tour Operators</div>
+            <div className="muted">Analyze tour operator digital readiness and performance. Select a tour operator to view their assessment results and tailored recommendations for digital growth.</div>
+          </div>
+          
           <div className="card" style={{ marginBottom: 8 }}>
             <div style={{ fontWeight: 700, marginBottom: 6 }}>Tour Operators ({tourOps.length})</div>
             {loadingTourOps ? (
@@ -1332,7 +1255,10 @@ function App() {
                   />
                 ) : '—'}
               </div>
-
+              <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
+                <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
+              </div>
+              
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
                 <div style={{ fontWeight: 700, marginBottom: 6 }}>Opportunities</div>
                 {loadingOpportunities ? (
@@ -1365,68 +1291,14 @@ function App() {
                       </div>
                     )}
 
-                    {/* Generated Opportunities Table */}
-                    {generatedOpportunities?.length > 0 && (
-                      <div>
-                        <div style={{ fontWeight: 600, marginBottom: 12, color: '#666' }}>Generated Opportunities</div>
-                        <div style={{ overflowX: 'auto' }}>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                      <thead>
-                        <tr>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Category</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Current → Target</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Actions</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Timeframe</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Cost</th>
-                          <th style={{ textAlign: 'left', padding: 6 }}>Impact</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {generatedOpportunities.map((o, i) => (
-                          <tr key={i}>
-                            <td style={{ padding: 6 }}>{o.category}</td>
-                            <td style={{ padding: 6 }}>{o.current} → {o.target}</td>
-                            <td style={{ padding: 6 }}>{o.actions.join(', ')}</td>
-                            <td style={{ padding: 6 }}>{o.timeframe}</td>
-                            <td style={{ padding: 6 }}>{o.cost}</td>
-                            <td style={{ padding: 6 }}>{o.impact}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    )}
 
-                    {!customOpportunities?.length && !generatedOpportunities?.length && '—'}
+                    {!customOpportunities?.length && '—'}
                   </>
                 )}
               </div>
 
-              <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>Quick Wins</div>
-                {loadingOpportunities ? (
-                  <div className="muted">Loading quick wins…</div>
-                ) : quickWins?.length ? (
-                  <ul style={{ margin: 0, paddingLeft: 18 }}>
-                    {quickWins.map((w, i) => (
-                      <li key={i}><strong>{w.opportunity}</strong>: {w.currentToTarget} — {w.actions.join(', ')}</li>
-                    ))}
-                  </ul>
-                ) : '—'}
-              </div>
 
-              <div className="card" style={{ gridColumn: '1 / span 2' }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>Sector Context</div>
-                {sectorContext ? (
-                  <div>
-                    <div><strong>Priority area</strong>: {sectorContext.priorityArea}</div>
-                    <div style={{ marginTop: 4 }}>
-                      <strong>Recommendations</strong>: {sectorContext.recommendations?.join(', ') || '—'}
-                    </div>
-                  </div>
-                ) : '—'}
-              </div>
+
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
                 <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
@@ -1451,10 +1323,6 @@ function App() {
 
               <div style={{ gridColumn: '1 / span 2', height: 1, backgroundColor: '#e7e7e9', margin: '16px 0' }}></div>
 
-              <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
-                <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
-              </div>
-
             </div>
             )
           )}
@@ -1463,43 +1331,347 @@ function App() {
 
       {active === 'methodology' && (
         <div>
-          <div className="card" style={{ color: '#fff', background: 'linear-gradient(120deg, #1565c0, #7b1fa2)' }}>
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Methodology</div>
-            <div style={{ opacity: 0.9 }}>Evidence-based process for sector-ready guidance</div>
+          <div className="banner">
+            <div style={{ fontSize: 20, fontWeight: 700 }}>Methodology</div>
+            <div className="muted">Evidence-based process for sector-ready guidance</div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16, marginBottom: 16 }}>
             <div className="card">
-              <div style={{ fontWeight: 700, marginBottom: 6 }}>1) Data Collection</div>
-              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left' }}>
-                <li>Master Assessment: External (70) + Survey (30)</li>
-                <li>Sectors and regions from validated inputs</li>
-                <li>Live-linked calculations in the sheet</li>
+              <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>1) Data Collection</div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px', lineHeight: '1.4' }}>
+                Our assessment combines two data sources to create a comprehensive digital readiness picture:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left', fontSize: '14px', lineHeight: '1.4' }}>
+                <li><strong>External Assessment (70% weight)</strong>: Publicly observable digital presence including websites, social media, online listings, and digital marketing</li>
+                <li><strong>Survey Data (30% weight)</strong>: Self-reported internal capabilities, processes, and digital strategy insights</li>
+                <li>Data is collected across validated sectors and regions with live-linked calculations</li>
               </ul>
             </div>
+            
             <div className="card">
-              <div style={{ fontWeight: 700, marginBottom: 6 }}>2) Scoring & Aggregation</div>
-              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left' }}>
-                <li>Category maxima: 18/12/15/12/8/5</li>
-                <li>Sector averages computed from live data</li>
-                <li>Digital maturity classified Absent → Expert</li>
+              <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>2) Scoring Framework</div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px', lineHeight: '1.4' }}>
+                Each organization is scored across six digital categories with different maximum points:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left', fontSize: '14px', lineHeight: '1.4' }}>
+                <li><strong>Social Media Presence</strong> (18 points): Facebook, Instagram, Twitter, LinkedIn activity</li>
+                <li><strong>Website Quality</strong> (12 points): Design, content, mobile responsiveness, SEO</li>
+                <li><strong>Visual Content</strong> (15 points): Photos, videos, graphics, brand consistency</li>
+                <li><strong>Discoverability</strong> (12 points): Google listings, directories, search visibility</li>
+                <li><strong>Digital Sales</strong> (8 points): Online booking, e-commerce, payment systems</li>
+                <li><strong>Platform Integration</strong> (5 points): Third-party integrations, APIs, automation</li>
               </ul>
             </div>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16, marginBottom: 16 }}>
             <div className="card">
-              <div style={{ fontWeight: 700, marginBottom: 6 }}>3) Opportunity Generation</div>
-              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left' }}>
-                <li>Step-up targets and actions per category</li>
-                <li>Quick Wins prioritized by impact vs effort</li>
-                <li>Sector guidance and program interventions</li>
+              <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>3) Digital Maturity Levels</div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px', lineHeight: '1.4' }}>
+                Organizations are classified into five maturity levels based on their total score:
+              </p>
+              <div style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                <div style={{ marginBottom: 6, padding: '6px 8px', background: '#f3f4f6', borderRadius: '4px' }}>
+                  <strong>Absent (0-20 points)</strong>: No digital presence or very basic online listing
+                </div>
+                <div style={{ marginBottom: 6, padding: '6px 8px', background: '#fef3c7', borderRadius: '4px' }}>
+                  <strong>Emerging (21-40 points)</strong>: Basic website and social media, limited digital strategy
+                </div>
+                <div style={{ marginBottom: 6, padding: '6px 8px', background: '#dbeafe', borderRadius: '4px' }}>
+                  <strong>Intermediate (41-60 points)</strong>: Good digital presence, some online sales, regular content
+                </div>
+                <div style={{ marginBottom: 6, padding: '6px 8px', background: '#d1fae5', borderRadius: '4px' }}>
+                  <strong>Advanced (61-80 points)</strong>: Strong digital ecosystem, integrated platforms, data-driven
+                </div>
+                <div style={{ marginBottom: 6, padding: '6px 8px', background: '#e0e7ff', borderRadius: '4px' }}>
+                  <strong>Expert (81+ points)</strong>: Leading digital innovation, full automation, market leadership
+                </div>
+              </div>
+            </div>
+            
+            <div className="card">
+              <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>4) Opportunity Generation</div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px', lineHeight: '1.4' }}>
+                Based on assessment results, we generate targeted recommendations:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left', fontSize: '14px', lineHeight: '1.4' }}>
+                <li><strong>Step-up Targets</strong>: Specific actions to reach the next maturity level</li>
+                <li><strong>Sector Guidance</strong>: Industry-specific digital strategies and best practices</li>
+                <li><strong>Program Interventions</strong>: Training, funding, and support recommendations</li>
               </ul>
             </div>
-            <div className="card">
-              <div style={{ fontWeight: 700, marginBottom: 6 }}>Impact & Readiness</div>
-              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left' }}>
-                <li><b>Competitiveness</b>: reach, discoverability, conversion</li>
-                <li><b>Inclusiveness</b>: MSMEs, women and youth</li>
-                <li><b>Sustainability</b>: data-driven, efficient, local</li>
-                <li><b>Readiness</b>: found online, tell story, transact</li>
-              </ul>
+          </div>
+
+          <div className="card">
+            <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>5) Impact & Readiness Framework</div>
+            <p style={{ margin: '0 0 12px 0', fontSize: '14px', lineHeight: '1.4' }}>
+              Our methodology supports four key development outcomes:
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
+              <div>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>Competitiveness</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  Reach new markets, improve discoverability, convert visitors to customers
+                </div>
+              </div>
+              <div>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>Inclusiveness</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  Support MSMEs, women-led businesses, and youth entrepreneurs
+                </div>
+              </div>
+              <div>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>Sustainability</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  Data-driven decisions, efficient operations, local capacity building
+                </div>
+              </div>
+              <div>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>Readiness</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  Found online, tell compelling stories, enable transactions
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Feedback Modal */}
+      {showFeedbackModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }}>
+          <div className="card" style={{ maxWidth: 500, width: '90%', maxHeight: '90vh', overflow: 'auto' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+              <h3 style={{ margin: 0 }}>Submit Feedback</h3>
+              <button
+                onClick={() => setShowFeedbackModal(false)}
+                style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer', color: '#666' }}
+              >
+                ×
+              </button>
+            </div>
+            
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Type of Feedback</label>
+              <select
+                value={feedbackForm.type}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, type: e.target.value })}
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+              >
+                <option value="correction">Data Correction</option>
+                <option value="suggestion">Improvement Suggestion</option>
+                <option value="bug">Bug Report</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            {feedbackForm.type === 'correction' && (
+              <div style={{ marginBottom: 16 }}>
+                <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Participant (if applicable)</label>
+                <select
+                  value={feedbackForm.participant || ''}
+                  onChange={(e) => setFeedbackForm({ ...feedbackForm, participant: e.target.value })}
+                  style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+                >
+                  <option value="">Select participant (optional)</option>
+                  {allParticipants.map(p => (
+                    <option key={p.name} value={p.name}>{p.name}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Message</label>
+              <textarea
+                value={feedbackForm.message}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, message: e.target.value })}
+                placeholder="Please describe the issue or suggestion..."
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9', minHeight: 100, resize: 'vertical' }}
+              />
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Contact (optional)</label>
+              <input
+                type="email"
+                value={feedbackForm.contact || ''}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, contact: e.target.value })}
+                placeholder="your.email@example.com"
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+              <button
+                onClick={() => setShowFeedbackModal(false)}
+                style={{ padding: '8px 16px', borderRadius: 8, border: '1px solid #e7e7e9', background: 'white', cursor: 'pointer' }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={async () => {
+                  setSubmittingFeedback(true);
+                  try {
+                    const response = await fetch('/api/feedback', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(feedbackForm)
+                    });
+                    if (response.ok) {
+                      alert('Thank you for your feedback!');
+                      setShowFeedbackModal(false);
+                      setFeedbackForm({ type: 'correction', message: '' });
+                    } else {
+                      alert('Error submitting feedback. Please try again.');
+                    }
+                  } catch (error) {
+                    alert('Error submitting feedback. Please try again.');
+                  }
+                  setSubmittingFeedback(false);
+                }}
+                disabled={!feedbackForm.message || submittingFeedback}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: 8,
+                  border: 'none',
+                  background: submittingFeedback ? '#ccc' : 'var(--primary)',
+                  color: 'white',
+                  cursor: submittingFeedback ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {submittingFeedback ? 'Submitting...' : 'Submit'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Add Participant Modal */}
+      {showAddParticipantModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }}>
+          <div className="card" style={{ maxWidth: 500, width: '90%', maxHeight: '90vh', overflow: 'auto' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+              <h3 style={{ margin: 0 }}>Add New Participant</h3>
+              <button
+                onClick={() => setShowAddParticipantModal(false)}
+                style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer', color: '#666' }}
+              >
+                ×
+              </button>
+            </div>
+            
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Participant Name *</label>
+              <input
+                type="text"
+                value={participantForm.name}
+                onChange={(e) => setParticipantForm({ ...participantForm, name: e.target.value })}
+                placeholder="Enter participant name"
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+              />
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Sector *</label>
+              <select
+                value={participantForm.sector}
+                onChange={(e) => setParticipantForm({ ...participantForm, sector: e.target.value })}
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+              >
+                <option value="">Select sector</option>
+                {sectors.map(s => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Contact Information</label>
+              <input
+                type="text"
+                value={participantForm.contact}
+                onChange={(e) => setParticipantForm({ ...participantForm, contact: e.target.value })}
+                placeholder="Email, phone, or website"
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+              />
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Additional Notes</label>
+              <textarea
+                value={participantForm.notes}
+                onChange={(e) => setParticipantForm({ ...participantForm, notes: e.target.value })}
+                placeholder="Any additional information about this participant..."
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9', minHeight: 80, resize: 'vertical' }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+              <button
+                onClick={() => setShowAddParticipantModal(false)}
+                style={{ padding: '8px 16px', borderRadius: 8, border: '1px solid #e7e7e9', background: 'white', cursor: 'pointer' }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={async () => {
+                  setSubmittingParticipant(true);
+                  try {
+                    const response = await fetch('/api/participants', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(participantForm)
+                    });
+                    if (response.ok) {
+                      alert('Participant added successfully!');
+                      setShowAddParticipantModal(false);
+                      setParticipantForm({ name: '', sector: '', contact: '', notes: '' });
+                      // Refresh the participants list
+                      fetchParticipants().then(setAllParticipants).catch(() => {});
+                    } else {
+                      alert('Error adding participant. Please try again.');
+                    }
+                  } catch (error) {
+                    alert('Error adding participant. Please try again.');
+                  }
+                  setSubmittingParticipant(false);
+                }}
+                disabled={!participantForm.name || !participantForm.sector || submittingParticipant}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: 8,
+                  border: 'none',
+                  background: submittingParticipant ? '#ccc' : 'var(--primary)',
+                  color: 'white',
+                  cursor: submittingParticipant ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {submittingParticipant ? 'Adding...' : 'Add Participant'}
+              </button>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "digital_assessment/hosting/public/gambia-itc",
+    "public": "digital_assessment/hosting/public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -21,14 +21,18 @@
         "headers": [
           {
             "key": "Content-Type",
-            "value": "application/javascript"
+            "value": "application/javascript; charset=utf-8"
           }
         ]
       }
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/api/**",
+        "function": "api"
+      },
+      {
+        "source": "!/**/*.{js,css,png,jpg,svg,ico,woff,woff2,ttf,eot}",
         "destination": "/index.html"
       }
     ]
