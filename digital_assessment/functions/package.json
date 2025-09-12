@@ -1,0 +1,27 @@
+{
+  "name": "digital-assessment-functions",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "serve": "firebase emulators:start --only functions,hosting",
+    "deploy": "firebase deploy --only functions",
+    "deploy:all": "npm run build && firebase deploy",
+    "lint": "echo 'no lint'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-functions": "^5.0.0",
+    "googleapis": "^135.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}
+
+

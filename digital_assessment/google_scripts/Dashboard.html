@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gambia CI Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1565c0;
+      --secondary: #7b1fa2;
+      --success: #28a745;
+      --info: #17a2b8;
+      --warning: #ffc107;
+      --danger: #dc3545;
+      --surface: #f7f9fc;
+      --card: #ffffff;
+      --muted: #667085;
+    }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; margin: 0; padding: 16px; background: var(--surface); }
+    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; padding: 16px; border-radius: 12px; color: #fff; background: linear-gradient(120deg, var(--primary), var(--secondary)); box-shadow: 0 4px 16px rgba(21, 101, 192, 0.15); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .card { background: var(--card); border: 1px solid #e7e7e9; border-radius: 10px; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+    .card { overflow: hidden; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-12 { grid-column: 1 / -1; }
+    h3 { margin: 0 0 8px; }
+    ul { margin: 6px 0 0 18px; }
+    .muted { color: var(--muted); font-size: 12px; }
+    select, button { padding: 6px 10px; }
+    .kpis { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .chip { background: #fff; border: 1px solid #e7e7e9; border-radius: 999px; padding: 6px 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); font-size: 12px; color: #344054; }
+    /* Dashboard stat cards */
+    .stats { display:grid; grid-template-columns: repeat(12, 1fr); gap:12px; margin: 12px 0; }
+    .stat { grid-column: span 4; background:#fff; border:1px solid #e7e7e9; border-radius:12px; padding:12px; box-shadow:0 2px 10px rgba(0,0,0,0.04); }
+    .stat-title { font-size:12px; color:#667085; margin-bottom:4px; }
+    .stat-value { font-size:22px; font-weight:700; color:#111827; }
+    .stat-desc { font-size:12px; color:#98a2b3; margin-top:4px; }
+    .progress { margin-top:6px; height:8px; background:#eef2f6; border-radius:6px; overflow:hidden; }
+    .progress > div { height:8px; background: var(--primary); }
+    @media (max-width: 900px) { .stat { grid-column: 1 / -1; } }
+    .presence { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:10px 0; }
+    .presence a, .presence span { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid #e7e7e9; border-radius:8px; background:#fff; color:#344054; text-decoration:none; }
+    .presence .ico { display:inline-flex; width:14px; height:14px; align-items:center; justify-content:center; }
+    .presence .missing { color:#999; }
+    .tabs { display: flex; gap: 8px; margin: 12px 0; position: sticky; top: 0; z-index: 50; background: var(--surface); padding: 8px 0; overflow-x: auto; }
+    .tabbtn { background: #fff; border: 1px solid #e7e7e9; border-radius: 8px; padding: 10px 14px; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.05); font-size: 13px; color: #344054; }
+    .tabbtn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .tabcontent { display: none; }
+    .tabcontent.active { display: block; }
+    /* Responsive layout for small screens */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .span-3, .span-4, .span-6, .span-12 { grid-column: 1 / -1; }
+      h3 { font-size: 16px; }
+    }
+    /* Page container */
+    @media (min-width: 1024px) {
+      .page { max-width: 1200px; margin: 0 auto; }
+    }
+    /* score boxes */
+    .scoregrid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px; margin-top: 6px; }
+    .scorebox { grid-column: span 4; background: #ffffff; border: 1px solid #e7e7e9; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+    .scorebox .label { font-size: 12px; color: #667085; margin-bottom: 6px; }
+    .scorebox .value { font-size: 18px; font-weight: 700; color: #1f2937; }
+    .scorebox .value .pct { font-size: 12px; font-weight: 600; color: #667085; margin-left: 6px; }
+    .scorebox .bar { height: 8px; background: #f0f2f5; border-radius: 6px; overflow: hidden; margin-top: 6px; }
+    .scorebox .bar div { height: 8px; background: var(--primary); }
+    .scorebox.good .bar div { background: #28a745; }
+    .scorebox.warn .bar div { background: #ffc107; }
+    .scorebox.bad .bar div { background: #dc3545; }
+    .scorebox.na .bar div { background: #e5e7eb; }
+    .scorebox .desc { font-size: 12px; color: #98a2b3; margin-top: 6px; line-height: 1.3; }
+    .muted-section { opacity: 0.55; }
+    /* Opportunity/Quick Win cards */
+    .opgrid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px; }
+    .opitem { grid-column: span 12; background: #ffffff; border: 1px solid #e7e7e9; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+    .opitem h4 { margin: 0 0 4px; font-size: 14px; }
+    .opitem .sub { color: #667085; font-size: 12px; margin-bottom: 6px; }
+    .tag { display: inline-block; background: #fff; border: 1px solid #e7e7e9; border-radius: 999px; padding: 2px 8px; font-size: 11px; color: #344054; margin-right: 6px; margin-top: 4px; }
+    .tag.critical { background: #fdecea; border-color: #f5c2c0; color: #9a1c1c; }
+    .tag.high { background: #fff8e1; border-color: #ffecb5; color: #8a6d00; }
+    .tag.medium { background: #e8f5e9; border-color: #c8e6c9; color: #1b5e20; }
+    .tag.low { background: #eef2ff; border-color: #c7d2fe; color: #1e3a8a; }
+    .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .pill { display:inline-block; background:#f7f9fc; border:1px solid #e7e7e9; color:#344054; border-radius:999px; padding:4px 8px; font-size:11px; }
+    /* Modal */
+    .modalBackdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.35); display: none; align-items: center; justify-content: center; z-index: 9999; }
+    .modal { background: #fff; border-radius: 12px; border: 1px solid #e7e7e9; width: 520px; max-width: calc(100% - 24px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+    .modal header { background: none; box-shadow: none; padding: 12px 16px; color: #111; display:flex; align-items:center; justify-content: space-between; }
+    .modal .body { padding: 12px 16px; }
+    .modal .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .modal label { display:block; font-size: 12px; color:#475467; margin-top: 8px; }
+    .modal input, .modal select, .modal textarea { width: 100%; padding: 8px; border:1px solid #e7e7e9; border-radius:8px; }
+    .modal .actions { display:flex; gap:8px; justify-content:flex-end; padding: 12px 16px; border-top:1px solid #f0f0f2; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Gambia Creative Industries - Public Dashboard</h2>
+    <div style="display:flex; align-items:center; gap:8px">
+      <button id="btnHelp" type="button" class="tabbtn">Help</button>
+      <button id="btnAddParticipant" type="button" class="tabbtn">Add Participant</button>
+    </div>
+  </header>
+
+  <div class="page">
+  <div id="kpis" class="kpis"></div>
+
+  <div class="tabs" role="tablist" aria-label="Overview sections">
+    <button id="tabBtnDashboard" class="tabbtn active" type="button" role="tab" aria-selected="true" aria-controls="tab-dashboard">Overview</button>
+    <button id="tabBtnSector" class="tabbtn" type="button" role="tab" aria-selected="false" aria-controls="tab-sector">Sector</button>
+    <button id="tabBtnParticipant" class="tabbtn" type="button" role="tab" aria-selected="false" aria-controls="tab-participant">Participant</button>
+    <button id="tabBtnTour" class="tabbtn" type="button" role="tab" aria-selected="false" aria-controls="tab-tour">Tour Operators</button>
+    <button id="tabBtnMethodology" class="tabbtn" type="button" role="tab" aria-selected="false" aria-controls="tab-methodology">Methodology</button>
+  </div>
+
+  <div id="tab-dashboard" class="tabcontent active" role="tabpanel" aria-labelledby="tabBtnDashboard">
+  <div class="card span-12" style="margin-bottom:12px">
+    <h3 style="margin-bottom:4px">Digital Readiness Overview</h3>
+    <div class="muted">Assess, compare, and improve digital presence across creative industries. Explore sectors for trends or open a participant for tailored guidance.</div>
+    <div class="kpis" style="margin-top:6px">
+      <label>Sector: <select id="sectorSelect"></select></label>
+      <label style="margin-left:8px; display:inline-flex; align-items:center; gap:6px"><input id="toggleTourism" type="checkbox" /> Include Tourism</label>
+      <button id="refreshBtn">Refresh</button>
+      <a class="chip" href="https://surveys.intracen.org/response/G2tIYnZeRwYLYVFyVFx9S0d6eno/" target="_blank">Complete short survey →</a>
+    </div>
+    <div class="grid" style="margin-top:8px">
+      <div class="card span-4">
+        <h3>How to use</h3>
+        <ul style="margin-top:6px">
+          <li><b>Dashboard</b>: big-picture trends and readiness.</li>
+          <li><b>Sector</b>: compare sectors; click a name to open Participant.</li>
+          <li><b>Participant</b>: evaluation, sector comparison, quick wins.</li>
+        </ul>
+      </div>
+      <div class="card span-4">
+        <h3>Legend</h3>
+        <div class="pills" style="margin-top:6px">
+          <span class="pill">📣 Social (18)</span>
+          <span class="pill">🌐 Website (12)</span>
+          <span class="pill">📸 Visual (15)</span>
+          <span class="pill">🔎 Discoverability (12)</span>
+          <span class="pill">💳 Sales (8)</span>
+          <span class="pill">🔗 Integration (5)</span>
+        </div>
+        <!-- Maturity scale moved to Digital Maturity section -->
+      </div>
+      <div class="card span-4">
+        <h3>Tips</h3>
+        <ul style="margin-top:6px">
+          <li>Use the tourism toggle to include tourism data.</li>
+          <li>Click any sector participant to jump to their plan.</li>
+          <li>Print a participant page for PDF sharing.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div id="overviewStats" class="stats span-12"></div>
+    <div class="card span-4">
+      <h3>Industry Category Averages</h3>
+      <div class="muted">Average external score by category across all stakeholders.</div>
+      <div id="categoryAvgChart">Loading…</div>
+    </div>
+    <div class="card span-4">
+      <h3>Digital Maturity</h3>
+      <div class="muted">Maturity levels and current distribution of stakeholders.</div>
+      <div class="muted" style="margin:6px 0 8px">Absent 0 • Emerging 0–39 • Intermediate 40–59 • Advanced 60–79 • Expert 80–100</div>
+      <div id="maturityChart">Loading…</div>
+    </div>
+    <div class="card span-4">
+      <h3>Maturity Levels Guide</h3>
+      <div class="muted">What each maturity level means.</div>
+      <div id="maturityGuideChart">Loading…</div>
+    </div>
+    <div class="card span-12">
+      <h3>Sector Readiness (Grouped)</h3>
+      <div class="muted">Share of stakeholders in each maturity level (Absent → Expert), by sector.</div>
+      <div id="sectorStackedChart">Loading…</div>
+    </div>
+    <div class="card span-12">
+      <h3>Scoring Breakdown</h3>
+      <div class="muted">Overall score = External 70% + Survey 30%.</div>
+      <div id="scoringBreakdownChart">Loading…</div>
+    </div>
+  </div>
+  </div>
+
+  <div id="tab-sector" class="tabcontent" role="tabpanel" aria-labelledby="tabBtnSector">
+    <div class="filters">
+      <label>Metric:
+        <select id="sectorMetricSelect">
+          <option value="combined">Combined (0–100)</option>
+          <option value="externalTotal">External (0–70)</option>
+          <option value="socialMedia">Social Media (0–18)</option>
+          <option value="website">Website (0–12)</option>
+          <option value="visualContent">Visual Content (0–15)</option>
+          <option value="discoverability">Discoverability (0–12)</option>
+          <option value="digitalSales">Digital Sales (0–8)</option>
+          <option value="platformIntegration">Integration (0–5)</option>
+        </select>
+      </label>
+      <label style="margin-left:8px">Sector:
+        <select id="sectorSelectSector"></select>
+      </label>
+    </div>
+    <div class="card span-12">
+      <h3>Sector Comparison</h3>
+      <div class="muted">Compare sectors by the selected metric.</div>
+      <div id="sectorMetricChart">Loading…</div>
+    </div>
+    <div class="card span-12">
+      <h3>Stakeholders in Sector</h3>
+      <div id="sectorParticipantList" class="kpis">Select a sector to view stakeholders.</div>
+    </div>
+  </div>
+
+  <div id="tab-participant" class="tabcontent" role="tabpanel" aria-labelledby="tabBtnParticipant">
+    <div class="filters">
+      <label>Participant:
+        <select id="participantSelect"></select>
+      </label>
+    </div>
+    <div class="card span-12">
+      <h3>Evaluation</h3>
+      <div id="participantPanel">Select a participant to view plan.</div>
+    </div>
+    <div class="card span-12">
+      <h3 id="externalVsSectorTitle">External Assessment vs Sector</h3>
+      <div class="muted" id="externalVsSectorSubtitle">Participant vs sector average (normalized to max)</div>
+      <div id="externalRadarParticipant">Select a participant to see comparison.</div>
+    </div>
+    <div class="grid">
+      <div class="card span-6"><h3>Opportunities</h3><div id="opportunitiesBox" class="opgrid"></div></div>
+      <div class="card span-6"><h3>Quick Wins</h3><div id="quickwinsBox" class="opgrid"></div></div>
+    </div>
+    <div class="card span-12" id="evidenceCard" style="display:none">
+      <h3>Evidence & Justifications</h3>
+      <details id="evidenceDetails">
+        <summary class="muted">Show notes (assessor evidence per category)</summary>
+        <div id="evidenceBody" class="opgrid" style="margin-top:6px"></div>
+      </details>
+    </div>
+    <div class="card span-12" id="sectorContextCard" style="display:none">
+      <h3>Sector Context</h3>
+      <div class="muted" id="sectorContextSub">Contextual guidance for the participant's sector</div>
+      <div id="sectorContextBody"></div>
+    </div>
+  </div>
+
+  <div id="tab-tour" class="tabcontent" role="tabpanel" aria-labelledby="tabBtnTour">
+    <div class="filters">
+      <label>Tour Operator:
+        <select id="tourOperatorSelect"></select>
+      </label>
+    </div>
+    <div class="card span-12">
+      <h3>Tour Operators</h3>
+      <div class="muted">Select a tour operator or click a name below to open their plan.</div>
+      <div id="tourOperatorList" class="kpis" style="margin-top:6px">Loading…</div>
+    </div>
+  </div>
+
+  <div id="tab-methodology" class="tabcontent" role="tabpanel" aria-labelledby="tabBtnMethodology">
+    <div class="card" style="background: linear-gradient(120deg, var(--primary), var(--secondary)); color:#fff;">
+      <h3 style="margin-bottom:6px;">Methodology</h3>
+      <div class="muted" style="color:#e9eef7;">Evidence-based process for sector-ready guidance</div>
+    </div>
+    <div class="grid">
+      <div class="card span-3">
+        <h3>1) Data Collection</h3>
+        <ul>
+          <li>Master Assessment: External (70) + Survey (30)</li>
+          <li>Sectors and regions from dropdown-validated inputs</li>
+          <li>Live-linked calculations in the sheet</li>
+        </ul>
+      </div>
+      <div class="card span-3">
+        <h3>2) Scoring & Aggregation</h3>
+        <ul>
+          <li>Category maxima: Social (18), Website (12), Visual (15), Discoverability (12), Sales (8), Integration (5)</li>
+          <li>Sector averages computed dynamically from the sheet</li>
+          <li>Digital maturity classified: Basic, Intermediate, Advanced, Expert</li>
+        </ul>
+      </div>
+      <div class="card span-3">
+        <h3>3) Opportunity Generation</h3>
+        <ul>
+          <li>Step-up targets per category with actions, timeframe, cost</li>
+          <li>Quick Wins prioritized by impact vs effort</li>
+          <li>Sector guidance and program-level interventions</li>
+        </ul>
+      </div>
+      <div class="card span-3">
+        <h3>Impact & Readiness</h3>
+        <ul>
+          <li><b>Competitiveness</b>: Better discoverability, higher-quality content, and easier digital sales help creative businesses reach new markets and grow.</li>
+          <li><b>Inclusiveness</b>: Low-cost, mobile-first tools support MSMEs and broaden participation, including women and youth-led enterprises.</li>
+          <li><b>Sustainability</b>: Digital channels reduce operating costs and travel, improve efficiency, and enable data-driven decisions.</li>
+          <li><b>Digital Readiness</b>: The ability to be found online, tell a compelling story, transact/receive bookings, and connect platforms—supported by internal skills, strategy, and capacity.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    function openAddModal() {
+      const back = document.getElementById('addModalBackdrop');
+      if (back) back.style.display = 'flex';
+    }
+    function closeAddModal() {
+      const back = document.getElementById('addModalBackdrop');
+      if (back) back.style.display = 'none';
+    }
+    function submitAddParticipant() {
+      const name = (document.getElementById('addName')||{}).value || '';
+      const sector = (document.getElementById('addSector')||{}).value || '';
+      const website = (document.getElementById('addWebsite')||{}).value || '';
+      const facebook = (document.getElementById('addFacebook')||{}).value || '';
+      const instagram = (document.getElementById('addInstagram')||{}).value || '';
+      const tripadvisor = (document.getElementById('addTripadvisor')||{}).value || '';
+      if (!name || !sector) {
+        alert('Name and Sector are required.');
+        return;
+      }
+      const msg = `ADD REQUEST\nName: ${name}\nSector: ${sector}\nWebsite: ${website}\nFacebook: ${facebook}\nInstagram: ${instagram}\nTripadvisor: ${tripadvisor}`;
+      google.script.run.withSuccessHandler(res => {
+        if (res && res.logged) {
+          alert('Thanks! Your request was recorded.');
+          closeAddModal();
+        } else {
+          alert('Sorry, there was a problem recording your request.' + (res && res.error ? `\n${res.error}` : ''));
+        }
+      }).withFailureHandler(err => {
+        alert('Sorry, there was a problem recording your request.\n' + (err && err.message ? err.message : String(err)));
+      }).submitCorrection(name, `[ADD] ${msg}`);
+    }
+    function openHelpModal() {
+      const back = document.getElementById('helpModalBackdrop');
+      if (back) back.style.display = 'flex';
+    }
+    function closeHelpModal() {
+      const back = document.getElementById('helpModalBackdrop');
+      if (back) back.style.display = 'none';
+    }
+    function htmlEscape(s){ return String(s||'').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+    function loadFilters() {
+      google.script.run.withSuccessHandler(sectors => {
+        const sel = document.getElementById('sectorSelect');
+        sel.innerHTML = '<option value="">All sectors</option>' + sectors.map(s => `<option>${htmlEscape(s)}</option>`).join('');
+        const saved = (window.localStorage && localStorage.getItem('sectorFilter')) || '';
+        if (saved) {
+          const has = Array.from(sel.options).some(o => o.textContent === saved);
+          if (has) sel.value = saved;
+        }
+        loadParticipants();
+      }).getSectors();
+    }
+
+    function loadSectorMetric() {
+      const metric = (document.getElementById('sectorMetricSelect')||{}).value || 'combined';
+      google.script.run.withSuccessHandler(data => {
+        const sectors = data.sectors || [];
+        const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+        const top = sectors.slice(0, isSmall ? 8 : sectors.length);
+        const dataTable = new google.visualization.DataTable();
+        dataTable.addColumn('string', 'Sector');
+        dataTable.addColumn('number', 'Score');
+        dataTable.addColumn({ type: 'number', role: 'annotation' });
+        top.forEach(s => {
+          let val = 0;
+          if (metric === 'combined') val = Number(s.avgCombined)||0;
+          else if (s[metric] !== undefined) val = Number(s[metric])||0;
+          dataTable.addRow([s.sector, val, val]);
+        });
+        const chart = new google.visualization.BarChart(document.getElementById('sectorMetricChart'));
+        const baseChartOptions = (function(){
+          const small = isSmall;
+          return {
+            height: small ? 240 : 300,
+            chartArea: { left: small ? 56 : 72, right: 12, top: 28, bottom: 40, width: '85%', height: '70%' },
+            legend: { position: 'top', textStyle: { fontSize: 12, color: '#344054' } },
+            hAxis: { textStyle: { fontSize: 12, color: '#475467' }, gridlines: { color: '#eef2f6' } },
+            vAxis: { textStyle: { fontSize: 12, color: '#475467' }, gridlines: { color: '#eef2f6' } },
+            tooltip: { isHtml: true },
+            focusTarget: 'category',
+            annotations: { alwaysOutside: true, textStyle: { fontSize: 12, color: '#111827', auraColor: 'transparent' } },
+            bar: { groupWidth: '75%' }
+          };
+        })();
+        chart.draw(dataTable, Object.assign({}, baseChartOptions, { legend: { position: 'none' } }));
+      }).getDashboardData();
+    }
+
+    function loadSectorParticipants() {
+      const sector = (document.getElementById('sectorSelectSector')||{}).value || '';
+      if (!sector) {
+        const el = document.getElementById('sectorParticipantList');
+        if (el) el.textContent = 'Select a sector to view stakeholders.';
+        return;
+      }
+      google.script.run.withSuccessHandler(list => {
+        const names = (list||[]).map(p => p.name).sort((a,b)=>a.localeCompare(b));
+        const el = document.getElementById('sectorParticipantList');
+        if (el) {
+          el.innerHTML = names.length ? names.map(n => `<button class=\"chip\" data-name=\"${htmlEscape(n)}\" type=\"button\">${htmlEscape(n)}</button>`).join(' ') : 'No stakeholders found in this sector.';
+          // add click handlers to jump to participant tab and load
+          Array.from(el.querySelectorAll('button.chip[data-name]')).forEach(btn => {
+            btn.addEventListener('click', () => {
+              const name = btn.getAttribute('data-name');
+              const partSel = document.getElementById('participantSelect');
+              if (partSel) {
+                // ensure participant list contains the name; if not, set sector filter accordingly
+                // try to select; if missing, reload participants for all sectors
+                let opt = Array.from(partSel.options).find(o => o.textContent === name);
+                if (!opt) {
+                  // fallback: load all participants then select
+                  google.script.run.withSuccessHandler(all => {
+                    partSel.innerHTML = '<option value="">Select participant</option>' + all.map(p => `<option>${htmlEscape(p.name)}</option>`).join('');
+                    opt = Array.from(partSel.options).find(o => o.textContent === name);
+                    if (opt) { partSel.value = opt.value; }
+                    if (window.__showTab) window.__showTab('participant');
+                    loadParticipantPlan();
+                  }).getParticipants('');
+                  return;
+                }
+                partSel.value = opt.value;
+              }
+              if (window.__showTab) window.__showTab('participant');
+              loadParticipantPlan();
+            });
+          });
+        }
+      }).getParticipants(sector);
+    }
+
+    function loadParticipants() {
+      const sector = document.getElementById('sectorSelect').value;
+      google.script.run.withSuccessHandler(list => {
+        const sel = document.getElementById('participantSelect');
+        sel.innerHTML = '<option value="">Select participant</option>' + list.map(p => `<option>${htmlEscape(p.name)}</option>`).join('');
+        const savedPart = (window.localStorage && localStorage.getItem('participant')) || '';
+        if (savedPart) {
+          const has = Array.from(sel.options).some(o => o.textContent === savedPart);
+          if (has) {
+            sel.value = savedPart;
+            loadParticipantPlan();
+          }
+        }
+      }).getParticipants(sector);
+    }
+
+    function loadTourOperators() {
+      const select = document.getElementById('tourOperatorSelect');
+      const listEl = document.getElementById('tourOperatorList');
+      if (listEl) listEl.textContent = 'Loading…';
+      google.script.run.withSuccessHandler(list => {
+        const options = (list||[]).map(p => `<option>${htmlEscape(p.name)}</option>`).join('');
+        if (select) {
+          select.innerHTML = '<option value="">Select tour operator</option>' + options;
+          const saved = (window.localStorage && localStorage.getItem('tourOperator')) || '';
+          if (saved && Array.from(select.options).some(o => o.textContent === saved)) select.value = saved;
+        }
+        if (listEl) {
+          const chips = (list||[]).map(p => `<button class=\"chip\" data-name=\"${htmlEscape(p.name)}\" type=\"button\">${htmlEscape(p.name)}</button>`).join(' ');
+          listEl.innerHTML = chips || 'No tour operators found.';
+          Array.from(listEl.querySelectorAll('button.chip[data-name]')).forEach(btn => {
+            btn.addEventListener('click', () => {
+              const name = btn.getAttribute('data-name');
+              const partSel = document.getElementById('participantSelect');
+              if (partSel) {
+                let opt = Array.from(partSel.options).find(o => o.textContent === name);
+                if (!opt) {
+                  google.script.run.withSuccessHandler(all => {
+                    partSel.innerHTML = '<option value=\"\">Select participant</option>' + all.map(p => `<option>${htmlEscape(p.name)}</option>`).join('');
+                    opt = Array.from(partSel.options).find(o => o.textContent === name);
+                    if (opt) { partSel.value = opt.value; }
+                    if (window.__showTab) window.__showTab('participant');
+                    loadParticipantPlan();
+                  }).getParticipants('');
+                  return;
+                }
+                partSel.value = opt.value;
+              }
+              if (window.__showTab) window.__showTab('participant');
+              loadParticipantPlan();
+            });
+          });
+        }
+      }).getTourOperators();
+    }
+
+    function renderMaturity(maturity) {
+      const total = Object.values(maturity).reduce((a,b)=>a+b,0) || 1;
+      const data = new google.visualization.DataTable();
+      data.addColumn('string', 'Level');
+      data.addColumn('number', 'Count');
+      const order = ['Absent','Emerging','Intermediate','Advanced','Expert'];
+      order.forEach(k => data.addRow([k, Number(maturity[k]||0)]));
+      const chart = new google.visualization.PieChart(document.getElementById('maturityChart'));
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      chart.draw(data, { pieHole: 0.55, height: isSmall ? 220 : 260, chartArea: { width: '90%', height: '80%' },
+        legend: { position: 'top', textStyle: { fontSize: 12 } },
+        // Colors ordered: Absent (red), Emerging (orange), Intermediate (yellow), Advanced (teal), Expert (green)
+        slices: { 0: { color: '#dc3545' }, 1: { color: '#ff9800' }, 2: { color: '#ffc107' }, 3: { color: '#17a2b8' }, 4: { color: '#28a745' } } });
+    }
+
+    function renderSectors(sectors) {
+      // Use horizontal bars for legibility; show top N; add value annotations
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      const top = sectors.slice(0, isSmall ? 5 : 8);
+      const data = new google.visualization.DataTable();
+      data.addColumn('string', 'Sector');
+      data.addColumn('number', 'Avg Combined');
+      data.addColumn({ type: 'number', role: 'annotation' });
+      top.forEach(s => {
+        const avg = Number(s.avgCombined)||0;
+        data.addRow([s.sector, avg, avg]);
+      });
+      const chart = new google.visualization.BarChart(document.getElementById('sectorTable'));
+      const baseChartOptions = {
+        height: isSmall ? 220 : 280,
+        chartArea: { left: isSmall ? 56 : 72, right: 12, top: 28, bottom: 40, width: '85%', height: '70%' },
+        legend: { position: 'none' },
+        annotations: { alwaysOutside: true, textStyle: { fontSize: 12 } },
+        vAxis: { textStyle: { fontSize: 12 } },
+        hAxis: { viewWindow: { min: 0, max: 100 } },
+        bar: { groupWidth: '75%' }
+      };
+      chart.draw(data, baseChartOptions);
+    }
+
+    function renderCategoryAverages(avgs) {
+      const data = new google.visualization.DataTable();
+      data.addColumn('string', 'Category');
+      data.addColumn('number', 'Average');
+      const entries = [
+        ['Social Media', Number(avgs.socialMedia)||0],
+        ['Website', Number(avgs.website)||0],
+        ['Visual Content', Number(avgs.visualContent)||0],
+        ['Discoverability', Number(avgs.discoverability)||0],
+        ['Digital Sales', Number(avgs.digitalSales)||0],
+        ['Integration', Number(avgs.platformIntegration)||0]
+      ];
+      entries.forEach(r=>data.addRow(r));
+      const chart = new google.visualization.BarChart(document.getElementById('categoryAvgChart'));
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      chart.draw(data, { legend: { position: 'none' }, height: isSmall ? 220 : 260, chartArea: { width: '78%', height: '75%' }, hAxis: { textStyle: { fontSize: 12 } }, annotations: { alwaysOutside: true, textStyle: { fontSize: 12 } }, bar: { groupWidth: '75%' } });
+    }
+
+    function renderSectorStacked(stack) {
+      // Grouped column chart: Absent, Emerging, Intermediate, Advanced, Expert side-by-side
+      const data = new google.visualization.DataTable();
+      data.addColumn('string', 'Sector');
+      const seriesOrder = ['Absent','Emerging','Intermediate','Advanced','Expert'];
+      seriesOrder.forEach(label => data.addColumn('number', label));
+      Object.keys(stack||{}).forEach(sec => {
+        const s = stack[sec] || {};
+        const row = [sec].concat(seriesOrder.map(k => Number(s[k]||0)));
+        data.addRow(row);
+      });
+      const chart = new google.visualization.ColumnChart(document.getElementById('sectorStackedChart'));
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      chart.draw(data, {
+        isStacked: false,
+        legend: { position: 'top' },
+        height: isSmall ? 260 : 320,
+        chartArea: { width: '92%', height: '70%' },
+        vAxis: { textStyle: { fontSize: 12 } },
+        hAxis: { textStyle: { fontSize: 12 } }
+      });
+    }
+
+    function loadDashboard() {
+      const includeTourism = !!(document.getElementById('toggleTourism') && document.getElementById('toggleTourism').checked);
+      google.script.run.withSuccessHandler(data => {
+        if (data && !data.error) {
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(() => {
+            renderCategoryAverages(data.categoryAverages);
+            renderMaturity(data.maturity);
+            renderSectorStacked(data.sectorStacked);
+            drawMaturityGuide();
+            drawScoringBreakdown();
+          });
+          // Redraw charts on resize (debounced) to avoid overlap on mobile
+          let resizeTimer;
+          window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+              renderCategoryAverages(data.categoryAverages);
+              renderMaturity(data.maturity);
+              renderSectorStacked(data.sectorStacked);
+              drawMaturityGuide();
+              drawScoringBreakdown();
+            }, 150);
+          });
+          // KPIs row (keep minimal)
+          const total = data.total || 0;
+          const avgCombined = Math.round(((data.participants||[]).reduce((s,p)=>s+(Number(p.combined)||0),0) / Math.max((data.participants||[]).length,1)) * 10)/10;
+          document.getElementById('kpis').innerHTML = `
+            <span class="chip">Stakeholders: <b>${total}</b></span>
+            <span class="chip">Avg Combined: <b>${avgCombined}</b></span>`;
+          // Overview stats (remove Top Sector and Overall Readiness cards)
+          const cat = data.categoryAverages || {};
+          const catEntries = [
+            { k: 'socialMedia', label: 'Social Media', max: 18 },
+            { k: 'website', label: 'Website', max: 12 },
+            { k: 'visualContent', label: 'Visual', max: 15 },
+            { k: 'discoverability', label: 'Discoverability', max: 12 },
+            { k: 'digitalSales', label: 'Digital Sales', max: 8 },
+            { k: 'platformIntegration', label: 'Integration', max: 5 }
+          ];
+          // Replace with ranked category tiles
+          const tiles = catEntries
+            .map(c => ({ label: c.label, value: Number(cat[c.k]||0), max: c.max }))
+            .map(x => ({ label: x.label, raw: x.value, pct: x.max ? Math.round((x.value/x.max)*100) : 0 }))
+            .sort((a,b)=>b.pct-a.pct)
+            .map(x => `<div class="stat"><div class="stat-title">${x.label}</div>
+              <div class="stat-value">${x.raw}/${catEntries.find(e=>e.label===x.label).max}</div>
+              <div class="progress"><div style="width:${x.pct}%"></div></div>
+              <div class="stat-desc">${x.pct}% of max</div></div>`)
+            .join('');
+          document.getElementById('overviewStats').innerHTML = tiles;
+        } else {
+          document.getElementById('maturityChart').textContent = data.error || 'No data';
+          document.getElementById('sectorTable').textContent = '';
+        }
+      }).getDashboardData(includeTourism);
+    }
+
+    function drawExternalComparison(external, containerId) {
+      const breakdown = (external && external.breakdown) || [];
+      if (!breakdown.length) {
+        const target = document.getElementById(containerId || 'externalRadarParticipant');
+        if (target) target.textContent = 'No external scores available.';
+        return;
+      }
+      // Add HTML tooltips with raw + normalized
+      const tip = (label, raw, max, pct) => `<div style="padding:8px 10px"><b>${label}</b><br>${raw}/${max} • ${pct}%</div>`;
+      const tipCols = new google.visualization.DataTable();
+      tipCols.addColumn('string', 'Category');
+      tipCols.addColumn('number', 'Participant');
+      tipCols.addColumn({ type: 'string', role: 'tooltip', p: { html: true } });
+      tipCols.addColumn('number', 'Sector Avg');
+      tipCols.addColumn({ type: 'string', role: 'tooltip', p: { html: true } });
+      breakdown.forEach(row => {
+        const partPct = row.max ? Math.round(row.score / row.max * 100) : 0;
+        const avgPct = row.max ? Math.round(row.sectorAvg / row.max * 100) : 0;
+        tipCols.addRow([row.label, partPct, tip(`${row.label} — Participant`, row.score, row.max, partPct), avgPct, tip(`${row.label} — Sector Avg`, row.sectorAvg, row.max, avgPct)]);
+      });
+      const chart = new google.visualization.ColumnChart(document.getElementById(containerId || 'externalRadarParticipant'));
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      chart.draw(tipCols, { legend: { position: 'top' }, vAxis: { minValue: 0, maxValue: 100 }, chartArea: { width: '85%', height: '65%' }, tooltip: { isHtml: true }, height: isSmall ? 260 : 320, bar: { groupWidth: '75%' } });
+    }
+
+    function drawMaturityGuide() {
+      const el = document.getElementById('maturityGuideChart');
+      if (!el) return;
+      // Render a definition list with colors matching the palette
+      const items = [
+        { label: 'Absent', desc: 'No meaningful digital presence found; core channels missing.', color: '#dc3545' },
+        { label: 'Emerging', desc: 'Basic presence; limited activity and inconsistent information.', color: '#ff9800' },
+        { label: 'Intermediate', desc: 'Functional presence; regular activity with room to optimize.', color: '#ffc107' },
+        { label: 'Advanced', desc: 'Strong presence; coordinated channels and measurable results.', color: '#28a745' },
+        { label: 'Expert', desc: 'Best-in-class execution; integrated platforms and performance culture.', color: '#1565c0' }
+      ];
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      const html = items.map(i => `
+        <div style="display:flex; align-items:flex-start; gap:8px; margin:6px 0">
+          <span style="display:inline-block; width:12px; height:12px; margin-top:3px; border-radius:3px; background:${i.color}"></span>
+          <div>
+            <div style="font-weight:600; color:#111827">${i.label}</div>
+            <div class="muted" style="max-width:${isSmall ? 'auto' : '480px'}">${i.desc}</div>
+          </div>
+        </div>`).join('');
+      el.innerHTML = html;
+    }
+
+    function drawScoringBreakdown() {
+      const el = document.getElementById('scoringBreakdownChart');
+      if (!el) return;
+      const data = new google.visualization.DataTable();
+      data.addColumn('string', 'Component');
+      data.addColumn('number', 'Weight');
+      data.addRows([
+        ['External Assessment (70%)', 70],
+        ['Survey / Internal (30%)', 30]
+      ]);
+      const isSmall = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+      const chart = new google.visualization.PieChart(el);
+      chart.draw(data, { height: isSmall ? 220 : 260, chartArea: { width: '90%', height: '80%' }, legend: { position: 'top' } });
+    }
+
+    function loadParticipantPlan() {
+      const name = document.getElementById('participantSelect').value;
+      if (!name) {
+        document.getElementById('participantPanel').textContent = 'Select a participant to view plan.';
+        const box = document.getElementById('externalRadarParticipant');
+        if (box) box.textContent = 'Select a participant to see comparison.';
+        return;
+      }
+      google.script.run.withSuccessHandler(plan => {
+        if (plan && !plan.error) {
+          const prof = plan.profile;
+          // Participant overview chips
+          const chips = `
+            <span class=\"chip\">Sector: <b>${htmlEscape(prof.sector||'')}</b></span>
+            <span class=\"chip\">Region: <b>${htmlEscape(prof.region||'')}</b></span>
+            <span class=\"chip\">Maturity: <b>${htmlEscape(prof.maturity||'')}</b></span>
+            <span class=\"chip\">External: <b>${(prof.scores.externalTotal||0)}/70</b></span>
+            <span class=\"chip\">Survey: <b>${(prof.scores.surveyTotal||0)}/30</b></span>
+            <span class=\"chip\">Combined: <b>${(prof.scores.combined||0)}/100</b></span>`;
+          const tagClass = (impact) => {
+            const x = String(impact||'').toLowerCase();
+            if (x.includes('critical')) return 'critical';
+            if (x.includes('high')) return 'high';
+            if (x.includes('medium')) return 'medium';
+            return 'low';
+          };
+          const opps = (plan.opportunities||[]).map(o => `
+            <div class=\"opitem\">
+              <h4>${htmlEscape(o.category)}</h4>
+              <div class=\"sub\">${htmlEscape(o.current)} → ${htmlEscape(o.target)}</div>
+              <div>
+                <span class=\"tag\">${htmlEscape(o.timeframe)}</span>
+                <span class=\"tag\">${htmlEscape(o.cost)}</span>
+                <span class=\"tag ${tagClass(o.impact)}\">Impact: ${htmlEscape(o.impact)}</span>
+              </div>
+              <div class=\"pills\">${(o.actions||[]).map(a=>`<span class=\\"pill\\">${htmlEscape(a)}</span>`).join('')}</div>
+            </div>`).join('');
+          const wins = (plan.quickWins||[]).map(w => `
+            <div class=\"opitem\">
+              <h4>${htmlEscape(w.opportunity)}</h4>
+              <div class=\"sub\">${htmlEscape(w.currentToTarget)}</div>
+              <div>
+                <span class=\"tag\">${htmlEscape(w.timeframe)}</span>
+                <span class=\"tag\">${htmlEscape(w.cost)}</span>
+                <span class=\"tag ${tagClass(w.impact)}\">Impact: ${htmlEscape(w.impact)}</span>
+              </div>
+              <div class=\"pills\">${(w.actions||[]).map(a=>`<span class=\\"pill\\">${htmlEscape(a)}</span>`).join('')}</div>
+            </div>`).join('');
+          // Score boxes
+          function chipClass(pct){ return pct>=0.7 ? 'good' : (pct>=0.4 ? 'warn' : 'bad'); }
+          const externalDefs = [
+            { key: 'socialMedia', label: 'Social Media Business', max: 18, desc: 'Visibility, engagement, and conversion via social channels.' },
+            { key: 'website', label: 'Website Presence', max: 12, desc: 'Credible online home for discovery, info, and booking.' },
+            { key: 'visualContent', label: 'Visual Content Quality', max: 15, desc: 'Quality of photos/video to market creative work or experiences.' },
+            { key: 'discoverability', label: 'Online Discoverability', max: 12, desc: 'How easily audiences find you across search and platforms.' },
+            { key: 'digitalSales', label: 'Digital Sales/Booking', max: 8, desc: 'Ability to transact or book digitally with low friction.' },
+            { key: 'platformIntegration', label: 'Platform Integration', max: 5, desc: 'Connected tools and consistent presence across platforms.' }
+          ];
+          const internalDefs = [
+            { key: 'digitalComfort', label: 'Digital Comfort & Skills', max: 8, desc: 'Team capability to manage and use digital tools effectively.' },
+            { key: 'contentStrategy', label: 'Content Strategy', max: 8, desc: 'Planned content approach aligned to audience and goals.' },
+            { key: 'platformBreadth', label: 'Platform Usage Breadth', max: 7, desc: 'Breadth of channels used and maintained consistently.' },
+            { key: 'investmentCapacity', label: 'Investment Capacity', max: 4, desc: 'Resources to invest in content, ads, and tooling.' },
+            { key: 'challengeSeverity', label: 'Challenge Severity', max: 3, invert: true, desc: 'Extent of operational or market barriers faced.' }
+          ];
+          const icons = { socialMedia:'📣', website:'🌐', visualContent:'📸', discoverability:'🔎', digitalSales:'💳', platformIntegration:'🔗', digitalComfort:'🧠', contentStrategy:'🗓️', platformBreadth:'🧩', investmentCapacity:'💰', challengeSeverity:'⚠️' };
+          const scoreGrid = (defs, isInternal) => defs.map(d => {
+            const rawValue = (prof.scores && prof.scores[d.key]);
+            const surveyMissing = isInternal && ((prof.scores.surveyTotal||0) <= 0);
+            const isAnswered = !surveyMissing && rawValue !== undefined && rawValue !== null && rawValue !== '';
+            const raw = Number(isAnswered ? rawValue : 0);
+            const pct = isAnswered && d.max ? Math.max(0, Math.min(1, (d.invert ? (1 - (raw/d.max)) : (raw/d.max)))) : 0;
+            const cls = isAnswered ? chipClass(pct) : 'na';
+            const width = isAnswered ? Math.round(pct * 100) : 0;
+            const valueText = isAnswered ? `${raw}/${d.max} <span class=\"pct\">${width}%</span>` : `n/a`;
+            // Prefer reason text for external categories when available
+            let reason = '';
+            if (!isInternal && plan.reasons && plan.reasons[d.key]) {
+              const table = plan.reasons[d.key];
+              if (table && (table[raw] || table[String(raw)])) {
+                reason = table[raw] || table[String(raw)];
+              }
+            }
+            const caption = reason || d.desc || '';
+            const icon = icons[d.key] || '';
+            return `<div class=\"scorebox ${cls}\"><div class=\"label\">${icon} ${htmlEscape(d.label)} (${d.max})</div><div class=\"value\">${valueText}</div><div class=\"bar\"><div style=\"width:${width}%\"></div></div><div class=\"desc\">${htmlEscape(caption)}</div></div>`;
+          }).join('');
+          document.getElementById('participantPanel').innerHTML = `
+            <div><b>${htmlEscape(prof.name)}</b> — ${htmlEscape(prof.sector)} • ${htmlEscape(prof.maturity)}</div>
+            <div class=\"kpis\" style=\"margin-top:6px\">${chips}</div>
+            <div class=\"card span-12\"><h3>Digital Presence</h3><div id=\"presenceBox\" class=\"presence\"></div><div style=\"margin-top:8px\"><button id=\"btnCorrection\" type=\"button\">Submit correction</button></div></div>
+            <div class=\"card span-12\"><h3>External Assessment</h3><div class=\"scoregrid\">${scoreGrid(externalDefs, false)}</div></div>
+            <div class=\"card span-12 ${ (prof.scores.surveyTotal||0) <= 0 ? 'muted-section' : '' }\"><h3>Survey / Internal Assessment ${ (prof.scores.surveyTotal||0) <= 0 ? `<a id=\\"surveyCta\\" class=\\"chip\\" href=\\"https://surveys.intracen.org/response/G2tIYnZeRwYLYVFyVFx9S0d6eno/\\" target=\\"_blank\\">Complete short survey →</a>` : ''}</h3><div class=\"scoregrid\">${scoreGrid(internalDefs, true)}</div></div>
+            <div style=\"margin:8px 0\"><button id=\"btnExport\" type=\"button\">Print / Save PDF</button></div>`;
+          // Update comparison titles and place Opps/Wins into dedicated containers
+          const tEl = document.getElementById('externalVsSectorTitle');
+          const sEl = document.getElementById('externalVsSectorSubtitle');
+          if (tEl) tEl.textContent = `External Assessment vs Sector (${prof.sector || 'Sector'})`;
+          if (sEl) sEl.textContent = `Compared against ${prof.sector || 'sector'} average (normalized to category maxima)`;
+          const oppBox = document.getElementById('opportunitiesBox');
+          if (oppBox) oppBox.innerHTML = opps || '<div class=\"sub\">No items</div>';
+          const winBox = document.getElementById('quickwinsBox');
+          if (winBox) winBox.innerHTML = wins || '<div class=\"sub\">No items</div>';
+          // Draw comparison chart
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(() => drawExternalComparison(plan.external, 'externalRadarParticipant'));
+          const btn = document.getElementById('btnExport');
+          if (btn) btn.addEventListener('click', () => window.print());
+          // Presence
+          google.script.run.withSuccessHandler(pres => {
+            const el = document.getElementById('presenceBox');
+            const item = (label, url, icon) => url ? `<a href="${htmlEscape(url)}" target="_blank"><span class=\"ico\">${icon}</span>${label}</a>` : `<span class="missing"><span class=\"ico\">${icon}</span>${label}: not found</span>`;
+            const webIco = '🌐';
+            const fbIco = 'f';
+            const igIco = '📷';
+            const taIco = '🅣';
+            const ytIco = '▶';
+            el.innerHTML = `${item('Website', pres.website, webIco)} ${item('Facebook', pres.facebook, fbIco)} ${item('Instagram', pres.instagram, igIco)} ${item('Tripadvisor', pres.tripadvisor, taIco)} ${item('YouTube', pres.youtube, ytIco)}`;
+          }).getParticipantPresence(prof.name);
+          // Correction
+          const corr = document.getElementById('btnCorrection');
+          if (corr) corr.addEventListener('click', () => {
+            const msg = prompt('Describe the correction or update to this participant');
+            if (!msg) return;
+            google.script.run.withSuccessHandler(res => {
+              if (res && res.logged) {
+                const emailNote = res.emailOk ? '' : '\n(Email delivery failed; your feedback was still logged.)';
+                alert('Thanks! Your note was recorded.' + emailNote);
+              } else {
+                alert('Sorry, there was a problem recording your note.' + (res && res.error ? `\n${res.error}` : ''));
+              }
+            }).withFailureHandler(err => {
+              alert('Sorry, there was a problem recording your note.\n' + (err && err.message ? err.message : String(err)));
+            }).submitCorrection(prof.name, msg);
+          });
+
+          // Load and render Evidence & Justifications (collapsed by default)
+          google.script.run.withSuccessHandler(just => {
+            const card = document.getElementById('evidenceCard');
+            const body = document.getElementById('evidenceBody');
+            if (!card || !body) return;
+            const entries = [];
+            const pushIf = (label, key) => {
+              const v = (just && just[key]) ? String(just[key]).trim() : '';
+              if (v) entries.push(`<div class=\"opitem\"><h4>${htmlEscape(label)}</h4><div class=\"sub\">${htmlEscape(v)}</div></div>`);
+            };
+            pushIf('Social Media', 'socialMedia');
+            pushIf('Website', 'website');
+            pushIf('Visual Content', 'visualContent');
+            pushIf('Discoverability', 'discoverability');
+            pushIf('Digital Sales/Booking', 'digitalSales');
+            pushIf('Platform Integration', 'platformIntegration');
+            if (entries.length) {
+              body.innerHTML = entries.join('');
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          }).getParticipantJustifications(prof.name);
+
+          // Sector context (priority area and top recommendations)
+          google.script.run.withSuccessHandler(ctx => {
+            const card = document.getElementById('sectorContextCard');
+            const body = document.getElementById('sectorContextBody');
+            const sub = document.getElementById('sectorContextSub');
+            if (!card || !body) return;
+            if (ctx && (ctx.priorityArea || (ctx.recommendations||[]).length)) {
+              sub.textContent = `Guidance for ${ctx.sector || 'sector'} — based on ${ctx.total || 0} stakeholders`;
+              const recs = (ctx.recommendations||[]).map(r => `<li>${htmlEscape(r)}</li>`).join('');
+              body.innerHTML = `<div class=\"muted\">Priority Focus: <b>${htmlEscape(ctx.priorityArea||'')}</b></div><ul style=\"margin-top:6px\">${recs}</ul>`;
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          }).getSectorContextForParticipant(prof.name);
+        } else {
+          document.getElementById('participantPanel').textContent = plan.error || 'No plan available';
+          const box2 = document.getElementById('externalRadarParticipant');
+          if (box2) box2.textContent = '';
+        }
+      }).getParticipantPlan(name);
+    }
+
+    function bootstrapWhenReady() {
+      let tries = 0;
+      const timer = setInterval(() => {
+        if (window.google && google.script && google.script.run) {
+          clearInterval(timer);
+          // Tabs
+          const tabDash = document.getElementById('tab-dashboard');
+          const tabMeth = document.getElementById('tab-methodology');
+          const tabSect = document.getElementById('tab-sector');
+          const tabPart = document.getElementById('tab-participant');
+          const tabTour = document.getElementById('tab-tour');
+          const btnDash = document.getElementById('tabBtnDashboard');
+          const btnMeth = document.getElementById('tabBtnMethodology');
+          const btnSect = document.getElementById('tabBtnSector');
+          const btnPart = document.getElementById('tabBtnParticipant');
+          const btnTour = document.getElementById('tabBtnTour');
+          function showTab(which){
+            if (which === 'dashboard') {
+              tabDash.classList.add('active'); tabMeth.classList.remove('active'); tabPart.classList.remove('active'); tabSect.classList.remove('active'); if (tabTour) tabTour.classList.remove('active');
+              btnDash.classList.add('active'); btnMeth.classList.remove('active'); btnPart.classList.remove('active'); btnSect.classList.remove('active'); if (btnTour) btnTour.classList.remove('active');
+            } else if (which === 'participant') {
+              tabDash.classList.remove('active'); tabMeth.classList.remove('active'); tabPart.classList.add('active'); tabSect.classList.remove('active'); if (tabTour) tabTour.classList.remove('active');
+              btnDash.classList.remove('active'); btnMeth.classList.remove('active'); btnPart.classList.add('active'); btnSect.classList.remove('active'); if (btnTour) btnTour.classList.remove('active');
+            } else if (which === 'sector') {
+              tabDash.classList.remove('active'); tabMeth.classList.remove('active'); tabPart.classList.remove('active'); tabSect.classList.add('active'); if (tabTour) tabTour.classList.remove('active');
+              btnDash.classList.remove('active'); btnMeth.classList.remove('active'); btnPart.classList.remove('active'); btnSect.classList.add('active'); if (btnTour) btnTour.classList.remove('active');
+            } else if (which === 'tour') {
+              tabDash.classList.remove('active'); tabMeth.classList.remove('active'); tabPart.classList.remove('active'); tabSect.classList.remove('active'); if (tabTour) tabTour.classList.add('active');
+              btnDash.classList.remove('active'); btnMeth.classList.remove('active'); btnPart.classList.remove('active'); btnSect.classList.remove('active'); if (btnTour) btnTour.classList.add('active');
+            } else {
+              tabDash.classList.remove('active'); tabMeth.classList.add('active'); tabPart.classList.remove('active'); tabSect.classList.remove('active'); if (tabTour) tabTour.classList.remove('active');
+              btnDash.classList.remove('active'); btnMeth.classList.add('active'); btnPart.classList.remove('active'); btnSect.classList.remove('active'); if (btnTour) btnTour.classList.remove('active');
+            }
+            // ARIA state and persistence
+            const map = { dashboard: btnDash, participant: btnPart, sector: btnSect, tour: btnTour, methodology: btnMeth };
+            [btnDash, btnPart, btnSect, btnMeth, btnTour].filter(Boolean).forEach(b => b.setAttribute('aria-selected', 'false'));
+            const activeBtn = map[which] || btnDash;
+            if (activeBtn) activeBtn.setAttribute('aria-selected', 'true');
+            if (window.localStorage) localStorage.setItem('activeTab', which);
+          }
+          // expose tab switcher for cross-module handlers
+          window.__showTab = showTab;
+          btnDash.addEventListener('click', ()=>showTab('dashboard'));
+          btnPart.addEventListener('click', ()=>showTab('participant'));
+          btnMeth.addEventListener('click', ()=>showTab('methodology'));
+          btnSect.addEventListener('click', ()=>showTab('sector'));
+          if (btnTour) btnTour.addEventListener('click', ()=>{ showTab('tour'); loadTourOperators(); });
+          const savedTab = (window.localStorage && localStorage.getItem('activeTab')) || '';
+          if (savedTab) showTab(savedTab);
+          const addBtn = document.getElementById('btnAddParticipant');
+          if (addBtn) addBtn.addEventListener('click', openAddModal);
+          const helpBtn = document.getElementById('btnHelp');
+          if (helpBtn) helpBtn.addEventListener('click', openHelpModal);
+          const sectorFilterSel = document.getElementById('sectorSelect');
+          sectorFilterSel.addEventListener('change', () => { if (window.localStorage) localStorage.setItem('sectorFilter', sectorFilterSel.value||''); loadParticipants(); });
+          const tgl = document.getElementById('toggleTourism');
+          if (tgl) {
+            const savedTour = (window.localStorage && localStorage.getItem('includeTourism')) === '1';
+            tgl.checked = savedTour;
+            tgl.addEventListener('change', () => { if (window.localStorage) localStorage.setItem('includeTourism', tgl.checked ? '1' : '0'); loadDashboard(); });
+          }
+          const participantSel = document.getElementById('participantSelect');
+          participantSel.addEventListener('change', () => { if (window.localStorage) localStorage.setItem('participant', participantSel.value||''); loadParticipantPlan(); });
+          const tourSel = document.getElementById('tourOperatorSelect');
+          if (tourSel) tourSel.addEventListener('change', () => {
+            if (window.localStorage) localStorage.setItem('tourOperator', tourSel.value||'');
+            const name = tourSel.value;
+            if (name) {
+              const partSel = document.getElementById('participantSelect');
+              if (partSel) {
+                let opt = Array.from(partSel.options).find(o => o.textContent === name);
+                if (!opt) {
+                  google.script.run.withSuccessHandler(all => {
+                    partSel.innerHTML = '<option value=\"\">Select participant</option>' + all.map(p => `<option>${htmlEscape(p.name)}</option>`).join('');
+                    opt = Array.from(partSel.options).find(o => o.textContent === name);
+                    if (opt) { partSel.value = opt.value; }
+                    if (window.__showTab) window.__showTab('participant');
+                    loadParticipantPlan();
+                  }).getParticipants('');
+                  return;
+                }
+                partSel.value = opt.value;
+              }
+              if (window.__showTab) window.__showTab('participant');
+              loadParticipantPlan();
+            }
+          });
+          // Preload tour operators list so the tab is instant on first open
+          loadTourOperators();
+          document.getElementById('refreshBtn').addEventListener('click', () => { loadDashboard(); });
+          loadFilters();
+          loadDashboard();
+          // Sector tab metric handler
+          const metricSel = document.getElementById('sectorMetricSelect');
+          if (metricSel) {
+            const savedMetric = (window.localStorage && localStorage.getItem('sectorMetric')) || '';
+            if (savedMetric) metricSel.value = savedMetric;
+            metricSel.addEventListener('change', () => { if (window.localStorage) localStorage.setItem('sectorMetric', metricSel.value||''); loadSectorMetric(); });
+          }
+          // Populate sector dropdown for sector tab and auto-load combined metric
+          google.script.run.withSuccessHandler(sectors => {
+            const sel = document.getElementById('sectorSelectSector');
+            if (sel) {
+              sel.innerHTML = '<option value="">All sectors</option>' + sectors.map(s => `<option>${htmlEscape(s)}</option>`).join('');
+              const savedSec2 = (window.localStorage && localStorage.getItem('sectorTabFilter')) || '';
+              if (savedSec2) {
+                const has = Array.from(sel.options).some(o => o.textContent === savedSec2);
+                if (has) sel.value = savedSec2;
+              }
+            }
+            const selAdd = document.getElementById('addSector');
+            if (selAdd) selAdd.innerHTML = '<option value="">Select sector</option>' + sectors.map(s => `<option>${htmlEscape(s)}</option>`).join('');
+            loadSectorMetric();
+            loadSectorParticipants();
+          }).getSectors();
+          const sectorSel = document.getElementById('sectorSelectSector');
+          if (sectorSel) sectorSel.addEventListener('change', () => { if (window.localStorage) localStorage.setItem('sectorTabFilter', sectorSel.value||''); loadSectorParticipants(); });
+        } else if (++tries > 50) {
+          clearInterval(timer);
+          document.getElementById('maturityChart').textContent = 'Initialization error: google API not ready';
+        }
+      }, 100);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bootstrapWhenReady);
+    } else {
+      bootstrapWhenReady();
+    }
+  </script>
+  <div id="addModalBackdrop" class="modalBackdrop">
+    <div class="modal">
+      <header>
+        <div style="font-weight:600">Add Participant</div>
+        <button type="button" class="tabbtn" onclick="closeAddModal()">Close</button>
+      </header>
+      <div class="body">
+        <label>Name (required)
+          <input id="addName" placeholder="Participant name" />
+        </label>
+        <label>Sector (required)
+          <select id="addSector"></select>
+        </label>
+        <div class="row">
+          <label>Website
+            <input id="addWebsite" placeholder="https://" />
+          </label>
+          <label>Facebook
+            <input id="addFacebook" placeholder="https://facebook.com/..." />
+          </label>
+          <label>Instagram
+            <input id="addInstagram" placeholder="https://instagram.com/..." />
+          </label>
+          <label>Tripadvisor
+            <input id="addTripadvisor" placeholder="https://tripadvisor.com/..." />
+          </label>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="tabbtn" onclick="submitAddParticipant()">Submit</button>
+      </div>
+    </div>
+  </div>
+  <div id="helpModalBackdrop" class="modalBackdrop">
+    <div class="modal">
+      <header>
+        <div style="font-weight:600">How to use this dashboard</div>
+        <button type="button" class="tabbtn" onclick="closeHelpModal()">Close</button>
+      </header>
+      <div class="body">
+        <div class="muted">This tool helps assess and improve digital readiness across creative industries.</div>
+        <ul style="margin-top:8px">
+          <li><b>Dashboard</b>: view overall metrics and category averages.</li>
+          <li><b>Sector</b>: compare sectors; click a stakeholder to open their plan.</li>
+          <li><b>Participant</b>: see detailed evaluation, quick wins, and evidence.</li>
+        </ul>
+        <div class="muted" style="margin-top:6px">Toggle “Include Tourism” to add tourism assessments to the aggregates.</div>
+      </div>
+      <div class="actions">
+        <a class="chip" href="https://surveys.intracen.org/response/G2tIYnZeRwYLYVFyVFx9S0d6eno/" target="_blank">Complete short survey →</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
