@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
-import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchSectorContext, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorRanking, fetchSectorLeaders, type Participant, type Dashboard, type Plan } from './api';
+import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchSectorContext, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorRanking, fetchSectorLeaders, fetchSectorCategoryComparison, type Participant, type Dashboard, type Plan } from './api';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -9,10 +9,14 @@ import {
   LinearScale,
   Tooltip,
   Legend,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
 } from 'chart.js';
-import { Pie, Bar } from 'react-chartjs-2';
+import { Pie, Bar, Radar } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler);
 
 type Tab = 'overview' | 'sector' | 'participant' | 'tour' | 'methodology';
 
@@ -44,6 +48,7 @@ function App() {
   const [sectorOverview, setSectorOverview] = useState<any>(null);
   const [sectorRanking, setSectorRanking] = useState<any>(null);
   const [sectorLeaders, setSectorLeaders] = useState<any>(null);
+  const [sectorCategoryComparison, setSectorCategoryComparison] = useState<any>(null);
   const [loadingSectorData, setLoadingSectorData] = useState<boolean>(false);
   const [selectedSectorForAnalysis, setSelectedSectorForAnalysis] = useState<string>('');
 
@@ -65,7 +70,8 @@ function App() {
       Promise.allSettled([
         fetchSectorOverview(sectorTabFilter).then(setSectorOverview),
         fetchSectorRanking(comparisonType as 'creative' | 'all').then(setSectorRanking),
-        fetchSectorLeaders(sectorTabFilter).then(setSectorLeaders)
+        fetchSectorLeaders(sectorTabFilter).then(setSectorLeaders),
+        fetchSectorCategoryComparison(sectorTabFilter, comparisonType as 'creative' | 'all').then(setSectorCategoryComparison)
       ]).finally(() => {
         setLoadingSectorData(false);
       });
@@ -73,6 +79,7 @@ function App() {
       setSectorOverview(null);
       setSectorRanking(null);
       setSectorLeaders(null);
+      setSectorCategoryComparison(null);
       setSelectedSectorForAnalysis('');
     }
   }, [sectorTabFilter]);
@@ -497,6 +504,264 @@ function App() {
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Cross-Sector Category Comparison */}
+              {sectorCategoryComparison && sectorCategoryComparison.targetSector && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>📊 Category Performance Analysis</div>
+                  
+                  {/* Radar Chart */}
+                  <div style={{ marginBottom: 20 }}>
+                    <div style={{ fontWeight: 600, marginBottom: 8 }}>Strengths & Weaknesses Radar</div>
+                    <div style={{ height: 400 }}>
+                      <Radar
+                        data={{
+                          labels: sectorCategoryComparison.categories.map((cat: string) => 
+                            sectorCategoryComparison.categoryLabels[cat]
+                          ),
+                          datasets: [
+                            {
+                              label: selectedSectorForAnalysis,
+                              data: sectorCategoryComparison.categories.map((cat: string) => 
+                                sectorCategoryComparison.targetSector.categoryAverages[cat]
+                              ),
+                              backgroundColor: 'rgba(21, 101, 192, 0.2)',
+                              borderColor: 'rgba(21, 101, 192, 1)',
+                              borderWidth: 2,
+                              pointBackgroundColor: 'rgba(21, 101, 192, 1)',
+                              pointBorderColor: '#fff',
+                              pointHoverBackgroundColor: '#fff',
+                              pointHoverBorderColor: 'rgba(21, 101, 192, 1)'
+                            },
+                            {
+                              label: 'Sector Average',
+                              data: sectorCategoryComparison.categories.map((cat: string) => {
+                                const avg = sectorCategoryComparison.otherSectors.reduce((sum: number, sector: any) => 
+                                  sum + sector.categoryAverages[cat], 0
+                                ) / sectorCategoryComparison.otherSectors.length;
+                                return Math.round(avg * 10) / 10;
+                              }),
+                              backgroundColor: 'rgba(108, 117, 125, 0.2)',
+                              borderColor: 'rgba(108, 117, 125, 1)',
+                              borderWidth: 2,
+                              pointBackgroundColor: 'rgba(108, 117, 125, 1)',
+                              pointBorderColor: '#fff',
+                              pointHoverBackgroundColor: '#fff',
+                              pointHoverBorderColor: 'rgba(108, 117, 125, 1)'
+                            }
+                          ]
+                        }}
+                        options={{
+                          responsive: true,
+                          maintainAspectRatio: false,
+                          plugins: {
+                            legend: {
+                              position: 'top' as const,
+                            },
+                            tooltip: {
+                              callbacks: {
+                                label: (context) => {
+                                  const label = context.dataset.label || '';
+                                  const value = context.parsed.r;
+                                  return `${label}: ${value}`;
+                                }
+                              }
+                            }
+                          },
+                          scales: {
+                            r: {
+                              beginAtZero: true,
+                              max: 20,
+                              ticks: {
+                                stepSize: 5
+                              }
+                            }
+                          }
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Category Performance Table */}
+                  <div>
+                    <div style={{ fontWeight: 600, marginBottom: 8 }}>Category Performance Comparison</div>
+                    <div style={{ overflowX: 'auto' }}>
+                      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                        <thead>
+                          <tr style={{ backgroundColor: '#f8f9fa' }}>
+                            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #dee2e6' }}>Category</th>
+                            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #dee2e6' }}>{selectedSectorForAnalysis}</th>
+                            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #dee2e6' }}>Sector Average</th>
+                            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #dee2e6' }}>Performance</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {sectorCategoryComparison.categories.map((cat: string) => {
+                            const targetValue = sectorCategoryComparison.targetSector.categoryAverages[cat];
+                            const avgValue = sectorCategoryComparison.otherSectors.reduce((sum: number, sector: any) => 
+                              sum + sector.categoryAverages[cat], 0
+                            ) / sectorCategoryComparison.otherSectors.length;
+                            const performance = targetValue > avgValue ? 'Above Average' : 
+                                             targetValue < avgValue ? 'Below Average' : 'Average';
+                            const performanceColor = targetValue > avgValue ? '#28a745' : 
+                                                   targetValue < avgValue ? '#dc3545' : '#6c757d';
+                            
+                            return (
+                              <tr key={cat}>
+                                <td style={{ padding: 8, borderBottom: '1px solid #dee2e6' }}>
+                                  {sectorCategoryComparison.categoryLabels[cat]}
+                                </td>
+                                <td style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #dee2e6', fontWeight: 600 }}>
+                                  {targetValue}
+                                </td>
+                                <td style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #dee2e6' }}>
+                                  {Math.round(avgValue * 10) / 10}
+                                </td>
+                                <td style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #dee2e6', color: performanceColor, fontWeight: 600 }}>
+                                  {performance}
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Sector-Specific Insights & Recommendations */}
+              {sectorOverview && sectorCategoryComparison && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontWeight: 700, marginBottom: 12, fontSize: 18 }}>💡 Sector Insights & Recommendations</div>
+                  
+                  {/* Sector Strengths */}
+                  <div style={{ marginBottom: 16 }}>
+                    <div style={{ fontWeight: 600, marginBottom: 8, color: '#28a745' }}>🎯 Sector Strengths</div>
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      {sectorCategoryComparison.categories.map((cat: string) => {
+                        const targetValue = sectorCategoryComparison.targetSector.categoryAverages[cat];
+                        const avgValue = sectorCategoryComparison.otherSectors.reduce((sum: number, sector: any) => 
+                          sum + sector.categoryAverages[cat], 0
+                        ) / sectorCategoryComparison.otherSectors.length;
+                        
+                        if (targetValue > avgValue + 1) { // Significantly above average
+                          return (
+                            <div key={cat} style={{ 
+                              padding: '6px 12px', 
+                              backgroundColor: '#d4edda', 
+                              color: '#155724',
+                              borderRadius: 16,
+                              fontSize: 12,
+                              fontWeight: 600,
+                              border: '1px solid #c3e6cb'
+                            }}>
+                              {sectorCategoryComparison.categoryLabels[cat]} (+{Math.round((targetValue - avgValue) * 10) / 10})
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Sector Challenges */}
+                  <div style={{ marginBottom: 16 }}>
+                    <div style={{ fontWeight: 600, marginBottom: 8, color: '#dc3545' }}>⚠️ Areas for Improvement</div>
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      {sectorCategoryComparison.categories.map((cat: string) => {
+                        const targetValue = sectorCategoryComparison.targetSector.categoryAverages[cat];
+                        const avgValue = sectorCategoryComparison.otherSectors.reduce((sum: number, sector: any) => 
+                          sum + sector.categoryAverages[cat], 0
+                        ) / sectorCategoryComparison.otherSectors.length;
+                        
+                        if (targetValue < avgValue - 1) { // Significantly below average
+                          return (
+                            <div key={cat} style={{ 
+                              padding: '6px 12px', 
+                              backgroundColor: '#f8d7da', 
+                              color: '#721c24',
+                              borderRadius: 16,
+                              fontSize: 12,
+                              fontWeight: 600,
+                              border: '1px solid #f5c6cb'
+                            }}>
+                              {sectorCategoryComparison.categoryLabels[cat]} ({Math.round((targetValue - avgValue) * 10) / 10})
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Sector-Wide Quick Wins */}
+                  <div style={{ marginBottom: 16 }}>
+                    <div style={{ fontWeight: 600, marginBottom: 8, color: '#17a2b8' }}>⚡ Sector-Wide Quick Wins</div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 12 }}>
+                      {sectorOverview.participationRate < 80 && (
+                        <div style={{ padding: 12, backgroundColor: '#e7f3ff', borderRadius: 8, border: '1px solid #b3d9ff' }}>
+                          <div style={{ fontWeight: 600, marginBottom: 4, color: '#004085' }}>📈 Increase Participation</div>
+                          <div style={{ fontSize: 12, color: '#004085' }}>
+                            Only {sectorOverview.participationRate}% of stakeholders have complete assessments. 
+                            Focus on engaging the remaining {sectorOverview.totalStakeholders - sectorOverview.completionStats.complete} stakeholders.
+                          </div>
+                        </div>
+                      )}
+                      
+                      {sectorOverview.maturityDistribution.Absent > sectorOverview.maturityDistribution.Expert + sectorOverview.maturityDistribution.Advanced && (
+                        <div style={{ padding: 12, backgroundColor: '#fff3cd', borderRadius: 8, border: '1px solid #ffeaa7' }}>
+                          <div style={{ fontWeight: 600, marginBottom: 4, color: '#856404' }}>🎓 Digital Skills Training</div>
+                          <div style={{ fontSize: 12, color: '#856404' }}>
+                            {sectorOverview.maturityDistribution.Absent} stakeholders are at Absent level. 
+                            Prioritize basic digital skills training programs.
+                          </div>
+                        </div>
+                      )}
+
+                      {sectorOverview.avgCombined < 50 && (
+                        <div style={{ padding: 12, backgroundColor: '#f8d7da', borderRadius: 8, border: '1px solid #f5c6cb' }}>
+                          <div style={{ fontWeight: 600, marginBottom: 4, color: '#721c24' }}>🚀 Sector Development Program</div>
+                          <div style={{ fontSize: 12, color: '#721c24' }}>
+                            Sector average of {sectorOverview.avgCombined} indicates need for comprehensive 
+                            digital transformation program.
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Strategic Recommendations */}
+                  <div>
+                    <div style={{ fontWeight: 600, marginBottom: 8, color: '#6f42c1' }}>🎯 Strategic Recommendations</div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 12 }}>
+                      <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e9ecef' }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4 }}>Peer Learning Network</div>
+                        <div style={{ fontSize: 12, color: '#666' }}>
+                          Connect {sectorLeaders?.leaders?.length || 0} sector champions with emerging stakeholders 
+                          for mentorship and knowledge sharing.
+                        </div>
+                      </div>
+                      
+                      <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e9ecef' }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4 }}>Sector Collaboration</div>
+                        <div style={{ fontSize: 12, color: '#666' }}>
+                          Identify complementary sectors for cross-sector learning and 
+                          collaborative digital initiatives.
+                        </div>
+                      </div>
+
+                      <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e9ecef' }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4 }}>Resource Allocation</div>
+                        <div style={{ fontSize: 12, color: '#666' }}>
+                          Focus development resources on {sectorOverview.totalStakeholders} stakeholders 
+                          with highest potential impact.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}

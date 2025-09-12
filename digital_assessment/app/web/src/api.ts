@@ -156,4 +156,24 @@ export async function fetchSectorLeaders(sectorName: string): Promise<{
   return res.json();
 }
 
+export async function fetchSectorCategoryComparison(sectorName: string, compareWith: 'creative' | 'all' = 'all'): Promise<{
+  targetSector: {
+    sector: string;
+    categoryAverages: Record<string, number>;
+    participantCount: number;
+  } | null;
+  otherSectors: Array<{
+    sector: string;
+    categoryAverages: Record<string, number>;
+    participantCount: number;
+  }>;
+  comparisonType: string;
+  categories: string[];
+  categoryLabels: Record<string, string>;
+}> {
+  const res = await fetch(`${API_URL}/sector/category-comparison?name=${encodeURIComponent(sectorName)}&compare=${compareWith}`);
+  if (!res.ok) throw new Error('Failed to load sector category comparison');
+  return res.json();
+}
+
 
