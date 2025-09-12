@@ -139,6 +139,7 @@ Deliver a production-ready dashboard and analysis web app that mirrors the Apps 
 
 Goal: Provide clear visibility into TripAdvisor presence across participants in The Gambia and surface it in the UI for quality and actionability.
 
+the r
 ### Sector Intelligence Dashboard - Implementation Plan
 
 #### Goal

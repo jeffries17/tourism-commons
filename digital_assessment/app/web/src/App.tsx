@@ -312,13 +312,44 @@ function App() {
       {active === 'sector' && (
         <div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12, alignItems: 'center' }}>
-            <label>
-              Sector:{' '}
-              <select value={sectorTabFilter} onChange={e => setSectorTabFilter(e.target.value)}>
-                {([''] as string[]).concat(sectors).map(s => (
-                  <option key={s} value={s}>{s || 'Select a sector for analysis'}</option>
-                ))}
-              </select>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontWeight: 600, color: '#333' }}>Sector:</span>
+              <div style={{ position: 'relative' }}>
+                <select 
+                  value={sectorTabFilter} 
+                  onChange={e => setSectorTabFilter(e.target.value)}
+                  style={{
+                    appearance: 'none',
+                    background: sectorTabFilter ? '#1565c0' : '#f8f9fa',
+                    color: sectorTabFilter ? 'white' : '#333',
+                    border: 'none',
+                    borderRadius: 8,
+                    padding: '8px 16px',
+                    fontSize: 14,
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    minWidth: 200,
+                    boxShadow: sectorTabFilter ? '0 2px 4px rgba(21, 101, 192, 0.3)' : '0 1px 3px rgba(0,0,0,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  {([''] as string[]).concat(sectors).map(s => (
+                    <option key={s} value={s} style={{ background: 'white', color: '#333' }}>
+                      {s || 'Select a sector for analysis'}
+                    </option>
+                  ))}
+                </select>
+                <div style={{
+                  position: 'absolute',
+                  right: 12,
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  pointerEvents: 'none',
+                  color: sectorTabFilter ? 'white' : '#666'
+                }}>
+                  ▼
+                </div>
+              </div>
             </label>
           </div>
 
