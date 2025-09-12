@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchSectorContext, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorRanking, fetchSectorLeaders, fetchSectorCategoryComparison, type Participant, type Dashboard, type Plan } from './api';
 import {
@@ -24,8 +24,6 @@ type Tab = 'overview' | 'sector' | 'participant' | 'tour' | 'methodology';
 function App() {
   const [active, setActive] = useState<Tab>('overview');
   const [sectors, setSectors] = useState<string[]>([]);
-  const [sectorFilter, setSectorFilter] = useState<string>('');
-  const [participants, setParticipants] = useState<Participant[]>([]);
   const [allParticipants, setAllParticipants] = useState<Participant[]>([]);
   const [tourOps, setTourOps] = useState<Participant[]>([]);
   const [selectedParticipant, setSelectedParticipant] = useState<string>('');
@@ -34,13 +32,13 @@ function App() {
   const [presence, setPresence] = useState<Record<string, string> | null>(null);
   const [justifications, setJustifications] = useState<Record<string, string> | null>(null);
   const [sectorContext, setSectorContext] = useState<{ sector: string; priorityArea: string; recommendations: string[]; total: number } | null>(null);
-  const [sectorMetric, setSectorMetric] = useState<'avgCombined'|'avgExternal'|'avgSurvey'>('avgCombined');
   const [sectorTabFilter, setSectorTabFilter] = useState<string>('');
   const [sectorParticipants, setSectorParticipants] = useState<Participant[]>([]);
   const [loadingAllParticipants, setLoadingAllParticipants] = useState<boolean>(false);
   const [loadingPlan, setLoadingPlan] = useState<boolean>(false);
   const [loadingTourOps, setLoadingTourOps] = useState<boolean>(false);
-  const [opportunities, setOpportunities] = useState<any[]>([]);
+  const [customOpportunities, setCustomOpportunities] = useState<any[]>([]);
+  const [generatedOpportunities, setGeneratedOpportunities] = useState<any[]>([]);
   const [quickWins, setQuickWins] = useState<any[]>([]);
   const [loadingOpportunities, setLoadingOpportunities] = useState<boolean>(false);
   
@@ -85,10 +83,10 @@ function App() {
   }, [sectorTabFilter]);
 
   useEffect(() => {
-    fetchParticipants(sectorFilter || undefined)
-      .then(setParticipants)
-      .catch(() => setParticipants([]));
-  }, [sectorFilter]);
+    fetchParticipants(sectorTabFilter || undefined)
+      .then(setAllParticipants)
+      .catch(() => setAllParticipants([]));
+  }, [sectorTabFilter]);
 
   useEffect(() => {
     setLoadingTourOps(true);
@@ -131,7 +129,8 @@ function App() {
       setPresence(null);
       setSectorContext(null);
       setJustifications(null);
-      setOpportunities([]);
+      setCustomOpportunities([]);
+      setGeneratedOpportunities([]);
       setQuickWins([]);
       return;
     }
@@ -143,8 +142,9 @@ function App() {
       fetchSectorContext(selectedParticipant).then(setSectorContext),
       fetchJustifications(selectedParticipant).then(setJustifications),
       fetchOpportunities(selectedParticipant).then(data => {
-        setOpportunities(data.opportunities);
-        setQuickWins(data.quickWins);
+        setCustomOpportunities(data.customOpportunities || []);
+        setGeneratedOpportunities(data.generatedOpportunities || []);
+        setQuickWins(data.quickWins || []);
       })
     ]).finally(() => {
       setLoadingPlan(false);
@@ -152,7 +152,6 @@ function App() {
     });
   }, [selectedParticipant]);
 
-  const sectorOptions = useMemo(() => [''].concat(sectors), [sectors]);
 
   // Clean-path routing with history API under base (e.g., /gambia-itc/creative-industries/:name)
   const basePath = (import.meta as any).env.BASE_URL || '/';
@@ -1014,8 +1013,39 @@ function App() {
                 <div style={{ fontWeight: 700, marginBottom: 6 }}>Opportunities</div>
                 {loadingOpportunities ? (
                   <div className="muted">Loading opportunities…</div>
-                ) : opportunities?.length ? (
-                  <div style={{ overflowX: 'auto' }}>
+                ) : (
+                  <>
+                    {/* Custom Opportunities from Google Sheet */}
+                    {customOpportunities?.length > 0 && (
+                      <div style={{ marginBottom: 16 }}>
+                        <div style={{ fontWeight: 600, marginBottom: 12, color: '#1565c0' }}>🎯 Custom Opportunities</div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 12 }}>
+                          {customOpportunities.map((opp, i) => (
+                            <div key={i} style={{
+                              padding: 16,
+                              backgroundColor: '#f8f9fa',
+                              borderRadius: 8,
+                              border: '1px solid #e9ecef',
+                              borderLeft: '4px solid #1565c0'
+                            }}>
+                              <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+                                <span style={{ fontSize: 20, marginRight: 8 }}>{opp.emoji}</span>
+                                <div style={{ fontWeight: 600, color: '#1565c0' }}>{opp.category}</div>
+                              </div>
+                              <div style={{ color: '#333', lineHeight: 1.5, fontSize: 14 }}>
+                                {opp.advice}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Generated Opportunities Table */}
+                    {generatedOpportunities?.length > 0 && (
+                      <div>
+                        <div style={{ fontWeight: 600, marginBottom: 12, color: '#666' }}>Generated Opportunities</div>
+                        <div style={{ overflowX: 'auto' }}>
                     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                       <thead>
                         <tr>
@@ -1028,7 +1058,7 @@ function App() {
                         </tr>
                       </thead>
                       <tbody>
-                        {opportunities.map((o, i) => (
+                        {generatedOpportunities.map((o, i) => (
                           <tr key={i}>
                             <td style={{ padding: 6 }}>{o.category}</td>
                             <td style={{ padding: 6 }}>{o.current} → {o.target}</td>
@@ -1039,9 +1069,14 @@ function App() {
                           </tr>
                         ))}
                       </tbody>
-                    </table>
-                  </div>
-                ) : '—'}
+                        </table>
+                      </div>
+                    </div>
+                    )}
+
+                    {!customOpportunities?.length && !generatedOpportunities?.length && '—'}
+                  </>
+                )}
               </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
@@ -1302,8 +1337,39 @@ function App() {
                 <div style={{ fontWeight: 700, marginBottom: 6 }}>Opportunities</div>
                 {loadingOpportunities ? (
                   <div className="muted">Loading opportunities…</div>
-                ) : opportunities?.length ? (
-                  <div style={{ overflowX: 'auto' }}>
+                ) : (
+                  <>
+                    {/* Custom Opportunities from Google Sheet */}
+                    {customOpportunities?.length > 0 && (
+                      <div style={{ marginBottom: 16 }}>
+                        <div style={{ fontWeight: 600, marginBottom: 12, color: '#1565c0' }}>🎯 Custom Opportunities</div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 12 }}>
+                          {customOpportunities.map((opp, i) => (
+                            <div key={i} style={{
+                              padding: 16,
+                              backgroundColor: '#f8f9fa',
+                              borderRadius: 8,
+                              border: '1px solid #e9ecef',
+                              borderLeft: '4px solid #1565c0'
+                            }}>
+                              <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+                                <span style={{ fontSize: 20, marginRight: 8 }}>{opp.emoji}</span>
+                                <div style={{ fontWeight: 600, color: '#1565c0' }}>{opp.category}</div>
+                              </div>
+                              <div style={{ color: '#333', lineHeight: 1.5, fontSize: 14 }}>
+                                {opp.advice}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Generated Opportunities Table */}
+                    {generatedOpportunities?.length > 0 && (
+                      <div>
+                        <div style={{ fontWeight: 600, marginBottom: 12, color: '#666' }}>Generated Opportunities</div>
+                        <div style={{ overflowX: 'auto' }}>
                     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                       <thead>
                         <tr>
@@ -1316,7 +1382,7 @@ function App() {
                         </tr>
                       </thead>
                       <tbody>
-                        {opportunities.map((o, i) => (
+                        {generatedOpportunities.map((o, i) => (
                           <tr key={i}>
                             <td style={{ padding: 6 }}>{o.category}</td>
                             <td style={{ padding: 6 }}>{o.current} → {o.target}</td>
@@ -1327,9 +1393,14 @@ function App() {
                           </tr>
                         ))}
                       </tbody>
-                    </table>
-                  </div>
-                ) : '—'}
+                        </table>
+                      </div>
+                    </div>
+                    )}
+
+                    {!customOpportunities?.length && !generatedOpportunities?.length && '—'}
+                  </>
+                )}
               </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>

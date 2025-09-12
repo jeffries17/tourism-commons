@@ -332,7 +332,7 @@ export function createApp() {
       }
       
       const sheetId = requireEnv('SHEET_ID');
-      const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+      const rows = await readMaster(sheetId, 'Master Assessment!A1:AT10000');
       
       // Find the row for this participant
       const participantRow = rows.find((row, index) => 
@@ -366,12 +366,38 @@ export function createApp() {
         maturityLevel: String(participantRow[17] || '').trim()
       };
       
-      // Generate opportunities and quick wins
-      const opportunities = generateOpportunities(participant);
+      // Extract custom opportunity advice from Google Sheet columns AK-AP
+      const customOpportunities = [];
+      
+      // Column mapping: AK=Social Media (36), AL=Website (37), AM=Visual Content (38), AN=Online Discoverability (39), AO=Digital Sales/Booking (40), AP=Platform Integration (41)
+      const opportunityColumns = [
+        { key: 'socialMedia', column: 36, emoji: '📱', title: 'Social Media Opportunities' },
+        { key: 'website', column: 37, emoji: '🌐', title: 'Website Opportunities' },
+        { key: 'visualContent', column: 38, emoji: '📸', title: 'Visual Content Opportunities' },
+        { key: 'onlineDiscoverability', column: 39, emoji: '🔍', title: 'Online Discoverability Opportunities' },
+        { key: 'digitalSalesBooking', column: 40, emoji: '💳', title: 'Digital Sales/Booking Opportunities' },
+        { key: 'platformIntegration', column: 41, emoji: '🔗', title: 'Platform Integration Opportunities' }
+      ];
+      
+      opportunityColumns.forEach(opp => {
+        const advice = String(participantRow[opp.column] || '').trim();
+        if (advice && advice !== '') {
+          customOpportunities.push({
+            category: opp.title,
+            emoji: opp.emoji,
+            advice: advice,
+            type: 'external'
+          });
+        }
+      });
+      
+      // Generate additional opportunities and quick wins using existing logic
+      const generatedOpportunities = generateOpportunities(participant);
       const quickWins = generateQuickWins(participant);
       
       res.json({
-        opportunities,
+        customOpportunities,
+        generatedOpportunities,
         quickWins
       });
     } catch (e: any) {
