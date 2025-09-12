@@ -32,6 +32,10 @@
         "function": "api"
       },
       {
+        "source": "/gambia-itc/**",
+        "destination": "/gambia-itc/index.html"
+      },
+      {
         "source": "!/**/*.{js,css,png,jpg,svg,ico,woff,woff2,ttf,eot}",
         "destination": "/index.html"
       }

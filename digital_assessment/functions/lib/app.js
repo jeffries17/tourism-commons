@@ -61,10 +61,28 @@ export function createApp() {
     });
     app.get('/sectors', async (_req, res) => {
         try {
-            const rows = await readMaster(requireEnv('SHEET_ID'));
+            const sheetId = requireEnv('SHEET_ID');
+            const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            let rowsTourism = [];
+            try {
+                rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AI10000');
+            }
+            catch {
+                rowsTourism = [];
+            }
             const set = new Set();
-            rows.slice(1).forEach(r => { if ((r[0] || '').toString().trim())
-                set.add((r[1] || 'Unknown').toString()); });
+            // Add sectors from Master Assessment
+            rowsMaster.slice(1).forEach(r => {
+                if ((r[0] || '').toString().trim())
+                    set.add((r[1] || 'Unknown').toString());
+            });
+            // Add sectors from Tourism Assessment
+            rowsTourism.slice(1).forEach(r => {
+                if ((r[0] || '').toString().trim())
+                    set.add((r[1] || 'Unknown').toString());
+            });
+            // Add Tour Operator as a special sector option if not already present
+            set.add('Tour Operator');
             res.json(Array.from(set).sort());
         }
         catch (e) {
@@ -74,8 +92,18 @@ export function createApp() {
     app.get('/participants', async (req, res) => {
         try {
             const sector = (req.query.sector || '').toString();
-            const rows = await readMaster(requireEnv('SHEET_ID'));
-            res.json(parseParticipants(rows, sector || undefined));
+            const sheetId = requireEnv('SHEET_ID');
+            const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            let rowsTourism = [];
+            try {
+                rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AI10000');
+            }
+            catch {
+                rowsTourism = [];
+            }
+            // Combine data from both sheets
+            const allRows = rowsMaster.concat(rowsTourism.length ? rowsTourism : []);
+            res.json(parseParticipants(allRows, sector || undefined));
         }
         catch (e) {
             res.status(500).json({ error: e.message || String(e) });
@@ -301,7 +329,7 @@ export function createApp() {
     // Feedback endpoint - writes to Feedback tab
     app.post('/feedback', async (req, res) => {
         try {
-            const { type, participant, message, contact } = req.body;
+            const { type, participant, sector, message, contact } = req.body;
             const sheets = await getSheetsWriteClient();
             const sheetId = requireEnv('SHEET_ID');
             // Get current timestamp
@@ -311,6 +339,7 @@ export function createApp() {
                 timestamp,
                 type || 'correction',
                 participant || '',
+                sector || '',
                 message || '',
                 contact || '',
                 'Submitted via web app'
@@ -318,7 +347,7 @@ export function createApp() {
             // Append to the Feedback tab
             await sheets.spreadsheets.values.append({
                 spreadsheetId: sheetId,
-                range: 'Feedback!A:F',
+                range: 'Feedback!A:G',
                 valueInputOption: 'RAW',
                 requestBody: {
                     values: [rowData]
@@ -379,7 +408,16 @@ export function createApp() {
                 return;
             }
             const sheetId = requireEnv('SHEET_ID');
-            const rows = await readMaster(sheetId, 'Master Assessment!A1:AT10000');
+            const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AT10000');
+            let rowsTourism = [];
+            try {
+                rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AT10000');
+            }
+            catch {
+                rowsTourism = [];
+            }
+            // Combine data from both sheets
+            const rows = rowsMaster.concat(rowsTourism.length ? rowsTourism : []);
             // Find the row for this participant
             const participantRow = rows.find((row, index) => index > 0 && String(row[0] || '').trim() === name.trim());
             if (!participantRow) {
@@ -440,6 +478,23 @@ export function createApp() {
             res.status(500).json({ error: e.message || String(e) });
         }
     });
+    // Helper function to get data from appropriate sheet based on sector
+    async function getSectorData(sectorName) {
+        const sheetId = requireEnv('SHEET_ID');
+        const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+        let rowsTourism = [];
+        // If sector is "Tour Operator", read from Tourism Assessment sheet
+        if (sectorName.toLowerCase().includes('tour operator')) {
+            try {
+                rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AI10000');
+            }
+            catch {
+                rowsTourism = [];
+            }
+        }
+        // Combine data from both sheets
+        return rowsMaster.concat(rowsTourism.length ? rowsTourism : []);
+    }
     // Sector Intelligence Dashboard endpoints
     app.get('/sector/overview', async (req, res) => {
         try {
@@ -448,8 +503,7 @@ export function createApp() {
                 res.status(400).json({ error: 'Sector name required' });
                 return;
             }
-            const sheetId = requireEnv('SHEET_ID');
-            const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            const rows = await getSectorData(sectorName);
             // Filter participants by sector
             const sectorParticipants = rows
                 .slice(1)
@@ -508,7 +562,15 @@ export function createApp() {
         try {
             const type = (req.query.type || 'all').toString(); // 'creative' or 'all'
             const sheetId = requireEnv('SHEET_ID');
-            const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            let rowsTourism = [];
+            try {
+                rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AI10000');
+            }
+            catch {
+                rowsTourism = [];
+            }
+            const rows = rowsMaster.concat(rowsTourism.length ? rowsTourism : []);
             // Get all sectors
             const allSectors = new Set();
             rows.slice(1).forEach(row => {
@@ -563,8 +625,7 @@ export function createApp() {
                 res.status(400).json({ error: 'Sector name required' });
                 return;
             }
-            const sheetId = requireEnv('SHEET_ID');
-            const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            const rows = await getSectorData(sectorName);
             // Filter participants by sector
             const sectorParticipants = rows
                 .slice(1)
@@ -596,8 +657,7 @@ export function createApp() {
                 res.status(400).json({ error: 'Sector name required' });
                 return;
             }
-            const sheetId = requireEnv('SHEET_ID');
-            const rows = await readMaster(sheetId, 'Master Assessment!A1:AI10000');
+            const rows = await getSectorData(sectorName);
             // Get all sectors for comparison
             const allSectors = new Set();
             rows.slice(1).forEach(row => {

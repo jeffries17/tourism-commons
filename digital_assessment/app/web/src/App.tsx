@@ -49,7 +49,7 @@ function App() {
   // Modal state
   const [showFeedbackModal, setShowFeedbackModal] = useState<boolean>(false);
   const [showAddParticipantModal, setShowAddParticipantModal] = useState<boolean>(false);
-  const [feedbackForm, setFeedbackForm] = useState<{ type: string; participant?: string; message: string; contact?: string }>({ type: 'correction', message: '' });
+  const [feedbackForm, setFeedbackForm] = useState<{ type: string; participant?: string; sector?: string; message: string; contact?: string }>({ type: 'correction', message: '' });
   const [participantForm, setParticipantForm] = useState<{ name: string; sector: string; contact: string; notes: string }>({ name: '', sector: '', contact: '', notes: '' });
   const [submittingFeedback, setSubmittingFeedback] = useState<boolean>(false);
   const [submittingParticipant, setSubmittingParticipant] = useState<boolean>(false);
@@ -195,25 +195,46 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: 16 }}>
+    <div>
+      {/* Progress Banner */}
+      <div style={{
+        background: 'linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%)',
+        border: '1px solid #81d4fa',
+        borderRadius: 0,
+        padding: '12px 0',
+        margin: '-0.75rem -0.75rem 12px -0.75rem',
+        textAlign: 'center',
+        color: '#01579b'
+      }}>
+        <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>📊 Assessment In Progress</div>
+        <div style={{ fontSize: 12, lineHeight: 1.4, color: '#0277bd', padding: '0 8px' }}>
+          We're actively collecting data and refining this assessment. <strong>Your input matters! </strong>
+          Please submit corrections, additional information, or relevant links to help us make this as accurate as possible.
+          <br />
+          <strong>Final results expected by end of October 2025.</strong>
+        </div>
+      </div>
+
       <div className="topbar">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-          <h2 style={{ margin: 0, fontSize: 24, fontWeight: 700, letterSpacing: '-0.025em' }}>The Gambia — Creative Industries & Tourism Assessment</h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <div style={{ fontSize: 12, opacity: 0.9, fontWeight: 500 }}>Digital Readiness Platform</div>
-            <div style={{ display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
+          <h2 style={{ margin: 0, fontSize: 16, fontWeight: 700, letterSpacing: '-0.025em', lineHeight: 1.2, flex: 1, minWidth: 0 }}>The Gambia — Creative Industries & Tourism Assessment</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+            <div className="subtitle mobile-hide" style={{ fontSize: 11, opacity: 0.9, fontWeight: 500 }}>Digital Readiness Platform</div>
+            <div className="action-buttons" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
               <button
                 onClick={() => setShowFeedbackModal(true)}
                 style={{
                   background: 'rgba(255, 255, 255, 0.2)',
                   border: '1px solid rgba(255, 255, 255, 0.3)',
                   color: '#ffffff',
-                  padding: '8px 16px',
+                  padding: '6px 12px',
                   borderRadius: '8px',
                   cursor: 'pointer',
                   fontWeight: 600,
-                  fontSize: '13px',
-                  transition: 'all 0.2s ease'
+                  fontSize: '12px',
+                  transition: 'all 0.2s ease',
+                  minHeight: '36px',
+                  minWidth: '36px'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)';
@@ -230,12 +251,14 @@ function App() {
                   background: 'rgba(255, 255, 255, 0.9)',
                   border: '1px solid rgba(255, 255, 255, 0.9)',
                   color: 'var(--primary)',
-                  padding: '8px 16px',
+                  padding: '6px 12px',
                   borderRadius: '8px',
                   cursor: 'pointer',
                   fontWeight: 600,
-                  fontSize: '13px',
-                  transition: 'all 0.2s ease'
+                  fontSize: '12px',
+                  transition: 'all 0.2s ease',
+                  minHeight: '36px',
+                  minWidth: '36px'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = '#ffffff';
@@ -384,10 +407,10 @@ function App() {
             <div className="muted">Compare performance across creative industry sectors. Select a sector to view detailed analytics, benchmarking, and sector-specific recommendations.</div>
           </div>
           
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12, alignItems: 'center' }}>
-            <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span style={{ fontWeight: 600, color: '#333' }}>Sector:</span>
-              <div style={{ position: 'relative' }}>
+          <div className="mobile-spacing" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12, alignItems: 'center' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', width: '100%' }}>
+              <span style={{ fontWeight: 600, color: '#333', minWidth: 'fit-content' }}>Sector:</span>
+              <div style={{ position: 'relative', flex: 1, minWidth: 200 }}>
                 <select 
                   value={sectorTabFilter} 
                   onChange={e => setSectorTabFilter(e.target.value)}
@@ -397,11 +420,12 @@ function App() {
                     color: sectorTabFilter ? 'white' : '#333',
                     border: 'none',
                     borderRadius: 8,
-                    padding: '8px 16px',
+                    padding: '10px 12px',
                     fontSize: 14,
                     fontWeight: 600,
                     cursor: 'pointer',
-                    minWidth: 200,
+                    width: '100%',
+                    minHeight: '40px',
                     boxShadow: sectorTabFilter ? '0 2px 4px rgba(21, 101, 192, 0.3)' : '0 1px 3px rgba(0,0,0,0.1)',
                     transition: 'all 0.2s ease'
                   }}
@@ -952,6 +976,42 @@ function App() {
                 ) : '—'}
               </div>
 
+              {/* Survey / Internal Assessment Section */}
+              <div className="card" style={{ gridColumn: '1 / span 2' }}>
+                <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 18 }}>📋 Survey / Internal Assessment</div>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 12 }}>
+                  Complete short survey → <a href="#" style={{ color: '#1565c0', textDecoration: 'none' }}>Take Survey</a>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+                  {[
+                    { key: 'digitalComfort', title: 'Digital Comfort & Skills', max: 8, emoji: '🧠', description: 'Team capability to manage and use digital tools effectively.' },
+                    { key: 'contentStrategy', title: 'Content Strategy', max: 8, emoji: '📝', description: 'Planned content approach aligned to audience and goals.' },
+                    { key: 'platformBreadth', title: 'Platform Usage Breadth', max: 7, emoji: '📱', description: 'Breadth of channels used and maintained consistently.' },
+                    { key: 'investmentCapacity', title: 'Investment Capacity', max: 4, emoji: '💰', description: 'Resources to invest in content, ads, and tooling.' },
+                    { key: 'challengeSeverity', title: 'Challenge Severity', max: 3, emoji: '⚠️', description: 'Extent of operational or market barriers faced.' }
+                  ].map((item) => (
+                    <div key={item.key} style={{ 
+                      backgroundColor: '#f8f9fa', 
+                      padding: 12, 
+                      borderRadius: 8, 
+                      border: '1px solid #e7e7e9',
+                      opacity: 0.6
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+                        <span style={{ fontSize: 16, marginRight: 8 }}>{item.emoji}</span>
+                        <div style={{ fontWeight: 600, fontSize: 14 }}>{item.title}</div>
+                      </div>
+                      <div style={{ fontSize: 12, color: '#666', marginBottom: 8 }}>
+                        <strong>n/a</strong> / {item.max}
+                      </div>
+                      <div style={{ fontSize: 11, color: '#888', lineHeight: 1.3 }}>
+                        {item.description}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
                 <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
                 <div style={{ fontSize: 12, color: '#666', marginBottom: 12, cursor: 'pointer' }}>▼ Show notes (assessor evidence per category)</div>
@@ -1297,8 +1357,41 @@ function App() {
                 )}
               </div>
 
-
-
+              {/* Survey / Internal Assessment Section */}
+              <div className="card" style={{ gridColumn: '1 / span 2' }}>
+                <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 18 }}>📋 Survey / Internal Assessment</div>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 12 }}>
+                  Complete short survey → <a href="#" style={{ color: '#1565c0', textDecoration: 'none' }}>Take Survey</a>
+              </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+                  {[
+                    { key: 'digitalComfort', title: 'Digital Comfort & Skills', max: 8, emoji: '🧠', description: 'Team capability to manage and use digital tools effectively.' },
+                    { key: 'contentStrategy', title: 'Content Strategy', max: 8, emoji: '📝', description: 'Planned content approach aligned to audience and goals.' },
+                    { key: 'platformBreadth', title: 'Platform Usage Breadth', max: 7, emoji: '📱', description: 'Breadth of channels used and maintained consistently.' },
+                    { key: 'investmentCapacity', title: 'Investment Capacity', max: 4, emoji: '💰', description: 'Resources to invest in content, ads, and tooling.' },
+                    { key: 'challengeSeverity', title: 'Challenge Severity', max: 3, emoji: '⚠️', description: 'Extent of operational or market barriers faced.' }
+                  ].map((item) => (
+                    <div key={item.key} style={{ 
+                      backgroundColor: '#f8f9fa', 
+                      padding: 12, 
+                      borderRadius: 8, 
+                      border: '1px solid #e7e7e9',
+                      opacity: 0.6
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+                        <span style={{ fontSize: 16, marginRight: 8 }}>{item.emoji}</span>
+                        <div style={{ fontWeight: 600, fontSize: 14 }}>{item.title}</div>
+                    </div>
+                      <div style={{ fontSize: 12, color: '#666', marginBottom: 8 }}>
+                        <strong>n/a</strong> / {item.max}
+                  </div>
+                      <div style={{ fontSize: 11, color: '#888', lineHeight: 1.3 }}>
+                        {item.description}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               <div className="card" style={{ gridColumn: '1 / span 2' }}>
                 <div style={{ fontWeight: 700, marginBottom: 6, fontSize: 16 }}>Evidence & Justifications</div>
@@ -1350,18 +1443,98 @@ function App() {
             </div>
             
             <div className="card">
-              <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>2) Scoring Framework</div>
-              <p style={{ margin: '0 0 8px 0', fontSize: '14px', lineHeight: '1.4' }}>
-                Each organization is scored across six digital categories with different maximum points:
+              <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>2) Assessment Categories</div>
+              <p style={{ margin: '0 0 12px 0', fontSize: '14px', lineHeight: '1.4' }}>
+                Each organization is scored across six digital categories. Here's what each category measures:
               </p>
-              <ul style={{ margin: 0, paddingLeft: 18, textAlign: 'left', fontSize: '14px', lineHeight: '1.4' }}>
-                <li><strong>Social Media Presence</strong> (18 points): Facebook, Instagram, Twitter, LinkedIn activity</li>
-                <li><strong>Website Quality</strong> (12 points): Design, content, mobile responsiveness, SEO</li>
-                <li><strong>Visual Content</strong> (15 points): Photos, videos, graphics, brand consistency</li>
-                <li><strong>Discoverability</strong> (12 points): Google listings, directories, search visibility</li>
-                <li><strong>Digital Sales</strong> (8 points): Online booking, e-commerce, payment systems</li>
-                <li><strong>Platform Integration</strong> (5 points): Third-party integrations, APIs, automation</li>
-              </ul>
+              <div className="grid-2-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
+                <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                  <div style={{ fontWeight: 600, marginBottom: 4, color: '#1565c0' }}>📱 Social Media Presence (18 pts)</div>
+                  <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                    How active and engaging you are on social media platforms. 
+                    <em> Example: Regular posts, responding to comments, using relevant hashtags.</em>
+            </div>
+                </div>
+                <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                  <div style={{ fontWeight: 600, marginBottom: 4, color: '#1565c0' }}>🌐 Website Quality (12 pts)</div>
+                  <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                    How good your website looks and works for visitors.
+                    <em> Example: Professional design, clear navigation, fast loading, mobile-friendly.</em>
+                  </div>
+                </div>
+                <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                  <div style={{ fontWeight: 600, marginBottom: 4, color: '#1565c0' }}>📸 Visual Content (15 pts)</div>
+                  <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                    Quality and consistency of your photos, videos, and graphics.
+                    <em> Example: High-quality images, consistent branding, professional photography.</em>
+                  </div>
+                </div>
+                <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                  <div style={{ fontWeight: 600, marginBottom: 4, color: '#1565c0' }}>🔍 Online Discoverability (12 pts)</div>
+                  <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                    How easy it is for people to find you online.
+                    <em> Example: Google My Business listing, TripAdvisor presence, directory listings.</em>
+                  </div>
+                </div>
+                <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                  <div style={{ fontWeight: 600, marginBottom: 4, color: '#1565c0' }}>💳 Digital Sales/Booking (8 pts)</div>
+                  <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                    How well you handle online bookings and payments.
+                    <em> Example: Online booking forms, payment processing, automated confirmations.</em>
+                  </div>
+                </div>
+                <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                  <div style={{ fontWeight: 600, marginBottom: 4, color: '#1565c0' }}>🔗 Platform Integration (5 pts)</div>
+                  <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                    How well your different online tools work together.
+                    <em> Example: CRM integration, automated social posting, booking system sync.</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card" style={{ marginBottom: 16 }}>
+            <div style={{ fontWeight: 700, marginBottom: 8, color: '#1565c0' }}>Internal Assessment Categories</div>
+            <p style={{ margin: '0 0 12px 0', fontSize: '14px', lineHeight: '1.4' }}>
+              The survey component evaluates internal capabilities and processes (30% of total score):
+            </p>
+            <div className="grid-3-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+              <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>🧠 Digital Comfort & Skills (8 pts)</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  How comfortable your team is with digital tools and technology.
+                  <em> Example: Staff who can manage social media, use booking systems, or update websites.</em>
+                </div>
+              </div>
+              <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>📝 Content Strategy (8 pts)</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  Having a clear plan for what content to create and who it's for.
+                  <em> Example: Knowing your target audience, planning posts ahead, having brand guidelines.</em>
+                </div>
+              </div>
+              <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>📱 Platform Usage Breadth (7 pts)</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  How many different online platforms you actively use and maintain.
+                  <em> Example: Being active on Facebook, Instagram, and your website regularly.</em>
+                </div>
+              </div>
+              <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>💰 Investment Capacity (4 pts)</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  Willingness to spend on training, materials, and business improvements.
+                  <em> Example: Budget for staff training, professional photos, or better equipment.</em>
+                </div>
+              </div>
+              <div style={{ padding: 12, backgroundColor: '#f8f9fa', borderRadius: 8, border: '1px solid #e7e7e9' }}>
+                <div style={{ fontWeight: 600, marginBottom: 4, color: '#7b1fa2' }}>⚠️ Challenge Severity (3 pts)</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.3', color: '#6b7280' }}>
+                  How much your business is held back by practical challenges.
+                  <em> Example: Poor internet connection, limited budget, or lack of technical support.</em>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1374,7 +1547,7 @@ function App() {
               <div style={{ fontSize: '14px', lineHeight: '1.4' }}>
                 <div style={{ marginBottom: 6, padding: '6px 8px', background: '#f3f4f6', borderRadius: '4px' }}>
                   <strong>Absent (0-20 points)</strong>: No digital presence or very basic online listing
-                </div>
+            </div>
                 <div style={{ marginBottom: 6, padding: '6px 8px', background: '#fef3c7', borderRadius: '4px' }}>
                   <strong>Emerging (21-40 points)</strong>: Basic website and social media, limited digital strategy
                 </div>
@@ -1450,9 +1623,10 @@ function App() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          zIndex: 1000
+          zIndex: 1000,
+          padding: '16px'
         }}>
-          <div className="card" style={{ maxWidth: 500, width: '90%', maxHeight: '90vh', overflow: 'auto' }}>
+          <div className="card modal" style={{ maxWidth: 500, width: '100%', maxHeight: '90vh', overflow: 'auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <h3 style={{ margin: 0 }}>Submit Feedback</h3>
               <button
@@ -1492,6 +1666,20 @@ function App() {
                 </select>
               </div>
             )}
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Sector (if applicable)</label>
+              <select
+                value={feedbackForm.sector || ''}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, sector: e.target.value })}
+                style={{ width: '100%', padding: 8, borderRadius: 8, border: '1px solid #e7e7e9' }}
+              >
+                <option value="">Select sector (optional)</option>
+                {sectors.map(s => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+            </div>
 
             <div style={{ marginBottom: 16 }}>
               <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>Message</label>
@@ -1571,9 +1759,10 @@ function App() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          zIndex: 1000
+          zIndex: 1000,
+          padding: '16px'
         }}>
-          <div className="card" style={{ maxWidth: 500, width: '90%', maxHeight: '90vh', overflow: 'auto' }}>
+          <div className="card modal" style={{ maxWidth: 500, width: '100%', maxHeight: '90vh', overflow: 'auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <h3 style={{ margin: 0 }}>Add New Participant</h3>
               <button
