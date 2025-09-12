@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "apps/web/dist",
+    "public": "digital_assessment/hosting/public/gambia-itc",
     "ignore": [
       "firebase.json",
       "**/.*",
