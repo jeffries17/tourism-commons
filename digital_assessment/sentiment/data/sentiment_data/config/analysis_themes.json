@@ -1,0 +1,195 @@
+{
+  "universal_themes": {
+    "service_quality": {
+      "keywords": ["service", "staff", "friendly", "helpful", "professional", "attentive", "welcoming", "responsive", "courteous", "polite", "knowledgeable", "expert", "guide", "host"],
+      "weight": 1.2,
+      "description": "Quality of customer service and staff interactions"
+    },
+    "authenticity_culture": {
+      "keywords": ["authentic", "traditional", "cultural", "local", "genuine", "heritage", "indigenous", "original", "traditional", "native", "customary", "historic"],
+      "weight": 1.3,
+      "description": "Cultural authenticity and traditional elements"
+    },
+    "artistic_creative_quality": {
+      "keywords": ["art", "creative", "talent", "skill", "artistic", "beautiful", "inspiring", "stunning", "breathtaking", "mesmerizing", "captivating", "skilled", "masterful", "unique", "original", "innovative"],
+      "weight": 1.2,
+      "description": "Artistic quality and creative excellence"
+    },
+    "educational_value": {
+      "keywords": ["educational", "informative", "learning", "insightful", "knowledge", "history", "culture", "explanation", "understanding", "enlightening", "informative", "teach", "learn"],
+      "weight": 1.1,
+      "description": "Educational and informational value"
+    },
+    "value_pricing": {
+      "keywords": ["price", "value", "worth", "expensive", "cheap", "reasonable", "overpriced", "bargain", "affordable", "cost", "money", "payment", "fee"],
+      "weight": 1.0,
+      "description": "Value for money and pricing perception"
+    },
+    "organization_logistics": {
+      "keywords": ["organized", "efficient", "timing", "schedule", "punctual", "well-planned", "smooth", "coordinated", "structured", "professional", "management", "coordination"],
+      "weight": 1.1,
+      "description": "Organization and logistical aspects"
+    },
+    "accessibility_comfort": {
+      "keywords": ["accessible", "comfortable", "clean", "safe", "easy", "convenient", "welcoming", "inclusive", "accommodating", "wheelchair", "mobility", "ramp", "facilities"],
+      "weight": 1.0,
+      "description": "Physical and social accessibility"
+    },
+    "safety_security": {
+      "keywords": ["safe", "safety", "secure", "protection", "reliable", "trustworthy", "well-maintained", "condition", "equipment", "supervision", "guided"],
+      "weight": 1.2,
+      "description": "Safety and security measures"
+    },
+    "atmosphere_ambiance": {
+      "keywords": ["atmosphere", "ambiance", "peaceful", "serene", "spiritual", "moving", "inspiring", "emotional", "powerful", "vibrant", "energetic", "relaxing", "calm", "exciting"],
+      "weight": 1.1,
+      "description": "Atmosphere and emotional impact"
+    },
+    "community_local_impact": {
+      "keywords": ["community", "local", "support", "benefit", "contribute", "sustainable", "responsible", "development", "employment", "economy", "social"],
+      "weight": 1.0,
+      "description": "Local community impact and sustainability"
+    }
+  },
+  "sector_specific_themes": {
+    "tour_operators": {
+      "guide_quality": {
+        "keywords": ["guide", "instructor", "leader", "staff", "teacher", "expert", "professional", "knowledgeable", "friendly", "helpful", "driver", "host", "escort"],
+        "weight": 1.4,
+        "description": "Quality of tour guides and instructors"
+      },
+      "safety_security": {
+        "keywords": ["safe", "safety", "equipment", "secure", "protection", "condition", "maintained", "reliable", "trustworthy", "vehicle", "transport", "insurance"],
+        "weight": 1.3,
+        "description": "Safety and security measures"
+      },
+      "itinerary_planning": {
+        "keywords": ["itinerary", "planning", "schedule", "route", "destination", "sightseeing", "activities", "program", "agenda"],
+        "weight": 1.2,
+        "description": "Quality of tour planning and itinerary"
+      },
+      "transportation_logistics": {
+        "keywords": ["transport", "vehicle", "bus", "car", "boat", "comfortable", "clean", "reliable", "punctual", "pickup", "drop-off"],
+        "weight": 1.1,
+        "description": "Transportation quality and logistics"
+      }
+    },
+    "craft_markets": {
+      "craftsmanship_quality": {
+        "keywords": ["quality", "craftsmanship", "skill", "artisan", "handmade", "traditional", "beautiful", "excellent", "superior", "masterful", "expert", "talent"],
+        "weight": 1.5,
+        "description": "Quality of craftwork and artisan skills"
+      },
+      "variety_selection": {
+        "keywords": ["variety", "selection", "choice", "diverse", "range", "options", "different", "unique", "original", "assortment", "collection"],
+        "weight": 1.2,
+        "description": "Variety and selection of products"
+      },
+      "bargaining_negotiation": {
+        "keywords": ["bargain", "negotiate", "price", "deal", "haggle", "discount", "reasonable", "flexible", "haggling", "trading"],
+        "weight": 1.1,
+        "description": "Bargaining and price negotiation experience"
+      },
+      "authenticity_origin": {
+        "keywords": ["authentic", "genuine", "local", "traditional", "original", "handmade", "indigenous", "native", "customary"],
+        "weight": 1.3,
+        "description": "Authenticity and local origin of products"
+      }
+    },
+    "cultural_sites": {
+      "educational_value": {
+        "keywords": ["educational", "informative", "history", "culture", "learning", "knowledge", "insightful", "enlightening"],
+        "weight": 1.3,
+        "description": "Educational and informational value"
+      },
+      "preservation_authenticity": {
+        "keywords": ["preserved", "authentic", "original", "historical", "traditional", "genuine", "well-maintained", "conserved"],
+        "weight": 1.2,
+        "description": "Historical preservation and authenticity"
+      },
+      "atmosphere_ambiance": {
+        "keywords": ["atmosphere", "ambiance", "peaceful", "serene", "spiritual", "moving", "emotional", "inspiring"],
+        "weight": 1.1,
+        "description": "Atmosphere and emotional impact"
+      }
+    },
+    "festivals": {
+      "organization_coordination": {
+        "keywords": ["organized", "coordinated", "smooth", "efficient", "well-planned", "structured", "professional"],
+        "weight": 1.2,
+        "description": "Event organization and coordination"
+      },
+      "cultural_accuracy": {
+        "keywords": ["authentic", "traditional", "cultural", "accurate", "genuine", "heritage", "indigenous"],
+        "weight": 1.3,
+        "description": "Cultural accuracy and authenticity"
+      },
+      "atmosphere_energy": {
+        "keywords": ["atmosphere", "energy", "vibrant", "exciting", "fun", "engaging", "entertaining", "memorable"],
+        "weight": 1.1,
+        "description": "Festival atmosphere and energy"
+      }
+    },
+    "performing_arts": {
+      "performance_quality": {
+        "keywords": ["performance", "show", "acting", "dancing", "music", "singing", "talent", "skill", "professional", "excellent", "outstanding"],
+        "weight": 1.5,
+        "description": "Quality of artistic performance"
+      },
+      "production_staging": {
+        "keywords": ["production", "staging", "costumes", "lighting", "sound", "set", "design", "professional", "quality", "technical"],
+        "weight": 1.2,
+        "description": "Production quality and staging"
+      },
+      "cultural_authenticity": {
+        "keywords": ["authentic", "traditional", "cultural", "local", "genuine", "heritage", "indigenous", "customary", "traditional"],
+        "weight": 1.3,
+        "description": "Cultural authenticity in performance"
+      },
+      "venue_atmosphere": {
+        "keywords": ["venue", "theatre", "stage", "atmosphere", "acoustics", "seating", "comfortable", "intimate", "professional"],
+        "weight": 1.1,
+        "description": "Venue quality and atmosphere"
+      }
+    },
+    "nature_parks": {
+      "wildlife_biodiversity": {
+        "keywords": ["wildlife", "animals", "birds", "biodiversity", "species", "nature", "fauna", "flora", "ecosystem", "conservation"],
+        "weight": 1.4,
+        "description": "Wildlife and biodiversity experience"
+      },
+      "guide_expertise": {
+        "keywords": ["guide", "ranger", "naturalist", "expert", "knowledgeable", "identification", "spotting", "tracking", "wildlife"],
+        "weight": 1.3,
+        "description": "Guide expertise and wildlife knowledge"
+      },
+      "conservation_education": {
+        "keywords": ["conservation", "education", "environmental", "sustainable", "protection", "awareness", "learning", "ecology"],
+        "weight": 1.2,
+        "description": "Conservation education and awareness"
+      },
+      "facilities_comfort": {
+        "keywords": ["facilities", "comfortable", "clean", "accessible", "parking", "toilet", "restroom", "visitor center", "information"],
+        "weight": 1.0,
+        "description": "Visitor facilities and comfort"
+      }
+    }
+  },
+  "sentiment_indicators": {
+    "positive": ["excellent", "amazing", "wonderful", "fantastic", "outstanding", "perfect", "brilliant", "superb", "incredible", "memorable", "great", "good", "beautiful", "interesting", "worth", "recommend", "love", "enjoyed", "impressed"],
+    "negative": ["terrible", "awful", "disappointing", "poor", "bad", "horrible", "worst", "disgusting", "unacceptable", "waste", "disappointed", "boring", "overpriced", "rude", "dirty", "unorganized", "unsafe", "hate", "regret"],
+    "neutral": ["average", "okay", "decent", "acceptable", "fine", "adequate", "standard", "ordinary", "typical", "normal", "alright", "nothing special", "mediocre"]
+  },
+  "quote_extraction": {
+    "max_quotes_per_theme": 3,
+    "min_sentiment_score": 0.6,
+    "max_quote_length": 150,
+    "include_rating_context": true
+  },
+  "demographic_analysis": {
+    "by_language": true,
+    "by_country": true,
+    "by_rating_level": true,
+    "by_review_count": true
+  }
+}

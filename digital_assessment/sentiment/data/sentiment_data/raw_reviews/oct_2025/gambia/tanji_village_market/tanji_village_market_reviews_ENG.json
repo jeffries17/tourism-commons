@@ -1,0 +1,1697 @@
+{
+  "collection_metadata": {
+    "source": "tripadvisor",
+    "stakeholder": "tanji_village_market",
+    "collection_date": "2025-09-15",
+    "total_reviews": 54,
+    "language_distribution": {
+      "en": 20,
+      "nl": 29,
+      "fr": 1,
+      "de": 2,
+      "es": 2,
+      "other": 0
+    },
+    "translation_applied": true,
+    "date_range": {
+      "earliest": "2013-11-30",
+      "latest": "2024-03-26"
+    }
+  },
+  "reviews": [
+    {
+      "review_id": "05240C36311BEEF221789DE2D2193D5C_0",
+      "title": "Seeing birds and nature",
+      "text": "I had a guide named Tamba Jefang from Finfoot Birding, which was a unique experience. Beautiful park, saw many animals, and I would love to visit again.",
+      "rating": 5,
+      "date": "2024-03-26",
+      "travel_date": "2023-12",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "05240C36311BEEF221789DE2D2193D5C",
+        "name": "Trip43487107917",
+        "location": "Unknown",
+        "review_count": 1,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r943873368-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.052391",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "397162843BA4A7D900A34A2001E4EAA7_1",
+      "title": "Nice for learning mire about the culture",
+      "text": "This museum is nice for knowing a bit more about the Gambian culture, nature, animals, instruments. I got a tour around, which I liked. When I asked I was also shown the houses you can stay in. They were comfortable. Don&#39;t expect a fancy place like one of the hotels in the touristic areas, but you have everything you need, like flushing toilet, comfortable bed, shower, etc.",
+      "rating": 5,
+      "date": "2022-05-01",
+      "travel_date": "2022-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "397162843BA4A7D900A34A2001E4EAA7",
+        "name": "nl-marielle-nl",
+        "location": "The Netherlands",
+        "review_count": 313,
+        "helpful_votes": 15
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r836776100-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.202877",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "EEA7D48438473E001320EE810A99C846_2",
+      "title": "A little local museum",
+      "text": "Worth visiting this little museum to find out about the culture and fauna of the area. It is a little faded but the information is all there and we learnt a great deal.",
+      "rating": 4,
+      "date": "2020-03-04",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "EEA7D48438473E001320EE810A99C846",
+        "name": "Sally Y",
+        "location": "London, United Kingdom",
+        "review_count": 87,
+        "helpful_votes": 85
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r749018743-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.417089",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "8E0F0F0C8B21A91B68B0408D1D575D7C_3",
+      "title": "Village life back then",
+      "text": "A small but very interesting privately owned museum. Here, you learn a lot about nature and culture, and get a glimpse into what everyday life was like in an African village. Since it&#39;s not far from the tourist hotels, I highly recommend it to everyone. It would be nice if there were regular, lively cultural events, such as traditional festivals with music and dance, and other things that go with it. ",
+      "rating": 5,
+      "date": "2020-02-15",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "8E0F0F0C8B21A91B68B0408D1D575D7C",
+        "name": "Franz M",
+        "location": "Grieskirchen, Austria",
+        "review_count": 16,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r745202125-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.417277",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6CC75D2EBDA0AECE11FE4F6E9A0DCAFB_4",
+      "title": "Tanji fishing village",
+      "text": "You&#39;ll be amazed at how the people here still do everything traditionally. The colorful fishing boats are unloaded on the beach. The women process the fish: drying, cleaning, or smoking. And, as everywhere, the Gambian smile of the locals. We visited the village with a guide from the &quot;spooning man&quot; who lived in one of the beach bars. Taking someone with you also provides much more explanation. Well worth it!",
+      "rating": 5,
+      "date": "2019-02-17",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6CC75D2EBDA0AECE11FE4F6E9A0DCAFB",
+        "name": "sahin774",
+        "location": "Unknown",
+        "review_count": 14,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r653157938-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.660996",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C677140BB12EE0C176BF31EE9CBA070F_5",
+      "title": "Fascinating Insight to Gambian culture.",
+      "text": "This small museum gives a fascinating insight into the Gambian way of life and its traditions.\n\nThere are a few rooms dedicated to a particular theme, eg musical instruments especially different kinds of drums. A weaver making cloth the traditionally way.  A reconstructed tradional hutted Village.  Entertainment in a cafe/ resting area by two drummers.\n\nThen went on to the fishing area by the shore.  Saw fish being smoked. Then the boats came in laden with fish.  It’s very busy with folk (mostly women, but guys with wheelbarrows) collecting the catch.  It got extremely crowded (but not as pungently awful as the smoking area).\n\nAn interesting experience.",
+      "rating": 4,
+      "date": "2019-02-06",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "C677140BB12EE0C176BF31EE9CBA070F",
+        "name": "Sandy S",
+        "location": "Dumfries, United Kingdom",
+        "review_count": 370,
+        "helpful_votes": 121
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r650512351-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.849799",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "681EA0FD5904E305C947344CE3F4F211_6",
+      "title": "Well worth a visit",
+      "text": "I wanted to learn more about traditional Gambian life, and this was the ideal place to go. There is a museum, a reconstructed traditional village, complete with tools, cooking utensils etc, a nature trail and demonstrations of traditional crafts and drumming.\nOur guide was very knowledgeable and I came a way with a real insight into traditional Gambian village life.",
+      "rating": 5,
+      "date": "2019-01-13",
+      "travel_date": "2019-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "681EA0FD5904E305C947344CE3F4F211",
+        "name": "vickiem30",
+        "location": "Sheffield, United Kingdom",
+        "review_count": 81,
+        "helpful_votes": 27
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r645501583-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.849916",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F7F6D6DAAEC92C99AB8C9366B8653DF4_7",
+      "title": "Worth a Visit",
+      "text": "Did this a part of the South Gambia Tour.\nFound it very interesting and the only place we visited that you did not get badgered.\nPrices in the shop were genuine and good value.",
+      "rating": 4,
+      "date": "2019-01-11",
+      "travel_date": "2019-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F7F6D6DAAEC92C99AB8C9366B8653DF4",
+        "name": "brucepeake2016",
+        "location": "Derby, United Kingdom",
+        "review_count": 35,
+        "helpful_votes": 12
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r645125943-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.849976",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "54315821647C5BB7B6AAEE752720F63A_8",
+      "title": "A visit is worthwhile",
+      "text": "The Tanji Village Museum is located on the main road and is easy to find. While it may not be spectacular, it&#39;s very nicely designed and provides insight into the life and nature of Gambia. The weavings produced there are impressive and make lovely souvenirs. I highly recommend a visit to the museum if you&#39;re in the area.",
+      "rating": 4,
+      "date": "2018-12-30",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "54315821647C5BB7B6AAEE752720F63A",
+        "name": "petnik115",
+        "location": "Unknown",
+        "review_count": 2,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r642409432-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:26.850081",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D56F8F29BD8CAB8B8221EB330F779C38_9",
+      "title": "Interesting glimpse into everyday lives of Gambians",
+      "text": "I enjoyed both the little museum and the fishing village with its colourful boats and people. It can get very busy at the beach, but you will get a great glimpse into the everyday lives of Gambians and many Senegalese fishermen that come here.",
+      "rating": 4,
+      "date": "2018-06-05",
+      "travel_date": "2018-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D56F8F29BD8CAB8B8221EB330F779C38",
+        "name": "Diverstroms",
+        "location": "London, United Kingdom",
+        "review_count": 162,
+        "helpful_votes": 102
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r585242060-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.139929",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "944C519F7E8A8B8CBDC463C9069E549F_10",
+      "title": "A nice little museum - but if you&#39;ve time take a tour instead!",
+      "text": "The museum offers a nice introduction to Gambian life but, having just returned from a 4-day trip along the River Gambia with tour company &quot;Tour Gambia&quot; (100% recommended), we felt we knew a lot of what was told us and/or had already seen many of the exhibits in a more natural setting - ie in a real village, or had seen the wildlife or birds along the river or mangrove backwaters. So, if you have time and opportunity, I&#39;d recommend a tour, even a day trip. You&#39;ll get a far greater, in-depth and more authentic experience, and a better understanding of this wonderful country.",
+      "rating": 4,
+      "date": "2018-04-28",
+      "travel_date": "2018-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "944C519F7E8A8B8CBDC463C9069E549F",
+        "name": "Backpackin' Pete",
+        "location": "Cornwall, United Kingdom",
+        "review_count": 190,
+        "helpful_votes": 79
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r576249041-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.140241",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6C4044C77BDA0A9BB86BA42BFC8FE1E9_11",
+      "title": "A lovely little gem",
+      "text": "We really enjoyed it here and spent longer than we expected.  The artifacts etc are quite dated but they are well put together and that adds to the charm of the place, and there were traditional African huts, and a wooden tree hut to explore.  We loved watching the weavers at work, one of whom spoke about being part of a family of weavers and handing down the tradition.  We also sat and listened to a Djembe drummer (they often have a full band apparently), and he was great fun.  A really good introduction to the Gambia.",
+      "rating": 5,
+      "date": "2018-04-19",
+      "travel_date": "2018-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "6C4044C77BDA0A9BB86BA42BFC8FE1E9",
+        "name": "Peter D",
+        "location": "Southampton, United Kingdom",
+        "review_count": 76,
+        "helpful_votes": 32
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r574311422-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.411701",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C6AA9551EC58CACDD3A894E87123A057_12",
+      "title": "Infos about Gambia",
+      "text": "Very informative exhibition especially on culture, music instruments, history and fauna of The Gambia",
+      "rating": 5,
+      "date": "2018-04-09",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "C6AA9551EC58CACDD3A894E87123A057",
+        "name": "lcbl2016",
+        "location": "Wassertrudingen, Germany",
+        "review_count": 62,
+        "helpful_votes": 91
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r572267326-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.411801",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "74A5A5C3AE2C0ADCF19762F811564C5A_13",
+      "title": "Interesting little place, if rather run down.",
+      "text": "There are two aspects to Tanji and most visitors will be there to see the boats arrive and unload and all the activity around the fish market area.  The museum has some local history and a mocked up settlement from the 1800's.  How accurate hard to say, the obligatory drum entertainment.  Worth an hour maybe.",
+      "rating": 3,
+      "date": "2018-04-07",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "74A5A5C3AE2C0ADCF19762F811564C5A",
+        "name": "Nightowl",
+        "location": "Lichfield, United Kingdom",
+        "review_count": 2484,
+        "helpful_votes": 155
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r571738657-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.411967",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E8FBEB6204CFCFBE58195DFF8CAE0D57_14",
+      "title": "A Very African Experience",
+      "text": "We visited Tanje on our way from Paradise Beach to Kotu. It is the home of the Gambian fishing fleet and an experience not to be missed. In late afternnonn the boats return. You can see fresh fish for sale including some large baracuda, fish being dried and fish being smoked. The place is a hive of activity and the smell reflects this!\nWe have never seen so many defunct refrigerators in which the fish are kept with ice.",
+      "rating": 5,
+      "date": "2018-03-21",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "E8FBEB6204CFCFBE58195DFF8CAE0D57",
+        "name": "jenandrich",
+        "location": "Worcestershire, United Kingdom",
+        "review_count": 750,
+        "helpful_votes": 140
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r567888333-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.412242",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F79AF0A8E1ACB7EA1D550A4DD3D64E62_15",
+      "title": "Small, very informative museum",
+      "text": "Small but nice museum, which allows you to focus on the essential pieces. A must for history buffs.",
+      "rating": 4,
+      "date": "2018-03-17",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "fr",
+      "user": {
+        "user_id": "F79AF0A8E1ACB7EA1D550A4DD3D64E62",
+        "name": "Virginie V",
+        "location": "Brussels, Belgium",
+        "review_count": 143,
+        "helpful_votes": 57
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r566972670-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.412530",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "8CE62300CA9026BEF4CF0D94B4C6ECCF_16",
+      "title": "Important to put this museum in perspective",
+      "text": "By today&#39;s European standards this little museum is a museum piece in itself. The displays in the natural history and agriculture sections are poor by any standards, consisting of poorly framed and fading photographs and a few skins. The reconstructed settlement of the 19th century is much better and was made more interesting by the guide who accompanied me. However you would be hard put to spend more than an hour here. I was soon in the central bar/entertainment area where a drum band was playing (for me). All a bit uncomfortable and although I would like to have helped by spending some money there was no &#39;shop&#39; or even any craft souvenirs available. A lack of funding is clearly a problem and such efforts to promote Gambian culture can only be commended and supported- just don&#39;t expect much. But in time things should change.",
+      "rating": 3,
+      "date": "2018-03-10",
+      "travel_date": "2018-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "8CE62300CA9026BEF4CF0D94B4C6ECCF",
+        "name": "David A",
+        "location": "Saffron Walden, United Kingdom",
+        "review_count": 287,
+        "helpful_votes": 71
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r565614753-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.565872",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "533A2252F7B0422D72D16EB40F4366F0_17",
+      "title": "Very good and interesting museum",
+      "text": "This was one we were touch and go about visiting, but really glad we did. We took our guide from the hotel, which enhanced the visit.\nIt's a bit rural, but it is the Gambia!",
+      "rating": 5,
+      "date": "2018-03-04",
+      "travel_date": "2018-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "533A2252F7B0422D72D16EB40F4366F0",
+        "name": "GreatFind_Cotswolds",
+        "location": "Cheltenham, United Kingdom",
+        "review_count": 348,
+        "helpful_votes": 57
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r564529287-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.780359",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "77C40F2DED709DE399A647C20176EB98_18",
+      "title": "Good example of a fishing village",
+      "text": "I really enjoyed this visit. We went around the smoke huts where the process was explained to us, we met the ladies who were gutting/descaling the fish and got to look at where they lived and worked in some detail. The smell was awful but made the visit. We then walked down onto the beach where the fishing boats where either pulling in or were already there and the queues of people waiting for the fish to be offloaded, there were families of all ages moving around. A walk the the market area was also an eye opener, no ice for keeping the fish cold, just buy it a get it home seems to be the motto. The Gambians are a generally happy people and we were made to feel welcome, the women and some men are not keen on having their pictures taken so just be aware of that, ask first if unsure. All in all well worth a visit, I would have liked to have spent more time there or gone back but time didn&#39;t allow that.",
+      "rating": 4,
+      "date": "2018-03-03",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "77C40F2DED709DE399A647C20176EB98",
+        "name": "Partick H",
+        "location": "Wickford, United Kingdom",
+        "review_count": 108,
+        "helpful_votes": 26
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r563966723-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.781738",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "2FB54A5F564DCE67EF080B93E5A32425_19",
+      "title": "Bokrijk of Gambia",
+      "text": "Experience how the tribes used to live. Experienced guide, and at the end, you&#39;ll enjoy a concert on the cora.",
+      "rating": 3,
+      "date": "2018-02-10",
+      "travel_date": "2017-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "2FB54A5F564DCE67EF080B93E5A32425",
+        "name": "Goele L",
+        "location": "Antwerp, Belgium",
+        "review_count": 73,
+        "helpful_votes": 14
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r559640240-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:27.966404",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E226DC90267F4D6AA5DA996B17BD695B_20",
+      "title": "You really have to see this once",
+      "text": "Tanji beach is transformed twice a day into a local fishing port. And what a port it is! Hundreds, even thousands, of residents gather on a good 200 meters of beach to empty a dozen primitive fishing boats. It&#39;s a hive of activity. Children and young people pull the boats closer to the shore and wade into the sea with barrels and bowls to bring the fish to shore. A few dozen women huddle there, sorting, cleaning, and preparing the fish for sale. Anything unsellable is simply dumped on the beach. Buyers and sellers walk back and forth amidst the hustle and bustle. Others are busy cooking, barbecuing, or storing fish on ice. Although... there&#39;s not much ice involved, even in temperatures of 35 degrees Celsius. As a tourist, you can stroll around without any problems; no one will bother you. Feel free to take photos and soak up the atmosphere... literally. The real Gambia smell.",
+      "rating": 5,
+      "date": "2017-12-12",
+      "travel_date": "2017-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "E226DC90267F4D6AA5DA996B17BD695B",
+        "name": "Roger T",
+        "location": "Belgium",
+        "review_count": 191,
+        "helpful_votes": 116
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r546850597-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:28.098312",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C7648EAFDF26D24B37B56A0154458F48_21",
+      "title": "Very impressive to see everything on the beach",
+      "text": "Tanji Beach is a truly impressive sight around 3:00 PM. That&#39;s when all the fishing boats arrive at the beach and begin unloading their catch. It&#39;s a sight you simply must experience.",
+      "rating": 5,
+      "date": "2017-10-29",
+      "travel_date": "2017-10",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "C7648EAFDF26D24B37B56A0154458F48",
+        "name": "Markvanderhorst",
+        "location": "Heerhugowaard, The Netherlands",
+        "review_count": 716,
+        "helpful_votes": 125
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r536878244-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:28.322231",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6AF36CB18FE1733A585169AD547B55A9_22",
+      "title": "Cultural",
+      "text": "In the Museum, you can see original instruments from the area, as well as their way of life and customs, their homes, their textiles, and more. ",
+      "rating": 5,
+      "date": "2017-09-03",
+      "travel_date": "2017-08",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "6AF36CB18FE1733A585169AD547B55A9",
+        "name": "Simon Goldenberg",
+        "location": "Miami, Florida",
+        "review_count": 301,
+        "helpful_votes": 84
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r520767709-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:28.536240",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6367D2703D755C5656096C2C69F40957_23",
+      "title": "What a splendor of colors",
+      "text": "A colorful scene. Fishing boats anchored a few meters from the beach. People with buckets and tubs are hauling the fish off the boat.",
+      "rating": 3,
+      "date": "2017-03-20",
+      "travel_date": "2017-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6367D2703D755C5656096C2C69F40957",
+        "name": "Corrie P",
+        "location": "Den Burg, The Netherlands",
+        "review_count": 7,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r468822878-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:28.644519",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "71BD18D59B45004CE1CFC84A8DB09825_24",
+      "title": "Look into the local village life",
+      "text": "Museum located near the coastal road so very accessible with the taxi. The museum shows different aspects of the local culture, meaning music instruments, fauna and flora, batik, ... You also have to opportunity to talk with the people over there or buy some table cloths or paintings. Entrance fee is almost free. Negative point however is that the museum needs maintenance, everywhere you look there was dust on the pictures and artifacts. However, when you ignore that, really nice to visit, certainly in combination with the Tanji fishing village.",
+      "rating": 3,
+      "date": "2017-03-10",
+      "travel_date": "2017-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "71BD18D59B45004CE1CFC84A8DB09825",
+        "name": "Sarah",
+        "location": "Unknown",
+        "review_count": 8,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r466208490-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:28.831554",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "5EB59BE394380F9E5F9C0E40FA8AED42_25",
+      "title": "museum in tanji",
+      "text": "This small museum tells the history of fishing in Tanji/Gambia. It is not very big but can be nicely combined with a visit to the fish market on Tanji beach.",
+      "rating": 3,
+      "date": "2017-02-26",
+      "travel_date": "2017-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "5EB59BE394380F9E5F9C0E40FA8AED42",
+        "name": "JaapWim1972",
+        "location": "Unknown",
+        "review_count": 56,
+        "helpful_votes": 20
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r462941707-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.002130",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "AA845ABB705FEA3209A3471649D0220B_26",
+      "title": "A clash of colours and smells, an authentic and unique place.",
+      "text": "A clash of colors and scents, an authentic and unique place. Without a doubt, one of the must-visit places in Gambia. You&#39;ll get a true glimpse into everyday life. I recommend visiting between 4 and 5 p.m., when the boats arrive.",
+      "rating": 5,
+      "date": "2017-01-04",
+      "travel_date": "2016-12",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "AA845ABB705FEA3209A3471649D0220B",
+        "name": "arquicarel",
+        "location": "Las Palmas de Gran Canaria, Spain",
+        "review_count": 53,
+        "helpful_votes": 9
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r449111393-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.206786",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "EAA310E48A403046F860F84D7A42AD8F_27",
+      "title": "Village Life",
+      "text": "This was an intersting display of the traditional Gambian campground showing quarters for men and women, etc.",
+      "rating": 4,
+      "date": "2016-11-21",
+      "travel_date": "2016-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "EAA310E48A403046F860F84D7A42AD8F",
+        "name": "Canuk88",
+        "location": "Unknown",
+        "review_count": 152,
+        "helpful_votes": 119
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r439138139-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.471996",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "34B38C87A200197D4B3BF7672EA467B0_28",
+      "title": "Awesome, you must see Tanji Fish Market",
+      "text": "A beautiful, colorful scene. The fishing boats anchor just a few meters from the beach and the people hauling the fish ashore with large buckets, tubs, etc., on their heads. The fish are immediately sold on the beach. It&#39;s a wonderful sight! ",
+      "rating": 5,
+      "date": "2016-11-16",
+      "travel_date": "2016-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "34B38C87A200197D4B3BF7672EA467B0",
+        "name": "Karin",
+        "location": "Hooge Zwaluwe, The Netherlands",
+        "review_count": 8,
+        "helpful_votes": 3
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r437855467-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.472101",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "02C1CFB8D197B08D31B52DEC53F8ED8F_29",
+      "title": "Wonderful trip!",
+      "text": "You have to see this! Visit in the late afternoon, as the fishing boats dock with their catch of the day... A very colorful scene!",
+      "rating": 5,
+      "date": "2016-10-30",
+      "travel_date": "2016-10",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "02C1CFB8D197B08D31B52DEC53F8ED8F",
+        "name": "marcgoetstouwers",
+        "location": "Antwerp, Belgium",
+        "review_count": 18,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r432984352-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.631631",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "267958501E3EB6577BAE9BAC15E802D4_30",
+      "title": "A must",
+      "text": "We were taken there at 16:00 on a Sunday just after all the boats had arrived. Fantastic atmosphere with many people from small children upwards all making a living from the fish",
+      "rating": 5,
+      "date": "2016-07-08",
+      "travel_date": "2016-07",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "267958501E3EB6577BAE9BAC15E802D4",
+        "name": "TheMurraysMacbiehill",
+        "location": "West Linton, United Kingdom",
+        "review_count": 78,
+        "helpful_votes": 15
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r390371327-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.891890",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CA34675D0F7A13E3C443FB9025FFF72E_31",
+      "title": "Nice and educational museum for young and old, to get a good impression of traditional Gambia",
+      "text": "The museum was established in 1997. It&#39;s Gambia&#39;s first private museum and tells a great deal about the country&#39;s history. Upon arrival, we were first told what we could find in the museum, and then we could decide whether or not we wanted to visit. We found this very kind. Admission costs 200 Dalasi for an adult and 50 Dalasi for children up to 12 years old. The museum itself is quite simple, and you shouldn&#39;t expect anything special, but it&#39;s still a very interesting and educational outing. There&#39;s information about musical instruments, shells, reptiles, birds, fish, and the various fishing nets, among other things. There&#39;s also an exhibition on weaving, where you can see a boy weaving at a loom and a blacksmith demonstrating his skills. Next to the replica of a traditional &quot;Bantaba&quot; (Madinka for resting place) under the trees is a small shop where you can buy souvenirs to take home. They also have a traditional Gambian compound where you can get a sense of how Gambians lived 150 years ago. In the museum&#39;s Bantaba, a group plays Gambian music, and you can order a drink and relax. We found it an interesting and, above all, educational museum, and it&#39;s definitely worth a visit. The museum gives you a good impression of traditional Gambia. The museum is also great for children, as there&#39;s so much to see and do; they won&#39;t be bored easily. If you visit the museum in the afternoon, it&#39;s worth going to the fishermen&#39;s market around 4 p.m. It&#39;s a truly colorful spectacle, and you simply must experience it.",
+      "rating": 5,
+      "date": "2016-04-26",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "CA34675D0F7A13E3C443FB9025FFF72E",
+        "name": "M K",
+        "location": "Unknown",
+        "review_count": 443,
+        "helpful_votes": 131
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r367685228-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:29.892961",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F21776B6FF578416013FF541D97B7128_32",
+      "title": "Simple but interesting",
+      "text": "When we visit Tanji fisherman village and all its particulars, the tradition of the smoking fish its also very nice to visit the museum.",
+      "rating": 4,
+      "date": "2016-04-25",
+      "travel_date": "2015-05",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F21776B6FF578416013FF541D97B7128",
+        "name": "faticosta",
+        "location": "Brufut, Gambia",
+        "review_count": 34,
+        "helpful_votes": 9
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r367116532-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:30.199235",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "81AF92D5B07133625EB45806E90DD19C_33",
+      "title": "really a must!",
+      "text": "Highly recommended. You simply have to visit this place; it&#39;s hard to stand in the crowd and watch the fish being caught. We also bought some cashew nuts, which were very fresh and delicious.",
+      "rating": 5,
+      "date": "2016-04-21",
+      "travel_date": "2016-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "81AF92D5B07133625EB45806E90DD19C",
+        "name": "enjoy5123",
+        "location": "Arendonk, Belgium",
+        "review_count": 200,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r366110584-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:30.199497",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "230F05875A0BA6C4F63D8ECC9E5F6852_34",
+      "title": "Beautiful spectacle",
+      "text": "Tanja visited when the fishing boats arrived with their catch. It&#39;s an impressive sight because there are so many boats, so many fish species, and so many people. Highly recommended!",
+      "rating": 4,
+      "date": "2016-03-20",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "230F05875A0BA6C4F63D8ECC9E5F6852",
+        "name": "Coratoom",
+        "location": "Unknown",
+        "review_count": 15,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r357052938-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:30.387345",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3814652A08F2015EF491D93BE5316AA1_35",
+      "title": "A great working fishing village, with smoke houses",
+      "text": "We rode bikes across the beach from Kololi, and were met by the fishing boats coming in - there was no way of passing, so we watched the hassle and bustle, the fish being carried in from the boats in the sea in baskets, and being sorted on the beach by the ladies, and then taken off to stalls to sell. It was very colorful, and was fascinating to watch. We walked up through the beach area up towards the road, passing men repairing nets, and children playing, there were a lot of local people there who were mesmerized by two tourists cutting up through the smoke houses with bikes. We were taken into the smoking houses and the process of smoking was explained and demonstrated - it really is quite primitive but highly effective. We ate a smoked herring with a local, who I gave 100d to go and get some drinks from the local shop. He came back with three bottles of Coke, and handed me 70d change...I gave it to him for giving us such a nice tour of the smoke house. He was very pleased, and walked us up to the road, and waved us goodbye. We rode back to Kololi using the road. It was a great visit. To Tanji village, and a real joy to see how the fish are smoked, ready for export.",
+      "rating": 4,
+      "date": "2016-03-01",
+      "travel_date": "2015-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "3814652A08F2015EF491D93BE5316AA1",
+        "name": "Debs_Cain",
+        "location": "Isle of Man, United Kingdom",
+        "review_count": 580,
+        "helpful_votes": 87
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r352225196-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:30.529332",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CA674350635644CE102F05552AC28C6D_36",
+      "title": "A nice surprise",
+      "text": "I have watched this privately owned museum develop over the years into a place that gives one a glimpse into life in The Gambia. It is well worth the time to drive out to visit. You can get a feeling of life in the bush and how the local population live. If you have a local guide, plan your visit around the time when the fishing boats come into shore selling their fish. I have amazing photos of the museum and the fishing boats.",
+      "rating": 4,
+      "date": "2016-02-13",
+      "travel_date": "2016-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "CA674350635644CE102F05552AC28C6D",
+        "name": "Andy W",
+        "location": "Zaventem, Belgium",
+        "review_count": 289,
+        "helpful_votes": 138
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r347422676-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:30.777428",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "52A358A125B1475EFD67840AEB7A31DB_37",
+      "title": "lively fish trade",
+      "text": "It&#39;s fun to stroll past the various types of fish on Tanji Beach. Besides all sorts of fish, you&#39;ll also see the smokehouses, the landing of the fish, and the boats. It&#39;s colorful. Taking photos can be tricky, so bring a taxi guide. Preferably from 4 p.m.",
+      "rating": 4,
+      "date": "2016-02-09",
+      "travel_date": "2016-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "52A358A125B1475EFD67840AEB7A31DB",
+        "name": "Jan m",
+        "location": "Rozendaal, The Netherlands",
+        "review_count": 99,
+        "helpful_votes": 27
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r346279469-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.037749",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4BB9EC8DAC9445C5BE63F01FE1276A57_38",
+      "title": "Fish and more fish",
+      "text": "Tanji is worth a visit. It&#39;s one big open-air fishing museum. Boats bring in fish, donkeys with carts bring the wood, and then the freshly caught fish are smoked. Definitely recommended for those with a keen sense of smell! ",
+      "rating": 4,
+      "date": "2016-01-11",
+      "travel_date": "2016-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "4BB9EC8DAC9445C5BE63F01FE1276A57",
+        "name": "Wim O",
+        "location": "Amersfoort, The Netherlands",
+        "review_count": 112,
+        "helpful_votes": 26
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r339248743-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.190649",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D6936AE611084CCC06DEFD3D52C3700F_39",
+      "title": "A Living Museum in The Gambia",
+      "text": "Along the Coastal Road, halfway between Tanje and Batukunku, the Tanje Village Museum (find it in Google Maps) was an unexpected and pleasant encounter; Greeted by the smiling welcome of the young curator, I paid a small entrance fee (GMD 200.00) and was accompanied on the tour of the premises. In addition to typical pictures, exhibits, cloths, costumes, agricultural tools, musical instruments etc. regarding the culture and the traditional ways of life of the major ethnic groups of the Gambia, I was surprised to find, actually, an ethnobotanical museum, with standing trees and plants utilized for building, alimentary, ritual and/or therapeutic purposes. I also watched a weaver busy with his craft and listened to traditional songs played by a band of musicians while sitting in the bantaba sipping tea and trying to appease my customary curiosity by firing unending questions at the knowledgeable guide. A modern extended family (owners of the museum) live in the same large compound enclosing the museum, and I could see men, women and children carrying out their daily chores and activities, thus transmuting a simple visit to a museum into a unique, &quot;unplugged&quot; experience. When I left the compound, I made a late discovery: lodges, a conference room and an ethnic restaurant are available for a full immersion museum – and gastronomic – adventure. Gambia, here I come!",
+      "rating": 5,
+      "date": "2016-01-01",
+      "travel_date": "2015-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "D6936AE611084CCC06DEFD3D52C3700F",
+        "name": "Endro P",
+        "location": "Italy",
+        "review_count": 3,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r336458551-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.388750",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FE022746C81A6D8A563F7A921A84BA41_40",
+      "title": "Varied collection, both outdoors and indoors",
+      "text": "Tanji Village Museum boasts a diverse collection, displayed both indoors and outdoors. It&#39;s incredibly versatile. What struck me most was the artistically designed animals in the gardens. I also really enjoyed a colonial building on the grounds. It seemed inaccessible; however, it does give a good impression of what has been built over the years, alongside local huts and such. From the museum, it&#39;s a short walk to the local fishing market. When you talk about an experience, they mean it. Hundreds of people together, in boats, on the water, on boats on land, and so on. And everywhere, stuff that we would have scrapped. West Africa at its best. Don&#39;t miss it!",
+      "rating": 4,
+      "date": "2015-12-21",
+      "travel_date": "2015-05",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "FE022746C81A6D8A563F7A921A84BA41",
+        "name": "ytosnl",
+        "location": "Beverwijk, The Netherlands",
+        "review_count": 652,
+        "helpful_votes": 164
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r334190287-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.601014",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7AC1B65E87B89E2A875C6311376401A2_41",
+      "title": "It's fish all the way here!",
+      "text": "Tanji Village is the principal fishing port and you can spend hours watching the boats come in, the sale of their catch, the smoking of the fish and the wonderful collection of ancient freezers to store the ice before the fish are moved on.  A great experience!",
+      "rating": 4,
+      "date": "2015-12-08",
+      "travel_date": "2015-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7AC1B65E87B89E2A875C6311376401A2",
+        "name": "Douglas552",
+        "location": "Unknown",
+        "review_count": 728,
+        "helpful_votes": 233
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r331396291-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.842394",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "DCF695EB7C0043C40ED6B05AD9BBAF2C_42",
+      "title": "smelly fish",
+      "text": "went got hassle from kids wouldn't leave us alone so couldn't really look round the smell is bad but worth a look don't take too many valuables",
+      "rating": 3,
+      "date": "2015-10-14",
+      "travel_date": "2014-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "DCF695EB7C0043C40ED6B05AD9BBAF2C",
+        "name": "osprey04",
+        "location": "Chorley, United Kingdom",
+        "review_count": 48,
+        "helpful_votes": 21
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r318620673-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.842506",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D6D0219A2BB613C99D54B1601FFAD93B_43",
+      "title": "well worth a visit",
+      "text": "Tanji Village Museum is the first private museum in The Gambia and well worth a visit. It is easy to find on the South coastal road about a kilometre beyond Tanji village. It is on the lefthand side of the road with the sea to the right.\n You can rent one of their round houses if you wish. (Simple, basic, and inexpensive allowing free entry to the museum whilst staying) \n Admission 200 dalasi and well worth it. The large grounds contain many indigenous plant. There are demonstrations of traditional crafts many items are available at fixed prices. The guides are knowledgeable and informative.\n Finish your visit in their Bantaba, perhaps with some refreshments listening to local museums",
+      "rating": 5,
+      "date": "2015-05-19",
+      "travel_date": "2015-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D6D0219A2BB613C99D54B1601FFAD93B",
+        "name": "rustyroundabout",
+        "location": "Rochdale, United Kingdom",
+        "review_count": 76,
+        "helpful_votes": 30
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r273061674-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.843011",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "BDBE2BE25E078BE8EF33B226D310A557_44",
+      "title": "Nice museum with lots to see",
+      "text": "The welcome was already very pleasant. We didn&#39;t have to pay right away; we were first told what to expect and then asked if we actually wanted to visit the museum. The museum doesn&#39;t have an extensive collection, but it does have a wide variety of items. There was something for everyone to see. We were greeted with local music, a weaver and a blacksmith demonstrated their craft, there were examples of fabrics, and a room about nature—it was a pleasant way to spend a few hours.",
+      "rating": 4,
+      "date": "2015-04-02",
+      "travel_date": "2015-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "BDBE2BE25E078BE8EF33B226D310A557",
+        "name": "funenada",
+        "location": "Apeldoorn, The Netherlands",
+        "review_count": 34,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r263207348-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:31.843514",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F85953C981E802F3CD404889931A5237_45",
+      "title": "Nice museum",
+      "text": "We came across this museum while wandering in the surroundings of Tanji. It is privately owned. The guide told an enthusiasticstory. Before we entered the museum we had a small drink in the canteen of the museum where a number of musicians brought us a serenade.",
+      "rating": 4,
+      "date": "2015-04-01",
+      "travel_date": "2015-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F85953C981E802F3CD404889931A5237",
+        "name": "Martin P",
+        "location": "Valkenswaard, The Netherlands",
+        "review_count": 23,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r263110865-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.067870",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "AF783DA7328459A932B786677696C74F_46",
+      "title": "Great visit",
+      "text": "This is worth the time to go and see it. Off the tour visit for sometime but worth going in a taxi, 200D each to go in very informative and lots of live craft to watch done in the traditional way, We have not been for some time and it has improved, would not visit every year but would return in future ",
+      "rating": 4,
+      "date": "2015-03-29",
+      "travel_date": "2015-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "AF783DA7328459A932B786677696C74F",
+        "name": "suzanne717",
+        "location": "Tattershall, United Kingdom",
+        "review_count": 29,
+        "helpful_votes": 10
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r262584689-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.068234",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4BA5DBE404658767649AE7E4DBBA341F_47",
+      "title": "Fish and market boats",
+      "text": "Highly recommended, and a wonderful experience. It smells like fish, but if you&#39;re there for an hour, you won&#39;t notice it anymore. And go to Tanji and see how the people live, visit the locals—it&#39;s incredibly beautiful. And help a child with her school fees—that&#39;s how you improve the country.",
+      "rating": 5,
+      "date": "2015-03-25",
+      "travel_date": "2015-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "4BA5DBE404658767649AE7E4DBBA341F",
+        "name": "Wijngambianeedshelp",
+        "location": "Zuid-Beijerland, The Netherlands",
+        "review_count": 14,
+        "helpful_votes": 13
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r261786720-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.207295",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "610BFFE5BC52401C0D6ECADF288392BD_48",
+      "title": "Worth the visit",
+      "text": "Wonder cultural exhibits, includes life size village site, artisans work for sale, demonstrations. Also modern secure camp huts for rent with flush toilet, sink, shower, clean bed with netting. Very friendly staff. Across from beach. ",
+      "rating": 5,
+      "date": "2015-01-17",
+      "travel_date": "2014-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "610BFFE5BC52401C0D6ECADF288392BD",
+        "name": "Amanda Wilcox",
+        "location": "Unknown",
+        "review_count": 1,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r249799903-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.393216",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "921F77BA4E0C84A87AE383F73C45D7C4_49",
+      "title": "Go the fishing village!",
+      "text": "Get a good guide and go to the fishing village, it's an unbelievable experience.  The colours, the people, the way of life.....  Fantastic.",
+      "rating": 5,
+      "date": "2014-12-25",
+      "travel_date": "2014-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "921F77BA4E0C84A87AE383F73C45D7C4",
+        "name": "AZDA101",
+        "location": "Reading, United Kingdom",
+        "review_count": 20,
+        "helpful_votes": 55
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r245859898-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.393260",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "0226FADB02152AF42D22C90DB5A31203_50",
+      "title": "Tanji Village Museum",
+      "text": "We visited this attraction with a friend over here on holiday. The attraction is a little tired but incredibly informative, with a well versed guide. They have someone making things and a reproduction ancient village. We enjoyed this attraction, and found it to be educational and would definitely recommend you stop and see for yourself how Gambians used to (and some still do) live in the past. It is about a mile and a half from Tanji on the land side of the coast road going towards Kartong.",
+      "rating": 4,
+      "date": "2014-05-13",
+      "travel_date": "2013-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "0226FADB02152AF42D22C90DB5A31203",
+        "name": "wejcullen",
+        "location": "Brufut, Gambia",
+        "review_count": 19,
+        "helpful_votes": 14
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r205349500-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.393359",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "2CB00CBD06C917F189C34703579176E7_51",
+      "title": "Enjoyable surprise",
+      "text": "We spent almost a whole day discovering this museum. It looks small on the outside but is actually big. There are inside displays of wildlife, instruments and weaving and then a guided tour of the outside displays. We were able to touch most of the inside displays which made for an interactive experience. We were most impressed with the mock up of a village on the outside tour. Our 11 and 10 year old children were engaged during the whole visit. There was an opportunity to buy souvenirs at set prices (if you don&#39;t like haggling) which were of good quality and reasonably priced in our opinion. We bought some cloth made by the weaver there. The cost was very reasonable at D150 for adults and D25 for children. Well worth a visit.",
+      "rating": 4,
+      "date": "2014-04-26",
+      "travel_date": "2014-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "2CB00CBD06C917F189C34703579176E7",
+        "name": "Julie G",
+        "location": "Chippenham, United Kingdom",
+        "review_count": 59,
+        "helpful_votes": 42
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r202861416-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.393493",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "01E45A951299DDF207E5D13C27A41D2F_52",
+      "title": "Excellent information",
+      "text": "A museum founded by locals? You wouldn&#39;t expect much. But my expectations were greatly exceeded. The sheer amount of information and seeing how people worked there, how they did things then and now... it reminded me of a small Bokrijk.",
+      "rating": 5,
+      "date": "2014-04-21",
+      "travel_date": "2014-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "01E45A951299DDF207E5D13C27A41D2F",
+        "name": "Peter K",
+        "location": "Kololi, Gambia",
+        "review_count": 8,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r202166252-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.719506",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6730DF31CF71CB6A59D0A249545427A3_53",
+      "title": "history of african village life",
+      "text": "pleasant experience of varied history and local crafts from the weaving to the metal smith and different exhibits reflecting the way of life in the villages hundreds of years ago. Good demostrations and our tour guide was informative and friendly I think the wildlife section could be updated and the old huts where the head of the villiage and the families lived could do with a repaint otherwise I enjoyed my visit to this museum located to the south of tanji on the main highway traditional african drums and other instruments are played and you can sit in the bar to listen to the African music and partake in light refreshments at reasonable prices. Admission prices low at 100 &amp; 150 dalisi per person",
+      "rating": 4,
+      "date": "2013-11-30",
+      "travel_date": "2013-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6730DF31CF71CB6A59D0A249545427A3",
+        "name": "ianbanks58",
+        "location": "Scarborough, United Kingdom",
+        "review_count": 8,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Tanje Village Museum",
+        "category": "Cultural heritage site",
+        "location": "Tanji, West Coast Division",
+        "coordinates": {
+          "lat": 13.358165,
+          "lng": -16.799036
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3675810-d3935590-r186374879-Tanje_Village_Museum-Tanji_West_Coast_Division.html",
+        "scraped_at": "2025-09-15T17:58:32.877541",
+        "original_data": true
+      }
+    }
+  ]
+}

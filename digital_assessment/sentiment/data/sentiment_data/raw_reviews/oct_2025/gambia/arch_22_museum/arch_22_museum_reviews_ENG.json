@@ -1,0 +1,4828 @@
+{
+  "collection_metadata": {
+    "source": "tripadvisor",
+    "stakeholder": "arch_22_museum",
+    "collection_date": "2025-09-15",
+    "total_reviews": 155,
+    "language_distribution": {
+      "en": 100,
+      "nl": 35,
+      "fr": 4,
+      "de": 8,
+      "es": 8,
+      "other": 0
+    },
+    "translation_applied": true,
+    "date_range": {
+      "earliest": "2008-06-22",
+      "latest": "2025-02-14"
+    }
+  },
+  "reviews": [
+    {
+      "review_id": "B4B64E499F433742BC24A7900C98870F_0",
+      "title": "''Πολύ καλό''",
+      "text": "Το ψηλότερο κτίριο στο Μπανγιούλ. Τα σκαλιά είναι πάνω από 100 αλλά μπορείτε να τα ανεβείτε εύκολα και χαλαρά.Μόλις φτάσετε έχει ένα χώρο με κάποιες φωτογραφίες.Και φυσικά έχετε μια θέα της πόλης από ψηλά.",
+      "rating": 4,
+      "date": "2025-02-14",
+      "travel_date": "2025-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "B4B64E499F433742BC24A7900C98870F",
+        "name": "VIVIIATRO",
+        "location": "Larissa, Greece",
+        "review_count": 893,
+        "helpful_votes": 132
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r993901231-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.619310",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "DA183141D3C002FCE8D37D5F61669045_1",
+      "title": "Tribute Arch That Offers a Great View of the City",
+      "text": "We appreciated the tasteful tribute to the military coup July 1994 that offers views of Banjul.  This is the tallest structure in The Gambia and worth a visit.",
+      "rating": 5,
+      "date": "2025-02-04",
+      "travel_date": "2025-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "DA183141D3C002FCE8D37D5F61669045",
+        "name": "Toni T",
+        "location": "Nashville, Tennessee",
+        "review_count": 13898,
+        "helpful_votes": 151
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r992265053-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.619388",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "42A008A58E82449B40CB007EB6BB8FEC_2",
+      "title": "Nice little museum at the top with a really good guide",
+      "text": "We went up there to activate our kids a bit - we expected a nice view, which was indeed nice, but were happily surprised to find a very nice and competent guide at the top too, in a little museum. He could talk for hours about Gambian history.",
+      "rating": 4,
+      "date": "2025-01-29",
+      "travel_date": "2025-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "42A008A58E82449B40CB007EB6BB8FEC",
+        "name": "Ziff H",
+        "location": "Valby, Denmark",
+        "review_count": 2,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r991477391-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.619479",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E7D4BA5C6BBCA71AC0FA3C6F7DBE9E89_3",
+      "title": "Dictator",
+      "text": "The arch offers a beautiful view of the small capital, Banjul. But the shocking museum above it revealed a dark period in Gambia&#39;s history. One of the previous presidents, Jammeh, had ruled the country as a harsh dictator with assassination squads. It was a terrible sight.",
+      "rating": 3,
+      "date": "2023-06-06",
+      "travel_date": "2023-06",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "E7D4BA5C6BBCA71AC0FA3C6F7DBE9E89",
+        "name": "Josefien65",
+        "location": "Breda, The Netherlands",
+        "review_count": 41,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r893740468-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.619565",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "2114F65B8988D93BB16F9F48615840A5_4",
+      "title": "Panoramic View of Banjul",
+      "text": "Located on the Banjul-Serrekunda highway into Banjul, is the commemorative arch built in 1996 Provisional Ruling Council overthrew the democratically elected Gambian government of President Sir Dawda Jawara. A statue of the &quot;unknown soldier&quot; is set near the base of the arch: Construction At about 90 feet, the arch is one of the tallest structures in The Gambia. The building has three floors. Access to the upper floors can be made through a series of several marble spiral stairs. Although there is an elevator it was not working. Each floor provides a panorama of the city, with the top floor providing a view extending to the sea port of Banjul and the mangrove forests of Tanbi Wetland Complex. In the third level is a series of photos of President Jawara. Worth a climb if you are in reasonably good shape.",
+      "rating": 3,
+      "date": "2023-04-30",
+      "travel_date": "2023-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "2114F65B8988D93BB16F9F48615840A5",
+        "name": "BobWE",
+        "location": "Manhattan Beach, California",
+        "review_count": 737,
+        "helpful_votes": 353
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r888372812-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.764774",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F3426CC95A264176F52CAED2E7566BE6_5",
+      "title": "in decline",
+      "text": "The view from the top is interesting, but that&#39;s about it. The condition is shockingly poor, and while there are a few rooms to look at, they&#39;re without light, very neglected, and everything is falling apart. Not worth a visit if it weren&#39;t for the view; a quick stop, and that&#39;s enough; it&#39;s a shame they don&#39;t take care of it a bit.",
+      "rating": 3,
+      "date": "2022-03-14",
+      "travel_date": "2022-03",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "F3426CC95A264176F52CAED2E7566BE6",
+        "name": "Marcel_C_ZH",
+        "location": "Zurich, Switzerland",
+        "review_count": 547,
+        "helpful_votes": 423
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r831146239-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.062507",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "63DDA22566827BF0D83C2F4F247B508A_6",
+      "title": "City website",
+      "text": "Along with the mosques, this is the only place worth visiting in Banjul. Entrance is 100 dalasis for foreigners, a few steps, then a beautiful view, and above all, it&#39;s a gathering place for locals. From near the port, the taxi took us there and back, with a wait of about 10 minutes for 200 dalasis.",
+      "rating": 4,
+      "date": "2022-03-03",
+      "travel_date": "2022-03",
+      "language_detected": "en",
+      "language_original": "fr",
+      "user": {
+        "user_id": "63DDA22566827BF0D83C2F4F247B508A",
+        "name": "Benomark2000",
+        "location": "Rabat, Morocco",
+        "review_count": 715,
+        "helpful_votes": 240
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r829929332-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.308165",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "977CE5C0C4C473B5B4DD8C6C937F2A54_7",
+      "title": "Interesting history and nice view",
+      "text": "Nice view overlooking the city. It houses a small museum and shows the history of The Gambia. Bring a flashlight because it can be rather dark inside.",
+      "rating": 3,
+      "date": "2021-11-28",
+      "travel_date": "2021-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "977CE5C0C4C473B5B4DD8C6C937F2A54",
+        "name": "Nieske Halim",
+        "location": "The Netherlands",
+        "review_count": 172,
+        "helpful_votes": 43
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r820367515-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.450699",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "ADDE69CFA4C6A68A981AD700BE33E10F_8",
+      "title": "commemorative",
+      "text": "Its road through Banjul and Serrekunda does include this arch that commemorates the state&#39;s colpo. With your meter&#39;s quarantina è una delle strutture più alte in zona e exitando si può vedere il panorama. C&#39;è also a statue to the unknown military.",
+      "rating": 3,
+      "date": "2021-01-08",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "ADDE69CFA4C6A68A981AD700BE33E10F",
+        "name": "PPCI-BG",
+        "location": "Bergamo, Italy",
+        "review_count": 129606,
+        "helpful_votes": 22043
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r780794687-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.450779",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "070E0FB26293F662C7F123F34D54BDE7_9",
+      "title": "One if the only historic monuments",
+      "text": "This is one of the only historic monuments in the country, it's an important place to visit. Up high you get to really see the city. ",
+      "rating": 3,
+      "date": "2020-07-10",
+      "travel_date": "2020-07",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "070E0FB26293F662C7F123F34D54BDE7",
+        "name": "Cthulhu",
+        "location": "Barcelona, Spain",
+        "review_count": 8,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r759522470-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.611477",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C39D1E30EBB7540892C592268953CE02_10",
+      "title": "Kaprys byłego prezydenta",
+      "text": "Duża budowla wybudowana przez i dla byłego prezydenta Gambii. Dobre miejsce do podziwiania stolicy najmniejszego państwa Afryki. Widoki niesamowite. W Srodku muzeum gdzie możemy zapoznać się z historią Gambii.",
+      "rating": 4,
+      "date": "2020-02-18",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "C39D1E30EBB7540892C592268953CE02",
+        "name": "Dariusz D",
+        "location": "Zdunska Wola, Poland",
+        "review_count": 324,
+        "helpful_votes": 37
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r745883844-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.611582",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "EC40EC654B152F32C3C98EB1B56334A5_11",
+      "title": "Arch22",
+      "text": "I saw some monuments on the avenue in Rundresa and Banjul. Trappan upp var trång men utsikten uppifrån var fin. Dwt fanns en hiss, men den var trasig. Kändes som om monumentet skulle behöva rustas upp lite...",
+      "rating": 2,
+      "date": "2020-01-25",
+      "travel_date": "2020-01",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "EC40EC654B152F32C3C98EB1B56334A5",
+        "name": "PennyJennny",
+        "location": "Mjolby, Sweden",
+        "review_count": 44,
+        "helpful_votes": 10
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r741166672-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.611678",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "DABF415D4B4ED37113080CEF83C19786_12",
+      "title": "It&#39;s no big deal",
+      "text": "This memorial is located at the entrance to Banjul, near the president&#39;s house. Cars pass underneath, and the visit is very short.",
+      "rating": 3,
+      "date": "2020-01-08",
+      "travel_date": "2020-01",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "DABF415D4B4ED37113080CEF83C19786",
+        "name": "Javier Mateo",
+        "location": "Madrid, Spain",
+        "review_count": 92,
+        "helpful_votes": 66
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r737841224-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.835826",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "B4B1A1C24A3A7314FCB6B9095EB4C357_13",
+      "title": "Niente di Speciale.",
+      "text": "Leggendo le guide pensi che sia qualcosa di importante da vedere, però quando ci arrivi, ti accorgi che non è niente di speciale. C'è la possibilità di salire sopra, ma non è che si vede tutto questo panorama.",
+      "rating": 3,
+      "date": "2020-01-04",
+      "travel_date": "2019-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "B4B1A1C24A3A7314FCB6B9095EB4C357",
+        "name": "Giuseppe Rapisarda",
+        "location": "Belpasso, Italy",
+        "review_count": 1190,
+        "helpful_votes": 335
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r736891019-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.965739",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9201D8D9E5E9849B7C8C7F366FD09A03_14",
+      "title": "Triumfbåge vid infarten till huvudstaden Banjul i Gambia.",
+      "text": "Denna Triumfbåge byggdes för att fira minnet av militärkuppen den 22 Juli 1994. Monumentet är 36 meter högt och innehåller dessutom ett museum. Vägbanan ut och in till staden Banjul som ligger på en ö, passerar under Arch 22.",
+      "rating": 3,
+      "date": "2019-11-29",
+      "travel_date": "2019-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9201D8D9E5E9849B7C8C7F366FD09A03",
+        "name": "Erling Glantz",
+        "location": "Viimsi, Estonia",
+        "review_count": 33854,
+        "helpful_votes": 530
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r729615523-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.965816",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "219F0FECB3E32B70616C163DEA781765_15",
+      "title": "City overview",
+      "text": "If you want to get an overview of the city, here&#39;s one option. On the upper floor, there&#39;s an exhibition on the country&#39;s history. From the semicircular balcony, you can enjoy a beautiful view of the city, parliament, harbor, and a mosque. The building is in a sorry state, and the elevator is broken, so it&#39;s not really worth seeing for people with disabilities; you have to climb the stairs. At the foot of the Arc de Triomphe, there&#39;s a grandstand where you can easily lose souvenirs (candy, pens, etc.). It&#39;s not worth going there just for the arch; you can easily see it as part of a city tour...",
+      "rating": 3,
+      "date": "2019-10-21",
+      "travel_date": "2019-05",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "219F0FECB3E32B70616C163DEA781765",
+        "name": "Jens M",
+        "location": "Unknown",
+        "review_count": 32,
+        "helpful_votes": 7
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r720162382-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:05.965936",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "676D53BD20E03D54AC084014283F6B3B_16",
+      "title": "Eher unspektakulär",
+      "text": "Nicht wirklich einen Besuch wert. Es sich anzuschauen, wenn man vorbei fährt oder geht, reicht eigentlich. ",
+      "rating": 3,
+      "date": "2019-10-19",
+      "travel_date": "2019-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "676D53BD20E03D54AC084014283F6B3B",
+        "name": "LionQueen",
+        "location": "Unknown",
+        "review_count": 81,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r719606790-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:06.340529",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CC5B59CF105613858DCB5F73E8669F5B_17",
+      "title": "Look at it together with the market. ",
+      "text": "It&#39;s a nice feature: you can look out over the market and the city. 10 minutes is enough for that. So if you want to go to the market, just factor it in. Out of the hotel room. Into a taxi. ",
+      "rating": 3,
+      "date": "2019-10-14",
+      "travel_date": "2019-10",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "CC5B59CF105613858DCB5F73E8669F5B",
+        "name": "MShark63",
+        "location": "Unknown",
+        "review_count": 55,
+        "helpful_votes": 42
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r718268075-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:06.340606",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "755B98A993FDCF480E31932A58AE5FD2_18",
+      "title": "An old dilapidated monument...nothing more",
+      "text": "We didn&#39;t climb it, but apparently you can get a good view of the city from the top.",
+      "rating": 3,
+      "date": "2019-09-04",
+      "travel_date": "2019-08",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "755B98A993FDCF480E31932A58AE5FD2",
+        "name": "Anna Lena V",
+        "location": "North Rhine-Westphalia, Germany",
+        "review_count": 50,
+        "helpful_votes": 44
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r706352407-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:06.518350",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9F7D66EE2CF14835B8572BE1BE300151_19",
+      "title": "Historically interesting",
+      "text": "The Arch itself isn&#39;t all that impressive, simply a panoramic view of Banjul. But the top floor does offer something interesting: the history of slavery. Statues, photos, and inscriptions are intended to make it clear that this must never happen again. Very impressive.",
+      "rating": 3,
+      "date": "2019-07-14",
+      "travel_date": "2019-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "9F7D66EE2CF14835B8572BE1BE300151",
+        "name": "Nicole D",
+        "location": "Bruges, Belgium",
+        "review_count": 14,
+        "helpful_votes": 8
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r689568129-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:06.678683",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D050BA2CA0B58605B8D12C056776E37C_20",
+      "title": "Great view over Banjul",
+      "text": "This monument is big and you can go up and see very good view and you can see over the Banjul city from here. Price to up is not much,  but view is nice. Defenetly worth of visit.",
+      "rating": 4,
+      "date": "2019-06-08",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D050BA2CA0B58605B8D12C056776E37C",
+        "name": "jouni65",
+        "location": "Unknown",
+        "review_count": 63,
+        "helpful_votes": 16
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r680071394-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:06.850233",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "30EB9F3BA9224E15909173E0C69760D5_21",
+      "title": "Great way to get a good view of the city",
+      "text": "Walking up the stairs in the west African heat may be a bit of an unexpected workout for some, but its worth visiting. Its not that tall a building, but given that there are no tall buildings in The Gambia, you can enjoy very good view of the city, take some great pics, enjoy the breeze and educate yourself in the small museum.",
+      "rating": 5,
+      "date": "2019-05-24",
+      "travel_date": "2019-05",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "30EB9F3BA9224E15909173E0C69760D5",
+        "name": "Borocosmopolite",
+        "location": "Bratislava, Slovakia",
+        "review_count": 30,
+        "helpful_votes": 52
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r676167001-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:06.850314",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "0AAEDCBE6027C5F67EA1A04A628DCF72_22",
+      "title": "A rememberance of dictatorship",
+      "text": "Not worth looking at it. A symbol of the formal dictatorship. Do not blow it up, just let nature do its work....",
+      "rating": 1,
+      "date": "2019-04-13",
+      "travel_date": "2019-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "0AAEDCBE6027C5F67EA1A04A628DCF72",
+        "name": "Johan en Gisèle",
+        "location": "Unknown",
+        "review_count": 4,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r666112101-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038288",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "AA59C194BAC393E888C5B3ECD6D0E663_23",
+      "title": "Waste of Money",
+      "text": "I am aware that the arch is a commerative one but surely the money spent on its construction would have been better used elsewhere.",
+      "rating": 2,
+      "date": "2019-03-06",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "AA59C194BAC393E888C5B3ECD6D0E663",
+        "name": "Derek",
+        "location": "Fairlie, United Kingdom",
+        "review_count": 201,
+        "helpful_votes": 157
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r656892324-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038361",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "002E0F909CC58043FD9DFE68FD05EADF_24",
+      "title": "En triumfbåge med historia. ",
+      "text": "Vi gjorde ett stopp på 15 min när vi passerade vilket alla gör då det är porten till Banjul. \nTrånga trappor att gå i, hissen är trasig. \nFint att ta bilder över staden från toppen av bågen. \n\nDåligt underhållen men sevärd. ",
+      "rating": 3,
+      "date": "2019-02-16",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "002E0F909CC58043FD9DFE68FD05EADF",
+        "name": "Tobb E",
+        "location": "Orebro, Sweden",
+        "review_count": 522,
+        "helpful_votes": 40
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r652795437-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038459",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "613FB947A2B40ECEB4DE5D9C9A87B8B1_25",
+      "title": "A must when visiting banjul",
+      "text": "Banjul is very known for this arch which is why you should see it if you’re ever in Banjul city. Not really that big of a deal but still. ",
+      "rating": 4,
+      "date": "2019-02-09",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "613FB947A2B40ECEB4DE5D9C9A87B8B1",
+        "name": "Kimia",
+        "location": "Stockholm, Sweden",
+        "review_count": 272,
+        "helpful_votes": 41
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r651126364-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038543",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D2DBAA2714BDB4DA0DF36ECFA54367D9_26",
+      "title": "Didn't go up",
+      "text": "Didn't have a chance to go up but passed by a couple of times. Looks impressive from a distance and good land mark.",
+      "rating": 3,
+      "date": "2019-02-06",
+      "travel_date": "2018-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D2DBAA2714BDB4DA0DF36ECFA54367D9",
+        "name": "God'sGloriousWorld",
+        "location": "London, United Kingdom",
+        "review_count": 4252,
+        "helpful_votes": 401
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r650591984-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038603",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3A767BBD1758DFB0BFF5C04F988747F2_27",
+      "title": "Its on the bank notes",
+      "text": "You either drive under it or around pending which way you are going. Looks a bit run down from the street side but has a bloody history. Worth looking out for on your way to the ferry or exploring the sights and sounds of the capitol city",
+      "rating": 3,
+      "date": "2019-01-28",
+      "travel_date": "2019-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3A767BBD1758DFB0BFF5C04F988747F2",
+        "name": "graham e",
+        "location": "Birkenhead, United Kingdom",
+        "review_count": 598,
+        "helpful_votes": 251
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r648776038-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038702",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FD7291211F974AD29C6E5BD9067AE58D_28",
+      "title": "So much potential but run down ",
+      "text": "The arch is one of those must see monuments in The Gambia. Unfortunately it’s not been well looked after and maintained- the elevator doesn’t work and the stairway is really dark which is dangerous because it’s a winding, loopy staircase. When we reached the top after a long climb, I was expecting to see some sort of history or information on the monument but there wasn’t. For a small country, it’s still worth heading to for a look around. ",
+      "rating": 3,
+      "date": "2019-01-25",
+      "travel_date": "2018-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FD7291211F974AD29C6E5BD9067AE58D",
+        "name": "Elizabeth",
+        "location": "London, United Kingdom",
+        "review_count": 342,
+        "helpful_votes": 108
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r648178688-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038893",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4B615C02F7C33D944694E4A77189F7E0_29",
+      "title": "En av få sevärdheter",
+      "text": "Arch 22 är en av Banjuls få sevärdheter när det gäller arkitektur. Banjul är ingen stad man besöker för att se vackra byggnader...",
+      "rating": 3,
+      "date": "2019-01-16",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "4B615C02F7C33D944694E4A77189F7E0",
+        "name": "RainerTorslanda",
+        "location": "Unknown",
+        "review_count": 25,
+        "helpful_votes": 12
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r646367229-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.038965",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3DE7F1506441E51C006B13AA33D8E2EB_30",
+      "title": "Worn down monument",
+      "text": "Nothing much to see really... \nAn worn down arch over a noisy road, steep stairs (no elevator).\nView over ? Actually not that much!",
+      "rating": 3,
+      "date": "2019-01-15",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3DE7F1506441E51C006B13AA33D8E2EB",
+        "name": "jockesvensson",
+        "location": "Sweden",
+        "review_count": 129,
+        "helpful_votes": 57
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r646273325-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.039030",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6D771A5F4CA03FB173835F8EDF5A77AD_31",
+      "title": "an arch with a bad history",
+      "text": "When you are in Banjul do go for a visit to this Arch. It isn&#39;t that beautiful but it has a bloody history that will tell you about the dictator and the killings going on in front of the Arch. On the other hand, going really on top of the rach gives you a great view over Banjul. There&#39;s also a small exposition above about the dictator and the Arch itself. Be advised that there is no elevator, so you have to climb by stairs!",
+      "rating": 3,
+      "date": "2019-01-06",
+      "travel_date": "2019-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6D771A5F4CA03FB173835F8EDF5A77AD",
+        "name": "trashgang",
+        "location": "Steenokkerzeel, Belgium",
+        "review_count": 138,
+        "helpful_votes": 68
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r644003672-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.039182",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4A32F18CCEF9F25686702A44AB20B793_32",
+      "title": "Triumphal Arch in Africa",
+      "text": "If you are on the coast of Sennegambia you should definitely visit Banjul. You will be at the entrance to the ",
+      "rating": 4,
+      "date": "2018-12-04",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "4A32F18CCEF9F25686702A44AB20B793",
+        "name": "Quest177207",
+        "location": "Unknown",
+        "review_count": 4,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r637455136-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.165761",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "1B3C3216BBE7878DF44A75E9A58899DB_33",
+      "title": "Very strange “museum”",
+      "text": "We paid the lady downstairs to go upstairs to have a visit, it was very dark and we had to turn on the lights as we walked along the upper floors. The stairs up there were very low, so be careful with your head if you are a bit taller (I&#39;m 5.11 and had to duck a few times lol...) Also be careful in one of the rooms there was a large square hole in the floor into the room below, with no balustrade around. Most of the exhibits seemed very old and dusty but it was interesting to read the informative boards of the Gambian history etc, it didn&#39;t seem very looked after though which was a shame. There was no one apart from me and my friend up there and no staff available. There had been a restaurant up there we were told but this had moved down to a small adjacent park which didn&#39;t seem very busy. Nice views from the upper floors though so interesting to see. Luckily we had a torch with us though as when walking down the second set of stairs was in complete darkness... ",
+      "rating": 3,
+      "date": "2018-11-24",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "1B3C3216BBE7878DF44A75E9A58899DB",
+        "name": "Anton",
+        "location": "London, United Kingdom",
+        "review_count": 69,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r635362928-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.339550",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7E7E159617265B64CDC86ED723CD8660_34",
+      "title": "Sightseeing",
+      "text": "It could be seen whole city of Banjul with a bird watch. Also you can see Atlantic Ocean, mouth 👄 of River Gambia where you can cross by ferry boat. The width of the River Gambia between Banjul-Barra is approximately 7 kms, it takes you to pass the river 30 minutes. If you look backward you can see the delta of the river with MANGROVES SWAMP.\nIt is worth to climb.",
+      "rating": 4,
+      "date": "2018-11-11",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7E7E159617265B64CDC86ED723CD8660",
+        "name": "Dursun Ali K",
+        "location": "Banjul, Gambia",
+        "review_count": 9,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r632613871-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.578307",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9DA24D2EF2C41F9DE48AD4FB4FF31428_35",
+      "title": "Worth going for the view and history",
+      "text": "This monument now celebrates the freedom of the Gambian people after the fall of the dictator Yahya Jammeh. The view from the top is good and there is a small exhibition (not really a museum) about the peaceful change of power. I don't think we paid to enter the Arch 22 but it would be worth a dollar or two.",
+      "rating": 4,
+      "date": "2018-11-11",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9DA24D2EF2C41F9DE48AD4FB4FF31428",
+        "name": "Taxi-Tino",
+        "location": "Odense, Denmark",
+        "review_count": 468,
+        "helpful_votes": 255
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r632512776-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.578412",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C2C57029F0037EBB8A8E2737FA0C42B9_36",
+      "title": "Madness Monument: the Arch 22",
+      "text": "The deposed dictator Jammeh built this triumphal arch for his own glory. He was the only one allowed to drive underneath; the rest of the population had to take a detour. Today, it houses a small exhibition about the—at times tragic—history of Gambia. And, of course, you get a beautiful view of the small capital. ",
+      "rating": 3,
+      "date": "2018-11-10",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "C2C57029F0037EBB8A8E2737FA0C42B9",
+        "name": "Bert L",
+        "location": "Hoorn, The Netherlands",
+        "review_count": 177,
+        "helpful_votes": 17
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r632476494-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.578505",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "8CDEA1A6E8E51B5B3C17A78D281E2C1A_37",
+      "title": "ガンビア首都のシンボル",
+      "text": "ガンビアの首都、バンジュールのシンボル的存在。上に登る階段があるが、訪問時は係がおらず登れなかった。ガンビアに来た記念に写真を撮りたい。",
+      "rating": 4,
+      "date": "2018-07-07",
+      "travel_date": "2018-06",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "8CDEA1A6E8E51B5B3C17A78D281E2C1A",
+        "name": "yoshida55",
+        "location": "Japan",
+        "review_count": 857,
+        "helpful_votes": 273
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r593908092-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.721562",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "142284F7AB1687AA5497EEDAD6492C34_38",
+      "title": "The entrance to Banjul city",
+      "text": "We had a private guided tour of the city and stopped here to learn about the recent history of the nation. The lift was out of action (I think it always is) and our guide suggested there were 100 steps up - maybe there are but it didn&#39;t seem that many once you started the climb - it&#39;s 114ft at the highest point and is supported by 8 huge columns. It is named July 22nd Arch in memory of the 1994 revolution. The museum is not worth the title - but the views are definitely worth the effort. From the new National Assembly building, down Independence Drive and right over to the ocean. It is possible to walk outside onto the bridge to have photographs un-obscured by the window glazing",
+      "rating": 4,
+      "date": "2018-06-20",
+      "travel_date": "2018-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "142284F7AB1687AA5497EEDAD6492C34",
+        "name": "Tansysue",
+        "location": "Unknown",
+        "review_count": 395,
+        "helpful_votes": 38
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r589268188-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:07.721700",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "B0E159F2FBFCADD084A90F58E999634A_39",
+      "title": "Wasted potential",
+      "text": "Feels like a tourist trap! Museum at the top was very disappointing. Perhaps the only good thing is the view you get from the top and it makes for a good picture. I would not go our of my way to visit this place. If its part of your city tour then thats ok. But if you're planning to just head out to the arch and make a day of it? DON'T!!!",
+      "rating": 2,
+      "date": "2018-05-03",
+      "travel_date": "2018-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "B0E159F2FBFCADD084A90F58E999634A",
+        "name": "Robin N",
+        "location": "Bucharest, Romania",
+        "review_count": 19,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r577738888-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.104388",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "B623B70806B4393E46D8F5AC14E4E53B_40",
+      "title": "Underneath The Arches",
+      "text": "Unfortunately the tour we were on didn't stop here which was a shame. nevertheless passed right by it so got a reasonable view of it but no time to go up.",
+      "rating": 3,
+      "date": "2018-04-07",
+      "travel_date": "2018-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "B623B70806B4393E46D8F5AC14E4E53B",
+        "name": "tezpil",
+        "location": "Portsmouth, United Kingdom",
+        "review_count": 4635,
+        "helpful_votes": 809
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r571816996-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.104435",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4E0313989FCE459DE9AEE6AB1EF869B1_41",
+      "title": "Worth the climb! ",
+      "text": "For a meagre 50 dalasi (less than £1, depending on the exchange rate!), Arch 22 provides a great view of Banjul and the Atlantic Ocean. A slight climb to the top gives an opportunity for some great panoramic shots, and the chance to see the city’s Parliamentary building, Independence Drive and dwellings. With it being such a cheap excursion, it’s a must-do when visiting Banjul. ",
+      "rating": 4,
+      "date": "2018-03-27",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "4E0313989FCE459DE9AEE6AB1EF869B1",
+        "name": "hannah347",
+        "location": "Chesterfield, United Kingdom",
+        "review_count": 46,
+        "helpful_votes": 23
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r569181386-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.104540",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "10EBA64493296C49AFFAFB43EAFABBE2_42",
+      "title": "Inte mycket att se ",
+      "text": "Stort monument för att vara i Gambia men egentligen rätt oansenligt. Inte värt en omväg för mog som europeisk turist.",
+      "rating": 2,
+      "date": "2018-03-06",
+      "travel_date": "2018-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "10EBA64493296C49AFFAFB43EAFABBE2",
+        "name": "Lydia",
+        "location": "Stockholm, Sweden",
+        "review_count": 93,
+        "helpful_votes": 12
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r564936461-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.104609",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "5C22F4683A5A144B743718D7CD0DD7EB_43",
+      "title": "Worth a short visit",
+      "text": "From the top of the arch, there&#39;s a beautiful view. You can plan this along with a visit to the national museum in Banjul.",
+      "rating": 3,
+      "date": "2018-03-04",
+      "travel_date": "2017-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "5C22F4683A5A144B743718D7CD0DD7EB",
+        "name": "Luttiefluttie",
+        "location": "Zemst, Belgium",
+        "review_count": 70,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r564231540-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.104669",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "57E194CB5F7441410DB4DA30A75897DA_44",
+      "title": "A bit ridiculous.",
+      "text": "The previous president/dictator would have done better to build a school or a clinic with the money for this &quot;arc de triomphe&quot;",
+      "rating": 1,
+      "date": "2018-03-03",
+      "travel_date": "2018-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "57E194CB5F7441410DB4DA30A75897DA",
+        "name": "lutje",
+        "location": "Koksijde, Belgium",
+        "review_count": 35,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r564065328-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.314799",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "943C907F5EAF302BE6F8CA35F54FE9E0_45",
+      "title": "Zbyteczny łuk - STRATA CZASU",
+      "text": "Łuk wybudowano nie wiadomo po co w biednej stolicy Gambii. To typowe \"zadęcie\" prezydenta. Łuk i obok niego podium do przyjmowania defilad. STRATA CZASU",
+      "rating": 2,
+      "date": "2018-02-23",
+      "travel_date": "2018-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "943C907F5EAF302BE6F8CA35F54FE9E0",
+        "name": "Jarosław F",
+        "location": "Krakow, Poland",
+        "review_count": 51,
+        "helpful_votes": 13
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r562347088-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.529938",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "0FEC3D001D8FEFFB6715A61CCDAA1716_46",
+      "title": "Almost a must-see",
+      "text": "If you travel around the town, you are almost bound to pass under this arch at some point. It is very much a local landmark. Built by the previous President, to commemorate his coming to power. One wonders if the new President is tempted to knock it down?",
+      "rating": 4,
+      "date": "2018-02-02",
+      "travel_date": "2018-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "0FEC3D001D8FEFFB6715A61CCDAA1716",
+        "name": "aberdeenangler",
+        "location": "Aberdeen, United Kingdom",
+        "review_count": 852,
+        "helpful_votes": 388
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r557931094-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.530027",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7F0A5624670CE9776C7360EC0902EA62_47",
+      "title": "Worth the climb...",
+      "text": "Yes...worth the climb to the top for a local panorama and some photos.  Best leave it to the last as you leave...rather than on the way in!\n\n",
+      "rating": 4,
+      "date": "2018-01-12",
+      "travel_date": "2018-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7F0A5624670CE9776C7360EC0902EA62",
+        "name": "RJCScotland",
+        "location": "Montrose, United Kingdom",
+        "review_count": 72,
+        "helpful_votes": 35
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r553387363-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.530072",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "82A8FC3EFEA8177F034F3A29DD30BB52_48",
+      "title": "Nice view from the top",
+      "text": "This is the no 1 landmark in Banjul built to commemorate the coup that brought the former dictator of Gambia Yayah Jammeh to power. It is about the tallest structure in town. Climbing to the top is through circular staircase in the leg of the structure. The view from the top is nice and good for snapping pictures.",
+      "rating": 3,
+      "date": "2017-11-08",
+      "travel_date": "2017-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "82A8FC3EFEA8177F034F3A29DD30BB52",
+        "name": "SiddonLook",
+        "location": "Port Harcourt, Nigeria",
+        "review_count": 192,
+        "helpful_votes": 38
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r539419634-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.530221",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3963775F3511267A473336028846628F_49",
+      "title": "History ",
+      "text": "Great symbol of the country’s history. It literally takes minutes to appreciate it in all its glory so I wouldn’t make a day trip of it ",
+      "rating": 5,
+      "date": "2017-11-07",
+      "travel_date": "2017-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3963775F3511267A473336028846628F",
+        "name": "D1spm",
+        "location": "Redditch, United Kingdom",
+        "review_count": 2302,
+        "helpful_votes": 431
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r539213069-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.701846",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7E9F52121DAD5AB66CDB1442A0A886EE_50",
+      "title": "Arch 22",
+      "text": "A large arch celebrating independence . Basically the main entrance to Banjul City.the tallest structure in Banjul",
+      "rating": 3,
+      "date": "2017-10-11",
+      "travel_date": "2017-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7E9F52121DAD5AB66CDB1442A0A886EE",
+        "name": "Michael D",
+        "location": "London, United Kingdom",
+        "review_count": 406,
+        "helpful_votes": 226
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r531938229-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.702009",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "34F2E39AB8CF872399BA5CF100A076F9_51",
+      "title": "An arch in the road",
+      "text": "In itself, it&#39;s not very magnificent... and if you go to Banjul&#39;s old town, you&#39;ll almost certainly pass by it. It&#39;s not worth going just to see it.",
+      "rating": 3,
+      "date": "2017-10-07",
+      "travel_date": "2017-08",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "34F2E39AB8CF872399BA5CF100A076F9",
+        "name": "Discover",
+        "location": "Barcelona, Spain",
+        "review_count": 1473,
+        "helpful_votes": 1465
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r530883132-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.702127",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "95A6E103789708A3598B045357E8D3AE_52",
+      "title": "Views from Banjul",
+      "text": "I had the chance to visit the Arch 22 which was build to commemorate the 1994 revolution. The Arch houses various Gambian artifacts, and beautiful view of the capital.There is also a restaurant where you can eat and relax for the day. ",
+      "rating": 3,
+      "date": "2017-08-29",
+      "travel_date": "2016-09",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "95A6E103789708A3598B045357E8D3AE",
+        "name": "yusuphafatajo",
+        "location": "Bakau, Gambia",
+        "review_count": 52,
+        "helpful_votes": 41
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r518754674-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.936177",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D3B06EDF37CE03D22D7F2A5DEDF1AF3C_53",
+      "title": "nothing special, just an arch. Take some pictures, that is it",
+      "text": "Just an arch and you can take pictures. There were some seatings to the side across the judicial hall. \n\nSeriously, nothing exciting. \n\nIf you are traveling, make sure to take your passport. There were several checkpoints and the police give you a hard time without one. \n\nEasily accessible.",
+      "rating": 3,
+      "date": "2017-07-27",
+      "travel_date": "2017-07",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D3B06EDF37CE03D22D7F2A5DEDF1AF3C",
+        "name": "pinchetravels",
+        "location": "San Juan, Puerto Rico",
+        "review_count": 521,
+        "helpful_votes": 200
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r506221588-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.936273",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "B92B8E089B072BEDC74E85389DF5FACB_54",
+      "title": "A Tourist attraction easy to access",
+      "text": "We stopped here on our visit to Banjul and it is easy to park nearby, there are eating and drinking facilities nearby so we stopped and took some photo's.  This is an easy tourist attraction to visit and it is also nice if you want to take your own picnic, plenty of space.",
+      "rating": 4,
+      "date": "2017-06-26",
+      "travel_date": "2017-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "B92B8E089B072BEDC74E85389DF5FACB",
+        "name": "Fitzy2014",
+        "location": "Northampton, United Kingdom",
+        "review_count": 128,
+        "helpful_votes": 53
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r496404309-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.936332",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FF828F373B91C44B637F7FD138750813_55",
+      "title": "Arch",
+      "text": "It is the only historical place what you can see in gambia so it is definetely good to visit this place and there is a nice view on the top of the arch as well. ",
+      "rating": 3,
+      "date": "2017-05-30",
+      "travel_date": "2017-05",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FF828F373B91C44B637F7FD138750813",
+        "name": "lena k",
+        "location": "Bratislava, Slovakia",
+        "review_count": 89,
+        "helpful_votes": 32
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r489107396-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.936368",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CD7AA0B43C09FBBC60F6A3014FD74121_56",
+      "title": "THE OPERA",
+      "text": "Building a window to celebrate the tallest year of the year is one of the most pochisime attractions of Banjul that deserve a visit.",
+      "rating": 3,
+      "date": "2017-03-20",
+      "travel_date": "2017-03",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "CD7AA0B43C09FBBC60F6A3014FD74121",
+        "name": "alby1961",
+        "location": "Terni, Italy",
+        "review_count": 473,
+        "helpful_votes": 208
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r468849624-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:08.936404",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "84C2D8E565AA2532B9FFE532DF8A3E68_57",
+      "title": "Should actually be torn down",
+      "text": "Since I&#39;ve been to Gambia many times, I also visited Arch 22. It was a &quot;tourist attraction&quot; in the 1990s, having been built after the 1994 military coup. The view from the top is beautiful—but that&#39;s all. Now that the former &quot;president&quot; has brought the country to the brink of war by refusing to step down after the new elections in December 2016, this &quot;monument&quot; should really be demolished. It&#39;s in poor condition anyway, and I would advise against visiting it due to the risk of accidents (elevator shaft open, etc.).",
+      "rating": 1,
+      "date": "2017-03-13",
+      "travel_date": "2017-01",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "84C2D8E565AA2532B9FFE532DF8A3E68",
+        "name": "Mandinka_5018",
+        "location": "Canton of Zurich, Switzerland",
+        "review_count": 16,
+        "helpful_votes": 21
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r466968976-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:09.147363",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CF7085558DECF799F8B956C85777A4F1_58",
+      "title": "Not what I expected!",
+      "text": "The arch was built for the coup of President Jameyh, who was just voted out and forced to leave the country. They said there was a museum in the Arch. I don&#39;t know if I would call it that. It was an interesting building and had good views of the surrounding area. I think it is supposed to be free but there is usually some government worker at the entrance extorting money to gain entry.",
+      "rating": 3,
+      "date": "2017-03-11",
+      "travel_date": "2017-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "CF7085558DECF799F8B956C85777A4F1",
+        "name": "derrick31310",
+        "location": "Poulsbo, Washington",
+        "review_count": 35,
+        "helpful_votes": 18
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r466312808-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:09.424904",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4AF4322F1593EA1FF52F29CB6E4B76B5_59",
+      "title": "Symbol of dictatorship",
+      "text": "Utterly hideous building, built solely for the megalomaniac thoughts of the previous dictator, the best they can do is demolish that thing",
+      "rating": 1,
+      "date": "2017-02-12",
+      "travel_date": "2017-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "4AF4322F1593EA1FF52F29CB6E4B76B5",
+        "name": "Henk H",
+        "location": "Oosterwolde, The Netherlands",
+        "review_count": 55,
+        "helpful_votes": 34
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r458994431-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:09.653952",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "74A5A5C3AE2C0ADCF19762F811564C5A_60",
+      "title": "If in Banjul....it is there...",
+      "text": "Nothing monumental about any architecture in The Gambia and you will find some more interesting if empty modernistic office buildings dotted about. And this is no monumental arch of significance. Bland white concrete that has aged reasonably well. Built post &#39;94 to celebrate the military coup, which has now itself just ended in a mess of lost cash and economic tourist collapse, it has been largely ignored by the locals. 50 delasi get in and a hike of steps to the upper balcony, you do get a good photo view over the low town buildings and over to the dock cranes, over to the other side of the river on a clear day. A bit of an ad hoc display of local art and history. So an if in town option perhaps along with Albert Market and the football stadium. Don&#39;t let your green car driver overcharge you on this one.",
+      "rating": 3,
+      "date": "2017-02-03",
+      "travel_date": "2017-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "74A5A5C3AE2C0ADCF19762F811564C5A",
+        "name": "Nightowl",
+        "location": "Lichfield, United Kingdom",
+        "review_count": 2484,
+        "helpful_votes": 155
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r456908984-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:09.817572",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E99F5383AFCFA0CA01B8EA8A5CDD6C5C_61",
+      "title": "Must visit,The only architecture site in the Gambia",
+      "text": "There is nice place to see, having excellent view to Banjul from its top balcony. Banjul is one store city, so it is a topmost point from where you can take nice shots and views to all city. Please, mind that elevators inside the column are usually broken, so you will need to climb up the spiral steps to the top. For old people it can be hard task. There is a state museum inside with an information about The Gambia history. It is quite interesting/ I hope they will soon replace an exposition honoring their &quot;great&quot; doctor professor academic state savior etc. etc. former president mr. Jammeh, who was 20 years holding power robbing The Gambia so extensive, that after he was pushed out by Senegal forces in 2017, the State Treasury appeared empty with last few millions of dollars transferred during the last days of his presidency out of the country/ He even did not forget to take with him his luxury cars - god knows where he suppose to drive them in the Africa mostly without roads....",
+      "rating": 4,
+      "date": "2017-01-29",
+      "travel_date": "2017-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "E99F5383AFCFA0CA01B8EA8A5CDD6C5C",
+        "name": "Leonid A",
+        "location": "St. Petersburg, Russia",
+        "review_count": 447,
+        "helpful_votes": 81
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r455608264-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.040054",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CC173786ED2B9C70243E17CB66DDBA6D_62",
+      "title": "Like communist monuments",
+      "text": "My guess is that they built this place for \"once a year\" parades. It look very communistic. But there is a nice small museum in the arch (entrance fee 50D = 1 Euro), you get a good view over Banjul from the top floor balcony. And there is a free toilet next to it. :)",
+      "rating": 2,
+      "date": "2017-01-26",
+      "travel_date": "2017-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CC173786ED2B9C70243E17CB66DDBA6D",
+        "name": "Peter M",
+        "location": "Bucharest, Romania",
+        "review_count": 136,
+        "helpful_votes": 36
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r455037441-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205424",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CA7134B023D33A6A52E4F020A6B5612E_63",
+      "title": "Widok",
+      "text": "Obiekt warty odwiedzenia jako klasyczny pomnik wystawiony sobie przez aktualną władzę. Jeszcze aktualną bo zmiana ma nastąpić za kilka dni. U góry wystawa wychwalająca jedynie słuszną linię Prezydenta Jammeha. Jedyny taki obiekt w tym regionie Afryki. Widok sympatyczny ;)",
+      "rating": 4,
+      "date": "2017-01-02",
+      "travel_date": "2016-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CA7134B023D33A6A52E4F020A6B5612E",
+        "name": "Sapigorski",
+        "location": "Zielona Gora, Poland",
+        "review_count": 951,
+        "helpful_votes": 95
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r448455405-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205497",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "8C5F775FB9F8EC8E49FAD6AA1605F260_64",
+      "title": "Arch 22",
+      "text": "Very good and interesting place to visit, free of charge by the way and who minds giving a tip for the worker who sits by the door at the end of your visit !!",
+      "rating": 4,
+      "date": "2016-12-19",
+      "travel_date": "2016-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "8C5F775FB9F8EC8E49FAD6AA1605F260",
+        "name": "Steve Ingram",
+        "location": "Northampton, United Kingdom",
+        "review_count": 28,
+        "helpful_votes": 10
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r445187046-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205576",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "2C44E83ED4AD6257EA10ABD5F6118234_65",
+      "title": "Näe koko Banjul",
+      "text": "Kiipeä korkealle ja edessäsi aukeaa Banjul. Sisältä löytyy myös näyttely Gambian asioista. Meri ja joki yhdistyvät.",
+      "rating": 4,
+      "date": "2016-12-16",
+      "travel_date": "2016-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "2C44E83ED4AD6257EA10ABD5F6118234",
+        "name": "Saunioinen",
+        "location": "Kangasala, Finland",
+        "review_count": 182,
+        "helpful_votes": 13
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r444775041-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205619",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3B0AF87AB9B1881BF9FB4ECAC307A613_66",
+      "title": "Gambia",
+      "text": "Visited the arch, was OK lovely view stairs were quite dark and damp as a cleaner was washing them. Not somewhere you would spend a lot of time doing as not a lot at the top just for the view .",
+      "rating": 2,
+      "date": "2016-11-24",
+      "travel_date": "2016-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3B0AF87AB9B1881BF9FB4ECAC307A613",
+        "name": "paular1246",
+        "location": "King's Lynn, United Kingdom",
+        "review_count": 7,
+        "helpful_votes": 9
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r439848211-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205719",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "EED7B3092FFAFE4F1F6E43706DCF85DB_67",
+      "title": "Quite interesting",
+      "text": "Quite a hike up the steps to the top of the arch but a good museum display at the top. Great views of the area great photo stop",
+      "rating": 4,
+      "date": "2016-11-24",
+      "travel_date": "2016-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "EED7B3092FFAFE4F1F6E43706DCF85DB",
+        "name": "Ali H",
+        "location": "Guernsey, United Kingdom",
+        "review_count": 64,
+        "helpful_votes": 27
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r439792245-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205764",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "ED8E2CC7F8E1815B6E448CE080B78091_68",
+      "title": "Disappointing",
+      "text": "This is a concrete building. The inside was completely empty. You can climb to the top of the building to have an overview of Banjul. The view isn&#39;t great (nothing particular to see in Banjul). Entrance was 50 dalasi or +/- 1 euro. Visit takes 5 minutes",
+      "rating": 2,
+      "date": "2016-07-28",
+      "travel_date": "2016-07",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "ED8E2CC7F8E1815B6E448CE080B78091",
+        "name": "Daniel19721972",
+        "location": "Leuven, Belgium",
+        "review_count": 780,
+        "helpful_votes": 488
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r398470680-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.205820",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C107310069A87A57BE3A3BF0211A71E6_69",
+      "title": "Nice view of the whole of Banjul",
+      "text": "Stop by for a moment. You&#39;ll discover a beautiful view of Banjul, surrounded by water. There are several educational panels on display to help you better understand the country&#39;s history. ",
+      "rating": 3,
+      "date": "2016-04-09",
+      "travel_date": "2016-04",
+      "language_detected": "en",
+      "language_original": "fr",
+      "user": {
+        "user_id": "C107310069A87A57BE3A3BF0211A71E6",
+        "name": "Dominique S",
+        "location": "Mont Saint Guibert, Belgium",
+        "review_count": 24,
+        "helpful_votes": 15
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r362763458-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.474943",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "60ECE709DE0BF977AB6D45C46A6CB570_70",
+      "title": "nice place",
+      "text": "not much to say but if you are in Banjul go and see the arch you can climb to the top for a good view",
+      "rating": 5,
+      "date": "2016-04-03",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "60ECE709DE0BF977AB6D45C46A6CB570",
+        "name": "David B",
+        "location": "Unknown",
+        "review_count": 19,
+        "helpful_votes": 16
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r361247843-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.647480",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "BEDA11E4FAFF8D1A096A9D10A9ED7DD1_71",
+      "title": "Beautiful monument",
+      "text": "Beautiful monument in Banjul. We climbed all the stairs. What a stunning view despite the minimal cloud cover.",
+      "rating": 5,
+      "date": "2016-03-26",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "BEDA11E4FAFF8D1A096A9D10A9ED7DD1",
+        "name": "Marianne B",
+        "location": "Willemstad, Curaçao",
+        "review_count": 23,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r358729156-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.647724",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F57B7DB620BF12B26419CE9E805E2CBE_72",
+      "title": "Impressive",
+      "text": "Built to commemorate the coup on 22/7/94 this huge impressive looking arch is well worth a visit if you are in the area. You can climb the steps to take pictures and you will also get far reaching views when you get to the top.",
+      "rating": 4,
+      "date": "2016-03-26",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F57B7DB620BF12B26419CE9E805E2CBE",
+        "name": "AnnieBee303",
+        "location": "Unknown",
+        "review_count": 571,
+        "helpful_votes": 95
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r358714268-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.767511",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "1CBBC18F89FB60C49983D605EE4158FB_73",
+      "title": "Newly constructed arch and building",
+      "text": "Great to see this monument newly created in Gambia. We went to see this beautiful arch and building at its slender. The history is very interesting about the revaluation that took place. Lovely restaurant here with goof coffee and food. Parking area also at the venue.",
+      "rating": 3,
+      "date": "2016-03-26",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "1CBBC18F89FB60C49983D605EE4158FB",
+        "name": "Derek B",
+        "location": "Bulgaria",
+        "review_count": 705,
+        "helpful_votes": 98
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r358698124-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.767721",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6160690AFD0E553C89053CA92EC28F7B_74",
+      "title": "Łuk Triumfalny w Banjul",
+      "text": "Łuk Triumfalny , to 35-metrowa konstrukcja będąca symbolem miasta upamiętniającym bezkrwawy przewrót wojskowy, przeprowadzony w 1994r przez obecnego prezydenta Gambii Yahyę Jammeha. Jest ona również wieżą widokową, z której można zobaczyć panoramę miasta.  ",
+      "rating": 3,
+      "date": "2016-03-14",
+      "travel_date": "2016-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "6160690AFD0E553C89053CA92EC28F7B",
+        "name": "Zdzichu1947",
+        "location": "Wroclaw, Poland",
+        "review_count": 1902,
+        "helpful_votes": 172
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r355365075-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.767897",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "BF03744658F122859F2A61FBC98AABFA_75",
+      "title": "Not to be missed",
+      "text": "You can&#39;t miss this arch if you take the ferry from Banjul. A piece of history.",
+      "rating": 3,
+      "date": "2016-03-06",
+      "travel_date": "2016-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "BF03744658F122859F2A61FBC98AABFA",
+        "name": "ceescees w",
+        "location": "Kapelle, The Netherlands",
+        "review_count": 285,
+        "helpful_votes": 163
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r353361433-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.768008",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E20CD587948E99697E5E9C286BA6ECD1_76",
+      "title": "Impressive looking arch",
+      "text": "Impressive looking arch and a great photo opportunity. Commemorates the revolution and worth an hour of your time if  you get the chance",
+      "rating": 3,
+      "date": "2016-02-25",
+      "travel_date": "2016-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "E20CD587948E99697E5E9C286BA6ECD1",
+        "name": "Renoir999",
+        "location": "Lincoln, United Kingdom",
+        "review_count": 538,
+        "helpful_votes": 241
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r350978986-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.883096",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CA674350635644CE102F05552AC28C6D_77",
+      "title": "Great photos of Banjul",
+      "text": "For many years it was am impressive arch to drive around and photo.  Now that you can climb up it is worth it for the views.  I have taken great city life photos without hassle.",
+      "rating": 3,
+      "date": "2016-02-13",
+      "travel_date": "2016-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CA674350635644CE102F05552AC28C6D",
+        "name": "Andy W",
+        "location": "Zaventem, Belgium",
+        "review_count": 289,
+        "helpful_votes": 138
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r347428852-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.883269",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3564618F10B1451EC6D8289FFF4007A2_78",
+      "title": "Great view of Banjul",
+      "text": "Just as you enter Banjul you have Arch 22 you can climb the steps to the top for great views over the Banjul",
+      "rating": 3,
+      "date": "2016-01-28",
+      "travel_date": "2015-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3564618F10B1451EC6D8289FFF4007A2",
+        "name": "nails",
+        "location": "United Kingdom",
+        "review_count": 1204,
+        "helpful_votes": 49
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r343396522-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.883374",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "63A449F68F3328E582979E7BC8F5D5E3_79",
+      "title": "Small exhibition of juju medicine, good view",
+      "text": "Good observation point, not too exciting. Some juju stuxff exhibited. Some tidiying up would be an ok pastime for the staff...",
+      "rating": 3,
+      "date": "2015-12-30",
+      "travel_date": "2015-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "63A449F68F3328E582979E7BC8F5D5E3",
+        "name": "kattullus",
+        "location": "Stockholm, Sweden",
+        "review_count": 1091,
+        "helpful_votes": 351
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r336023896-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.883483",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FE022746C81A6D8A563F7A921A84BA41_80",
+      "title": "Well, if you&#39;re in Banjul...",
+      "text": "On our excursion from Kololi to Banjul, we also visited this attraction with our private guide/taxi driver. You can partly take the elevator up and partly the stairs. They call it the National Center for Arts and Culture, but the museum itself isn&#39;t much to write home about. A few dressed-up dolls, a few display cases, and a few photos. That&#39;s about it. It was nice to see, but I preferred the view. The price isn&#39;t a problem. Let&#39;s just leave it at that.",
+      "rating": 3,
+      "date": "2015-12-21",
+      "travel_date": "2015-05",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "FE022746C81A6D8A563F7A921A84BA41",
+        "name": "ytosnl",
+        "location": "Beverwijk, The Netherlands",
+        "review_count": 652,
+        "helpful_votes": 164
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r334177017-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:10.883761",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CA34675D0F7A13E3C443FB9025FFF72E_81",
+      "title": "To view the beautiful surroundings from above, visit Arch 22",
+      "text": "Arch 22, a symbol of the takeover on July 22, 1994, is an arch-shaped gateway to the capital, Banjul. At 35 meters high, Arch 22 is the tallest building in Gambia. You can walk up for free (there&#39;s also an elevator), and from there, you&#39;ll have stunning views of the city, the surrounding area, the ocean, and the Gambia River. At the roundabout in front of the arch stands the statue of the Unknown Soldier, carrying a baby. A visit to Arch 22 and the walk up is definitely worth it.",
+      "rating": 5,
+      "date": "2015-12-11",
+      "travel_date": "2015-06",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "CA34675D0F7A13E3C443FB9025FFF72E",
+        "name": "M K",
+        "location": "Unknown",
+        "review_count": 443,
+        "helpful_votes": 131
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r332034453-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.107349",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7AC1B65E87B89E2A875C6311376401A2_82",
+      "title": "It's big and impressive",
+      "text": "Built to commemorate the 22 July date of Independence, it is a striking landmark if not that beautiful so I don't think I would make a special visit",
+      "rating": 4,
+      "date": "2015-12-08",
+      "travel_date": "2015-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7AC1B65E87B89E2A875C6311376401A2",
+        "name": "Douglas552",
+        "location": "Unknown",
+        "review_count": 728,
+        "helpful_votes": 233
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r331416485-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.356137",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "215E0FE7ADF47A66C4F5E8F593033304_83",
+      "title": "It&#39;s nothing.",
+      "text": "Save yourself the trouble; there&#39;s little to see. The people, villages, and markets are all much more interesting.",
+      "rating": 2,
+      "date": "2015-12-07",
+      "travel_date": "2015-12",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "215E0FE7ADF47A66C4F5E8F593033304",
+        "name": "Anne L",
+        "location": "Hoogezand, The Netherlands",
+        "review_count": 353,
+        "helpful_votes": 28
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r331284348-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.356184",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "407F3931454C0328000AE37ECF362D04_84",
+      "title": "Great view from the arch",
+      "text": "The view from the arch is great and the history displayed inside is really interesting. \n\nNot the best thing to do in the Gambia, but worth a visit. ",
+      "rating": 3,
+      "date": "2015-10-05",
+      "travel_date": "2015-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "407F3931454C0328000AE37ECF362D04",
+        "name": "Olivia D",
+        "location": "Unknown",
+        "review_count": 25,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r316330900-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.509613",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "625160A65A586477E393B813186ED25F_85",
+      "title": "Beautiful view",
+      "text": "For 50 dalasi, you get a tour of the arch all the way to the top, and an excellent view of Banjul. However the museum at the top is extremely underwhelming (for lack of a better word). Half of the exhibit was pushed to the side and looked as if no one had been there in decades, but the view definitely made up for it.",
+      "rating": 3,
+      "date": "2015-09-30",
+      "travel_date": "2015-09",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "625160A65A586477E393B813186ED25F",
+        "name": "Daphne X",
+        "location": "Unknown",
+        "review_count": 15,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r315169411-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.509717",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6B79CAD8921018F34EC8BEABB4B7380B_86",
+      "title": "Lovely day out in Banjul",
+      "text": "Took my Gambian fiancé out to Banjul for the day to do a bit of shopping and R&amp;R. taxi dropped us off next to the roundabout opposite Arch22. we had a lovely stroll around and spent some time looking at the nice green spaces. unfortunately they had scaffolding up painting Arch22, but it was still lovely to look out. TIP1. Keep you valuables&#39; secured as my camera was stolen not from Banjul has to be said. and TIP2 make sure if entering Banjul you have ID on you especially if you are in a mixed race couple like me. But don&#39;t let that put you off please. was still a nice day out and if you go down some of the side streets in Banjul you will find bargains a lot cheaper than the tourist areas",
+      "rating": 4,
+      "date": "2015-07-20",
+      "travel_date": "2015-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6B79CAD8921018F34EC8BEABB4B7380B",
+        "name": "Rick B",
+        "location": "Plymouth, United Kingdom",
+        "review_count": 231,
+        "helpful_votes": 69
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r290619254-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.509869",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D4C9A8FA440205DD64E0B3EDF1B06DB3_87",
+      "title": "An adventure on its own!",
+      "text": "You pay a ridiculously cheap entrance fee to the guardian (the staff at the hotel said it was free...) and here you go, up the arch. It was under renovation so it&#39;s a bit rough, you go through sand and over wheelbarrows. The view is incredible, and you have several points of view depending you stand on one side of the arch or the other and there is different heights. The view of the old town was my favorite.",
+      "rating": 4,
+      "date": "2015-07-15",
+      "travel_date": "2015-05",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "D4C9A8FA440205DD64E0B3EDF1B06DB3",
+        "name": "Fanny I",
+        "location": "Nice, France",
+        "review_count": 7,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r289067119-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:11.885315",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F0FC01469597BB977260AB3A4428C996_88",
+      "title": "A private monument of the president.",
+      "text": "its built by the president Jamme and its his private monument about him self. Its just a building and nothing special to se or do there. And the building is not fitting the in the area and to the other buildings in the area. I can&#39;t recommend anyone to make a special visit just for this.",
+      "rating": 2,
+      "date": "2015-07-08",
+      "travel_date": "2014-11",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "F0FC01469597BB977260AB3A4428C996",
+        "name": "Tigram1",
+        "location": "Sweden",
+        "review_count": 411,
+        "helpful_votes": 79
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r286929656-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.094535",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CDFB6D911FB82B3183CA78BF0CD4B749_89",
+      "title": "Mouldy Sandwich",
+      "text": "Give this place a miss \nWe were served a sandwich. The bread was blue & Mouldy, never felt well after that experience",
+      "rating": 1,
+      "date": "2015-04-07",
+      "travel_date": "2015-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CDFB6D911FB82B3183CA78BF0CD4B749",
+        "name": "michelleferguson923",
+        "location": "North Yorkshire, United Kingdom",
+        "review_count": 10,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r264215313-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.249364",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7297F25CE8765F699149A6660FEEED32_90",
+      "title": "serves no purpose",
+      "text": "Recently renovated for the 50th anniversary of independence. It doesn't seem to serve any purpose. The lift was not working and I could not go up the stairs. There is a low priced café/restaurant near it that serves good food and drinks. It only allows government vehicles to pass through.",
+      "rating": 3,
+      "date": "2015-02-28",
+      "travel_date": "2015-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7297F25CE8765F699149A6660FEEED32",
+        "name": "Pritam49",
+        "location": "Unknown",
+        "review_count": 41,
+        "helpful_votes": 10
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r256897557-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.249448",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "12A17E966342604B3B90BC5DD0BDCB09_91",
+      "title": "Arch 22",
+      "text": "A nice place for a short visit if based in Banjul as we were. Wouldn't bother, however, driving a long distance just for this. Freshly renovated for Feb 18th 50th Anniversary of Independence from Great Britain. Pleasant inexpensive cafe at its foot.",
+      "rating": 4,
+      "date": "2015-02-23",
+      "travel_date": "2015-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "12A17E966342604B3B90BC5DD0BDCB09",
+        "name": "Anthony M",
+        "location": "Ulverston, United Kingdom",
+        "review_count": 95,
+        "helpful_votes": 75
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r255950871-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.249499",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F7C315A8CB259A92CF2B57AA728F05E3_92",
+      "title": "Stupid bit of minor megalomania",
+      "text": "A big arch to celebrate another African dictator's reign.  Unlike statues this might not be demolished when he is finally toppled but it is hard to see a purpose for such a pointless building",
+      "rating": 1,
+      "date": "2015-02-17",
+      "travel_date": "2014-08",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F7C315A8CB259A92CF2B57AA728F05E3",
+        "name": "Peter Tompkins",
+        "location": "London, United Kingdom",
+        "review_count": 105,
+        "helpful_votes": 41
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r254788681-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.249547",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "1296D445FBF45A7B59F308688D98B749_93",
+      "title": "A lot of steps for not a lot of view",
+      "text": "Greeted by two lovely ladies and set the task of counting the steps to the top I was quite disappointed by the rather tatty &#39;museum&#39; exhibits on the way up and not really knowing what to expect was quite underwhelmed by the view(s) from the top. Stupidly expecting some sort of award for counting the steps I was then delighted with the cafe/bar next door which had recently changed hands. The arch is really just a piece of ego massage for the president.",
+      "rating": 3,
+      "date": "2015-01-09",
+      "travel_date": "2014-12",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "1296D445FBF45A7B59F308688D98B749",
+        "name": "papasanta",
+        "location": "Peterborough, United Kingdom",
+        "review_count": 59,
+        "helpful_votes": 73
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r248464757-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.249639",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9D667CCAA81BB1F6D182619524B22E54_94",
+      "title": "Nice arch, poor view",
+      "text": "It is a very nice arch in a city that doesn't have a lot to offer. However, the views aren't all that special, as you may expect from the desolation of the Gambian landscape. ",
+      "rating": 3,
+      "date": "2014-12-23",
+      "travel_date": "2014-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9D667CCAA81BB1F6D182619524B22E54",
+        "name": "Richard T",
+        "location": "Oxfordshire, United Kingdom",
+        "review_count": 9,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r245592139-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.485850",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "134D52179C55429F3EED92D272E4A6AB_95",
+      "title": "ARCH 22 IS OKAY",
+      "text": "There is nothing really serious about the arch 22. just that from the top you can have the are view of Banjul and is a sort of symbol for the the Gambia.\n\nThe museum is not that historical as an African, it may makes more meaning to the Amerians, Europeans, Caucasian, Asian etc.\n\nBut in all i rate 5/10",
+      "rating": 3,
+      "date": "2014-10-12",
+      "travel_date": "2013-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "134D52179C55429F3EED92D272E4A6AB",
+        "name": "simsidtours2014",
+        "location": "Lagos, Nigeria",
+        "review_count": 2134,
+        "helpful_votes": 113
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r233952591-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.485931",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C2B41F662E3CE5F6D825E4398D5A78CC_96",
+      "title": "In passing",
+      "text": "We saw it in passing; it was covered in scaffolding. What we did do was go to Albert Market and take the ferry to Barra and cross the Gambia River. It&#39;s a spectacular sight to see the ferry disembark, as well as to ride it. Off we go!",
+      "rating": 3,
+      "date": "2014-09-02",
+      "travel_date": "2014-06",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "C2B41F662E3CE5F6D825E4398D5A78CC",
+        "name": "Loreto",
+        "location": "Haro, Spain",
+        "review_count": 34,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r226234749-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.485989",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "A84719835B1BA99D88B7CC019E5BAAC8_97",
+      "title": "Ok",
+      "text": "Great views from the top, but the 'museum' is woeful and some lighting in the stairs would have been nice ",
+      "rating": 3,
+      "date": "2014-08-01",
+      "travel_date": null,
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "A84719835B1BA99D88B7CC019E5BAAC8",
+        "name": "Labtech666",
+        "location": "Unknown",
+        "review_count": 62,
+        "helpful_votes": 24
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r218868025-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.693009",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FA1DE5F4E9A820B63E42AB2248712EF8_98",
+      "title": "Good views",
+      "text": "Worth the small entrance fee and climbing the stairs for the views from the top floors.  Some art and history displays to look at.  The building is poorly maintained, watch where your stepping and take care on the stairs.  Not one for very young children.",
+      "rating": 3,
+      "date": "2014-05-12",
+      "travel_date": "2014-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FA1DE5F4E9A820B63E42AB2248712EF8",
+        "name": "Adrian J",
+        "location": "Unknown",
+        "review_count": 2,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r205301931-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.693183",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "DFDE0951BAF41533F30DF5289E270896_99",
+      "title": "Новострой, но с музеем",
+      "text": "Строение арки несколько выбивается из общей картинки Банжула - возможно, поэтому она и является его основной достопримечательностью. Внутри - небольшой музей с весьма посредственными экспонатами, зато есть возможность отдохнуть от жары и выпить кофе с видом на пыльный город.",
+      "rating": 3,
+      "date": "2014-05-06",
+      "travel_date": "2013-09",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "DFDE0951BAF41533F30DF5289E270896",
+        "name": "Serjio_Alware",
+        "location": "Tver, Russia",
+        "review_count": 655,
+        "helpful_votes": 361
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r204263160-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.693252",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C4229892D7C11E58F743355048F11F3D_100",
+      "title": "Barely worth the bother",
+      "text": "The grandiose Arch was built to commemorate the coming to power of HE Sheikh Professor Alhaji Dr. Yahya AJJ Jammeh, President of the Republic of The Gambia and Commander-In-Chief of the Gambia Armed Forces. In a country that has so much poverty, this structure seems both unnecessary and ill-advised. Tourists can ascend the Arch in a lift. There is a moderately-interesting museum near the top and you certainly get some good views over the town and surrounding countryside. However, there are better museums (eg Katchikalli) and better roof-top views (eg Bakau Guest House), so I really can&#39;t recommend this.",
+      "rating": 2,
+      "date": "2014-04-23",
+      "travel_date": "2014-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "C4229892D7C11E58F743355048F11F3D",
+        "name": "DougInverness",
+        "location": "Unknown",
+        "review_count": 61,
+        "helpful_votes": 51
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r202453247-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.693371",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F8EEE3CD73978E6D7DFE58D60AA17A8B_101",
+      "title": "Boored me...",
+      "text": "Thinking of Arch de Triump, the view is nice but the stairs and interior is so boring... \n\nIf you are there.. go for the view and only that.. ",
+      "rating": 2,
+      "date": "2014-03-16",
+      "travel_date": "2014-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F8EEE3CD73978E6D7DFE58D60AA17A8B",
+        "name": "Carina H",
+        "location": "Copenhagen, Denmark",
+        "review_count": 123,
+        "helpful_votes": 42
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r197651153-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.867283",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "499533ACFDB6AA5E47D469FC29C75B81_102",
+      "title": "Excellent customer service",
+      "text": "Our roots trip did not happen due to a administrative error, however the CEO Abdul apologized personally and offered for us to go on the next trip for free, however we would be leaving the Gambia on that day. Instead he gave us a free trip of what we wanted to do we chose to go to the crocodile and monkey park with a personal guide and free water thrown in. I would have no hesitation to recommend or use Arch tours again.\n",
+      "rating": 5,
+      "date": "2014-03-11",
+      "travel_date": "2014-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "499533ACFDB6AA5E47D469FC29C75B81",
+        "name": "Amandapsr",
+        "location": "London, United Kingdom",
+        "review_count": 234,
+        "helpful_votes": 83
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r197091998-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.867387",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F7272D07561C695878E93BB9FDF2A046_103",
+      "title": "Interesting",
+      "text": "An interesting landmark.  Unfortunately, marking the President - who himself has some very controversial views on the world.  Dirty, and dusty and not particularly well looked after.",
+      "rating": 3,
+      "date": "2014-03-02",
+      "travel_date": "2014-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F7272D07561C695878E93BB9FDF2A046",
+        "name": "theinspector99",
+        "location": "London, United Kingdom",
+        "review_count": 22,
+        "helpful_votes": 71
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r195865359-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.867436",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "A628D516A66A4D3A97BD587D7A20F1DE_104",
+      "title": "Good view",
+      "text": "the view over banjul was brill, entrance fee was very cheap less than 50p theres a small museum inside which is interesting, and when you come down across the road is billys bar where they sell good cold cheap drinks service with a smile.",
+      "rating": 4,
+      "date": "2014-02-26",
+      "travel_date": "2014-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "A628D516A66A4D3A97BD587D7A20F1DE",
+        "name": "jackthehat34",
+        "location": "Canterbury, United Kingdom",
+        "review_count": 7,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r195515015-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.867498",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "F013774BA19C853CBEFC5A180BA9B11A_105",
+      "title": "nice view",
+      "text": "Grand Arch built for the president the only problem is only the president can drive through it .This causes a huge bottleneck of local traffic because it spans the main road !",
+      "rating": 3,
+      "date": "2014-02-14",
+      "travel_date": "2014-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "F013774BA19C853CBEFC5A180BA9B11A",
+        "name": "fieldarcher2014",
+        "location": "Crewe, United Kingdom",
+        "review_count": 3,
+        "helpful_votes": 3
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r194122712-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.987280",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "04E9D88FBF440AC578AC317F0BA29E14_106",
+      "title": "4 in 1 tour is awesome!",
+      "text": "Thanks again, Amy and Ibrama, for the fantastic excursion you provided us with. And let&#39;s not forget the driver. It&#39;s a wonderful excursion; you see so much in one day, which quickly gives you a good impression of Gambia. The guides take great care of you and are very informative! If we go again next year, I&#39;d love to do the same tour again; it was so much fun!",
+      "rating": 5,
+      "date": "2014-01-29",
+      "travel_date": "2014-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "04E9D88FBF440AC578AC317F0BA29E14",
+        "name": "Anita v",
+        "location": "Unknown",
+        "review_count": 40,
+        "helpful_votes": 7
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r192491272-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:12.987416",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FA2C929589494EF4F18CFEECF1A36DE4_107",
+      "title": "Very Interest",
+      "text": "Quite a lot of stairs to climb but its worth the walk.  The top floor has a little bit of information about Gambia and its history and the view are great",
+      "rating": 4,
+      "date": "2013-12-11",
+      "travel_date": "2013-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FA2C929589494EF4F18CFEECF1A36DE4",
+        "name": "Sandra4David",
+        "location": "London, United Kingdom",
+        "review_count": 108,
+        "helpful_votes": 86
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r187367392-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.232712",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "BD5EE6C0EFAE7E4BAC6E35AF0750C0ED_108",
+      "title": "Highly recommended for your excursions",
+      "text": "All the staff were brilliant, they looked after us all (7 in our party) superbly well. They were informative, we enjoyed their company so much that we asked for the same guides again. ",
+      "rating": 5,
+      "date": "2013-12-08",
+      "travel_date": "2013-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "BD5EE6C0EFAE7E4BAC6E35AF0750C0ED",
+        "name": "Susan L",
+        "location": "Unknown",
+        "review_count": 9,
+        "helpful_votes": 9
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r187104823-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.233024",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "A07E6901AF54C9C58A1BD3A4E9AD8DF9_109",
+      "title": "fantastic set up",
+      "text": "Excellent value, Knowledgeable and friendly guides, reliable and punctual. Had to cancel one trip on the actual morning of the trip due to onset of Banjul Belly, and they gave a full refund with no quibbles. ",
+      "rating": 5,
+      "date": "2013-12-03",
+      "travel_date": "2013-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "A07E6901AF54C9C58A1BD3A4E9AD8DF9",
+        "name": "Gail the Whale",
+        "location": "Wimborne Minster, United Kingdom",
+        "review_count": 165,
+        "helpful_votes": 32
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r186675734-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.233141",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "017C13883E246EC10130DCAA6FB9E422_110",
+      "title": "Łuk Prezydencki",
+      "text": "Warto tam wejść fajne widoki. Sam łuk to żadna atrakcja ale jak już się jest w Banjul naprawdę warto wejść koszt to 50 dalasi",
+      "rating": 3,
+      "date": "2013-11-28",
+      "travel_date": "2013-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "017C13883E246EC10130DCAA6FB9E422",
+        "name": "Aczek",
+        "location": "Poland",
+        "review_count": 80,
+        "helpful_votes": 34
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r186166956-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.233467",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "93B1311192A6D04CD80969308DC3A1A5_111",
+      "title": "the presidential arch",
+      "text": "Nice to see and definitely worth climbing, because from above you can clearly see that Gambia is an island, halfway up the arch there is a small room decorated with historical items ",
+      "rating": 3,
+      "date": "2013-10-24",
+      "travel_date": "2013-10",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "93B1311192A6D04CD80969308DC3A1A5",
+        "name": "Ella en Henk W",
+        "location": "Tilburg, The Netherlands",
+        "review_count": 49,
+        "helpful_votes": 42
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r182260357-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.233789",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "43802ED88E79A3BBCF6BF08962A5C3F3_112",
+      "title": "Ok",
+      "text": "Went as I didn&#39;t want to miss anything , used the elevator on way that was scary in its self , only took 5 minutes to look around ( we didn&#39;t think much of it ) we went out side to take photos wow that was lovely to see the whole city , we walk down when finish it was dirty and un kept , all in all ok for photos that all . ",
+      "rating": 3,
+      "date": "2013-10-08",
+      "travel_date": "2013-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "43802ED88E79A3BBCF6BF08962A5C3F3",
+        "name": "gillandsteve1959",
+        "location": "Unknown",
+        "review_count": 9,
+        "helpful_votes": 15
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r180287865-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.393836",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "79DA1F081206C688A156436209926965_113",
+      "title": "Good and bad makes average",
+      "text": "Looking the Arch from a distance makes it attractive to visit this monument. I don't judge the architecture here, since this is a personal taste. Banjul doesn't have many high buildings, so the Arch is about the only monument to overview the city and the direct neighborhood. Positive is the nice view; negative is the absolutely insufficiently maintained art exposition inside. Better to show nothing, than showing this sad collection. Better to concentrate the art work in the Banjul museum?",
+      "rating": 3,
+      "date": "2013-09-17",
+      "travel_date": "2013-06",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "79DA1F081206C688A156436209926965",
+        "name": "Dirk v",
+        "location": "Unknown",
+        "review_count": 7,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r177579329-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.543509",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "891287E21BE6848BBDDA8EF0C9F6919D_114",
+      "title": "Beautiful view of Banjul from the somewhat dated monument",
+      "text": "Anyone who finds their way to the observation deck with a flashlight will be rewarded with an impressive view of Banjul. Otherwise, you can visit the small museum in the upper part. Be warned before using the elevator – although you can open the door, you&#39;ll only see the open shaft three stories below...",
+      "rating": 3,
+      "date": "2013-07-29",
+      "travel_date": "2013-04",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "891287E21BE6848BBDDA8EF0C9F6919D",
+        "name": "andrew08151",
+        "location": "Mellingen, Germany",
+        "review_count": 500,
+        "helpful_votes": 154
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r169634037-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.543632",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3814652A08F2015EF491D93BE5316AA1_115",
+      "title": "Well worth a visit",
+      "text": "Historical artefacts, costumes, traditional personal items, masks, bad ju ju area, lots of interesting things to see and read about. The viewing tower is good for a view of banjul. Take your Gambian friends, I doubt if they will have been by themselves, I'm sure they will enjoy the visit. Soft drinks can be bought from the cafe/ restaurant.the entry fee is nominal, and is much lower for Gambians. There are clean rest room facilities. Well worth a visit.",
+      "rating": 4,
+      "date": "2013-05-07",
+      "travel_date": "2013-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3814652A08F2015EF491D93BE5316AA1",
+        "name": "Debs_Cain",
+        "location": "Isle of Man, United Kingdom",
+        "review_count": 580,
+        "helpful_votes": 87
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r159989363-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.741832",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CBC3C7A3422D9FC78776BA5D071863D2_116",
+      "title": "Great views",
+      "text": "Cheap to go in and an option of lift or stairs to the top. Once at the top you have great views of Banjul and beyond. There is a small museum at the top which although isn't bursting with items, it does give you a good insight to the history of Gambia. Make sure you take a camera because there is nowhere else in Gambia where you can get views like this.",
+      "rating": 3,
+      "date": "2013-04-24",
+      "travel_date": "2012-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CBC3C7A3422D9FC78776BA5D071863D2",
+        "name": "sticky_toes",
+        "location": "Irlam, United Kingdom",
+        "review_count": 73,
+        "helpful_votes": 25
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r158692619-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.741980",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "A8FCCE421F778DDD64F8DCDADD76D633_117",
+      "title": "worth a visit if your in banjul",
+      "text": "Don't go out of your way especially for this one - but there is a little museum and art gallery. £1 entrance fee and good views from the top",
+      "rating": 3,
+      "date": "2013-04-24",
+      "travel_date": "2013-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "A8FCCE421F778DDD64F8DCDADD76D633",
+        "name": "spud9",
+        "location": "Unknown",
+        "review_count": 13,
+        "helpful_votes": 12
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r158656381-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.742055",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9FD65BCBDED23D56E9E9A777E4E430D2_118",
+      "title": "Strange national structure",
+      "text": "Interesting to see some of the Gambian political history. Good views. Don't make a special journey just for thi, but worth it if you're wandering g round Banjul for the day",
+      "rating": 3,
+      "date": "2013-04-23",
+      "travel_date": "2013-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9FD65BCBDED23D56E9E9A777E4E430D2",
+        "name": "Jozy74",
+        "location": "Unknown",
+        "review_count": 196,
+        "helpful_votes": 67
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r158591363-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.742128",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "A2A47831AD73550B1D217E9515FEEF06_119",
+      "title": "amazing senegal",
+      "text": "alles was top; onthaal, location, eten, excursions vriendelijke mensen, eigenares belgische jonge lieve dame Karolien en haar team; gewoon ernaartoegaan en genieten ;;;;anne en co",
+      "rating": 5,
+      "date": "2013-03-19",
+      "travel_date": "2013-03",
+      "language_detected": "en",
+      "language_original": "fr",
+      "user": {
+        "user_id": "A2A47831AD73550B1D217E9515FEEF06",
+        "name": "annea767",
+        "location": "Saint Nicolas, Belgium",
+        "review_count": 7,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r155105753-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.742200",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E2F5D80781C576E96C57F4B743F890BA_120",
+      "title": "Good view",
+      "text": "Went up arch 22 amazing views from above Banjul and the lovely beaches . We came down and had a lovely drink and a sand which with the locals and Billy's bar ",
+      "rating": 5,
+      "date": "2013-03-10",
+      "travel_date": "2013-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "E2F5D80781C576E96C57F4B743F890BA",
+        "name": "Sarah D",
+        "location": "Cornwall, United Kingdom",
+        "review_count": 21,
+        "helpful_votes": 24
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r154158244-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.919739",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "62E4F5F029E7D84F64C5D58CBBD9C4FF_121",
+      "title": "Life of Banjul from up above....",
+      "text": "We went to The Gambia in October 2012, and Arch 22 was one of the 1st sites we came across. You can park right beside the arch which, offers great convenience. The arch itself is not in great condition, and if we remember right, the entrance fee was 50 dalasi per person. A museum is located half way up the arch, which displays Gambian culture before their independence from Great Britain. Once up on the balcony of the arch, you now have a great view of the city of Banjul. if you have been to the city of Banjul, then you will know that the place is nothing special. But the views overlooking the city are great. Different stories are being told at every angle of your view, so take advantage because you won&#39;t have a better opportunity! At least the president has given the tourists a positive side of Banjul....",
+      "rating": 3,
+      "date": "2013-02-09",
+      "travel_date": "2012-10",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "62E4F5F029E7D84F64C5D58CBBD9C4FF",
+        "name": "DanielD525",
+        "location": "London, United Kingdom",
+        "review_count": 1428,
+        "helpful_votes": 365
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r151758805-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:13.919889",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "64289EA83F58324BBB85579C70D5E80E_122",
+      "title": "Arch 22",
+      "text": "nice view over the city. within the tower you find a neglected exposition of jujus and traditional living. ",
+      "rating": 3,
+      "date": "2013-01-28",
+      "travel_date": "2013-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "64289EA83F58324BBB85579C70D5E80E",
+        "name": "HansHuckebein",
+        "location": "Vienna, Austria",
+        "review_count": 19,
+        "helpful_votes": 23
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r150808254-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.091655",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D975935922304635D3D745C118444F04_123",
+      "title": "Great views",
+      "text": "You can't miss it when you enter Banjul.\nThe view from the top balconies is great. The arch is certainly impressive, although its design is a metter of taste I suppose.\nYou also wonder whether the money spent on this mightn't have had a better purpose...",
+      "rating": 3,
+      "date": "2013-01-24",
+      "travel_date": "2013-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D975935922304635D3D745C118444F04",
+        "name": "Benjamin",
+        "location": "The Hague, The Netherlands",
+        "review_count": 20,
+        "helpful_votes": 24
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r150557925-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.091734",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "5D574330FE61E7E40E7196AAAB312045_124",
+      "title": "history",
+      "text": "Normally you don&#39;t get there quickly, but it is fun to do with local guide Yaya and then combine it with a visit to the market",
+      "rating": 3,
+      "date": "2013-01-12",
+      "travel_date": "2013-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "5D574330FE61E7E40E7196AAAB312045",
+        "name": "Femie P",
+        "location": "Budapest, Hungary",
+        "review_count": 18,
+        "helpful_votes": 14
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r149516487-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.091782",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "EED4F56380301F2AC42032BF75DA12A4_125",
+      "title": "Totally run down",
+      "text": "This building is a disgrace. The cafe no longer exists, the elevators are broken, the museum is filthy, and there&#39;s no light in the narrow spiral staircases. But there&#39;s still an entrance fee.",
+      "rating": 1,
+      "date": "2012-12-25",
+      "travel_date": "2012-12",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "EED4F56380301F2AC42032BF75DA12A4",
+        "name": "DDHerrmann",
+        "location": "Dresden, Germany",
+        "review_count": 482,
+        "helpful_votes": 105
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r148025462-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.200112",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E6F83560A5FAC91C55E65382C8DFBC4C_126",
+      "title": "A monument to the President",
+      "text": "An impressive structure that you can walk up to experience a view across the whole of Banjul. There's not much apart from the view ,but it does put things into perspective.... a multi million pound self commissioned tribute to a president that shows his people living in squalor.",
+      "rating": 3,
+      "date": "2012-12-19",
+      "travel_date": "2012-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "E6F83560A5FAC91C55E65382C8DFBC4C",
+        "name": "RelaxOrDie",
+        "location": "Church Gresley, United Kingdom",
+        "review_count": 55,
+        "helpful_votes": 31
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r147745758-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384153",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "139F53DC5C70FAA557488F29F7098A49_127",
+      "title": "Great Views",
+      "text": "Well worth a visit and very close to the Laico Atlantic, would recommend climbing to the top as you get great views of Banjul, for those who don't want to climb the stairs there are lifts available, there is also an interesting museum. Entry is only £2 well worth it",
+      "rating": 5,
+      "date": "2012-12-12",
+      "travel_date": "2012-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "139F53DC5C70FAA557488F29F7098A49",
+        "name": "Celia W",
+        "location": "Oxford, United Kingdom",
+        "review_count": 50,
+        "helpful_votes": 17
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r147337566-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384216",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9DD40AE8784FE7F45962D79DEF633C26_128",
+      "title": "up and away",
+      "text": "Great view of Banjul - you can take a lift or stairs to the top then take photos of the city and beach",
+      "rating": 4,
+      "date": "2012-12-09",
+      "travel_date": "2012-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9DD40AE8784FE7F45962D79DEF633C26",
+        "name": "JohnS1408",
+        "location": "Barnet, United Kingdom",
+        "review_count": 11,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r147061758-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384245",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9D00EF59299453DE61AF826CE8F7CFF7_129",
+      "title": "Worth a look",
+      "text": "As great views of the city and has a very qwerkie museum at the top. It's a short walk from the Atlantic but take a guide in yellow/mustard tops with you and you won't get hassled",
+      "rating": 4,
+      "date": "2012-11-27",
+      "travel_date": "2012-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9D00EF59299453DE61AF826CE8F7CFF7",
+        "name": "Martin C",
+        "location": "Weston super Mare, United Kingdom",
+        "review_count": 4,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r146335100-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384287",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "29A484BCFDC159FEA3C173212F536C77_130",
+      "title": "worth a visit",
+      "text": "A little run down, but the views are fantastic.\nThe museum / displays at the top are a bit of a waste of time, but it is a good experience.\nA fantastic photo opportunity",
+      "rating": 3,
+      "date": "2012-11-26",
+      "travel_date": "2012-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "29A484BCFDC159FEA3C173212F536C77",
+        "name": "hellsbells57",
+        "location": "Unknown",
+        "review_count": 76,
+        "helpful_votes": 35
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r146234767-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384326",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "4817A3800278D79CA79223EE9D477D4A_131",
+      "title": "worth a stop off and a climb to the viewing platform for the view",
+      "text": "We climbed the stairs of the Banjul arch,there is a lift, and found there is a museum type of display to look around and viewing platforms where you get a lovely view all around Banjul of the mosques,the sea and creeks over the rooftops and you see many of the modern buildings that the President has had built,standing alongsides the locals humble buildings-this says it all !!! Theres is a cafe near the base of the arch in a green area offering pleasant refreshments where you can sit and watch everyday life going on around you.",
+      "rating": 3,
+      "date": "2012-11-11",
+      "travel_date": "2012-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "4817A3800278D79CA79223EE9D477D4A",
+        "name": "Karl",
+        "location": "Unknown",
+        "review_count": 139,
+        "helpful_votes": 87
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r145169644-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384423",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "1A044B87997D3ED6AB957AA9634FCE57_132",
+      "title": "A useful landmark at the edge of the town.",
+      "text": "One of the tourist \"sights\" of Banjul but not very striking. From the top, there is a good view of the town just about making the effort of climbing worthwhile.",
+      "rating": 3,
+      "date": "2012-11-11",
+      "travel_date": "2012-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "1A044B87997D3ED6AB957AA9634FCE57",
+        "name": "David C",
+        "location": "Keele, United Kingdom",
+        "review_count": 147,
+        "helpful_votes": 61
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r145167373-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384465",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E5F1D9D77FB04C7E924E308C17492C8D_133",
+      "title": "Congratulations mr. President",
+      "text": "The lokation for all the celebracions and ceremonials. After  the revolution build when they became a \"democracy\"",
+      "rating": 3,
+      "date": "2012-10-27",
+      "travel_date": "2012-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "E5F1D9D77FB04C7E924E308C17492C8D",
+        "name": "NielsHuisman",
+        "location": "Blaricum, The Netherlands",
+        "review_count": 6,
+        "helpful_votes": 3
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r143821528-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384509",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "DA15A1B34AEC1AC1914F7ED8D620B2DF_134",
+      "title": "Great Views of the capital.",
+      "text": "Short walk from the Atlantic Hotel, great views and interesting small exhibition.#You dont need a guide for this one.\nNice place in the gardens at the bottom of the arch for lunch or a drink.",
+      "rating": 5,
+      "date": "2012-10-22",
+      "travel_date": "2012-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "DA15A1B34AEC1AC1914F7ED8D620B2DF",
+        "name": "Dpb101",
+        "location": "Unknown",
+        "review_count": 20,
+        "helpful_votes": 8
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r143435565-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384551",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "B008D4E652CEB8F182188BA65D9D6013_135",
+      "title": "Impressive",
+      "text": "It was really nice to see the Arch in the night, as it was after the presidential election so the Arch was lit up through the night, making really a nice place to walk by. ",
+      "rating": 4,
+      "date": "2012-10-20",
+      "travel_date": "2012-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "B008D4E652CEB8F182188BA65D9D6013",
+        "name": "DeaRich",
+        "location": "Porthcawl, United Kingdom",
+        "review_count": 48,
+        "helpful_votes": 18
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r143260752-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.384587",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "0C13CA7364942340C59041AB90D7690E_136",
+      "title": "Old decrepit monument",
+      "text": "Not much too see - we didn't climb to the top though, as I am certain it would not have changed much. Overall just an arch falling in ruins, and mainly there to celebrate the peoples dubious love for their president!",
+      "rating": 2,
+      "date": "2012-05-31",
+      "travel_date": "2012-05",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "0C13CA7364942340C59041AB90D7690E",
+        "name": "Pernille I",
+        "location": "Copenhagen, Denmark",
+        "review_count": 7908,
+        "helpful_votes": 547
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r131023852-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.541719",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CF269CF89CF37A7EC966BE669360112B_137",
+      "title": "Just a great view",
+      "text": "This is one of the tallest buildings of Banjul. And it offers a fabulous view over the entire area. A must if you are nearby!",
+      "rating": 4,
+      "date": "2012-05-14",
+      "travel_date": "2012-05",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CF269CF89CF37A7EC966BE669360112B",
+        "name": "Nick M",
+        "location": "Werchter, Belgium",
+        "review_count": 30,
+        "helpful_votes": 34
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r129910743-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.541759",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "86E12995655ECB34BE4C372E8079C20A_138",
+      "title": "just an arch!?!",
+      "text": "nil special other than, only the (current) president allowed to go through it,has small viewing upper level,view of ?",
+      "rating": 3,
+      "date": "2012-05-14",
+      "travel_date": "2012-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "86E12995655ECB34BE4C372E8079C20A",
+        "name": "Kaz N",
+        "location": "Unknown",
+        "review_count": 26,
+        "helpful_votes": 24
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r129906165-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.541792",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7018182E2357668CF8765F38705F61D1_139",
+      "title": "Not much to offer",
+      "text": "The structure is okay it adds something to the city but they very tittle to offer",
+      "rating": 3,
+      "date": "2012-05-04",
+      "travel_date": "2011-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7018182E2357668CF8765F38705F61D1",
+        "name": "Karamo J",
+        "location": "Unknown",
+        "review_count": 2,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r129365458-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.541819",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "389899C232EF119CC5B18F45235C71A4_140",
+      "title": "Ni siquiera lo he visitado.",
+      "text": "No iba a Gambia a ver \"monumentos\", aunque, ahora que lo pienso, lo VÏ!!! y pasé por debajo!!. Una birria.",
+      "rating": 1,
+      "date": "2012-04-29",
+      "travel_date": "2011-08",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "389899C232EF119CC5B18F45235C71A4",
+        "name": "Serezada",
+        "location": "Unknown",
+        "review_count": 18,
+        "helpful_votes": 40
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r129052232-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.541853",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6247A910DBF8F0C17A5BA1E3EBAF81B4_141",
+      "title": "Neglected building but great view",
+      "text": "We took the short walk from our hotel and paid the fixed entrance price of 50 Dalasi. Inside the building is sadly neglected and poorly maintained but for the view alone it is certainly worth a visit. The lift may not function very well as we were encouraged to take the stairs and told by the attendant that &#39;excercise is good in the morning&#39;! The spiral stairs are manageable and should not cause any concern for those of any age or ability. The exhibits are interesting and fill you in on the ancient tradition of &#39;Juju&#39; culture in Gambia. Juju refers to the use of objects and other things to perform a form of witchcraft and a range of such objects are available to look at and learn about. These are a little dusty and poorly maintained but provide a fascinating insight into Juju culture in the Gambia. The view from the very top of the structure is best and worth continuing to the top for.",
+      "rating": 4,
+      "date": "2012-04-20",
+      "travel_date": "2012-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6247A910DBF8F0C17A5BA1E3EBAF81B4",
+        "name": "Davec82",
+        "location": "Unknown",
+        "review_count": 11,
+        "helpful_votes": 11
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r128246299-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.541986",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CE7B500D6DD07D5A5935B20132D58FFF_142",
+      "title": "Cheap way to see Banjul from above",
+      "text": "The actual building is now rather tatty, and there are a few interesting exhibits in the arch, but it's worth the small fee to see the views.",
+      "rating": 4,
+      "date": "2012-03-28",
+      "travel_date": "2011-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CE7B500D6DD07D5A5935B20132D58FFF",
+        "name": "Karnak55",
+        "location": "Devon, United Kingdom",
+        "review_count": 91,
+        "helpful_votes": 64
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r126827920-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.815663",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "9453BC5658846768F3EF3A2AF8296F8C_143",
+      "title": "very pretty",
+      "text": "the view is good and nicely light up at night till 10",
+      "rating": 4,
+      "date": "2012-03-14",
+      "travel_date": "2012-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "9453BC5658846768F3EF3A2AF8296F8C",
+        "name": "haples",
+        "location": "Unknown",
+        "review_count": 52,
+        "helpful_votes": 50
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r126082489-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.815798",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "485DBF4359D465BD48E4F50BE6FD0CD1_144",
+      "title": "Best view of Banjul available",
+      "text": "Go with a Government guide and pay just D 50 - walking up is easy although one part was dark where a light bulb had not been replaced.",
+      "rating": 3,
+      "date": "2012-03-05",
+      "travel_date": "2012-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "485DBF4359D465BD48E4F50BE6FD0CD1",
+        "name": "Sally H",
+        "location": "Mirfield, United Kingdom",
+        "review_count": 94,
+        "helpful_votes": 54
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r125643804-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.815915",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "B796757FB64BBBA7A2B6F386507311C8_145",
+      "title": "nothing to visit",
+      "text": "I have been in Gambia for 3 months and I must tell you and please excuse me Gambian people, but your country has nothing interesting to offer the visitor... there is no trace of the past I am talking about the well-awaited monuments, no museum, in short nothing... African culture is almost non-existent it is boring to death... the positive point of all the same, is the beaches are very preserved unlike in Senegal where they are salty and damaged by anarchic constructions. Nature is also well preserved... but apart from nothing to see circulating... too bad!!",
+      "rating": 3,
+      "date": "2012-02-06",
+      "travel_date": "2012-02",
+      "language_detected": "en",
+      "language_original": "fr",
+      "user": {
+        "user_id": "B796757FB64BBBA7A2B6F386507311C8",
+        "name": "arnotropik",
+        "location": "Marseille, France",
+        "review_count": 6,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r124190903-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:14.816157",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7039992478061A64E44C98A21A193ADA_146",
+      "title": "One of the few places to visit in Banjul city",
+      "text": "We were told at the entrance that the price for taking the stairs or the lift is the same. Infact, the person at the front encouraged us to take the 'safer' stairs.\n\nThe place has a wondeful history of some of the traditions of Gambian tribes called juju. Also you get a good view of Banjul, not that there is much to see.",
+      "rating": 3,
+      "date": "2012-02-03",
+      "travel_date": "2012-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7039992478061A64E44C98A21A193ADA",
+        "name": "gudkak",
+        "location": "London, United Kingdom",
+        "review_count": 19,
+        "helpful_votes": 7
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r124055935-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.085143",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "874896B1EFCA8B4D899556A5F83A0372_147",
+      "title": "like a big christmas tree!",
+      "text": "looked amazing at night all lit up in the gambian flag!",
+      "rating": 4,
+      "date": "2012-01-21",
+      "travel_date": "2012-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "874896B1EFCA8B4D899556A5F83A0372",
+        "name": "readybrek1978",
+        "location": "Unknown",
+        "review_count": 5,
+        "helpful_votes": 2
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r123429303-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.085226",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "D6348E51776402F445785AC49A9A9905_148",
+      "title": "It's ok",
+      "text": "We visited Banjul and arch 22 was the best part of it the city itself is grimy dusty and other than the fish Market didn't find it that interesting good views from arch 22 it's worth a look but that's all.",
+      "rating": 3,
+      "date": "2012-01-08",
+      "travel_date": null,
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "D6348E51776402F445785AC49A9A9905",
+        "name": "ianmac11",
+        "location": "Stockport, United Kingdom",
+        "review_count": 1317,
+        "helpful_votes": 46
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r122752907-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.085348",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FCE62D5B8613115A6B4C10218BE6B5C1_149",
+      "title": "A bit shaky!",
+      "text": "Banjul itself is a dirty, dusty place with little to see. The Arch is fairly ugly but the view from the top does give a good vantage point over the city. Apparently it's not too stable so it may not be standing in the future!",
+      "rating": 2,
+      "date": "2012-01-06",
+      "travel_date": "2011-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FCE62D5B8613115A6B4C10218BE6B5C1",
+        "name": "Cathmce",
+        "location": "Unknown",
+        "review_count": 44,
+        "helpful_votes": 46
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r122648278-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.085485",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "98F07B3975EEA56FFFDF4AABD80BEE71_150",
+      "title": "amazing views",
+      "text": "Fabulous views of the island of gambia, very interesting history lesson too.",
+      "rating": 4,
+      "date": "2011-12-07",
+      "travel_date": "2011-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "98F07B3975EEA56FFFDF4AABD80BEE71",
+        "name": "hedgehoglady",
+        "location": "Unknown",
+        "review_count": 51,
+        "helpful_votes": 32
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r121488969-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.085545",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "323B2EFE8C3BEE99154A62AB3A1859DD_151",
+      "title": "All",
+      "text": "It&#39;s really the only monument in the city. It&#39;s much more worthwhile to visit Albert Market and then head inland to experience rural Gambia. I don&#39;t think it&#39;s worth the entrance fee.",
+      "rating": 3,
+      "date": "2011-09-29",
+      "travel_date": "2011-09",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "323B2EFE8C3BEE99154A62AB3A1859DD",
+        "name": "KinoZapata",
+        "location": "Madrid, Spain",
+        "review_count": 53,
+        "helpful_votes": 39
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r118749024-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.085762",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FD1E93B1A140D6F1087CE18555D6B03E_152",
+      "title": "Curious",
+      "text": "One of Banjul&#39;s few attractions. We didn&#39;t go up there because we didn&#39;t find it very attractive. It&#39;s strange that you can only cross it because of military or police vehicles, but cars leaving or entering the city have to negotiate it, and one of the two sides isn&#39;t even paved, so you go from asphalt to the Paris-Dakar. Amazing.",
+      "rating": 3,
+      "date": "2011-09-29",
+      "travel_date": "2011-09",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "FD1E93B1A140D6F1087CE18555D6B03E",
+        "name": "Jonay1",
+        "location": "San Pedro de Alcantara, Spain",
+        "review_count": 238,
+        "helpful_votes": 65
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r118725322-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.256249",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3E89BFF1C13538CD4C701DE689BEA2EB_153",
+      "title": "A good viewpoint for Banjul",
+      "text": "The Arch 22 is a good point to get an overview of the capital. The Arch itself and the exhibition on the top level are not really spectacular. You can - and I recomment to do so - take a lift up to the top level.\nIt was built in 1996 to mark the military coup on 22 July 1994.\nThe arch stands on the Banjul-Serrekunda highway. A statue of the unknown soldier can be seen near the base of the arch.",
+      "rating": 3,
+      "date": "2010-12-20",
+      "travel_date": null,
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3E89BFF1C13538CD4C701DE689BEA2EB",
+        "name": "saeckingen",
+        "location": "Unknown",
+        "review_count": 45,
+        "helpful_votes": 24
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r90297667-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.409645",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "BACBB1F3240AB2123C6D197FD6F4093E_154",
+      "title": "Arch22",
+      "text": "It is not quite what it seems..It was built to celebrate the military takeover of the current president... there are two lifts, but only one works and you have to pay a fee. No one says you can walk up the arch for free until you get back down. Up top it was disappointing.. the view was OK for long distance camera shots....but the top floor was a poorly equipped museum and and a small tacky shop. The first floor was supposed to be a resturant at some time in the past, but was now closed.",
+      "rating": 2,
+      "date": "2008-06-22",
+      "travel_date": null,
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "BACBB1F3240AB2123C6D197FD6F4093E",
+        "name": "Pedros143",
+        "location": "Perth and Kinross, United Kingdom",
+        "review_count": 421,
+        "helpful_votes": 202
+      },
+      "place_info": {
+        "name": "Arch 22",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.460303,
+          "lng": -16.582499
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d600536-r17133864-Arch_22-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.409856",
+        "original_data": true
+      }
+    }
+  ]
+}

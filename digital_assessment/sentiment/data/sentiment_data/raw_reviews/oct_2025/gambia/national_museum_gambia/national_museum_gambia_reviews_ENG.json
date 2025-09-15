@@ -1,0 +1,829 @@
+{
+  "collection_metadata": {
+    "source": "tripadvisor",
+    "stakeholder": "national_museum_gambia",
+    "collection_date": "2025-09-15",
+    "total_reviews": 26,
+    "language_distribution": {
+      "en": 17,
+      "nl": 9,
+      "fr": 0,
+      "de": 0,
+      "es": 0,
+      "other": 0
+    },
+    "translation_applied": true,
+    "date_range": {
+      "earliest": "2017-01-24",
+      "latest": "2025-02-14"
+    }
+  },
+  "reviews": [
+    {
+      "review_id": "B4B64E499F433742BC24A7900C98870F_0",
+      "title": "''Πολύ καλό''",
+      "text": "Το εθνικό μουσείο που μπορεί να δει κανείς και να διαβάσει για την ιστορία της Γκάμπια.Αξίζει να το επισκεφθείτε,έχει ενδιαφέρον.",
+      "rating": 4,
+      "date": "2025-02-14",
+      "travel_date": "2025-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "B4B64E499F433742BC24A7900C98870F",
+        "name": "VIVIIATRO",
+        "location": "Larissa, Greece",
+        "review_count": 893,
+        "helpful_votes": 132
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r993900036-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.755223",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "DA183141D3C002FCE8D37D5F61669045_1",
+      "title": "This Lovely Museum Left Me Wanting Much More of Gambia History and Culture",
+      "text": "This well-worn museum carries many gems of the history, archeology, and music of The Gambia. The artifacts cover from the Stone Age to the present with photographs, pottery, and displays. I really enjoyed seeing the musical instruments of the various groups. These precious, valuable historical items are not well-protected and exposed to air and people touching them,  The items merit a financial investment to upgrade how the items are conserved.\nVery interesting museum with sculpture park in front with 5 sculptures and a mural.\nRestroom is in another building, not wheel chair accessible.",
+      "rating": 5,
+      "date": "2025-02-05",
+      "travel_date": "2025-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "DA183141D3C002FCE8D37D5F61669045",
+        "name": "Toni T",
+        "location": "Nashville, Tennessee",
+        "review_count": 13898,
+        "helpful_votes": 151
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r992347505-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.755335",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "C7FB25E0B3B901C392A7545F750C8505_2",
+      "title": "This is the story Gambia likes to tell about itself",
+      "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the Louvre, Uffizi of the Hermitage, but it shows on its own way a story of national struggle, pride and hope. In a way, walking around here learned me more then a guided tour in the Grand Gallery. Ask your tour guide or hotel if they could drop you off here and spend a moment of your time to look around a d have a chat with the people working here, they love to tell you more about the history of the Gambia. Don't forget to leave a tip, as they will use it for the maintenance of the museum.",
+      "rating": 5,
+      "date": "2024-08-13",
+      "travel_date": "2023-09",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "C7FB25E0B3B901C392A7545F750C8505",
+        "name": "Nelis",
+        "location": "The Netherlands",
+        "review_count": 170,
+        "helpful_votes": 32
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r964725969-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.755452",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "2114F65B8988D93BB16F9F48615840A5_3",
+      "title": "Interesting Artifacts",
+      "text": "Located in Banjul is a small two story museum loaded with exhibits that date from the stone age to the early 20th century. The museum is dated and many of the displays are exposed to open windows and dirty. You are warned not to touch anything and if you want to take a photo there is an extra $2 US charge. Some of the exhibits are interesting and are not seen in other museums we visited in Africa. I found the costumes particularly interesting. At a leisurely pace expect to spend about 30 minutes in the museum. There is access to a toilet just outside the entrance.",
+      "rating": 3,
+      "date": "2023-04-30",
+      "travel_date": "2023-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "2114F65B8988D93BB16F9F48615840A5",
+        "name": "BobWE",
+        "location": "Manhattan Beach, California",
+        "review_count": 737,
+        "helpful_votes": 353
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r888370273-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.755552",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "AE71668F2E54F8BFA3574E8B91057C05_4",
+      "title": "Fine sager",
+      "text": "Museet indeholder faktisk mange spændende objekter, hvis man kigger godt efter. Landets historie, kunsthåndværk og arbejdsredskaber m.m.",
+      "rating": 4,
+      "date": "2020-02-29",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "AE71668F2E54F8BFA3574E8B91057C05",
+        "name": "Ove Søndergård",
+        "location": "Noerre Snede, Denmark",
+        "review_count": 20,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r748442304-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.960871",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FA01F3AA3ACBC861520B4A3260528129_5",
+      "title": "worth a look",
+      "text": "Its not very large but crammed with interesting exhibits ,from the stone age to present day .\nIts 100 Dalasie to get in and an other hundered if you take photos\nOh and dont touch anything we got told off (but in a nice way)",
+      "rating": 5,
+      "date": "2020-02-27",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FA01F3AA3ACBC861520B4A3260528129",
+        "name": "severnup",
+        "location": "Upton upon Severn, United Kingdom",
+        "review_count": 269,
+        "helpful_votes": 63
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r747998808-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.960985",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "8601823639C70C8C5D7C9A8F74F523E2_6",
+      "title": "Interesting",
+      "text": "A bit worn down but still very interesting. You get the story from Stone Age toEnglish Colony. You should go with a guide if possible.",
+      "rating": 3,
+      "date": "2020-02-11",
+      "travel_date": "2020-01",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "8601823639C70C8C5D7C9A8F74F523E2",
+        "name": "Steen Rørdam H",
+        "location": "Christiansfeld, Denmark",
+        "review_count": 15,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r744530769-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.961047",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "69FB94D7396FBA34A37D83F191AE3D53_7",
+      "title": "Sweet and small museum",
+      "text": "The museum is small, so it&#39;s manageable. Photos and costumes aren&#39;t preserved, which is a shame. Photography is available for a fee. There are interesting stories about the sculptures in the garden, among other things. ",
+      "rating": 4,
+      "date": "2020-01-07",
+      "travel_date": "2020-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "69FB94D7396FBA34A37D83F191AE3D53",
+        "name": "SandorHennie",
+        "location": "Amsterdam, The Netherlands",
+        "review_count": 41,
+        "helpful_votes": 28
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r737585167-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:02.961122",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "30D679611B565A291F7E92945B1DEBC8_8",
+      "title": "Impressive in its simplicity",
+      "text": "No flashy building on Independence Drive in Banjul, no slick presentations with all sorts of modern, possibly digital, gadgets, but very basic—that&#39;s how the National Museum&#39;s accommodation and layout can be characterized. Perhaps that&#39;s precisely why the images and objects on display, at least for me, have a more powerful and impressive impact than a visit to a modern and sophisticated Western museum. Here, with respect for the history of the country and its people, and with modest resources, a place has been created that uniquely illuminates the harsh aspects of life in an African country (then and now). The attentive visitor may need a moment to absorb it, but they will undoubtedly be touched. The initiative for such a museum deserves high praise. Definitely worth a visit!",
+      "rating": 4,
+      "date": "2020-01-04",
+      "travel_date": "2019-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "30D679611B565A291F7E92945B1DEBC8",
+        "name": "GerSchnackers",
+        "location": "Beek, The Netherlands",
+        "review_count": 2679,
+        "helpful_votes": 394
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r736811608-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.115367",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "816F8D4257078C4A90A75E81C094DC5B_9",
+      "title": "Ei hassumpi",
+      "text": "Valokuvia, esineitä - ihan mielenkiintoista.  Vaikkakin nämä orja-ajat saavat voimaan pahoin ja häpeämään 😥",
+      "rating": 3,
+      "date": "2019-09-04",
+      "travel_date": "2019-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "816F8D4257078C4A90A75E81C094DC5B",
+        "name": "Excursion775321",
+        "location": "Unknown",
+        "review_count": 6,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r706461360-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.378900",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3BEA73A4502CC48C51F8AE7BC83B7AA6_10",
+      "title": "Interesting background to the history of Banjul",
+      "text": "Artifacts, photos and reconstructions covering the history of Banjul and The Gambia. Suitable for a visit if around and hour. Small museum but covers interesting aspects of history. ",
+      "rating": 3,
+      "date": "2019-07-21",
+      "travel_date": "2019-07",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3BEA73A4502CC48C51F8AE7BC83B7AA6",
+        "name": "Tim B",
+        "location": "Neath, United Kingdom",
+        "review_count": 170,
+        "helpful_votes": 28
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r691392648-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.379026",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "61F5313588F0FF4E1D4782E9F6A14100_11",
+      "title": "One of the smallest national museums I have ever been to.",
+      "text": "This is one of the smallest national museums I have ever been to, but it was not a let-down. Crammed full of objects and displays it attempts to convey the prehistory, pre-colonial, colonial and post-colonial story of this country that looks like a finger into Senegal. The museum does demonstrate the divisiveness of colonialism. If in a somewhat haphazard and no-strings manner. ",
+      "rating": 3,
+      "date": "2019-05-07",
+      "travel_date": "2019-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "61F5313588F0FF4E1D4782E9F6A14100",
+        "name": "RafikiLondon",
+        "location": "Hong Kong, China",
+        "review_count": 539,
+        "helpful_votes": 540
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r672024887-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.379198",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "196D87D0D784FFF73259584E505677C5_12",
+      "title": "Gambian National Museum",
+      "text": "Our tour guides were very knowledgeable regarding the artifacts in the museum. Both Hadden and Omar were extremely nice, patients and great people to speak with. Thank you for the time you took to explain the different areas in the museum and for explaining what happened during the different dispensation in your beautiful country. ",
+      "rating": 4,
+      "date": "2019-05-05",
+      "travel_date": "2019-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "196D87D0D784FFF73259584E505677C5",
+        "name": "Sonia Poleon",
+        "location": "Unknown",
+        "review_count": 25,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r671536880-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.379311",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "A46FE8A89521DE7F9759F1C5AD1AB0DC_13",
+      "title": "Must see",
+      "text": "The short and outdated exhibition, but essential to understand the origins of The Gambia state. Interesting artefacts but everything is a bit dusted and crammed. Still worth visiting. ",
+      "rating": 3,
+      "date": "2019-03-19",
+      "travel_date": "2019-03",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "A46FE8A89521DE7F9759F1C5AD1AB0DC",
+        "name": "zimag",
+        "location": "London, United Kingdom",
+        "review_count": 132,
+        "helpful_votes": 85
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r659716655-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.604674",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "57E194CB5F7441410DB4DA30A75897DA_14",
+      "title": "A commendable initiative",
+      "text": "With limited resources, it&#39;s still an interesting overview from prehistoric times to the present day. The African who accompanied us had tears in his eyes when he discovered his own roots.",
+      "rating": 4,
+      "date": "2019-03-11",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "57E194CB5F7441410DB4DA30A75897DA",
+        "name": "lutje",
+        "location": "Koksijde, Belgium",
+        "review_count": 35,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r657859485-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.604785",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CF6F16EC72A9E16C2579F28683404330_15",
+      "title": "Intersting exhibits on the (colonial) history of Gambia",
+      "text": "Three floors of exibits, sketching the (colonial) history of The Gambia. We were here as part of a group tour, but free to wander on our own. Most exhibits have an explanation an English nearby.\nStairs ony, no lift.",
+      "rating": 4,
+      "date": "2019-02-17",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "CF6F16EC72A9E16C2579F28683404330",
+        "name": "TinekevB",
+        "location": "Amstelveen, The Netherlands",
+        "review_count": 341,
+        "helpful_votes": 157
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r652938771-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.866638",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "002E0F909CC58043FD9DFE68FD05EADF_16",
+      "title": "Väldigt litet. ",
+      "text": "Var inne i 1 minut. Inte mycket för oss att se på. Lite historiska föremål desto mer skriven information. \nEn silversmed på innergården som var mer sevärd för oss. ",
+      "rating": 2,
+      "date": "2019-02-16",
+      "travel_date": "2019-02",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "002E0F909CC58043FD9DFE68FD05EADF",
+        "name": "Tobb E",
+        "location": "Orebro, Sweden",
+        "review_count": 522,
+        "helpful_votes": 40
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r652796502-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.866694",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "FD7291211F974AD29C6E5BD9067AE58D_17",
+      "title": "Lots of reading ",
+      "text": "It’s a small museum but with a ton of material to read. It was interesting for me to see some of the items that originated from my country and had been adopted by the Gambians. It’s worth going to and having a look about. I think it’s advisable to make this one of your fist stops whilst in Gambia so that one can understand the country better. ",
+      "rating": 4,
+      "date": "2019-01-25",
+      "travel_date": "2018-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "FD7291211F974AD29C6E5BD9067AE58D",
+        "name": "Elizabeth",
+        "location": "London, United Kingdom",
+        "review_count": 342,
+        "helpful_votes": 108
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r648177728-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.867105",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3DE7F1506441E51C006B13AA33D8E2EB_18",
+      "title": "A summary of Gambian culture and history",
+      "text": "When in Banjul, take a look into this small but fairly well organized museum over Gambian history and a glimpse of the local culture. ",
+      "rating": 4,
+      "date": "2019-01-15",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "3DE7F1506441E51C006B13AA33D8E2EB",
+        "name": "jockesvensson",
+        "location": "Sweden",
+        "review_count": 129,
+        "helpful_votes": 57
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r646273876-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.873896",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7793364E950B10A63BD95E486DC7B359_19",
+      "title": "Well curated little museum",
+      "text": "The  exhibits in this small museum have surprising scope and depth with lots of black and white photos, maps, costumes, instruments and prehistoric stone tools - but no masks.  Some to the themes include weaving done by men, ceramics by women, Gesseh wedding rituals, shell mound burials, tribal languages and  the slave trade.  On the negative side, the display cases appeared very dusty and some of the exhibits were very dated - with explanations that appeared to be prepared using a type writer!  Recommend.",
+      "rating": 4,
+      "date": "2018-05-22",
+      "travel_date": "2018-04",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7793364E950B10A63BD95E486DC7B359",
+        "name": "MRichardson2014",
+        "location": "Lake of Bays, Canada",
+        "review_count": 1032,
+        "helpful_votes": 389
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r582013887-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.876228",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "E71BA6C1F4402B93A6ECB9FC5297E13F_20",
+      "title": "Interesting but dusty museum",
+      "text": "This historical museum showcases a wide range of history, from prehistory to the recent presidential election. It covers a wide range of topics in a nutshell. The slave trade is also briefly covered. James Island in the Gambia River was the departure point for slaves bound for America. It was surprising to discover that Islam has been present since the year 1000. There are numerous mosques in the country.",
+      "rating": 3,
+      "date": "2018-03-14",
+      "travel_date": "2018-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "E71BA6C1F4402B93A6ECB9FC5297E13F",
+        "name": "PetraMaters",
+        "location": "Veendam, The Netherlands",
+        "review_count": 60,
+        "helpful_votes": 16
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r566564460-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:03.876414",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "7E9F52121DAD5AB66CDB1442A0A886EE_21",
+      "title": "National Museum",
+      "text": "Main Museum set back from a garden .there is a small entrance fee.poor lighting no aircon /unbearably hot. Some items /pictures are worth a look.but generally disappointing. The Museum artifacts are not kept in good condition",
+      "rating": 2,
+      "date": "2017-10-11",
+      "travel_date": "2017-10",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "7E9F52121DAD5AB66CDB1442A0A886EE",
+        "name": "Michael D",
+        "location": "London, United Kingdom",
+        "review_count": 406,
+        "helpful_votes": 226
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r531939518-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.148745",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "95A6E103789708A3598B045357E8D3AE_22",
+      "title": "Gambia in a house",
+      "text": "The National museum which is located in Banjul offers visitors to revisit the ancient past of The Gambia. The museum chronicles all aspect of Gambian life and how people used to live 1000s of years ago. My journey to this historical museum was very interesting as I had the chance to know more about the real Gambian culture and way of life.",
+      "rating": 5,
+      "date": "2017-08-21",
+      "travel_date": "2016-09",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "95A6E103789708A3598B045357E8D3AE",
+        "name": "yusuphafatajo",
+        "location": "Bakau, Gambia",
+        "review_count": 52,
+        "helpful_votes": 41
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r515870879-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.148873",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "6367D2703D755C5656096C2C69F40957_23",
+      "title": "Worth a visit",
+      "text": "A lovely museum, especially worth a visit if you&#39;re in Banjul. You can get an explanation from a guide. But if you take a taxi, the driver can also give you excellent explanations. Entire school classes also come to this museum. ",
+      "rating": 4,
+      "date": "2017-03-20",
+      "travel_date": "2017-03",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "6367D2703D755C5656096C2C69F40957",
+        "name": "Corrie P",
+        "location": "Den Burg, The Netherlands",
+        "review_count": 7,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r468835201-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.353390",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "2E370FAB1A0BBD93217E12F6CFD956AA_24",
+      "title": "Introduction to Gambia's history",
+      "text": "The collection is rather small but reading the info text will give you a brief understanding about the country's past. The only employee was friendly and helpful. There are some postcards, books and other merchandise for sale.",
+      "rating": 3,
+      "date": "2017-03-18",
+      "travel_date": "2016-12",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "2E370FAB1A0BBD93217E12F6CFD956AA",
+        "name": "hapapo",
+        "location": "Tampere, Finland",
+        "review_count": 155,
+        "helpful_votes": 23
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r468313489-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.479952",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CC173786ED2B9C70243E17CB66DDBA6D_25",
+      "title": "Worth a visit",
+      "text": "Located in an old colonial building it is home to historical documents and displays concerning the Gambia. There is a 50D (1 Euro) admission fee. Visited in the morning but I returned later that day for a nice stay in the garden, as Banjul has no parks.",
+      "rating": 4,
+      "date": "2017-01-24",
+      "travel_date": "2017-01",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "CC173786ED2B9C70243E17CB66DDBA6D",
+        "name": "Peter M",
+        "location": "Bucharest, Romania",
+        "review_count": 136,
+        "helpful_votes": 36
+      },
+      "place_info": {
+        "name": "National Museum",
+        "category": "Cultural heritage site",
+        "location": "Banjul, Banjul Division",
+        "coordinates": {
+          "lat": 13.455701,
+          "lng": -16.576115
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g293795-d12078429-r454587903-National_Museum-Banjul_Banjul_Division.html",
+        "scraped_at": "2025-09-15T17:59:04.480023",
+        "original_data": true
+      }
+    }
+  ]
+}

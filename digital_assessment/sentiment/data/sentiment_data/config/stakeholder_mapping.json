@@ -1,0 +1,212 @@
+{
+  "stakeholder_mapping": {
+    "wassu_stone_circles": {
+      "normalized_name": "wassu_stone_circles",
+      "display_name": "Wassu Stone Circles & Museum",
+      "sector": "Cultural heritage sites/museums",
+      "region": "Central River Region",
+      "country": "gambia",
+      "aliases": ["wassu stone circles", "wassu museum", "stone circles of senegambia", "wassu stone circles museum"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["stone circles", "unesco", "heritage", "museum", "wassu", "senegambia"]
+    },
+    "brikama_woodcarvers_market": {
+      "normalized_name": "brikama_woodcarvers_market",
+      "display_name": "Brikama Woodcarvers Market",
+      "sector": "Crafts and artisan products",
+      "region": "West Coast Region",
+      "country": "gambia",
+      "aliases": ["brikama craft market", "brikama woodcarvers", "woodcarvers market", "craft market brikama"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["woodcarving", "craft", "market", "brikama", "artisan", "wood"]
+    },
+    "kunta_kinteh_island": {
+      "normalized_name": "kunta_kinteh_island",
+      "display_name": "Kunta Kinteh Island & Museum",
+      "sector": "Cultural heritage sites/museums",
+      "region": "North Bank Region",
+      "country": "gambia",
+      "aliases": ["kunta kinteh island", "james island", "albreda museum", "slavery museum", "kunta kinteh"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["kunta kinteh", "james island", "slavery", "heritage", "museum", "roots"]
+    },
+    "banjul_craft_market": {
+      "normalized_name": "banjul_craft_market",
+      "display_name": "Banjul Craft Market (Albert Market Craft Section)",
+      "sector": "Crafts and artisan products",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["albert market", "banjul craft market", "albert market craft", "craft section albert market"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["albert market", "craft", "banjul", "market", "artisan"]
+    },
+    "ebunjan_theatre": {
+      "normalized_name": "ebunjan_theatre",
+      "display_name": "Ebunjan Theatre (Performing Arts Centre)",
+      "sector": "Performing arts venues",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["ebunjan theatre", "performing arts centre", "ebunjan", "theatre gambia"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["theatre", "performing arts", "ebunjan", "drama", "performance"]
+    },
+    "ebunjan_theatre_company": {
+      "normalized_name": "ebunjan_theatre_company",
+      "display_name": "Ebunjan Theatre Company",
+      "sector": "Performing arts companies",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["ebunjan theatre company", "theatre company", "ebunjan company"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["theatre company", "ebunjan", "drama company", "performance group"]
+    },
+    "abuko_nature_reserve": {
+      "normalized_name": "abuko_nature_reserve",
+      "display_name": "Abuko Nature Reserve",
+      "sector": "Nature reserves and parks",
+      "region": "West Coast Region",
+      "country": "gambia",
+      "aliases": ["abuko nature reserve", "abuko reserve", "abuko", "nature reserve"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["abuko", "nature reserve", "wildlife", "birds", "forest"]
+    },
+    "arch_22_museum": {
+      "normalized_name": "arch_22_museum",
+      "display_name": "Arch 22 Museum",
+      "sector": "Cultural heritage sites/museums",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["arch 22", "arch 22 museum", "arch22", "arch museum"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["arch 22", "museum", "monument", "history", "banjul"]
+    },
+    "senegambia_craft_market": {
+      "normalized_name": "senegambia_craft_market",
+      "display_name": "Senegambia Craft Market",
+      "sector": "Crafts and artisan products",
+      "region": "West Coast Region",
+      "country": "gambia",
+      "aliases": ["senegambia craft market", "senegambia market", "craft market senegambia"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["senegambia", "craft market", "artisan", "souvenirs", "handicrafts"]
+    },
+    "tanji_village_museum": {
+      "normalized_name": "tanji_village_museum",
+      "display_name": "Tanji Village Museum",
+      "sector": "Cultural heritage sites/museums",
+      "region": "West Coast Region",
+      "country": "gambia",
+      "aliases": ["tanji village museum", "tanji museum", "village museum tanji"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["tanji", "village museum", "culture", "traditional", "fishing village"]
+    },
+    "fort_bullen_barra_museum": {
+      "normalized_name": "fort_bullen_barra_museum",
+      "display_name": "Fort Bullen & Barra Museum",
+      "sector": "Cultural heritage sites/museums",
+      "region": "North Bank Region",
+      "country": "gambia",
+      "aliases": ["fort bullen", "barra museum", "fort bullen barra", "barra fort"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["fort bullen", "barra", "museum", "fort", "history", "colonial"]
+    },
+    "kachikally_crocodile_pool": {
+      "normalized_name": "kachikally_crocodile_pool",
+      "display_name": "Kachikally Crocodile Pool & Museum",
+      "sector": "Cultural heritage sites/museums",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["kachikally", "crocodile pool", "kachikally pool", "crocodile museum"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["kachikally", "crocodile", "pool", "sacred", "tradition", "bakau"]
+    },
+    "bakau_craft_market": {
+      "normalized_name": "bakau_craft_market",
+      "display_name": "Bakau Craft Market",
+      "sector": "Crafts and artisan products",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["bakau craft market", "bakau market", "craft market bakau"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["bakau", "craft market", "artisan", "handicrafts", "souvenirs"]
+    },
+    "national_museum_gambia": {
+      "normalized_name": "national_museum_gambia",
+      "display_name": "National Museum of The Gambia",
+      "sector": "Cultural heritage sites/museums",
+      "region": "Greater Banjul Area",
+      "country": "gambia",
+      "aliases": ["national museum", "gambia national museum", "national museum gambia"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["national museum", "gambia", "history", "culture", "banjul"]
+    },
+    "african_adventure_tours": {
+      "normalized_name": "african_adventure_tours",
+      "display_name": "African Adventure Tours",
+      "sector": "Tour Operator",
+      "region": "West Coast Region",
+      "country": "gambia",
+      "aliases": ["african adventure tours", "adventure tours gambia", "aat", "african adventure tours gambia"],
+      "review_sources": ["tripadvisor", "google"],
+      "expected_keywords": ["african adventure tours", "adventure", "tour", "gambia", "day tour"]
+    }
+  },
+  "country_mapping": {
+    "gambia": {
+      "full_name": "The Gambia",
+      "regions": ["Greater Banjul Area", "West Coast Region", "North Bank Region", "Central River Region", "Upper River Region", "Lower River Region"],
+      "languages": ["english", "mandinka", "wolof", "fula", "serer"],
+      "primary_language": "english"
+    },
+    "senegal": {
+      "full_name": "Senegal",
+      "regions": ["Dakar", "Thiès", "Saint-Louis", "Ziguinchor", "Diourbel", "Tambacounda", "Kaolack", "Fatick", "Kolda", "Matam", "Kaffrine", "Kédougou", "Sédhiou"],
+      "languages": ["french", "wolof", "serer", "pulaar", "mandinka"],
+      "primary_language": "french"
+    },
+    "cape_verde": {
+      "full_name": "Cape Verde",
+      "regions": ["Santiago", "São Vicente", "Santo Antão", "Fogo", "Maio", "Boavista", "Sal", "Brava", "São Nicolau"],
+      "languages": ["portuguese", "crioulo"],
+      "primary_language": "portuguese"
+    },
+    "ghana": {
+      "full_name": "Ghana",
+      "regions": ["Greater Accra", "Ashanti", "Western", "Central", "Volta", "Eastern", "Northern", "Upper East", "Upper West", "Brong-Ahafo"],
+      "languages": ["english", "akan", "ewe", "ga", "dagbani"],
+      "primary_language": "english"
+    },
+    "benin": {
+      "full_name": "Benin",
+      "regions": ["Alibori", "Atacora", "Atlantique", "Borgou", "Collines", "Couffo", "Donga", "Littoral", "Mono", "Ouémé", "Plateau", "Zou"],
+      "languages": ["french", "fon", "yoruba", "bariba"],
+      "primary_language": "french"
+    },
+    "nigeria": {
+      "full_name": "Nigeria",
+      "regions": ["Lagos", "Kano", "Rivers", "Kaduna", "Ogun", "Oyo", "Edo", "Delta", "Cross River", "Akwa Ibom"],
+      "languages": ["english", "hausa", "yoruba", "igbo", "fulani"],
+      "primary_language": "english"
+    }
+  },
+  "matching_rules": {
+    "name_normalization": {
+      "remove_chars": ["&", ",", ".", "-", "'", "\"", "(", ")", "[", "]"],
+      "replacements": {
+        "and": "",
+        "the": "",
+        "ltd": "",
+        "limited": "",
+        "company": "",
+        "tours": "",
+        "travel": "",
+        "tourism": ""
+      },
+      "case_sensitive": false
+    },
+    "fuzzy_matching": {
+      "threshold": 0.8,
+      "max_distance": 2
+    }
+  }
+}

@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { google, sheets_v4 } from 'googleapis';
+import { setupSentimentRoutes } from './sentiment-api';
 
 type Participant = { name: string; sector: string; region?: string };
 
@@ -367,7 +368,7 @@ export function createApp() {
       };
       
       // Extract custom opportunity advice from Google Sheet columns AK-AP
-      const customOpportunities = [];
+      const customOpportunities: any[] = [];
       
       // Column mapping: AK=Social Media (36), AL=Website (37), AM=Visual Content (38), AN=Online Discoverability (39), AO=Digital Sales/Booking (40), AP=Platform Integration (41)
       const opportunityColumns = [
@@ -441,7 +442,7 @@ export function createApp() {
       const avgCombined = complete ? sectorParticipants.reduce((sum, p) => sum + p.combinedScore, 0) / complete : 0;
       
       // Maturity distribution
-      const maturityDistribution = { Expert: 0, Advanced: 0, Intermediate: 0, Emerging: 0, Absent: 0 };
+      const maturityDistribution: Record<string, number> = { Expert: 0, Advanced: 0, Intermediate: 0, Emerging: 0, Absent: 0 };
       sectorParticipants.forEach(p => {
         const maturity = normalizeMaturity(p.maturityLevel);
         maturityDistribution[maturity] = (maturityDistribution[maturity] || 0) + 1;
@@ -658,6 +659,9 @@ export function createApp() {
       res.status(500).json({ error: e.message || String(e) });
     }
   });
+
+  // Setup sentiment analysis routes
+  setupSentimentRoutes(app);
 
   return app;
 }

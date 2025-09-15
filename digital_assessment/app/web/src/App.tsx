@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorLeaders, fetchSectorCategoryComparison, type Participant, type Dashboard, type Plan } from './api';
+import SentimentAnalysis from './SentimentAnalysis';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -18,7 +19,7 @@ import { Pie, Bar, Radar } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler);
 
-type Tab = 'overview' | 'sector' | 'participant' | 'tour' | 'methodology';
+type Tab = 'overview' | 'sector' | 'participant' | 'tour' | 'sentiment' | 'methodology';
 
 
 function App() {
@@ -179,6 +180,7 @@ function App() {
     if (page === 'sector') setActive('sector');
     else if (page === 'creative-industries') { setActive('participant'); if (parts[1]) setSelectedParticipant(parts.slice(1).join('/')); }
     else if (page === 'tour-operator' || page === 'tour-operators') setActive('tour');
+    else if (page === 'sentiment') setActive('sentiment');
     else if (page === 'methodology') setActive('methodology');
     else setActive('overview');
   }
@@ -275,13 +277,14 @@ function App() {
           </div>
         </div>
         <div className="nav">
-          {(['overview', 'sector', 'participant', 'tour', 'methodology'] as Tab[]).map(t => (
+          {(['overview', 'sector', 'participant', 'tour', 'sentiment', 'methodology'] as Tab[]).map(t => (
             <button
               key={t}
               onClick={() => {
                 if (t === 'participant') navigate('/creative-industries');
                 else if (t === 'sector') navigate('/sector');
                 else if (t === 'tour') navigate('/tour-operator');
+                else if (t === 'sentiment') navigate('/sentiment');
                 else if (t === 'methodology') navigate('/methodology');
                 else navigate('/overview');
               }}
@@ -291,6 +294,7 @@ function App() {
               {t === 'sector' && 'Sector'}
               {t === 'participant' && 'Creative Industries'}
               {t === 'tour' && 'Tour Operators'}
+              {t === 'sentiment' && 'Sentiment Analysis'}
               {t === 'methodology' && 'Methodology'}
             </button>
           ))}
@@ -1420,6 +1424,10 @@ function App() {
             )
           )}
         </div>
+      )}
+
+      {active === 'sentiment' && (
+        <SentimentAnalysis />
       )}
 
       {active === 'methodology' && (

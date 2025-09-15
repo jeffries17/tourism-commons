@@ -1,0 +1,364 @@
+{
+  "collection_metadata": {
+    "source": "tripadvisor",
+    "stakeholder": "fort_bullen_barra_museum",
+    "collection_date": "2025-09-15",
+    "total_reviews": 11,
+    "language_distribution": {
+      "en": 3,
+      "nl": 5,
+      "fr": 0,
+      "de": 1,
+      "es": 2,
+      "other": 0
+    },
+    "translation_applied": true,
+    "date_range": {
+      "earliest": "2018-05-28",
+      "latest": "2023-05-02"
+    }
+  },
+  "reviews": [
+    {
+      "review_id": "5CADE012271B7AD4623FB20F09F52BE1_0",
+      "title": "Day tour Barra",
+      "text": "I visited the fort and parts of Barra (Black Cow Art Center, Catholic Mission, beach lagoon) on a day trip with Mustapha from Tour-Gambia. Even the ferry ride from Banjul was an experience. A glimpse into the &quot;real&quot; Africa. Everything was well organized. The fort is more worth seeing than it seems at first glance. A local guide explains the details. Highly recommended +++",
+      "rating": 5,
+      "date": "2023-05-02",
+      "travel_date": "2023-04",
+      "language_detected": "en",
+      "language_original": "de",
+      "user": {
+        "user_id": "5CADE012271B7AD4623FB20F09F52BE1",
+        "name": "Thomas S",
+        "location": "Unknown",
+        "review_count": 3,
+        "helpful_votes": 0
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r888653252-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.624096",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3706582CCB454ACC7B1CF85AC202E3FB_1",
+      "title": "Incredible tour and history",
+      "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around. However, was amazingly welcomed by Ebrahim when I arrived. He gave an outstanding tour of the museum and fort. It was amazing to learn about the history and significance of the structure itself as well as the history, language and culture of the Gambian north bank. a spectacular experience - this should be so much more well known and on everyone&#39;s Gambia bucket list. Easily accessible and hugely enlightening. If you are going, give Ebrahim a ring (you can find his number on the door of the fort if he is around) to make sure he gives you the full experience.",
+      "rating": 5,
+      "date": "2021-03-02",
+      "travel_date": "2021-02",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "3706582CCB454ACC7B1CF85AC202E3FB",
+        "name": "Jem",
+        "location": "Bath, United Kingdom",
+        "review_count": 9,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r783865283-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:15.861222",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "ADDE69CFA4C6A68A981AD700BE33E10F_2",
+      "title": "controllava la foce",
+      "text": "Fort Bulle is currently built in English in the first year of the Autumn to control the foce of the Gambia fiume so that it is established that abolishes the tratta degli schiavi and prevents it from continuing. Interesting exhibition.",
+      "rating": 4,
+      "date": "2021-01-08",
+      "travel_date": "2020-02",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "ADDE69CFA4C6A68A981AD700BE33E10F",
+        "name": "PPCI-BG",
+        "location": "Bergamo, Italy",
+        "review_count": 129606,
+        "helpful_votes": 22043
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r780794901-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:16.067621",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "44A464417D367FBB08B15CE640423BFA_3",
+      "title": "Nice outing!",
+      "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable curator who works there. There&#39;s some interesting history here, and the museum also displays some cultural artifacts from the nearby areas in the north bank. The views from the fortress are nice too. I am based in Fajara, and it was easy to catch a couple of bush taxis, get the ferry and the walk to the fort from the ferry terminal in Barra. The entrance fee is 100 dalasi.",
+      "rating": 4,
+      "date": "2019-10-20",
+      "travel_date": "2019-10",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "44A464417D367FBB08B15CE640423BFA",
+        "name": "AYH",
+        "location": "Unknown",
+        "review_count": 6,
+        "helpful_votes": 4
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r719915860-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:16.253390",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "1D33CE502ACFBEACE5A4B74D138143C0_4",
+      "title": "Interesting to know, easy to reach",
+      "text": "This historical very interesting fort is easy to reach for Individual Tourist and can be combines with a stroll Through Barra and along the Coast and several other places on the north shore. It is not very big but has an excellent Museum. The Museum guide Was particularly helpful and explained the history of the place in Detail. I Highly recommend this place for a half-day or day trip from Banjul.",
+      "rating": 4,
+      "date": "2019-09-03",
+      "travel_date": "2019-09",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "1D33CE502ACFBEACE5A4B74D138143C0",
+        "name": "Christian G",
+        "location": "Unknown",
+        "review_count": 23,
+        "helpful_votes": 5
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r706238581-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:16.477471",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "3BEA73A4502CC48C51F8AE7BC83B7AA6_5",
+      "title": "An introduction to The Gambia and the slave trade ",
+      "text": "A guided tour of the remains here is a good introduction to the positive role that Great Britain played in trying to end the slave trade. There are artifacts from the past when the fort was to help protect the entrance to the river Gambia and prevent boats collecting or taking slaves. Worth a short visit to the site and the museum but there is not much shelter on a hot day. The guide was informative and worth having. ",
+      "rating": 3,
+      "date": "2019-07-21",
+      "travel_date": "2019-07",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "3BEA73A4502CC48C51F8AE7BC83B7AA6",
+        "name": "Tim B",
+        "location": "Neath, United Kingdom",
+        "review_count": 170,
+        "helpful_votes": 28
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r691396455-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:16.477749",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "EB6AB6BDAAEC4B276F279717648495FD_6",
+      "title": "A FORT TO FIGHT THE PLAGUE OF SLAVERY",
+      "text": "After the United Kingdom abolished slavery in 1807, it took active steps to end it. Fort Bullen was part of that plan, built to counteract the slavery practices of other nations. The guide was excellent, visiting the entire complex. There is a very good museum on site. The cool breeze was welcome. The fort is part of the Kunte Kinteh and related sites that comprise a World Heritage Site.",
+      "rating": 5,
+      "date": "2019-04-07",
+      "travel_date": "2019-04",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "EB6AB6BDAAEC4B276F279717648495FD",
+        "name": "Terry M",
+        "location": "Hamilton, Canada",
+        "review_count": 4937,
+        "helpful_votes": 726
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r664631265-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:16.758701",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "CAAD9F1736BD5086E9F1AF75CD6C8B9F_7",
+      "title": "A truly Illuminating experience",
+      "text": "The Fort is both a historical monument itself and a working museum. Halima, the excellent tour guide, provided us with a fascinating insight into how the fort operated; its role in the abolition of slavery and the wider historical context. I left with a much greater understanding of the significance of the river Gambia, the specific role of the UK, and the human cost. Just up the beach from Fort Bullen, a local educator is putting together a black cultural archive. The day we spent in Barra was a really interesting part of the trip.",
+      "rating": 5,
+      "date": "2019-01-16",
+      "travel_date": "2018-12",
+      "language_detected": "en",
+      "language_original": "nl",
+      "user": {
+        "user_id": "CAAD9F1736BD5086E9F1AF75CD6C8B9F",
+        "name": "jamescharlton123",
+        "location": "Unknown",
+        "review_count": 1,
+        "helpful_votes": 1
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r646365956-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:16.949920",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "5890CBAE0882C6BDAE05B6D8983A7F4C_8",
+      "title": "Fort fra kolonitiden",
+      "text": "Fort bullen er et spændende sted der fører en tilbage til tiden med slavehandel. Fortet var med til at stoppe skibe der var på vej efter slaver og dermed og et en vigtig del af slaveriets ophør. Et besøg værd.\n",
+      "rating": 3,
+      "date": "2018-12-21",
+      "travel_date": "2018-12",
+      "language_detected": "en",
+      "language_original": "es",
+      "user": {
+        "user_id": "5890CBAE0882C6BDAE05B6D8983A7F4C",
+        "name": "Lars Haley",
+        "location": "Tenerife, Spain",
+        "review_count": 235,
+        "helpful_votes": 58
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r640820631-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:17.156883",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "1E5298C90D3ED0C4E07D2D2B771EED7F_9",
+      "title": "Great visit",
+      "text": "Get a guide to take you over on the ferry from Banjul and then walk 10 mins. A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusiastic curator who showed us around. Great views of the Gambia river mouth over to Banjul. On the way back look at the timber boat builders on the bank pieceing together huge planks of mahogany to make fishing boats. \nA lovely half day trip and the ferry alone is worth a visit.",
+      "rating": 5,
+      "date": "2018-11-20",
+      "travel_date": "2018-11",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "1E5298C90D3ED0C4E07D2D2B771EED7F",
+        "name": "keith186223",
+        "location": "Edinburgh, United Kingdom",
+        "review_count": 20,
+        "helpful_votes": 6
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r634664632-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:17.428868",
+        "original_data": true
+      }
+    },
+    {
+      "review_id": "56BDEBDEBBB541245C6E6110E160F6D2_10",
+      "title": "A surprisingly good museum",
+      "text": "The fort is easy to find, has a convenient parking and nice scenic views. It's fairly small, but it has a surprisingly good exposition and even better guides who gave us a very informative tour about the role of this site in the history of Gambia. Also, it's just nice to stand on the wall and enjoy fresh breeze, so even if you're not into history, you might still like it.",
+      "rating": 5,
+      "date": "2018-05-28",
+      "travel_date": "2018-05",
+      "language_detected": "en",
+      "language_original": "en",
+      "user": {
+        "user_id": "56BDEBDEBBB541245C6E6110E160F6D2",
+        "name": "heckfy",
+        "location": "Unknown",
+        "review_count": 1213,
+        "helpful_votes": 982
+      },
+      "place_info": {
+        "name": "Fort Bullen",
+        "category": "Cultural heritage site",
+        "location": "Barra, North Bank Division",
+        "coordinates": {
+          "lat": null,
+          "lng": null
+        }
+      },
+      "metadata": {
+        "source_url": "https://www.tripadvisor.com/ShowUserReviews-g3861892-d14135962-r583489343-Fort_Bullen-Barra_North_Bank_Division.html",
+        "scraped_at": "2025-09-15T17:59:17.429736",
+        "original_data": true
+      }
+    }
+  ]
+}

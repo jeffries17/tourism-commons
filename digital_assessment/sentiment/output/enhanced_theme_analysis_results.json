@@ -1,0 +1,150 @@
+{
+  "stakeholder_name": "Kunta Kinteh Island",
+  "total_reviews": 24,
+  "average_rating": 4.2,
+  "overall_sentiment": 0.588,
+  "positive_rate": 81.5,
+  "language_distribution": {
+    "en": 24
+  },
+  "year_distribution": {},
+  "theme_analysis": {
+    "historical_significance": {
+      "average_sentiment": 0.7777777777777777,
+      "mention_count": 3,
+      "quotes": [
+        "however, hearing the history definitely makes it an important and worthwhile visit",
+        "a beautiful place with a terribly sad history",
+        "a fascinating day trip around the island learning about the slave trade and past history"
+      ],
+      "sentiment_distribution": {
+        "positive": 3,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "guide_quality": {
+      "average_sentiment": 0.5972222222222222,
+      "mention_count": 6,
+      "quotes": [
+        "he also always has cold drinks (water and soft drinks) for you, which was very helpful considering the temperatures",
+        "he was very knowledgeable and answered all of my questions",
+        "our guide abdul was so insightful and knowledgeable",
+        "the trip was excellent, but what made it stand out from the trips that we booked through our hotel was armstrong tours, their lovely drivers and our guide for the day; abdoulie",
+        "a super fun day trip with our local guide willie (whatsapp +220 780 7203) that included an informative visit to kunta kinteh island and then the slavery museum"
+      ],
+      "sentiment_distribution": {
+        "positive": 4,
+        "neutral": 2,
+        "negative": 0
+      }
+    },
+    "cultural_value": {
+      "average_sentiment": 0.7666666666666667,
+      "mention_count": 9,
+      "quotes": [
+        "we visited this with our local driver and guide, muhammed camara (also known as big mo)",
+        "during this excursion, i heard the true story from the tour guide and a local historian",
+        "with a local tour guard",
+        "i was the only tourist there and, although it was dilapidated, it felt very authentic",
+        "i would recommend a guide / driver as there are a few steps to the journey of getting there, especially from the serrekunda area"
+      ],
+      "sentiment_distribution": {
+        "positive": 9,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "ferry_service": {
+      "average_sentiment": 0.18888888888888888,
+      "mention_count": 3,
+      "quotes": [
+        "took a taxi from there for a 30 minute ride to a beautiful fishing village, and from there took a nice boat ride to kunta kinteh island, which is a very tiny island",
+        "the ferry is inconsistent and isn&#39;t in the best of shape",
+        "however, a word of warning, the journey to get there is long (took us 10 hours there and back through there was a problem with the ferry so might be 8 on a good day)",
+        "i expect we were overcharged and while it&#39;s a good place to visit, and the ferry and pirogue were also good experiences, i don&#39;t think it was worth it in terms of the cost and time traveling"
+      ],
+      "sentiment_distribution": {
+        "positive": 2,
+        "neutral": 0,
+        "negative": 1
+      }
+    },
+    "infrastructure_state": {
+      "average_sentiment": -0.75,
+      "mention_count": 2,
+      "quotes": [
+        "as another review said - i do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+        "the government really ought to put some money into the more popular visitors sites, the slavery museum and its exhibits were of poor quality and kunta kinteh island could do with a complete makeover before it suffers from further decay"
+      ],
+      "sentiment_distribution": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 2
+      }
+    },
+    "accessibility_comfort": {
+      "average_sentiment": 1.0,
+      "mention_count": 1,
+      "quotes": [
+        "big mo is highly recommended if you&#39;re looking for a reliable, english-speaking guide who&#39;s easy to work with and arranges everything perfectly for you"
+      ],
+      "sentiment_distribution": {
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "value_pricing": {
+      "average_sentiment": 1.0,
+      "mention_count": 2,
+      "quotes": [
+        "the trip was cheaper, the group smaller (we didn&#39;t lose an hour picking up from various other hotels) and the transport was in a mix of pick-up trucks and jeeps, as well as the ferry to the north and the small boat to the island",
+        "the journey from kololi to kunta kinteh is a long one, but well worth it to learn more about the appalling trade in human lives that was carried out",
+        "i expect we were overcharged and while it&#39;s a good place to visit, and the ferry and pirogue were also good experiences, i don&#39;t think it was worth it in terms of the cost and time traveling"
+      ],
+      "sentiment_distribution": {
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "safety_security": {
+      "average_sentiment": 1.0,
+      "mention_count": 1,
+      "quotes": [
+        "after this, i can safely say that what we did was wrong, but we are not the main culprits"
+      ],
+      "sentiment_distribution": {
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0
+      }
+    }
+  },
+  "critical_areas": [
+    {
+      "theme": "Infrastructure State",
+      "sentiment_score": -0.75,
+      "mention_count": 2,
+      "quotes": [
+        "as another review said - i do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+        "the government really ought to put some money into the more popular visitors sites, the slavery museum and its exhibits were of poor quality and kunta kinteh island could do with a complete makeover before it suffers from further decay"
+      ],
+      "priority": "high"
+    }
+  ],
+  "improvement_quotes": {
+    "general_improvements": [
+      "As another review said - I do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+      "The government really ought to put some money into the more popular visitors sites, the Slavery museum and its exhibits were of poor quality and Kunta Kinteh Island could do with a complete makeover before it suffers from further decay",
+      "Then a pirogue boat to the island where a guide (with not great English) will show you around for about 30/40 minutes"
+    ]
+  },
+  "management_response": {
+    "response_rate": 0.0,
+    "total_responses": 0,
+    "total_reviews": 24,
+    "gap_opportunity": 24
+  }
+}
