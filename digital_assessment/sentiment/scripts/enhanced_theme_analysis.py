@@ -262,7 +262,7 @@ class EnhancedThemeAnalyzer:
         # Year distribution
         years = []
         for review in reviews:
-            date = review.get('publishedDate', '')
+            date = review.get('date', '')
             if date:
                 year = date.split('-')[0] if '-' in date else date[:4]
                 years.append(year)
@@ -287,7 +287,7 @@ def main():
     analyzer = EnhancedThemeAnalyzer()
     
     # Load sample data
-    with open('../data/raw_reviews/oct_2025/gambia/kunta_kinteh_island/kunta_kinteh_island_reviews_ENG.json', 'r') as f:
+    with open('../data/sentiment_data/raw_reviews/oct_2025/gambia/abuko_nature_reserve/abuko_nature_reserve_reviews_ENG.json', 'r') as f:
         data = json.load(f)
     
     reviews = data.get('reviews', [])

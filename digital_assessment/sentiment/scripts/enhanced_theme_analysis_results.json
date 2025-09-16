@@ -1,0 +1,219 @@
+{
+  "stakeholder_name": "Kunta Kinteh Island",
+  "total_reviews": 185,
+  "average_rating": 3.2,
+  "overall_sentiment": 0.348,
+  "positive_rate": 71.3,
+  "language_distribution": {
+    "en": 185
+  },
+  "year_distribution": {
+    "2025": 5,
+    "2024": 3,
+    "2023": 3,
+    "2022": 3,
+    "2020": 5,
+    "2019": 15,
+    "2018": 13,
+    "2017": 17,
+    "2016": 23,
+    "2015": 31,
+    "2014": 26,
+    "2013": 19,
+    "2012": 18,
+    "2011": 1,
+    "2010": 1,
+    "2008": 1,
+    "2007": 1
+  },
+  "theme_analysis": {
+    "historical_significance": {
+      "average_sentiment": 1.0,
+      "mention_count": 1,
+      "quotes": [
+        "was so peaceful and amazing all at the same time worth a visit, for a tour and culture and traditions and seeing the baboo's"
+      ],
+      "sentiment_distribution": {
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "guide_quality": {
+      "average_sentiment": 0.6248792270531401,
+      "mention_count": 23,
+      "quotes": [
+        "we had a guide that was very helpful and friendly and at a good price",
+        "staff were not pushy at all and were friendly",
+        "the monkeys aren&#39;t very friendly",
+        "however, there are free-roaming monkeys at this location, which are also more friendly here",
+        "our guide was excellent and we would not have seen half the birds and wildlife without him"
+      ],
+      "sentiment_distribution": {
+        "positive": 23,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "cultural_value": {
+      "average_sentiment": 0.9238095238095239,
+      "mention_count": 35,
+      "quotes": [
+        "africa at its finest, the &quot;national zoo of gambia,&quot; a few hyenas and baboons\u2014you shouldn&#39;t expect anything more, but this is a unique experience",
+        "our wise local guide pointed out three types of cattle, from s\u00e9n\u00e9gal, mali, and the gambia",
+        "a beautiful and well-maintained forest where you can spot birds with a local guide",
+        "especially outside the enclosures, there&#39;s impressive birdlife and\u2014to our surprise\u2014even crocodiles and bushbucks",
+        "there&#39;s a (small) fee, and you have the option of hiring a local guide at the entrance"
+      ],
+      "sentiment_distribution": {
+        "positive": 35,
+        "neutral": 0,
+        "negative": 0
+      }
+    },
+    "ferry_service": {
+      "average_sentiment": 0.6,
+      "mention_count": 5,
+      "quotes": [
+        "what follows is in essence a very nice walk following a well worn path through shady and peaceful woodland, a few birds along the way but nothing you won&#39;t see around your hotel, an army of ants crossing the path, some epic spider&#39;s webs, but not much else",
+        "i only gave two stars because the forest itself is quite nice to walk around and i came with low expectations but i had the opportunity of taking a day trip from one of the beach resorts earlier in my holiday and i'm really glad i didn't",
+        "hotel needs a little tlc , but look pass that and u would have a wonderful holiday , staff were so friendly and we had a laugh with lot of them , and went out with one of the staff for the day , good ok , pool kept nice and clean by ( chicken legs ha ha ) he was a great laugh, pa for fishing trip (great day out ) and well pa in side bar he crazy and so much fun ,ok to go to town the boy do wait out side hotel but you can just say no thank you , we didn't and they carry yr shopping and tell u about the town ( all they ask is a english pound , that's cheap to learn a lot",
+        "ask for a try before you buy  agree a price and get them to walk with you for 10 mins  and let them show you the birds you'll soon know what you've got  you can go it alone as it is difficult to get lost just follow the path but the good guide will show you so much more than you'll see going it alone and are well worth the 400d fee for their services",
+        "the trip was cancelled so i followed advise from tripadviser and had the most wonderful time using a local professional guide"
+      ],
+      "sentiment_distribution": {
+        "positive": 4,
+        "neutral": 0,
+        "negative": 1
+      }
+    },
+    "infrastructure_state": {
+      "average_sentiment": -0.125,
+      "mention_count": 4,
+      "quotes": [
+        "it&#39;s a shame to see the hyenas in their cage in poor condition",
+        "never seen animals is such appalling conditions, no clean water, hyenas that were so mange ridden it must of been awful for them in the heat",
+        "the hyenas weren&#39;t in good condition either",
+        "this park like all the other parks we visited has been seriously neglected despite staff who sit about all day doing nothing"
+      ],
+      "sentiment_distribution": {
+        "positive": 2,
+        "neutral": 0,
+        "negative": 2
+      }
+    },
+    "accessibility_comfort": {
+      "average_sentiment": -0.4333333333333333,
+      "mention_count": 20,
+      "quotes": [
+        "our guide was nice enough but basically it&#39;s a long walk down a path through bushes",
+        "then more walking until finally you get to the world&#39;s most depressing zoo - where they&#39;ll tell you some thoroughly unconvincing nonsense about why these baboons needed to be in an enclosure rather than just free",
+        "after this it was a boiling hot walk through a sandy path with more nonsensical waffling from the smelly guide",
+        "a dusty path through somewhat untidy nature",
+        "this is an excellent location for observing some of the most difficult-to-see birds elsewhere, such as the violet and persian (guinea, green) turacos"
+      ],
+      "sentiment_distribution": {
+        "positive": 5,
+        "neutral": 0,
+        "negative": 15
+      }
+    },
+    "value_pricing": {
+      "average_sentiment": 0.022222222222222216,
+      "mention_count": 21,
+      "quotes": [
+        "a waste of time and money",
+        "two birds in the distance - use the expensive binoculars",
+        "at this time, it&#39;s definitely not worth visiting the reserve",
+        "but, overall, don't waste your time and money",
+        "the park itself is a nice place to see birds and monkeys (we saw more monkeys here than at bijilo park), i would had liked to stay longer and with a better guide, definitely the park worth it"
+      ],
+      "sentiment_distribution": {
+        "positive": 10,
+        "neutral": 1,
+        "negative": 10
+      }
+    },
+    "safety_security": {
+      "average_sentiment": -0.3333333333333333,
+      "mention_count": 6,
+      "quotes": [
+        "apparently it is too \u201cdangerous\u201d to go without a guide",
+        "if you don&#39;t know where to look, very dangerous&#39;",
+        "they do look dangerous but we had a ranger protecting us while we take our picture with them having behind us in the close proximity",
+        "the trails are safe and easy to follow, but be careful not to stop on/near a stream of ants on the move",
+        "the man is a gentleman who will provide a car with a very safe driver and take great care of you, he speaks perfect english too"
+      ],
+      "sentiment_distribution": {
+        "positive": 2,
+        "neutral": 0,
+        "negative": 4
+      }
+    }
+  },
+  "critical_areas": [
+    {
+      "theme": "Accessibility Comfort",
+      "sentiment_score": -0.4333333333333333,
+      "mention_count": 20,
+      "quotes": [
+        "our guide was nice enough but basically it&#39;s a long walk down a path through bushes",
+        "then more walking until finally you get to the world&#39;s most depressing zoo - where they&#39;ll tell you some thoroughly unconvincing nonsense about why these baboons needed to be in an enclosure rather than just free",
+        "after this it was a boiling hot walk through a sandy path with more nonsensical waffling from the smelly guide"
+      ],
+      "priority": "high"
+    },
+    {
+      "theme": "Safety Security",
+      "sentiment_score": -0.3333333333333333,
+      "mention_count": 6,
+      "quotes": [
+        "apparently it is too \u201cdangerous\u201d to go without a guide",
+        "if you don&#39;t know where to look, very dangerous&#39;",
+        "they do look dangerous but we had a ranger protecting us while we take our picture with them having behind us in the close proximity"
+      ],
+      "priority": "high"
+    },
+    {
+      "theme": "Infrastructure State",
+      "sentiment_score": -0.125,
+      "mention_count": 4,
+      "quotes": [
+        "it&#39;s a shame to see the hyenas in their cage in poor condition",
+        "never seen animals is such appalling conditions, no clean water, hyenas that were so mange ridden it must of been awful for them in the heat",
+        "the hyenas weren&#39;t in good condition either"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "improvement_quotes": {
+    "general_improvements": [
+      "The animals&#39; living conditions are terrible",
+      "Was so disappointed with this place",
+      "We were a bit disappointed; perhaps we were there at the wrong time",
+      "We had no interest in visiting the &quot;zoo&quot; preferring to spend our time looking for birds and we were not disappointed",
+      "We had previously visited other reserves in Gambia and this one disappointed us",
+      "The &#39;protected&#39; forest itself is very disappointing and most of the animals have left, bar a few monkeys",
+      "Many people have commented on how awful they find the animals in cages, but it&#39;s not much different from a zoo in our home country",
+      "It&#39;s a shame to see the hyenas in their cage in poor condition",
+      "For many years ago it was a nice place where they had names on evert special trees and there were so many different animals there, but now I&#39;m disappointed because it&#39;s mostly apes and births there now day",
+      "Never seen animals is such appalling conditions, no clean water, Hyenas that were so mange ridden it must of been awful for them in the heat",
+      "Our guide was great and very informative but the lack of animals was disappointing and I&#39;m sure we walked a couple of hours",
+      "The Hyenas were in an awful state, one was surrounded by vultures and it was obvious he was sick",
+      "We went late morning and were disappointed: little to see, some caged hyenas, self appointed guide, aggressive monkeys (not like Bijolo)",
+      "Was a terrible day out, it would be a bit better if they cleared all the wood carving sellers away - or only let one or two sell - not around 10 that you have to pass on your way out, all selling the same things",
+      "We were actually a bit disappointed with this park",
+      "I may have ideas as to how this could be improved and would love to be able to help in someway",
+      "We were sorry we didn&#39;t see crocs from the lookout point across the pool, and were disappointed and saddened by the dirty-looking &#39;animal orphanage&#39; - even if they did have hyenas and pelicans",
+      "The one bad point is the awful &#39;zoo&#39; in the middle where they house baboons, hyenas and turtles",
+      "We saw very little and were very disappointed",
+      "The hyenas were pacing up and down ie exhibiting stereotypical behavior, which was not good to see at all"
+    ]
+  },
+  "management_response": {
+    "response_rate": 0.0,
+    "total_responses": 0,
+    "total_reviews": 185,
+    "gap_opportunity": 185
+  }
+}

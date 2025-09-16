@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { fetchParticipants, fetchSectors, fetchTourOperators, fetchDashboard, fetchPlan, fetchPresence, fetchJustifications, fetchOpportunities, fetchSectorOverview, fetchSectorLeaders, fetchSectorCategoryComparison, type Participant, type Dashboard, type Plan } from './api';
 import SentimentAnalysis from './SentimentAnalysis';
+import SentimentDisplay from './SentimentDisplay';
+import SectorSentimentAnalysis from './SectorSentimentAnalysis';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -179,7 +181,10 @@ function App() {
     const page = (parts[0] || 'overview').toLowerCase();
     if (page === 'sector') setActive('sector');
     else if (page === 'creative-industries') { setActive('participant'); if (parts[1]) setSelectedParticipant(parts.slice(1).join('/')); }
-    else if (page === 'tour-operator' || page === 'tour-operators') setActive('tour');
+    else if (page === 'tour-operator' || page === 'tour-operators') { 
+      setActive('tour'); 
+      if (parts[1]) setSelectedParticipant(parts.slice(1).join('/')); 
+    }
     else if (page === 'sentiment') setActive('sentiment');
     else if (page === 'methodology') setActive('methodology');
     else setActive('overview');
@@ -790,6 +795,12 @@ function App() {
                 </div>
               )}
 
+              {/* Sector-Wide Sentiment Analysis */}
+              <SectorSentimentAnalysis 
+                sectorName={selectedSectorForAnalysis} 
+                totalParticipantsInSector={sectorOverview?.totalStakeholders || 0}
+              />
+
               {/* Stakeholders in Sector */}
               <div className="card">
                 <div style={{ fontWeight: 700, marginBottom: 6 }}>Stakeholders in {selectedSectorForAnalysis}</div>
@@ -1064,6 +1075,9 @@ function App() {
                   />
                 ) : '—'}
               </div>
+
+              {/* Sentiment Analysis Display */}
+              <SentimentDisplay participantName={selectedParticipant} />
               
               <div style={{ gridColumn: '1 / span 2', marginBottom: 8 }}>
                 <div style={{ fontWeight: 600, fontSize: 14, color: '#333' }}>Next Steps</div>
@@ -1132,7 +1146,11 @@ function App() {
             ) : (
               <select
                 value={selectedParticipant}
-                onChange={e => { const v = e.target.value; setSelectedParticipant(v); }}
+                onChange={e => { 
+                  const v = e.target.value; 
+                  setSelectedParticipant(v); 
+                  if (v) navigate(`/tour-operator/${encodeURIComponent(v)}`);
+                }}
                 style={{ padding: 8, borderRadius: 8, border: '1px solid #e7e7e9', minWidth: 320 }}
               >
                 <option value="">Select a tour operator…</option>
@@ -1417,6 +1435,9 @@ function App() {
                   </div>
                 ) : '—'}
               </div>
+
+              {/* Sentiment Analysis Display */}
+              <SentimentDisplay participantName={selectedParticipant} />
 
               <div style={{ gridColumn: '1 / span 2', height: 1, backgroundColor: '#e7e7e9', margin: '16px 0' }}></div>
 

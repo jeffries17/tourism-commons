@@ -1,10 +1,6 @@
 import { Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Sentiment analysis data types
 export type SentimentData = {
@@ -29,6 +25,8 @@ export type SentimentData = {
     total_responses: number;
     gap_opportunity: number;
   };
+  language_distribution: Record<string, number>;
+  year_distribution: Record<string, number>;
 };
 
 export type SentimentSummary = {
@@ -51,7 +49,7 @@ export type SentimentSummary = {
 // Load sentiment analysis data from JSON file
 function loadSentimentData(): { summary: SentimentSummary; stakeholder_data: SentimentData[] } | null {
   try {
-          const dataPath = path.join(__dirname, '../../../sentiment/output/comprehensive_sentiment_analysis_results.json');
+    const dataPath = path.join(__dirname, '../../../sentiment/output/comprehensive_sentiment_analysis_results.json');
     const data = fs.readFileSync(dataPath, 'utf8');
     return JSON.parse(data);
   } catch (error) {
@@ -60,24 +58,13 @@ function loadSentimentData(): { summary: SentimentSummary; stakeholder_data: Sen
   }
 }
 
-// Helper function to normalize stakeholder names for matching
-function normalizeStakeholderName(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, '_')  // Replace spaces with underscores
-    .replace(/[^a-z0-9_]/g, '')  // Remove special characters except underscores
-    .trim();
-}
-
 // Get sentiment data for a specific stakeholder
 export function getStakeholderSentiment(stakeholderName: string): SentimentData | null {
   const data = loadSentimentData();
   if (!data) return null;
   
-  const normalizedInput = normalizeStakeholderName(stakeholderName);
-  
   return data.stakeholder_data.find(
-    stakeholder => normalizeStakeholderName(stakeholder.stakeholder_name) === normalizedInput
+    stakeholder => stakeholder.stakeholder_name.toLowerCase() === stakeholderName.toLowerCase()
   ) || null;
 }
 

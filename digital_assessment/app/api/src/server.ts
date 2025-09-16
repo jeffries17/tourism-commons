@@ -15,8 +15,17 @@ function requireEnv(name: string): string {
 async function getSheetsClient(): Promise<sheets_v4.Sheets> {
   const scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
   const keyJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  const keyPath = process.env.GOOGLE_SERVICE_ACCOUNT_JSON_PATH;
   let auth: any;
-  if (keyJson && keyJson.trim().startsWith('{')) {
+  
+  if (keyPath) {
+    // Use service account key file
+    auth = new google.auth.GoogleAuth({
+      keyFile: keyPath,
+      scopes: scopes
+    });
+  } else if (keyJson && keyJson.trim().startsWith('{')) {
+    // Use JSON string
     const creds = JSON.parse(keyJson);
     auth = new google.auth.JWT(
       creds.client_email,
@@ -333,10 +342,17 @@ export function createApp() {
       }
       
       const sheetId = requireEnv('SHEET_ID');
-      const rows = await readMaster(sheetId, 'Master Assessment!A1:AT10000');
+      const rowsMaster = await readMaster(sheetId, 'Master Assessment!A1:AT10000');
+      let rowsTourism: string[][] = [];
+      try {
+        rowsTourism = await readMaster(sheetId, 'Tourism Assessment!A1:AT10000');
+      } catch {
+        rowsTourism = [];
+      }
+      const allRows = rowsMaster.concat(rowsTourism);
       
       // Find the row for this participant
-      const participantRow = rows.find((row, index) => 
+      const participantRow = allRows.find((row, index) => 
         index > 0 && String(row[0] || '').trim() === name.trim()
       );
       
@@ -370,19 +386,19 @@ export function createApp() {
       // Extract custom opportunity advice from Google Sheet columns AK-AP
       const customOpportunities: any[] = [];
       
-      // Column mapping: AK=Social Media (36), AL=Website (37), AM=Visual Content (38), AN=Online Discoverability (39), AO=Digital Sales/Booking (40), AP=Platform Integration (41)
+      // Column mapping: AN=Social Media (39), AO=Website (40), AP=Visual Content (41), AQ=Online Discoverability (42), AR=Digital Sales/Booking (43), AS=Platform Integration (44)
       const opportunityColumns = [
-        { key: 'socialMedia', column: 36, emoji: '📱', title: 'Social Media Opportunities' },
-        { key: 'website', column: 37, emoji: '🌐', title: 'Website Opportunities' },
-        { key: 'visualContent', column: 38, emoji: '📸', title: 'Visual Content Opportunities' },
-        { key: 'onlineDiscoverability', column: 39, emoji: '🔍', title: 'Online Discoverability Opportunities' },
-        { key: 'digitalSalesBooking', column: 40, emoji: '💳', title: 'Digital Sales/Booking Opportunities' },
-        { key: 'platformIntegration', column: 41, emoji: '🔗', title: 'Platform Integration Opportunities' }
+        { key: 'socialMedia', column: 39, emoji: '📱', title: 'Social Media Opportunities' },
+        { key: 'website', column: 40, emoji: '🌐', title: 'Website Opportunities' },
+        { key: 'visualContent', column: 41, emoji: '📸', title: 'Visual Content Opportunities' },
+        { key: 'onlineDiscoverability', column: 43, emoji: '🔍', title: 'Online Discoverability Opportunities' },
+        { key: 'digitalSalesBooking', column: 44, emoji: '💳', title: 'Digital Sales/Booking Opportunities' },
+        { key: 'platformIntegration', column: 45, emoji: '🔗', title: 'Platform Integration Opportunities' }
       ];
       
       opportunityColumns.forEach(opp => {
         const advice = String(participantRow[opp.column] || '').trim();
-        if (advice && advice !== '') {
+        if (advice && advice !== '' && !/^\d+$/.test(advice)) {
           customOpportunities.push({
             category: opp.title,
             emoji: opp.emoji,

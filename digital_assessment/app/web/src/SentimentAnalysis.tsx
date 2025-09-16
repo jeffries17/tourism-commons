@@ -65,6 +65,22 @@ const createReviewFrequencyData = (data: SentimentData) => {
   const years = Object.keys(data.year_distribution).sort();
   const counts = years.map(year => data.year_distribution[year]);
   
+  // If no year data, show a message
+  if (years.length === 0) {
+    return {
+      labels: ['No year data available'],
+      datasets: [
+        {
+          label: 'Number of Reviews',
+          data: [0],
+          backgroundColor: '#6c757d',
+          borderWidth: 1,
+          borderColor: '#495057',
+        },
+      ],
+    };
+  }
+  
   return {
     labels: years,
     datasets: [
@@ -408,7 +424,7 @@ const SentimentAnalysis: React.FC = () => {
       {stakeholderData && (
         <div className="card">
           <h3 style={{ marginTop: 0, marginBottom: 16 }}>
-            {stakeholderData.stakeholder_name.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())} - Detailed Analysis
+            {stakeholderData.stakeholder_name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Detailed Analysis
           </h3>
           
           {/* KPI Cards */}
