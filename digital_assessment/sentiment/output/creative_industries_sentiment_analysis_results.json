@@ -1,0 +1,1260 @@
+{
+  "summary": {},
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "abuko_nature_reserve",
+      "total_reviews": 185,
+      "average_rating": 3.2,
+      "overall_sentiment": 0.348,
+      "positive_rate": 71.3,
+      "language_distribution": {
+        "en": 185
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 3,
+        "2023": 3,
+        "2022": 3,
+        "2020": 5,
+        "2019": 15,
+        "2018": 13,
+        "2017": 17,
+        "2016": 23,
+        "2015": 31,
+        "2014": 26,
+        "2013": 19,
+        "2012": 18,
+        "2011": 1,
+        "2010": 1,
+        "2008": 1,
+        "2007": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [
+        {
+          "theme": "Accessibility Comfort",
+          "sentiment_score": -0.4333333333333333,
+          "mention_count": 20,
+          "quotes": [
+            "our guide was nice enough but basically it&#39;s a long walk down a path through bushes",
+            "then more walking until finally you get to the world&#39;s most depressing zoo - where they&#39;ll tell you some thoroughly unconvincing nonsense about why these baboons needed to be in an enclosure rather than just free",
+            "after this it was a boiling hot walk through a sandy path with more nonsensical waffling from the smelly guide"
+          ],
+          "priority": "high"
+        },
+        {
+          "theme": "Safety Security",
+          "sentiment_score": -0.3333333333333333,
+          "mention_count": 6,
+          "quotes": [
+            "apparently it is too “dangerous” to go without a guide",
+            "if you don&#39;t know where to look, very dangerous&#39;",
+            "they do look dangerous but we had a ranger protecting us while we take our picture with them having behind us in the close proximity"
+          ],
+          "priority": "high"
+        },
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.125,
+          "mention_count": 4,
+          "quotes": [
+            "it&#39;s a shame to see the hyenas in their cage in poor condition",
+            "never seen animals is such appalling conditions, no clean water, hyenas that were so mange ridden it must of been awful for them in the heat",
+            "the hyenas weren&#39;t in good condition either"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "The animals&#39; living conditions are terrible",
+          "Was so disappointed with this place",
+          "We were a bit disappointed; perhaps we were there at the wrong time",
+          "We had no interest in visiting the &quot;zoo&quot; preferring to spend our time looking for birds and we were not disappointed",
+          "We had previously visited other reserves in Gambia and this one disappointed us",
+          "The &#39;protected&#39; forest itself is very disappointing and most of the animals have left, bar a few monkeys",
+          "Many people have commented on how awful they find the animals in cages, but it&#39;s not much different from a zoo in our home country",
+          "It&#39;s a shame to see the hyenas in their cage in poor condition",
+          "For many years ago it was a nice place where they had names on evert special trees and there were so many different animals there, but now I&#39;m disappointed because it&#39;s mostly apes and births there now day",
+          "Never seen animals is such appalling conditions, no clean water, Hyenas that were so mange ridden it must of been awful for them in the heat",
+          "Our guide was great and very informative but the lack of animals was disappointing and I&#39;m sure we walked a couple of hours",
+          "The Hyenas were in an awful state, one was surrounded by vultures and it was obvious he was sick",
+          "We went late morning and were disappointed: little to see, some caged hyenas, self appointed guide, aggressive monkeys (not like Bijolo)",
+          "Was a terrible day out, it would be a bit better if they cleared all the wood carving sellers away - or only let one or two sell - not around 10 that you have to pass on your way out, all selling the same things",
+          "We were actually a bit disappointed with this park",
+          "I may have ideas as to how this could be improved and would love to be able to help in someway",
+          "We were sorry we didn&#39;t see crocs from the lookout point across the pool, and were disappointed and saddened by the dirty-looking &#39;animal orphanage&#39; - even if they did have hyenas and pelicans",
+          "The one bad point is the awful &#39;zoo&#39; in the middle where they house baboons, hyenas and turtles",
+          "We saw very little and were very disappointed",
+          "The hyenas were pacing up and down ie exhibiting stereotypical behavior, which was not good to see at all"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 185,
+        "gap_opportunity": 185
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 185,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 3,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "wassu_stone_circles",
+      "total_reviews": 13,
+      "average_rating": 4.3,
+      "overall_sentiment": 0.646,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 13
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2023": 1,
+        "2022": 1,
+        "2020": 1,
+        "2019": 3,
+        "2018": 3,
+        "2017": 1,
+        "2016": 1,
+        "2013": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 13,
+        "gap_opportunity": 13
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 13,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "banjul_craft_market",
+      "total_reviews": 267,
+      "average_rating": 3.8,
+      "overall_sentiment": 0.765,
+      "positive_rate": 92.7,
+      "language_distribution": {
+        "en": 267
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 3,
+        "2023": 2,
+        "2022": 1,
+        "2021": 1,
+        "2020": 12,
+        "2019": 33,
+        "2018": 25,
+        "2017": 20,
+        "2016": 47,
+        "2015": 20,
+        "2014": 35,
+        "2013": 32,
+        "2012": 30,
+        "2010": 1,
+        "2009": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "Grit your teeth, ignore the bumsters, and go your own way, and you won&#39;t be disappointed",
+          "Most of what is on sale is poor quality Chinese produce"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 267,
+        "gap_opportunity": 267
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 267,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "brikama_woodcarvers_market",
+      "total_reviews": 20,
+      "average_rating": 4.4,
+      "overall_sentiment": 0.508,
+      "positive_rate": 81.2,
+      "language_distribution": {
+        "en": 20
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2022": 2,
+        "2019": 2,
+        "2018": 1,
+        "2016": 5,
+        "2015": 2,
+        "2014": 3,
+        "2013": 2,
+        "2012": 1,
+        "2009": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [
+        {
+          "theme": "Accessibility Comfort",
+          "sentiment_score": -1.0,
+          "mention_count": 1,
+          "quotes": [
+            "it is a little difficult to just browse here as all the sellers call out for you to visit their 'shop', however the atmosphere is friendly"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 20,
+        "gap_opportunity": 20
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 20,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 1,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "tanji_village_market",
+      "total_reviews": 54,
+      "average_rating": 4.3,
+      "overall_sentiment": 0.883,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 54
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2022": 1,
+        "2020": 2,
+        "2019": 4,
+        "2018": 12,
+        "2017": 7,
+        "2016": 13,
+        "2015": 9,
+        "2014": 4,
+        "2013": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "It got extremely crowded (but not as pungently awful as the smoking area)",
+          "The smell was awful but made the visit"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 54,
+        "gap_opportunity": 54
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 54,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "kachikally_crocodile_pool",
+      "total_reviews": 300,
+      "average_rating": 4.1,
+      "overall_sentiment": 0.705,
+      "positive_rate": 89.0,
+      "language_distribution": {
+        "en": 300
+      },
+      "year_distribution": {
+        "2025": 12,
+        "2024": 16,
+        "2023": 18,
+        "2022": 12,
+        "2021": 3,
+        "2020": 29,
+        "2019": 83,
+        "2018": 105,
+        "2017": 22
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "There is a small museum at the entrance, very small park, we came out disappointed",
+          "Was kind if disappointing so short but, worth it",
+          "Touching a crocodile has to be a bucket list things to do & we were not disappointed",
+          "Anyway they enjoyed the experience, pool men could be better informed and interactive in the job role",
+          "Wasn't disappointed, there's looots of them in a small pool, lying around everywhere, calm and lazy just lounging",
+          "The road are terrible and if you have to walk you realize you walking along open sewer"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.33333333333333337,
+        "total_responses": 1,
+        "total_reviews": 300,
+        "gap_opportunity": 299
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 300,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.33333333333333337,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "national_museum_gambia",
+      "total_reviews": 26,
+      "average_rating": 3.7,
+      "overall_sentiment": 0.727,
+      "positive_rate": 90.9,
+      "language_distribution": {
+        "en": 26
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 1,
+        "2023": 1,
+        "2020": 5,
+        "2019": 10,
+        "2018": 2,
+        "2017": 5
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [
+        {
+          "theme": "Safety Security",
+          "sentiment_score": -1.0,
+          "mention_count": 1,
+          "quotes": [
+            "located in an old colonial building it is home to historical documents and displays concerning the gambia"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 3.8461538461538463,
+        "total_responses": 1,
+        "total_reviews": 26,
+        "gap_opportunity": 25
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 26,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 1,
+      "management_response_rate": 3.8461538461538463,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "arch_22_museum",
+      "total_reviews": 155,
+      "average_rating": 3.2,
+      "overall_sentiment": 0.528,
+      "positive_rate": 77.8,
+      "language_distribution": {
+        "en": 155
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2023": 2,
+        "2022": 2,
+        "2021": 2,
+        "2020": 5,
+        "2019": 18,
+        "2018": 16,
+        "2017": 16,
+        "2016": 15,
+        "2015": 15,
+        "2014": 13,
+        "2013": 18,
+        "2012": 25,
+        "2011": 3,
+        "2010": 1,
+        "2008": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.14285714285714285,
+          "mention_count": 7,
+          "quotes": [
+            "the condition is shockingly poor, and while there are a few rooms to look at, they&#39;re without light, very neglected, and everything is falling apart",
+            "the building is in a sorry state, and the elevator is broken, so it&#39;s not really worth seeing for people with disabilities; you have to climb the stairs",
+            "it&#39;s in poor condition anyway, and i would advise against visiting it due to the risk of accidents (elevator shaft open, etc"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "Museum at the top was very disappointing",
+          "It&#39;s in poor condition anyway, and I would advise against visiting it due to the risk of accidents (elevator shaft open, etc",
+          "Greeted by two lovely ladies and set the task of counting the steps to the top I was quite disappointed by the rather tatty &#39;museum&#39; exhibits on the way up and not really knowing what to expect was quite underwhelmed by the view(s) from the top"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.6451612903225806,
+        "total_responses": 1,
+        "total_reviews": 155,
+        "gap_opportunity": 154
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 155,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 1,
+      "management_response_rate": 0.6451612903225806,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "fort_bullen_barra_museum",
+      "total_reviews": 11,
+      "average_rating": 4.4,
+      "overall_sentiment": 0.839,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 11
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2021": 2,
+        "2019": 5,
+        "2018": 3
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "This place should be better known",
+          "A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusiastic curator who showed us around"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 11,
+        "gap_opportunity": 11
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 11,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "bakau_craft_market",
+      "total_reviews": 47,
+      "average_rating": 4.2,
+      "overall_sentiment": 0.839,
+      "positive_rate": 93.5,
+      "language_distribution": {
+        "en": 47
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2020": 2,
+        "2019": 2,
+        "2018": 4,
+        "2017": 8,
+        "2016": 11,
+        "2015": 14,
+        "2014": 4,
+        "2013": 1
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 47,
+        "gap_opportunity": 47
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 47,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "senegambia_craft_market",
+      "total_reviews": 214,
+      "average_rating": 3.5,
+      "overall_sentiment": 0.733,
+      "positive_rate": 88.5,
+      "language_distribution": {
+        "en": 214
+      },
+      "year_distribution": {
+        "2024": 9,
+        "2023": 4,
+        "2022": 2,
+        "2020": 6,
+        "2019": 8,
+        "2018": 31,
+        "2017": 28,
+        "2016": 61,
+        "2015": 56,
+        "2014": 9
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "We met a guy in a bar one night who said he could make carvings of our pets, so I asked if I could see his work and it was spot on, we agreed a price I messaged a photos of the dogs and paid a deposit, he issued a receipt with phone number and all info, if you want anything like this go to unit 12, you will not be disappointed",
+          "Many of the carvings are of a poor quality and they are liable to split when brought home",
+          "This is a very small craft market in the strip, where you can buy some souvenirs and you don't have to suffer the terrible smell of bigger markets such as the one in Banjul"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.46728971962616817,
+        "total_responses": 1,
+        "total_reviews": 214,
+        "gap_opportunity": 213
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 214,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 0,
+      "management_response_rate": 0.46728971962616817,
+      "top_strength": "none",
+      "top_weakness": "none"
+    },
+    {
+      "stakeholder_name": "kunta_kinteh_island",
+      "total_reviews": 24,
+      "average_rating": 4.2,
+      "overall_sentiment": 0.588,
+      "positive_rate": 81.5,
+      "language_distribution": {
+        "en": 24
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 6,
+        "2023": 6,
+        "2022": 3,
+        "2021": 1,
+        "2020": 1,
+        "2019": 3
+      },
+      "theme_scores": {},
+      "theme_quotes": {},
+      "critical_areas": [
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.75,
+          "mention_count": 2,
+          "quotes": [
+            "as another review said - i do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+            "the government really ought to put some money into the more popular visitors sites, the slavery museum and its exhibits were of poor quality and kunta kinteh island could do with a complete makeover before it suffers from further decay"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "As another review said - I do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+          "The government really ought to put some money into the more popular visitors sites, the Slavery museum and its exhibits were of poor quality and Kunta Kinteh Island could do with a complete makeover before it suffers from further decay",
+          "Then a pirogue boat to the island where a guide (with not great English) will show you around for about 30/40 minutes"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 24,
+        "gap_opportunity": 24
+      },
+      "service_quality_score": 0,
+      "service_quality_mentions": 0,
+      "educational_value_score": 0,
+      "educational_value_mentions": 0,
+      "value_pricing_score": 0,
+      "value_pricing_mentions": 0,
+      "artistic_creative_quality_score": 0,
+      "artistic_creative_quality_mentions": 0,
+      "authenticity_culture_score": 0,
+      "authenticity_culture_mentions": 0,
+      "infrastructure_score": 0,
+      "infrastructure_mentions": 0,
+      "ferry_service_score": 0,
+      "ferry_service_mentions": 0,
+      "english_reviews": 24,
+      "dutch_reviews": 0,
+      "german_reviews": 0,
+      "spanish_reviews": 0,
+      "french_reviews": 0,
+      "critical_areas_count": 1,
+      "management_response_rate": 0.0,
+      "top_strength": "none",
+      "top_weakness": "none"
+    }
+  ],
+  "sector_insights": {
+    "total_stakeholders": 12,
+    "total_reviews": 1316,
+    "average_sentiment": 0.67575,
+    "average_rating": 3.941666666666667,
+    "language_distribution": {
+      "en": 1316
+    },
+    "theme_performance": {},
+    "theme_mentions": {},
+    "top_performers": [
+      {
+        "stakeholder_name": "tanji_village_market",
+        "total_reviews": 54,
+        "average_rating": 4.3,
+        "overall_sentiment": 0.883,
+        "positive_rate": 100.0,
+        "language_distribution": {
+          "en": 54
+        },
+        "year_distribution": {
+          "2024": 1,
+          "2022": 1,
+          "2020": 2,
+          "2019": 4,
+          "2018": 12,
+          "2017": 7,
+          "2016": 13,
+          "2015": 9,
+          "2014": 4,
+          "2013": 1
+        },
+        "theme_scores": {},
+        "theme_quotes": {},
+        "critical_areas": [],
+        "improvement_quotes": {
+          "general_improvements": [
+            "It got extremely crowded (but not as pungently awful as the smoking area)",
+            "The smell was awful but made the visit"
+          ]
+        },
+        "management_response": {
+          "response_rate": 0.0,
+          "total_responses": 0,
+          "total_reviews": 54,
+          "gap_opportunity": 54
+        },
+        "service_quality_score": 0,
+        "service_quality_mentions": 0,
+        "educational_value_score": 0,
+        "educational_value_mentions": 0,
+        "value_pricing_score": 0,
+        "value_pricing_mentions": 0,
+        "artistic_creative_quality_score": 0,
+        "artistic_creative_quality_mentions": 0,
+        "authenticity_culture_score": 0,
+        "authenticity_culture_mentions": 0,
+        "infrastructure_score": 0,
+        "infrastructure_mentions": 0,
+        "ferry_service_score": 0,
+        "ferry_service_mentions": 0,
+        "english_reviews": 54,
+        "dutch_reviews": 0,
+        "german_reviews": 0,
+        "spanish_reviews": 0,
+        "french_reviews": 0,
+        "critical_areas_count": 0,
+        "management_response_rate": 0.0,
+        "top_strength": "none",
+        "top_weakness": "none"
+      },
+      {
+        "stakeholder_name": "fort_bullen_barra_museum",
+        "total_reviews": 11,
+        "average_rating": 4.4,
+        "overall_sentiment": 0.839,
+        "positive_rate": 100.0,
+        "language_distribution": {
+          "en": 11
+        },
+        "year_distribution": {
+          "2023": 1,
+          "2021": 2,
+          "2019": 5,
+          "2018": 3
+        },
+        "theme_scores": {},
+        "theme_quotes": {},
+        "critical_areas": [],
+        "improvement_quotes": {
+          "general_improvements": [
+            "This place should be better known",
+            "A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusiastic curator who showed us around"
+          ]
+        },
+        "management_response": {
+          "response_rate": 0.0,
+          "total_responses": 0,
+          "total_reviews": 11,
+          "gap_opportunity": 11
+        },
+        "service_quality_score": 0,
+        "service_quality_mentions": 0,
+        "educational_value_score": 0,
+        "educational_value_mentions": 0,
+        "value_pricing_score": 0,
+        "value_pricing_mentions": 0,
+        "artistic_creative_quality_score": 0,
+        "artistic_creative_quality_mentions": 0,
+        "authenticity_culture_score": 0,
+        "authenticity_culture_mentions": 0,
+        "infrastructure_score": 0,
+        "infrastructure_mentions": 0,
+        "ferry_service_score": 0,
+        "ferry_service_mentions": 0,
+        "english_reviews": 11,
+        "dutch_reviews": 0,
+        "german_reviews": 0,
+        "spanish_reviews": 0,
+        "french_reviews": 0,
+        "critical_areas_count": 0,
+        "management_response_rate": 0.0,
+        "top_strength": "none",
+        "top_weakness": "none"
+      },
+      {
+        "stakeholder_name": "bakau_craft_market",
+        "total_reviews": 47,
+        "average_rating": 4.2,
+        "overall_sentiment": 0.839,
+        "positive_rate": 93.5,
+        "language_distribution": {
+          "en": 47
+        },
+        "year_distribution": {
+          "2023": 1,
+          "2020": 2,
+          "2019": 2,
+          "2018": 4,
+          "2017": 8,
+          "2016": 11,
+          "2015": 14,
+          "2014": 4,
+          "2013": 1
+        },
+        "theme_scores": {},
+        "theme_quotes": {},
+        "critical_areas": [],
+        "improvement_quotes": {},
+        "management_response": {
+          "response_rate": 0.0,
+          "total_responses": 0,
+          "total_reviews": 47,
+          "gap_opportunity": 47
+        },
+        "service_quality_score": 0,
+        "service_quality_mentions": 0,
+        "educational_value_score": 0,
+        "educational_value_mentions": 0,
+        "value_pricing_score": 0,
+        "value_pricing_mentions": 0,
+        "artistic_creative_quality_score": 0,
+        "artistic_creative_quality_mentions": 0,
+        "authenticity_culture_score": 0,
+        "authenticity_culture_mentions": 0,
+        "infrastructure_score": 0,
+        "infrastructure_mentions": 0,
+        "ferry_service_score": 0,
+        "ferry_service_mentions": 0,
+        "english_reviews": 47,
+        "dutch_reviews": 0,
+        "german_reviews": 0,
+        "spanish_reviews": 0,
+        "french_reviews": 0,
+        "critical_areas_count": 0,
+        "management_response_rate": 0.0,
+        "top_strength": "none",
+        "top_weakness": "none"
+      }
+    ],
+    "underperformers": [
+      {
+        "stakeholder_name": "arch_22_museum",
+        "total_reviews": 155,
+        "average_rating": 3.2,
+        "overall_sentiment": 0.528,
+        "positive_rate": 77.8,
+        "language_distribution": {
+          "en": 155
+        },
+        "year_distribution": {
+          "2025": 3,
+          "2023": 2,
+          "2022": 2,
+          "2021": 2,
+          "2020": 5,
+          "2019": 18,
+          "2018": 16,
+          "2017": 16,
+          "2016": 15,
+          "2015": 15,
+          "2014": 13,
+          "2013": 18,
+          "2012": 25,
+          "2011": 3,
+          "2010": 1,
+          "2008": 1
+        },
+        "theme_scores": {},
+        "theme_quotes": {},
+        "critical_areas": [
+          {
+            "theme": "Infrastructure State",
+            "sentiment_score": -0.14285714285714285,
+            "mention_count": 7,
+            "quotes": [
+              "the condition is shockingly poor, and while there are a few rooms to look at, they&#39;re without light, very neglected, and everything is falling apart",
+              "the building is in a sorry state, and the elevator is broken, so it&#39;s not really worth seeing for people with disabilities; you have to climb the stairs",
+              "it&#39;s in poor condition anyway, and i would advise against visiting it due to the risk of accidents (elevator shaft open, etc"
+            ],
+            "priority": "medium"
+          }
+        ],
+        "improvement_quotes": {
+          "general_improvements": [
+            "Museum at the top was very disappointing",
+            "It&#39;s in poor condition anyway, and I would advise against visiting it due to the risk of accidents (elevator shaft open, etc",
+            "Greeted by two lovely ladies and set the task of counting the steps to the top I was quite disappointed by the rather tatty &#39;museum&#39; exhibits on the way up and not really knowing what to expect was quite underwhelmed by the view(s) from the top"
+          ]
+        },
+        "management_response": {
+          "response_rate": 0.6451612903225806,
+          "total_responses": 1,
+          "total_reviews": 155,
+          "gap_opportunity": 154
+        },
+        "service_quality_score": 0,
+        "service_quality_mentions": 0,
+        "educational_value_score": 0,
+        "educational_value_mentions": 0,
+        "value_pricing_score": 0,
+        "value_pricing_mentions": 0,
+        "artistic_creative_quality_score": 0,
+        "artistic_creative_quality_mentions": 0,
+        "authenticity_culture_score": 0,
+        "authenticity_culture_mentions": 0,
+        "infrastructure_score": 0,
+        "infrastructure_mentions": 0,
+        "ferry_service_score": 0,
+        "ferry_service_mentions": 0,
+        "english_reviews": 155,
+        "dutch_reviews": 0,
+        "german_reviews": 0,
+        "spanish_reviews": 0,
+        "french_reviews": 0,
+        "critical_areas_count": 1,
+        "management_response_rate": 0.6451612903225806,
+        "top_strength": "none",
+        "top_weakness": "none"
+      },
+      {
+        "stakeholder_name": "brikama_woodcarvers_market",
+        "total_reviews": 20,
+        "average_rating": 4.4,
+        "overall_sentiment": 0.508,
+        "positive_rate": 81.2,
+        "language_distribution": {
+          "en": 20
+        },
+        "year_distribution": {
+          "2025": 1,
+          "2022": 2,
+          "2019": 2,
+          "2018": 1,
+          "2016": 5,
+          "2015": 2,
+          "2014": 3,
+          "2013": 2,
+          "2012": 1,
+          "2009": 1
+        },
+        "theme_scores": {},
+        "theme_quotes": {},
+        "critical_areas": [
+          {
+            "theme": "Accessibility Comfort",
+            "sentiment_score": -1.0,
+            "mention_count": 1,
+            "quotes": [
+              "it is a little difficult to just browse here as all the sellers call out for you to visit their 'shop', however the atmosphere is friendly"
+            ],
+            "priority": "high"
+          }
+        ],
+        "improvement_quotes": {},
+        "management_response": {
+          "response_rate": 0.0,
+          "total_responses": 0,
+          "total_reviews": 20,
+          "gap_opportunity": 20
+        },
+        "service_quality_score": 0,
+        "service_quality_mentions": 0,
+        "educational_value_score": 0,
+        "educational_value_mentions": 0,
+        "value_pricing_score": 0,
+        "value_pricing_mentions": 0,
+        "artistic_creative_quality_score": 0,
+        "artistic_creative_quality_mentions": 0,
+        "authenticity_culture_score": 0,
+        "authenticity_culture_mentions": 0,
+        "infrastructure_score": 0,
+        "infrastructure_mentions": 0,
+        "ferry_service_score": 0,
+        "ferry_service_mentions": 0,
+        "english_reviews": 20,
+        "dutch_reviews": 0,
+        "german_reviews": 0,
+        "spanish_reviews": 0,
+        "french_reviews": 0,
+        "critical_areas_count": 1,
+        "management_response_rate": 0.0,
+        "top_strength": "none",
+        "top_weakness": "none"
+      },
+      {
+        "stakeholder_name": "abuko_nature_reserve",
+        "total_reviews": 185,
+        "average_rating": 3.2,
+        "overall_sentiment": 0.348,
+        "positive_rate": 71.3,
+        "language_distribution": {
+          "en": 185
+        },
+        "year_distribution": {
+          "2025": 5,
+          "2024": 3,
+          "2023": 3,
+          "2022": 3,
+          "2020": 5,
+          "2019": 15,
+          "2018": 13,
+          "2017": 17,
+          "2016": 23,
+          "2015": 31,
+          "2014": 26,
+          "2013": 19,
+          "2012": 18,
+          "2011": 1,
+          "2010": 1,
+          "2008": 1,
+          "2007": 1
+        },
+        "theme_scores": {},
+        "theme_quotes": {},
+        "critical_areas": [
+          {
+            "theme": "Accessibility Comfort",
+            "sentiment_score": -0.4333333333333333,
+            "mention_count": 20,
+            "quotes": [
+              "our guide was nice enough but basically it&#39;s a long walk down a path through bushes",
+              "then more walking until finally you get to the world&#39;s most depressing zoo - where they&#39;ll tell you some thoroughly unconvincing nonsense about why these baboons needed to be in an enclosure rather than just free",
+              "after this it was a boiling hot walk through a sandy path with more nonsensical waffling from the smelly guide"
+            ],
+            "priority": "high"
+          },
+          {
+            "theme": "Safety Security",
+            "sentiment_score": -0.3333333333333333,
+            "mention_count": 6,
+            "quotes": [
+              "apparently it is too “dangerous” to go without a guide",
+              "if you don&#39;t know where to look, very dangerous&#39;",
+              "they do look dangerous but we had a ranger protecting us while we take our picture with them having behind us in the close proximity"
+            ],
+            "priority": "high"
+          },
+          {
+            "theme": "Infrastructure State",
+            "sentiment_score": -0.125,
+            "mention_count": 4,
+            "quotes": [
+              "it&#39;s a shame to see the hyenas in their cage in poor condition",
+              "never seen animals is such appalling conditions, no clean water, hyenas that were so mange ridden it must of been awful for them in the heat",
+              "the hyenas weren&#39;t in good condition either"
+            ],
+            "priority": "medium"
+          }
+        ],
+        "improvement_quotes": {
+          "general_improvements": [
+            "The animals&#39; living conditions are terrible",
+            "Was so disappointed with this place",
+            "We were a bit disappointed; perhaps we were there at the wrong time",
+            "We had no interest in visiting the &quot;zoo&quot; preferring to spend our time looking for birds and we were not disappointed",
+            "We had previously visited other reserves in Gambia and this one disappointed us",
+            "The &#39;protected&#39; forest itself is very disappointing and most of the animals have left, bar a few monkeys",
+            "Many people have commented on how awful they find the animals in cages, but it&#39;s not much different from a zoo in our home country",
+            "It&#39;s a shame to see the hyenas in their cage in poor condition",
+            "For many years ago it was a nice place where they had names on evert special trees and there were so many different animals there, but now I&#39;m disappointed because it&#39;s mostly apes and births there now day",
+            "Never seen animals is such appalling conditions, no clean water, Hyenas that were so mange ridden it must of been awful for them in the heat",
+            "Our guide was great and very informative but the lack of animals was disappointing and I&#39;m sure we walked a couple of hours",
+            "The Hyenas were in an awful state, one was surrounded by vultures and it was obvious he was sick",
+            "We went late morning and were disappointed: little to see, some caged hyenas, self appointed guide, aggressive monkeys (not like Bijolo)",
+            "Was a terrible day out, it would be a bit better if they cleared all the wood carving sellers away - or only let one or two sell - not around 10 that you have to pass on your way out, all selling the same things",
+            "We were actually a bit disappointed with this park",
+            "I may have ideas as to how this could be improved and would love to be able to help in someway",
+            "We were sorry we didn&#39;t see crocs from the lookout point across the pool, and were disappointed and saddened by the dirty-looking &#39;animal orphanage&#39; - even if they did have hyenas and pelicans",
+            "The one bad point is the awful &#39;zoo&#39; in the middle where they house baboons, hyenas and turtles",
+            "We saw very little and were very disappointed",
+            "The hyenas were pacing up and down ie exhibiting stereotypical behavior, which was not good to see at all"
+          ]
+        },
+        "management_response": {
+          "response_rate": 0.0,
+          "total_responses": 0,
+          "total_reviews": 185,
+          "gap_opportunity": 185
+        },
+        "service_quality_score": 0,
+        "service_quality_mentions": 0,
+        "educational_value_score": 0,
+        "educational_value_mentions": 0,
+        "value_pricing_score": 0,
+        "value_pricing_mentions": 0,
+        "artistic_creative_quality_score": 0,
+        "artistic_creative_quality_mentions": 0,
+        "authenticity_culture_score": 0,
+        "authenticity_culture_mentions": 0,
+        "infrastructure_score": 0,
+        "infrastructure_mentions": 0,
+        "ferry_service_score": 0,
+        "ferry_service_mentions": 0,
+        "english_reviews": 185,
+        "dutch_reviews": 0,
+        "german_reviews": 0,
+        "spanish_reviews": 0,
+        "french_reviews": 0,
+        "critical_areas_count": 3,
+        "management_response_rate": 0.0,
+        "top_strength": "none",
+        "top_weakness": "none"
+      }
+    ]
+  },
+  "critical_areas": {},
+  "generated_at": "2025-09-22T07:32:16.926859",
+  "industry": "creative_industries"
+}

@@ -184,6 +184,8 @@ export type SentimentData = {
   overall_sentiment: number;
   positive_rate: number;
   language_diversity: number;
+  language_distribution: Record<string, number>;
+  year_distribution: Record<string, number>;
   analysis_date: string;
   theme_scores: Record<string, { score: number; mentions: number }>;
   critical_areas: Array<{
@@ -239,6 +241,18 @@ export async function fetchAllSentimentData(): Promise<SentimentData[]> {
 export async function fetchSectorSentiment(sectorName: string): Promise<SentimentData[]> {
   const res = await fetch(`${API_URL}/sentiment/sector/${encodeURIComponent(sectorName)}`);
   if (!res.ok) throw new Error('Failed to load sector sentiment data');
+  return res.json();
+}
+
+export async function fetchIndustrySentiment(industry: 'creative_industries' | 'tour_operators'): Promise<SentimentData[]> {
+  const res = await fetch(`${API_URL}/sentiment/industry/${industry}`);
+  if (!res.ok) throw new Error('Failed to load industry sentiment data');
+  return res.json();
+}
+
+export async function fetchIndustrySentimentSummary(industry: 'creative_industries' | 'tour_operators'): Promise<SentimentSummary> {
+  const res = await fetch(`${API_URL}/sentiment/industry/${industry}/summary`);
+  if (!res.ok) throw new Error('Failed to load industry sentiment summary');
   return res.json();
 }
 
