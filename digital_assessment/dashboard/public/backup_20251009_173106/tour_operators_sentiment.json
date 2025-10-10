@@ -1,0 +1,2091 @@
+{
+  "summary": {},
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "timo_tours_gambia",
+      "total_reviews": 12,
+      "average_rating": 4.4,
+      "overall_sentiment": 0.601,
+      "positive_rate": 73.3,
+      "language_distribution": {
+        "en": 12
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 3,
+        "2023": 6,
+        "2020": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.4,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.9,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 0.5,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "the tour guide was unprofessional, they couldn\u2019t even give as little as water and when we came back to complain to mr timothy, he became extremely rude and hostile",
+          "after a friendly no-pressure discussion with a timo tours rep on palma rima road we decided to book our safari trip to fathala nature reserve with the company, and we were very glad we did - they were excellent, and provided a great experience",
+          "our guide for the day, ebrima, was outstanding, highly professional, and led us through the maze of crowded border checks and ferry crossings with maximum efficiency and minimal stress"
+        ],
+        "cultural_value": [
+          "we saw all the highlights (the chimpanzees were particularly special)",
+          "when we arrived at the forest we were met by our local guide, i believe his name was modi",
+          "we took a small boat along the river and saw the oyster beds &amp; locals that harvested and sorted them"
+        ],
+        "value_pricing": [
+          "trips are much cheaper than trips organized by polish travel agencies \u2013 and during the trip with timotours tourists are supplied with unlimited water (it is very important during hot sunny days in the gambia) and had the opportunity to eat local meals (all included in trip price)",
+          "the excursions are superbly organized, and compared to other travel agencies, they&#39;re not overpriced",
+          "prices are very reasonable and were adequately fed and watered throughout"
+        ],
+        "safety_security": [
+          "booked 3 trips, fathala, roots village, and 6 in 1,  all excellent experiences, our guide ebrima was fab, very knowledgeable and had a great sense of humour, felt very safe when out and about"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "(It needs a tune-up every few kilometers) It really needs improvement for such a distance"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 12,
+        "gap_opportunity": 12
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.9
+        },
+        {
+          "theme": "value_pricing",
+          "score": 0.5
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "simon_tours",
+      "total_reviews": 108,
+      "average_rating": 4.8,
+      "overall_sentiment": 0.639,
+      "positive_rate": 88.5,
+      "language_distribution": {
+        "en": 108
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 9,
+        "2023": 8,
+        "2022": 6,
+        "2020": 9,
+        "2019": 22,
+        "2018": 16,
+        "2017": 8,
+        "2016": 12,
+        "2015": 8,
+        "2014": 2,
+        "2013": 3
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.45,
+          "mentions": 44,
+          "distribution": {
+            "positive": 38,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.89,
+          "mentions": 43,
+          "distribution": {
+            "positive": 43,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.67,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.25,
+          "mentions": 6,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "value_pricing": {
+          "score": 0.35,
+          "mentions": 17,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 6
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 11,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "simon is a wonderful storyteller and shows us a wealth of gambia",
+          "seeing chimps in the chimpanzee rehabilitation project was a particular highlight for me, but also listening to the history of the slave trade set to drums by local georgetown aural historian taka (definitely worth listening)"
+        ],
+        "guide_quality": [
+          "simon is very friendly and helpful, and the excursions with him are affordable and well-organized",
+          "friendly service and the time to visit and explore everything at our own pace",
+          "simon takes us on a calm and friendly tour and guided us"
+        ],
+        "cultural_value": [
+          "we visited the main sights, but also a visit to a local hospital, local villages, and families, where we gave the children clothes, school supplies, and candy",
+          "authentic african cuisine prepared under &quot;gambian&quot; conditions; a delightful experience",
+          "both saidou (simon) and dembo were amazing especially getting us back safely from senegal which will remain etched in the memory forever"
+        ],
+        "ferry_service": [
+          "it went very smoothly, and simon sent us extra photos of the boats, which reassured our daughter",
+          "besides these &quot;standard&quot; trips, we asked him if it was possible to go inland and distribute various goods to people who truly have nothing",
+          "we chose simon from the netherlands because of the good reviews on tripadvisor"
+        ],
+        "accessibility_comfort": [
+          "he responds quickly to emails and whatsapp messages, is a great resource, and easy to talk to",
+          "which isn&#39;t easy by african standards, but he works with tourists, so he understands",
+          "especially after the three difficult years of covid-19, during which they received no financial support from the government, they deserve it more than ever"
+        ],
+        "value_pricing": [
+          "the trips you can book through your travel agency are more expensive, and sometimes you&#39;re crammed into a truck with 15 people",
+          "simon&#39;s tour was completely tailored to our needs, with stops at some truly surprising locations, excellent food, and affordable prices",
+          "this trip was \u00a310 cheaper than thomas cook&#39;s and tailored to the size of our group"
+        ],
+        "safety_security": [
+          "simon kept a close eye on everything, and we felt safe and secure during the activities",
+          "both saidou (simon) and dembo were amazing especially getting us back safely from senegal which will remain etched in the memory forever",
+          "his drivers are also reliable and safety comes first"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "If you are contemplating visiting the Gambia look no further than Simon&#39;s Tours you will not be disappointed and a warm welcome will be administered",
+          "Shame that we left disappointed as it was more of a fly through visit and only got to touch smaller crocs (not the famous Charlie)"
+        ]
+      },
+      "management_response": {
+        "response_rate": 3.7037037037037033,
+        "total_responses": 4,
+        "total_reviews": 108,
+        "gap_opportunity": 104
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.889922480620155
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "janeya_tours",
+      "total_reviews": 73,
+      "average_rating": 4.8,
+      "overall_sentiment": 0.588,
+      "positive_rate": 87.2,
+      "language_distribution": {
+        "en": 73
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 1,
+        "2023": 2,
+        "2022": 2,
+        "2020": 4,
+        "2019": 6,
+        "2018": 9,
+        "2017": 6,
+        "2016": 6,
+        "2015": 8,
+        "2014": 14,
+        "2013": 13
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.41,
+          "mentions": 42,
+          "distribution": {
+            "positive": 34,
+            "neutral": 7,
+            "negative": 1
+          }
+        },
+        "cultural_value": {
+          "score": 0.84,
+          "mentions": 28,
+          "distribution": {
+            "positive": 28,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.33,
+          "mentions": 9,
+          "distribution": {
+            "positive": 7,
+            "neutral": 1,
+            "negative": 1
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.76,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 0.78,
+          "mentions": 6,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.78,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "the tour was well worth, great food, emotional sites of slavery and history, our guide aja and david were excellent"
+        ],
+        "guide_quality": [
+          "our guide ibrahim and his driver was very professional and they helped us with everything even it was not included in the main trip to river gambia national park",
+          "the people are all very friendly",
+          "lamin was a good and friendly guide; the cars were good, and the drivers were experienced"
+        ],
+        "cultural_value": [
+          "he showed these places and in every place we had local person who told us about that place",
+          "we were happy with janeya tours and also that we were able to support a local agency instead of a large tour company",
+          "for example, we went to the local family of our driver in the middle of nowhere and brought some school supplies with us, which they handed out there"
+        ],
+        "ferry_service": [
+          "we didn&#39;t just get a nice trip we got a few friends with it as well",
+          "good food on the trips\nwe loved it",
+          "the trip was very well organised and even when something did not go 100% to plan they adjusted so smoothly that we didn`t even notice until afterwards"
+        ],
+        "accessibility_comfort": [
+          "about 10 am the comfortable boat left the harbour",
+          "you have to give the locals a treat; they don&#39;t have it easy",
+          "we were picked up promptly and transported to the &quot;boat&quot;, although they advertise wooden and comfortable boat, i cannot believe that they call this a boat"
+        ],
+        "value_pricing": [
+          "you&#39;ll receive friendly service and the prices are very fair",
+          "they&#39;re the same tours, just a bit cheaper with locals (\u20ac50, which is also 2,800 dalasi per person), and this way you also bring business to the people",
+          "it&#39;s a long drive, but well worth it"
+        ],
+        "safety_security": [
+          "been on holiday many times to the gambia and have used janet's tour each and every time and he just gets better fully safe with insurance helpful and always happy to arrange the tours to suit the persons needs also very reasonable best tour rep in gambia",
+          "the boat was nailed together and looked extremely unsafe, it was also dirty and uncomfortable",
+          "they are located as walking up the strip from the senegambia hotel, on the left hand side, next to safeway market, dressed in orange"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "I cannot even begin to tell you how disappointed we were with this trip, we have traveled all over the world but this was a complete waste of time and money"
+        ]
+      },
+      "management_response": {
+        "response_rate": 1.36986301369863,
+        "total_responses": 1,
+        "total_reviews": 73,
+        "gap_opportunity": 72
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.8357142857142856
+        },
+        {
+          "theme": "value_pricing",
+          "score": 0.7777777777777777
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "bushwhacker_tours",
+      "total_reviews": 170,
+      "average_rating": 4.9,
+      "overall_sentiment": 0.622,
+      "positive_rate": 90.7,
+      "language_distribution": {
+        "en": 170
+      },
+      "year_distribution": {
+        "2025": 10,
+        "2024": 11,
+        "2023": 5,
+        "2022": 3,
+        "2020": 3,
+        "2019": 10,
+        "2018": 13,
+        "2017": 7,
+        "2016": 13,
+        "2015": 13,
+        "2014": 34,
+        "2013": 35,
+        "2012": 13
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.49,
+          "mentions": 87,
+          "distribution": {
+            "positive": 81,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.81,
+          "mentions": 52,
+          "distribution": {
+            "positive": 50,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.6,
+          "mentions": 31,
+          "distribution": {
+            "positive": 27,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "infrastructure_state": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.54,
+          "mentions": 12,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 3
+          }
+        },
+        "value_pricing": {
+          "score": 0.48,
+          "mentions": 32,
+          "distribution": {
+            "positive": 25,
+            "neutral": 0,
+            "negative": 7
+          }
+        },
+        "safety_security": {
+          "score": 0.97,
+          "mentions": 18,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "if you visit a country and wish to take part of the country&#39;s history, favorite places, want to experience the beautiful countryside, learn and take part of its culture while having great fun",
+          "such a great, interesting and meaningful day full of diversity and we&#39;ve learned so much, since our guide zach knows what to tell and how to tell about his beautiful country",
+          "it was amazing to listen to the knowledge zach has, he knows his stuff and when he told me his favorite subject was history it shows"
+        ],
+        "guide_quality": [
+          "my guides were extremely well-trained, very friendly, and got the most out of the day",
+          "both were well organised, professional with knowledgable and informative guides",
+          "looking for tours in the gambia, we found bushwhacker tours and since the first contact alieu was very friendly and professional at the same time"
+        ],
+        "cultural_value": [
+          "age also helped us with other requests as visiting a local market for buying some spices and so on",
+          "we did the one day southern gambia impact adventure, giving us a totally different and unique perspective of the country and people who live there",
+          "we did a search of local companies in gambia who could do excursions bushwacker tours was the company we chose"
+        ],
+        "ferry_service": [
+          "lamin made everything run very smoothly and made it a very comfortable and easy trip",
+          "the tour itself was well organized, and everything went smoothly on the way there (ferry, border crossing)",
+          "but if you would like to be sure to get a quality experience, or to go on a safari, which is a much more complex trip to organize, then it is much better to choose a reliable tour company, with lots of experience and with excellent guides, such as bushwacker tours"
+        ],
+        "infrastructure_state": [
+          "a great day fishing among the mangroves,boat was spacious,and in good condition,staff very friendly and were great at helping bait our hooks"
+        ],
+        "accessibility_comfort": [
+          "i felt comfortable the entire time and was able to gain many new experiences",
+          "lamin made everything run very smoothly and made it a very comfortable and easy trip",
+          "it&#39;s not an easy tour due to the harrowing history of the island but it&#39;s such an important part of west african history and a history that should not be repeated"
+        ],
+        "value_pricing": [
+          "very, very beautiful and lovingly organized tours at fair prices",
+          "we also booked a tour through the tour operator, which we regretted; it was more expensive and not as enjoyable because we were with a large group",
+          "the tours are amazing value, especially the 4x4 adventure which at \u00a340 each for the full day was almost too cheap"
+        ],
+        "safety_security": [
+          "we as a family felt very safe &amp; was considerably taken care of by alieu &amp; driver baba",
+          "i highly recommend bushwacker tours to anyone who is going to gambia and requires an honest, safe and knowledgeable company for their excursions",
+          "at all times we felt completely safe, whilst able to experience a bit of real gambian life"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "After  looking at other tour providers and prices this looked the best option and we weren't disappointed",
+          "I hope anyone travelling to The Gambia reads this review and books with you they will not be disappointed\n\nSee you and The Gambia again soon \n\nLinda and christopher \ud83d\ude01\ud83d\ude0e\ud83c\uddf8\ud83c\uddf3",
+          "We have travelled with Bushwhacker for the past 3 years and have never been disappointed",
+          "Book with them you wont be disappointed"
+        ]
+      },
+      "management_response": {
+        "response_rate": 2.941176470588235,
+        "total_responses": 5,
+        "total_reviews": 170,
+        "gap_opportunity": 165
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "infrastructure_state",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 0.9722222222222222
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "kawsu_tours",
+      "total_reviews": 18,
+      "average_rating": 4.8,
+      "overall_sentiment": 0.812,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 18
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2024": 10,
+        "2023": 5
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.56,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.88,
+          "mentions": 8,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.78,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 1.0,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "fair prices, professional guides and safe, good vehicles",
+          "very helpful and we loved sitting on the back of the jeep",
+          "their price was very reasonable and their customer service was excellent"
+        ],
+        "cultural_value": [
+          "we had a really fun trip to a local market and then to the monkey park",
+          "the best if you planning to visit the gambia\n\nlamin is the best guide you can have \nfor al sort of excursions \n\nsafari wildlife markets local food all is included",
+          "a truly top-notch local tour operator, and we would be happy to use him again if we travel to gambia again and want to see something different"
+        ],
+        "ferry_service": [
+          "great trip, personal guide and reliable service",
+          "we asked kawsu to help us organise a trip to the tanji fish martket - our guide was lamin, who made the trip a great experience - he showed us many places we wouldn't have looked at on our own; we walked around quietly, unhurriedly, he gave us a lot of valuable information; it was such a nice trip that a few days later we asked him for a transfer at the airport, again everything went off without a hitch, we highly recommend lamin and kawsu, great people with a positive attitude",
+          "honest and friendly service, very reliable and courtesous staff, very fair prices"
+        ],
+        "value_pricing": [
+          "fair prices, professional guides and safe, good vehicles",
+          "their price was very reasonable and their customer service was excellent",
+          "honest and friendly service, very reliable and courtesous staff, very fair prices"
+        ],
+        "safety_security": [
+          "fair prices, professional guides and safe, good vehicles",
+          "they really made us feel safe"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 18,
+        "gap_opportunity": 18
+      },
+      "key_strengths": [
+        {
+          "theme": "value_pricing",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.875
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "arch_tours",
+      "total_reviews": 300,
+      "average_rating": 4.8,
+      "overall_sentiment": 0.59,
+      "positive_rate": 85.3,
+      "language_distribution": {
+        "en": 300
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 8,
+        "2023": 18,
+        "2022": 23,
+        "2021": 4,
+        "2020": 7,
+        "2019": 46,
+        "2018": 52,
+        "2017": 57,
+        "2016": 81
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.78,
+          "mentions": 8,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.45,
+          "mentions": 166,
+          "distribution": {
+            "positive": 135,
+            "neutral": 30,
+            "negative": 1
+          }
+        },
+        "cultural_value": {
+          "score": 0.8,
+          "mentions": 98,
+          "distribution": {
+            "positive": 97,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.44,
+          "mentions": 43,
+          "distribution": {
+            "positive": 29,
+            "neutral": 13,
+            "negative": 1
+          }
+        },
+        "infrastructure_state": {
+          "score": -1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.64,
+          "mentions": 27,
+          "distribution": {
+            "positive": 22,
+            "neutral": 0,
+            "negative": 5
+          }
+        },
+        "value_pricing": {
+          "score": 0.54,
+          "mentions": 37,
+          "distribution": {
+            "positive": 30,
+            "neutral": 2,
+            "negative": 5
+          }
+        },
+        "safety_security": {
+          "score": 0.89,
+          "mentions": 35,
+          "distribution": {
+            "positive": 33,
+            "neutral": 0,
+            "negative": 2
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "we sadly didn&#39;t think about bringing small presents (pens, pencils, notebooks or even the amazing pastries from the ship) -- so anyone reading this and considering this visit, please do so on our behalf",
+          "i thought i wouldn&#39;t be too fussed, but ended up loving it because of the history/folklore, the wildlife, amazing trees, and of course being up-close to the pre-historic wonders",
+          "it is also important help the gambian tourist industry to thrive, not just so people can continue to have amazing times there like we did, but also to help gambias economy which relies heavily on tourism"
+        ],
+        "guide_quality": [
+          "my friend and i went to book a tour as i have used this tour company before several times and it was excellent",
+          "sad news because the owner was a lovely man and the tours were excellent value for money \ud83d\ude4f\ud83c\udffb",
+          "they were not only kind and friendly but also took excellent care of us throughout the trip"
+        ],
+        "cultural_value": [
+          "it offers an unparalleled insight into the unique culture and way of life in the casamance region",
+          "without giving away too many details, i can confidently say this experience felt truly special and unforgettable",
+          "i highly recommend this tour as a unique and authentic alternative to exploring northern senegal"
+        ],
+        "ferry_service": [
+          "it&#39; was a wonderful trip, interesting, exiting, funny with beautiful situations, nice people, good food and two guides, who love their jobs",
+          "the boat trip was also very good and we saw a hippo family, baboons, monkeys and a crocodile, with the boatman taking as much time as we wanted at each location",
+          "who really knows his stuff it was a very nice trip, with a fantastic guide"
+        ],
+        "infrastructure_state": [
+          "we then drove through lots of local villages waving at the happy children who ran behind the jeep expecting to be thrown sweets, we were advised not to throw any sweets as this has been causing tooth decay and also accidents"
+        ],
+        "accessibility_comfort": [
+          "easy communication with the tour company to discuss our requirements",
+          "he always made us feel comfortable and was very knowledgable",
+          "both were very professional and easy to talk to"
+        ],
+        "value_pricing": [
+          "it was interesting, but apart from the arch 22 and a quick wander through the albert market it wasn`t in the same category as the other two tours and i think it was slightly overpriced when you compare the costs of all three tours",
+          "i would definitely recommend going with arch tours - they are good value for money too especially given the tours are private",
+          "this trip is so worth it"
+        ],
+        "safety_security": [
+          "we felt safe the entire time",
+          "we felt very safe and very well looked after by both bara and emel",
+          "both ml and assan were amazing and we felt very safe and looked after by them for the whole trip"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -1.0,
+          "mention_count": 1,
+          "quotes": [
+            "we then drove through lots of local villages waving at the happy children who ran behind the jeep expecting to be thrown sweets, we were advised not to throw any sweets as this has been causing tooth decay and also accidents"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "We arrived by cruise ship for a full day The Gambia experience and were not disappointed",
+          "We did 2 trips with Arch Tours after reading the reviews on Tripadvisor and we weren&#39;t disappointed",
+          "We booked with Arch Tours on recommendations and TA reviews and we we not disappointed",
+          "The buffet was awful consisting of Salad",
+          "We enjoyed the company of our guides on the previous day so much that we were initially disappointed to not see them on our trip to Senegal but our guide Sheriff proved to be just as professional and knowledgeable about the area",
+          "Very disappointing for a &quot;river trip&quot;, one that was expensive too",
+          "After seeing so many good reviews about Arch Tours, I decided to book the 2 days George Town trip with my friend and we were not disappointed",
+          "Well I wasn&#39;t disappointed, we went on the 4 in 1 tour with Bob and Fanta and had a great day, they call it 4 in 1 but actually its 8 in 1 with the different places we visited, it was real eyeopener for us westerners",
+          "Anyone thinking about a trip this is a must and with arch tours you won't be disappointed",
+          "The trip itself is well worth doing if you haven\u2019t been on a safari before, but you maybe disappointed if you have",
+          "I have to say that I was not disappointed",
+          "Fatala National Park was disappointing, especially if you&#39;ve been on a proper safari in Kenya before",
+          "Had read a lot about the great reputation of this company and was not disappointed",
+          "We have never been disappointed",
+          "The only reason we are scoring a four is the return journey was not great as we didn&#39;t actually stop for &#39;lunch&#39; until about five pm, so we were all hungry and tired and the restaurant was not good so we barely ate anything",
+          "Some people rave about the lunch, but we thought it was disappointing - basically salad with more salad",
+          "and was certainly not disappointed"
+        ]
+      },
+      "management_response": {
+        "response_rate": 2.666666666666667,
+        "total_responses": 8,
+        "total_reviews": 300,
+        "gap_opportunity": 292
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.8857142857142857
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.7988095238095237
+        },
+        {
+          "theme": "historical_significance",
+          "score": 0.78125
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "infrastructure_state",
+          "score": -1.0
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "senegambia_birding",
+      "total_reviews": 2,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.55,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 2
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2023": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.55,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "after the excellent hospitality of jim and kaddy we took off with our guide bob (buba) barry and our driver musa",
+          "for us they were a great combination of guide and driver who were not only entertaining, but also very professional in terms of bird spotting, photography, and solving problems when necessary (although there were very little)",
+          "all in all a great gambia birding experience due to the great professional guide bob, the reliable driver musa, the wonderful senegambia organizer jim and his wife kaddy"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 2,
+        "gap_opportunity": 2
+      },
+      "key_strengths": [
+        {
+          "theme": "guide_quality",
+          "score": 0.55
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "fatou_tours",
+      "total_reviews": 19,
+      "average_rating": 4.9,
+      "overall_sentiment": 0.606,
+      "positive_rate": 85.7,
+      "language_distribution": {
+        "en": 19
+      },
+      "year_distribution": {
+        "2024": 3,
+        "2023": 7,
+        "2022": 9
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.36,
+          "mentions": 6,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.67,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.5,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 0.75,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "communications and planning before the trip were excellent, logistics were smoothly dealt with throughout (importantly rapidly switching vehicles via foday&#39;s extensive local network when we had a leaking radiator to ensure the birding schedule was uninterrupted), and he is simply an amazing birder who (unlike many guides in gambia) is genuinely passionate about birding as a hobby rather than just a job"
+        ],
+        "guide_quality": [
+          "communications and planning before the trip were excellent, logistics were smoothly dealt with throughout (importantly rapidly switching vehicles via foday&#39;s extensive local network when we had a leaking radiator to ensure the birding schedule was uninterrupted), and he is simply an amazing birder who (unlike many guides in gambia) is genuinely passionate about birding as a hobby rather than just a job",
+          "i found fatou tours via internet search and communication was very easy and friendly",
+          "gambia is wonderful country with a lovely landscape and friendly people"
+        ],
+        "cultural_value": [
+          "communications and planning before the trip were excellent, logistics were smoothly dealt with throughout (importantly rapidly switching vehicles via foday&#39;s extensive local network when we had a leaking radiator to ensure the birding schedule was uninterrupted), and he is simply an amazing birder who (unlike many guides in gambia) is genuinely passionate about birding as a hobby rather than just a job",
+          "in the afternoon did do boat trip to see the chimpanzees, a unique experience trip and then drive back to senegambia, again birding all the time"
+        ],
+        "ferry_service": [
+          "communications and planning before the trip were excellent, logistics were smoothly dealt with throughout (importantly rapidly switching vehicles via foday&#39;s extensive local network when we had a leaking radiator to ensure the birding schedule was uninterrupted), and he is simply an amazing birder who (unlike many guides in gambia) is genuinely passionate about birding as a hobby rather than just a job"
+        ],
+        "accessibility_comfort": [
+          "i found fatou tours via internet search and communication was very easy and friendly",
+          "receiving and returning car was super easy, they even let us drive to our hotel and afterwards collected the car"
+        ],
+        "value_pricing": [
+          "my wife and i bought a relatively cheap 3 week package deal in a kololi hotel with a travel agency with: a small week relaxing in the beach/hotel with every other day a day trip with fatou tours, a 9 days trip short into senegal and deep into gambia with them and then another small week like the first week (so not using our hotel part of the time, but this was still the cheapest solution for us)",
+          "car rental price was reasonable in compare to other car rentals"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 19,
+        "gap_opportunity": 19
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "value_pricing",
+          "score": 0.75
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "lams_tours",
+      "total_reviews": 128,
+      "average_rating": 4.9,
+      "overall_sentiment": 0.591,
+      "positive_rate": 84.5,
+      "language_distribution": {
+        "en": 128
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2024": 6,
+        "2023": 20,
+        "2022": 10,
+        "2021": 2,
+        "2020": 10,
+        "2019": 15,
+        "2018": 11,
+        "2017": 7,
+        "2016": 9,
+        "2015": 9,
+        "2014": 14,
+        "2013": 12
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.9,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.4,
+          "mentions": 49,
+          "distribution": {
+            "positive": 37,
+            "neutral": 10,
+            "negative": 2
+          }
+        },
+        "cultural_value": {
+          "score": 0.83,
+          "mentions": 42,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.3,
+          "mentions": 21,
+          "distribution": {
+            "positive": 15,
+            "neutral": 4,
+            "negative": 2
+          }
+        },
+        "infrastructure_state": {
+          "score": -0.53,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.72,
+          "mentions": 16,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "value_pricing": {
+          "score": 0.52,
+          "mentions": 15,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 4
+          }
+        },
+        "safety_security": {
+          "score": 0.96,
+          "mentions": 17,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "each stop introduces you to a local area and in guinea bissau you are entertained by a wonderful group of ladies - you can even join the traditional dancing if you like",
+          "our first destination was the stone circles in wassu (a unesco world heritage site), with a small but beautifully designed exhibition and clean restrooms",
+          "the 4wd was with lams himself who is a wonderful guide and explained about the flora and fauna; history and politics and culture"
+        ],
+        "guide_quality": [
+          "the motorbike part of the tour in guinea bissau was also a great idea since the roads are in poor condition and the distance isn&#39;t far",
+          "lams and his colleague bax were extremely friendly and informative",
+          "i also took a return airport transfer which lams organized and smiley was a great lad too - friendly, safe, punctual and welcoming"
+        ],
+        "cultural_value": [
+          "in just a few short days we explored three countries - the gambia, senegal and guinea-bissau, all amazing unique countries with wonderful scenery, food, people, wildlife, culture, and lams and his team got me much closer to all of this than i ever could have done on my own",
+          "highlights included seeing wild chimpanzees and hippos, tasting wonderful street food, seeing how people authentically live, and all the memorable interactions i had with the amazing people of west africa",
+          "many thanks especially to lams, baks and musa especially for making this trip one that i will always remember and keep close to my heart"
+        ],
+        "ferry_service": [
+          "the tour was simply amazing and well organised, with lams ensuring everything went smoothly at every step of the journey",
+          "bacary or lams were at my side at all border crossings which made the whole process very smooth",
+          "communication while i was planning the trip was very good"
+        ],
+        "infrastructure_state": [
+          "the motorbike part of the tour in guinea bissau was also a great idea since the roads are in poor condition and the distance isn&#39;t far",
+          "the complex is not in good condition, but that was easily rectified by the fort&#39;s curator, who told us so many interesting facts that it was a joy",
+          "our first destination was the stone circles in wassu (a unesco world heritage site), with a small but beautifully designed exhibition and clean restrooms"
+        ],
+        "accessibility_comfort": [
+          "he made the logistics very easy and did a great job",
+          "he is also very nice and easy going",
+          "the process of going through multiple borders was pretty easy"
+        ],
+        "value_pricing": [
+          "we didn&#39;t spend that much time in guinea-bissau itself, but the trip was nevertheless well worth it, as both lams and bax are truly kind and hospitable guides with a lot of knowledge that they shared with us",
+          "the cost was definitely not worth such a short time at the circles",
+          "this tour was ideal in every way\u2014the plan, the a/c vehicle, the safe driver, the experience of the guides, the sights we saw, the understanding we gained, and the reasonable price"
+        ],
+        "safety_security": [
+          "i also took a return airport transfer which lams organized and smiley was a great lad too - friendly, safe, punctual and welcoming",
+          "border crossings are smooth, everything is well organized and safe",
+          "if you want a legitimate, &quot;authentic&quot; experience in a new country/countries while still feeling comfortable and safe, lams is perfect"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.5333333333333333,
+          "mention_count": 3,
+          "quotes": [
+            "the motorbike part of the tour in guinea bissau was also a great idea since the roads are in poor condition and the distance isn&#39;t far",
+            "the complex is not in good condition, but that was easily rectified by the fort&#39;s curator, who told us so many interesting facts that it was a joy",
+            "our first destination was the stone circles in wassu (a unesco world heritage site), with a small but beautifully designed exhibition and clean restrooms"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "The motorbike part of the tour in Guinea Bissau was also a great idea since the roads are in poor condition and the distance isn&#39;t far",
+          "I booked with lams tours before I got to The Gambia I was not disappointed Our guide was called Smiley and he was as great We did two trips one to the Fathala game reserve in Senegal He is very punctual and knowledgable We are returning to The Gambia next year and will definitely be booking some more tours",
+          "The reserve is beautiful, but anyone who&#39;s ever been on a safari in the wild will be a bit disappointed: the number of animals is very limited, and they usually stand &quot;arranged&quot; at the few watering holes",
+          "Once we met Lams we knew our trips would be exactly we wanted and we weren&#39;t let down",
+          "Booked before we visited Gambia after reading reviews, and were not disappointed",
+          "we then went to visit a local family living in very poor conditions this was a very humbling experience this family had no food yet could still smile(we left this family with a bag of rice and tears in my wifes eyes)we then made our way to paradise beach and had our lunch this place was amazing",
+          "Good trip but let down by the fact that you are steered towards street sellers by the guides",
+          "Wasn't disappointed, and they really look after you",
+          "Give Lams Tours a try - you won&#39;t be disappointed",
+          "I promise you won&#39;t get disappointed",
+          "Very professional, knowledgeable,reliable and good value for money does a good variety of trips will tailor make them to your needs, if you choose to use him you will not be disappointed"
+        ]
+      },
+      "management_response": {
+        "response_rate": 2.34375,
+        "total_responses": 3,
+        "total_reviews": 128,
+        "gap_opportunity": 125
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.9607843137254901
+        },
+        {
+          "theme": "historical_significance",
+          "score": 0.9
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.8297619047619048
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "infrastructure_state",
+          "score": -0.5333333333333333
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "black_white_safari",
+      "total_reviews": 300,
+      "average_rating": 4.9,
+      "overall_sentiment": 0.64,
+      "positive_rate": 90.6,
+      "language_distribution": {
+        "en": 300
+      },
+      "year_distribution": {
+        "2025": 16,
+        "2024": 26,
+        "2023": 34,
+        "2022": 21,
+        "2021": 6,
+        "2020": 15,
+        "2019": 60,
+        "2018": 39,
+        "2017": 31,
+        "2016": 49,
+        "2015": 3
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.83,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.53,
+          "mentions": 141,
+          "distribution": {
+            "positive": 125,
+            "neutral": 16,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.74,
+          "mentions": 117,
+          "distribution": {
+            "positive": 114,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.45,
+          "mentions": 41,
+          "distribution": {
+            "positive": 31,
+            "neutral": 9,
+            "negative": 1
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.53,
+          "mentions": 28,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 5
+          }
+        },
+        "value_pricing": {
+          "score": 0.63,
+          "mentions": 23,
+          "distribution": {
+            "positive": 20,
+            "neutral": 1,
+            "negative": 2
+          }
+        },
+        "safety_security": {
+          "score": 0.93,
+          "mentions": 51,
+          "distribution": {
+            "positive": 50,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "amazing experience with sophie in her beautiful home, shopping, cooking and eating traditional gambian food",
+          "it was amazing we saw a traditional gambian compound, went to the market to buy fresh food and fish then we returned to the compound to cook two complete meals that would feed 30 people",
+          "our lovely guide lamin looked after us and gave us so much information about the culture and history of this amazing country"
+        ],
+        "guide_quality": [
+          "lamin our lovely guide was a wealth of knowledge & experience & also very helpful",
+          "lamin was so knowledgeable and taught us loads of interesting things on our drive through banjul to the port",
+          "our guide, mohamed was excellent at looking after us and was very knowledgeable about all the places"
+        ],
+        "cultural_value": [
+          "________________________________________ 2) fathala wildlife reserve: game viewing, walking with lions, and the roots tour everyone was thrilled with the game drive and the unique opportunity to walk with lions \u2013 a truly exhilarating experience",
+          "along the way, we experienced authentic rural gambia \u2013 an eye-opening and humbling journey",
+          "i cannot recommend black and white safari highly enough \ufffd\ufffd thank you for making our adventure so special"
+        ],
+        "ferry_service": [
+          "we knew what we wanted to do as we had done some trips 12 years earlier we decided to do fatala with walk with lions this is fantastic a good day out lots of memories ,lamin our tour guide was fantastic on the tour looked after us going through seagal boarder which is a bit mad now",
+          "if you book with b&amp;w safari, you will get good service and will feel safe",
+          "for the 2nd trip we did the four wheel drive which again was a fantastic day we visited the crocodile park and stroked the crocodiles, we visited the markets which was good to see but it was definitely an eye opener, we hosted a school where the children were so happy and in their classes they demonstrated what theyve learned, we also visited the wood carving factory which was ok but it wasn&#39;t really a factory it was more just a wood carving market really and every stall holder had carved the same thing, from there we went onto paradise beach for some lunch and a little relax time, the 2 of us and the other couple that were with us weren&#39;t interested in the fish factory which was to follow the paradise beach so therefore they gave us more time at the beach armstrong and his team are lovely people very knowledgeable and helpful i would highly recommend these trips and definitely through this company"
+        ],
+        "accessibility_comfort": [
+          "the care, patience, and knowledge shown by the guides made every moment enriching, accessible, and deeply memorable",
+          "________________________________________ final thoughts: every single excursion was made accessible and enjoyable, even for guests with mobility challenges",
+          "arms made everything so easy when booking"
+        ],
+        "value_pricing": [
+          "________________________________________ 3) wild chimpanzee experience at baboon island this was a long day with about 10 hours of driving, but absolutely worth it",
+          "a big thank you to our drivers and tour guides on the safari across to senegal, the whole day is a great experience and even though we did not do the lion walk it was still so worth it",
+          "by email the boss told me that the visit to fathala was worth it in the end too much vegetation so no animals were seen except 3 giraffes 5 zebras and 3 small warthogs for 6 hours round trip it&#39;s expensive to pay the boss didn&#39;t even offer a partial refund"
+        ],
+        "safety_security": [
+          "your safety and comfort is paramount to them",
+          "i was alone with my daughter and felt safe and well looked after from start to finish",
+          "we instantly felt safe and welcomed"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "I can go on and we have never been let down",
+          "We booked three tours with B &amp; W, the safari with lion walk, the four wheel drive, and the lazy day fishing and were not disappointed",
+          "The tours were reasonably priced and  we were not disappointed",
+          "Post lion walk we did the safari not bad but does t compare to the big safaris I&#39;ve been lucky enough to do in Kenya but for first timers you won&#39;t be disappointed",
+          "The park itself is a bit disappointing",
+          "Me and my Girlfriend visited Gambia for the first time last week and through recommendation from a friend decided to book 2 tours with Black and White and we we&#39;re not disappointed",
+          "We were not disappointed, we had a couple of questions about their web site and the owner Armstrong sent us his whats app number and we conversed a few times before booking",
+          "I think he was slightly disappointed that we did not wish to arrange further excursions (our hotel had its own taxi driver on call so we were sorted for all the local trips we wanted to take)",
+          "I think if anyone is disappointed with a tour then this is down to some unreal expectations they had as the company is always honest, realistic and truthful",
+          "everyone i spoke to was disappointed that booked with the holiday rep and wished they had booked our one",
+          "Another thing is that our driver on that trip was not good",
+          "Don't hesitate to book your trips with B&W, you will never be disappointed - all the guides are very well trained, very informative and helpful, caring and looking after you, making everything for you to have a memorable, safe, fantastic and unforgettable holiday"
+        ]
+      },
+      "management_response": {
+        "response_rate": 4.333333333333334,
+        "total_responses": 13,
+        "total_reviews": 300,
+        "gap_opportunity": 287
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.9313725490196079
+        },
+        {
+          "theme": "historical_significance",
+          "score": 0.8333333333333334
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.7387057387057387
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "omi_tours",
+      "total_reviews": 31,
+      "average_rating": 4.7,
+      "overall_sentiment": 0.773,
+      "positive_rate": 95.2,
+      "language_distribution": {
+        "en": 31
+      },
+      "year_distribution": {
+        "2025": 8,
+        "2024": 7,
+        "2023": 10,
+        "2022": 3,
+        "2021": 3
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.48,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.88,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.47,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "omar was very friendly and had a lot to share, and we could also ask him anything",
+          "a reliable and knowledgeable guide who truly cares about delivering a quality experience",
+          "omi was kind, friendly, interesting, helpful, reliable and honest"
+        ],
+        "cultural_value": [
+          "one advantage of a tour with omar compared to one with, for example, tui, is that it&#39;s much more authentic, and there are more options if you want to see more",
+          "we had a brilliant adventure, with some interesting characters along the journey, tried some local food, and got to experience things we would never have back home in england",
+          "the game drive was lots of fun with our entertaining guide, lamin and omi also allowed us to experience a delicious lunch of local gambian food, as well as enabling us to greet many local children to the sounds of &#39;hello toubab&#39;"
+        ],
+        "ferry_service": [
+          "he organized everything - picking us up from our hotel in kotu, helping us navigate the river crossing by wooden boat (as the ferry was out of action), providing drinks and delicious omelettes for breakfast and helping us through the border crossings quickly and efficiently",
+          "omi tours are so good because they are personal tours and omi and his driver really looked after us and we always felt safe i can thoroughly recommend them and this trip out of ten",
+          "overall a very good trip and i would suggest to anyone to reach out before their trip to the gambia to organise a trip with him"
+        ],
+        "accessibility_comfort": [
+          "he made sure we were comfortable, well-informed and able to make the most out of our short time",
+          "omar is such a jolly and easy-going person, and gave us a really good insight into the history and life in the gambia",
+          "at the senegalese border, we switched from car to a less comfortable shared taxi"
+        ],
+        "safety_security": [
+          "omi is a responsive communicator, we felt physically safe with our guide, kumuna (who was cheerful and did his best), the vehicle they put us in never broke down, the driver was responsible, and all were very knowledgable about the gambia",
+          "it&#39;d be possible to do the trip yourself on public transport but, for us, traveling with omar was a great decision, as we felt safe and confident in his skills",
+          "at the border crossing he just pointed us where to go and waited for us and straight back in the jeep so everything was quick and easy most importantly, we felt safe as long as he was in sight"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 3.225806451612903,
+        "total_responses": 1,
+        "total_reviews": 31,
+        "gap_opportunity": 30
+      },
+      "key_strengths": [
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.8833333333333332
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "african_adventure_tours",
+      "total_reviews": 32,
+      "average_rating": 4.2,
+      "overall_sentiment": 0.703,
+      "positive_rate": 89.2,
+      "language_distribution": {
+        "en": 32
+      },
+      "year_distribution": {
+        "2024": 2,
+        "2023": 2,
+        "2020": 3,
+        "2019": 5,
+        "2018": 9,
+        "2017": 6,
+        "2016": 1,
+        "2015": 2,
+        "2014": 1,
+        "2013": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.54,
+          "mentions": 15,
+          "distribution": {
+            "positive": 14,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.92,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.48,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": -0.33,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "our friendly and helpful guide (kit) was very informative and organized everything perfectly",
+          "in any case, i&#39;m very enthusiastic about the trips, and the staff is very friendly",
+          "we went to places we otherwise would never have, and always with excellent guidance from the guides"
+        ],
+        "cultural_value": [
+          "we saw so many beautiful birds, which was truly special",
+          "what a special country with friendly people",
+          "you drive through the serrrekunda market to a local school (so if you can, bring some pens, pencils, or other items)"
+        ],
+        "ferry_service": [
+          "i don&#39;t know how many people hold the ferry but whatever the number is, at least four times that many were trying to board it, getting us caught up in a good ol&#39; near-stampede",
+          "a colorful scene, especially the return trip, with people bringing all sorts of goods, including goats",
+          "they are a gambian company, trying to provide proper jobs for locals as well as good service to tourists"
+        ],
+        "accessibility_comfort": [
+          "the 4 wheel was in good shape and comfortable for the whole day",
+          "but they have comfortable transport, complementary drinks, helpful and knowledgeable guides and good drivers"
+        ],
+        "value_pricing": [
+          "they offer overpriced excursions with overly large groups"
+        ],
+        "safety_security": [
+          "our driver, omar, drove us safely everywhere",
+          "we felt safe and welcome the whole day",
+          "definitely top guidance, very safe, the safari was the 2nd, also great to find all the animals, wow 2 x with lamin as a guide, (lamin 1 and lamin 2, both top) 100% reliable, punctual and safe"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Value Pricing",
+          "sentiment_score": -0.3333333333333333,
+          "mention_count": 1,
+          "quotes": [
+            "they offer overpriced excursions with overly large groups"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "The two-day Gambia adventure excursion was so good and wonderful, but the excursion to southern Senegal was just as terrible"
+        ]
+      },
+      "management_response": {
+        "response_rate": 3.125,
+        "total_responses": 1,
+        "total_reviews": 32,
+        "gap_opportunity": 31
+      },
+      "key_strengths": [
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.925
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "value_pricing",
+          "score": -0.3333333333333333
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "aji_tours",
+      "total_reviews": 33,
+      "average_rating": 4.7,
+      "overall_sentiment": 0.742,
+      "positive_rate": 91.4,
+      "language_distribution": {
+        "en": 33
+      },
+      "year_distribution": {
+        "2025": 12,
+        "2024": 9,
+        "2022": 1,
+        "2020": 9,
+        "2019": 2
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.7,
+          "mentions": 10,
+          "distribution": {
+            "positive": 9,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.88,
+          "mentions": 12,
+          "distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.39,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": -0.4,
+          "mentions": 2,
+          "distribution": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "what an absolutely brilliant lady walking history book she is i can&#39;t thank her enough for taking us to kunta kinta island i have read the book watched the program on tv nothing and i mean absolutely nothing compares about actually being there for real the museum had me in tears i was shocked at just what people went to throw heartbreaking but i am so so glad i went aji is such a wonderful lady her knowledge on everything was amazing the only lady touring guide in gambia and i won&#39;t go with anyone else i&#39;m glad my boyfriend malang sanneh was with me my rock aji i can&#39;t thank you enough i will definitely be coming back and hopefully booking the 2 day tour anyone wanting to go on trips i very highly recommend aji tours xxxx",
+          "she is amazing person with great knowledge about her countyside, history and local usages"
+        ],
+        "guide_quality": [
+          "she is very friendly and everything was included, even drinks",
+          "with aji i experienced the trip of a lifetime in the lion walk- \naji is a knowledgeable tour guide and goes out of her way to make sure you have the best experience",
+          "she&#39;s a determined, friendly, and positive gambian woman"
+        ],
+        "cultural_value": [
+          "she is amazing person with great knowledge about her countyside, history and local usages",
+          "booked this tour with ali, a local man",
+          "the food was delicious and traditionally prepared"
+        ],
+        "ferry_service": [
+          "aji is very good at what she does, and when i return to the gambia i'll use her services again",
+          "(there is only one in fathala) on the way back to the ferry we had a nice lunch at a local place",
+          "- a trip to serrekunda market where you can purchase and barter for goods"
+        ],
+        "accessibility_comfort": [
+          "he made us feel very comfortable and safe and we had an unforgettable day",
+          "her office is opposite boss lady restaurant in kotu and easy to find"
+        ],
+        "value_pricing": [
+          "what this little woman can&#39;t do, it&#39;s not worth being able to do \ud83d\ude0d after our trips, she sent the most beautiful pictures that she took of us on the trip - so at the same time as being our guide, she was also our photographer \ud83d\ude4f she has our warmest recommendations - and she will be the first person we will contact when we (soon) go to gambia again",
+          "my favorite thing about aji was the fact she is empowering local women (and herself) to succeed in a male dominated industry and is working very hard to ensure every customer is satisfied at a fair price"
+        ],
+        "safety_security": [
+          "we heard from several locals that she&#39;s reliable and that we could safely book with her",
+          "he made us feel very comfortable and safe and we had an unforgettable day",
+          "we saw the real gambia in a 4x4 jeep with a skilled driver, where safety was paramount"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Value Pricing",
+          "sentiment_score": -0.4,
+          "mention_count": 2,
+          "quotes": [
+            "what this little woman can&#39;t do, it&#39;s not worth being able to do \ud83d\ude0d after our trips, she sent the most beautiful pictures that she took of us on the trip - so at the same time as being our guide, she was also our photographer \ud83d\ude4f she has our warmest recommendations - and she will be the first person we will contact when we (soon) go to gambia again",
+            "my favorite thing about aji was the fact she is empowering local women (and herself) to succeed in a male dominated industry and is working very hard to ensure every customer is satisfied at a fair price"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 3.0303030303030303,
+        "total_responses": 1,
+        "total_reviews": 33,
+        "gap_opportunity": 32
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "value_pricing",
+          "score": -0.4
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "eco_tours",
+      "total_reviews": 19,
+      "average_rating": 4.5,
+      "overall_sentiment": 0.57,
+      "positive_rate": 85.0,
+      "language_distribution": {
+        "en": 19
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2024": 1,
+        "2019": 4,
+        "2018": 5,
+        "2017": 7,
+        "2016": 1
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.5,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.28,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.75,
+          "mentions": 8,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.83,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "value_pricing": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "our guide demba was just amazing, gave us a lot of information about history and living style of gambia"
+        ],
+        "guide_quality": [
+          "- punctual - well organized - helpful - friendly",
+          "they were, without exception, knowledgeable and engaging and could answer any questions we had",
+          "excellent local tour guides"
+        ],
+        "cultural_value": [
+          "i can only recommend ecotours, especially because the profits enable around 50 children to go to school, including uniforms, breakfast, and learning materials",
+          "he took care about us all the time, giving us fresh drinks and making us smile :) we had a great opportunity to see the chimpanzees and baboons on the river gambia, to meet and spend some time with the local people, take knowledge about the great gambian history of slavery",
+          "day 2 - breakfast, walking city tour of jangjanbureh, drive to rice fields for a walk and tour, visit local family in remote village, lunch, drive to tendaba camp for a few hours of relaxation (they have lovely accommodation and swimming pool), dinner and overnight stay"
+        ],
+        "ferry_service": [
+          "we had a trip together with demba who worked at ecoutours, he was a very good storyteller and knew many interessant places",
+          "particular highlights were the very warm welcome at the village community we visited, seeing a family of wild hippos on the boat trip and experiencing good local food for every meal",
+          "two very good and nice guides took us for a great trip"
+        ],
+        "accessibility_comfort": [
+          "despite the difficult nature of the roots tour (learning how the gambia and its people were impacted by the slave trade) we felt it was a very important part to visiting gambia and demba&#39;s local knowledge and charm made both trips enjoyable",
+          "guides on our boat trips for birding and chimpanzees were knowledgeable and easy to talk to"
+        ],
+        "value_pricing": [
+          "hats off to demba and amadou, they delivered a great trip for a reasonable price"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 19,
+        "gap_opportunity": 19
+      },
+      "key_strengths": [
+        {
+          "theme": "value_pricing",
+          "score": 1.0
+        },
+        {
+          "theme": "ferry_service",
+          "score": 0.8333333333333334
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.75
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "santosu_tours",
+      "total_reviews": 25,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.619,
+      "positive_rate": 90.9,
+      "language_distribution": {
+        "en": 25
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2023": 2,
+        "2022": 1,
+        "2021": 1,
+        "2020": 1,
+        "2019": 6,
+        "2018": 4,
+        "2017": 4,
+        "2016": 5
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.44,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.78,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.5,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "you will see all the beautiful, cultural (real life) spots at your own pace"
+        ],
+        "guide_quality": [
+          "yaya&#39;s team consists of excellent drivers and guides",
+          "the service on both day trips was also excellent",
+          "we were also struck by the informative explanations we received about the sights and culture of gambia"
+        ],
+        "cultural_value": [
+          "santosu goes beyond simply showing us the attractions; they share extensive insights into local customs, which gives the excursions a deeper meaning",
+          "all in all, we highly recommend santosu to anyone looking for a unique and personalized excursion experience",
+          "the great thing is that the money doesn&#39;t go into the pockets of the big companies, but truly benefits the locals"
+        ],
+        "accessibility_comfort": [
+          "participants are well looked after during the excursions, including plenty of drinks to ensure everyone stays comfortable and hydrated"
+        ],
+        "value_pricing": [
+          "they have all the necessary documentation and will show you the real gambia, and they&#39;re also cheaper"
+        ],
+        "safety_security": [
+          "we also felt it was important that max drove very safely",
+          "we felt very safe during all our trips",
+          "so you&#39;re in safe hands"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 25,
+        "gap_opportunity": 25
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "value_pricing",
+          "score": 1.0
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    }
+  ]
+}

@@ -1,0 +1,1178 @@
+{
+  "summary_stats": {
+    "total_analyzed": 239,
+    "unique_operators": 32,
+    "source_markets": 13,
+    "source_market_list": [
+      "Denmark",
+      "Finland",
+      "Germany",
+      "International",
+      "Netherlands",
+      "Spain",
+      "Sweden",
+      "UK",
+      "UK (TUI Group)",
+      "USA",
+      "Unknown",
+      "Unknown (Greek / Cyprus / UK)",
+      "West Africa"
+    ],
+    "tour_pages": 176,
+    "destination_pages": 63,
+    "tours_by_country": {
+      "Ghana": 75,
+      "Senegal": 53,
+      "Gambia": 36,
+      "Cape Verde": 26,
+      "Benin": 42,
+      "Nigeria": 7
+    },
+    "analysis_date": "2025-10-10"
+  },
+  "gambia_standalone": {
+    "total_tours": 36,
+    "avg_creative_score": 16.9,
+    "avg_sentiment": 0.26,
+    "sentiment_breakdown": {
+      "positive": 18,
+      "neutral": 18,
+      "negative": 0,
+      "positive_pct": 50.0
+    },
+    "top_themes": {
+      "Wildlife/Nature": 32,
+      "Beach/Resort": 31,
+      "Cultural Heritage": 24,
+      "Birding/Specialist": 8,
+      "Adventure": 7
+    },
+    "sector_averages": {
+      "heritage": 4.4,
+      "crafts": 2.9,
+      "music": 1.2,
+      "performing_arts": 1.4,
+      "festivals": 0.4,
+      "audiovisual": 1.3,
+      "fashion": 1.2,
+      "publishing": 0.7
+    },
+    "best_tours": [
+      {
+        "operator": "Responsible Travel",
+        "url": "https://www.responsibletravel.com/holiday/33807/gambia-and-senegal-river-cruise-holiday",
+        "creative_score": 66.2,
+        "page_type": "Tour/Itinerary"
+      },
+      {
+        "operator": "Naturetrek",
+        "url": "https://www.naturetrek.co.uk/tours/the-gambia-in-style-photography-special",
+        "creative_score": 60.0,
+        "page_type": "Tour/Itinerary"
+      },
+      {
+        "operator": "Responsible Travel",
+        "url": "https://www.responsibletravel.com/holiday/2774/senegal-and-gambia-river-cruise-holiday",
+        "creative_score": 38.8,
+        "page_type": "Tour/Itinerary"
+      },
+      {
+        "operator": "Overlanding West Africa",
+        "url": "https://www.overlandingwestafrica.com/dakar-to-freetown/",
+        "creative_score": 37.5,
+        "page_type": "Tour/Itinerary"
+      },
+      {
+        "operator": "The Gambia Experience",
+        "url": "https://www.gambia.co.uk/rivers-of-west-africa-7-night-cruise?rg=19000425&oo=false&back=true",
+        "creative_score": 32.5,
+        "page_type": "Tour/Itinerary"
+      }
+    ],
+    "worst_tours": [
+      {
+        "operator": "Tjareborg",
+        "url": "https://www.tjareborg.fi/gambia",
+        "creative_score": 1.2,
+        "page_type": "Destination Page"
+      },
+      {
+        "operator": "Neckermann Reisen",
+        "url": "https://neckermann.be/nl/vakanties/exotische-vakanties/gambia",
+        "creative_score": 0.0,
+        "page_type": "Destination Page"
+      },
+      {
+        "operator": "Overlanding West Africa",
+        "url": "https://www.overlandingwestafrica.com/trip-overview-availability/",
+        "creative_score": 0.0,
+        "page_type": "Destination Page"
+      },
+      {
+        "operator": "The Gambia Experience",
+        "url": "https://www.gambia.co.uk/",
+        "creative_score": 0.0,
+        "page_type": "Destination Page"
+      },
+      {
+        "operator": "Thomas Cook UK",
+        "url": "https://www.thomascook.com/holidays/gambia/package",
+        "creative_score": 0.0,
+        "page_type": "Destination Page"
+      }
+    ],
+    "packaging": {
+      "pure_count": 24,
+      "multi_count": 12,
+      "pure_pct": 66.7,
+      "pure_avg_score": 13.3,
+      "multi_avg_score": 24.2
+    }
+  },
+  "regional_comparison": {
+    "Gambia": {
+      "tour_count": 36,
+      "avg_creative_score": 16.9,
+      "avg_sentiment": 0.26,
+      "sector_scores": {
+        "heritage": 4.4,
+        "crafts": 2.9,
+        "music": 1.2,
+        "performing_arts": 1.4,
+        "festivals": 0.4,
+        "audiovisual": 1.3,
+        "fashion": 1.2,
+        "publishing": 0.7
+      }
+    },
+    "Senegal": {
+      "tour_count": 53,
+      "avg_creative_score": 29.1,
+      "avg_sentiment": 0.22,
+      "sector_scores": {
+        "heritage": 8.3,
+        "crafts": 3.7,
+        "music": 2.3,
+        "performing_arts": 1.6,
+        "festivals": 1.7,
+        "audiovisual": 1.5,
+        "fashion": 1.9,
+        "publishing": 2.2
+      }
+    },
+    "Ghana": {
+      "tour_count": 75,
+      "avg_creative_score": 39.5,
+      "avg_sentiment": 0.24,
+      "sector_scores": {
+        "heritage": 8.2,
+        "crafts": 6.1,
+        "music": 2.4,
+        "performing_arts": 3.3,
+        "festivals": 3.5,
+        "audiovisual": 1.7,
+        "fashion": 4.5,
+        "publishing": 2.0
+      }
+    },
+    "Cape Verde": {
+      "tour_count": 26,
+      "avg_creative_score": 10.4,
+      "avg_sentiment": 0.32,
+      "sector_scores": {
+        "heritage": 3.4,
+        "crafts": 1.0,
+        "music": 1.8,
+        "performing_arts": 0.4,
+        "festivals": 0.7,
+        "audiovisual": 0.5,
+        "fashion": 0.4,
+        "publishing": 0.1
+      }
+    },
+    "Benin": {
+      "tour_count": 42,
+      "avg_creative_score": 51.8,
+      "avg_sentiment": 0.19,
+      "sector_scores": {
+        "heritage": 8.9,
+        "crafts": 8.0,
+        "music": 3.6,
+        "performing_arts": 6.3,
+        "festivals": 6.8,
+        "audiovisual": 1.8,
+        "fashion": 4.5,
+        "publishing": 1.6
+      }
+    },
+    "Nigeria": {
+      "tour_count": 7,
+      "avg_creative_score": 37.7,
+      "avg_sentiment": 0.2,
+      "sector_scores": {
+        "heritage": 9.7,
+        "crafts": 7.6,
+        "music": 2.7,
+        "performing_arts": 1.7,
+        "festivals": 3.0,
+        "audiovisual": 0.9,
+        "fashion": 3.4,
+        "publishing": 1.1
+      }
+    }
+  },
+  "packaging_analysis": {
+    "pure_vs_multi": {
+      "pure_count": 24,
+      "multi_count": 12
+    },
+    "co_occurrence_counts": {
+      "Senegal": 11,
+      "Guinea": 3,
+      "Guinea-Bissau": 3,
+      "Ghana": 2,
+      "Sierra Leone": 2,
+      "Mauritania": 2,
+      "Ivory Coast": 2,
+      "Benin": 1,
+      "Liberia": 1,
+      "Togo": 1
+    },
+    "avg_gambia_focus_in_multi": 52.6,
+    "most_common_combinations": [
+      [
+        "Senegal",
+        11
+      ],
+      [
+        "Guinea",
+        3
+      ],
+      [
+        "Guinea-Bissau",
+        3
+      ],
+      [
+        "Ghana",
+        2
+      ],
+      [
+        "Sierra Leone",
+        2
+      ]
+    ]
+  },
+  "page_type_comparison": {
+    "tour_itineraries": {
+      "count": 176,
+      "avg_creative_score": 39.1,
+      "avg_word_count": 8271,
+      "avg_sentiment": 0.21,
+      "sector_averages": {
+        "heritage": 8.4,
+        "crafts": 5.9,
+        "music": 2.7,
+        "performing_arts": 3.4,
+        "festivals": 3.4,
+        "audiovisual": 1.8,
+        "fashion": 3.5,
+        "publishing": 2.0
+      }
+    },
+    "destination_pages": {
+      "count": 63,
+      "avg_creative_score": 15.1,
+      "avg_word_count": 2703,
+      "avg_sentiment": 0.32,
+      "sector_averages": {
+        "heritage": 4.2,
+        "crafts": 2.1,
+        "music": 1.5,
+        "performing_arts": 1.0,
+        "festivals": 1.4,
+        "audiovisual": 0.4,
+        "fashion": 1.2,
+        "publishing": 0.2
+      }
+    }
+  },
+  "gap_analysis": {
+    "Senegal": {
+      "overall_gap": 12.2,
+      "sector_gaps": {
+        "heritage": 3.9,
+        "crafts": 0.8,
+        "music": 1.1,
+        "performing_arts": 0.2,
+        "festivals": 1.3,
+        "audiovisual": 0.2,
+        "fashion": 0.7,
+        "publishing": 1.5
+      },
+      "biggest_gap_sector": "heritage"
+    },
+    "Ghana": {
+      "overall_gap": 22.6,
+      "sector_gaps": {
+        "heritage": 3.8,
+        "crafts": 3.2,
+        "music": 1.2,
+        "performing_arts": 1.9,
+        "festivals": 3.1,
+        "audiovisual": 0.4,
+        "fashion": 3.3,
+        "publishing": 1.3
+      },
+      "biggest_gap_sector": "heritage"
+    },
+    "Cape Verde": {
+      "overall_gap": -6.5,
+      "sector_gaps": {
+        "heritage": -1.0,
+        "crafts": -1.9,
+        "music": 0.6,
+        "performing_arts": -1.0,
+        "festivals": 0.3,
+        "audiovisual": -0.8,
+        "fashion": -0.8,
+        "publishing": -0.6
+      },
+      "biggest_gap_sector": "crafts"
+    },
+    "Benin": {
+      "overall_gap": 34.9,
+      "sector_gaps": {
+        "heritage": 4.5,
+        "crafts": 5.1,
+        "music": 2.4,
+        "performing_arts": 4.9,
+        "festivals": 6.4,
+        "audiovisual": 0.5,
+        "fashion": 3.3,
+        "publishing": 0.9
+      },
+      "biggest_gap_sector": "festivals"
+    },
+    "Nigeria": {
+      "overall_gap": 20.8,
+      "sector_gaps": {
+        "heritage": 5.3,
+        "crafts": 4.7,
+        "music": 1.5,
+        "performing_arts": 0.3,
+        "festivals": 2.6,
+        "audiovisual": -0.4,
+        "fashion": 2.2,
+        "publishing": 0.4
+      },
+      "biggest_gap_sector": "heritage"
+    }
+  },
+  "operator_insights": {
+    "all_operators": {
+      "African Travel Seminars": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 5.7,
+        "avg_sentiment": 0.25,
+        "source_country": "USA",
+        "sample_urls": [
+          "https://www.africantravelseminars.com/ghana",
+          "https://www.africantravelseminars.com/senegal"
+        ]
+      },
+      "Apollo": {
+        "tour_count": 5,
+        "countries_covered": [
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 10.0,
+        "avg_sentiment": 0.3,
+        "source_country": "Sweden",
+        "sample_urls": [
+          "https://www.birdingecotours.com/tours/destination/senegal-birding-tours/",
+          "https://www.birdingecotours.com/tour/owls-west-africa/",
+          "https://www.birdingecotours.com/tours/destination/ghana-birding-tours/"
+        ]
+      },
+      "Birding Ecotours": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 9.3,
+        "avg_sentiment": 0.15,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.birdingecotours.com/tour/birding-tour-gambia-gateway-to-africa/",
+          "https://www.birdingecotours.com/destination/gambia-birding-tours/"
+        ]
+      },
+      "Corendon": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 13.1,
+        "avg_sentiment": 0.8,
+        "source_country": "Netherlands",
+        "sample_urls": [
+          "https://www.corendon.nl/kaapverdie",
+          "https://www.corendon.nl/gambia"
+        ]
+      },
+      "Explore": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Gambia",
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 38.7,
+        "avg_sentiment": 0.17,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.explore.co.uk/destinations/africa/the-gambia",
+          "https://www.explore.co.uk/holidays/senegal-and-the-gambia",
+          "https://www.explore.co.uk/holidays/best-of-ghana"
+        ]
+      },
+      "First Choice": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 11.2,
+        "avg_sentiment": 0.37,
+        "source_country": "UK (TUI Group)",
+        "sample_urls": [
+          "https://www.firstchoice.co.uk/holiday/deals/tailored-deals?units[]=GMB",
+          "https://www.firstchoice.co.uk/holiday/location/overview/Gambia-GMB",
+          "https://www.firstchoice.co.uk/holiday/location/overview/Cape-Verde-CPV"
+        ]
+      },
+      "Fleewinter": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 13.8,
+        "avg_sentiment": 0.2,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/"
+        ]
+      },
+      "Hays Travel": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 16.2,
+        "avg_sentiment": 0.45,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.haystravel.co.uk/destinations/cape-verde/",
+          "https://www.haystravel.co.uk/destinations/africa/gambia/"
+        ]
+      },
+      "Holiday Hypermarket": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 23.3,
+        "avg_sentiment": 0.5,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.holidayhypermarket.co.uk/destinations/cape-verde-islands",
+          "https://www.holidayhypermarket.co.uk/destinations/senegal",
+          "https://www.holidayhypermarket.co.uk/destinations/gambia"
+        ]
+      },
+      "Intrepid Travel UK": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 16.9,
+        "avg_sentiment": 0.15,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.intrepidtravel.com/uk/gambia",
+          "https://www.intrepidtravel.com/uk/senegal/senegal-gambia-adventure-161244"
+        ]
+      },
+      "Luxotour": {
+        "tour_count": 4,
+        "countries_covered": [
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 20.9,
+        "avg_sentiment": 0.03,
+        "source_country": "Spain",
+        "sample_urls": [
+          "https://www.luxotour.com/en/africa/gambia",
+          "https://www.luxotour.com/en/africa/gambia/sindola-and-south-gambia",
+          "https://www.luxotour.com/en/africa/senegal/ethnic-senegal"
+        ]
+      },
+      "Naturetrek": {
+        "tour_count": 7,
+        "countries_covered": [
+          "Gambia",
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 52.7,
+        "avg_sentiment": 0.06,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.naturetrek.co.uk/destinations/africa/gambia",
+          "https://www.naturetrek.co.uk/tours/ghana-the-butterflies-of-west-africa",
+          "https://www.naturetrek.co.uk/tours/ghana-picathartes-and-pangolins"
+        ]
+      },
+      "Neckermann": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Senegal"
+        ],
+        "avg_creative_score": 1.2,
+        "avg_sentiment": 0.45,
+        "source_country": "Germany",
+        "sample_urls": [
+          "https://neckermann.be/nl/vakanties/exotische-vakanties/kaapverdie",
+          "https://neckermann.be/nl/vakanties/exotische-vakanties/senegal"
+        ]
+      },
+      "Neckermann Reisen": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 0.0,
+        "avg_sentiment": 0.3,
+        "source_country": "Germany",
+        "sample_urls": [
+          "https://neckermann.be/nl/vakanties/exotische-vakanties/gambia"
+        ]
+      },
+      "Olympic Holidays": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 30.0,
+        "avg_sentiment": 0.5,
+        "source_country": "Unknown (Greek / Cyprus / UK)",
+        "sample_urls": [
+          "https://www.olympicholidays.com/destinations/the-gambia/"
+        ]
+      },
+      "Overlanding West Africa": {
+        "tour_count": 7,
+        "countries_covered": [
+          "Gambia",
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 29.8,
+        "avg_sentiment": 0.3,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.overlandingwestafrica.com/trip-overview-availability/",
+          "https://www.overlandingwestafrica.com/dakar-to-marrakech/",
+          "https://www.overlandingwestafrica.com/freetown-accra-inc-liberia/"
+        ]
+      },
+      "Overseas Adventure Travel": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Cape Verde",
+          "Ghana"
+        ],
+        "avg_creative_score": 24.6,
+        "avg_sentiment": 0.07,
+        "source_country": "USA",
+        "sample_urls": [
+          "https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries?icid=global:countries:africa:Cape%20Verde",
+          "https://www.oattravel.com/trips/small-ship-adventures/europe/madeira-the-canary-island-and-west-africa/2021/itineraries?icid=fyasearch_trippanel_tripimg",
+          "https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries?icid=fyasearch_trippanel_tripimg"
+        ]
+      },
+      "Palace Travel": {
+        "tour_count": 39,
+        "countries_covered": [
+          "Nigeria",
+          "Cape Verde",
+          "Benin",
+          "Ghana",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 39.8,
+        "avg_sentiment": 0.21,
+        "source_country": "USA",
+        "sample_urls": [
+          "https://www.palacetravel.com/tour-places/cape-verde-tours/",
+          "https://www.palacetravel.com/africa-destinations/the-ghana-safari-adventure/",
+          "https://www.palacetravel.com/places/gambia/"
+        ]
+      },
+      "Responsible Travel": {
+        "tour_count": 71,
+        "countries_covered": [
+          "Nigeria",
+          "Cape Verde",
+          "Benin",
+          "Ghana",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 44.1,
+        "avg_sentiment": 0.2,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.responsibletravel.com/holiday/32528/cape-verde-womens-empowerment-holiday",
+          "https://www.responsibletravel.com/holiday/34158/cape-verde-archipelago-small-ship-cruise",
+          "https://www.responsibletravel.com/holiday/20919/cape-verde-island-cruise"
+        ]
+      },
+      "Serenity Holidays": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 1.2,
+        "avg_sentiment": 0.55,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.serenity.co.uk/destinations/capeverde",
+          "https://www.serenity.co.uk/destinations/gambia"
+        ]
+      },
+      "Spector Travel Boston": {
+        "tour_count": 10,
+        "countries_covered": [
+          "Cape Verde",
+          "Benin",
+          "Ghana",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 12.4,
+        "avg_sentiment": 0.34,
+        "source_country": "USA",
+        "sample_urls": [
+          "https://www.spectortravel.com/roots-culture-tours/senegal-and-the-gambia/",
+          "https://www.spectortravel.com/roots-culture-tours/senegal/",
+          "https://www.spectortravel.com/roots-culture-tours/cape-verde-and-senegal/"
+        ]
+      },
+      "Spies (Globus Danmark)": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 6.2,
+        "avg_sentiment": 0.0,
+        "source_country": "Denmark",
+        "sample_urls": [
+          "https://www.spies.dk/kap-verde",
+          "https://www.spies.dk/gambia"
+        ]
+      },
+      "The Gambia Experience": {
+        "tour_count": 4,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 8.8,
+        "avg_sentiment": 0.45,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.gambia.co.uk/",
+          "https://www.gambia.co.uk/holiday-ideas/senegal-holidays?source=ideas",
+          "https://www.gambia.co.uk/holiday-ideas/cape-verde-holidays?source=ideas"
+        ]
+      },
+      "Thomas Cook": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Cape Verde"
+        ],
+        "avg_creative_score": 36.2,
+        "avg_sentiment": 0.5,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.thomascook.com/holidays/cape-verde"
+        ]
+      },
+      "Thomas Cook UK": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 0.0,
+        "avg_sentiment": 0.6,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.thomascook.com/holidays/gambia/package"
+        ]
+      },
+      "Tjareborg": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 0.6,
+        "avg_sentiment": 0.0,
+        "source_country": "Finland",
+        "sample_urls": [
+          "https://www.tjareborg.fi/kap-verde",
+          "https://www.tjareborg.fi/gambia"
+        ]
+      },
+      "TransAfrica": {
+        "tour_count": 40,
+        "countries_covered": [
+          "Benin",
+          "Senegal",
+          "Gambia",
+          "Ghana"
+        ],
+        "avg_creative_score": 41.5,
+        "avg_sentiment": 0.19,
+        "source_country": "West Africa",
+        "sample_urls": [
+          "https://transafrica.biz/en/category/senegal-en/",
+          "https://transafrica.biz/en/travel/2025-ghana-extension-mole-national-park-5-days/",
+          "https://transafrica.biz/en/category/benin-en/"
+        ]
+      },
+      "Tui": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Senegal"
+        ],
+        "avg_creative_score": 5.0,
+        "avg_sentiment": 0.1,
+        "source_country": "Unknown",
+        "sample_urls": [
+          "https://www.tui.co.uk/destinations/africa/cape-verde/holidays-cape-verde.html",
+          "https://www.tui.co.uk/destinations/africa/senegal/holidays-senegal.html"
+        ]
+      },
+      "Ving": {
+        "tour_count": 2,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia"
+        ],
+        "avg_creative_score": 5.0,
+        "avg_sentiment": 0.0,
+        "source_country": "Sweden",
+        "sample_urls": [
+          "https://www.ving.se/kap-verde",
+          "https://www.ving.se/gambia/"
+        ]
+      },
+      "Wild Birding": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 5.0,
+        "avg_sentiment": 0.4,
+        "source_country": "International",
+        "sample_urls": [
+          "https://wildbirding.tours/tour-item/wild-gambia-birding/"
+        ]
+      },
+      "Wildlife Worldwide": {
+        "tour_count": 4,
+        "countries_covered": [
+          "Gambia",
+          "Ghana"
+        ],
+        "avg_creative_score": 9.1,
+        "avg_sentiment": 0.28,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.wildlifeworldwide.com/discover/gambia",
+          "https://www.wildlifeworldwide.com/discover/ghana",
+          "https://www.wildlifeworldwide.com/group-tours/west-african-birdwatch"
+        ]
+      },
+      "World Insight": {
+        "tour_count": 8,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia",
+          "Benin",
+          "Ghana",
+          "Senegal"
+        ],
+        "avg_creative_score": 4.4,
+        "avg_sentiment": 0.57,
+        "source_country": "Germany",
+        "sample_urls": [
+          "https://www.world-insight.de/rundreisen/benin/",
+          "https://www.world-insight.de/rundreisen/kapverdische-inseln/",
+          "https://www.world-insight.de/rundreisen/senegal/"
+        ]
+      }
+    },
+    "top_10_creative": {
+      "Naturetrek": {
+        "tour_count": 7,
+        "countries_covered": [
+          "Gambia",
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 52.7,
+        "avg_sentiment": 0.06,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.naturetrek.co.uk/destinations/africa/gambia",
+          "https://www.naturetrek.co.uk/tours/ghana-the-butterflies-of-west-africa",
+          "https://www.naturetrek.co.uk/tours/ghana-picathartes-and-pangolins"
+        ]
+      },
+      "Responsible Travel": {
+        "tour_count": 71,
+        "countries_covered": [
+          "Nigeria",
+          "Cape Verde",
+          "Benin",
+          "Ghana",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 44.1,
+        "avg_sentiment": 0.2,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.responsibletravel.com/holiday/32528/cape-verde-womens-empowerment-holiday",
+          "https://www.responsibletravel.com/holiday/34158/cape-verde-archipelago-small-ship-cruise",
+          "https://www.responsibletravel.com/holiday/20919/cape-verde-island-cruise"
+        ]
+      },
+      "TransAfrica": {
+        "tour_count": 40,
+        "countries_covered": [
+          "Benin",
+          "Senegal",
+          "Gambia",
+          "Ghana"
+        ],
+        "avg_creative_score": 41.5,
+        "avg_sentiment": 0.19,
+        "source_country": "West Africa",
+        "sample_urls": [
+          "https://transafrica.biz/en/category/senegal-en/",
+          "https://transafrica.biz/en/travel/2025-ghana-extension-mole-national-park-5-days/",
+          "https://transafrica.biz/en/category/benin-en/"
+        ]
+      },
+      "Palace Travel": {
+        "tour_count": 39,
+        "countries_covered": [
+          "Nigeria",
+          "Cape Verde",
+          "Benin",
+          "Ghana",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 39.8,
+        "avg_sentiment": 0.21,
+        "source_country": "USA",
+        "sample_urls": [
+          "https://www.palacetravel.com/tour-places/cape-verde-tours/",
+          "https://www.palacetravel.com/africa-destinations/the-ghana-safari-adventure/",
+          "https://www.palacetravel.com/places/gambia/"
+        ]
+      },
+      "Explore": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Gambia",
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 38.7,
+        "avg_sentiment": 0.17,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.explore.co.uk/destinations/africa/the-gambia",
+          "https://www.explore.co.uk/holidays/senegal-and-the-gambia",
+          "https://www.explore.co.uk/holidays/best-of-ghana"
+        ]
+      },
+      "Thomas Cook": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Cape Verde"
+        ],
+        "avg_creative_score": 36.2,
+        "avg_sentiment": 0.5,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.thomascook.com/holidays/cape-verde"
+        ]
+      },
+      "Olympic Holidays": {
+        "tour_count": 1,
+        "countries_covered": [
+          "Gambia"
+        ],
+        "avg_creative_score": 30.0,
+        "avg_sentiment": 0.5,
+        "source_country": "Unknown (Greek / Cyprus / UK)",
+        "sample_urls": [
+          "https://www.olympicholidays.com/destinations/the-gambia/"
+        ]
+      },
+      "Overlanding West Africa": {
+        "tour_count": 7,
+        "countries_covered": [
+          "Gambia",
+          "Senegal",
+          "Ghana"
+        ],
+        "avg_creative_score": 29.8,
+        "avg_sentiment": 0.3,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.overlandingwestafrica.com/trip-overview-availability/",
+          "https://www.overlandingwestafrica.com/dakar-to-marrakech/",
+          "https://www.overlandingwestafrica.com/freetown-accra-inc-liberia/"
+        ]
+      },
+      "Overseas Adventure Travel": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Cape Verde",
+          "Ghana"
+        ],
+        "avg_creative_score": 24.6,
+        "avg_sentiment": 0.07,
+        "source_country": "USA",
+        "sample_urls": [
+          "https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries?icid=global:countries:africa:Cape%20Verde",
+          "https://www.oattravel.com/trips/small-ship-adventures/europe/madeira-the-canary-island-and-west-africa/2021/itineraries?icid=fyasearch_trippanel_tripimg",
+          "https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries?icid=fyasearch_trippanel_tripimg"
+        ]
+      },
+      "Holiday Hypermarket": {
+        "tour_count": 3,
+        "countries_covered": [
+          "Cape Verde",
+          "Gambia",
+          "Senegal"
+        ],
+        "avg_creative_score": 23.3,
+        "avg_sentiment": 0.5,
+        "source_country": "UK",
+        "sample_urls": [
+          "https://www.holidayhypermarket.co.uk/destinations/cape-verde-islands",
+          "https://www.holidayhypermarket.co.uk/destinations/senegal",
+          "https://www.holidayhypermarket.co.uk/destinations/gambia"
+        ]
+      }
+    },
+    "by_source_market": {}
+  },
+  "top_tours_global": [
+    {
+      "rank": 1,
+      "operator": "Palace Travel",
+      "destination": "Ghana",
+      "creative_score": 77.5,
+      "sentiment": 0.2,
+      "url": "https://www.palacetravel.com/africa-destinations/best-of-ghana-12-days-6/",
+      "page_type": "Tour",
+      "is_pure": "Yes",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 5.0,
+        "performing_arts": 10.0,
+        "festivals": 5.0
+      }
+    },
+    {
+      "rank": 2,
+      "operator": "Palace Travel",
+      "destination": "Ghana",
+      "creative_score": 77.5,
+      "sentiment": 0.2,
+      "url": "https://www.palacetravel.com/africa-destinations/discover-senegal-ghana/",
+      "page_type": "Tour",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 5.0,
+        "performing_arts": 10.0,
+        "festivals": 10.0
+      }
+    },
+    {
+      "rank": 3,
+      "operator": "Responsible Travel",
+      "destination": "Benin",
+      "creative_score": 77.5,
+      "sentiment": 0.3,
+      "url": "https://www.responsibletravel.com/holiday/34384/ghanatogo-and-benin-experience-tour",
+      "page_type": "Tour",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 7.0,
+        "performing_arts": 5.0,
+        "festivals": 7.0
+      }
+    },
+    {
+      "rank": 4,
+      "operator": "Responsible Travel",
+      "destination": "Ghana",
+      "creative_score": 76.2,
+      "sentiment": 0.4,
+      "url": "https://www.responsibletravel.com/holiday/4003/cultural-history-holiday-in-ghana",
+      "page_type": "Tour",
+      "is_pure": "Yes",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 10.0,
+        "performing_arts": 7.0,
+        "festivals": 0.0
+      }
+    },
+    {
+      "rank": 5,
+      "operator": "Responsible Travel",
+      "destination": "Benin",
+      "creative_score": 75.0,
+      "sentiment": 0.2,
+      "url": "https://www.responsibletravel.com/holiday/32574/west-africa-explorer-tour-marrakech-to-cotonou",
+      "page_type": "Tour",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 5.0,
+        "performing_arts": 10.0,
+        "festivals": 7.0
+      }
+    },
+    {
+      "rank": 6,
+      "operator": "Responsible Travel",
+      "destination": "Ghana",
+      "creative_score": 75.0,
+      "sentiment": 0.2,
+      "url": "https://www.responsibletravel.com/holiday/33319/best-of-ghana-holidays",
+      "page_type": "Tour",
+      "is_pure": "Yes",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 5.0,
+        "performing_arts": 7.0,
+        "festivals": 7.0
+      }
+    },
+    {
+      "rank": 7,
+      "operator": "Responsible Travel",
+      "destination": "Benin",
+      "creative_score": 75.0,
+      "sentiment": 0.1,
+      "url": "https://www.responsibletravel.com/holiday/4636/west-africa-tour",
+      "page_type": "Tour",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 7.0,
+        "performing_arts": 10.0,
+        "festivals": 10.0
+      }
+    },
+    {
+      "rank": 8,
+      "operator": "Responsible Travel",
+      "destination": "Benin",
+      "creative_score": 72.5,
+      "sentiment": 0.1,
+      "url": "https://www.responsibletravel.com/holiday/15250/west-africa-tour-bissau-to-cotonou",
+      "page_type": "Tour",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 5.0,
+        "performing_arts": 10.0,
+        "festivals": 7.0
+      }
+    },
+    {
+      "rank": 9,
+      "operator": "Explore",
+      "destination": "Ghana",
+      "creative_score": 71.2,
+      "sentiment": 0.3,
+      "url": "https://www.explore.co.uk/holidays/best-of-ghana",
+      "page_type": "Destination",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 10.0,
+        "music": 6.0,
+        "performing_arts": 7.0,
+        "festivals": 10.0
+      }
+    },
+    {
+      "rank": 10,
+      "operator": "Naturetrek",
+      "destination": "Ghana",
+      "creative_score": 71.2,
+      "sentiment": 0.4,
+      "url": "https://www.naturetrek.co.uk/tours/tailormade-ghana",
+      "page_type": "Tour",
+      "is_pure": "No",
+      "top_sectors": {
+        "heritage": 10.0,
+        "crafts": 0.0,
+        "music": 7.0,
+        "performing_arts": 10.0,
+        "festivals": 0.0
+      }
+    }
+  ]
+}

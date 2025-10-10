@@ -759,13 +759,19 @@
             { key: 'platformIntegration', label: 'Platform Integration', max: 5, desc: 'Connected tools and consistent presence across platforms.' }
           ];
           const internalDefs = [
-            { key: 'digitalComfort', label: 'Digital Comfort & Skills', max: 8, desc: 'Team capability to manage and use digital tools effectively.' },
-            { key: 'contentStrategy', label: 'Content Strategy', max: 8, desc: 'Planned content approach aligned to audience and goals.' },
-            { key: 'platformBreadth', label: 'Platform Usage Breadth', max: 7, desc: 'Breadth of channels used and maintained consistently.' },
-            { key: 'investmentCapacity', label: 'Investment Capacity', max: 4, desc: 'Resources to invest in content, ads, and tooling.' },
-            { key: 'challengeSeverity', label: 'Challenge Severity', max: 3, invert: true, desc: 'Extent of operational or market barriers faced.' }
+            { key: 'digitalFoundation', label: 'Digital Foundation', max: 6, desc: 'Basic digital infrastructure: devices, internet reliability, analytics tracking.' },
+            { key: 'digitalCapability', label: 'Digital Capability', max: 8, desc: 'Comfort with digital tools, who manages online presence, training received.' },
+            { key: 'platformEcosystem', label: 'Platform Ecosystem', max: 6, desc: 'Website ownership, active social platforms, sales/booking channels.' },
+            { key: 'contentEngagement', label: 'Content & Engagement', max: 6, desc: 'Posting frequency, content creation quality, visual materials.' },
+            { key: 'investmentBarriers', label: 'Investment & Barriers', max: 4, desc: 'Budget capacity, current spending, main challenges faced.' }
           ];
-          const icons = { socialMedia:'📣', website:'🌐', visualContent:'📸', discoverability:'🔎', digitalSales:'💳', platformIntegration:'🔗', digitalComfort:'🧠', contentStrategy:'🗓️', platformBreadth:'🧩', investmentCapacity:'💰', challengeSeverity:'⚠️' };
+          const insightDefs = [
+            { key: 'customerDiscovery', label: 'Customer Discovery', max: 10, desc: 'How effectively customers find you through digital channels.' },
+            { key: 'digitalCommerce', label: 'Digital Commerce', max: 10, desc: 'Ability for customers to purchase or book online.' },
+            { key: 'reviewPresence', label: 'Review Presence', max: 10, desc: 'Where reviews appear and reputation management.' },
+            { key: 'marketFocus', label: 'Market Focus', max: 10, desc: 'Tourist-focused vs local-focused customer base.' }
+          ];
+          const icons = { socialMedia:'📣', website:'🌐', visualContent:'📸', discoverability:'🔎', digitalSales:'💳', platformIntegration:'🔗', digitalFoundation:'⚡', digitalCapability:'🎯', platformEcosystem:'🌐', contentEngagement:'📝', investmentBarriers:'💰', customerDiscovery:'🔍', digitalCommerce:'💳', reviewPresence:'⭐', marketFocus:'🎯' };
           const scoreGrid = (defs, isInternal) => defs.map(d => {
             const rawValue = (prof.scores && prof.scores[d.key]);
             const surveyMissing = isInternal && ((prof.scores.surveyTotal||0) <= 0);
@@ -787,12 +793,15 @@
             const icon = icons[d.key] || '';
             return `<div class=\"scorebox ${cls}\"><div class=\"label\">${icon} ${htmlEscape(d.label)} (${d.max})</div><div class=\"value\">${valueText}</div><div class=\"bar\"><div style=\"width:${width}%\"></div></div><div class=\"desc\">${htmlEscape(caption)}</div></div>`;
           }).join('');
+          const hasInsights = prof.insights && (prof.insights.customerDiscovery > 0 || prof.insights.digitalCommerce > 0 || prof.insights.reviewPresence > 0 || prof.insights.marketFocus > 0);
+          const insightGrid = hasInsights ? `<div class=\"scoregrid\">${scoreGrid(insightDefs, false)}</div>` : '<div class=\"muted\" style=\"padding:12px\">Complete the survey to see digital insights.</div>';
           document.getElementById('participantPanel').innerHTML = `
             <div><b>${htmlEscape(prof.name)}</b> — ${htmlEscape(prof.sector)} • ${htmlEscape(prof.maturity)}</div>
             <div class=\"kpis\" style=\"margin-top:6px\">${chips}</div>
             <div class=\"card span-12\"><h3>Digital Presence</h3><div id=\"presenceBox\" class=\"presence\"></div><div style=\"margin-top:8px\"><button id=\"btnCorrection\" type=\"button\">Submit correction</button></div></div>
             <div class=\"card span-12\"><h3>External Assessment</h3><div class=\"scoregrid\">${scoreGrid(externalDefs, false)}</div></div>
-            <div class=\"card span-12 ${ (prof.scores.surveyTotal||0) <= 0 ? 'muted-section' : '' }\"><h3>Survey / Internal Assessment ${ (prof.scores.surveyTotal||0) <= 0 ? `<a id=\\"surveyCta\\" class=\\"chip\\" href=\\"https://surveys.intracen.org/response/G2tIYnZeRwYLYVFyVFx9S0d6eno/\\" target=\\"_blank\\">Complete short survey →</a>` : ''}</h3><div class=\"scoregrid\">${scoreGrid(internalDefs, true)}</div></div>
+            <div class=\"card span-12 ${ (prof.scores.surveyTotal||0) <= 0 ? 'muted-section' : '' }\"><h3>Survey Assessment ${ (prof.scores.surveyTotal||0) <= 0 ? `<a id=\\"surveyCta\\" class=\\"chip\\" href=\\"https://surveys.intracen.org/response/G2tIYnZeRwYLYVFyVFx9S0d6eno/\\" target=\\"_blank\\">Complete short survey →</a>` : ''}</h3><div class=\"scoregrid\">${scoreGrid(internalDefs, true)}</div></div>
+            <div class=\"card span-12 ${ !hasInsights ? 'muted-section' : '' }\"><h3>🔍 Digital Insights</h3>${insightGrid}</div>
             <div style=\"margin:8px 0\"><button id=\"btnExport\" type=\"button\">Print / Save PDF</button></div>`;
           // Update comparison titles and place Opps/Wins into dedicated containers
           const tEl = document.getElementById('externalVsSectorTitle');

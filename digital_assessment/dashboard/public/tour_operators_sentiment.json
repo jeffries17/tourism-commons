@@ -1,0 +1,4049 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-09T17:31:06.173666",
+    "title": "Gambia Tour Operators Sentiment Analysis",
+    "total_stakeholders": 15,
+    "total_reviews": 1270,
+    "unified_themes": [
+      "cultural_heritage",
+      "service_staff",
+      "facilities_infrastructure",
+      "accessibility_transport",
+      "value_money",
+      "safety_security",
+      "educational_value",
+      "artistic_creative",
+      "atmosphere_experience"
+    ]
+  },
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "timo_tours_gambia",
+      "source": "gambia_operators",
+      "total_reviews": 12,
+      "average_rating": 4.416666666666667,
+      "overall_sentiment": 0.36956447743238713,
+      "positive_rate": 0.9166666666666666,
+      "language_distribution": {
+        "unknown": 12
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 3,
+        "2023": 6,
+        "2020": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.39,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.31,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.3,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.41,
+          "mentions": 9,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.3,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.51,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.3,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.34,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.35,
+          "mentions": 9,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "We did the Makasutu Forest tour with Ebrima as our guide. It was an excellent day. When we arrived at the forest we were met by our local guide, I believe his name was Modi. Modi was knowledgeable, fr...",
+            "sentiment": 0.39318181818181813,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Booked 3 trips, fathala, Roots village, and 6 in 1,  all excellent experiences, our guide Ebrima was fab, very knowledgeable and had a great sense of humour, felt very safe when out and about. Prices ...",
+            "sentiment": 0.5054166666666667,
+            "rating": 5
+          },
+          {
+            "text": "After a friendly no-pressure discussion with a Timo Tours rep on Palma Rima road we decided to book our safari trip to Fathala nature reserve with the company, and we were very glad we did - they were...",
+            "sentiment": 0.4485,
+            "rating": 5
+          },
+          {
+            "text": "Timo Tours made it possible for me to explore Gambia and Senegal in a way I could never have done on my own. The excursions are superbly organized, and compared to other travel agencies, they&#39;re n...",
+            "sentiment": 0.4035714285714286,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "A trip to Georgetown (2 days) was a wonderful addition to our beach vacation. We saw all the highlights (the chimpanzees were particularly special). The guide and driver did their best, but the car wa...",
+            "sentiment": 0.3553061224489796,
+            "rating": 4
+          },
+          {
+            "text": "My fianc\u00e9 and I visited Gambia in December 2022. On our first day, we found the TimoTours office. After talking with a beautiful lady we decided to go the next day with this company at Senegal Safari ...",
+            "sentiment": 0.3179598506069094,
+            "rating": 5
+          },
+          {
+            "text": "I didn&#39;t end up booking a tour with this company but what I liked about them was the lack of hassle. I was walking past and I stopped to take a look at the tours. As my luggage hadn&#39;t arrived ...",
+            "sentiment": 0.23636363636363636,
+            "rating": 4
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "We have been with us you know we always for your best and waiting your connect to us or find us in Facebook,instagram tripadvisor Google",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "After a friendly no-pressure discussion with a Timo Tours rep on Palma Rima road we decided to book our safari trip to Fathala nature reserve with the company, and we were very glad we did - they were...",
+            "sentiment": 0.4485,
+            "rating": 5
+          },
+          {
+            "text": "Timo Tours made it possible for me to explore Gambia and Senegal in a way I could never have done on my own. The excursions are superbly organized, and compared to other travel agencies, they&#39;re n...",
+            "sentiment": 0.4035714285714286,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Booked 3 trips, fathala, Roots village, and 6 in 1,  all excellent experiences, our guide Ebrima was fab, very knowledgeable and had a great sense of humour, felt very safe when out and about. Prices ...",
+            "sentiment": 0.5054166666666667,
+            "rating": 5
+          },
+          {
+            "text": "Timo Tours made it possible for me to explore Gambia and Senegal in a way I could never have done on my own. The excursions are superbly organized, and compared to other travel agencies, they&#39;re n...",
+            "sentiment": 0.4035714285714286,
+            "rating": 5
+          },
+          {
+            "text": "We did the Makasutu Forest tour with Ebrima as our guide. It was an excellent day. When we arrived at the forest we were met by our local guide, I believe his name was Modi. Modi was knowledgeable, fr...",
+            "sentiment": 0.39318181818181813,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Booked 3 trips, fathala, Roots village, and 6 in 1,  all excellent experiences, our guide Ebrima was fab, very knowledgeable and had a great sense of humour, felt very safe when out and about. Prices ...",
+            "sentiment": 0.5054166666666667,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Booked 3 trips, fathala, Roots village, and 6 in 1,  all excellent experiences, our guide Ebrima was fab, very knowledgeable and had a great sense of humour, felt very safe when out and about. Prices ...",
+            "sentiment": 0.5054166666666667,
+            "rating": 5
+          },
+          {
+            "text": "After a friendly no-pressure discussion with a Timo Tours rep on Palma Rima road we decided to book our safari trip to Fathala nature reserve with the company, and we were very glad we did - they were...",
+            "sentiment": 0.4485,
+            "rating": 5
+          },
+          {
+            "text": "Timo Tours made it possible for me to explore Gambia and Senegal in a way I could never have done on my own. The excursions are superbly organized, and compared to other travel agencies, they&#39;re n...",
+            "sentiment": 0.4035714285714286,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "A trip to Georgetown (2 days) was a wonderful addition to our beach vacation. We saw all the highlights (the chimpanzees were particularly special). The guide and driver did their best, but the car wa...",
+            "sentiment": 0.3553061224489796,
+            "rating": 4
+          },
+          {
+            "text": "My fianc\u00e9 and I visited Gambia in December 2022. On our first day, we found the TimoTours office. After talking with a beautiful lady we decided to go the next day with this company at Senegal Safari ...",
+            "sentiment": 0.3179598506069094,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Booked 3 trips, fathala, Roots village, and 6 in 1,  all excellent experiences, our guide Ebrima was fab, very knowledgeable and had a great sense of humour, felt very safe when out and about. Prices ...",
+            "sentiment": 0.5054166666666667,
+            "rating": 5
+          },
+          {
+            "text": "After a friendly no-pressure discussion with a Timo Tours rep on Palma Rima road we decided to book our safari trip to Fathala nature reserve with the company, and we were very glad we did - they were...",
+            "sentiment": 0.4485,
+            "rating": 5
+          },
+          {
+            "text": "Timo Tours made it possible for me to explore Gambia and Senegal in a way I could never have done on my own. The excursions are superbly organized, and compared to other travel agencies, they&#39;re n...",
+            "sentiment": 0.4035714285714286,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.5054166666666667
+        },
+        {
+          "theme": "accessibility_transport",
+          "score": 0.4074980069468865
+        },
+        {
+          "theme": "cultural_heritage",
+          "score": 0.39318181818181813
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "simon_tours",
+      "source": "gambia_operators",
+      "total_reviews": 108,
+      "average_rating": 4.768518518518518,
+      "overall_sentiment": 0.30798932689196823,
+      "positive_rate": 0.9074074074074074,
+      "language_distribution": {
+        "unknown": 108
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 9,
+        "2023": 8,
+        "2022": 6,
+        "2020": 9,
+        "2019": 22,
+        "2018": 16,
+        "2017": 8,
+        "2016": 12,
+        "2015": 8,
+        "2014": 2,
+        "2013": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.31,
+          "mentions": 22,
+          "distribution": {
+            "positive": 21,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.34,
+          "mentions": 69,
+          "distribution": {
+            "positive": 67,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.27,
+          "mentions": 12,
+          "distribution": {
+            "positive": 11,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.31,
+          "mentions": 66,
+          "distribution": {
+            "positive": 61,
+            "neutral": 5,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.24,
+          "mentions": 39,
+          "distribution": {
+            "positive": 34,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.33,
+          "mentions": 16,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.31,
+          "mentions": 98,
+          "distribution": {
+            "positive": 90,
+            "neutral": 8,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.33,
+          "mentions": 40,
+          "distribution": {
+            "positive": 37,
+            "neutral": 2,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.34,
+          "mentions": 88,
+          "distribution": {
+            "positive": 84,
+            "neutral": 4,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "A wonderful day trip to South Gambia with Simon Tours! The guide arrived promptly at the hotel, with a driver in an open jeep. We visited the Batik Factory, Serrekunda Market, and a local blacksmith (...",
+            "sentiment": 0.523525641025641,
+            "rating": 5
+          },
+          {
+            "text": "This was our first time in Gambia and also our first time traveling with Saidou (Simon Tours). We&#39;d already been in enthusiastic contact via email. We&#39;d already discussed the South Gambia Tour...",
+            "sentiment": 0.45045454545454544,
+            "rating": 5
+          },
+          {
+            "text": "I traveled with Simon from Kololi Sands to Kunta Kinte Island. An unforgettable jeep trip, a ferry crossing I&#39;ll never forget, and a truly rewarding glimpse into the life of the slave trade in Gam...",
+            "sentiment": 0.4228571428571429,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Very nice guide!! We sailed to Lamin Lodge with a large group. Beautiful boat, a really great experience!!",
+            "sentiment": 0.7660714285714285,
+            "rating": 5
+          },
+          {
+            "text": "In one word &quot;fantastic&quot; very good and nice guide who gives a lot of explanation and to whom you can also ask anything about Gambia.  ",
+            "sentiment": 0.7549999999999999,
+            "rating": 5
+          },
+          {
+            "text": "Great trip, the driver and the guide did a great job. The lodge where we had a sleep was fantastic. We have seen the real Gambia with all her charmes. Beautiful pictures and great friends. We even bou...",
+            "sentiment": 0.6416666666666667,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We took a two-day trip to Senegal from Gambia with Simon Tours. Communication was very smooth from the start via email and WhatsApp. In Senegal, we went on safari in the Fathala Nature Reserve and too...",
+            "sentiment": 0.5840000000000001,
+            "rating": 5
+          },
+          {
+            "text": "A wonderful day trip to South Gambia with Simon Tours! The guide arrived promptly at the hotel, with a driver in an open jeep. We visited the Batik Factory, Serrekunda Market, and a local blacksmith (...",
+            "sentiment": 0.523525641025641,
+            "rating": 5
+          },
+          {
+            "text": "I traveled with Simon from Kololi Sands to Kunta Kinte Island. An unforgettable jeep trip, a ferry crossing I&#39;ll never forget, and a truly rewarding glimpse into the life of the slave trade in Gam...",
+            "sentiment": 0.4228571428571429,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Very nice guide!! We sailed to Lamin Lodge with a large group. Beautiful boat, a really great experience!!",
+            "sentiment": 0.7660714285714285,
+            "rating": 5
+          },
+          {
+            "text": "Simon was very good, booked with him by email before my daughter and I came out. Felt totally safe with him and his driver. Did the James Island tour and the South Gambia tour, brilliant. Lovely Count...",
+            "sentiment": 0.7025,
+            "rating": 5
+          },
+          {
+            "text": "Great trip, the driver and the guide did a great job. The lodge where we had a sleep was fantastic. We have seen the real Gambia with all her charmes. Beautiful pictures and great friends. We even bou...",
+            "sentiment": 0.6416666666666667,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "A wonderful day trip to South Gambia with Simon Tours! The guide arrived promptly at the hotel, with a driver in an open jeep. We visited the Batik Factory, Serrekunda Market, and a local blacksmith (...",
+            "sentiment": 0.523525641025641,
+            "rating": 5
+          },
+          {
+            "text": "Searched online for Simon Tours. He quickly received an itinerary for the week we were there. We&#39;d already booked the Abuko Reserve and a two-day tour to JanJangBureh. We&#39;d arranged it at the ...",
+            "sentiment": 0.4592592592592592,
+            "rating": 5
+          },
+          {
+            "text": "We spent a day on the South Gambia tour with Simon. It was beautiful and well worth it! It was a wonderfully varied day. In the morning, you go to the Serrekunda market, where everyone does their shop...",
+            "sentiment": 0.414234693877551,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Simon was very good, booked with him by email before my daughter and I came out. Felt totally safe with him and his driver. Did the James Island tour and the South Gambia tour, brilliant. Lovely Count...",
+            "sentiment": 0.7025,
+            "rating": 5
+          },
+          {
+            "text": "We&#39;re so glad we chose Simon Tours. They were very safe and well-organized! We had two trips, they were very personalized, and everything was possible\u2014nothing was too much trouble. A truly brillia...",
+            "sentiment": 0.4270833333333333,
+            "rating": 5
+          },
+          {
+            "text": "We did two trips with Simon Tours. What an experience! The first trip was to Fathala: What an experience to take the ferry across the river. Then we crossed the border into Senegal. This too was speci...",
+            "sentiment": 0.409452947845805,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "In one word &quot;fantastic&quot; very good and nice guide who gives a lot of explanation and to whom you can also ask anything about Gambia.  ",
+            "sentiment": 0.7549999999999999,
+            "rating": 5
+          },
+          {
+            "text": "Simon was very good, booked with him by email before my daughter and I came out. Felt totally safe with him and his driver. Did the James Island tour and the South Gambia tour, brilliant. Lovely Count...",
+            "sentiment": 0.7025,
+            "rating": 5
+          },
+          {
+            "text": "We booked the South Gambia tour with Simon in advance online. Our communication was pleasant from the start. Everything went according to plan. Simon is a very kind, calm man who gave us a very enjoya...",
+            "sentiment": 0.6158333333333333,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Very nice guide!! We sailed to Lamin Lodge with a large group. Beautiful boat, a really great experience!!",
+            "sentiment": 0.7660714285714285,
+            "rating": 5
+          },
+          {
+            "text": "Great trip, the driver and the guide did a great job. The lodge where we had a sleep was fantastic. We have seen the real Gambia with all her charmes. Beautiful pictures and great friends. We even bou...",
+            "sentiment": 0.6416666666666667,
+            "rating": 5
+          },
+          {
+            "text": "We booked the South Gambia tour with Simon in advance online. Our communication was pleasant from the start. Everything went according to plan. Simon is a very kind, calm man who gave us a very enjoya...",
+            "sentiment": 0.6158333333333333,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Very nice guide!! We sailed to Lamin Lodge with a large group. Beautiful boat, a really great experience!!",
+            "sentiment": 0.7660714285714285,
+            "rating": 5
+          },
+          {
+            "text": "In one word &quot;fantastic&quot; very good and nice guide who gives a lot of explanation and to whom you can also ask anything about Gambia.  ",
+            "sentiment": 0.7549999999999999,
+            "rating": 5
+          },
+          {
+            "text": "Simon was very good, booked with him by email before my daughter and I came out. Felt totally safe with him and his driver. Did the James Island tour and the South Gambia tour, brilliant. Lovely Count...",
+            "sentiment": 0.7025,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "So we agreed a price for a day trip to sanyang and we got in the car, they then decided that wasn't enough so we increased the price and started on our way then they decided that was still not enough ...",
+          "sentiment": -0.32199999999999995,
+          "rating": 1
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3358358622951701
+        },
+        {
+          "theme": "service_staff",
+          "score": 0.33534587043955183
+        },
+        {
+          "theme": "artistic_creative",
+          "score": 0.3345812383946505
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "janeya_tours",
+      "source": "gambia_operators",
+      "total_reviews": 73,
+      "average_rating": 4.821917808219178,
+      "overall_sentiment": 0.3256841027019463,
+      "positive_rate": 0.958904109589041,
+      "language_distribution": {
+        "unknown": 73
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 1,
+        "2023": 2,
+        "2022": 2,
+        "2020": 4,
+        "2019": 6,
+        "2018": 9,
+        "2017": 6,
+        "2016": 6,
+        "2015": 8,
+        "2014": 14,
+        "2013": 13
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.31,
+          "mentions": 13,
+          "distribution": {
+            "positive": 12,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.33,
+          "mentions": 65,
+          "distribution": {
+            "positive": 63,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.26,
+          "mentions": 8,
+          "distribution": {
+            "positive": 6,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.3,
+          "mentions": 46,
+          "distribution": {
+            "positive": 44,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.31,
+          "mentions": 30,
+          "distribution": {
+            "positive": 27,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.27,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.32,
+          "mentions": 66,
+          "distribution": {
+            "positive": 63,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.31,
+          "mentions": 25,
+          "distribution": {
+            "positive": 23,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.35,
+          "mentions": 55,
+          "distribution": {
+            "positive": 55,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "I booked 2 trips with Janeya, both times the driver and guides where very friendly and gave us a lot of information. I prefered to go with Janeya because there is a maximum of 6 customers per trip!",
+            "sentiment": 0.609375,
+            "rating": 5
+          },
+          {
+            "text": "I was invited to try these guys out by their guide Dauda, and we went on the James Island tour. we were picked up from our hotel, and we had an amazing day. this is my first time to the Gambia and hop...",
+            "sentiment": 0.4614285714285714,
+            "rating": 5
+          },
+          {
+            "text": "We had a great experience with Janeya Tours. You&#39;ll find them on the left side of the Strip, across from African Queen. We took four excursions led by our guide, Lamin. First, an (early) morning b...",
+            "sentiment": 0.41685189810189804,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Good organized trips.\nWe had a very nice and friendly guide, Ebrima.\nThe rest of the crew was also nice and helpfull.\nGood food on the trips\nwe loved it !!!",
+            "sentiment": 0.6925,
+            "rating": 5
+          },
+          {
+            "text": "I booked 2 trips with Janeya, both times the driver and guides where very friendly and gave us a lot of information. I prefered to go with Janeya because there is a maximum of 6 customers per trip!",
+            "sentiment": 0.609375,
+            "rating": 5
+          },
+          {
+            "text": "We had a fantastic boat trip. Incredibly hospitable, delicious food, and a stunning view. Highly recommended!",
+            "sentiment": 0.6,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We had a well-organized two-day trip to Tendebba. Our guide and driver were excellent. The car was great, and the guide told us a lot about Gambia. Janeya Tours is absolutely reliable and delivers exc...",
+            "sentiment": 0.6,
+            "rating": 5
+          },
+          {
+            "text": "We choose Janeya tours to go for River Gambia National Park. Everything was perfect and we enjoyed the tour a lot! In the beginning we paid deposit before we arrived to Gambia. Ibrahim, who was our gu...",
+            "sentiment": 0.3907575757575757,
+            "rating": 5
+          },
+          {
+            "text": "With Janeya Tours, we took the round trip and sunset river cruise during our week in Gambia. This allowed us to see many beautiful highlights in a short time and still had time to relax during this wo...",
+            "sentiment": 0.3217857142857143,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "I booked 2 trips with Janeya, both times the driver and guides where very friendly and gave us a lot of information. I prefered to go with Janeya because there is a maximum of 6 customers per trip!",
+            "sentiment": 0.609375,
+            "rating": 5
+          },
+          {
+            "text": "We had a fantastic boat trip. Incredibly hospitable, delicious food, and a stunning view. Highly recommended!",
+            "sentiment": 0.6,
+            "rating": 5
+          },
+          {
+            "text": "We had a well-organized two-day trip to Tendebba. Our guide and driver were excellent. The car was great, and the guide told us a lot about Gambia. Janeya Tours is absolutely reliable and delivers exc...",
+            "sentiment": 0.6,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "been on holiday many times to The Gambia and have used Janet's tour each and every time and he just gets better fully safe with insurance helpful and always happy to arrange the tours to suit the pers...",
+            "sentiment": 0.5933333333333333,
+            "rating": 5
+          },
+          {
+            "text": "With Janeya Tours, you&#39;re guaranteed a successful day. Friendly staff, the owner speaks Dutch. The price is cheaper than through a holiday agency! You have to give the locals a treat; they don&#39...",
+            "sentiment": 0.5880208333333333,
+            "rating": 4
+          },
+          {
+            "text": "Last March, we stayed in Gambia at the Sengambia Hotel in Kololi. It&#39;s a beautiful and well-equipped hotel with friendly staff. The country is wonderful for nature lovers, with plenty of birds, ev...",
+            "sentiment": 0.4937500000000001,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "been on holiday many times to The Gambia and have used Janet's tour each and every time and he just gets better fully safe with insurance helpful and always happy to arrange the tours to suit the pers...",
+            "sentiment": 0.5933333333333333,
+            "rating": 5
+          },
+          {
+            "text": "We was within Chillis bar in the strip and was given advice to use this company. Dodou came to the restaurant and explained what the company had to offer and the pricing. At that time they were offeri...",
+            "sentiment": 0.28,
+            "rating": 5
+          },
+          {
+            "text": "We were picked up promptly and transported to the &quot;boat&quot;, although they advertise wooden and comfortable boat, I cannot believe that they call this a boat. Unfortunately we were the only 2 p...",
+            "sentiment": -0.0715159574468085,
+            "rating": 1
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "I booked 2 trips with Janeya, both times the driver and guides where very friendly and gave us a lot of information. I prefered to go with Janeya because there is a maximum of 6 customers per trip!",
+            "sentiment": 0.609375,
+            "rating": 5
+          },
+          {
+            "text": "We had a well-organized two-day trip to Tendebba. Our guide and driver were excellent. The car was great, and the guide told us a lot about Gambia. Janeya Tours is absolutely reliable and delivers exc...",
+            "sentiment": 0.6,
+            "rating": 5
+          },
+          {
+            "text": "been on holiday many times to The Gambia and have used Janet's tour each and every time and he just gets better fully safe with insurance helpful and always happy to arrange the tours to suit the pers...",
+            "sentiment": 0.5933333333333333,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Janeya takes you to the most beautiful places in the Gambia. The owner, Lamin Kinteh, is very dedicated to his travelers. Together with his staff, he organizes excellent excursions throughout the Gamb...",
+            "sentiment": 0.5499999999999999,
+            "rating": 5
+          },
+          {
+            "text": "Very nice and helpful people. The owner speaks Dutch! He will try to find a way suitable to your needs to get the most joy out of your trips. We booked a few fishing trips on the river Gambia. They di...",
+            "sentiment": 0.5319407894736843,
+            "rating": 5
+          },
+          {
+            "text": "Last March, we stayed in Gambia at the Sengambia Hotel in Kololi. It&#39;s a beautiful and well-equipped hotel with friendly staff. The country is wonderful for nature lovers, with plenty of birds, ev...",
+            "sentiment": 0.4937500000000001,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Good organized trips.\nWe had a very nice and friendly guide, Ebrima.\nThe rest of the crew was also nice and helpfull.\nGood food on the trips\nwe loved it !!!",
+            "sentiment": 0.6925,
+            "rating": 5
+          },
+          {
+            "text": "We had a fantastic boat trip. Incredibly hospitable, delicious food, and a stunning view. Highly recommended!",
+            "sentiment": 0.6,
+            "rating": 5
+          },
+          {
+            "text": "We had a well-organized two-day trip to Tendebba. Our guide and driver were excellent. The car was great, and the guide told us a lot about Gambia. Janeya Tours is absolutely reliable and delivers exc...",
+            "sentiment": 0.6,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.35017054249827156
+        },
+        {
+          "theme": "service_staff",
+          "score": 0.33111544586721636
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.31650063729310063
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "bushwhacker_tours",
+      "source": "gambia_operators",
+      "total_reviews": 170,
+      "average_rating": 4.911764705882353,
+      "overall_sentiment": 0.3179471106611957,
+      "positive_rate": 0.9411764705882353,
+      "language_distribution": {
+        "unknown": 170
+      },
+      "year_distribution": {
+        "2025": 10,
+        "2024": 11,
+        "2023": 5,
+        "2022": 3,
+        "2020": 3,
+        "2019": 10,
+        "2018": 13,
+        "2017": 7,
+        "2016": 13,
+        "2015": 13,
+        "2014": 34,
+        "2013": 35,
+        "2012": 13
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.28,
+          "mentions": 41,
+          "distribution": {
+            "positive": 41,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.33,
+          "mentions": 148,
+          "distribution": {
+            "positive": 142,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.27,
+          "mentions": 24,
+          "distribution": {
+            "positive": 21,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.3,
+          "mentions": 145,
+          "distribution": {
+            "positive": 137,
+            "neutral": 7,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.3,
+          "mentions": 87,
+          "distribution": {
+            "positive": 83,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.36,
+          "mentions": 23,
+          "distribution": {
+            "positive": 22,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.31,
+          "mentions": 148,
+          "distribution": {
+            "positive": 139,
+            "neutral": 8,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.29,
+          "mentions": 55,
+          "distribution": {
+            "positive": 54,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.33,
+          "mentions": 144,
+          "distribution": {
+            "positive": 139,
+            "neutral": 5,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "What a fantastic day we had on the Roots tour. Zak the tour guide was fab and couldn&#39;t do enough for us to make sure we had a great time. The food was amazing and both my daughter and I thought it...",
+            "sentiment": 0.5750000000000001,
+            "rating": 5
+          },
+          {
+            "text": "If you visit a country and wish to take part of the country&#39;s history, favorite places, want to experience the beautiful countryside, learn and take part of its culture while having great fun ... ...",
+            "sentiment": 0.5100000000000001,
+            "rating": 4
+          },
+          {
+            "text": "It was a wonderful tour extremely well organized and led by Lamin who was the perfect guide. We did so much in our 2 days and have some wonderful memories. Really enjoyed the camp we stayed in and goi...",
+            "sentiment": 0.46595238095238095,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Great tour of Gambia!\nNice people,right prices,excellent  for discover this country.\nMr Alieu great person and guide!",
+            "sentiment": 0.8666666666666667,
+            "rating": 5
+          },
+          {
+            "text": "Thank you for the best tours in Gambia. We really enjoyed everything and Zack was very intelligent yes friendly guide. We are very happy for everything and recommend Bushwhacker Tours to everyone. \ud83d\udc4c\u263a\ufe0f...",
+            "sentiment": 0.775,
+            "rating": 5
+          },
+          {
+            "text": "Our one-day tour in Gambia was perfectly organized, with our German-speaking guide and experienced driver in an open-top jeep. We felt safe and well-informed at all times. Had we had more time for add...",
+            "sentiment": 0.7607142857142856,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "A great day fishing among the mangroves,boat was spacious,and in good condition,staff very friendly and were great at helping bait our hooks. food was gambian,and very tasty. thank you lamin for a gre...",
+            "sentiment": 0.6312500000000001,
+            "rating": 4
+          },
+          {
+            "text": "During my holidays in Gambia in November 2016, I found an office of Bushwacker Tour. Me and my wife went on a two-days trip with them to Tendaba and Bitong .During the tour our guide Zaka showed the g...",
+            "sentiment": 0.5599999999999999,
+            "rating": 5
+          },
+          {
+            "text": "This guy is excellent, I used him on all of my trips when in Gambia in May.I did the usual tourist trips they were very good, but also saw some of the real Gambia...fab. He has excellent knowledge of ...",
+            "sentiment": 0.51625,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Thank you for the best tours in Gambia. We really enjoyed everything and Zack was very intelligent yes friendly guide. We are very happy for everything and recommend Bushwhacker Tours to everyone. \ud83d\udc4c\u263a\ufe0f...",
+            "sentiment": 0.775,
+            "rating": 5
+          },
+          {
+            "text": "Our one-day tour in Gambia was perfectly organized, with our German-speaking guide and experienced driver in an open-top jeep. We felt safe and well-informed at all times. Had we had more time for add...",
+            "sentiment": 0.7607142857142856,
+            "rating": 5
+          },
+          {
+            "text": "I was looking for a two days tour to Janjanbureh, and Bushwaker Tours was on of the one tours that popped up on the internet. Alieu response and flexibility brought me to him and I did not regret it. ...",
+            "sentiment": 0.75,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Great tour of Gambia!\nNice people,right prices,excellent  for discover this country.\nMr Alieu great person and guide!",
+            "sentiment": 0.8666666666666667,
+            "rating": 5
+          },
+          {
+            "text": "Faboulous 4x4 trip knowledgable proffesional &reliable guides we had a fantastic day out mo & JJ our guides made this a great experience .\nWe have travelled to Gambia many times & done lots of trips b...",
+            "sentiment": 0.5850000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Thanks Bushwacker tours for a great day \"JJ\" excellent tour guide with a good sense of humour, would recommend them for any tours you might want to make while in the Gambia, CD was a good driver. Brik...",
+            "sentiment": 0.56,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Our one-day tour in Gambia was perfectly organized, with our German-speaking guide and experienced driver in an open-top jeep. We felt safe and well-informed at all times. Had we had more time for add...",
+            "sentiment": 0.7607142857142856,
+            "rating": 5
+          },
+          {
+            "text": "I was looking for a two days tour to Janjanbureh, and Bushwaker Tours was on of the one tours that popped up on the internet. Alieu response and flexibility brought me to him and I did not regret it. ...",
+            "sentiment": 0.75,
+            "rating": 5
+          },
+          {
+            "text": "A great trip out with Bushwhacker tours! We had a wonderful guide, Malcolm, who took us to Kunta Kinteh Island as part of the Roots tour. It was a really well organized trip- communication was prompt ...",
+            "sentiment": 0.5397727272727273,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Great tour of Gambia!\nNice people,right prices,excellent  for discover this country.\nMr Alieu great person and guide!",
+            "sentiment": 0.8666666666666667,
+            "rating": 5
+          },
+          {
+            "text": "Thank you for the best tours in Gambia. We really enjoyed everything and Zack was very intelligent yes friendly guide. We are very happy for everything and recommend Bushwhacker Tours to everyone. \ud83d\udc4c\u263a\ufe0f...",
+            "sentiment": 0.775,
+            "rating": 5
+          },
+          {
+            "text": "Our one-day tour in Gambia was perfectly organized, with our German-speaking guide and experienced driver in an open-top jeep. We felt safe and well-informed at all times. Had we had more time for add...",
+            "sentiment": 0.7607142857142856,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "My partners and I had a great time loved the canoe ride  we enjoyed getting in the county of Gambia \nStaff were very friendly and helpful and knowledgable \nWe enjoyed the day ",
+            "sentiment": 0.5974999999999999,
+            "rating": 5
+          },
+          {
+            "text": "Faboulous 4x4 trip knowledgable proffesional &reliable guides we had a fantastic day out mo & JJ our guides made this a great experience .\nWe have travelled to Gambia many times & done lots of trips b...",
+            "sentiment": 0.5850000000000001,
+            "rating": 5
+          },
+          {
+            "text": "During my holidays in Gambia in November 2016, I found an office of Bushwacker Tour. Me and my wife went on a two-days trip with them to Tendaba and Bitong .During the tour our guide Zaka showed the g...",
+            "sentiment": 0.5599999999999999,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Great tour of Gambia!\nNice people,right prices,excellent  for discover this country.\nMr Alieu great person and guide!",
+            "sentiment": 0.8666666666666667,
+            "rating": 5
+          },
+          {
+            "text": "Our one-day tour in Gambia was perfectly organized, with our German-speaking guide and experienced driver in an open-top jeep. We felt safe and well-informed at all times. Had we had more time for add...",
+            "sentiment": 0.7607142857142856,
+            "rating": 5
+          },
+          {
+            "text": "I was looking for a two days tour to Janjanbureh, and Bushwaker Tours was on of the one tours that popped up on the internet. Alieu response and flexibility brought me to him and I did not regret it. ...",
+            "sentiment": 0.75,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "We approached Bushwhacker tours to see if they could do a trip to Georgetown (its a 2 day tour) . they said they could, but after 4 or 5 visits and a few delays it became clear they could not do the t...",
+          "sentiment": -0.3416666666666666,
+          "rating": 1
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.3608254216349188
+        },
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3295461480836096
+        },
+        {
+          "theme": "service_staff",
+          "score": 0.3260387009178442
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "kawsu_tours",
+      "source": "gambia_operators",
+      "total_reviews": 18,
+      "average_rating": 4.833333333333333,
+      "overall_sentiment": 0.31336063060116087,
+      "positive_rate": 0.9444444444444444,
+      "language_distribution": {
+        "unknown": 18
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2024": 10,
+        "2023": 5
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.3,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.33,
+          "mentions": 14,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.23,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.32,
+          "mentions": 11,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.31,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.25,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.29,
+          "mentions": 13,
+          "distribution": {
+            "positive": 12,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.28,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.3,
+          "mentions": 14,
+          "distribution": {
+            "positive": 13,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "They are based in Kotu.We booked the 5 in 1 package. Our guide was a charismatic young man called Lamin. He was entertaining and also very informative. Their price was very reasonable and their custom...",
+            "sentiment": 0.43600000000000005,
+            "rating": 4
+          },
+          {
+            "text": "Amazing experience with Omar and Becks from Kawsu Tours who drive us to Bachau to see the crocodile pond.It is a sacred crocodile pool used as a sites for fertility rituals. Now a popular tourist the ...",
+            "sentiment": 0.26153846153846155,
+            "rating": 5
+          },
+          {
+            "text": "We used Kawsu Tours based on a recommendation from friends. We received Kawsu&#39;s phone number from the Netherlands and texted him to ask if he could pick us up from the airport. Kawsu responded imm...",
+            "sentiment": 0.20972222222222225,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "The Best if you planning to visit The Gambia\n\nLamin is the best Guide you can have \nFor al sort of excursions \n\nSafari Wildlife Markets Local food All is included",
+            "sentiment": 0.6666666666666666,
+            "rating": 5
+          },
+          {
+            "text": "They are based in Kotu.We booked the 5 in 1 package. Our guide was a charismatic young man called Lamin. He was entertaining and also very informative. Their price was very reasonable and their custom...",
+            "sentiment": 0.43600000000000005,
+            "rating": 4
+          },
+          {
+            "text": "We are a dutch couple and went with Lamin (Kawsu Tours) on a daytrip. It is our first holiday in Gambia.  Many men wants to be your guide and it is hard to say no, because you know that everybody need...",
+            "sentiment": 0.3898768939393939,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "A great day from start to finish.Greeted on the boat with coffee or tea plus biscuits..Then upstairs on the boat for a bit of sunbathing and enjoying the scenery before dropping anchor to do fishing w...",
+            "sentiment": 0.24285714285714283,
+            "rating": 5
+          },
+          {
+            "text": "We used Kawsu Tours based on a recommendation from friends. We received Kawsu&#39;s phone number from the Netherlands and texted him to ask if he could pick us up from the airport. Kawsu responded imm...",
+            "sentiment": 0.20972222222222225,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "The Best if you planning to visit The Gambia\n\nLamin is the best Guide you can have \nFor al sort of excursions \n\nSafari Wildlife Markets Local food All is included",
+            "sentiment": 0.6666666666666666,
+            "rating": 5
+          },
+          {
+            "text": "Very interesting tour to Bakau, crocodile park, the museum and many other destinations. We used the Kawsutours during our whole stay in Kotu! Will highly recommend our best ever driver Beck for others...",
+            "sentiment": 0.40583333333333327,
+            "rating": 5
+          },
+          {
+            "text": "We are a dutch couple and went with Lamin (Kawsu Tours) on a daytrip. It is our first holiday in Gambia.  Many men wants to be your guide and it is hard to say no, because you know that everybody need...",
+            "sentiment": 0.3898768939393939,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "They are based in Kotu.We booked the 5 in 1 package. Our guide was a charismatic young man called Lamin. He was entertaining and also very informative. Their price was very reasonable and their custom...",
+            "sentiment": 0.43600000000000005,
+            "rating": 4
+          },
+          {
+            "text": "We are a dutch couple and went with Lamin (Kawsu Tours) on a daytrip. It is our first holiday in Gambia.  Many men wants to be your guide and it is hard to say no, because you know that everybody need...",
+            "sentiment": 0.3898768939393939,
+            "rating": 5
+          },
+          {
+            "text": "Lovely little travel agent shack near Bakotu Hotel and Kombo Beach Hotel. Honest and friendly service, very reliable and courtesous staff, very fair prices. Highly recommend.",
+            "sentiment": 0.33218749999999997,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Wonderful trip to Fathala game reserve in Senegal. We did trips with Kawsu Tours in Jan24 and now Dec24. Fair prices, professional guides and safe, good vehicles. Trips adjusted to suit mobility needs...",
+            "sentiment": 0.2956666666666667,
+            "rating": 5
+          },
+          {
+            "text": "We used Kawsu Tours based on a recommendation from friends. We received Kawsu&#39;s phone number from the Netherlands and texted him to ask if he could pick us up from the airport. Kawsu responded imm...",
+            "sentiment": 0.20972222222222225,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "They are based in Kotu.We booked the 5 in 1 package. Our guide was a charismatic young man called Lamin. He was entertaining and also very informative. Their price was very reasonable and their custom...",
+            "sentiment": 0.43600000000000005,
+            "rating": 4
+          },
+          {
+            "text": "Very interesting tour to Bakau, crocodile park, the museum and many other destinations. We used the Kawsutours during our whole stay in Kotu! Will highly recommend our best ever driver Beck for others...",
+            "sentiment": 0.40583333333333327,
+            "rating": 5
+          },
+          {
+            "text": "We are a dutch couple and went with Lamin (Kawsu Tours) on a daytrip. It is our first holiday in Gambia.  Many men wants to be your guide and it is hard to say no, because you know that everybody need...",
+            "sentiment": 0.3898768939393939,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "We booked the trip to the Tanji Bird Reserve, Fish Market, and Lamin&#39;s Lodge with Kawsu and were guided by Aladdin and Omar. The two were very welcoming and gave us great insights into everyday Ga...",
+            "sentiment": 0.37374999999999997,
+            "rating": 5
+          },
+          {
+            "text": "We asked Kawsu to help us organise a trip to the Tanji Fish Martket - our guide was Lamin, who made the trip a great experience - he showed us many places we wouldn't have looked at on our own; we wal...",
+            "sentiment": 0.32219008264462806,
+            "rating": 5
+          },
+          {
+            "text": "Kawsu is the local guide who has been showing tourists around his country for decades. He does so in a very friendly manner. He speaks English and (fairly) Dutch and takes good care of his fellow coun...",
+            "sentiment": 0.2819642857142858,
+            "rating": 4
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "They are based in Kotu.We booked the 5 in 1 package. Our guide was a charismatic young man called Lamin. He was entertaining and also very informative. Their price was very reasonable and their custom...",
+            "sentiment": 0.43600000000000005,
+            "rating": 4
+          },
+          {
+            "text": "We are a dutch couple and went with Lamin (Kawsu Tours) on a daytrip. It is our first holiday in Gambia.  Many men wants to be your guide and it is hard to say no, because you know that everybody need...",
+            "sentiment": 0.3898768939393939,
+            "rating": 5
+          },
+          {
+            "text": "We booked the trip to the Tanji Bird Reserve, Fish Market, and Lamin&#39;s Lodge with Kawsu and were guided by Aladdin and Omar. The two were very welcoming and gave us great insights into everyday Ga...",
+            "sentiment": 0.37374999999999997,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "service_staff",
+          "score": 0.3331275001153248
+        },
+        {
+          "theme": "accessibility_transport",
+          "score": 0.31918527070954755
+        },
+        {
+          "theme": "value_money",
+          "score": 0.3126106730571016
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "arch_tours",
+      "source": "gambia_operators",
+      "total_reviews": 300,
+      "average_rating": 4.81,
+      "overall_sentiment": 0.3159441251458542,
+      "positive_rate": 0.9233333333333333,
+      "language_distribution": {
+        "unknown": 300
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 8,
+        "2023": 18,
+        "2022": 23,
+        "2021": 4,
+        "2020": 7,
+        "2019": 46,
+        "2018": 52,
+        "2017": 57,
+        "2016": 81
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.3,
+          "mentions": 56,
+          "distribution": {
+            "positive": 54,
+            "neutral": 1,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.32,
+          "mentions": 258,
+          "distribution": {
+            "positive": 244,
+            "neutral": 10,
+            "negative": 4
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.22,
+          "mentions": 64,
+          "distribution": {
+            "positive": 57,
+            "neutral": 6,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.3,
+          "mentions": 215,
+          "distribution": {
+            "positive": 200,
+            "neutral": 14,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.29,
+          "mentions": 143,
+          "distribution": {
+            "positive": 132,
+            "neutral": 9,
+            "negative": 2
+          }
+        },
+        "safety_security": {
+          "score": 0.27,
+          "mentions": 39,
+          "distribution": {
+            "positive": 36,
+            "neutral": 2,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.32,
+          "mentions": 270,
+          "distribution": {
+            "positive": 254,
+            "neutral": 13,
+            "negative": 3
+          }
+        },
+        "artistic_creative": {
+          "score": 0.27,
+          "mentions": 114,
+          "distribution": {
+            "positive": 101,
+            "neutral": 11,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.33,
+          "mentions": 268,
+          "distribution": {
+            "positive": 258,
+            "neutral": 8,
+            "negative": 2
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Absolutely superb 2 day tour to Georgetown with Arch Tours, our guide ML & driver Barra were both top notch, knowledgeable and great company. Saw hippos, chimpanzees, a troop of baboons as well the Wa...",
+            "sentiment": 0.6583333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Had an excellent day with Arch Tours to Fathala Wildlife Reserve. Dawda was our excellent representative who looked after us every step of the way and offered a great insight, not only for the trip it...",
+            "sentiment": 0.5708333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Took the Georgetown 2 day trip and 4 in 1 day tour, plus airport pick up and drop off with Arch tours. Excellent comms ahead of the trip from Lamin who made sure we were happy throughout.\n\nEach trip h...",
+            "sentiment": 0.5678571428571428,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Did a fascinating excursion into Senegal  with driver Solomon and guide Abdul.     What a tour including a good lunch\nWe did our tour as aa couple in a jeep alone.   Great ",
+            "sentiment": 0.7333333333333334,
+            "rating": 5
+          },
+          {
+            "text": "It&#39; was a wonderful trip, interesting, exiting, funny with beautiful situations, nice people, good food and two guides, who love their jobs. They explained everything, had a great knowledge and ev...",
+            "sentiment": 0.72,
+            "rating": 5
+          },
+          {
+            "text": "Would recommend this tour 100%! What a great day it was! Comfort breaks, lots to see, very knowledgeable and nice guide, food (that&#39;s included) was great, one of the best tours I&#39;ve ever done!...",
+            "sentiment": 0.72,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "Had an excellent day with Arch Tours to Fathala Wildlife Reserve. Dawda was our excellent representative who looked after us every step of the way and offered a great insight, not only for the trip it...",
+            "sentiment": 0.5708333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Everything was perfectly organized and reasonably priced. We were in Fathala Park in Senegal for a jeep safari and the price of the tour included everything, so you didn&#39;t have to worry about anyt...",
+            "sentiment": 0.48,
+            "rating": 5
+          },
+          {
+            "text": "in shorts, highly recommended. We were in Gambia last week and did 3 tours with arch tours. We are a family of 5 with the kids between 10 and 13 years old. The 3h river cruise in the canoe was very re...",
+            "sentiment": 0.44688888888888895,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Did a fascinating excursion into Senegal  with driver Solomon and guide Abdul.     What a tour including a good lunch\nWe did our tour as aa couple in a jeep alone.   Great ",
+            "sentiment": 0.7333333333333334,
+            "rating": 5
+          },
+          {
+            "text": "It was brilliant.  We went the market crocodile pool, oyster farm, school, a family's house, fish farm, and a lovely beech. It coast us \u00a340 each. Got picked up at 8 o'clock till 6.30.  Food and drink ...",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "Brilliant day out babou and rhino where great guides and friendly guys full of knowledge and answered all questions asked . Staff on the boat were helpful and food was lovely defiantly worth the money...",
+            "sentiment": 0.6694444444444444,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Great trip would recommend this worth every penny one of the best places we been to need to see the crocodile ",
+            "sentiment": 0.7000000000000001,
+            "rating": 4
+          },
+          {
+            "text": "Brilliant day out babou and rhino where great guides and friendly guys full of knowledge and answered all questions asked . Staff on the boat were helpful and food was lovely defiantly worth the money...",
+            "sentiment": 0.6694444444444444,
+            "rating": 5
+          },
+          {
+            "text": "we only went on 4 in 1 trip in Gambia, nut it was WOW!!!! this is best trip to see, feel all Gambia, best guides, best service, a lot of information provided about Gambia and visited places, with fun,...",
+            "sentiment": 0.6676491477272727,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "great tour where you can see some highlights. From the very touristic Corcodil Pool over a very impressive and touchable school visit up to a lunch break at the most beautiful beach in Gambia. The tra...",
+            "sentiment": 0.5041208791208791,
+            "rating": 5
+          },
+          {
+            "text": "We had a wonderful tour of Senegal and aThe Gambia with Arch tours. The guides were great and tour showed us the key highlights. We felt safe the entire time. I strongly recommend a tour with this com...",
+            "sentiment": 0.47361111111111115,
+            "rating": 5
+          },
+          {
+            "text": "While on our recent holiday to Gambia, we booked via Arch tours to go to the Fathala Nature Reserve in Senegal on a tour. Dreading the thought of leaving the hotel at 6am, I can honestly say it was wo...",
+            "sentiment": 0.45065217391304346,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Did a fascinating excursion into Senegal  with driver Solomon and guide Abdul.     What a tour including a good lunch\nWe did our tour as aa couple in a jeep alone.   Great ",
+            "sentiment": 0.7333333333333334,
+            "rating": 5
+          },
+          {
+            "text": "It&#39; was a wonderful trip, interesting, exiting, funny with beautiful situations, nice people, good food and two guides, who love their jobs. They explained everything, had a great knowledge and ev...",
+            "sentiment": 0.72,
+            "rating": 5
+          },
+          {
+            "text": "Would recommend this tour 100%! What a great day it was! Comfort breaks, lots to see, very knowledgeable and nice guide, food (that&#39;s included) was great, one of the best tours I&#39;ve ever done!...",
+            "sentiment": 0.72,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "It&#39; was a wonderful trip, interesting, exiting, funny with beautiful situations, nice people, good food and two guides, who love their jobs. They explained everything, had a great knowledge and ev...",
+            "sentiment": 0.72,
+            "rating": 5
+          },
+          {
+            "text": "Absolutely superb 2 day tour to Georgetown with Arch Tours, our guide ML & driver Barra were both top notch, knowledgeable and great company. Saw hippos, chimpanzees, a troop of baboons as well the Wa...",
+            "sentiment": 0.6583333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Dawda was our guide. A very friendly man. He gave us excellent explanations about life in Gambia. The two tours were wonderful. We had a great time. The 4-in-1 tour is incredibly informative, especial...",
+            "sentiment": 0.6455357142857142,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Did a fascinating excursion into Senegal  with driver Solomon and guide Abdul.     What a tour including a good lunch\nWe did our tour as aa couple in a jeep alone.   Great ",
+            "sentiment": 0.7333333333333334,
+            "rating": 5
+          },
+          {
+            "text": "It&#39; was a wonderful trip, interesting, exiting, funny with beautiful situations, nice people, good food and two guides, who love their jobs. They explained everything, had a great knowledge and ev...",
+            "sentiment": 0.72,
+            "rating": 5
+          },
+          {
+            "text": "Would recommend this tour 100%! What a great day it was! Comfort breaks, lots to see, very knowledgeable and nice guide, food (that&#39;s included) was great, one of the best tours I&#39;ve ever done!...",
+            "sentiment": 0.72,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "Vi bokade en tur till Fathala Game Reserve med Arch Tours som vi blev mycket n\u00f6jda med. Bokningen gick snabbt och smidigt p\u00e5 deras kontor som dock ligger lite avsides. Anledningen till att vi bokade m...",
+          "sentiment": -0.31851851851851853,
+          "rating": 5
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.33484153668955424
+        },
+        {
+          "theme": "service_staff",
+          "score": 0.31972011729533245
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.31724940680631164
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "senegambia_birding",
+      "source": "gambia_operators",
+      "total_reviews": 2,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.42590767367553084,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "unknown": 2
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2023": 1
+      },
+      "theme_scores": {
+        "service_staff": {
+          "score": 0.43,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.43,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.4,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.43,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.4,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.43,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "service_staff": [
+          {
+            "text": "We (a couple) went on a birdwatching excursion to Mandinari, Tendaba Camp, and Abca&#39;s Creek Lodge in Kassagne. The guides were expert; we saw an incredible number of birds, and the dedicated guide...",
+            "sentiment": 0.4527777777777778,
+            "rating": 5
+          },
+          {
+            "text": "Senegambia Birding organized a 2 week birding tour through Gambia for us (party of 2) in December 2024. We stayed a few days in the Belgambia Lodge of Jim and Kaddy (best cook of Gambia!) from which w...",
+            "sentiment": 0.3990375695732839,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "We (a couple) went on a birdwatching excursion to Mandinari, Tendaba Camp, and Abca&#39;s Creek Lodge in Kassagne. The guides were expert; we saw an incredible number of birds, and the dedicated guide...",
+            "sentiment": 0.4527777777777778,
+            "rating": 5
+          },
+          {
+            "text": "Senegambia Birding organized a 2 week birding tour through Gambia for us (party of 2) in December 2024. We stayed a few days in the Belgambia Lodge of Jim and Kaddy (best cook of Gambia!) from which w...",
+            "sentiment": 0.3990375695732839,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Senegambia Birding organized a 2 week birding tour through Gambia for us (party of 2) in December 2024. We stayed a few days in the Belgambia Lodge of Jim and Kaddy (best cook of Gambia!) from which w...",
+            "sentiment": 0.3990375695732839,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "We (a couple) went on a birdwatching excursion to Mandinari, Tendaba Camp, and Abca&#39;s Creek Lodge in Kassagne. The guides were expert; we saw an incredible number of birds, and the dedicated guide...",
+            "sentiment": 0.4527777777777778,
+            "rating": 5
+          },
+          {
+            "text": "Senegambia Birding organized a 2 week birding tour through Gambia for us (party of 2) in December 2024. We stayed a few days in the Belgambia Lodge of Jim and Kaddy (best cook of Gambia!) from which w...",
+            "sentiment": 0.3990375695732839,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Senegambia Birding organized a 2 week birding tour through Gambia for us (party of 2) in December 2024. We stayed a few days in the Belgambia Lodge of Jim and Kaddy (best cook of Gambia!) from which w...",
+            "sentiment": 0.3990375695732839,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "We (a couple) went on a birdwatching excursion to Mandinari, Tendaba Camp, and Abca&#39;s Creek Lodge in Kassagne. The guides were expert; we saw an incredible number of birds, and the dedicated guide...",
+            "sentiment": 0.4527777777777778,
+            "rating": 5
+          },
+          {
+            "text": "Senegambia Birding organized a 2 week birding tour through Gambia for us (party of 2) in December 2024. We stayed a few days in the Belgambia Lodge of Jim and Kaddy (best cook of Gambia!) from which w...",
+            "sentiment": 0.3990375695732839,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "service_staff",
+          "score": 0.42590767367553084
+        },
+        {
+          "theme": "accessibility_transport",
+          "score": 0.42590767367553084
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.42590767367553084
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "fatou_tours",
+      "source": "gambia_operators",
+      "total_reviews": 19,
+      "average_rating": 4.894736842105263,
+      "overall_sentiment": 0.3898807284965925,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "unknown": 19
+      },
+      "year_distribution": {
+        "2024": 3,
+        "2023": 7,
+        "2022": 9
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.26,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.33,
+          "mentions": 13,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.24,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.36,
+          "mentions": 14,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.41,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.38,
+          "mentions": 16,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.31,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.39,
+          "mentions": 16,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "We had a very nice experience with Fatou Tours Gambia. We saw her office at Senegambia and in one day they managed to arrange a very complete tour to the Baboon Island. We saw a lot of animals; red an...",
+            "sentiment": 0.3204545454545454,
+            "rating": 5
+          },
+          {
+            "text": "We were looking for a bird guiding company to see the best birds in the Gambia and we found Fatou Tours via Birding Direct. The organization and planning went very smoothly online and we were really p...",
+            "sentiment": 0.2777272727272727,
+            "rating": 5
+          },
+          {
+            "text": "A day full of birds After some relaxing days at the pool I decided to do some birding and choose Fatou Tours Gambia and that was obviously the right choice. Fatou herself did pick me up at 08.00 am at...",
+            "sentiment": 0.2273395066034226,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "We had a fantastic birding holiday with Fatou tors Gambia. We had a wonderful time with Faday Bojanf (the guide) and Lami, his driver. We had pleasant and interesting conversations in the car and duri...",
+            "sentiment": 0.6375,
+            "rating": 5
+          },
+          {
+            "text": "A friend and I spent a week (late April-early May) traveling through Gambia with Foday, from Fatou Tours, in search of all the beautiful birds. He sees absolutely everything and knows all the bird cal...",
+            "sentiment": 0.3795454545454545,
+            "rating": 5
+          },
+          {
+            "text": "Very friendly people and guides. They find also the hard to find birds. We have had a very good experience with them. ",
+            "sentiment": 0.36861111111111106,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "One of the most professional we dealt during our trip to Gambia. Postives: 1. Car rental price was reasonable in compare to other car rentals. 2. Punctual with time regarding their work. 4. The car wa...",
+            "sentiment": 0.3053571428571429,
+            "rating": 5
+          },
+          {
+            "text": "A day full of birds After some relaxing days at the pool I decided to do some birding and choose Fatou Tours Gambia and that was obviously the right choice. Fatou herself did pick me up at 08.00 am at...",
+            "sentiment": 0.2273395066034226,
+            "rating": 5
+          },
+          {
+            "text": "Just returned from The Gambia. Found Fatou Tours after being booked by their guide, Foday Bojang, on our first night out near to our hotel (Senegambia). No hard sell just wanted to give us information...",
+            "sentiment": 0.1752768065268065,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "We had a fantastic birding holiday with Fatou tors Gambia. We had a wonderful time with Faday Bojanf (the guide) and Lami, his driver. We had pleasant and interesting conversations in the car and duri...",
+            "sentiment": 0.6375,
+            "rating": 5
+          },
+          {
+            "text": "We went on a seven-day birding tour with Jacques Tassingnon and Yankuba Jammeh from Fatou Tours. We had a wonderful time, and they made everything we wanted come true\u2014truly fantastic. It was an unforg...",
+            "sentiment": 0.5585714285714286,
+            "rating": 5
+          },
+          {
+            "text": "We had 2 great tours organized by Foday. We went with Mohammed and Mustafa to the inlands of Gambia and on Safari to Senegal.  Thanks on behave of our family.",
+            "sentiment": 0.5,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "A wonderful 10-day trip. Everything was perfectly arranged by Fatoutours. In short, carefree enjoyment of everything Gambia has to offer.",
+            "sentiment": 0.6666666666666666,
+            "rating": 4
+          },
+          {
+            "text": "We went on a seven-day birding tour with Jacques Tassingnon and Yankuba Jammeh from Fatou Tours. We had a wonderful time, and they made everything we wanted come true\u2014truly fantastic. It was an unforg...",
+            "sentiment": 0.5585714285714286,
+            "rating": 5
+          },
+          {
+            "text": "A 10-day birding trip through Gambia with Fatoutours ensures you can enjoy birding carefree! ",
+            "sentiment": 0.5,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "A wonderful 10-day trip. Everything was perfectly arranged by Fatoutours. In short, carefree enjoyment of everything Gambia has to offer.",
+            "sentiment": 0.6666666666666666,
+            "rating": 4
+          },
+          {
+            "text": "We went on a seven-day birding tour with Jacques Tassingnon and Yankuba Jammeh from Fatou Tours. We had a wonderful time, and they made everything we wanted come true\u2014truly fantastic. It was an unforg...",
+            "sentiment": 0.5585714285714286,
+            "rating": 5
+          },
+          {
+            "text": "Last week we went with fatou tours to gambia. My husband wanted a very good gide to look for birds. We had a very good gide Foday!!!! He searches places to look for new species! We saw in 1 week 230 s...",
+            "sentiment": 0.5307670454545454,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "30th/01/2022 was a day to be remembered. As my first time,I join the team of experts on a lazy day boat trip on the mouth of river Gambia on Banjul. I have the opportunity to explore the river and my ...",
+            "sentiment": 0.41111111111111115,
+            "rating": 5
+          },
+          {
+            "text": "A friend and I spent a week (late April-early May) traveling through Gambia with Foday, from Fatou Tours, in search of all the beautiful birds. He sees absolutely everything and knows all the bird cal...",
+            "sentiment": 0.3795454545454545,
+            "rating": 5
+          },
+          {
+            "text": "15 days fun birding My first birding trip to Gambia was a fun experience. Fatou Tours Gambia organized everything except the flight and the personal insurance, and organized it perfectly. The first 5 ...",
+            "sentiment": 0.364,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "A wonderful 10-day trip. Everything was perfectly arranged by Fatoutours. In short, carefree enjoyment of everything Gambia has to offer.",
+            "sentiment": 0.6666666666666666,
+            "rating": 4
+          },
+          {
+            "text": "We had a fantastic birding holiday with Fatou tors Gambia. We had a wonderful time with Faday Bojanf (the guide) and Lami, his driver. We had pleasant and interesting conversations in the car and duri...",
+            "sentiment": 0.6375,
+            "rating": 5
+          },
+          {
+            "text": "We went on a seven-day birding tour with Jacques Tassingnon and Yankuba Jammeh from Fatou Tours. We had a wonderful time, and they made everything we wanted come true\u2014truly fantastic. It was an unforg...",
+            "sentiment": 0.5585714285714286,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "value_money",
+          "score": 0.405091921966922
+        },
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.38868096609980457
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.38101659921668773
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "lams_tours",
+      "source": "gambia_operators",
+      "total_reviews": 128,
+      "average_rating": 4.8515625,
+      "overall_sentiment": 0.28653832212771296,
+      "positive_rate": 0.875,
+      "language_distribution": {
+        "unknown": 128
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2024": 6,
+        "2023": 20,
+        "2022": 10,
+        "2021": 2,
+        "2020": 10,
+        "2019": 15,
+        "2018": 11,
+        "2017": 7,
+        "2016": 9,
+        "2015": 9,
+        "2014": 14,
+        "2013": 12
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.3,
+          "mentions": 29,
+          "distribution": {
+            "positive": 29,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.3,
+          "mentions": 87,
+          "distribution": {
+            "positive": 80,
+            "neutral": 7,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.25,
+          "mentions": 18,
+          "distribution": {
+            "positive": 16,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.3,
+          "mentions": 68,
+          "distribution": {
+            "positive": 63,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.29,
+          "mentions": 55,
+          "distribution": {
+            "positive": 52,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.33,
+          "mentions": 20,
+          "distribution": {
+            "positive": 19,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.3,
+          "mentions": 103,
+          "distribution": {
+            "positive": 95,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "artistic_creative": {
+          "score": 0.29,
+          "mentions": 45,
+          "distribution": {
+            "positive": 41,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.33,
+          "mentions": 97,
+          "distribution": {
+            "positive": 94,
+            "neutral": 3,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Went to The Gambia for two weeks. Prebooked the safari-tour on www.lamstours.com Lam's is a very friendly guide with a Great knowledge and sence of humor. The trips are aducating and fun. Lam's feelin...",
+            "sentiment": 0.4937500000000001,
+            "rating": 5
+          },
+          {
+            "text": "I&#39;ve had the most wonderful tour together with a group, including my family. We went with our guide Lams Ceesay, on Lams Tours the Gambia, and experienced things we have never seen before, Lams is...",
+            "sentiment": 0.4519607843137255,
+            "rating": 5
+          },
+          {
+            "text": "We were two Danish women on our first trip to Gambia and therefore wanted to do some tours to learn more about the country and its people. We found Lams on the internet before leaving from home and ha...",
+            "sentiment": 0.4371428571428571,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "I had the best day of my life. Travelling alone is not always easy but Lams is a wonderful guide . I felt completely safe, got an excellent service and had a wonderful daytrip. I can really recommend ...",
+            "sentiment": 0.5926136363636364,
+            "rating": 5
+          },
+          {
+            "text": "1) Smiley and B the tour guides was both personable , funny , professional and made us feel very welcome.\n\n2) Punctual service and the tours we done with them went smooth.\n\n3) Had fun playing tunes wh...",
+            "sentiment": 0.551875,
+            "rating": 5
+          },
+          {
+            "text": "With Mom in the Gambia were only a week, but during that time Lams show to us so many interesting things! We fell in love Gambia thanks to him! Attentive, responsive, always will help! Lams-great phot...",
+            "sentiment": 0.51625,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We have visited the smiling coast for many years now and have found that Lam's tours are always excellent value for money, reliable, friendly and with lovely Lam's fantastic knowledge he makes every t...",
+            "sentiment": 0.46214285714285713,
+            "rating": 5
+          },
+          {
+            "text": "After arranging a trip to Fathala Wildlife Reserve in Senegal, Lamin kindly visited me on my arrival to Kotu to confirm the booking and fine details. Friendly and resassuring, Lamin was brilliant as w...",
+            "sentiment": 0.38986111111111116,
+            "rating": 5
+          },
+          {
+            "text": "We made a port stop in The Gambia recently (January 2020), and consider ourselves very fortunate to have had the team of Lamin Ceesay, the owner of Lams Tours, and his associates Omar, as our tour gui...",
+            "sentiment": 0.3430399659863945,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Hubby and I went on a fishing trip with Lams tours and couldn't fault it from start to finish. Communication was brilliant on WhatsApp.  All the fishing gear bait etc was provided and we also have lov...",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "I had the best day of my life. Travelling alone is not always easy but Lams is a wonderful guide . I felt completely safe, got an excellent service and had a wonderful daytrip. I can really recommend ...",
+            "sentiment": 0.5926136363636364,
+            "rating": 5
+          },
+          {
+            "text": "1) Smiley and B the tour guides was both personable , funny , professional and made us feel very welcome.\n\n2) Punctual service and the tours we done with them went smooth.\n\n3) Had fun playing tunes wh...",
+            "sentiment": 0.551875,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "1) Smiley and B the tour guides was both personable , funny , professional and made us feel very welcome.\n\n2) Punctual service and the tours we done with them went smooth.\n\n3) Had fun playing tunes wh...",
+            "sentiment": 0.551875,
+            "rating": 5
+          },
+          {
+            "text": "Went to The Gambia for two weeks. Prebooked the safari-tour on www.lamstours.com Lam's is a very friendly guide with a Great knowledge and sence of humor. The trips are aducating and fun. Lam's feelin...",
+            "sentiment": 0.4937500000000001,
+            "rating": 5
+          },
+          {
+            "text": "Visit to the Chigambas schools in Basse. Ive just come home from my fourth visit in Basse. Excellent Lams of Lams Tours took me safely there and back to banjul.\nThe Georgetown Tour and the Tour to Kun...",
+            "sentiment": 0.4785714285714286,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "I had the best day of my life. Travelling alone is not always easy but Lams is a wonderful guide . I felt completely safe, got an excellent service and had a wonderful daytrip. I can really recommend ...",
+            "sentiment": 0.5926136363636364,
+            "rating": 5
+          },
+          {
+            "text": "Visit to the Chigambas schools in Basse. Ive just come home from my fourth visit in Basse. Excellent Lams of Lams Tours took me safely there and back to banjul.\nThe Georgetown Tour and the Tour to Kun...",
+            "sentiment": 0.4785714285714286,
+            "rating": 5
+          },
+          {
+            "text": "I did a 4x4 tour and a Senegal tour with Lams Tours. Everything was incredibly well organized, with excellent guides, lots of information, and a feeling of complete safety. In short: Going to Kotu Gam...",
+            "sentiment": 0.475,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Hubby and I went on a fishing trip with Lams tours and couldn't fault it from start to finish. Communication was brilliant on WhatsApp.  All the fishing gear bait etc was provided and we also have lov...",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "Our trips through Lams Tours were excellent. The lads who did the trips with us (Smiley, Bakary and Blackie) were all very good. They gave us lots of information about the places we visited and they a...",
+            "sentiment": 0.6953333333333334,
+            "rating": 5
+          },
+          {
+            "text": "A great and interesting day tour to Guinea Bissau. I saw many local villages and schools, beautiful views and met nice people during the day. Thank you for this day to Lams tours!",
+            "sentiment": 0.5666666666666667,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Hubby and I went on a fishing trip with Lams tours and couldn't fault it from start to finish. Communication was brilliant on WhatsApp.  All the fishing gear bait etc was provided and we also have lov...",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "A great and interesting day tour to Guinea Bissau. I saw many local villages and schools, beautiful views and met nice people during the day. Thank you for this day to Lams tours!",
+            "sentiment": 0.5666666666666667,
+            "rating": 5
+          },
+          {
+            "text": "We went on a two-day tour to Kafountine in Senegal with Lams. The organization was excellent. Mosu also traveled with us. We received a lot of explanations about all sorts of things along the way. The...",
+            "sentiment": 0.55,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Hubby and I went on a fishing trip with Lams tours and couldn't fault it from start to finish. Communication was brilliant on WhatsApp.  All the fishing gear bait etc was provided and we also have lov...",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "Our trips through Lams Tours were excellent. The lads who did the trips with us (Smiley, Bakary and Blackie) were all very good. They gave us lots of information about the places we visited and they a...",
+            "sentiment": 0.6953333333333334,
+            "rating": 5
+          },
+          {
+            "text": "I had the best day of my life. Travelling alone is not always easy but Lams is a wonderful guide . I felt completely safe, got an excellent service and had a wonderful daytrip. I can really recommend ...",
+            "sentiment": 0.5926136363636364,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.33332920237796093
+        },
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3253666163322182
+        },
+        {
+          "theme": "cultural_heritage",
+          "score": 0.30447635396429124
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "black_white_safari",
+      "source": "gambia_operators",
+      "total_reviews": 300,
+      "average_rating": 4.87,
+      "overall_sentiment": 0.2754176496120604,
+      "positive_rate": 0.91,
+      "language_distribution": {
+        "unknown": 300
+      },
+      "year_distribution": {
+        "2025": 16,
+        "2024": 26,
+        "2023": 34,
+        "2022": 21,
+        "2021": 6,
+        "2020": 15,
+        "2019": 60,
+        "2018": 39,
+        "2017": 31,
+        "2016": 49,
+        "2015": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.27,
+          "mentions": 71,
+          "distribution": {
+            "positive": 65,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.28,
+          "mentions": 257,
+          "distribution": {
+            "positive": 235,
+            "neutral": 22,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.22,
+          "mentions": 50,
+          "distribution": {
+            "positive": 44,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.26,
+          "mentions": 255,
+          "distribution": {
+            "positive": 233,
+            "neutral": 22,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.25,
+          "mentions": 123,
+          "distribution": {
+            "positive": 113,
+            "neutral": 10,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.28,
+          "mentions": 59,
+          "distribution": {
+            "positive": 54,
+            "neutral": 5,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.27,
+          "mentions": 231,
+          "distribution": {
+            "positive": 211,
+            "neutral": 20,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.27,
+          "mentions": 116,
+          "distribution": {
+            "positive": 106,
+            "neutral": 10,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.28,
+          "mentions": 268,
+          "distribution": {
+            "positive": 250,
+            "neutral": 18,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "We had a day safari from Gambia to Senegal. Armstrong, the boss, explained it all perfectly and promised us (my mum, my sister and me) wonders which was delivered perfectly by our guide Lamin. Great d...",
+            "sentiment": 0.76,
+            "rating": 5
+          },
+          {
+            "text": "This was one of the best tours I have ever done! Armstrong was great at responding quickly and working with my friends and I to create a custom safari and lion walk that was all we had dreamed and mor...",
+            "sentiment": 0.6947916666666667,
+            "rating": 5
+          },
+          {
+            "text": "Let's get to the point. The whole experience and exceptional customer service was EXCELLENT, EXCELLENT and more EXCELLENT... Black and White family just keep doing what you do best. Also thank you for...",
+            "sentiment": 0.5777777777777778,
+            "rating": 4
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "The trip were amazing. We had very good time . Lion walk was incredible experience . All staff which were with as all trip were very pleasant and helpful. We had a beautiful time .",
+            "sentiment": 0.8426666666666668,
+            "rating": 5
+          },
+          {
+            "text": "Superb organization and great service, a great team. Lamin, etc. Everything was on time and the guides were excellent. I highly recommend everything! Best regards, Elke.",
+            "sentiment": 0.8000000000000002,
+            "rating": 4
+          },
+          {
+            "text": "We had a day safari from Gambia to Senegal. Armstrong, the boss, explained it all perfectly and promised us (my mum, my sister and me) wonders which was delivered perfectly by our guide Lamin. Great d...",
+            "sentiment": 0.76,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We were on 3 tours with Black and White Safaris. A 3-day tour to Georgetown and Tendaba, and day tours to Fathala (Senegal) and Makasutu. Most guides were very experienced and gave good service and in...",
+            "sentiment": 0.37083333333333335,
+            "rating": 4
+          },
+          {
+            "text": "The tours were always great, the guides and Armstrong were amazing guys: funny, personable, and above all, they explain everything you want to know. Everything from A to Z: history, fauna and flora, t...",
+            "sentiment": 0.35595238095238096,
+            "rating": 5
+          },
+          {
+            "text": "Both trips were great, lunch and cold drinks throughout the trips were included. One trip was booked from the UK Finding the office in Kololi was easy, here we booked the second trip with smiling, fri...",
+            "sentiment": 0.35071839080459766,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "The trip were amazing. We had very good time . Lion walk was incredible experience . All staff which were with as all trip were very pleasant and helpful. We had a beautiful time .",
+            "sentiment": 0.8426666666666668,
+            "rating": 5
+          },
+          {
+            "text": "We had a day safari from Gambia to Senegal. Armstrong, the boss, explained it all perfectly and promised us (my mum, my sister and me) wonders which was delivered perfectly by our guide Lamin. Great d...",
+            "sentiment": 0.76,
+            "rating": 5
+          },
+          {
+            "text": "This had to be one of the best excursions I have ever done. Booking was a breeze. Lamin was very attentive and knowledgeable. I enjoyed the Safari and lion walk. Lunch was great!!!!",
+            "sentiment": 0.755,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "These guys are excellent and the best at what they do. They ensure your safety and enjoyment are their priority and that you don't miss seeing anything. We went on three trips with them: Fathala Natio...",
+            "sentiment": 0.7533333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Collected us from our hotel at 6.30am aargh! Not the best time of day but it has to be done to catch the ferry in Banjul, this is an experience in its self all the hub bub of people animals etc. We st...",
+            "sentiment": 0.615,
+            "rating": 5
+          },
+          {
+            "text": "Please do take the time to do the Roots tour, it's an emotional experience that will stay with you for life, thought this tour was excellent and Alex and the guides at James island were great. Really ...",
+            "sentiment": 0.5,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "These guys are excellent and the best at what they do. They ensure your safety and enjoyment are their priority and that you don't miss seeing anything. We went on three trips with them: Fathala Natio...",
+            "sentiment": 0.7533333333333333,
+            "rating": 5
+          },
+          {
+            "text": "The tours were amazing lots to choose from great service the best gambian experience with these guys Muhammed and fantastic was our tour guides and the driver bax we also used them for our airport tax...",
+            "sentiment": 0.6900000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Armstrong and his crew Saliff and Baz provide  efficient safe and informative tours. They are very personable and a joy to do business with. Thoroughly Recommended",
+            "sentiment": 0.5,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "We had a day safari from Gambia to Senegal. Armstrong, the boss, explained it all perfectly and promised us (my mum, my sister and me) wonders which was delivered perfectly by our guide Lamin. Great d...",
+            "sentiment": 0.76,
+            "rating": 5
+          },
+          {
+            "text": "Good communication, nice people, good organised tours. The perfect way to learn more about The Gambia! Would book again!",
+            "sentiment": 0.75625,
+            "rating": 5
+          },
+          {
+            "text": "This had to be one of the best excursions I have ever done. Booking was a breeze. Lamin was very attentive and knowledgeable. I enjoyed the Safari and lion walk. Lunch was great!!!!",
+            "sentiment": 0.755,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "The trip were amazing. We had very good time . Lion walk was incredible experience . All staff which were with as all trip were very pleasant and helpful. We had a beautiful time .",
+            "sentiment": 0.8426666666666668,
+            "rating": 5
+          },
+          {
+            "text": "These guys are excellent and the best at what they do. They ensure your safety and enjoyment are their priority and that you don't miss seeing anything. We went on three trips with them: Fathala Natio...",
+            "sentiment": 0.7533333333333333,
+            "rating": 5
+          },
+          {
+            "text": "We went on the safari to Sengal with a lion run. It was beautiful. The tour guide (Jaja Jobarteh) was excellent and explained everything well. We took some great photos and can highly recommend it.",
+            "sentiment": 0.7025000000000001,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "The trip were amazing. We had very good time . Lion walk was incredible experience . All staff which were with as all trip were very pleasant and helpful. We had a beautiful time .",
+            "sentiment": 0.8426666666666668,
+            "rating": 5
+          },
+          {
+            "text": "Superb organization and great service, a great team. Lamin, etc. Everything was on time and the guides were excellent. I highly recommend everything! Best regards, Elke.",
+            "sentiment": 0.8000000000000002,
+            "rating": 4
+          },
+          {
+            "text": "We had a day safari from Gambia to Senegal. Armstrong, the boss, explained it all perfectly and promised us (my mum, my sister and me) wonders which was delivered perfectly by our guide Lamin. Great d...",
+            "sentiment": 0.76,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "omi_tours",
+      "source": "gambia_operators",
+      "total_reviews": 31,
+      "average_rating": 4.741935483870968,
+      "overall_sentiment": 0.34377483130062025,
+      "positive_rate": 0.967741935483871,
+      "language_distribution": {
+        "unknown": 31
+      },
+      "year_distribution": {
+        "2025": 8,
+        "2024": 7,
+        "2023": 10,
+        "2022": 3,
+        "2021": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.35,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.32,
+          "mentions": 19,
+          "distribution": {
+            "positive": 18,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.25,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.29,
+          "mentions": 23,
+          "distribution": {
+            "positive": 22,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.27,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.29,
+          "mentions": 12,
+          "distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.37,
+          "mentions": 24,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.28,
+          "mentions": 10,
+          "distribution": {
+            "positive": 9,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.35,
+          "mentions": 28,
+          "distribution": {
+            "positive": 27,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Omi was an excellent tour guide. He was punctual and ensured that the trip ran smoothly, assisting with the border crossing into Senegal. The transport was ready and waiting at each leg of the journey...",
+            "sentiment": 0.425,
+            "rating": 5
+          },
+          {
+            "text": "This guide is highly recommended! We did three tours with Omar: the tour to Fathala in Senegal, the tour to George Town, and a lazy fishing day. All three tours were well-organized and a great experie...",
+            "sentiment": 0.41006944444444443,
+            "rating": 5
+          },
+          {
+            "text": "We&#39;ve taken several tours with Omar. He&#39;s a great source of information about the Gambian landscape and culture. He&#39;s a friendly guide who shows us Gambia in a very enjoyable way, and in o...",
+            "sentiment": 0.397,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Found Omar and the opportunity for the Omi Lazy River Cruise on the internet. It sounded good but turned out even better. Omar his driver, boat crew and cook were great! We laughed, we talked, we went...",
+            "sentiment": 0.4485,
+            "rating": 5
+          },
+          {
+            "text": "Omi was an excellent tour guide. He was punctual and ensured that the trip ran smoothly, assisting with the border crossing into Senegal. The transport was ready and waiting at each leg of the journey...",
+            "sentiment": 0.425,
+            "rating": 5
+          },
+          {
+            "text": "Everybody that visits the Gambia must take a tour with Omar, Lamin, and the number 1 driver in the Gambia because these guys are going to be the top tour guides in the whole of the Gambia. These 3 men...",
+            "sentiment": 0.4107142857142857,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "Omar is a knowledgeable, kind, and fun guide. He will instantly make you feel at home in The Gambia. I spent many fun days with Omar and Lamin on the road throughout West Africa, especially in The Gam...",
+            "sentiment": 0.3023232323232323,
+            "rating": 5
+          },
+          {
+            "text": "My 13 year old daughter and I booked Omar&#39;s day trip to GB. We knew it would be a long day but didn&#39;t have time to do a longer trip. Omar&#39;s reliability and time management were excellent. ...",
+            "sentiment": 0.30181451612903226,
+            "rating": 5
+          },
+          {
+            "text": "Omi tours are fantastic We took a day tour to Guinea Bissau me and my friend . and although it is a long day what fun we had, omi and his driver where great company we had such a great time and laughe...",
+            "sentiment": 0.24344582185491276,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "My dad and I did a Fathala reserve trip with Omi and had a lovely day. He made the border crossing into Senegal easy and had lots of knowledge to share with us on the day. Overall a very good trip and...",
+            "sentiment": 0.48333333333333334,
+            "rating": 5
+          },
+          {
+            "text": "Found Omar and the opportunity for the Omi Lazy River Cruise on the internet. It sounded good but turned out even better. Omar his driver, boat crew and cook were great! We laughed, we talked, we went...",
+            "sentiment": 0.4485,
+            "rating": 5
+          },
+          {
+            "text": "Omi was an excellent tour guide. He was punctual and ensured that the trip ran smoothly, assisting with the border crossing into Senegal. The transport was ready and waiting at each leg of the journey...",
+            "sentiment": 0.425,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Everybody that visits the Gambia must take a tour with Omar, Lamin, and the number 1 driver in the Gambia because these guys are going to be the top tour guides in the whole of the Gambia. These 3 men...",
+            "sentiment": 0.4107142857142857,
+            "rating": 5
+          },
+          {
+            "text": "This guide is highly recommended! We did three tours with Omar: the tour to Fathala in Senegal, the tour to George Town, and a lazy fishing day. All three tours were well-organized and a great experie...",
+            "sentiment": 0.41006944444444443,
+            "rating": 5
+          },
+          {
+            "text": "What a brilliant guide. I took two trips with Omi - one was a bespoke trip to Guinea-Bissau and the other included the crocodile pond, monkey park and a trip on the Gambia river. Both trips were super...",
+            "sentiment": 0.3847222222222222,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "We used Omi for three trips during our stay in The Gambia. He was very attentive to make sure we were happy at all times, and, most importantly, whist we were with him we felt safe and secure. Any sma...",
+            "sentiment": 0.4030357142857143,
+            "rating": 5
+          },
+          {
+            "text": "We had an excellent trip with Omar through the Gambia, Senegal and Guinea Bissau. \nOmar is very knowledgable on the countries and the history and is always happy to answer questions.\nWe are two girls ...",
+            "sentiment": 0.38984375,
+            "rating": 5
+          },
+          {
+            "text": "We had the most fantastic trips with Omi and his driver, Lamin! Omi is a calm, confident young man who goes above and beyond to provide a wonderful tour. Lamin is the cheerful rasta who drives you aro...",
+            "sentiment": 0.36944444444444446,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Omar took us on a day tour of Gambia: from the Senegal border to Banjul and\u00a0Kachikally Crocodile Pool.\nGreat experience!",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "Took 2 trips with him. Both where very nice experiences. Good on time and lots of information. Will recommend.",
+            "sentiment": 0.74,
+            "rating": 4
+          },
+          {
+            "text": "My dad and I did a Fathala reserve trip with Omi and had a lovely day. He made the border crossing into Senegal easy and had lots of knowledge to share with us on the day. Overall a very good trip and...",
+            "sentiment": 0.48333333333333334,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "We&#39;ve taken several tours with Omar. He&#39;s a great source of information about the Gambian landscape and culture. He&#39;s a friendly guide who shows us Gambia in a very enjoyable way, and in o...",
+            "sentiment": 0.397,
+            "rating": 5
+          },
+          {
+            "text": "We took 3 trips with Omi Tours visiting different parts of The Gambia and Senegal. Every trip was a fantastic experience where Omar was a perfect guide and took care of our every need: pick-up at hote...",
+            "sentiment": 0.38999999999999996,
+            "rating": 5
+          },
+          {
+            "text": "We had an excellent trip with Omar through the Gambia, Senegal and Guinea Bissau. \nOmar is very knowledgable on the countries and the history and is always happy to answer questions.\nWe are two girls ...",
+            "sentiment": 0.38984375,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Omar took us on a day tour of Gambia: from the Senegal border to Banjul and\u00a0Kachikally Crocodile Pool.\nGreat experience!",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "Took 2 trips with him. Both where very nice experiences. Good on time and lots of information. Will recommend.",
+            "sentiment": 0.74,
+            "rating": 4
+          },
+          {
+            "text": "My dad and I did a Fathala reserve trip with Omi and had a lovely day. He made the border crossing into Senegal easy and had lots of knowledge to share with us on the day. Overall a very good trip and...",
+            "sentiment": 0.48333333333333334,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "educational_value",
+          "score": 0.37064680728402427
+        },
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3543512351833586
+        },
+        {
+          "theme": "cultural_heritage",
+          "score": 0.3500702274367047
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "african_adventure_tours",
+      "source": "gambia_operators",
+      "total_reviews": 32,
+      "average_rating": 4.1875,
+      "overall_sentiment": 0.3096818943073539,
+      "positive_rate": 0.875,
+      "language_distribution": {
+        "unknown": 32
+      },
+      "year_distribution": {
+        "2024": 2,
+        "2023": 2,
+        "2020": 3,
+        "2019": 5,
+        "2018": 9,
+        "2017": 6,
+        "2016": 1,
+        "2015": 2,
+        "2014": 1,
+        "2013": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.34,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.31,
+          "mentions": 29,
+          "distribution": {
+            "positive": 25,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.24,
+          "mentions": 9,
+          "distribution": {
+            "positive": 7,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.31,
+          "mentions": 19,
+          "distribution": {
+            "positive": 16,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.3,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.34,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.29,
+          "mentions": 26,
+          "distribution": {
+            "positive": 22,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.32,
+          "mentions": 15,
+          "distribution": {
+            "positive": 14,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.36,
+          "mentions": 25,
+          "distribution": {
+            "positive": 24,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "We booked the two-day tour through Corendon, which was provided by African Adventure Tours. A guide, driver, and cameraman accompanied us. It was a truly amazing experience; the impressions you gain w...",
+            "sentiment": 0.4807692307692308,
+            "rating": 4
+          },
+          {
+            "text": "I really enjoyed everything!  The guides are friendly and they show a lot of The Gambia. The culture, the market, the local people and ofcourse the trip to Senegal. It's very nice.",
+            "sentiment": 0.445,
+            "rating": 5
+          },
+          {
+            "text": "Three great days we had with the driver and our guide. Lamin is an excellent guide organizing a perfect trip through the country. We have had two boat-trips on the rivers Halahin and Gambia watching b...",
+            "sentiment": 0.43666666666666665,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "We took three trips during our stay in Gambia. We found the 4WD tour the best. The organization has good guides, some of whom also speak good Dutch. It&#39;s a great way to see more of Gambia than jus...",
+            "sentiment": 0.74,
+            "rating": 4
+          },
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "Did 2 excursions with these guides, the 4-wheel drive was great, a must do! Definitely top guidance, very safe, the safari was the 2nd, also great to find all the animals, wow 2 x with Lamin as a guid...",
+            "sentiment": 0.5062500000000001,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "We booked the 4 wheel drive day tour from Kotu. Our guide was Fanta and she was great! Perfect English, great information and a lot of humor! We were with about 10 other people so small group. The tou...",
+            "sentiment": 0.4132575757575758,
+            "rating": 5
+          },
+          {
+            "text": "In January 2019, we went to Gambia for the first time! What a special country with friendly people. We took the day trip with the 4x4. What a varied tour; every tourist should do this tour. You get a ...",
+            "sentiment": 0.3257469654528478,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "Did 2 excursions with these guides, the 4-wheel drive was great, a must do! Definitely top guidance, very safe, the safari was the 2nd, also great to find all the animals, wow 2 x with Lamin as a guid...",
+            "sentiment": 0.5062500000000001,
+            "rating": 5
+          },
+          {
+            "text": "A fantastic organization for excursions. We had a wonderful guide and driver. They did everything they could to ensure we had an unforgettable experience. And they certainly succeeded. A wide range of...",
+            "sentiment": 0.4904761904761905,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "We were picked up promptly at the agreed-upon time and taken via three or four other hotels to the Tanji Bird Reserve. There, we could choose between canoeing ourselves or being rowed. We chose the la...",
+            "sentiment": 0.4489495798319328,
+            "rating": 4
+          },
+          {
+            "text": "We did 3 trips with them and we had a great time. The guides are just fantastic, they will do their very best to please everybody. You can just feel the love that they have for their country. Great wa...",
+            "sentiment": 0.4147727272727273,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "Did 2 excursions with these guides, the 4-wheel drive was great, a must do! Definitely top guidance, very safe, the safari was the 2nd, also great to find all the animals, wow 2 x with Lamin as a guid...",
+            "sentiment": 0.5062500000000001,
+            "rating": 5
+          },
+          {
+            "text": "We booked the 4 wheel drive day tour from Kotu. Our guide was Fanta and she was great! Perfect English, great information and a lot of humor! We were with about 10 other people so small group. The tou...",
+            "sentiment": 0.4132575757575758,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "We took three trips during our stay in Gambia. We found the 4WD tour the best. The organization has good guides, some of whom also speak good Dutch. It&#39;s a great way to see more of Gambia than jus...",
+            "sentiment": 0.74,
+            "rating": 4
+          },
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "We booked the two-day tour through Corendon, which was provided by African Adventure Tours. A guide, driver, and cameraman accompanied us. It was a truly amazing experience; the impressions you gain w...",
+            "sentiment": 0.4807692307692308,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "We booked the two-day tour through Corendon, which was provided by African Adventure Tours. A guide, driver, and cameraman accompanied us. It was a truly amazing experience; the impressions you gain w...",
+            "sentiment": 0.4807692307692308,
+            "rating": 4
+          },
+          {
+            "text": "We were picked up promptly at the agreed-upon time and taken via three or four other hotels to the Tanji Bird Reserve. There, we could choose between canoeing ourselves or being rowed. We chose the la...",
+            "sentiment": 0.4489495798319328,
+            "rating": 4
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "We took three trips during our stay in Gambia. We found the 4WD tour the best. The organization has good guides, some of whom also speak good Dutch. It&#39;s a great way to see more of Gambia than jus...",
+            "sentiment": 0.74,
+            "rating": 4
+          },
+          {
+            "text": "A very enjoyable, safe, and friendly two-day excursion with excellent guidance. Guide Bunja showed us, felt, and experienced a part of his country in a fantastic and enjoyable way. His enthusiasm is p...",
+            "sentiment": 0.5279583333333333,
+            "rating": 4
+          },
+          {
+            "text": "Did 2 excursions with these guides, the 4-wheel drive was great, a must do! Definitely top guidance, very safe, the safari was the 2nd, also great to find all the animals, wow 2 x with Lamin as a guid...",
+            "sentiment": 0.5062500000000001,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.35975561571870396
+        },
+        {
+          "theme": "safety_security",
+          "score": 0.3441649211899212
+        },
+        {
+          "theme": "cultural_heritage",
+          "score": 0.34200753805795825
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "aji_tours",
+      "source": "gambia_operators",
+      "total_reviews": 33,
+      "average_rating": 4.696969696969697,
+      "overall_sentiment": 0.31560073567959357,
+      "positive_rate": 0.9090909090909091,
+      "language_distribution": {
+        "unknown": 33
+      },
+      "year_distribution": {
+        "2025": 12,
+        "2024": 9,
+        "2022": 1,
+        "2020": 9,
+        "2019": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.3,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.29,
+          "mentions": 22,
+          "distribution": {
+            "positive": 21,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.02,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.25,
+          "mentions": 16,
+          "distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.31,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.27,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.34,
+          "mentions": 27,
+          "distribution": {
+            "positive": 26,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.3,
+          "mentions": 11,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.38,
+          "mentions": 26,
+          "distribution": {
+            "positive": 26,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "We are 3 friends who spend two weeks in Gambia discovered its beauty with Aji Tours.She is amazing person with great knowledge about her countyside, history and local usages.She is full of empathy, jo...",
+            "sentiment": 0.47500000000000003,
+            "rating": 5
+          },
+          {
+            "text": "Booked this tour with Ali, a local man. Ali_tours_gambia (Insta) Ali gave a good explanation about the river. The oysters growing on the roots are impressive. If you&#39;re lucky, you&#39;ll see monke...",
+            "sentiment": 0.41041666666666665,
+            "rating": 5
+          },
+          {
+            "text": "Beautiful views, lots of photos, positive energy, full relaxation. A unique opportunity to get to know the local friendliness and culture \u2764\ufe0f\ud83d\udc9a",
+            "sentiment": 0.36045454545454547,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "With Aji I experienced the trip of a lifetime in the Lion walk- \nAji is a knowledgeable tour guide and goes out of her way to make sure you have the best experience.\nI cannot recommend her highly enou...",
+            "sentiment": 0.63,
+            "rating": 5
+          },
+          {
+            "text": "More than a wonderfull day with the only female guide in Gambia AJI. Together with her colleague Malcom, she made it a unforgettable day for us!\nWe recieved a lot of information and importantly: it wa...",
+            "sentiment": 0.5504761904761905,
+            "rating": 5
+          },
+          {
+            "text": "Aji is a warm and knowledgeable tour guide. She made an amazing experience even better and I will be happy to do further trips with her",
+            "sentiment": 0.5,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "I spent over half a day with Aji in a taxi visiting many interesting places. She also had a lot to say about the customs and living conditions of her fellow countrymen. It was a positive sign that thi...",
+            "sentiment": 0.19212121212121214,
+            "rating": 4
+          },
+          {
+            "text": "I visited Aji while I was in Gambia last week to inquire about her tours, after discovering her website while still in the UK and thus making contact. Her office is opposite Boss Lady restaurant in Ko...",
+            "sentiment": 0.1557591218305504,
+            "rating": 5
+          },
+          {
+            "text": "A well organiseren tour by Aji Tours. She is very friendly and everything was included, even drinks. So the drinks at any time cold in your hands.  \nAji is a guide who knows everything about the tour ...",
+            "sentiment": -0.13124999999999998,
+            "rating": 4
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "With Aji I experienced the trip of a lifetime in the Lion walk- \nAji is a knowledgeable tour guide and goes out of her way to make sure you have the best experience.\nI cannot recommend her highly enou...",
+            "sentiment": 0.63,
+            "rating": 5
+          },
+          {
+            "text": "Me and my family went for the boat trip to Kunta Kinteh Island with Aji tours. We had checked around with many of the different tour companies but ended up booking with Aji. It was the best choice we ...",
+            "sentiment": 0.42250000000000004,
+            "rating": 5
+          },
+          {
+            "text": "From our hotel in Senegambia, we met Aji on the strip. She&#39;s a determined, friendly, and positive Gambian woman. We heard from several locals that she&#39;s reliable and that we could safely book ...",
+            "sentiment": 0.36848484848484847,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "We had an amazing experience discovering The Gambia thanks to the excellent tour of Ali Sowe. He made us feel very comfortable and safe and we had an unforgettable day. Highly recommended!",
+            "sentiment": 0.5457142857142857,
+            "rating": 5
+          },
+          {
+            "text": "We have been on 2 trips with this amazing, warm, smiling and loving little guide \ud83c\uddec\ud83c\uddf2 Aji has made our trip to Gambia a PERFECT experience \ud83c\uddec\ud83c\uddf2 In addition to the fact that she knows so much about her cou...",
+            "sentiment": 0.3801136363636363,
+            "rating": 5
+          },
+          {
+            "text": "I booked with Aji on the Fathala safari tour. It was a one to one trip, and so I had a very personal experience. Aji had plenty of tips and pointers, and I enjoyed it so much, I booked a second outing...",
+            "sentiment": 0.3442857142857143,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "We had an amazing experience discovering The Gambia thanks to the excellent tour of Ali Sowe. He made us feel very comfortable and safe and we had an unforgettable day. Highly recommended!",
+            "sentiment": 0.5457142857142857,
+            "rating": 5
+          },
+          {
+            "text": "From our hotel in Senegambia, we met Aji on the strip. She&#39;s a determined, friendly, and positive Gambian woman. We heard from several locals that she&#39;s reliable and that we could safely book ...",
+            "sentiment": 0.36848484848484847,
+            "rating": 5
+          },
+          {
+            "text": "A day out with Aji as our guide. We saw the real Gambia in a 4x4 jeep with a skilled driver, where safety was paramount. A tour with both laughter and tears. We visited places where Gambians made cook...",
+            "sentiment": 0.2751388888888889,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Great day with the Aji tour team: Agency to recommend without hesitation, very nice experience in Gambia",
+            "sentiment": 0.79,
+            "rating": 5
+          },
+          {
+            "text": "With Aji I experienced the trip of a lifetime in the Lion walk- \nAji is a knowledgeable tour guide and goes out of her way to make sure you have the best experience.\nI cannot recommend her highly enou...",
+            "sentiment": 0.63,
+            "rating": 5
+          },
+          {
+            "text": "An interesting visit to Kunta Kinteh Island. Aji was punctual and provided good explanations. A strong and intelligent woman who deserves support.",
+            "sentiment": 0.6083333333333334,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "With Aji I experienced the trip of a lifetime in the Lion walk- \nAji is a knowledgeable tour guide and goes out of her way to make sure you have the best experience.\nI cannot recommend her highly enou...",
+            "sentiment": 0.63,
+            "rating": 5
+          },
+          {
+            "text": "We are 3 friends who spend two weeks in Gambia discovered its beauty with Aji Tours.She is amazing person with great knowledge about her countyside, history and local usages.She is full of empathy, jo...",
+            "sentiment": 0.47500000000000003,
+            "rating": 5
+          },
+          {
+            "text": "We have been on 2 trips with this amazing, warm, smiling and loving little guide \ud83c\uddec\ud83c\uddf2 Aji has made our trip to Gambia a PERFECT experience \ud83c\uddec\ud83c\uddf2 In addition to the fact that she knows so much about her cou...",
+            "sentiment": 0.3801136363636363,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Great day with the Aji tour team: Agency to recommend without hesitation, very nice experience in Gambia",
+            "sentiment": 0.79,
+            "rating": 5
+          },
+          {
+            "text": "With Aji I experienced the trip of a lifetime in the Lion walk- \nAji is a knowledgeable tour guide and goes out of her way to make sure you have the best experience.\nI cannot recommend her highly enou...",
+            "sentiment": 0.63,
+            "rating": 5
+          },
+          {
+            "text": "An interesting visit to Kunta Kinteh Island. Aji was punctual and provided good explanations. A strong and intelligent woman who deserves support.",
+            "sentiment": 0.6083333333333334,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3792569638282065
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.34294901360095104
+        },
+        {
+          "theme": "value_money",
+          "score": 0.31168620043977185
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "eco_tours",
+      "source": "gambia_operators",
+      "total_reviews": 19,
+      "average_rating": 4.526315789473684,
+      "overall_sentiment": 0.30386309164775893,
+      "positive_rate": 0.8421052631578947,
+      "language_distribution": {
+        "unknown": 19
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2024": 1,
+        "2019": 4,
+        "2018": 5,
+        "2017": 7,
+        "2016": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.24,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.33,
+          "mentions": 11,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.22,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.32,
+          "mentions": 12,
+          "distribution": {
+            "positive": 11,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.31,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.34,
+          "mentions": 17,
+          "distribution": {
+            "positive": 16,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.24,
+          "mentions": 9,
+          "distribution": {
+            "positive": 7,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.37,
+          "mentions": 14,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "We went for private 2 days trip from Serekunda - Faraffeni - Wassau stone circles - Gambia river - Janjanbureh - Brikamaba - Brikama market. Our guide Demba was just amazing, gave us a lot of informat...",
+            "sentiment": 0.36666666666666664,
+            "rating": 4
+          },
+          {
+            "text": "My girlfriend and I spent two weeks at the Lemon Creek Hotel so Ecotours were very convenient but they were also great quality. Demba was our guide for the &#39;roots&#39; tour and the safari park in ...",
+            "sentiment": 0.2693181818181818,
+            "rating": 5
+          },
+          {
+            "text": "We, a group of seven, booked a day tour to the historic slave trade sites: Alfreda, Juffure, and Fort James Island. It was a fantastic experience with lasting impressions. Amadou and Demba, the guys f...",
+            "sentiment": 0.265,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "We thoroughly enjoyed our stay at the Lemon Creek Hotel. Ecotours was right there on-site and impressed us with its offerings and wonderful staff. Special thanks go to Seedou. ",
+            "sentiment": 0.5571428571428572,
+            "rating": 5
+          },
+          {
+            "text": "We traveled from Bijilo to Senegal with ecotours. The transportation was excellent, and the guide was excellent all day. Their personal attention and extensive knowledge made the day a success. This i...",
+            "sentiment": 0.44999999999999996,
+            "rating": 4
+          },
+          {
+            "text": "We took a three day tour through a large part of the Gambia, including a short visit to Fathala National Park in Senegal. Two very good and nice guides took us for a great trip. The guides spoke very ...",
+            "sentiment": 0.4375267857142857,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We took a three day tour through a large part of the Gambia, including a short visit to Fathala National Park in Senegal. Two very good and nice guides took us for a great trip. The guides spoke very ...",
+            "sentiment": 0.4375267857142857,
+            "rating": 5
+          },
+          {
+            "text": "A really well organized tour with a guy who knew what he was doing. We were cared for to the highest level. The local guides we met on the three day tour were amazing. Stoneman at Wassu and the griot ...",
+            "sentiment": 0.2916666666666667,
+            "rating": 4
+          },
+          {
+            "text": "We, a group of seven, booked a day tour to the historic slave trade sites: Alfreda, Juffure, and Fort James Island. It was a fantastic experience with lasting impressions. Amadou and Demba, the guys f...",
+            "sentiment": 0.265,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Tour of the mangroves. A village and an isolated island all to ourselves. Thank you Djere!!! Great tour and your fish was amazing on the BBQ. ",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "We traveled from Bijilo to Senegal with ecotours. The transportation was excellent, and the guide was excellent all day. Their personal attention and extensive knowledge made the day a success. This i...",
+            "sentiment": 0.44999999999999996,
+            "rating": 4
+          },
+          {
+            "text": "We took a three day tour through a large part of the Gambia, including a short visit to Fathala National Park in Senegal. Two very good and nice guides took us for a great trip. The guides spoke very ...",
+            "sentiment": 0.4375267857142857,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "We had a trip together with Demba WHO worked at Ecoutours, he was a very good storyteller and knew many interessant places.\nI just found it strange, that lunch was included for US, but NOT for him, Ec...",
+            "sentiment": 0.46499999999999997,
+            "rating": 5
+          },
+          {
+            "text": "We traveled from Bijilo to Senegal with ecotours. The transportation was excellent, and the guide was excellent all day. Their personal attention and extensive knowledge made the day a success. This i...",
+            "sentiment": 0.44999999999999996,
+            "rating": 4
+          },
+          {
+            "text": "We booked a tour with Amadou to the Makasutu Forest. Demba and Abdulai explained everything well and showed me and my partner everything. There were only two of us on the tour, so we really experience...",
+            "sentiment": 0.281,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Tour of the mangroves. A village and an isolated island all to ourselves. Thank you Djere!!! Great tour and your fish was amazing on the BBQ. ",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "We thoroughly enjoyed our stay at the Lemon Creek Hotel. Ecotours was right there on-site and impressed us with its offerings and wonderful staff. Special thanks go to Seedou. ",
+            "sentiment": 0.5571428571428572,
+            "rating": 5
+          },
+          {
+            "text": "Well orginized with no problems to adjust the tour after your own need. \nWe did two tours with them and can easily recommend them to others. ",
+            "sentiment": 0.5166666666666666,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "We traveled from Bijilo to Senegal with ecotours. The transportation was excellent, and the guide was excellent all day. Their personal attention and extensive knowledge made the day a success. This i...",
+            "sentiment": 0.44999999999999996,
+            "rating": 4
+          },
+          {
+            "text": "We took a three day tour through a large part of the Gambia, including a short visit to Fathala National Park in Senegal. Two very good and nice guides took us for a great trip. The guides spoke very ...",
+            "sentiment": 0.4375267857142857,
+            "rating": 5
+          },
+          {
+            "text": "We did two tours with ecotours. Both times were fantastic! Amadou showed us The Gambia. We went to the Crocodile Pool, the market, and saw the sights of Banjul. It was fantastic. We did the safari tou...",
+            "sentiment": 0.3922448979591837,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Tour of the mangroves. A village and an isolated island all to ourselves. Thank you Djere!!! Great tour and your fish was amazing on the BBQ. ",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "We thoroughly enjoyed our stay at the Lemon Creek Hotel. Ecotours was right there on-site and impressed us with its offerings and wonderful staff. Special thanks go to Seedou. ",
+            "sentiment": 0.5571428571428572,
+            "rating": 5
+          },
+          {
+            "text": "We had a trip together with Demba WHO worked at Ecoutours, he was a very good storyteller and knew many interessant places.\nI just found it strange, that lunch was included for US, but NOT for him, Ec...",
+            "sentiment": 0.46499999999999997,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3716416585235285
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.33961169066514235
+        },
+        {
+          "theme": "service_staff",
+          "score": 0.3284220855956019
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "santosu_tours",
+      "source": "gambia_operators",
+      "total_reviews": 25,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.308615766919617,
+      "positive_rate": 0.96,
+      "language_distribution": {
+        "unknown": 25
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2023": 2,
+        "2022": 1,
+        "2021": 1,
+        "2020": 1,
+        "2019": 6,
+        "2018": 4,
+        "2017": 4,
+        "2016": 5
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.27,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.31,
+          "mentions": 18,
+          "distribution": {
+            "positive": 17,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.26,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.31,
+          "mentions": 12,
+          "distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.28,
+          "mentions": 9,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.26,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.31,
+          "mentions": 22,
+          "distribution": {
+            "positive": 22,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.31,
+          "mentions": 15,
+          "distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.31,
+          "mentions": 23,
+          "distribution": {
+            "positive": 22,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "After a day of getting used to a different culture (great, friendly!) We really enjoyed the hospitable guide Yaya. Freedom and happiness are paramount. The best excursions are tailored to you! You wil...",
+            "sentiment": 0.5540064102564102,
+            "rating": 5
+          },
+          {
+            "text": "You won&#39;t find a better guide on a group or private tour. He&#39;ll take you everywhere, according to your own preferences and at your own pace. He also creates customized excursions and shows you...",
+            "sentiment": 0.37500000000000006,
+            "rating": 5
+          },
+          {
+            "text": "We recently took three unforgettable excursions through Santosu, and we couldn&#39;t be more lyrical about our experience with this tour operator. What truly sets Santosu apart is its emphasis on smal...",
+            "sentiment": 0.3129166666666667,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "We booked two tours with Santosu Tours and highly recommend this agency. Yaya&#39;s team consists of excellent drivers and guides. We visited places the major tour operators don&#39;t. The service on ...",
+            "sentiment": 0.555625,
+            "rating": 5
+          },
+          {
+            "text": "After a day of getting used to a different culture (great, friendly!) We really enjoyed the hospitable guide Yaya. Freedom and happiness are paramount. The best excursions are tailored to you! You wil...",
+            "sentiment": 0.5540064102564102,
+            "rating": 5
+          },
+          {
+            "text": "Yaya arrived at our hotel right on time, and over drinks, we discussed the options for seeing the things we wanted to see. We took two excursions: one with Harry and one with Harry and Alex. Both were...",
+            "sentiment": 0.3979591836734694,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "we took a 2 days trip to see the stone circles and the chimpanzee rehabilitation project but we definitely saw much more! Beautiful nature but also beautiful people living a real every-day life. Tour ...",
+            "sentiment": 0.34203703703703714,
+            "rating": 5
+          },
+          {
+            "text": "Through Hennie from the Netherlands, I met Yaya, Harrie, and Alex. They&#39;re a fantastic team. We went on three trips with them, and they were unforgettable. It was our first time in Gambia and defi...",
+            "sentiment": 0.31250000000000006,
+            "rating": 5
+          },
+          {
+            "text": "Yaya and her team, Harry and Alex, are reliable. They arrive punctually at the hotel to meet and greet, make arrangements, and then also for the excursion. During the trip, they feel incredibly respon...",
+            "sentiment": 0.2503759398496241,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "We booked two tours with Santosu Tours and highly recommend this agency. Yaya&#39;s team consists of excellent drivers and guides. We visited places the major tour operators don&#39;t. The service on ...",
+            "sentiment": 0.555625,
+            "rating": 5
+          },
+          {
+            "text": "Yaya arrived at our hotel right on time, and over drinks, we discussed the options for seeing the things we wanted to see. We took two excursions: one with Harry and one with Harry and Alex. Both were...",
+            "sentiment": 0.3979591836734694,
+            "rating": 5
+          },
+          {
+            "text": "You won&#39;t find a better guide on a group or private tour. He&#39;ll take you everywhere, according to your own preferences and at your own pace. He also creates customized excursions and shows you...",
+            "sentiment": 0.37500000000000006,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "After a day of getting used to a different culture (great, friendly!) We really enjoyed the hospitable guide Yaya. Freedom and happiness are paramount. The best excursions are tailored to you! You wil...",
+            "sentiment": 0.5540064102564102,
+            "rating": 5
+          },
+          {
+            "text": "Yaya does things right. He explains the excursions in detail beforehand, but is extremely flexible during the trip. The guides he works with are also thorough and not at all pushy. Furthermore, he is ...",
+            "sentiment": 0.35595238095238096,
+            "rating": 5
+          },
+          {
+            "text": "We were in Gambia again from March 18 to April 2, 2019, and this year we booked another excursion with Santosu Tours. We had chosen the new Baboon Island excursion. After discussing everything with Ya...",
+            "sentiment": 0.30344155844155846,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Yaya does things right. He explains the excursions in detail beforehand, but is extremely flexible during the trip. The guides he works with are also thorough and not at all pushy. Furthermore, he is ...",
+            "sentiment": 0.35595238095238096,
+            "rating": 5
+          },
+          {
+            "text": "Through Hennie from the Netherlands, I met Yaya, Harrie, and Alex. They&#39;re a fantastic team. We went on three trips with them, and they were unforgettable. It was our first time in Gambia and defi...",
+            "sentiment": 0.31250000000000006,
+            "rating": 5
+          },
+          {
+            "text": "We were in Gambia again from March 18 to April 2, 2019, and this year we booked another excursion with Santosu Tours. We had chosen the new Baboon Island excursion. After discussing everything with Ya...",
+            "sentiment": 0.30344155844155846,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "We booked two tours with Santosu Tours and highly recommend this agency. Yaya&#39;s team consists of excellent drivers and guides. We visited places the major tour operators don&#39;t. The service on ...",
+            "sentiment": 0.555625,
+            "rating": 5
+          },
+          {
+            "text": "We went on two excursions with Yaya at the end of February. The village tour is highly recommended!! You get to see the real Gambia. We asked Yaya if we could visit Tanji, and Yaya was happy to do so!...",
+            "sentiment": 0.4930555555555556,
+            "rating": 5
+          },
+          {
+            "text": "I was browsing a forum to gather information about Gambia; we really wanted to take some excursions. I just didn&#39;t know who to contact (reliable), so I found Yaya through the forum. We were incred...",
+            "sentiment": 0.4392857142857143,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "After a day of getting used to a different culture (great, friendly!) We really enjoyed the hospitable guide Yaya. Freedom and happiness are paramount. The best excursions are tailored to you! You wil...",
+            "sentiment": 0.5540064102564102,
+            "rating": 5
+          },
+          {
+            "text": "We went on two excursions with Yaya at the end of February. The village tour is highly recommended!! You get to see the real Gambia. We asked Yaya if we could visit Tanji, and Yaya was happy to do so!...",
+            "sentiment": 0.4930555555555556,
+            "rating": 5
+          },
+          {
+            "text": "A very good and reliable guide. We had arranged a meeting in advance to discuss the excursions. Everything was explained honestly and beautifully, including photo albums. We immediately felt at ease. ...",
+            "sentiment": 0.386,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "We booked two tours with Santosu Tours and highly recommend this agency. Yaya&#39;s team consists of excellent drivers and guides. We visited places the major tour operators don&#39;t. The service on ...",
+            "sentiment": 0.555625,
+            "rating": 5
+          },
+          {
+            "text": "After a day of getting used to a different culture (great, friendly!) We really enjoyed the hospitable guide Yaya. Freedom and happiness are paramount. The best excursions are tailored to you! You wil...",
+            "sentiment": 0.5540064102564102,
+            "rating": 5
+          },
+          {
+            "text": "We went on two excursions with Yaya at the end of February. The village tour is highly recommended!! You get to see the real Gambia. We asked Yaya if we could visit Tanji, and Yaya was happy to do so!...",
+            "sentiment": 0.4930555555555556,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "service_staff",
+          "score": 0.3139491321609638
+        },
+        {
+          "theme": "educational_value",
+          "score": 0.31364262557881883
+        },
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.31333436822985744
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    }
+  ]
+}

@@ -306,6 +306,7 @@ function setRegionalAssessmentColumnWidths(sheet) {
   });
 }
 
+// NOTE: This creates "Tourism Assessment" tab - you may have renamed this to "TO Assessment" in your sheet
 // Tourism Assessment tab with identical schema to Master Assessment (including opportunities)
 function createTourismAssessmentTab(ss) {
   // Allow direct execution without params

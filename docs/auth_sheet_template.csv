@@ -1,0 +1,9 @@
+full_name,username,role,participant_id,notes
+Alex Jeffries,ajeffries,admin,,"ITC Team - Full platform access"
+Ruat [Last Name],r[lastname],admin,,"ITC Team - Full platform access"
+Frederic [Last Name],f[lastname],admin,,"ITC Team - Full platform access"
+"[Add team member]","[username]",admin,,"ITC Team - Full platform access"
+,,,,
+"Example Participant 1",exampleone,participant,PART_001,"Sample participant entry"
+"Example Participant 2",exampletwo,participant,PART_002,"Sample participant entry"
+"[Participant Name]","[username]",participant,[ID],"Add actual participants here"

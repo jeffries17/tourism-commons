@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Galloya Street Arts",
+    "external_total": 0.0,
+    "external_percentage": 0.0,
+    "survey_total": 17.0,
+    "survey_percentage": 56.666666666666664,
+    "external_maturity": "8",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 0,
+      "website": 0,
+      "visual_content": 0,
+      "discoverability": 0,
+      "digital_sales": 0,
+      "platform_integration": 0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  },
+  {
+    "name": "Flex Fuzion Entertainment & Dance Academy",
+    "external_total": 40.2,
+    "external_percentage": 57.42857142857143,
+    "survey_total": 17.0,
+    "survey_percentage": 56.666666666666664,
+    "external_maturity": "6",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 8.0,
+      "website": 0.0,
+      "visual_content": 10.0,
+      "discoverability": 4.0,
+      "digital_sales": 0.0,
+      "platform_integration": 2.0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  },
+  {
+    "name": "Ebunjan Theatre (Performing Arts Centre)",
+    "external_total": 33.5,
+    "external_percentage": 47.85714285714286,
+    "survey_total": 17.75,
+    "survey_percentage": 59.166666666666664,
+    "external_maturity": "8",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 6.0,
+      "website": 0.0,
+      "visual_content": 10.0,
+      "discoverability": 2.0,
+      "digital_sales": 0.0,
+      "platform_integration": 1.0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  },
+  {
+    "name": "Yaws Creations",
+    "external_total": 35.2,
+    "external_percentage": 50.28571428571429,
+    "survey_total": 17.5,
+    "survey_percentage": 58.333333333333336,
+    "external_maturity": "6.5",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 8.0,
+      "website": 4.0,
+      "visual_content": 5.0,
+      "discoverability": 2.0,
+      "digital_sales": 1.0,
+      "platform_integration": 2.0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  },
+  {
+    "name": "Abuko Pottery Center",
+    "external_total": 35.1,
+    "external_percentage": 50.142857142857146,
+    "survey_total": 20.25,
+    "survey_percentage": 67.5,
+    "external_maturity": "8.5",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 5.0,
+      "website": 8.0,
+      "visual_content": 7.0,
+      "discoverability": 2.0,
+      "digital_sales": 1.0,
+      "platform_integration": 0.0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  },
+  {
+    "name": "Eco Tours",
+    "external_total": 41.2,
+    "external_percentage": 58.85714285714286,
+    "survey_total": 15.0,
+    "survey_percentage": 50.0,
+    "external_maturity": "6.5",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 5.0,
+      "website": 8.0,
+      "visual_content": 6.0,
+      "discoverability": 5.0,
+      "digital_sales": 1.0,
+      "platform_integration": 2.0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  },
+  {
+    "name": "Bushwhacker Tours",
+    "external_total": 53.0,
+    "external_percentage": 75.71428571428571,
+    "survey_total": 18.0,
+    "survey_percentage": 60.0,
+    "external_maturity": "7",
+    "survey_tier": "Unknown",
+    "external_breakdown": {
+      "social_media": 6.0,
+      "website": 8.0,
+      "visual_content": 7.0,
+      "discoverability": 7.0,
+      "digital_sales": 2.0,
+      "platform_integration": 5.0
+    },
+    "survey_breakdown": {
+      "foundation": 0,
+      "capability": 0,
+      "growth": 0
+    }
+  }
+]

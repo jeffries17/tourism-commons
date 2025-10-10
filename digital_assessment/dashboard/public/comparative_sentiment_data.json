@@ -1,0 +1,5822 @@
+{
+  "overview": {
+    "gambia": {
+      "stakeholder_count": 12,
+      "total_reviews": 1316,
+      "avg_sentiment": 0.659,
+      "avg_rating": 3.72,
+      "rank": 2,
+      "gap_vs_regional": 0.125
+    },
+    "regional": {
+      "total_stakeholders": 57,
+      "total_reviews": 4412,
+      "avg_sentiment": 0.534,
+      "avg_rating": 4.01,
+      "countries": [
+        "Nigeria",
+        "Benin",
+        "Ghana",
+        "Gambia",
+        "Cape Verde",
+        "Senegal"
+      ]
+    }
+  },
+  "country_rankings": [
+    {
+      "rank": 1,
+      "country": "Nigeria",
+      "sentiment": 0.735,
+      "rating": 4.17,
+      "stakeholders": 10,
+      "reviews": 576,
+      "positive_rate": 91.0,
+      "is_gambia": false
+    },
+    {
+      "rank": 2,
+      "country": "Gambia",
+      "sentiment": 0.659,
+      "rating": 3.72,
+      "stakeholders": 12,
+      "reviews": 1316,
+      "positive_rate": 86.5,
+      "is_gambia": true
+    },
+    {
+      "rank": 3,
+      "country": "Cape Verde",
+      "sentiment": 0.579,
+      "rating": 4.18,
+      "stakeholders": 9,
+      "reviews": 591,
+      "positive_rate": 77.5,
+      "is_gambia": false
+    },
+    {
+      "rank": 4,
+      "country": "Ghana",
+      "sentiment": 0.5,
+      "rating": 4.22,
+      "stakeholders": 12,
+      "reviews": 823,
+      "positive_rate": 76.1,
+      "is_gambia": false
+    },
+    {
+      "rank": 5,
+      "country": "Benin",
+      "sentiment": 0.465,
+      "rating": 3.92,
+      "stakeholders": 7,
+      "reviews": 446,
+      "positive_rate": 75.3,
+      "is_gambia": false
+    },
+    {
+      "rank": 6,
+      "country": "Senegal",
+      "sentiment": 0.391,
+      "rating": 4.07,
+      "stakeholders": 7,
+      "reviews": 660,
+      "positive_rate": 68.3,
+      "is_gambia": false
+    }
+  ],
+  "sector_analysis": {
+    "Museums & Heritage": {
+      "by_country": {
+        "Benin": {
+          "stakeholder_count": 4,
+          "total_reviews": 261,
+          "avg_sentiment": 0.451,
+          "avg_rating": 3.96,
+          "top_performer": {
+            "name": "Musée de la Fondation Zinsou (Ouidah)",
+            "sentiment": 0.819,
+            "rating": 4.47,
+            "reviews": 51,
+            "positive_rate": 92.2,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.81,
+                "mentions": 19,
+                "reviews_mentioning": 18
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.819,
+                "mentions": 72,
+                "reviews_mentioning": 41
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.922,
+                "mentions": 25,
+                "reviews_mentioning": 17
+              },
+              "educational_value": {
+                "avg_sentiment": 0.846,
+                "mentions": 51,
+                "reviews_mentioning": 31
+              },
+              "staff_service": {
+                "avg_sentiment": 0.88,
+                "mentions": 36,
+                "reviews_mentioning": 29
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.939,
+                "mentions": 12,
+                "reviews_mentioning": 11
+              },
+              "music_performance": {
+                "avg_sentiment": 0.865,
+                "mentions": 7,
+                "reviews_mentioning": 6
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.916,
+                "mentions": 21,
+                "reviews_mentioning": 17
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.966,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            }
+          }
+        },
+        "Cape Verde": {
+          "stakeholder_count": 4,
+          "total_reviews": 338,
+          "avg_sentiment": 0.508,
+          "avg_rating": 3.81,
+          "top_performer": {
+            "name": "Sala-Museu Amílcar Cabral",
+            "sentiment": 0.767,
+            "rating": 4.17,
+            "reviews": 12,
+            "positive_rate": 100.0,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.722,
+                "mentions": 8,
+                "reviews_mentioning": 7
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.981,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "educational_value": {
+                "avg_sentiment": 0.913,
+                "mentions": 15,
+                "reviews_mentioning": 9
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.981,
+                "mentions": 3,
+                "reviews_mentioning": 1
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.551,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              },
+              "staff_service": {
+                "avg_sentiment": 0.754,
+                "mentions": 7,
+                "reviews_mentioning": 5
+              },
+              "music_performance": {
+                "avg_sentiment": 0.473,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.612,
+                "mentions": 4,
+                "reviews_mentioning": 3
+              }
+            }
+          }
+        },
+        "Ghana": {
+          "stakeholder_count": 5,
+          "total_reviews": 666,
+          "avg_sentiment": 0.437,
+          "avg_rating": 4.18,
+          "top_performer": {
+            "name": "Kwame Nkrumah Mausoleum & Memorial Park (Accra)",
+            "sentiment": 0.667,
+            "rating": 4.25,
+            "reviews": 150,
+            "positive_rate": 86.7,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.753,
+                "mentions": 81,
+                "reviews_mentioning": 71
+              },
+              "educational_value": {
+                "avg_sentiment": 0.758,
+                "mentions": 162,
+                "reviews_mentioning": 96
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.841,
+                "mentions": 64,
+                "reviews_mentioning": 55
+              },
+              "staff_service": {
+                "avg_sentiment": 0.832,
+                "mentions": 49,
+                "reviews_mentioning": 42
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.776,
+                "mentions": 27,
+                "reviews_mentioning": 24
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.704,
+                "mentions": 37,
+                "reviews_mentioning": 33
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.67,
+                "mentions": 39,
+                "reviews_mentioning": 35
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.793,
+                "mentions": 25,
+                "reviews_mentioning": 19
+              },
+              "music_performance": {
+                "avg_sentiment": 0.897,
+                "mentions": 9,
+                "reviews_mentioning": 9
+              }
+            }
+          }
+        },
+        "Nigeria": {
+          "stakeholder_count": 3,
+          "total_reviews": 93,
+          "avg_sentiment": 0.635,
+          "avg_rating": 3.78,
+          "top_performer": {
+            "name": "Osun-Osogbo Sacred Grove (Osun State)",
+            "sentiment": 0.808,
+            "rating": 4.58,
+            "reviews": 38,
+            "positive_rate": 94.7,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.822,
+                "mentions": 35,
+                "reviews_mentioning": 23
+              },
+              "educational_value": {
+                "avg_sentiment": 0.872,
+                "mentions": 47,
+                "reviews_mentioning": 24
+              },
+              "staff_service": {
+                "avg_sentiment": 0.886,
+                "mentions": 29,
+                "reviews_mentioning": 19
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.892,
+                "mentions": 25,
+                "reviews_mentioning": 17
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.912,
+                "mentions": 23,
+                "reviews_mentioning": 16
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.887,
+                "mentions": 27,
+                "reviews_mentioning": 18
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.926,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              },
+              "music_performance": {
+                "avg_sentiment": 0.956,
+                "mentions": 10,
+                "reviews_mentioning": 8
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.845,
+                "mentions": 8,
+                "reviews_mentioning": 6
+              }
+            }
+          }
+        },
+        "Senegal": {
+          "stakeholder_count": 3,
+          "total_reviews": 450,
+          "avg_sentiment": 0.365,
+          "avg_rating": 4.23,
+          "top_performer": {
+            "name": "Monument de la Renaissance Africaine",
+            "sentiment": 0.59,
+            "rating": 4.11,
+            "reviews": 150,
+            "positive_rate": 81.3,
+            "themes": {
+              "educational_value": {
+                "avg_sentiment": 0.662,
+                "mentions": 57,
+                "reviews_mentioning": 37
+              },
+              "staff_service": {
+                "avg_sentiment": 0.775,
+                "mentions": 25,
+                "reviews_mentioning": 21
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.603,
+                "mentions": 65,
+                "reviews_mentioning": 54
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.544,
+                "mentions": 13,
+                "reviews_mentioning": 11
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.626,
+                "mentions": 31,
+                "reviews_mentioning": 26
+              },
+              "music_performance": {
+                "avg_sentiment": 0.854,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.673,
+                "mentions": 12,
+                "reviews_mentioning": 11
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.855,
+                "mentions": 50,
+                "reviews_mentioning": 45
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.61,
+                "mentions": 20,
+                "reviews_mentioning": 16
+              }
+            }
+          }
+        },
+        "Gambia": {
+          "stakeholder_count": 7,
+          "total_reviews": 714,
+          "avg_sentiment": 0.572,
+          "avg_rating": 3.67,
+          "top_performer": {
+            "name": "Fort Bullen Barra Museum",
+            "sentiment": 0.839,
+            "rating": 4.4,
+            "reviews": 11,
+            "positive_rate": 100.0,
+            "themes": {
+              "staff_service": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "educational_value": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "value_pricing": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "art_creativity": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            }
+          }
+        }
+      },
+      "gambia_position": {
+        "has_data": true,
+        "rank": 2,
+        "gap": 0.093,
+        "status": "Competitive"
+      }
+    },
+    "Crafts & Artisans": {
+      "by_country": {
+        "Benin": {
+          "stakeholder_count": 2,
+          "total_reviews": 165,
+          "avg_sentiment": 0.503,
+          "avg_rating": 3.85,
+          "top_performer": {
+            "name": "Marché Dantokpa",
+            "sentiment": 0.518,
+            "rating": 3.98,
+            "reviews": 64,
+            "positive_rate": 79.7,
+            "themes": {
+              "value_pricing": {
+                "avg_sentiment": 0.57,
+                "mentions": 25,
+                "reviews_mentioning": 20
+              },
+              "music_performance": {
+                "avg_sentiment": 0.84,
+                "mentions": 10,
+                "reviews_mentioning": 7
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.607,
+                "mentions": 31,
+                "reviews_mentioning": 27
+              },
+              "educational_value": {
+                "avg_sentiment": 0.55,
+                "mentions": 13,
+                "reviews_mentioning": 11
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.636,
+                "mentions": 16,
+                "reviews_mentioning": 15
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.901,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.522,
+                "mentions": 13,
+                "reviews_mentioning": 11
+              },
+              "staff_service": {
+                "avg_sentiment": 0.499,
+                "mentions": 11,
+                "reviews_mentioning": 10
+              }
+            }
+          }
+        },
+        "Cape Verde": {
+          "stakeholder_count": 1,
+          "total_reviews": 150,
+          "avg_sentiment": 0.687,
+          "avg_rating": 4.95,
+          "top_performer": {
+            "name": "Djunta Mo Art (Sal)",
+            "sentiment": 0.687,
+            "rating": 4.95,
+            "reviews": 150,
+            "positive_rate": 82.0,
+            "themes": {
+              "educational_value": {
+                "avg_sentiment": 0.912,
+                "mentions": 18,
+                "reviews_mentioning": 17
+              },
+              "staff_service": {
+                "avg_sentiment": 0.902,
+                "mentions": 76,
+                "reviews_mentioning": 50
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.867,
+                "mentions": 46,
+                "reviews_mentioning": 40
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.653,
+                "mentions": 112,
+                "reviews_mentioning": 82
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.95,
+                "mentions": 36,
+                "reviews_mentioning": 30
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.842,
+                "mentions": 17,
+                "reviews_mentioning": 16
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.655,
+                "mentions": 22,
+                "reviews_mentioning": 22
+              },
+              "music_performance": {
+                "avg_sentiment": 0.913,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            }
+          }
+        },
+        "Ghana": {
+          "stakeholder_count": 3,
+          "total_reviews": 65,
+          "avg_sentiment": 0.91,
+          "avg_rating": 4.83,
+          "top_performer": {
+            "name": "Global Mamas (Krobo beads & batik)",
+            "sentiment": 0.949,
+            "rating": 4.96,
+            "reviews": 49,
+            "positive_rate": 100.0,
+            "themes": {
+              "music_performance": {
+                "avg_sentiment": 0.957,
+                "mentions": 21,
+                "reviews_mentioning": 17
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.953,
+                "mentions": 50,
+                "reviews_mentioning": 35
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.96,
+                "mentions": 26,
+                "reviews_mentioning": 21
+              },
+              "educational_value": {
+                "avg_sentiment": 0.948,
+                "mentions": 30,
+                "reviews_mentioning": 24
+              },
+              "staff_service": {
+                "avg_sentiment": 0.955,
+                "mentions": 13,
+                "reviews_mentioning": 13
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.943,
+                "mentions": 12,
+                "reviews_mentioning": 10
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.939,
+                "mentions": 11,
+                "reviews_mentioning": 10
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.975,
+                "mentions": 10,
+                "reviews_mentioning": 10
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.975,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            }
+          }
+        },
+        "Nigeria": {
+          "stakeholder_count": 3,
+          "total_reviews": 423,
+          "avg_sentiment": 0.753,
+          "avg_rating": 4.28,
+          "top_performer": {
+            "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+            "sentiment": 0.923,
+            "rating": 4.87,
+            "reviews": 150,
+            "positive_rate": 100.0,
+            "themes": {
+              "art_creativity": {
+                "avg_sentiment": 0.928,
+                "mentions": 204,
+                "reviews_mentioning": 129
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.939,
+                "mentions": 229,
+                "reviews_mentioning": 128
+              },
+              "educational_value": {
+                "avg_sentiment": 0.928,
+                "mentions": 110,
+                "reviews_mentioning": 64
+              },
+              "staff_service": {
+                "avg_sentiment": 0.925,
+                "mentions": 119,
+                "reviews_mentioning": 82
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.926,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.914,
+                "mentions": 16,
+                "reviews_mentioning": 16
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.94,
+                "mentions": 14,
+                "reviews_mentioning": 13
+              },
+              "music_performance": {
+                "avg_sentiment": 0.914,
+                "mentions": 19,
+                "reviews_mentioning": 16
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.966,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            }
+          }
+        },
+        "Senegal": {
+          "stakeholder_count": 4,
+          "total_reviews": 210,
+          "avg_sentiment": 0.448,
+          "avg_rating": 3.71,
+          "top_performer": {
+            "name": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)",
+            "sentiment": 0.893,
+            "rating": 4.67,
+            "reviews": 3,
+            "positive_rate": 100.0,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.86,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.893,
+                "mentions": 7,
+                "reviews_mentioning": 3
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.86,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "staff_service": {
+                "avg_sentiment": 0.879,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.879,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            }
+          }
+        },
+        "Gambia": {
+          "stakeholder_count": 5,
+          "total_reviews": 602,
+          "avg_sentiment": 0.761,
+          "avg_rating": 3.79,
+          "top_performer": {
+            "name": "Tanji Village Market",
+            "sentiment": 0.883,
+            "rating": 4.3,
+            "reviews": 54,
+            "positive_rate": 100.0,
+            "themes": {
+              "staff_service": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "educational_value": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "value_pricing": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "art_creativity": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            }
+          }
+        }
+      },
+      "gambia_position": {
+        "has_data": true,
+        "rank": 2,
+        "gap": 0.101,
+        "status": "Leading"
+      }
+    },
+    "Performing Arts": {
+      "by_country": {
+        "Benin": {
+          "stakeholder_count": 1,
+          "total_reviews": 20,
+          "avg_sentiment": 0.34,
+          "avg_rating": 3.9,
+          "top_performer": {
+            "name": "Musée Royal Honmé (Porto-Novo Royal Palace)",
+            "sentiment": 0.34,
+            "rating": 3.9,
+            "reviews": 20,
+            "positive_rate": 65.0,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.221,
+                "mentions": 16,
+                "reviews_mentioning": 12
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.187,
+                "mentions": 8,
+                "reviews_mentioning": 8
+              },
+              "educational_value": {
+                "avg_sentiment": 0.378,
+                "mentions": 25,
+                "reviews_mentioning": 12
+              },
+              "staff_service": {
+                "avg_sentiment": 0.341,
+                "mentions": 10,
+                "reviews_mentioning": 10
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.488,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.318,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              },
+              "accessibility_location": {
+                "avg_sentiment": -0.343,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              },
+              "music_performance": {
+                "avg_sentiment": 0.705,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.946,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            }
+          }
+        },
+        "Cape Verde": {
+          "stakeholder_count": 2,
+          "total_reviews": 19,
+          "avg_sentiment": 0.554,
+          "avg_rating": 4.21,
+          "top_performer": {
+            "name": "Centro Cultural do Mindelo",
+            "sentiment": 0.581,
+            "rating": 4.12,
+            "reviews": 17,
+            "positive_rate": 76.5,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.659,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.841,
+                "mentions": 11,
+                "reviews_mentioning": 8
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.657,
+                "mentions": 24,
+                "reviews_mentioning": 12
+              },
+              "educational_value": {
+                "avg_sentiment": 0.938,
+                "mentions": 5,
+                "reviews_mentioning": 4
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.915,
+                "mentions": 7,
+                "reviews_mentioning": 6
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.838,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              },
+              "music_performance": {
+                "avg_sentiment": 0.936,
+                "mentions": 9,
+                "reviews_mentioning": 5
+              },
+              "staff_service": {
+                "avg_sentiment": 0.73,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.897,
+                "mentions": 7,
+                "reviews_mentioning": 4
+              }
+            }
+          }
+        },
+        "Ghana": {
+          "stakeholder_count": 2,
+          "total_reviews": 70,
+          "avg_sentiment": 0.752,
+          "avg_rating": 4.34,
+          "top_performer": {
+            "name": "Artists Alliance Gallery (Accra)",
+            "sentiment": 0.821,
+            "rating": 4.67,
+            "reviews": 43,
+            "positive_rate": 95.3,
+            "themes": {
+              "art_creativity": {
+                "avg_sentiment": 0.818,
+                "mentions": 120,
+                "reviews_mentioning": 42
+              },
+              "music_performance": {
+                "avg_sentiment": 0.962,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              },
+              "educational_value": {
+                "avg_sentiment": 0.858,
+                "mentions": 17,
+                "reviews_mentioning": 14
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.921,
+                "mentions": 24,
+                "reviews_mentioning": 18
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.92,
+                "mentions": 8,
+                "reviews_mentioning": 7
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.836,
+                "mentions": 28,
+                "reviews_mentioning": 19
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.806,
+                "mentions": 11,
+                "reviews_mentioning": 9
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.851,
+                "mentions": 7,
+                "reviews_mentioning": 6
+              },
+              "staff_service": {
+                "avg_sentiment": 0.922,
+                "mentions": 6,
+                "reviews_mentioning": 4
+              }
+            }
+          }
+        },
+        "Nigeria": {
+          "stakeholder_count": 3,
+          "total_reviews": 34,
+          "avg_sentiment": 0.743,
+          "avg_rating": 3.79,
+          "top_performer": {
+            "name": "Omenka Gallery (Lagos)",
+            "sentiment": 0.869,
+            "rating": 5.0,
+            "reviews": 1,
+            "positive_rate": 100.0,
+            "themes": {
+              "art_creativity": {
+                "avg_sentiment": 0.869,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            }
+          }
+        }
+      },
+      "gambia_position": null
+    },
+    "Fashion & Design": {
+      "by_country": {
+        "Cape Verde": {
+          "stakeholder_count": 1,
+          "total_reviews": 55,
+          "avg_sentiment": 0.684,
+          "avg_rating": 4.44,
+          "top_performer": {
+            "name": "Capvertdesign+Artesanato (Mindelo)",
+            "sentiment": 0.684,
+            "rating": 4.44,
+            "reviews": 55,
+            "positive_rate": 85.5,
+            "themes": {
+              "art_creativity": {
+                "avg_sentiment": 0.713,
+                "mentions": 80,
+                "reviews_mentioning": 39
+              },
+              "educational_value": {
+                "avg_sentiment": 0.524,
+                "mentions": 13,
+                "reviews_mentioning": 13
+              },
+              "staff_service": {
+                "avg_sentiment": 0.869,
+                "mentions": 43,
+                "reviews_mentioning": 23
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.736,
+                "mentions": 29,
+                "reviews_mentioning": 21
+              },
+              "music_performance": {
+                "avg_sentiment": 0.901,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.828,
+                "mentions": 17,
+                "reviews_mentioning": 16
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.83,
+                "mentions": 16,
+                "reviews_mentioning": 14
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.819,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.954,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              }
+            }
+          }
+        },
+        "Ghana": {
+          "stakeholder_count": 1,
+          "total_reviews": 2,
+          "avg_sentiment": 0.886,
+          "avg_rating": 5.0,
+          "top_performer": {
+            "name": "Christie Brown (Accra)",
+            "sentiment": 0.886,
+            "rating": 5.0,
+            "reviews": 2,
+            "positive_rate": 100.0,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.886,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.886,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              },
+              "educational_value": {
+                "avg_sentiment": 0.784,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.886,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              },
+              "staff_service": {
+                "avg_sentiment": 0.784,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.784,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.987,
+                "mentions": 2,
+                "reviews_mentioning": 1
+              }
+            }
+          }
+        }
+      },
+      "gambia_position": null
+    },
+    "Music & Venues": {
+      "by_country": {
+        "Cape Verde": {
+          "stakeholder_count": 1,
+          "total_reviews": 29,
+          "avg_sentiment": 0.654,
+          "avg_rating": 4.1,
+          "top_performer": {
+            "name": "Cesária Évora",
+            "sentiment": 0.654,
+            "rating": 4.1,
+            "reviews": 29,
+            "positive_rate": 86.2,
+            "themes": {
+              "music_performance": {
+                "avg_sentiment": 0.637,
+                "mentions": 18,
+                "reviews_mentioning": 15
+              },
+              "cultural_heritage": {
+                "avg_sentiment": 0.54,
+                "mentions": 9,
+                "reviews_mentioning": 8
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.771,
+                "mentions": 11,
+                "reviews_mentioning": 9
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.784,
+                "mentions": 14,
+                "reviews_mentioning": 10
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.65,
+                "mentions": 34,
+                "reviews_mentioning": 20
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.892,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              },
+              "educational_value": {
+                "avg_sentiment": 0.856,
+                "mentions": 7,
+                "reviews_mentioning": 5
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.917,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              },
+              "staff_service": {
+                "avg_sentiment": 0.947,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            }
+          }
+        },
+        "Ghana": {
+          "stakeholder_count": 1,
+          "total_reviews": 20,
+          "avg_sentiment": 0.32,
+          "avg_rating": 3.15,
+          "top_performer": {
+            "name": "School of Performing Arts, Univ. of Ghana (Legon)",
+            "sentiment": 0.32,
+            "rating": 3.15,
+            "reviews": 20,
+            "positive_rate": 60.0,
+            "themes": {
+              "art_creativity": {
+                "avg_sentiment": 0.452,
+                "mentions": 13,
+                "reviews_mentioning": 9
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.508,
+                "mentions": 17,
+                "reviews_mentioning": 10
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.893,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "educational_value": {
+                "avg_sentiment": 0.67,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "cultural_heritage": {
+                "avg_sentiment": -0.2,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              },
+              "music_performance": {
+                "avg_sentiment": -0.04,
+                "mentions": 5,
+                "reviews_mentioning": 4
+              },
+              "staff_service": {
+                "avg_sentiment": 0.951,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            }
+          }
+        },
+        "Nigeria": {
+          "stakeholder_count": 1,
+          "total_reviews": 26,
+          "avg_sentiment": 0.803,
+          "avg_rating": 4.38,
+          "top_performer": {
+            "name": "New Afrika Shrine (Lagos) – venue",
+            "sentiment": 0.803,
+            "rating": 4.38,
+            "reviews": 26,
+            "positive_rate": 92.3,
+            "themes": {
+              "cultural_heritage": {
+                "avg_sentiment": 0.692,
+                "mentions": 7,
+                "reviews_mentioning": 5
+              },
+              "art_creativity": {
+                "avg_sentiment": 0.915,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              },
+              "music_performance": {
+                "avg_sentiment": 0.791,
+                "mentions": 44,
+                "reviews_mentioning": 22
+              },
+              "atmosphere_experience": {
+                "avg_sentiment": 0.921,
+                "mentions": 16,
+                "reviews_mentioning": 12
+              },
+              "staff_service": {
+                "avg_sentiment": 0.927,
+                "mentions": 5,
+                "reviews_mentioning": 3
+              },
+              "facilities_infrastructure": {
+                "avg_sentiment": 0.998,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              },
+              "value_pricing": {
+                "avg_sentiment": 0.785,
+                "mentions": 13,
+                "reviews_mentioning": 9
+              },
+              "accessibility_location": {
+                "avg_sentiment": 0.99,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              },
+              "educational_value": {
+                "avg_sentiment": 0.651,
+                "mentions": 7,
+                "reviews_mentioning": 6
+              }
+            }
+          }
+        }
+      },
+      "gambia_position": null
+    }
+  },
+  "theme_analysis": {
+    "cultural_heritage": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.425,
+          "stakeholder_count": 6,
+          "total_mentions": 264,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.691,
+          "stakeholder_count": 8,
+          "total_mentions": 164,
+          "top_performer": "Djunta Mo Art (Sal)"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.634,
+          "stakeholder_count": 12,
+          "total_mentions": 706,
+          "top_performer": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.638,
+          "stakeholder_count": 8,
+          "total_mentions": 158,
+          "top_performer": "Nike Art Foundation (Lagos/Abuja/Oshogbo)"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.336,
+          "stakeholder_count": 7,
+          "total_mentions": 364,
+          "top_performer": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)"
+        },
+        "Gambia": {
+          "avg_sentiment": 0.0,
+          "stakeholder_count": 12,
+          "total_mentions": 0,
+          "top_performer": "Abuko Nature Reserve"
+        }
+      },
+      "gambia_position": {
+        "score": 0.0,
+        "rank": 6,
+        "gap": -0.545,
+        "regional_avg": 0.545,
+        "status": "Improvement Area"
+      }
+    },
+    "art_creativity": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.5,
+          "stakeholder_count": 7,
+          "total_mentions": 300,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.649,
+          "stakeholder_count": 8,
+          "total_mentions": 314,
+          "top_performer": "Sala-Museu Amílcar Cabral"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.668,
+          "stakeholder_count": 11,
+          "total_mentions": 382,
+          "top_performer": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.802,
+          "stakeholder_count": 9,
+          "total_mentions": 683,
+          "top_performer": "Nike Art Foundation (Lagos/Abuja/Oshogbo)"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.546,
+          "stakeholder_count": 7,
+          "total_mentions": 368,
+          "top_performer": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)"
+        },
+        "Gambia": {
+          "avg_sentiment": 0.0,
+          "stakeholder_count": 12,
+          "total_mentions": 0,
+          "top_performer": "Abuko Nature Reserve"
+        }
+      },
+      "gambia_position": {
+        "score": 0.0,
+        "rank": 6,
+        "gap": -0.633,
+        "regional_avg": 0.633,
+        "status": "Improvement Area"
+      }
+    },
+    "atmosphere_experience": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.696,
+          "stakeholder_count": 7,
+          "total_mentions": 109,
+          "top_performer": "Musée Royal Honmé (Porto-Novo Royal Palace)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.859,
+          "stakeholder_count": 7,
+          "total_mentions": 190,
+          "top_performer": "Sala-Museu Amílcar Cabral"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.778,
+          "stakeholder_count": 12,
+          "total_mentions": 341,
+          "top_performer": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.847,
+          "stakeholder_count": 8,
+          "total_mentions": 368,
+          "top_performer": "Nike Art Foundation (Lagos/Abuja/Oshogbo)"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.562,
+          "stakeholder_count": 7,
+          "total_mentions": 243,
+          "top_performer": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)"
+        }
+      },
+      "gambia_position": null
+    },
+    "educational_value": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.526,
+          "stakeholder_count": 7,
+          "total_mentions": 402,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.734,
+          "stakeholder_count": 8,
+          "total_mentions": 220,
+          "top_performer": "Centro Cultural do Mindelo"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.709,
+          "stakeholder_count": 12,
+          "total_mentions": 976,
+          "top_performer": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.791,
+          "stakeholder_count": 8,
+          "total_mentions": 274,
+          "top_performer": "MUSON Centre (Lagos)"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.479,
+          "stakeholder_count": 6,
+          "total_mentions": 370,
+          "top_performer": "Village artisanal de Soumbédioune"
+        },
+        "Gambia": {
+          "avg_sentiment": 0.0,
+          "stakeholder_count": 12,
+          "total_mentions": 0,
+          "top_performer": "Abuko Nature Reserve"
+        }
+      },
+      "gambia_position": {
+        "score": 0.0,
+        "rank": 6,
+        "gap": -0.648,
+        "regional_avg": 0.648,
+        "status": "Improvement Area"
+      }
+    },
+    "staff_service": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.587,
+          "stakeholder_count": 7,
+          "total_mentions": 190,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.769,
+          "stakeholder_count": 8,
+          "total_mentions": 179,
+          "top_performer": "Cesária Évora"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.754,
+          "stakeholder_count": 12,
+          "total_mentions": 374,
+          "top_performer": "Bonwire Kente Museum & Weaving (Ashanti)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.816,
+          "stakeholder_count": 8,
+          "total_mentions": 203,
+          "top_performer": "New Afrika Shrine (Lagos) – venue"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.654,
+          "stakeholder_count": 7,
+          "total_mentions": 180,
+          "top_performer": "Village artisanal de Soumbédioune"
+        },
+        "Gambia": {
+          "avg_sentiment": 0.0,
+          "stakeholder_count": 12,
+          "total_mentions": 0,
+          "top_performer": "Abuko Nature Reserve"
+        }
+      },
+      "gambia_position": {
+        "score": 0.0,
+        "rank": 6,
+        "gap": -0.716,
+        "regional_avg": 0.716,
+        "status": "Improvement Area"
+      }
+    },
+    "facilities_infrastructure": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.554,
+          "stakeholder_count": 7,
+          "total_mentions": 72,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.748,
+          "stakeholder_count": 7,
+          "total_mentions": 69,
+          "top_performer": "Capvertdesign+Artesanato (Mindelo)"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.674,
+          "stakeholder_count": 9,
+          "total_mentions": 145,
+          "top_performer": "Global Mamas (Krobo beads & batik)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.75,
+          "stakeholder_count": 8,
+          "total_mentions": 39,
+          "top_performer": "New Afrika Shrine (Lagos) – venue"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.486,
+          "stakeholder_count": 5,
+          "total_mentions": 76,
+          "top_performer": "Village des Arts de Dakar"
+        },
+        "Gambia": {
+          "avg_sentiment": 0.0,
+          "stakeholder_count": 12,
+          "total_mentions": 0,
+          "top_performer": "Abuko Nature Reserve"
+        }
+      },
+      "gambia_position": {
+        "score": 0.0,
+        "rank": 6,
+        "gap": -0.642,
+        "regional_avg": 0.642,
+        "status": "Improvement Area"
+      }
+    },
+    "music_performance": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.636,
+          "stakeholder_count": 7,
+          "total_mentions": 60,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.66,
+          "stakeholder_count": 9,
+          "total_mentions": 77,
+          "top_performer": "Centro Cultural do Mindelo"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.599,
+          "stakeholder_count": 11,
+          "total_mentions": 115,
+          "top_performer": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.771,
+          "stakeholder_count": 8,
+          "total_mentions": 148,
+          "top_performer": "Osun-Osogbo Sacred Grove (Osun State)"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.505,
+          "stakeholder_count": 6,
+          "total_mentions": 64,
+          "top_performer": "Monument de la Renaissance Africaine"
+        }
+      },
+      "gambia_position": null
+    },
+    "value_pricing": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.509,
+          "stakeholder_count": 7,
+          "total_mentions": 164,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.711,
+          "stakeholder_count": 8,
+          "total_mentions": 246,
+          "top_performer": "Djunta Mo Art (Sal)"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.72,
+          "stakeholder_count": 12,
+          "total_mentions": 305,
+          "top_performer": "Global Mamas (Krobo beads & batik)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.801,
+          "stakeholder_count": 8,
+          "total_mentions": 263,
+          "top_performer": "Nike Art Foundation (Lagos/Abuja/Oshogbo)"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.526,
+          "stakeholder_count": 7,
+          "total_mentions": 271,
+          "top_performer": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)"
+        },
+        "Gambia": {
+          "avg_sentiment": 0.0,
+          "stakeholder_count": 12,
+          "total_mentions": 0,
+          "top_performer": "Abuko Nature Reserve"
+        }
+      },
+      "gambia_position": {
+        "score": 0.0,
+        "rank": 6,
+        "gap": -0.653,
+        "regional_avg": 0.653,
+        "status": "Improvement Area"
+      }
+    },
+    "accessibility_location": {
+      "by_country": {
+        "Benin": {
+          "avg_sentiment": 0.334,
+          "stakeholder_count": 7,
+          "total_mentions": 114,
+          "top_performer": "Musée de la Fondation Zinsou (Ouidah)"
+        },
+        "Cape Verde": {
+          "avg_sentiment": 0.705,
+          "stakeholder_count": 8,
+          "total_mentions": 99,
+          "top_performer": "Cesária Évora"
+        },
+        "Ghana": {
+          "avg_sentiment": 0.688,
+          "stakeholder_count": 10,
+          "total_mentions": 126,
+          "top_performer": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)"
+        },
+        "Nigeria": {
+          "avg_sentiment": 0.82,
+          "stakeholder_count": 8,
+          "total_mentions": 145,
+          "top_performer": "New Afrika Shrine (Lagos) – venue"
+        },
+        "Senegal": {
+          "avg_sentiment": 0.52,
+          "stakeholder_count": 6,
+          "total_mentions": 135,
+          "top_performer": "Village artisanal de Soumbédioune"
+        }
+      },
+      "gambia_position": null
+    }
+  },
+  "learning_opportunities": {
+    "top_performers_by_sector": {
+      "Museums & Heritage": [
+        {
+          "name": "Musée de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "sentiment": 0.819,
+          "rating": 4.47,
+          "reviews": 51,
+          "top_themes": [
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.966,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.939,
+                "mentions": 12,
+                "reviews_mentioning": 11
+              }
+            ]
+          ],
+          "positive_rate": 92.2
+        },
+        {
+          "name": "Osun-Osogbo Sacred Grove (Osun State)",
+          "country": "Nigeria",
+          "sentiment": 0.808,
+          "rating": 4.58,
+          "reviews": 38,
+          "top_themes": [
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.956,
+                "mentions": 10,
+                "reviews_mentioning": 8
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.926,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              }
+            ]
+          ],
+          "positive_rate": 94.7
+        },
+        {
+          "name": "Sala-Museu Amílcar Cabral",
+          "country": "Cape Verde",
+          "sentiment": 0.767,
+          "rating": 4.17,
+          "reviews": 12,
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.981,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.981,
+                "mentions": 3,
+                "reviews_mentioning": 1
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        }
+      ],
+      "Crafts & Artisans": [
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "sentiment": 0.949,
+          "rating": 4.96,
+          "reviews": 49,
+          "top_themes": [
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0.975,
+                "mentions": 10,
+                "reviews_mentioning": 10
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.975,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        },
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "sentiment": 0.923,
+          "rating": 4.87,
+          "reviews": 150,
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.966,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0.94,
+                "mentions": 14,
+                "reviews_mentioning": 13
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        },
+        {
+          "name": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)",
+          "country": "Senegal",
+          "sentiment": 0.893,
+          "rating": 4.67,
+          "reviews": 3,
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.893,
+                "mentions": 7,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.879,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        }
+      ],
+      "Performing Arts": [
+        {
+          "name": "Omenka Gallery (Lagos)",
+          "country": "Nigeria",
+          "sentiment": 0.869,
+          "rating": 5.0,
+          "reviews": 1,
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.869,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        },
+        {
+          "name": "Artists Alliance Gallery (Accra)",
+          "country": "Ghana",
+          "sentiment": 0.821,
+          "rating": 4.67,
+          "reviews": 43,
+          "top_themes": [
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.962,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.922,
+                "mentions": 6,
+                "reviews_mentioning": 4
+              }
+            ]
+          ],
+          "positive_rate": 95.3
+        },
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "sentiment": 0.745,
+          "rating": 4.13,
+          "reviews": 15,
+          "top_themes": [
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.985,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.923,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        }
+      ],
+      "Fashion & Design": [
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "sentiment": 0.886,
+          "rating": 5.0,
+          "reviews": 2,
+          "top_themes": [
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.987,
+                "mentions": 2,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "cultural_heritage",
+              {
+                "avg_sentiment": 0.886,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ]
+          ],
+          "positive_rate": 100.0
+        },
+        {
+          "name": "Capvertdesign+Artesanato (Mindelo)",
+          "country": "Cape Verde",
+          "sentiment": 0.684,
+          "rating": 4.44,
+          "reviews": 55,
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.954,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.901,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              }
+            ]
+          ],
+          "positive_rate": 85.5
+        }
+      ],
+      "Music & Venues": [
+        {
+          "name": "New Afrika Shrine (Lagos) – venue",
+          "country": "Nigeria",
+          "sentiment": 0.803,
+          "rating": 4.38,
+          "reviews": 26,
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.998,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.99,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ]
+          ],
+          "positive_rate": 92.3
+        },
+        {
+          "name": "Cesária Évora",
+          "country": "Cape Verde",
+          "sentiment": 0.654,
+          "rating": 4.1,
+          "reviews": 29,
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.947,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.917,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ]
+          ],
+          "positive_rate": 86.2
+        },
+        {
+          "name": "School of Performing Arts, Univ. of Ghana (Legon)",
+          "country": "Ghana",
+          "sentiment": 0.32,
+          "rating": 3.15,
+          "reviews": 20,
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.951,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.893,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ]
+          ],
+          "positive_rate": 60.0
+        }
+      ]
+    },
+    "theme_leaders": {
+      "cultural_heritage": {
+        "regional_leaders": [
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.956,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.939,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+            "country": "Nigeria",
+            "sentiment": 0.914,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": {
+          "stakeholder": "Abuko Nature Reserve",
+          "country": "Gambia",
+          "sentiment": 0,
+          "sector": "Museums & Heritage"
+        }
+      },
+      "art_creativity": {
+        "regional_leaders": [
+          {
+            "stakeholder": "Sala-Museu Amílcar Cabral",
+            "country": "Cape Verde",
+            "sentiment": 0.981,
+            "sector": "Museums & Heritage"
+          },
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.974,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.96,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": {
+          "stakeholder": "Abuko Nature Reserve",
+          "country": "Gambia",
+          "sentiment": 0,
+          "sector": "Museums & Heritage"
+        }
+      },
+      "atmosphere_experience": {
+        "regional_leaders": [
+          {
+            "stakeholder": "Sala-Museu Amílcar Cabral",
+            "country": "Cape Verde",
+            "sentiment": 0.981,
+            "sector": "Museums & Heritage"
+          },
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.979,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.953,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": null
+      },
+      "educational_value": {
+        "regional_leaders": [
+          {
+            "stakeholder": "MUSON Centre (Lagos)",
+            "country": "Nigeria",
+            "sentiment": 0.985,
+            "sector": "Performing Arts"
+          },
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.98,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Bonwire Kente Museum & Weaving (Ashanti)",
+            "country": "Ghana",
+            "sentiment": 0.97,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": {
+          "stakeholder": "Abuko Nature Reserve",
+          "country": "Gambia",
+          "sentiment": 0,
+          "sector": "Museums & Heritage"
+        }
+      },
+      "staff_service": {
+        "regional_leaders": [
+          {
+            "stakeholder": "Bonwire Kente Museum & Weaving (Ashanti)",
+            "country": "Ghana",
+            "sentiment": 0.97,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.968,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.955,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": {
+          "stakeholder": "Abuko Nature Reserve",
+          "country": "Gambia",
+          "sentiment": 0,
+          "sector": "Museums & Heritage"
+        }
+      },
+      "facilities_infrastructure": {
+        "regional_leaders": [
+          {
+            "stakeholder": "New Afrika Shrine (Lagos) – venue",
+            "country": "Nigeria",
+            "sentiment": 0.998,
+            "sector": "Music & Venues"
+          },
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.975,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.973,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": {
+          "stakeholder": "Abuko Nature Reserve",
+          "country": "Gambia",
+          "sentiment": 0,
+          "sector": "Museums & Heritage"
+        }
+      },
+      "music_performance": {
+        "regional_leaders": [
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.981,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Artists Alliance Gallery (Accra)",
+            "country": "Ghana",
+            "sentiment": 0.962,
+            "sector": "Performing Arts"
+          },
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.957,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": null
+      },
+      "value_pricing": {
+        "regional_leaders": [
+          {
+            "stakeholder": "Global Mamas (Krobo beads & batik)",
+            "country": "Ghana",
+            "sentiment": 0.975,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.971,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+            "country": "Nigeria",
+            "sentiment": 0.94,
+            "sector": "Crafts & Artisans"
+          }
+        ],
+        "gambia_best": {
+          "stakeholder": "Abuko Nature Reserve",
+          "country": "Gambia",
+          "sentiment": 0,
+          "sector": "Museums & Heritage"
+        }
+      },
+      "accessibility_location": {
+        "regional_leaders": [
+          {
+            "stakeholder": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+            "country": "Ghana",
+            "sentiment": 0.991,
+            "sector": "Crafts & Artisans"
+          },
+          {
+            "stakeholder": "New Afrika Shrine (Lagos) – venue",
+            "country": "Nigeria",
+            "sentiment": 0.99,
+            "sector": "Music & Venues"
+          },
+          {
+            "stakeholder": "Christie Brown (Accra)",
+            "country": "Ghana",
+            "sentiment": 0.987,
+            "sector": "Fashion & Design"
+          }
+        ],
+        "gambia_best": null
+      }
+    },
+    "best_practices": [
+      {
+        "theme": "atmosphere_experience",
+        "nigeria_score": 0.847,
+        "gambia_score": 0,
+        "gap": 0.847,
+        "recommendation": "Improve overall visitor experience and ambiance"
+      },
+      {
+        "theme": "accessibility_location",
+        "nigeria_score": 0.82,
+        "gambia_score": 0,
+        "gap": 0.82,
+        "recommendation": "Improve access, signage, and transportation options"
+      },
+      {
+        "theme": "staff_service",
+        "nigeria_score": 0.816,
+        "gambia_score": 0.0,
+        "gap": 0.816,
+        "recommendation": "Focus on staff training and customer service excellence"
+      },
+      {
+        "theme": "art_creativity",
+        "nigeria_score": 0.802,
+        "gambia_score": 0.0,
+        "gap": 0.802,
+        "recommendation": "Showcase more diverse artistic expressions and exhibitions"
+      },
+      {
+        "theme": "value_pricing",
+        "nigeria_score": 0.801,
+        "gambia_score": 0.0,
+        "gap": 0.801,
+        "recommendation": "Review pricing strategy and value proposition"
+      },
+      {
+        "theme": "educational_value",
+        "nigeria_score": 0.791,
+        "gambia_score": 0.0,
+        "gap": 0.791,
+        "recommendation": "Enhance interpretive materials and guided tour quality"
+      },
+      {
+        "theme": "music_performance",
+        "nigeria_score": 0.771,
+        "gambia_score": 0,
+        "gap": 0.771,
+        "recommendation": "Study top performers in music performance"
+      },
+      {
+        "theme": "facilities_infrastructure",
+        "nigeria_score": 0.75,
+        "gambia_score": 0.0,
+        "gap": 0.75,
+        "recommendation": "Invest in facility upgrades and maintenance"
+      },
+      {
+        "theme": "cultural_heritage",
+        "nigeria_score": 0.638,
+        "gambia_score": 0.0,
+        "gap": 0.638,
+        "recommendation": "Strengthen cultural authenticity and storytelling"
+      }
+    ]
+  },
+  "by_country": {
+    "Nigeria": {
+      "total_stakeholders": 10,
+      "total_reviews": 576,
+      "avg_sentiment": 0.735,
+      "avg_rating": 4.17,
+      "positive_rate": 91.0,
+      "theme_analysis": {
+        "music_performance": {
+          "avg_sentiment": 0.771,
+          "total_mentions": 148,
+          "stakeholders_mentioning": 8
+        },
+        "value_pricing": {
+          "avg_sentiment": 0.801,
+          "total_mentions": 263,
+          "stakeholders_mentioning": 8
+        },
+        "accessibility_location": {
+          "avg_sentiment": 0.82,
+          "total_mentions": 145,
+          "stakeholders_mentioning": 8
+        },
+        "facilities_infrastructure": {
+          "avg_sentiment": 0.75,
+          "total_mentions": 39,
+          "stakeholders_mentioning": 8
+        },
+        "staff_service": {
+          "avg_sentiment": 0.816,
+          "total_mentions": 203,
+          "stakeholders_mentioning": 8
+        },
+        "art_creativity": {
+          "avg_sentiment": 0.802,
+          "total_mentions": 683,
+          "stakeholders_mentioning": 9
+        },
+        "atmosphere_experience": {
+          "avg_sentiment": 0.847,
+          "total_mentions": 368,
+          "stakeholders_mentioning": 8
+        },
+        "educational_value": {
+          "avg_sentiment": 0.791,
+          "total_mentions": 274,
+          "stakeholders_mentioning": 8
+        },
+        "cultural_heritage": {
+          "avg_sentiment": 0.638,
+          "total_mentions": 158,
+          "stakeholders_mentioning": 8
+        }
+      },
+      "traveler_personas": {
+        "English-speaking (Global)": 576
+      },
+      "sector_distribution": {
+        "Performing Arts": 3,
+        "Crafts & Artisans": 3,
+        "Museums & Heritage": 3,
+        "Music & Venues": 1
+      },
+      "top_performers": [
+        {
+          "stakeholder_name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 150,
+          "avg_sentiment": 0.923,
+          "avg_rating": 4.87,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 150,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "art_creativity": {
+              "avg_sentiment": 0.928,
+              "mentions": 204,
+              "reviews_mentioning": 129
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.939,
+              "mentions": 229,
+              "reviews_mentioning": 128
+            },
+            "educational_value": {
+              "avg_sentiment": 0.928,
+              "mentions": 110,
+              "reviews_mentioning": 64
+            },
+            "staff_service": {
+              "avg_sentiment": 0.925,
+              "mentions": 119,
+              "reviews_mentioning": 82
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.926,
+              "mentions": 5,
+              "reviews_mentioning": 5
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.914,
+              "mentions": 16,
+              "reviews_mentioning": 16
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.94,
+              "mentions": 14,
+              "reviews_mentioning": 13
+            },
+            "music_performance": {
+              "avg_sentiment": 0.914,
+              "mentions": 19,
+              "reviews_mentioning": 16
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.966,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            }
+          },
+          "language_distribution": {
+            "en": 150
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 150
+          },
+          "year_distribution": {
+            "2025": 150
+          },
+          "positive_quotes": [
+            "Aweeeeesssooommmeee!!💕💕💕💕💕💕💕💕💕💕💕 It was an amazing experience with amazing art works. Seeing this wonder art gallery for free in Lagos is really a great thing . It brings out great ideas and shows tal",
+            "A memorable experience at Nike art gallery Visiting Nike Art Gallery with my friends Oluchi and Uche was such a refreshing and inspiring experience. From the moment we arrived, the space felt extremel",
+            "Beautiful I loved it so much. Was calm relaxing and beautiful to hold all the doctors here, the reception was also very lovely too. Saw so may beautiful arts and yes Nigeria is really blessed and also"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.966,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0.94,
+                "mentions": 14,
+                "reviews_mentioning": 13
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.939,
+                "mentions": 229,
+                "reviews_mentioning": 128
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Omenka Gallery (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "sector_category": "Performing Arts",
+          "total_reviews": 1,
+          "avg_sentiment": 0.869,
+          "avg_rating": 5.0,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "art_creativity": {
+              "avg_sentiment": 0.869,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            }
+          },
+          "language_distribution": {
+            "en": 1
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 1
+          },
+          "year_distribution": {
+            "2017": 1
+          },
+          "positive_quotes": [
+            "Art center with pedigree I was invited for a cocktail at this center and was really impressed; I never new it existed despite my long stay in Lagos. It is tucked in a quiet part of old Ikoyi. Art love"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.869,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Osun-Osogbo Sacred Grove (Osun State)",
+          "country": "Nigeria",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 38,
+          "avg_sentiment": 0.808,
+          "avg_rating": 4.58,
+          "positive_rate": 94.7,
+          "sentiment_distribution": {
+            "positive": 36,
+            "neutral": 2,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.822,
+              "mentions": 35,
+              "reviews_mentioning": 23
+            },
+            "educational_value": {
+              "avg_sentiment": 0.872,
+              "mentions": 47,
+              "reviews_mentioning": 24
+            },
+            "staff_service": {
+              "avg_sentiment": 0.886,
+              "mentions": 29,
+              "reviews_mentioning": 19
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.892,
+              "mentions": 25,
+              "reviews_mentioning": 17
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.912,
+              "mentions": 23,
+              "reviews_mentioning": 16
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.887,
+              "mentions": 27,
+              "reviews_mentioning": 18
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.926,
+              "mentions": 6,
+              "reviews_mentioning": 6
+            },
+            "music_performance": {
+              "avg_sentiment": 0.956,
+              "mentions": 10,
+              "reviews_mentioning": 8
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.845,
+              "mentions": 8,
+              "reviews_mentioning": 6
+            }
+          },
+          "language_distribution": {
+            "en": 38
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 38
+          },
+          "year_distribution": {
+            "2025": 1,
+            "2024": 1,
+            "2022": 2,
+            "2021": 1,
+            "2020": 5,
+            "2018": 3,
+            "2017": 13,
+            "2016": 4,
+            "2015": 2,
+            "2014": 4,
+            "2013": 2
+          },
+          "positive_quotes": [
+            "Highlight of My Time in South Eastern Nigeria The sacred grove was such a sight to see! The artwork was just incredible and the history surrounding it is very interesting. Luckily my fiancee and I wer",
+            "Simply the best tourist attraction in Nigeria I was there severally time but the best season is august when the festival take place.\nTradition, religions and Nature become a mix of colours and sounds.",
+            "Magical, beautiful and beyond words. This is by far the most amazing place I have entered. I want to thank Doyin Olosun for a very interesting tour in the Grove. \nAs soon as you step into this sacred "
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.956,
+                "mentions": 10,
+                "reviews_mentioning": 8
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.926,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.912,
+                "mentions": 23,
+                "reviews_mentioning": 16
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "New Afrika Shrine (Lagos) – venue",
+          "country": "Nigeria",
+          "sector": "Music (artists, production, venues, education)",
+          "sector_category": "Music & Venues",
+          "total_reviews": 26,
+          "avg_sentiment": 0.803,
+          "avg_rating": 4.38,
+          "positive_rate": 92.3,
+          "sentiment_distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 2
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.692,
+              "mentions": 7,
+              "reviews_mentioning": 5
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.915,
+              "mentions": 5,
+              "reviews_mentioning": 5
+            },
+            "music_performance": {
+              "avg_sentiment": 0.791,
+              "mentions": 44,
+              "reviews_mentioning": 22
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.921,
+              "mentions": 16,
+              "reviews_mentioning": 12
+            },
+            "staff_service": {
+              "avg_sentiment": 0.927,
+              "mentions": 5,
+              "reviews_mentioning": 3
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.998,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.785,
+              "mentions": 13,
+              "reviews_mentioning": 9
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.99,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "educational_value": {
+              "avg_sentiment": 0.651,
+              "mentions": 7,
+              "reviews_mentioning": 6
+            }
+          },
+          "language_distribution": {
+            "en": 26
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 26
+          },
+          "year_distribution": {
+            "2025": 1,
+            "2024": 2,
+            "2023": 1,
+            "2022": 1,
+            "2020": 1,
+            "2019": 2,
+            "2018": 2,
+            "2017": 7,
+            "2016": 7,
+            "2015": 2
+          },
+          "positive_quotes": [
+            "A Laid-Back Lagos Icon with Real Afrobeat Spirit Visited: Wednesday 13th August 2025 We dropped into the New Afrika Shrine on a midweek night while in Lagos visiting family, and ended up catching a fr",
+            "Fun night at the shrine  Great time great performance, Fela left a great legacy God bless him. Cheap entertainment without fanfare or illusions good time beautiful music. I can't help wondering what i",
+            "The BEST attraction in Lagos! This place is full of dancing, singing, food, drinks and Palm Wine (a local favorite). What I like best about the Shrine is the laid back environment. It is the only plac"
+          ],
+          "negative_quotes": [
+            "Name Shrine is misleading some tourist. I recently worked with few tourist from Finland on a brief week day visit to Nigeria. They were so excited when I mentioned the visit to the African shrine whil",
+            "real africans this is a place for real Africans, where sorrows suddenly disappear thru the rhythm of African music bringing out the true nature of African culture"
+          ],
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.998,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.99,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.927,
+                "mentions": 5,
+                "reviews_mentioning": 3
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "sector_category": "Performing Arts",
+          "total_reviews": 15,
+          "avg_sentiment": 0.745,
+          "avg_rating": 4.13,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "music_performance": {
+              "avg_sentiment": 0.731,
+              "mentions": 26,
+              "reviews_mentioning": 11
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.86,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.834,
+              "mentions": 7,
+              "reviews_mentioning": 5
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.542,
+              "mentions": 2,
+              "reviews_mentioning": 1
+            },
+            "staff_service": {
+              "avg_sentiment": 0.527,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.923,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.923,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            },
+            "educational_value": {
+              "avg_sentiment": 0.985,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            }
+          },
+          "language_distribution": {
+            "en": 15
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 15
+          },
+          "year_distribution": {
+            "2018": 1,
+            "2017": 8,
+            "2016": 6
+          },
+          "positive_quotes": [
+            "Interesting play at Muson Center Saw a thought-provoking but funny play at the Muson Center. The theater hall was comfortable and well designed. Good view of the stage from all seats. Forehall also go",
+            "Lovely! The Muson Centre is a great multi purpose center. Located on the Marina, Onikan, it is home to a fantastic restaurant, a great music hall which presents music, recitals, plays, concerts, etc T",
+            "Very comfortable place I've been privileged to watch recitals, small concerts, plays and shows in this place for the last 23 years of my life. It has always been a pleasant experience. It's smack in t"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.985,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.923,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.923,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "Benin": {
+      "total_stakeholders": 7,
+      "total_reviews": 446,
+      "avg_sentiment": 0.465,
+      "avg_rating": 3.92,
+      "positive_rate": 75.3,
+      "theme_analysis": {
+        "cultural_heritage": {
+          "avg_sentiment": 0.425,
+          "total_mentions": 264,
+          "stakeholders_mentioning": 6
+        },
+        "art_creativity": {
+          "avg_sentiment": 0.5,
+          "total_mentions": 300,
+          "stakeholders_mentioning": 7
+        },
+        "atmosphere_experience": {
+          "avg_sentiment": 0.696,
+          "total_mentions": 109,
+          "stakeholders_mentioning": 7
+        },
+        "educational_value": {
+          "avg_sentiment": 0.526,
+          "total_mentions": 402,
+          "stakeholders_mentioning": 7
+        },
+        "staff_service": {
+          "avg_sentiment": 0.587,
+          "total_mentions": 190,
+          "stakeholders_mentioning": 7
+        },
+        "facilities_infrastructure": {
+          "avg_sentiment": 0.554,
+          "total_mentions": 72,
+          "stakeholders_mentioning": 7
+        },
+        "music_performance": {
+          "avg_sentiment": 0.636,
+          "total_mentions": 60,
+          "stakeholders_mentioning": 7
+        },
+        "value_pricing": {
+          "avg_sentiment": 0.509,
+          "total_mentions": 164,
+          "stakeholders_mentioning": 7
+        },
+        "accessibility_location": {
+          "avg_sentiment": 0.334,
+          "total_mentions": 114,
+          "stakeholders_mentioning": 7
+        }
+      },
+      "traveler_personas": {
+        "English-speaking (Global)": 446
+      },
+      "sector_distribution": {
+        "Museums & Heritage": 4,
+        "Crafts & Artisans": 2,
+        "Performing Arts": 1
+      },
+      "top_performers": [
+        {
+          "stakeholder_name": "Musée de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 51,
+          "avg_sentiment": 0.819,
+          "avg_rating": 4.47,
+          "positive_rate": 92.2,
+          "sentiment_distribution": {
+            "positive": 47,
+            "neutral": 3,
+            "negative": 1
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.81,
+              "mentions": 19,
+              "reviews_mentioning": 18
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.819,
+              "mentions": 72,
+              "reviews_mentioning": 41
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.922,
+              "mentions": 25,
+              "reviews_mentioning": 17
+            },
+            "educational_value": {
+              "avg_sentiment": 0.846,
+              "mentions": 51,
+              "reviews_mentioning": 31
+            },
+            "staff_service": {
+              "avg_sentiment": 0.88,
+              "mentions": 36,
+              "reviews_mentioning": 29
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.939,
+              "mentions": 12,
+              "reviews_mentioning": 11
+            },
+            "music_performance": {
+              "avg_sentiment": 0.865,
+              "mentions": 7,
+              "reviews_mentioning": 6
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.916,
+              "mentions": 21,
+              "reviews_mentioning": 17
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.966,
+              "mentions": 4,
+              "reviews_mentioning": 4
+            }
+          },
+          "language_distribution": {
+            "en": 51
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 51
+          },
+          "year_distribution": {
+            "2025": 2,
+            "2023": 2,
+            "2022": 3,
+            "2021": 1,
+            "2020": 1,
+            "2019": 8,
+            "2018": 9,
+            "2017": 8,
+            "2016": 4,
+            "2015": 8,
+            "2014": 5
+          },
+          "positive_quotes": [
+            "Nice exhibit in a beautiful setting Came here recently with my wife to see the La Fabrique à Fantasmes exhibit. What a most pleasant experience: the exhibit was very well curated, with a nice mixture ",
+            "very beautiful museum  Ouidah, a wonderfully lively city steeped in history, has this beautiful museum. It often features contemporary Beninese art. It&#39;s a joy to see creators express themselves f",
+            "A magnificent place, admirable works, a very friendly team An absolutely unmissable museum if you pass through Ouidah. Layo Primaël, the excellent guide, admirably presents the works in the temporary "
+          ],
+          "negative_quotes": [
+            "Poor Very few artists are proposed, and not my taste at all. Very figurative! The whole thing was visited with a guide that we understood very poorly."
+          ],
+          "top_themes": [
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.966,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.939,
+                "mentions": 12,
+                "reviews_mentioning": 11
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.922,
+                "mentions": 25,
+                "reviews_mentioning": 17
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Marché Dantokpa",
+          "country": "Benin",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 64,
+          "avg_sentiment": 0.518,
+          "avg_rating": 3.98,
+          "positive_rate": 79.7,
+          "sentiment_distribution": {
+            "positive": 51,
+            "neutral": 6,
+            "negative": 7
+          },
+          "theme_analysis": {
+            "value_pricing": {
+              "avg_sentiment": 0.57,
+              "mentions": 25,
+              "reviews_mentioning": 20
+            },
+            "music_performance": {
+              "avg_sentiment": 0.84,
+              "mentions": 10,
+              "reviews_mentioning": 7
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.607,
+              "mentions": 31,
+              "reviews_mentioning": 27
+            },
+            "educational_value": {
+              "avg_sentiment": 0.55,
+              "mentions": 13,
+              "reviews_mentioning": 11
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.636,
+              "mentions": 16,
+              "reviews_mentioning": 15
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.901,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.522,
+              "mentions": 13,
+              "reviews_mentioning": 11
+            },
+            "staff_service": {
+              "avg_sentiment": 0.499,
+              "mentions": 11,
+              "reviews_mentioning": 10
+            }
+          },
+          "language_distribution": {
+            "en": 64
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 64
+          },
+          "year_distribution": {
+            "2025": 2,
+            "2024": 2,
+            "2023": 1,
+            "2022": 2,
+            "2021": 1,
+            "2020": 4,
+            "2019": 5,
+            "2018": 11,
+            "2017": 6,
+            "2016": 14,
+            "2015": 5,
+            "2014": 3,
+            "2013": 5,
+            "2012": 1,
+            "2008": 1,
+            "2007": 1
+          },
+          "positive_quotes": [
+            "Outdoor shopping marvel Marche Dantokpa is huge.  Anything you want, you can find here, but be prepared to walk around.  The only way to really appreciate the market is to walk around and see the diff",
+            "total change of scenery By immersing yourself in the Dantkpa market, you almost feel like you are in another world, or rather in another time... Everything grabs you: the noise, the crowd, the smells,",
+            "Grand Marché de Dantokpa in Cotonou, a huge Grand Bazaar, very lively!! The large Cotonou market of Dantokpa, is located on the edge of the lagoon, which connects Lake Nokoué to the Ocean and right ne"
+          ],
+          "negative_quotes": [
+            "Rather rowdy and stressful I was unable to buy anything because the market was too stressful and extremely rowdy. I left with nothing.",
+            "Once in a lifetime... just to know Already the first time I swore to myself never to set foot in Dantokpa again. Unfortunately, I was convinced that I was exaggerating and that it would be good to try",
+            "The typical city Market It is a very interesting place for visitors that are visiting Benin republic for the first time. It is a quick and practical way of meeting the people. There are diverse items "
+          ],
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.901,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.84,
+                "mentions": 10,
+                "reviews_mentioning": 7
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.636,
+                "mentions": 16,
+                "reviews_mentioning": 15
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Cotonou Artisanal Center (Marché des Arts)",
+          "country": "Benin",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 101,
+          "avg_sentiment": 0.493,
+          "avg_rating": 3.77,
+          "positive_rate": 78.2,
+          "sentiment_distribution": {
+            "positive": 79,
+            "neutral": 9,
+            "negative": 13
+          },
+          "theme_analysis": {
+            "art_creativity": {
+              "avg_sentiment": 0.521,
+              "mentions": 132,
+              "reviews_mentioning": 74
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.715,
+              "mentions": 4,
+              "reviews_mentioning": 4
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.552,
+              "mentions": 52,
+              "reviews_mentioning": 43
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.485,
+              "mentions": 39,
+              "reviews_mentioning": 34
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.564,
+              "mentions": 18,
+              "reviews_mentioning": 17
+            },
+            "staff_service": {
+              "avg_sentiment": 0.724,
+              "mentions": 13,
+              "reviews_mentioning": 11
+            },
+            "educational_value": {
+              "avg_sentiment": 0.516,
+              "mentions": 27,
+              "reviews_mentioning": 24
+            },
+            "music_performance": {
+              "avg_sentiment": 0.678,
+              "mentions": 6,
+              "reviews_mentioning": 6
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.376,
+              "mentions": 5,
+              "reviews_mentioning": 4
+            }
+          },
+          "language_distribution": {
+            "en": 101
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 101
+          },
+          "year_distribution": {
+            "2023": 5,
+            "2022": 1,
+            "2020": 3,
+            "2019": 8,
+            "2018": 19,
+            "2017": 19,
+            "2016": 17,
+            "2015": 25,
+            "2014": 1,
+            "2013": 1,
+            "2012": 1,
+            "2009": 1
+          },
+          "positive_quotes": [
+            "Impressed with the wood carving. I was truly impressed by the way they work with wood; they make beautiful things, truly a true art. The artisans&#39; attentiveness and friendly laughter make me want ",
+            "There isn&#39;t much else  If you operate in the European way, go there several times to understand the game. Have time and patience. It&#39;s not to make great deals, but when you are white, the sell",
+            "Nice place Of course, you get accosted by the merchants... But hey, that&#39;s fair game. There are some very beautiful pieces, some of them old. Including bronze (if I&#39;m well informed, it seems t"
+          ],
+          "negative_quotes": [
+            "Mediocre because it is more of a craft shopping center than a craft center. Lots of shops and merchandise. But few artisans in fact. It&#39;s more &quot;craft&quot; trade than pure craftsmanship, whic",
+            "Disappointed I knew this craft center 20 years ago. It has lost its authenticity and charm. The objects are all the same. Many come from China. Too bad.",
+            "Certainly the ugliest of West African craft centers. The atmosphere in general in craft centers is very friendly and simple, but here; there is not a soul. The products are not very interesting, or at"
+          ],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.724,
+                "mentions": 13,
+                "reviews_mentioning": 11
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.715,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.678,
+                "mentions": 6,
+                "reviews_mentioning": 6
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Palais des Rois d'Abomey (Royal Palaces)",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 103,
+          "avg_sentiment": 0.408,
+          "avg_rating": 3.7,
+          "positive_rate": 71.8,
+          "sentiment_distribution": {
+            "positive": 74,
+            "neutral": 6,
+            "negative": 23
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.477,
+              "mentions": 94,
+              "reviews_mentioning": 67
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.467,
+              "mentions": 46,
+              "reviews_mentioning": 38
+            },
+            "music_performance": {
+              "avg_sentiment": 0.47,
+              "mentions": 15,
+              "reviews_mentioning": 14
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.809,
+              "mentions": 28,
+              "reviews_mentioning": 24
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.304,
+              "mentions": 39,
+              "reviews_mentioning": 31
+            },
+            "educational_value": {
+              "avg_sentiment": 0.504,
+              "mentions": 159,
+              "reviews_mentioning": 76
+            },
+            "staff_service": {
+              "avg_sentiment": 0.556,
+              "mentions": 64,
+              "reviews_mentioning": 58
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.571,
+              "mentions": 31,
+              "reviews_mentioning": 28
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.309,
+              "mentions": 20,
+              "reviews_mentioning": 16
+            }
+          },
+          "language_distribution": {
+            "en": 103
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 103
+          },
+          "year_distribution": {
+            "2025": 1,
+            "2024": 4,
+            "2023": 4,
+            "2022": 2,
+            "2021": 1,
+            "2020": 3,
+            "2019": 9,
+            "2018": 16,
+            "2017": 11,
+            "2016": 17,
+            "2015": 14,
+            "2014": 9,
+            "2013": 6,
+            "2012": 5,
+            "2010": 1
+          },
+          "positive_quotes": [
+            "Interesting if you are into cultural history  Yes it is true, some of the palaces are not well preserved and not being taken care of. UNESCO efforts to restore and protect have been burned down severa",
+            "Interesting and peaceful place to visit We really enjoyed our visit but agree with others that there isn’t much information given by the palace itself, so for the best experience you should go with a ",
+            "Great palace.. but is it worth the trip? Dahomey empire has very interesting characteristics and history, which even made someone who doesn&#39;t like museums like me to pay attention to its artifacts"
+          ],
+          "negative_quotes": [
+            "King Behanzin #King_Gbèhanzin and part of his family were deported to Martinique. After several years of a fierce anti-colonialist war, #Gbèhanzin surrendered to Colonel Dodds to spare his people but ",
+            "Not worth the road trip to get there The palace tour takes about an hour and is quite interesting. The history of the kings from past to present is included and the exhibits are good and fully show th",
+            "Abomey deserves better than degraded palaces! Abomey was from the first king Gangnihesdou (1600-1621) until the last Behanzin (1889-1894) a powerful kingdom later called the kingdom of Dahomey (French"
+          ],
+          "top_themes": [
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.809,
+                "mentions": 28,
+                "reviews_mentioning": 24
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.571,
+                "mentions": 31,
+                "reviews_mentioning": 28
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.556,
+                "mentions": 64,
+                "reviews_mentioning": 58
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Musée Ethnographique de Porto-Novo",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 29,
+          "avg_sentiment": 0.387,
+          "avg_rating": 3.72,
+          "positive_rate": 69.0,
+          "sentiment_distribution": {
+            "positive": 20,
+            "neutral": 2,
+            "negative": 7
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.4,
+              "mentions": 25,
+              "reviews_mentioning": 17
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.051,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            },
+            "educational_value": {
+              "avg_sentiment": 0.477,
+              "mentions": 43,
+              "reviews_mentioning": 23
+            },
+            "staff_service": {
+              "avg_sentiment": 0.622,
+              "mentions": 21,
+              "reviews_mentioning": 18
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.023,
+              "mentions": 5,
+              "reviews_mentioning": 5
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.301,
+              "mentions": 6,
+              "reviews_mentioning": 6
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.581,
+              "mentions": 4,
+              "reviews_mentioning": 4
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.663,
+              "mentions": 6,
+              "reviews_mentioning": 5
+            },
+            "music_performance": {
+              "avg_sentiment": 0.376,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            }
+          },
+          "language_distribution": {
+            "en": 29
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 29
+          },
+          "year_distribution": {
+            "2019": 5,
+            "2018": 7,
+            "2017": 4,
+            "2016": 6,
+            "2015": 1,
+            "2014": 1,
+            "2013": 2,
+            "2012": 2,
+            "2010": 1
+          },
+          "positive_quotes": [
+            "Quirky and interesting We walked in and found an excellent guide that took us around the museum. Fascinating collection and great overview of Benin, the history and culture. Definitely the best musuem",
+            "And in the end, the drama A nice little museum: the collection isn&#39;t very big but there are some beautiful pieces. The guide did his best to make the visit lively and was not stingy with explanati",
+            "A pearl This house with a rich past, now transformed into an ethnological museum, through its architecture and the history of its occupants, provides us with elements that help us better understand th"
+          ],
+          "negative_quotes": [
+            "Few means, few objects The Museum, whose entry is free (!) is housed in a pretty colonial building which is worth the detour in itself, but the collections are still rather disappointing: unfortunate ",
+            "Disappointing A few masks, a few stories, nice building. We came with natural hunger to learn about the various tribes in the country, and met a small, rundown, neglected set of masks and a bit more. ",
+            "This is a MUST to understand the religious/cultural history and customs of Benin It is small museum; we were only allowed to visit the downstairs of an old house converted for this purpose.  So it won"
+          ],
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.663,
+                "mentions": 6,
+                "reviews_mentioning": 5
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.622,
+                "mentions": 21,
+                "reviews_mentioning": 18
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.581,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "Ghana": {
+      "total_stakeholders": 12,
+      "total_reviews": 823,
+      "avg_sentiment": 0.5,
+      "avg_rating": 4.22,
+      "positive_rate": 76.1,
+      "theme_analysis": {
+        "cultural_heritage": {
+          "avg_sentiment": 0.634,
+          "total_mentions": 706,
+          "stakeholders_mentioning": 12
+        },
+        "educational_value": {
+          "avg_sentiment": 0.709,
+          "total_mentions": 976,
+          "stakeholders_mentioning": 12
+        },
+        "atmosphere_experience": {
+          "avg_sentiment": 0.778,
+          "total_mentions": 341,
+          "stakeholders_mentioning": 12
+        },
+        "staff_service": {
+          "avg_sentiment": 0.754,
+          "total_mentions": 374,
+          "stakeholders_mentioning": 12
+        },
+        "value_pricing": {
+          "avg_sentiment": 0.72,
+          "total_mentions": 305,
+          "stakeholders_mentioning": 12
+        },
+        "accessibility_location": {
+          "avg_sentiment": 0.688,
+          "total_mentions": 126,
+          "stakeholders_mentioning": 10
+        },
+        "art_creativity": {
+          "avg_sentiment": 0.668,
+          "total_mentions": 382,
+          "stakeholders_mentioning": 11
+        },
+        "facilities_infrastructure": {
+          "avg_sentiment": 0.674,
+          "total_mentions": 145,
+          "stakeholders_mentioning": 9
+        },
+        "music_performance": {
+          "avg_sentiment": 0.599,
+          "total_mentions": 115,
+          "stakeholders_mentioning": 11
+        }
+      },
+      "traveler_personas": {
+        "English-speaking (Global)": 823
+      },
+      "sector_distribution": {
+        "Museums & Heritage": 5,
+        "Crafts & Artisans": 3,
+        "Performing Arts": 2,
+        "Fashion & Design": 1,
+        "Music & Venues": 1
+      },
+      "top_performers": [
+        {
+          "stakeholder_name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 49,
+          "avg_sentiment": 0.949,
+          "avg_rating": 4.96,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 49,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "music_performance": {
+              "avg_sentiment": 0.957,
+              "mentions": 21,
+              "reviews_mentioning": 17
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.953,
+              "mentions": 50,
+              "reviews_mentioning": 35
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.96,
+              "mentions": 26,
+              "reviews_mentioning": 21
+            },
+            "educational_value": {
+              "avg_sentiment": 0.948,
+              "mentions": 30,
+              "reviews_mentioning": 24
+            },
+            "staff_service": {
+              "avg_sentiment": 0.955,
+              "mentions": 13,
+              "reviews_mentioning": 13
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.943,
+              "mentions": 12,
+              "reviews_mentioning": 10
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.939,
+              "mentions": 11,
+              "reviews_mentioning": 10
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.975,
+              "mentions": 10,
+              "reviews_mentioning": 10
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.975,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            }
+          },
+          "language_distribution": {
+            "en": 49
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 49
+          },
+          "year_distribution": {
+            "2025": 4,
+            "2024": 5,
+            "2023": 2,
+            "2022": 2,
+            "2021": 1,
+            "2020": 2,
+            "2019": 6,
+            "2018": 13,
+            "2017": 14
+          },
+          "positive_quotes": [
+            "African Drumming - yeyy!!!! We spent a day in Cape coast and knew exactly what we signed in for when we visited the slave castle (a must for every human!). So we started there and then booked ourselve",
+            "Great full workshop, interactive day in Ghana (Takoradi/ Cape Coast) Ghana can be a little hard to navigate or find things to do, so planning a day with Global Mama&#39;s is a great choice. We ported ",
+            "A fun way to experience Ghana We had a great time taking the cooking workshop and the drumming/dancing workshop. The workshops are an excellent complement to visits to the castles in Cape Coast and El"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0.975,
+                "mentions": 10,
+                "reviews_mentioning": 10
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.975,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.96,
+                "mentions": 26,
+                "reviews_mentioning": 21
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "sector_category": "Fashion & Design",
+          "total_reviews": 2,
+          "avg_sentiment": 0.886,
+          "avg_rating": 5.0,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.886,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.886,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            },
+            "educational_value": {
+              "avg_sentiment": 0.784,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.886,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            },
+            "staff_service": {
+              "avg_sentiment": 0.784,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.784,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.987,
+              "mentions": 2,
+              "reviews_mentioning": 1
+            }
+          },
+          "language_distribution": {
+            "en": 2
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 2
+          },
+          "year_distribution": {
+            "2024": 1,
+            "2019": 1
+          },
+          "positive_quotes": [
+            "Off the Rack and From the Runway Ever wondered how some people turn up looking as if they have just walked off the page of a magazine? Part of the answer is whatever they have on is from the runway, o",
+            "West African Style and Craftsmanship at Its Finest For the discriminating shopper who wants to purchase a truly unique piece (or two) that combines the vibrancy of colors, style and West African herit"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.987,
+                "mentions": 2,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "cultural_heritage",
+              {
+                "avg_sentiment": 0.886,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.886,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Artists Alliance Gallery (Accra)",
+          "country": "Ghana",
+          "sector": "Performing and visual arts",
+          "sector_category": "Performing Arts",
+          "total_reviews": 43,
+          "avg_sentiment": 0.821,
+          "avg_rating": 4.67,
+          "positive_rate": 95.3,
+          "sentiment_distribution": {
+            "positive": 41,
+            "neutral": 2,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "art_creativity": {
+              "avg_sentiment": 0.818,
+              "mentions": 120,
+              "reviews_mentioning": 42
+            },
+            "music_performance": {
+              "avg_sentiment": 0.962,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "educational_value": {
+              "avg_sentiment": 0.858,
+              "mentions": 17,
+              "reviews_mentioning": 14
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.921,
+              "mentions": 24,
+              "reviews_mentioning": 18
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.92,
+              "mentions": 8,
+              "reviews_mentioning": 7
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.836,
+              "mentions": 28,
+              "reviews_mentioning": 19
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.806,
+              "mentions": 11,
+              "reviews_mentioning": 9
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.851,
+              "mentions": 7,
+              "reviews_mentioning": 6
+            },
+            "staff_service": {
+              "avg_sentiment": 0.922,
+              "mentions": 6,
+              "reviews_mentioning": 4
+            }
+          },
+          "language_distribution": {
+            "en": 43
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 43
+          },
+          "year_distribution": {
+            "2025": 4,
+            "2024": 4,
+            "2023": 4,
+            "2022": 2,
+            "2021": 2,
+            "2020": 3,
+            "2019": 6,
+            "2018": 1,
+            "2017": 1,
+            "2016": 6,
+            "2015": 8,
+            "2014": 2
+          },
+          "positive_quotes": [
+            "Great Visit This place is a wonderful stop for local art! We had the whole place to ourselves to roam freely without hassle! There’s great art on each floor but the best floors are the second and thir",
+            "You don&#39;t want to miss this treasure! Two days left in Ghana and we just discovered this treasure! If you love art, all kinds of art, you don&#39;t want to miss this. There are three floors of ama",
+            "One of the most interesting places to visit and shop in Accra This place should be top of places to visit, it really should. It was near my hotel, but the building isn&#39;t readily identified as an a"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.962,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.922,
+                "mentions": 6,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.921,
+                "mentions": 24,
+                "reviews_mentioning": 18
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "SWOPA – Sirigu Women's Org. for Pottery & Art (Sirigu)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 9,
+          "avg_sentiment": 0.814,
+          "avg_rating": 4.44,
+          "positive_rate": 88.9,
+          "sentiment_distribution": {
+            "positive": 8,
+            "neutral": 1,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.956,
+              "mentions": 6,
+              "reviews_mentioning": 4
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.974,
+              "mentions": 8,
+              "reviews_mentioning": 5
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.973,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.971,
+              "mentions": 6,
+              "reviews_mentioning": 4
+            },
+            "educational_value": {
+              "avg_sentiment": 0.98,
+              "mentions": 4,
+              "reviews_mentioning": 2
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.979,
+              "mentions": 8,
+              "reviews_mentioning": 5
+            },
+            "staff_service": {
+              "avg_sentiment": 0.968,
+              "mentions": 10,
+              "reviews_mentioning": 5
+            },
+            "music_performance": {
+              "avg_sentiment": 0.981,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.991,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            }
+          },
+          "language_distribution": {
+            "en": 9
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 9
+          },
+          "year_distribution": {
+            "2023": 1,
+            "2022": 1,
+            "2018": 3,
+            "2017": 1,
+            "2016": 1,
+            "2015": 2
+          },
+          "positive_quotes": [
+            "Rustic and Peaceful Subject: Sirigu Women&#39;s Organization for Pottery and Art Guest House Location: Bolgatanga, Upper East Region, Ghana, Africa Title: Rustic and peaceful ID#: 290117711 Spent 3 da",
+            "A Truly Wonderful Experience  I stayed for a week in Swopa while visiting a friend in Sirigu. The first two days I spent in the dorm room which holds five beds and has two bathrooms and has ceiling fa",
+            "Must visit for anyone in Ghana Visiting SWOPA is a must for anyone who truly wants to get in touch with Ghanaian culture. The rooms are amazing and the food is delicious. The pottery and weaving works"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.991,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.981,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.98,
+                "mentions": 4,
+                "reviews_mentioning": 2
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Bonwire Kente Museum & Weaving (Ashanti)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 7,
+          "avg_sentiment": 0.762,
+          "avg_rating": 4.43,
+          "positive_rate": 85.7,
+          "sentiment_distribution": {
+            "positive": 6,
+            "neutral": 1,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "atmosphere_experience": {
+              "avg_sentiment": 0.933,
+              "mentions": 5,
+              "reviews_mentioning": 4
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.912,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.882,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            },
+            "music_performance": {
+              "avg_sentiment": 0.868,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "educational_value": {
+              "avg_sentiment": 0.97,
+              "mentions": 4,
+              "reviews_mentioning": 1
+            },
+            "staff_service": {
+              "avg_sentiment": 0.97,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            }
+          },
+          "language_distribution": {
+            "en": 7
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 7
+          },
+          "year_distribution": {
+            "2024": 1,
+            "2018": 1,
+            "2017": 2,
+            "2016": 1,
+            "2015": 1,
+            "2014": 1
+          },
+          "positive_quotes": [
+            "The Colour of Ghana We&#39;ve been living in Ghana for 7 months and one of the key areas I&#39;ve always attempted to see is the Kente village! If you intend to visit the village over a weekend be min",
+            "Kente, Cocoa and more This wonderful village was a real surprise. Hands on learning experience with terrific tour guides. You get a chance to do hands on weaving and to walk through a cocoa grove. The",
+            "Real Kente. Real Ghana.  We see kente cloth in America all the time so it is a real treat getting to see first hand where and how it's made. You can even try making it yourself. The weavers work hard "
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.97,
+                "mentions": 4,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.97,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.933,
+                "mentions": 5,
+                "reviews_mentioning": 4
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "Gambia": {
+      "total_stakeholders": 12,
+      "total_reviews": 1316,
+      "avg_sentiment": 0.659,
+      "avg_rating": 3.72,
+      "positive_rate": 86.5,
+      "theme_analysis": {
+        "staff_service": {
+          "avg_sentiment": 0.0,
+          "total_mentions": 0,
+          "stakeholders_mentioning": 12
+        },
+        "educational_value": {
+          "avg_sentiment": 0.0,
+          "total_mentions": 0,
+          "stakeholders_mentioning": 12
+        },
+        "value_pricing": {
+          "avg_sentiment": 0.0,
+          "total_mentions": 0,
+          "stakeholders_mentioning": 12
+        },
+        "art_creativity": {
+          "avg_sentiment": 0.0,
+          "total_mentions": 0,
+          "stakeholders_mentioning": 12
+        },
+        "cultural_heritage": {
+          "avg_sentiment": 0.0,
+          "total_mentions": 0,
+          "stakeholders_mentioning": 12
+        },
+        "facilities_infrastructure": {
+          "avg_sentiment": 0.0,
+          "total_mentions": 0,
+          "stakeholders_mentioning": 12
+        }
+      },
+      "traveler_personas": {
+        "English-speaking (Global)": 1316
+      },
+      "sector_distribution": {
+        "Museums & Heritage": 7,
+        "Crafts & Artisans": 5
+      },
+      "top_performers": [
+        {
+          "stakeholder_name": "Tanji Village Market",
+          "country": "Gambia",
+          "sector": "Crafts & Artisans",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 54,
+          "avg_sentiment": 0.883,
+          "avg_rating": 4.3,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 54,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "staff_service": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "educational_value": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "value_pricing": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "art_creativity": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            }
+          },
+          "language_distribution": {
+            "en": 54
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 54
+          },
+          "year_distribution": {
+            "2024": 1,
+            "2022": 1,
+            "2020": 2,
+            "2019": 4,
+            "2018": 12,
+            "2017": 7,
+            "2016": 13,
+            "2015": 9,
+            "2014": 4,
+            "2013": 1
+          },
+          "positive_quotes": [],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Fort Bullen Barra Museum",
+          "country": "Gambia",
+          "sector": "Museums & Heritage",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 11,
+          "avg_sentiment": 0.839,
+          "avg_rating": 4.4,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "staff_service": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "educational_value": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "value_pricing": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "art_creativity": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            }
+          },
+          "language_distribution": {
+            "en": 11
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 11
+          },
+          "year_distribution": {
+            "2023": 1,
+            "2021": 2,
+            "2019": 5,
+            "2018": 3
+          },
+          "positive_quotes": [],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Bakau Craft Market",
+          "country": "Gambia",
+          "sector": "Crafts & Artisans",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 47,
+          "avg_sentiment": 0.839,
+          "avg_rating": 4.2,
+          "positive_rate": 93.5,
+          "sentiment_distribution": {
+            "positive": 43,
+            "neutral": 0,
+            "negative": 4
+          },
+          "theme_analysis": {
+            "staff_service": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "educational_value": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "value_pricing": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "art_creativity": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            }
+          },
+          "language_distribution": {
+            "en": 47
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 47
+          },
+          "year_distribution": {
+            "2023": 1,
+            "2020": 2,
+            "2019": 2,
+            "2018": 4,
+            "2017": 8,
+            "2016": 11,
+            "2015": 14,
+            "2014": 4,
+            "2013": 1
+          },
+          "positive_quotes": [],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Banjul Craft Market",
+          "country": "Gambia",
+          "sector": "Crafts & Artisans",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 267,
+          "avg_sentiment": 0.765,
+          "avg_rating": 3.8,
+          "positive_rate": 92.7,
+          "sentiment_distribution": {
+            "positive": 247,
+            "neutral": 0,
+            "negative": 20
+          },
+          "theme_analysis": {
+            "staff_service": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "educational_value": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "value_pricing": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "art_creativity": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            }
+          },
+          "language_distribution": {
+            "en": 267
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 267
+          },
+          "year_distribution": {
+            "2025": 4,
+            "2024": 3,
+            "2023": 2,
+            "2022": 1,
+            "2021": 1,
+            "2020": 12,
+            "2019": 33,
+            "2018": 25,
+            "2017": 20,
+            "2016": 47,
+            "2015": 20,
+            "2014": 35,
+            "2013": 32,
+            "2012": 30,
+            "2010": 1,
+            "2009": 1
+          },
+          "positive_quotes": [],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Senegambia Craft Market",
+          "country": "Gambia",
+          "sector": "Crafts & Artisans",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 214,
+          "avg_sentiment": 0.733,
+          "avg_rating": 3.5,
+          "positive_rate": 88.5,
+          "sentiment_distribution": {
+            "positive": 189,
+            "neutral": 0,
+            "negative": 25
+          },
+          "theme_analysis": {
+            "staff_service": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "educational_value": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "value_pricing": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "art_creativity": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0,
+              "mentions": 0,
+              "reviews_mentioning": 0
+            }
+          },
+          "language_distribution": {
+            "en": 214
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 214
+          },
+          "year_distribution": {
+            "2024": 9,
+            "2023": 4,
+            "2022": 2,
+            "2020": 6,
+            "2019": 8,
+            "2018": 31,
+            "2017": 28,
+            "2016": 61,
+            "2015": 56,
+            "2014": 9
+          },
+          "positive_quotes": [],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0,
+                "mentions": 0,
+                "reviews_mentioning": 0
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "Cape Verde": {
+      "total_stakeholders": 9,
+      "total_reviews": 591,
+      "avg_sentiment": 0.579,
+      "avg_rating": 4.18,
+      "positive_rate": 77.5,
+      "theme_analysis": {
+        "cultural_heritage": {
+          "avg_sentiment": 0.691,
+          "total_mentions": 164,
+          "stakeholders_mentioning": 8
+        },
+        "music_performance": {
+          "avg_sentiment": 0.66,
+          "total_mentions": 77,
+          "stakeholders_mentioning": 9
+        },
+        "educational_value": {
+          "avg_sentiment": 0.734,
+          "total_mentions": 220,
+          "stakeholders_mentioning": 8
+        },
+        "staff_service": {
+          "avg_sentiment": 0.769,
+          "total_mentions": 179,
+          "stakeholders_mentioning": 8
+        },
+        "facilities_infrastructure": {
+          "avg_sentiment": 0.748,
+          "total_mentions": 69,
+          "stakeholders_mentioning": 7
+        },
+        "value_pricing": {
+          "avg_sentiment": 0.711,
+          "total_mentions": 246,
+          "stakeholders_mentioning": 8
+        },
+        "accessibility_location": {
+          "avg_sentiment": 0.705,
+          "total_mentions": 99,
+          "stakeholders_mentioning": 8
+        },
+        "art_creativity": {
+          "avg_sentiment": 0.649,
+          "total_mentions": 314,
+          "stakeholders_mentioning": 8
+        },
+        "atmosphere_experience": {
+          "avg_sentiment": 0.859,
+          "total_mentions": 190,
+          "stakeholders_mentioning": 7
+        }
+      },
+      "traveler_personas": {
+        "English-speaking (Global)": 591
+      },
+      "sector_distribution": {
+        "Museums & Heritage": 4,
+        "Performing Arts": 2,
+        "Crafts & Artisans": 1,
+        "Fashion & Design": 1,
+        "Music & Venues": 1
+      },
+      "top_performers": [
+        {
+          "stakeholder_name": "Sala-Museu Amílcar Cabral",
+          "country": "Cape Verde",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 12,
+          "avg_sentiment": 0.767,
+          "avg_rating": 4.17,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.722,
+              "mentions": 8,
+              "reviews_mentioning": 7
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.981,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "educational_value": {
+              "avg_sentiment": 0.913,
+              "mentions": 15,
+              "reviews_mentioning": 9
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.981,
+              "mentions": 3,
+              "reviews_mentioning": 1
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.551,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "staff_service": {
+              "avg_sentiment": 0.754,
+              "mentions": 7,
+              "reviews_mentioning": 5
+            },
+            "music_performance": {
+              "avg_sentiment": 0.473,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.612,
+              "mentions": 4,
+              "reviews_mentioning": 3
+            }
+          },
+          "language_distribution": {
+            "en": 12
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 12
+          },
+          "year_distribution": {
+            "2021": 1,
+            "2020": 1,
+            "2019": 3,
+            "2018": 3,
+            "2017": 4
+          },
+          "positive_quotes": [
+            "Amazing History Lesson (April 2019) This was an amazing experience! If you are a history buff, you&#39;ll especially love this museum and this particular piece of history. It&#39;s located near the wa",
+            "lot of history, good tour, loved it A great place to learn the history about the revolutionist Amilcar Cabral. The musuem is dedicated to him and tells a lot of history about the past and what happene",
+            "interesting A small but interesting museum retracing the life and work of the hero of national independence. A highly motivated young curator gave us a wealth of explanations in French. This museum co"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.981,
+                "mentions": 1,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.981,
+                "mentions": 3,
+                "reviews_mentioning": 1
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.913,
+                "mentions": 15,
+                "reviews_mentioning": 9
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Djunta Mo Art (Sal)",
+          "country": "Cape Verde",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 150,
+          "avg_sentiment": 0.687,
+          "avg_rating": 4.95,
+          "positive_rate": 82.0,
+          "sentiment_distribution": {
+            "positive": 123,
+            "neutral": 21,
+            "negative": 6
+          },
+          "theme_analysis": {
+            "educational_value": {
+              "avg_sentiment": 0.912,
+              "mentions": 18,
+              "reviews_mentioning": 17
+            },
+            "staff_service": {
+              "avg_sentiment": 0.902,
+              "mentions": 76,
+              "reviews_mentioning": 50
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.867,
+              "mentions": 46,
+              "reviews_mentioning": 40
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.653,
+              "mentions": 112,
+              "reviews_mentioning": 82
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.95,
+              "mentions": 36,
+              "reviews_mentioning": 30
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.842,
+              "mentions": 17,
+              "reviews_mentioning": 16
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.655,
+              "mentions": 22,
+              "reviews_mentioning": 22
+            },
+            "music_performance": {
+              "avg_sentiment": 0.913,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            }
+          },
+          "language_distribution": {
+            "en": 150
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 150
+          },
+          "year_distribution": {
+            "2025": 21,
+            "2024": 29,
+            "2023": 34,
+            "2022": 25,
+            "2021": 10,
+            "2020": 10,
+            "2019": 19,
+            "2018": 2
+          },
+          "positive_quotes": [
+            "Beautiful Product, Extraordinary Service Ordered from abroad. 9 days from Cape Verde to California. The service was incredible, the communication very good, the packaging and delivery swift, and the f",
+            "Lovely little shop If you're in Santa Maria, Sal, don't miss this lovely little shop for handmade souvenirs! The craftsmanship is beautiful, and the staff are incredibly friendly and helpful. I picked",
+            "Such a wonderful experience 🇬🇧My parents went on vacation to Cape Verde and decided to go to this shop to buy some souvenirs. The service was excellent and the products they have are beautiful. It&#39"
+          ],
+          "negative_quotes": [
+            "Il bello, il vero, il buono In the commercial route, I have contacted other anonymous sellers and I have received goods from Chinese manufacturers, but I find that this piccolo is sold for the product",
+            "znakomite miejsce sztuki lokalnej prześliczny sklepik z rękodziełem - wszystko lokalnie, ręcznie robione: od pamiątek (breloki, laleczki, torby, likiery, sól) po artykuły użytkowe. Oryginalne, niepodr",
+            "Review by Djunta Mo Art The packaging was hand-painted and eco-friendly, very colorful, and fully digital! Tripadvisor is stupid because it forces me to type 100 characters."
+          ],
+          "top_themes": [
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.95,
+                "mentions": 36,
+                "reviews_mentioning": 30
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.913,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.912,
+                "mentions": 18,
+                "reviews_mentioning": 17
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Capvertdesign+Artesanato (Mindelo)",
+          "country": "Cape Verde",
+          "sector": "Fashion & Design",
+          "sector_category": "Fashion & Design",
+          "total_reviews": 55,
+          "avg_sentiment": 0.684,
+          "avg_rating": 4.44,
+          "positive_rate": 85.5,
+          "sentiment_distribution": {
+            "positive": 47,
+            "neutral": 5,
+            "negative": 3
+          },
+          "theme_analysis": {
+            "art_creativity": {
+              "avg_sentiment": 0.713,
+              "mentions": 80,
+              "reviews_mentioning": 39
+            },
+            "educational_value": {
+              "avg_sentiment": 0.524,
+              "mentions": 13,
+              "reviews_mentioning": 13
+            },
+            "staff_service": {
+              "avg_sentiment": 0.869,
+              "mentions": 43,
+              "reviews_mentioning": 23
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.736,
+              "mentions": 29,
+              "reviews_mentioning": 21
+            },
+            "music_performance": {
+              "avg_sentiment": 0.901,
+              "mentions": 5,
+              "reviews_mentioning": 5
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.828,
+              "mentions": 17,
+              "reviews_mentioning": 16
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.83,
+              "mentions": 16,
+              "reviews_mentioning": 14
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.819,
+              "mentions": 5,
+              "reviews_mentioning": 5
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.954,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            }
+          },
+          "language_distribution": {
+            "en": 55
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 55
+          },
+          "year_distribution": {
+            "2024": 1,
+            "2023": 3,
+            "2022": 2,
+            "2020": 2,
+            "2019": 6,
+            "2018": 7,
+            "2017": 13,
+            "2016": 15,
+            "2015": 6
+          },
+          "positive_quotes": [
+            "A beautiful shop Undeniably a beautiful shop! Pleasant to visit and well laid out, friendly welcome. I found a nice book on Cape Verde (the Archipelago by its inhabitants). It should be noted that Cap",
+            "Made in Cabo Verde I love to shop artisan stores and this was the only one in town. Lots of locally made items of find quality with reasonable prices. It&#39;s unique and a must have and must visit!!!",
+            "A unique shop with real arts &amp; crafts / Uma loja única com verdadeiro artesanato das ilhas de Cabo Verde It is quite central, located in a nice square near the Marginal, opposite the Torre de Belé"
+          ],
+          "negative_quotes": [
+            "meh local crafts rather weak crafts, nothing interesting, better to go to the African shops in town or on the square",
+            "Deplorable value for money  The shop is beautiful, there is a lot of choice, but the prices are completely obscene for Cape Verde. Go shopping at the markets to help the traders who get up at dawn, ra"
+          ],
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.954,
+                "mentions": 3,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.901,
+                "mentions": 5,
+                "reviews_mentioning": 5
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.869,
+                "mentions": 43,
+                "reviews_mentioning": 23
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Cesária Évora",
+          "country": "Cape Verde",
+          "sector": "Music (artists, production, venues, education)",
+          "sector_category": "Music & Venues",
+          "total_reviews": 29,
+          "avg_sentiment": 0.654,
+          "avg_rating": 4.1,
+          "positive_rate": 86.2,
+          "sentiment_distribution": {
+            "positive": 25,
+            "neutral": 1,
+            "negative": 3
+          },
+          "theme_analysis": {
+            "music_performance": {
+              "avg_sentiment": 0.637,
+              "mentions": 18,
+              "reviews_mentioning": 15
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.54,
+              "mentions": 9,
+              "reviews_mentioning": 8
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.771,
+              "mentions": 11,
+              "reviews_mentioning": 9
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.784,
+              "mentions": 14,
+              "reviews_mentioning": 10
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.65,
+              "mentions": 34,
+              "reviews_mentioning": 20
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.892,
+              "mentions": 4,
+              "reviews_mentioning": 4
+            },
+            "educational_value": {
+              "avg_sentiment": 0.856,
+              "mentions": 7,
+              "reviews_mentioning": 5
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.917,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            },
+            "staff_service": {
+              "avg_sentiment": 0.947,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            }
+          },
+          "language_distribution": {
+            "en": 29
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 29
+          },
+          "year_distribution": {
+            "2025": 2,
+            "2024": 2,
+            "2023": 3,
+            "2022": 2,
+            "2021": 2,
+            "2020": 6,
+            "2019": 12
+          },
+          "positive_quotes": [
+            "A must-see for African art! If you love African art, you absolutely must go in! It&#39;s small, but well worth it. Beautiful masks of all shapes and sizes, and a number of sculptures. The other side o",
+            "Small but fascinating and moving memorial to Cesaria Evora I visited this museum to pay tribute to Cape Verde&#39;s most famous person. It is situated in an ordinary house in a side street (not her or",
+            "The African Art Rooms upstairs were stunning. There was an art exhibition downstairs to the left and the Cesaria Evora Tribute to the right. We had to pay 8 euros each to see all exhibits which for us"
+          ],
+          "negative_quotes": [
+            "Pamiątki po Cesarii Evora Warto zobaczyć pamiątki zebrane przez fana Cesarii. Niestety rodzina Cesarii nie zdołała stworzyć musem. W muzeum polski akcent- zdjęcie Cesarii z Kayą - ze wspólnego koncert",
+            "Ashamed. No respect for opening hours for a museum that is too small, not showcasing enough the talent of this great artist: the result is a taste of sadness and waste.",
+            "Desapontamento - Cise, you deserved better! The simplicity of Diva&#39;s two barefoot feet deserve more than her beloved São&#39;sente. I left the house where I lived at the Cesária Évora Museum Cente"
+          ],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.947,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.917,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.892,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Centro Cultural do Mindelo",
+          "country": "Cape Verde",
+          "sector": "Performing and visual arts",
+          "sector_category": "Performing Arts",
+          "total_reviews": 17,
+          "avg_sentiment": 0.581,
+          "avg_rating": 4.12,
+          "positive_rate": 76.5,
+          "sentiment_distribution": {
+            "positive": 13,
+            "neutral": 4,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.659,
+              "mentions": 6,
+              "reviews_mentioning": 6
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.841,
+              "mentions": 11,
+              "reviews_mentioning": 8
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.657,
+              "mentions": 24,
+              "reviews_mentioning": 12
+            },
+            "educational_value": {
+              "avg_sentiment": 0.938,
+              "mentions": 5,
+              "reviews_mentioning": 4
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.915,
+              "mentions": 7,
+              "reviews_mentioning": 6
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.838,
+              "mentions": 6,
+              "reviews_mentioning": 6
+            },
+            "music_performance": {
+              "avg_sentiment": 0.936,
+              "mentions": 9,
+              "reviews_mentioning": 5
+            },
+            "staff_service": {
+              "avg_sentiment": 0.73,
+              "mentions": 3,
+              "reviews_mentioning": 2
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.897,
+              "mentions": 7,
+              "reviews_mentioning": 4
+            }
+          },
+          "language_distribution": {
+            "en": 17
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 17
+          },
+          "year_distribution": {
+            "2019": 1,
+            "2017": 3,
+            "2016": 5,
+            "2015": 6,
+            "2014": 2
+          },
+          "positive_quotes": [
+            "An overview of a day in Mindelo as a cruise port We have been to Mindelo twice now, both as a one day port of call while on a cruise. We have had a pleasant time on both occasions, though if you are s",
+            "Well worth a visit The museum was well set out with local artefacts, and some fabulous fabric work ....a combination of hand made carpet, collage and embroidery with wool. Stunning and very clever. Th",
+            "Architectural Preciousness Located in the center of the city of Mindelo, at a distance of about 15 meters from the sea, with an excellent view of Mindelo Bay, one of the most beautiful in the world, s"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "educational_value",
+              {
+                "avg_sentiment": 0.938,
+                "mentions": 5,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.936,
+                "mentions": 9,
+                "reviews_mentioning": 5
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.915,
+                "mentions": 7,
+                "reviews_mentioning": 6
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "Senegal": {
+      "total_stakeholders": 7,
+      "total_reviews": 660,
+      "avg_sentiment": 0.391,
+      "avg_rating": 4.07,
+      "positive_rate": 68.3,
+      "theme_analysis": {
+        "cultural_heritage": {
+          "avg_sentiment": 0.336,
+          "total_mentions": 364,
+          "stakeholders_mentioning": 7
+        },
+        "art_creativity": {
+          "avg_sentiment": 0.546,
+          "total_mentions": 368,
+          "stakeholders_mentioning": 7
+        },
+        "atmosphere_experience": {
+          "avg_sentiment": 0.562,
+          "total_mentions": 243,
+          "stakeholders_mentioning": 7
+        },
+        "staff_service": {
+          "avg_sentiment": 0.654,
+          "total_mentions": 180,
+          "stakeholders_mentioning": 7
+        },
+        "value_pricing": {
+          "avg_sentiment": 0.526,
+          "total_mentions": 271,
+          "stakeholders_mentioning": 7
+        },
+        "educational_value": {
+          "avg_sentiment": 0.479,
+          "total_mentions": 370,
+          "stakeholders_mentioning": 6
+        },
+        "accessibility_location": {
+          "avg_sentiment": 0.52,
+          "total_mentions": 135,
+          "stakeholders_mentioning": 6
+        },
+        "music_performance": {
+          "avg_sentiment": 0.505,
+          "total_mentions": 64,
+          "stakeholders_mentioning": 6
+        },
+        "facilities_infrastructure": {
+          "avg_sentiment": 0.486,
+          "total_mentions": 76,
+          "stakeholders_mentioning": 5
+        }
+      },
+      "traveler_personas": {
+        "English-speaking (Global)": 660
+      },
+      "sector_distribution": {
+        "Crafts & Artisans": 4,
+        "Museums & Heritage": 3
+      },
+      "top_performers": [
+        {
+          "stakeholder_name": "Manufacture Sénégalaise des Arts Décoratifs (Thiès)",
+          "country": "Senegal",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 3,
+          "avg_sentiment": 0.893,
+          "avg_rating": 4.67,
+          "positive_rate": 100.0,
+          "sentiment_distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.86,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.893,
+              "mentions": 7,
+              "reviews_mentioning": 3
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.86,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "staff_service": {
+              "avg_sentiment": 0.879,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.879,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            }
+          },
+          "language_distribution": {
+            "en": 3
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 3
+          },
+          "year_distribution": {
+            "2020": 1,
+            "2019": 1,
+            "2018": 1
+          },
+          "positive_quotes": [
+            "A very welcoming place to stroll It&#39;s a true village of artisans. It&#39;s not just vendors or resellers like in other craft villages in the country. Here we see many real artisans, whether in lea",
+            "Friendly Living in Thiès for a few months, I often go to the arti village. Overall, the vendors are very pleasant. There are always a few exceptions who try to impose high prices. But generally, the v",
+            "An authentic place to buy handicrafts. I love it. Here, they make the things they sell, or at least almost all of them. You can watch the artisans working with leather, wood, fabric, or silver. You ha"
+          ],
+          "negative_quotes": [],
+          "top_themes": [
+            [
+              "art_creativity",
+              {
+                "avg_sentiment": 0.893,
+                "mentions": 7,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.879,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0.879,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Village des Arts de Dakar",
+          "country": "Senegal",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 107,
+          "avg_sentiment": 0.594,
+          "avg_rating": 4.07,
+          "positive_rate": 77.6,
+          "sentiment_distribution": {
+            "positive": 83,
+            "neutral": 12,
+            "negative": 12
+          },
+          "theme_analysis": {
+            "art_creativity": {
+              "avg_sentiment": 0.64,
+              "mentions": 210,
+              "reviews_mentioning": 91
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.786,
+              "mentions": 39,
+              "reviews_mentioning": 33
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.707,
+              "mentions": 41,
+              "reviews_mentioning": 34
+            },
+            "educational_value": {
+              "avg_sentiment": 0.536,
+              "mentions": 35,
+              "reviews_mentioning": 28
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.707,
+              "mentions": 7,
+              "reviews_mentioning": 7
+            },
+            "music_performance": {
+              "avg_sentiment": 0.674,
+              "mentions": 14,
+              "reviews_mentioning": 12
+            },
+            "staff_service": {
+              "avg_sentiment": 0.883,
+              "mentions": 11,
+              "reviews_mentioning": 10
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.703,
+              "mentions": 19,
+              "reviews_mentioning": 17
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.911,
+              "mentions": 4,
+              "reviews_mentioning": 4
+            }
+          },
+          "language_distribution": {
+            "en": 107
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 107
+          },
+          "year_distribution": {
+            "2024": 1,
+            "2023": 3,
+            "2019": 8,
+            "2018": 15,
+            "2017": 17,
+            "2016": 27,
+            "2015": 25,
+            "2014": 11
+          },
+          "positive_quotes": [
+            "Better Than The Markets A village of talented artists. Adjoined studios located in a village like setting. Authentic originals that is a cut above the mass marketed &quot;art&quot; in the local touris",
+            "One of the best places I&#39;ve ever been Despite not many of the studios being open this was one of the most amazing places I&#39;ve ever been. Super bohemian, off the beaten track and slightly run d",
+            "Nice visit, interesting artists in their studios I really enjoyed this visit to a place that had a lot of charm, excellent welcome from the artists present, very beautiful gallery with a quality exhib"
+          ],
+          "negative_quotes": [
+            "A bit of a sad mess! I heard about the Village des Arts in Dakar, France. I was looking forward to visiting it and meeting the artists who had exhibited in France. Alas! I ended up in a mess where a f",
+            "Most items too large for any traveller to contemplate buying We went as part of a tour group and it was so disappointing. Only about a third of the studios were open and most of the items were far too",
+            "too many sellers Too many aggressive sellers in this market, I will not go back, because it is a tourist trap. You don&#39;t have time to see anything, and already you have been given a lot of souveni"
+          ],
+          "top_themes": [
+            [
+              "facilities_infrastructure",
+              {
+                "avg_sentiment": 0.911,
+                "mentions": 4,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.883,
+                "mentions": 11,
+                "reviews_mentioning": 10
+              }
+            ],
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.786,
+                "mentions": 39,
+                "reviews_mentioning": 33
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Monument de la Renaissance Africaine",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 150,
+          "avg_sentiment": 0.59,
+          "avg_rating": 4.11,
+          "positive_rate": 81.3,
+          "sentiment_distribution": {
+            "positive": 122,
+            "neutral": 16,
+            "negative": 12
+          },
+          "theme_analysis": {
+            "educational_value": {
+              "avg_sentiment": 0.662,
+              "mentions": 57,
+              "reviews_mentioning": 37
+            },
+            "staff_service": {
+              "avg_sentiment": 0.775,
+              "mentions": 25,
+              "reviews_mentioning": 21
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.603,
+              "mentions": 65,
+              "reviews_mentioning": 54
+            },
+            "cultural_heritage": {
+              "avg_sentiment": 0.544,
+              "mentions": 13,
+              "reviews_mentioning": 11
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.626,
+              "mentions": 31,
+              "reviews_mentioning": 26
+            },
+            "music_performance": {
+              "avg_sentiment": 0.854,
+              "mentions": 3,
+              "reviews_mentioning": 3
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.673,
+              "mentions": 12,
+              "reviews_mentioning": 11
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.855,
+              "mentions": 50,
+              "reviews_mentioning": 45
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.61,
+              "mentions": 20,
+              "reviews_mentioning": 16
+            }
+          },
+          "language_distribution": {
+            "en": 150
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 150
+          },
+          "year_distribution": {
+            "2025": 9,
+            "2024": 8,
+            "2023": 26,
+            "2022": 16,
+            "2021": 9,
+            "2020": 28,
+            "2019": 54
+          },
+          "positive_quotes": [
+            "Awesome Tour Company in Dakar - Trip Tour Senegal Had a wonderful experience in Dakar with Mika and his team from Trip Tour Senegal. He provided services such as Airport pick up and drop off and Lac R",
+            "Great The magnificent view, efficient guide, good explanations, not too much waiting, good welcome, I would recommend this place to my loved ones.",
+            "Breathtaking amazing a sight to see  Breathtaking I loved this the monument. It’s so beautiful and wasn’t overall crowded for photo opportunities. Really enjoyed this during the day and at night "
+          ],
+          "negative_quotes": [
+            "To see, from afar! Don&#39;t waste time visiting the interior, it&#39;s of no interest. You have to go up to the foot of the building for the view if the pollution isn&#39;t too bad. Not worth the tri",
+            "Megalomania This gigantic bronze and copper monument doesn&#39;t seem to shock anyone in a country where, as soon as you leave the beaches and the &quot;all inclusive&quot; hotels, it&#39;s still not ",
+            "you can see it from everywhere Even if you don't go up the hill, you can see it from far away, due to its position and the fact that Dakar is almost everywhere flat.\n\nA must-see, not for its beauty, m"
+          ],
+          "top_themes": [
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.855,
+                "mentions": 50,
+                "reviews_mentioning": 45
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.854,
+                "mentions": 3,
+                "reviews_mentioning": 3
+              }
+            ],
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.775,
+                "mentions": 25,
+                "reviews_mentioning": 21
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Village artisanal de Soumbédioune",
+          "country": "Senegal",
+          "sector": "Crafts and artisan products",
+          "sector_category": "Crafts & Artisans",
+          "total_reviews": 13,
+          "avg_sentiment": 0.544,
+          "avg_rating": 4.0,
+          "positive_rate": 84.6,
+          "sentiment_distribution": {
+            "positive": 11,
+            "neutral": 1,
+            "negative": 1
+          },
+          "theme_analysis": {
+            "value_pricing": {
+              "avg_sentiment": 0.744,
+              "mentions": 8,
+              "reviews_mentioning": 8
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.691,
+              "mentions": 11,
+              "reviews_mentioning": 5
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.112,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.809,
+              "mentions": 5,
+              "reviews_mentioning": 4
+            },
+            "music_performance": {
+              "avg_sentiment": 0.719,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "staff_service": {
+              "avg_sentiment": 0.953,
+              "mentions": 2,
+              "reviews_mentioning": 2
+            },
+            "educational_value": {
+              "avg_sentiment": 0.735,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            },
+            "cultural_heritage": {
+              "avg_sentiment": -0.612,
+              "mentions": 1,
+              "reviews_mentioning": 1
+            }
+          },
+          "language_distribution": {
+            "en": 13
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 13
+          },
+          "year_distribution": {
+            "2025": 1,
+            "2023": 2,
+            "2022": 1,
+            "2020": 1,
+            "2019": 6,
+            "2018": 2
+          },
+          "positive_quotes": [
+            "Highly recommended  Having been to other markets in downtown Dakar, this one certainly has a special charm. It&#39;s located near the street fish market, where fishermen disembark on the beach. There ",
+            "Unmissable Soumbedioune If you like to bargain, this is the place to be. In short, you can divide the advertised prices by a factor of three. Arm yourself with patience. The Senegalese are friendly, s",
+            "Nice A number of vendors offering typical African items. \n\nHaggling is required and expected. \n\nPrices and selection is OK snd quite typical. \n\nAs good as any I suppose."
+          ],
+          "negative_quotes": [
+            "Aggressive vendors Take care; don't enter if you're all by yourself. The vendors can become quite aggressive if you refuse to take a look at their stuff. It was a horrible experience for me and I went"
+          ],
+          "top_themes": [
+            [
+              "staff_service",
+              {
+                "avg_sentiment": 0.953,
+                "mentions": 2,
+                "reviews_mentioning": 2
+              }
+            ],
+            [
+              "accessibility_location",
+              {
+                "avg_sentiment": 0.809,
+                "mentions": 5,
+                "reviews_mentioning": 4
+              }
+            ],
+            [
+              "value_pricing",
+              {
+                "avg_sentiment": 0.744,
+                "mentions": 8,
+                "reviews_mentioning": 8
+              }
+            ]
+          ]
+        },
+        {
+          "stakeholder_name": "Île de Gorée (Gorée Island)",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "sector_category": "Museums & Heritage",
+          "total_reviews": 150,
+          "avg_sentiment": 0.413,
+          "avg_rating": 4.23,
+          "positive_rate": 74.0,
+          "sentiment_distribution": {
+            "positive": 111,
+            "neutral": 5,
+            "negative": 34
+          },
+          "theme_analysis": {
+            "cultural_heritage": {
+              "avg_sentiment": 0.541,
+              "mentions": 177,
+              "reviews_mentioning": 105
+            },
+            "educational_value": {
+              "avg_sentiment": 0.468,
+              "mentions": 142,
+              "reviews_mentioning": 92
+            },
+            "atmosphere_experience": {
+              "avg_sentiment": 0.643,
+              "mentions": 78,
+              "reviews_mentioning": 62
+            },
+            "accessibility_location": {
+              "avg_sentiment": 0.399,
+              "mentions": 40,
+              "reviews_mentioning": 31
+            },
+            "staff_service": {
+              "avg_sentiment": 0.506,
+              "mentions": 73,
+              "reviews_mentioning": 64
+            },
+            "value_pricing": {
+              "avg_sentiment": 0.285,
+              "mentions": 67,
+              "reviews_mentioning": 51
+            },
+            "music_performance": {
+              "avg_sentiment": 0.513,
+              "mentions": 16,
+              "reviews_mentioning": 14
+            },
+            "art_creativity": {
+              "avg_sentiment": 0.391,
+              "mentions": 48,
+              "reviews_mentioning": 35
+            },
+            "facilities_infrastructure": {
+              "avg_sentiment": 0.423,
+              "mentions": 36,
+              "reviews_mentioning": 31
+            }
+          },
+          "language_distribution": {
+            "en": 150
+          },
+          "traveler_personas": {
+            "English-speaking (Global)": 150
+          },
+          "year_distribution": {
+            "2025": 29,
+            "2024": 25,
+            "2023": 42,
+            "2022": 33,
+            "2021": 6,
+            "2020": 15
+          },
+          "positive_quotes": [
+            "Worth going to Senegal just to visit Goree Island The ferry from Dakar is busy when traveling at peak times but it is easy to figure out, to queue and comfortable to wait for the next available ferry.",
+            "Ready for the island I didn&#39;t come as a day guest like most international tourists, but rented a room at CHEZ COUMBIS for three weeks. This gave me plenty of time and leisure to get to know the ca",
+            "Unforgettable experience It is advisable to get a guide to take you around and give you a commentary of the history of the island.  The salve building is a very humbling and emotional experience but w"
+          ],
+          "negative_quotes": [
+            "⚠️A disastrous and unacceptable experience I have never had such a disappointing and disorganized experience as my visit to Gorée Island. 1. Endless wait: We waited from 4 p.m. to 9 p.m. to get on the",
+            "A disgrace! A disgrace! Gorée Island, which is a UNESCO World Heritage Site, is an open-air dump. The buildings are squatted and in a pitiful state. I was deeply shocked and even contacted UNESCO with",
+            "A visit to forget.... Expenses: To go, you have to pay a fee and the boat ticket. Then, if you want to enter the only house you can visit, you have to pay again. You also have to pay for the tour guid"
+          ],
+          "top_themes": [
+            [
+              "atmosphere_experience",
+              {
+                "avg_sentiment": 0.643,
+                "mentions": 78,
+                "reviews_mentioning": 62
+              }
+            ],
+            [
+              "cultural_heritage",
+              {
+                "avg_sentiment": 0.541,
+                "mentions": 177,
+                "reviews_mentioning": 105
+              }
+            ],
+            [
+              "music_performance",
+              {
+                "avg_sentiment": 0.513,
+                "mentions": 16,
+                "reviews_mentioning": 14
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "generated_at": "2025-10-07T13:18:58.225232",
+    "total_countries": 6,
+    "total_stakeholders": 57,
+    "total_reviews": 4412
+  }
+}

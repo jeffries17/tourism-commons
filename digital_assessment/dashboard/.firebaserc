@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "tourism-development-d620c"
+  },
+  "targets": {
+    "tourism-development-d620c": {
+      "hosting": {
+        "dashboard": [
+          "tourism-development-d620c"
+        ]
+      }
+    }
+  }
+}
+

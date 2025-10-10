@@ -24,7 +24,7 @@ class ComprehensiveSentimentAnalyzer:
             'generated_at': datetime.now().isoformat()
         }
 
-    def analyze_stakeholder_comprehensive(self, reviews: List[Dict], stakeholder_name: str) -> Dict:
+    def analyze_stakeholder_comprehensive(self, reviews: List[Dict], stakeholder_name: str, source: str = 'unknown') -> Dict:
         """Perform comprehensive analysis for a single stakeholder"""
         print(f"🔍 Analyzing {stakeholder_name}...")
         
@@ -34,6 +34,7 @@ class ComprehensiveSentimentAnalyzer:
         # Extract key insights
         insights = {
             'stakeholder_name': stakeholder_name,
+            'source': source,  # 'gambia_creative', 'gambia_operators', 'regional'
             'total_reviews': dashboard_data['total_reviews'],
             'average_rating': dashboard_data['average_rating'],
             'overall_sentiment': dashboard_data['overall_sentiment'],
@@ -232,7 +233,7 @@ class ComprehensiveSentimentAnalyzer:
         print("=" * 60)
         
         # Find all English review files
-        pattern = "../data/raw_reviews/oct_2025/**/*_reviews_ENG.json"
+        pattern = "../data/sentiment_data/raw_reviews/oct_2025/**/*_reviews_ENG.json"
         files = glob.glob(pattern, recursive=True)
         
         if not files:
@@ -256,7 +257,15 @@ class ComprehensiveSentimentAnalyzer:
                     filename = os.path.basename(file_path)
                     stakeholder_name = filename.replace('_reviews_ENG.json', '').replace('_', ' ').title()
                 
-                insights = self.analyze_stakeholder_comprehensive(reviews, stakeholder_name)
+                # Determine source based on file path
+                if '/gambia/creative_industries/' in file_path:
+                    source = 'gambia_creative'
+                elif '/gambia/tour_operators/' in file_path:
+                    source = 'gambia_operators'
+                else:
+                    source = 'regional'
+                
+                insights = self.analyze_stakeholder_comprehensive(reviews, stakeholder_name, source)
                 all_stakeholder_data.append(insights)
                 
                 print(f"  ✅ {stakeholder_name}: {insights['total_reviews']} reviews, {insights['overall_sentiment']:.3f} sentiment")

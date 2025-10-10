@@ -1,0 +1,2153 @@
+{
+  "generated_at": "2025-10-06T18:41:53.184488",
+  "overview": {
+    "gambia": {
+      "entity_count": 62,
+      "avg_total": 13.52,
+      "avg_social_media": 3.11,
+      "avg_website": 2.68,
+      "avg_visual_content": 3.39,
+      "avg_discoverability": 2.74,
+      "avg_digital_sales": 0.35,
+      "avg_platform": 1.24
+    },
+    "regional": {
+      "entity_count": 199,
+      "avg_total": 20.85,
+      "avg_social_media": 5.33,
+      "avg_website": 5.62,
+      "avg_visual_content": 4.87,
+      "avg_discoverability": 1.6,
+      "avg_digital_sales": 2.12,
+      "avg_platform": 1.31
+    },
+    "gaps": {
+      "total": -7.33,
+      "social_media": -2.22,
+      "website": -2.94,
+      "visual_content": -1.48,
+      "discoverability": 1.14,
+      "digital_sales": -1.77,
+      "platform": -0.07
+    }
+  },
+  "country_rankings": [
+    {
+      "country": "Nigeria",
+      "avg_total": 25.88,
+      "entity_count": 40
+    },
+    {
+      "country": "Ghana",
+      "avg_total": 23.0,
+      "entity_count": 39
+    },
+    {
+      "country": "Senegal",
+      "avg_total": 20.95,
+      "entity_count": 40
+    },
+    {
+      "country": "Cape Verde",
+      "avg_total": 18.57,
+      "entity_count": 40
+    },
+    {
+      "country": "Benin",
+      "avg_total": 15.9,
+      "entity_count": 40
+    },
+    {
+      "country": "The Gambia",
+      "avg_total": 13.52,
+      "entity_count": 62
+    }
+  ],
+  "sector_comparison": [
+    {
+      "sector": "Music",
+      "gambia_avg": 0,
+      "gambia_count": 0,
+      "regional_avg": 19.17,
+      "regional_count": 24,
+      "gap": -19.17
+    },
+    {
+      "sector": "Crafts and artisan products",
+      "gambia_avg": 5.91,
+      "gambia_count": 11,
+      "regional_avg": 19.96,
+      "regional_count": 25,
+      "gap": -14.05
+    },
+    {
+      "sector": "Fashion & Design",
+      "gambia_avg": 14.38,
+      "gambia_count": 13,
+      "regional_avg": 24.44,
+      "regional_count": 25,
+      "gap": -10.06
+    },
+    {
+      "sector": "Cultural heritage sites/museums",
+      "gambia_avg": 11.0,
+      "gambia_count": 9,
+      "regional_avg": 20.04,
+      "regional_count": 25,
+      "gap": -9.04
+    },
+    {
+      "sector": "Festivals and cultural events",
+      "gambia_avg": 10.31,
+      "gambia_count": 13,
+      "regional_avg": 18.36,
+      "regional_count": 25,
+      "gap": -8.05
+    },
+    {
+      "sector": "Performing and visual arts",
+      "gambia_avg": 15.57,
+      "gambia_count": 7,
+      "regional_avg": 18.72,
+      "regional_count": 25,
+      "gap": -3.15
+    },
+    {
+      "sector": "Audiovisual",
+      "gambia_avg": 25.75,
+      "gambia_count": 8,
+      "regional_avg": 22.56,
+      "regional_count": 25,
+      "gap": 3.19
+    },
+    {
+      "sector": "Marketing/advertising/publishing",
+      "gambia_avg": 38.0,
+      "gambia_count": 1,
+      "regional_avg": 23.48,
+      "regional_count": 25,
+      "gap": 14.52
+    }
+  ],
+  "category_leaders": {
+    "social_media": {
+      "regional": [
+        {
+          "name": "Mavin Records (Lagos)",
+          "country": "Nigeria",
+          "sector": "Music (artists, production, venues, education)",
+          "score": 10.0,
+          "total_score": 32.0,
+          "website_url": "https://www.mavinrecords.com/",
+          "facebook_url": "https://www.facebook.com/MavinRecords/",
+          "instagram_url": "https://www.instagram.com/mavinrecords/?hl=en"
+        },
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 9.0,
+          "total_score": 39.0,
+          "website_url": "https://christiebrownonline.com/",
+          "facebook_url": "https://www.facebook.com/ChristieBrownGH/",
+          "instagram_url": "https://www.instagram.com/christiebrowngh/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "score": 9.0,
+          "total_score": 38.0,
+          "website_url": "https://www.fondation-zinsou.org/en",
+          "facebook_url": "https://www.facebook.com/fondationzinsou/",
+          "instagram_url": "https://www.instagram.com/fondation_zinsou/?hl=en"
+        },
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 9.0,
+          "total_score": 37.0,
+          "website_url": "https://muson.org/",
+          "facebook_url": "https://www.facebook.com/MUSONng/",
+          "instagram_url": "https://www.instagram.com/musonng/?hl=en"
+        },
+        {
+          "name": "Village des Arts de Dakar",
+          "country": "Senegal",
+          "sector": "Crafts and artisan products",
+          "score": 9.0,
+          "total_score": 35.0,
+          "website_url": "https://partcours.art/lieu/village-des-arts-de-dakar/",
+          "facebook_url": "https://www.facebook.com/villagedesartsdakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/villagedesartsdakar/?hl=en"
+        },
+        {
+          "name": "Burna Boy (artist)",
+          "country": "Nigeria",
+          "sector": "Music (artists, production, venues, education)",
+          "score": 9.0,
+          "total_score": 35.0,
+          "website_url": "https://www.onaspaceship.com/",
+          "facebook_url": "https://www.facebook.com/Officialburnaboy/",
+          "instagram_url": "https://www.instagram.com/burnaboygram/?hl=en"
+        },
+        {
+          "name": "Youssou N\u2019Dour / Jololi Music Group",
+          "country": "Senegal",
+          "sector": "Music (artists, production, venues, education)",
+          "score": 9.0,
+          "total_score": 33.0,
+          "website_url": "https://www.polarmusicprize.org/laureates/youssou-n-dour/",
+          "facebook_url": "https://www.facebook.com/youssoundourofficiel/",
+          "instagram_url": "https://www.instagram.com/youssoundour1959/?hl=en"
+        },
+        {
+          "name": "Lagos Fashion Week",
+          "country": "Nigeria",
+          "sector": "Fashion & Design",
+          "score": 9.0,
+          "total_score": 31.0,
+          "website_url": "https://lagosfashionweek.ng/",
+          "facebook_url": "https://www.facebook.com/lagosfashionweekofficial/",
+          "instagram_url": "https://www.instagram.com/lagosfashionweekofficial/?hl=en"
+        },
+        {
+          "name": "Fashion Focus Africa (Style House Files)",
+          "country": "Nigeria",
+          "sector": "Fashion & Design",
+          "score": 9.0,
+          "total_score": 31.0,
+          "website_url": "https://industrieafrica.com/pages/advisory-board",
+          "facebook_url": "https://www.facebook.com/industrieafrica/",
+          "instagram_url": "https://www.instagram.com/industrieafrica/"
+        },
+        {
+          "name": "Filmhouse Cinemas (Lekki IMAX, Lagos)",
+          "country": "Nigeria",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 9.0,
+          "total_score": 31.0,
+          "website_url": "https://filmhouseng.com/",
+          "facebook_url": "https://www.facebook.com/FilmhouseCinemas/",
+          "instagram_url": "https://www.instagram.com/filmhousecinemas"
+        }
+      ],
+      "gambia": [
+        {
+          "name": "My Gambia (online magazine)",
+          "country": "The Gambia",
+          "sector": "Marketing/advertising/publishing",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "QTV Gambia",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 9.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Paradise TV",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 9.0,
+          "total_score": 32.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "What\u2019s On \u2013 Gambia",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 9.0,
+          "total_score": 32.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Kerr Fatou",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 9.0,
+          "total_score": 31.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        }
+      ]
+    },
+    "website": {
+      "regional": [
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "sector": "Crafts and artisan products",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "https://nikeartfoundation.com/",
+          "facebook_url": "https://www.facebook.com/nikeartgallery/",
+          "instagram_url": "https://www.instagram.com/nikeartgallery/?hl=en"
+        },
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "score": 9.0,
+          "total_score": 39.0,
+          "website_url": "https://globalmamas.org/cultural-workshops/",
+          "facebook_url": "https://www.facebook.com/GlobalMamas",
+          "instagram_url": "https://www.instagram.com/Global_Mamas"
+        },
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 9.0,
+          "total_score": 39.0,
+          "website_url": "https://christiebrownonline.com/",
+          "facebook_url": "https://www.facebook.com/ChristieBrownGH/",
+          "instagram_url": "https://www.instagram.com/christiebrowngh/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "score": 9.0,
+          "total_score": 38.0,
+          "website_url": "https://www.fondation-zinsou.org/en",
+          "facebook_url": "https://www.facebook.com/fondationzinsou/",
+          "instagram_url": "https://www.instagram.com/fondation_zinsou/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e des Civilisations Noires",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 9.0,
+          "total_score": 37.0,
+          "website_url": "https://mcn-sn.com/",
+          "facebook_url": "https://www.facebook.com/mcndakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/mcndakar/?hl=en"
+        },
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 9.0,
+          "total_score": 37.0,
+          "website_url": "https://muson.org/",
+          "facebook_url": "https://www.facebook.com/MUSONng/",
+          "instagram_url": "https://www.instagram.com/musonng/?hl=en"
+        },
+        {
+          "name": "National Museum of Ghana (Accra)",
+          "country": "Ghana",
+          "sector": "Cultural heritage sites/museums",
+          "score": 9.0,
+          "total_score": 37.0,
+          "website_url": "https://gmmb.gov.gh/national-museum-of-ghana/",
+          "facebook_url": "https://www.facebook.com/officialghanamuseums/",
+          "instagram_url": "https://www.instagram.com/ghana_museums/"
+        },
+        {
+          "name": "Kwame Nkrumah Mausoleum & Memorial Park (Accra)",
+          "country": "Ghana",
+          "sector": "Cultural heritage sites/museums",
+          "score": 9.0,
+          "total_score": 37.0,
+          "website_url": "https://knmp.gov.gh/new/",
+          "facebook_url": "https://www.facebook.com/knmpgovgh",
+          "instagram_url": "https://www.instagram.com/knmpgovgh"
+        },
+        {
+          "name": "Mus\u00e9e Th\u00e9odore Monod (IFAN)",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 9.0,
+          "total_score": 36.0,
+          "website_url": "https://musee-monod.sn/",
+          "facebook_url": "https://www.facebook.com/MuseeTheodoreMonod/",
+          "instagram_url": "https://www.instagram.com/museeifan/?hl=en"
+        },
+        {
+          "name": "National Theatre, Lagos",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 9.0,
+          "total_score": 36.0,
+          "website_url": "https://nationaltheatre.gov.ng/",
+          "facebook_url": "https://www.facebook.com/nationaltheatrenigeria",
+          "instagram_url": "https://www.instagram.com/nationaltheatrenigeria/?hl=en"
+        }
+      ],
+      "gambia": [
+        {
+          "name": "QTV Gambia",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "My Gambia (online magazine)",
+          "country": "The Gambia",
+          "sector": "Marketing/advertising/publishing",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Paradise TV",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 10.0,
+          "total_score": 32.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Kerr Fatou",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 10.0,
+          "total_score": 31.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Sawallo Couture",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 9.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        }
+      ]
+    },
+    "visual_content": {
+      "regional": [
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "score": 10.0,
+          "total_score": 39.0,
+          "website_url": "https://globalmamas.org/cultural-workshops/",
+          "facebook_url": "https://www.facebook.com/GlobalMamas",
+          "instagram_url": "https://www.instagram.com/Global_Mamas"
+        },
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 39.0,
+          "website_url": "https://christiebrownonline.com/",
+          "facebook_url": "https://www.facebook.com/ChristieBrownGH/",
+          "instagram_url": "https://www.instagram.com/christiebrowngh/?hl=en"
+        },
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "sector": "Crafts and artisan products",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "https://nikeartfoundation.com/",
+          "facebook_url": "https://www.facebook.com/nikeartgallery/",
+          "instagram_url": "https://www.instagram.com/nikeartgallery/?hl=en"
+        },
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 10.0,
+          "total_score": 37.0,
+          "website_url": "https://muson.org/",
+          "facebook_url": "https://www.facebook.com/MUSONng/",
+          "instagram_url": "https://www.instagram.com/musonng/?hl=en"
+        },
+        {
+          "name": "RTC \u2013 Radiotelevis\u00e3o Caboverdiana",
+          "country": "Cape Verde",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 10.0,
+          "total_score": 35.0,
+          "website_url": "https://www.rtc.cv/",
+          "facebook_url": "https://www.facebook.com/rtc.caboverde/",
+          "instagram_url": "https://www.instagram.com/rtc.caboverde/?hl=en"
+        },
+        {
+          "name": "Youssou N\u2019Dour / Jololi Music Group",
+          "country": "Senegal",
+          "sector": "Music (artists, production, venues, education)",
+          "score": 10.0,
+          "total_score": 33.0,
+          "website_url": "https://www.polarmusicprize.org/laureates/youssou-n-dour/",
+          "facebook_url": "https://www.facebook.com/youssoundourofficiel/",
+          "instagram_url": "https://www.instagram.com/youssoundour1959/?hl=en"
+        },
+        {
+          "name": "Adama Paris (Adama Amanda Ndiaye)",
+          "country": "Senegal",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 33.0,
+          "website_url": "https://adamaparis.com/index.php/fr/",
+          "facebook_url": "https://www.facebook.com/profile.php?id=100044548294432#",
+          "instagram_url": "https://www.instagram.com/adamaparistudio/"
+        },
+        {
+          "name": "Selly Raby Kane",
+          "country": "Senegal",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 33.0,
+          "website_url": "https://nataal.com/selly-raby-kane",
+          "facebook_url": "https://www.facebook.com/sellyrabykane/",
+          "instagram_url": "https://www.instagram.com/sellyrabykane/?hl=en"
+        },
+        {
+          "name": "Orange Culture (label)",
+          "country": "Nigeria",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 33.0,
+          "website_url": "https://orangeculture.com.ng/",
+          "facebook_url": "https://www.facebook.com/orangeculturenig/",
+          "instagram_url": "https://www.instagram.com/orangecultureng/?hl=en"
+        },
+        {
+          "name": "Larry Jay (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 33.0,
+          "website_url": "https://larryjayghana.com/",
+          "facebook_url": "https://www.facebook.com/larryjayghana/",
+          "instagram_url": "https://www.instagram.com/larryjayghana/?hl=en"
+        }
+      ],
+      "gambia": [
+        {
+          "name": "QTV Gambia",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Sawallo Couture",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "My Gambia (online magazine)",
+          "country": "The Gambia",
+          "sector": "Marketing/advertising/publishing",
+          "score": 10.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Fashion Weekend Gambia",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 10.0,
+          "total_score": 36.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Paradise TV",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 10.0,
+          "total_score": 32.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        }
+      ]
+    },
+    "discoverability": {
+      "regional": [
+        {
+          "name": "Omenka Gallery (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 8.0,
+          "total_score": 31.0,
+          "website_url": "https://www.omenka.gallery/",
+          "facebook_url": "https://www.facebook.com/omenkagallery/",
+          "instagram_url": "https://www.instagram.com/omenkagallery/?hl=en"
+        },
+        {
+          "name": "Abuja Arts & Craft Village",
+          "country": "Nigeria",
+          "sector": "Crafts and artisan products",
+          "score": 7.0,
+          "total_score": 33.0,
+          "website_url": "",
+          "facebook_url": "https://www.facebook.com/pages/Abuja%20Arts%20&%20Crafts%20Village/1282578375203103/#",
+          "instagram_url": ""
+        },
+        {
+          "name": "The Guardian Nigeria",
+          "country": "Nigeria",
+          "sector": "Marketing/advertising/publishing",
+          "score": 7.0,
+          "total_score": 27.0,
+          "website_url": "https://guardian.ng/",
+          "facebook_url": "https://www.facebook.com/guardianng/",
+          "instagram_url": "https://www.instagram.com/guardiannigeria/"
+        },
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "score": 6.0,
+          "total_score": 39.0,
+          "website_url": "https://globalmamas.org/cultural-workshops/",
+          "facebook_url": "https://www.facebook.com/GlobalMamas",
+          "instagram_url": "https://www.instagram.com/Global_Mamas"
+        },
+        {
+          "name": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "score": 6.0,
+          "total_score": 38.0,
+          "website_url": "https://www.fondation-zinsou.org/en",
+          "facebook_url": "https://www.facebook.com/fondationzinsou/",
+          "instagram_url": "https://www.instagram.com/fondation_zinsou/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e des Civilisations Noires",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 6.0,
+          "total_score": 37.0,
+          "website_url": "https://mcn-sn.com/",
+          "facebook_url": "https://www.facebook.com/mcndakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/mcndakar/?hl=en"
+        },
+        {
+          "name": "National Museum of Ghana (Accra)",
+          "country": "Ghana",
+          "sector": "Cultural heritage sites/museums",
+          "score": 6.0,
+          "total_score": 37.0,
+          "website_url": "https://gmmb.gov.gh/national-museum-of-ghana/",
+          "facebook_url": "https://www.facebook.com/officialghanamuseums/",
+          "instagram_url": "https://www.instagram.com/ghana_museums/"
+        },
+        {
+          "name": "Kwame Nkrumah Mausoleum & Memorial Park (Accra)",
+          "country": "Ghana",
+          "sector": "Cultural heritage sites/museums",
+          "score": 6.0,
+          "total_score": 37.0,
+          "website_url": "https://knmp.gov.gh/new/",
+          "facebook_url": "https://www.facebook.com/knmpgovgh",
+          "instagram_url": "https://www.instagram.com/knmpgovgh"
+        },
+        {
+          "name": "Mus\u00e9e Th\u00e9odore Monod (IFAN)",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 6.0,
+          "total_score": 36.0,
+          "website_url": "https://musee-monod.sn/",
+          "facebook_url": "https://www.facebook.com/MuseeTheodoreMonod/",
+          "instagram_url": "https://www.instagram.com/museeifan/?hl=en"
+        },
+        {
+          "name": "National Theatre of Ghana (Accra)",
+          "country": "Ghana",
+          "sector": "Performing and visual arts",
+          "score": 6.0,
+          "total_score": 36.0,
+          "website_url": "https://www.nationaltheatre.gov.gh/",
+          "facebook_url": "https://www.facebook.com/nationaltheatregh/",
+          "instagram_url": "https://www.instagram.com/nationaltheatregh/?hl=en"
+        }
+      ],
+      "gambia": [
+        {
+          "name": "QTV Gambia",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 8.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Kachikally Crocodile Pool & Museum",
+          "country": "The Gambia",
+          "sector": "Cultural heritage sites/museums",
+          "score": 7.0,
+          "total_score": 11.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Fort Bullen & Barra Museum",
+          "country": "The Gambia",
+          "sector": "Cultural heritage sites/museums",
+          "score": 7.0,
+          "total_score": 9.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Serrekunda (Senegambia) Craft Market",
+          "country": "The Gambia",
+          "sector": "Crafts and artisan products",
+          "score": 6.0,
+          "total_score": 24.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Paradise FM",
+          "country": "The Gambia",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 6.0,
+          "total_score": 22.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        }
+      ]
+    },
+    "digital_sales": {
+      "regional": [
+        {
+          "name": "Orange Culture (label)",
+          "country": "Nigeria",
+          "sector": "Fashion & Design",
+          "score": 6.0,
+          "total_score": 33.0,
+          "website_url": "https://orangeculture.com.ng/",
+          "facebook_url": "https://www.facebook.com/orangeculturenig/",
+          "instagram_url": "https://www.instagram.com/orangecultureng/?hl=en"
+        },
+        {
+          "name": "Larry Jay (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 6.0,
+          "total_score": 33.0,
+          "website_url": "https://larryjayghana.com/",
+          "facebook_url": "https://www.facebook.com/larryjayghana/",
+          "instagram_url": "https://www.instagram.com/larryjayghana/?hl=en"
+        },
+        {
+          "name": "Studio 189 (Accra/NY)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 6.0,
+          "total_score": 33.0,
+          "website_url": "https://studiooneeightynine.com/",
+          "facebook_url": "https://www.facebook.com/studio189nyc/",
+          "instagram_url": "https://www.instagram.com/studiooneeightynine/?hl=en"
+        },
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "sector": "Fashion & Design",
+          "score": 5.0,
+          "total_score": 39.0,
+          "website_url": "https://christiebrownonline.com/",
+          "facebook_url": "https://www.facebook.com/ChristieBrownGH/",
+          "instagram_url": "https://www.instagram.com/christiebrowngh/?hl=en"
+        },
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "sector": "Crafts and artisan products",
+          "score": 5.0,
+          "total_score": 38.0,
+          "website_url": "https://nikeartfoundation.com/",
+          "facebook_url": "https://www.facebook.com/nikeartgallery/",
+          "instagram_url": "https://www.instagram.com/nikeartgallery/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e des Civilisations Noires",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 5.0,
+          "total_score": 37.0,
+          "website_url": "https://mcn-sn.com/",
+          "facebook_url": "https://www.facebook.com/mcndakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/mcndakar/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e Th\u00e9odore Monod (IFAN)",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 5.0,
+          "total_score": 36.0,
+          "website_url": "https://musee-monod.sn/",
+          "facebook_url": "https://www.facebook.com/MuseeTheodoreMonod/",
+          "instagram_url": "https://www.instagram.com/museeifan/?hl=en"
+        },
+        {
+          "name": "National Theatre, Lagos",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 5.0,
+          "total_score": 36.0,
+          "website_url": "https://nationaltheatre.gov.ng/",
+          "facebook_url": "https://www.facebook.com/nationaltheatrenigeria",
+          "instagram_url": "https://www.instagram.com/nationaltheatrenigeria/?hl=en"
+        },
+        {
+          "name": "RTC \u2013 Radiotelevis\u00e3o Caboverdiana",
+          "country": "Cape Verde",
+          "sector": "Audiovisual (film, photography, TV, videography)",
+          "score": 5.0,
+          "total_score": 35.0,
+          "website_url": "https://www.rtc.cv/",
+          "facebook_url": "https://www.facebook.com/rtc.caboverde/",
+          "instagram_url": "https://www.instagram.com/rtc.caboverde/?hl=en"
+        },
+        {
+          "name": "Burna Boy (artist)",
+          "country": "Nigeria",
+          "sector": "Music (artists, production, venues, education)",
+          "score": 5.0,
+          "total_score": 35.0,
+          "website_url": "https://www.onaspaceship.com/",
+          "facebook_url": "https://www.facebook.com/Officialburnaboy/",
+          "instagram_url": "https://www.instagram.com/burnaboygram/?hl=en"
+        }
+      ],
+      "gambia": [
+        {
+          "name": "Amsterdam\u2013Plymouth\u2013Banjul Rally",
+          "country": "The Gambia",
+          "sector": "Festivals and cultural events",
+          "score": 4.0,
+          "total_score": 28.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Sawallo Couture",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 3.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "National Centre for Arts and Culture (NCAC)",
+          "country": "The Gambia",
+          "sector": "Performing and visual arts",
+          "score": 3.0,
+          "total_score": 17.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Fashion Weekend Gambia",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 2.0,
+          "total_score": 36.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Visual Arts Association of The Gambia (VAAG)",
+          "country": "The Gambia",
+          "sector": "Performing and visual arts",
+          "score": 2.0,
+          "total_score": 18.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        }
+      ]
+    },
+    "platform_integration": {
+      "regional": [
+        {
+          "name": "National Theatre, Lagos",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 5.0,
+          "total_score": 36.0,
+          "website_url": "https://nationaltheatre.gov.ng/",
+          "facebook_url": "https://www.facebook.com/nationaltheatrenigeria",
+          "instagram_url": "https://www.instagram.com/nationaltheatrenigeria/?hl=en"
+        },
+        {
+          "name": "Abuja Arts & Craft Village",
+          "country": "Nigeria",
+          "sector": "Crafts and artisan products",
+          "score": 5.0,
+          "total_score": 33.0,
+          "website_url": "",
+          "facebook_url": "https://www.facebook.com/pages/Abuja%20Arts%20&%20Crafts%20Village/1282578375203103/#",
+          "instagram_url": ""
+        },
+        {
+          "name": "National Museum of Ghana (Accra)",
+          "country": "Ghana",
+          "sector": "Cultural heritage sites/museums",
+          "score": 4.0,
+          "total_score": 37.0,
+          "website_url": "https://gmmb.gov.gh/national-museum-of-ghana/",
+          "facebook_url": "https://www.facebook.com/officialghanamuseums/",
+          "instagram_url": "https://www.instagram.com/ghana_museums/"
+        },
+        {
+          "name": "Kwame Nkrumah Mausoleum & Memorial Park (Accra)",
+          "country": "Ghana",
+          "sector": "Cultural heritage sites/museums",
+          "score": 4.0,
+          "total_score": 37.0,
+          "website_url": "https://knmp.gov.gh/new/",
+          "facebook_url": "https://www.facebook.com/knmpgovgh",
+          "instagram_url": "https://www.instagram.com/knmpgovgh"
+        },
+        {
+          "name": "Museu da Tabanca (Ch\u00e3 de Tanque)",
+          "country": "Cape Verde",
+          "sector": "Cultural heritage sites/museums",
+          "score": 4.0,
+          "total_score": 31.0,
+          "website_url": "https://ipc.cv/museus/museu-da-tabanca/",
+          "facebook_url": "https://www.facebook.com/museudatabanca/",
+          "instagram_url": ""
+        },
+        {
+          "name": "Omenka Gallery (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 4.0,
+          "total_score": 31.0,
+          "website_url": "https://www.omenka.gallery/",
+          "facebook_url": "https://www.facebook.com/omenkagallery/",
+          "instagram_url": "https://www.instagram.com/omenkagallery/?hl=en"
+        },
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "sector": "Crafts and artisan products",
+          "score": 3.0,
+          "total_score": 39.0,
+          "website_url": "https://globalmamas.org/cultural-workshops/",
+          "facebook_url": "https://www.facebook.com/GlobalMamas",
+          "instagram_url": "https://www.instagram.com/Global_Mamas"
+        },
+        {
+          "name": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "sector": "Cultural heritage sites/museums",
+          "score": 3.0,
+          "total_score": 38.0,
+          "website_url": "https://www.fondation-zinsou.org/en",
+          "facebook_url": "https://www.facebook.com/fondationzinsou/",
+          "instagram_url": "https://www.instagram.com/fondation_zinsou/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e des Civilisations Noires",
+          "country": "Senegal",
+          "sector": "Cultural heritage sites/museums",
+          "score": 3.0,
+          "total_score": 37.0,
+          "website_url": "https://mcn-sn.com/",
+          "facebook_url": "https://www.facebook.com/mcndakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/mcndakar/?hl=en"
+        },
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "sector": "Performing and visual arts",
+          "score": 3.0,
+          "total_score": 37.0,
+          "website_url": "https://muson.org/",
+          "facebook_url": "https://www.facebook.com/MUSONng/",
+          "instagram_url": "https://www.instagram.com/musonng/?hl=en"
+        }
+      ],
+      "gambia": [
+        {
+          "name": "Fashion Weekend Gambia",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 5.0,
+          "total_score": 36.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Ninki Nanka Trail",
+          "country": "The Gambia",
+          "sector": "Cultural heritage sites/museums",
+          "score": 5.0,
+          "total_score": 29.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Sawallo Couture",
+          "country": "The Gambia",
+          "sector": "Fashion & Design",
+          "score": 4.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "My Gambia (online magazine)",
+          "country": "The Gambia",
+          "sector": "Marketing/advertising/publishing",
+          "score": 4.0,
+          "total_score": 38.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        },
+        {
+          "name": "Janjanbureh Kankurang Festival",
+          "country": "The Gambia",
+          "sector": "Festivals and cultural events",
+          "score": 3.0,
+          "total_score": 32.0,
+          "website_url": "",
+          "facebook_url": "",
+          "instagram_url": ""
+        }
+      ]
+    }
+  },
+  "opportunities_matrix": [
+    {
+      "category": "Social Media",
+      "gambia_score": 3.11,
+      "regional_score": 5.33,
+      "gap": -2.22,
+      "quadrant": "Critical Gap",
+      "color": "#ef4444"
+    },
+    {
+      "category": "Website",
+      "gambia_score": 2.68,
+      "regional_score": 5.62,
+      "gap": -2.94,
+      "quadrant": "Critical Gap",
+      "color": "#ef4444"
+    },
+    {
+      "category": "Visual Content",
+      "gambia_score": 3.39,
+      "regional_score": 4.87,
+      "gap": -1.48,
+      "quadrant": "Development Opportunity",
+      "color": "#f59e0b"
+    },
+    {
+      "category": "Discoverability",
+      "gambia_score": 2.74,
+      "regional_score": 1.6,
+      "gap": 1.14,
+      "quadrant": "Development Opportunity",
+      "color": "#f59e0b"
+    },
+    {
+      "category": "Digital Sales",
+      "gambia_score": 0.35,
+      "regional_score": 2.12,
+      "gap": -1.77,
+      "quadrant": "Development Opportunity",
+      "color": "#f59e0b"
+    },
+    {
+      "category": "Platform Integration",
+      "gambia_score": 1.24,
+      "regional_score": 1.31,
+      "gap": -0.07,
+      "quadrant": "Development Opportunity",
+      "color": "#f59e0b"
+    }
+  ],
+  "success_factors": {
+    "social_media": {
+      "social_media": 1.0,
+      "website": 0.54,
+      "visual_content": 0.66,
+      "discoverability": 0.15,
+      "digital_sales": 0.49,
+      "platform_integration": 0.39
+    },
+    "website": {
+      "social_media": 0.54,
+      "website": 1.0,
+      "visual_content": 0.64,
+      "discoverability": 0.26,
+      "digital_sales": 0.82,
+      "platform_integration": 0.51
+    },
+    "visual_content": {
+      "social_media": 0.66,
+      "website": 0.64,
+      "visual_content": 1.0,
+      "discoverability": 0.03,
+      "digital_sales": 0.62,
+      "platform_integration": 0.27
+    },
+    "discoverability": {
+      "social_media": 0.15,
+      "website": 0.26,
+      "visual_content": 0.03,
+      "discoverability": 1.0,
+      "digital_sales": 0.3,
+      "platform_integration": 0.79
+    },
+    "digital_sales": {
+      "social_media": 0.49,
+      "website": 0.82,
+      "visual_content": 0.62,
+      "discoverability": 0.3,
+      "digital_sales": 1.0,
+      "platform_integration": 0.53
+    },
+    "platform_integration": {
+      "social_media": 0.39,
+      "website": 0.51,
+      "visual_content": 0.27,
+      "discoverability": 0.79,
+      "digital_sales": 0.53,
+      "platform_integration": 1.0
+    }
+  },
+  "best_practices": [
+    {
+      "category": "Social Media",
+      "entity_name": "Mavin Records (Lagos)",
+      "country": "Nigeria",
+      "sector": "Music (artists, production, venues, education)",
+      "category_score": 10.0,
+      "total_score": 32.0,
+      "strengths": [
+        "Social Media",
+        "Website"
+      ],
+      "website_url": "https://www.mavinrecords.com/",
+      "facebook_url": "https://www.facebook.com/MavinRecords/",
+      "instagram_url": "https://www.instagram.com/mavinrecords/?hl=en"
+    },
+    {
+      "category": "Website",
+      "entity_name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+      "country": "Nigeria",
+      "sector": "Crafts and artisan products",
+      "category_score": 10.0,
+      "total_score": 38.0,
+      "strengths": [
+        "Website",
+        "Visual Content"
+      ],
+      "website_url": "https://nikeartfoundation.com/",
+      "facebook_url": "https://www.facebook.com/nikeartgallery/",
+      "instagram_url": "https://www.instagram.com/nikeartgallery/?hl=en"
+    },
+    {
+      "category": "Visual Content",
+      "entity_name": "Global Mamas (Krobo beads & batik)",
+      "country": "Ghana",
+      "sector": "Crafts and artisan products",
+      "category_score": 10.0,
+      "total_score": 39.0,
+      "strengths": [
+        "Website",
+        "Visual Content"
+      ],
+      "website_url": "https://globalmamas.org/cultural-workshops/",
+      "facebook_url": "https://www.facebook.com/GlobalMamas",
+      "instagram_url": "https://www.instagram.com/Global_Mamas"
+    },
+    {
+      "category": "Discoverability",
+      "entity_name": "Omenka Gallery (Lagos)",
+      "country": "Nigeria",
+      "sector": "Performing and visual arts",
+      "category_score": 8.0,
+      "total_score": 31.0,
+      "strengths": [
+        "Discoverability"
+      ],
+      "website_url": "https://www.omenka.gallery/",
+      "facebook_url": "https://www.facebook.com/omenkagallery/",
+      "instagram_url": "https://www.instagram.com/omenkagallery/?hl=en"
+    },
+    {
+      "category": "Digital Sales",
+      "entity_name": "Orange Culture (label)",
+      "country": "Nigeria",
+      "sector": "Fashion & Design",
+      "category_score": 6.0,
+      "total_score": 33.0,
+      "strengths": [
+        "Website",
+        "Visual Content"
+      ],
+      "website_url": "https://orangeculture.com.ng/",
+      "facebook_url": "https://www.facebook.com/orangeculturenig/",
+      "instagram_url": "https://www.instagram.com/orangecultureng/?hl=en"
+    },
+    {
+      "category": "Platform Integration",
+      "entity_name": "National Theatre, Lagos",
+      "country": "Nigeria",
+      "sector": "Performing and visual arts",
+      "category_score": 5.0,
+      "total_score": 36.0,
+      "strengths": [
+        "Website"
+      ],
+      "website_url": "https://nationaltheatre.gov.ng/",
+      "facebook_url": "https://www.facebook.com/nationaltheatrenigeria",
+      "instagram_url": "https://www.instagram.com/nationaltheatrenigeria/?hl=en"
+    }
+  ],
+  "sector_country_matrix": {
+    "Crafts and artisan products": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 27.0,
+        "top_entity": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+        "top_score": 38.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 23.2,
+        "top_entity": "Global Mamas (Krobo beads & batik)",
+        "top_score": 39.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 18.8,
+        "top_entity": "Village des Arts de Dakar",
+        "top_score": 35.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 19.4,
+        "top_entity": "Art D\u2019Cretcheu (Mindelo)",
+        "top_score": 32.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 11.4,
+        "top_entity": "CMA-B\u00e9nin \u2013 Chambre des M\u00e9tiers et de l\u2019Artisanat",
+        "top_score": 30.0
+      },
+      "The Gambia": {
+        "count": 11,
+        "avg_score": 5.9,
+        "top_entity": "Serrekunda (Senegambia) Craft Market",
+        "top_score": 24.0
+      }
+    },
+    "Audiovisual": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 29.2,
+        "top_entity": "AFRIFF \u2013 Africa Int\u2019l Film Festival (Lagos)",
+        "top_score": 31.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 27.6,
+        "top_entity": "Ghana Broadcasting Corporation (GBC)",
+        "top_score": 32.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 14.2,
+        "top_entity": "RTS \u2013 Radio T\u00e9l\u00e9vision S\u00e9n\u00e9galaise",
+        "top_score": 26.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 25.8,
+        "top_entity": "RTC \u2013 Radiotelevis\u00e3o Caboverdiana",
+        "top_score": 35.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 16.0,
+        "top_entity": "Canal 3 B\u00e9nin",
+        "top_score": 29.0
+      },
+      "The Gambia": {
+        "count": 8,
+        "avg_score": 25.8,
+        "top_entity": "QTV Gambia",
+        "top_score": 38.0
+      }
+    },
+    "Performing and visual arts": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 32.6,
+        "top_entity": "MUSON Centre (Lagos)",
+        "top_score": 37.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 17.6,
+        "top_entity": "National Theatre of Ghana (Accra)",
+        "top_score": 36.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 19.2,
+        "top_entity": "Galerie Selebe Yoon",
+        "top_score": 29.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 7.2,
+        "top_entity": "Centro Cultural do Mindelo",
+        "top_score": 14.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 17.0,
+        "top_entity": "Espace Culturel Le Centre (Abomey-Calavi)",
+        "top_score": 32.0
+      },
+      "The Gambia": {
+        "count": 7,
+        "avg_score": 15.6,
+        "top_entity": "Flex Fuzion Entertainment & Dance Academy",
+        "top_score": 24.0
+      }
+    },
+    "Music": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 28.0,
+        "top_entity": "Burna Boy (artist)",
+        "top_score": 35.0
+      },
+      "Ghana": {
+        "count": 4,
+        "avg_score": 15.8,
+        "top_entity": "School of Performing Arts, Univ. of Ghana (Legon)",
+        "top_score": 33.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 23.6,
+        "top_entity": "Youssou N\u2019Dour / Jololi Music Group",
+        "top_score": 33.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 14.8,
+        "top_entity": "M_EIA \u2013 Instituto Universit\u00e1rio de Arte, Tecnologia e Cultura (Mindelo)",
+        "top_score": 25.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 13.0,
+        "top_entity": "Ang\u00e9lique Kidjo",
+        "top_score": 29.0
+      },
+      "The Gambia": {
+        "count": 0,
+        "avg_score": 0,
+        "top_entity": null,
+        "top_score": 0
+      }
+    },
+    "Marketing/advertising/publishing": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 27.0,
+        "top_entity": "BellaNaija (digital magazine)",
+        "top_score": 28.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 23.2,
+        "top_entity": "Modern Ghana",
+        "top_score": 30.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 22.4,
+        "top_entity": "Jeune Afrique (magazine)",
+        "top_score": 29.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 26.4,
+        "top_entity": "Expresso das Ilhas (weekly newspaper)",
+        "top_score": 31.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 18.4,
+        "top_entity": "La Nouvelle Tribune (Cotonou)",
+        "top_score": 28.0
+      },
+      "The Gambia": {
+        "count": 1,
+        "avg_score": 38.0,
+        "top_entity": "My Gambia (online magazine)",
+        "top_score": 38.0
+      }
+    },
+    "Fashion & Design": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 26.8,
+        "top_entity": "Orange Culture (label)",
+        "top_score": 33.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 33.6,
+        "top_entity": "Christie Brown (Accra)",
+        "top_score": 39.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 29.0,
+        "top_entity": "Adama Paris (Adama Amanda Ndiaye)",
+        "top_score": 33.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 16.6,
+        "top_entity": "CNAD \u2013 Centro Nacional de Arte, Artesanato e Design",
+        "top_score": 27.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 16.2,
+        "top_entity": "Woodin Benin",
+        "top_score": 28.0
+      },
+      "The Gambia": {
+        "count": 13,
+        "avg_score": 14.4,
+        "top_entity": "Sawallo Couture",
+        "top_score": 38.0
+      }
+    },
+    "Cultural heritage sites/museums": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 21.2,
+        "top_entity": "National Commission for Museums & Monuments (NCMM)",
+        "top_score": 26.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 22.0,
+        "top_entity": "National Museum of Ghana (Accra)",
+        "top_score": 37.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 26.8,
+        "top_entity": "Mus\u00e9e des Civilisations Noires",
+        "top_score": 37.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 19.4,
+        "top_entity": "Museu da Tabanca (Ch\u00e3 de Tanque)",
+        "top_score": 31.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 10.8,
+        "top_entity": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+        "top_score": 38.0
+      },
+      "The Gambia": {
+        "count": 9,
+        "avg_score": 11.0,
+        "top_entity": "Ninki Nanka Trail",
+        "top_score": 29.0
+      }
+    },
+    "Festivals and cultural events": {
+      "Nigeria": {
+        "count": 5,
+        "avg_score": 15.2,
+        "top_entity": "Felabration (Lagos)",
+        "top_score": 31.0
+      },
+      "Ghana": {
+        "count": 5,
+        "avg_score": 19.6,
+        "top_entity": "AfroFuture (formerly Afrochella) (Accra)",
+        "top_score": 33.0
+      },
+      "Senegal": {
+        "count": 5,
+        "avg_score": 13.6,
+        "top_entity": "Festival international de Jazz de Saint-Louis",
+        "top_score": 29.0
+      },
+      "Cape Verde": {
+        "count": 5,
+        "avg_score": 19.0,
+        "top_entity": "Atlantic Music Expo (Praia)",
+        "top_score": 26.0
+      },
+      "Benin": {
+        "count": 5,
+        "avg_score": 24.4,
+        "top_entity": "Vodun Days Festival (Ouidah)",
+        "top_score": 32.0
+      },
+      "The Gambia": {
+        "count": 13,
+        "avg_score": 10.3,
+        "top_entity": "Janjanbureh Kankurang Festival",
+        "top_score": 32.0
+      }
+    }
+  },
+  "sector_analysis": [
+    {
+      "sector": "Music",
+      "regional_avg": 19.2,
+      "gambia_avg": null,
+      "gap": null,
+      "gambia_rank": null,
+      "gambia_count": 0,
+      "regional_count": 24,
+      "top_3": [
+        {
+          "name": "Burna Boy (artist)",
+          "country": "Nigeria",
+          "score": 35.0,
+          "website_url": "https://www.onaspaceship.com/",
+          "facebook_url": "https://www.facebook.com/Officialburnaboy/",
+          "instagram_url": "https://www.instagram.com/burnaboygram/?hl=en"
+        },
+        {
+          "name": "Youssou N\u2019Dour / Jololi Music Group",
+          "country": "Senegal",
+          "score": 33.0,
+          "website_url": "https://www.polarmusicprize.org/laureates/youssou-n-dour/",
+          "facebook_url": "https://www.facebook.com/youssoundourofficiel/",
+          "instagram_url": "https://www.instagram.com/youssoundour1959/?hl=en"
+        },
+        {
+          "name": "School of Performing Arts, Univ. of Ghana (Legon)",
+          "country": "Ghana",
+          "score": 33.0,
+          "website_url": "https://spa.ug.edu.gh/",
+          "facebook_url": "https://www.facebook.com/spartsug/",
+          "instagram_url": "https://www.instagram.com/ug_school_of_performing_arts/?hl=en"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 7.9,
+        "avg_website": 8.5,
+        "avg_visual_content": 8.6
+      }
+    },
+    {
+      "sector": "Crafts and artisan products",
+      "regional_avg": 20.0,
+      "gambia_avg": 5.9,
+      "gap": -14.1,
+      "gambia_rank": 22,
+      "gambia_count": 11,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "score": 39.0,
+          "website_url": "https://globalmamas.org/cultural-workshops/",
+          "facebook_url": "https://www.facebook.com/GlobalMamas",
+          "instagram_url": "https://www.instagram.com/Global_Mamas"
+        },
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "score": 38.0,
+          "website_url": "https://nikeartfoundation.com/",
+          "facebook_url": "https://www.facebook.com/nikeartgallery/",
+          "instagram_url": "https://www.instagram.com/nikeartgallery/?hl=en"
+        },
+        {
+          "name": "Village des Arts de Dakar",
+          "country": "Senegal",
+          "score": 35.0,
+          "website_url": "https://partcours.art/lieu/village-des-arts-de-dakar/",
+          "facebook_url": "https://www.facebook.com/villagedesartsdakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/villagedesartsdakar/?hl=en"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 6.9,
+        "avg_website": 8.2,
+        "avg_visual_content": 7.5
+      }
+    },
+    {
+      "sector": "Fashion & Design",
+      "regional_avg": 24.4,
+      "gambia_avg": 14.4,
+      "gap": -10.1,
+      "gambia_rank": 20,
+      "gambia_count": 13,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "score": 39.0,
+          "website_url": "https://christiebrownonline.com/",
+          "facebook_url": "https://www.facebook.com/ChristieBrownGH/",
+          "instagram_url": "https://www.instagram.com/christiebrowngh/?hl=en"
+        },
+        {
+          "name": "Adama Paris (Adama Amanda Ndiaye)",
+          "country": "Senegal",
+          "score": 33.0,
+          "website_url": "https://adamaparis.com/index.php/fr/",
+          "facebook_url": "https://www.facebook.com/profile.php?id=100044548294432#",
+          "instagram_url": "https://www.instagram.com/adamaparistudio/"
+        },
+        {
+          "name": "Selly Raby Kane",
+          "country": "Senegal",
+          "score": 33.0,
+          "website_url": "https://nataal.com/selly-raby-kane",
+          "facebook_url": "https://www.facebook.com/sellyrabykane/",
+          "instagram_url": "https://www.instagram.com/sellyrabykane/?hl=en"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 7.1,
+        "avg_website": 8.9,
+        "avg_visual_content": 9.6
+      }
+    },
+    {
+      "sector": "Cultural heritage sites/museums",
+      "regional_avg": 20.0,
+      "gambia_avg": 11.0,
+      "gap": -9.0,
+      "gambia_rank": 18,
+      "gambia_count": 9,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "score": 38.0,
+          "website_url": "https://www.fondation-zinsou.org/en",
+          "facebook_url": "https://www.facebook.com/fondationzinsou/",
+          "instagram_url": "https://www.instagram.com/fondation_zinsou/?hl=en"
+        },
+        {
+          "name": "Mus\u00e9e des Civilisations Noires",
+          "country": "Senegal",
+          "score": 37.0,
+          "website_url": "https://mcn-sn.com/",
+          "facebook_url": "https://www.facebook.com/mcndakar/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/mcndakar/?hl=en"
+        },
+        {
+          "name": "National Museum of Ghana (Accra)",
+          "country": "Ghana",
+          "score": 37.0,
+          "website_url": "https://gmmb.gov.gh/national-museum-of-ghana/",
+          "facebook_url": "https://www.facebook.com/officialghanamuseums/",
+          "instagram_url": "https://www.instagram.com/ghana_museums/"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 6.4,
+        "avg_website": 9.0,
+        "avg_visual_content": 5.4
+      }
+    },
+    {
+      "sector": "Festivals and cultural events",
+      "regional_avg": 18.4,
+      "gambia_avg": 10.3,
+      "gap": -8.1,
+      "gambia_rank": 18,
+      "gambia_count": 13,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "AfroFuture (formerly Afrochella) (Accra)",
+          "country": "Ghana",
+          "score": 33.0,
+          "website_url": "https://www.afrofuture.com/",
+          "facebook_url": "https://www.facebook.com/AfroFutureFestival",
+          "instagram_url": "https://www.instagram.com/afrofuture"
+        },
+        {
+          "name": "Vodun Days Festival (Ouidah)",
+          "country": "Benin",
+          "score": 32.0,
+          "website_url": "https://en.wikipedia.org/wiki/F%C3%AAte_du_Vodoun",
+          "facebook_url": "https://www.facebook.com/vodundays/",
+          "instagram_url": "https://www.instagram.com/vodundays/?hl=en"
+        },
+        {
+          "name": "Felabration (Lagos)",
+          "country": "Nigeria",
+          "score": 31.0,
+          "website_url": "https://www.felabration.net/",
+          "facebook_url": "https://www.facebook.com/FelabrationNG",
+          "instagram_url": "https://www.instagram.com/felabrationng/"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 6.6,
+        "avg_website": 9.0,
+        "avg_visual_content": 7.6
+      }
+    },
+    {
+      "sector": "Performing and visual arts",
+      "regional_avg": 18.7,
+      "gambia_avg": 15.6,
+      "gap": -3.1,
+      "gambia_rank": 14,
+      "gambia_count": 7,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "score": 37.0,
+          "website_url": "https://muson.org/",
+          "facebook_url": "https://www.facebook.com/MUSONng/",
+          "instagram_url": "https://www.instagram.com/musonng/?hl=en"
+        },
+        {
+          "name": "National Theatre, Lagos",
+          "country": "Nigeria",
+          "score": 36.0,
+          "website_url": "https://nationaltheatre.gov.ng/",
+          "facebook_url": "https://www.facebook.com/nationaltheatrenigeria",
+          "instagram_url": "https://www.instagram.com/nationaltheatrenigeria/?hl=en"
+        },
+        {
+          "name": "National Theatre of Ghana (Accra)",
+          "country": "Ghana",
+          "score": 36.0,
+          "website_url": "https://www.nationaltheatre.gov.gh/",
+          "facebook_url": "https://www.facebook.com/nationaltheatregh/",
+          "instagram_url": "https://www.instagram.com/nationaltheatregh/?hl=en"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 7.0,
+        "avg_website": 8.6,
+        "avg_visual_content": 6.4
+      }
+    },
+    {
+      "sector": "Audiovisual",
+      "regional_avg": 22.6,
+      "gambia_avg": 25.8,
+      "gap": 3.2,
+      "gambia_rank": 16,
+      "gambia_count": 8,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "RTC \u2013 Radiotelevis\u00e3o Caboverdiana",
+          "country": "Cape Verde",
+          "score": 35.0,
+          "website_url": "https://www.rtc.cv/",
+          "facebook_url": "https://www.facebook.com/rtc.caboverde/",
+          "instagram_url": "https://www.instagram.com/rtc.caboverde/?hl=en"
+        },
+        {
+          "name": "RCV \u2013 R\u00e1dio de Cabo Verde",
+          "country": "Cape Verde",
+          "score": 32.0,
+          "website_url": "https://www.rtc.cv/rcv/direto",
+          "facebook_url": "https://www.facebook.com/rtc.caboverde/",
+          "instagram_url": "https://www.instagram.com/rtc.caboverde/"
+        },
+        {
+          "name": "Ghana Broadcasting Corporation (GBC)",
+          "country": "Ghana",
+          "score": 32.0,
+          "website_url": "https://www.gbcghanaonline.com/",
+          "facebook_url": "https://www.facebook.com/gbcghana/",
+          "instagram_url": "https://www.instagram.com/gbconline/?hl=en"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 7.8,
+        "avg_website": 9.0,
+        "avg_visual_content": 8.2
+      }
+    },
+    {
+      "sector": "Marketing/advertising/publishing",
+      "regional_avg": 23.5,
+      "gambia_avg": 38.0,
+      "gap": 14.5,
+      "gambia_rank": 1,
+      "gambia_count": 1,
+      "regional_count": 25,
+      "top_3": [
+        {
+          "name": "Expresso das Ilhas (weekly newspaper)",
+          "country": "Cape Verde",
+          "score": 31.0,
+          "website_url": "https://expressodasilhas.cv/",
+          "facebook_url": "https://www.facebook.com/expressodasilhas/",
+          "instagram_url": "https://www.instagram.com/expressodasilhascv/?hl=en"
+        },
+        {
+          "name": "Modern Ghana",
+          "country": "Ghana",
+          "score": 30.0,
+          "website_url": "https://www.modernghana.com/",
+          "facebook_url": "https://www.facebook.com/modernghanaweb/",
+          "instagram_url": "https://www.instagram.com/modernghana/?hl=en"
+        },
+        {
+          "name": "Jeune Afrique (magazine)",
+          "country": "Senegal",
+          "score": 29.0,
+          "website_url": "https://www.jeuneafrique.com/",
+          "facebook_url": "https://www.facebook.com/jeuneafrique1/?locale=fr_FR",
+          "instagram_url": "https://www.instagram.com/jeuneafrique/"
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 7.6,
+        "avg_website": 8.8,
+        "avg_visual_content": 6.9
+      }
+    }
+  ],
+  "top_performers": {
+    "regional": [
+      {
+        "name": "Global Mamas (Krobo beads & batik)",
+        "country": "Ghana",
+        "sector": "Crafts and artisan products",
+        "total_score": 39.0,
+        "social_media": 7.0,
+        "website": 9.0,
+        "visual_content": 10.0,
+        "website_url": "https://globalmamas.org/cultural-workshops/",
+        "facebook_url": "https://www.facebook.com/GlobalMamas",
+        "instagram_url": "https://www.instagram.com/Global_Mamas"
+      },
+      {
+        "name": "Christie Brown (Accra)",
+        "country": "Ghana",
+        "sector": "Fashion & Design",
+        "total_score": 39.0,
+        "social_media": 9.0,
+        "website": 9.0,
+        "visual_content": 10.0,
+        "website_url": "https://christiebrownonline.com/",
+        "facebook_url": "https://www.facebook.com/ChristieBrownGH/",
+        "instagram_url": "https://www.instagram.com/christiebrowngh/?hl=en"
+      },
+      {
+        "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+        "country": "Nigeria",
+        "sector": "Crafts and artisan products",
+        "total_score": 38.0,
+        "social_media": 7.0,
+        "website": 10.0,
+        "visual_content": 10.0,
+        "website_url": "https://nikeartfoundation.com/",
+        "facebook_url": "https://www.facebook.com/nikeartgallery/",
+        "instagram_url": "https://www.instagram.com/nikeartgallery/?hl=en"
+      },
+      {
+        "name": "Mus\u00e9e de la Fondation Zinsou (Ouidah)",
+        "country": "Benin",
+        "sector": "Cultural heritage sites/museums",
+        "total_score": 38.0,
+        "social_media": 9.0,
+        "website": 9.0,
+        "visual_content": 9.0,
+        "website_url": "https://www.fondation-zinsou.org/en",
+        "facebook_url": "https://www.facebook.com/fondationzinsou/",
+        "instagram_url": "https://www.instagram.com/fondation_zinsou/?hl=en"
+      },
+      {
+        "name": "Mus\u00e9e des Civilisations Noires",
+        "country": "Senegal",
+        "sector": "Cultural heritage sites/museums",
+        "total_score": 37.0,
+        "social_media": 7.0,
+        "website": 9.0,
+        "visual_content": 7.0,
+        "website_url": "https://mcn-sn.com/",
+        "facebook_url": "https://www.facebook.com/mcndakar/?locale=fr_FR",
+        "instagram_url": "https://www.instagram.com/mcndakar/?hl=en"
+      },
+      {
+        "name": "MUSON Centre (Lagos)",
+        "country": "Nigeria",
+        "sector": "Performing and visual arts",
+        "total_score": 37.0,
+        "social_media": 9.0,
+        "website": 9.0,
+        "visual_content": 10.0,
+        "website_url": "https://muson.org/",
+        "facebook_url": "https://www.facebook.com/MUSONng/",
+        "instagram_url": "https://www.instagram.com/musonng/?hl=en"
+      },
+      {
+        "name": "National Museum of Ghana (Accra)",
+        "country": "Ghana",
+        "sector": "Cultural heritage sites/museums",
+        "total_score": 37.0,
+        "social_media": 7.0,
+        "website": 9.0,
+        "visual_content": 7.0,
+        "website_url": "https://gmmb.gov.gh/national-museum-of-ghana/",
+        "facebook_url": "https://www.facebook.com/officialghanamuseums/",
+        "instagram_url": "https://www.instagram.com/ghana_museums/"
+      },
+      {
+        "name": "Kwame Nkrumah Mausoleum & Memorial Park (Accra)",
+        "country": "Ghana",
+        "sector": "Cultural heritage sites/museums",
+        "total_score": 37.0,
+        "social_media": 7.0,
+        "website": 9.0,
+        "visual_content": 7.0,
+        "website_url": "https://knmp.gov.gh/new/",
+        "facebook_url": "https://www.facebook.com/knmpgovgh",
+        "instagram_url": "https://www.instagram.com/knmpgovgh"
+      },
+      {
+        "name": "Mus\u00e9e Th\u00e9odore Monod (IFAN)",
+        "country": "Senegal",
+        "sector": "Cultural heritage sites/museums",
+        "total_score": 36.0,
+        "social_media": 7.0,
+        "website": 9.0,
+        "visual_content": 7.0,
+        "website_url": "https://musee-monod.sn/",
+        "facebook_url": "https://www.facebook.com/MuseeTheodoreMonod/",
+        "instagram_url": "https://www.instagram.com/museeifan/?hl=en"
+      },
+      {
+        "name": "National Theatre, Lagos",
+        "country": "Nigeria",
+        "sector": "Performing and visual arts",
+        "total_score": 36.0,
+        "social_media": 7.0,
+        "website": 9.0,
+        "visual_content": 5.0,
+        "website_url": "https://nationaltheatre.gov.ng/",
+        "facebook_url": "https://www.facebook.com/nationaltheatrenigeria",
+        "instagram_url": "https://www.instagram.com/nationaltheatrenigeria/?hl=en"
+      }
+    ],
+    "gambia": [
+      {
+        "name": "QTV Gambia",
+        "sector": "Audiovisual (film, photography, TV, videography)",
+        "total_score": 38.0,
+        "social_media": 9.0,
+        "website": 10.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "Sawallo Couture",
+        "sector": "Fashion & Design",
+        "total_score": 38.0,
+        "social_media": 8.0,
+        "website": 9.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "My Gambia (online magazine)",
+        "sector": "Marketing/advertising/publishing",
+        "total_score": 38.0,
+        "social_media": 10.0,
+        "website": 10.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "Fashion Weekend Gambia",
+        "sector": "Fashion & Design",
+        "total_score": 36.0,
+        "social_media": 6.0,
+        "website": 9.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "Paradise TV",
+        "sector": "Audiovisual (film, photography, TV, videography)",
+        "total_score": 32.0,
+        "social_media": 9.0,
+        "website": 10.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "What\u2019s On \u2013 Gambia",
+        "sector": "Audiovisual (film, photography, TV, videography)",
+        "total_score": 32.0,
+        "social_media": 9.0,
+        "website": 9.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "Janjanbureh Kankurang Festival",
+        "sector": "Festivals and cultural events",
+        "total_score": 32.0,
+        "social_media": 8.0,
+        "website": 8.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "Kerr Fatou",
+        "sector": "Audiovisual (film, photography, TV, videography)",
+        "total_score": 31.0,
+        "social_media": 9.0,
+        "website": 10.0,
+        "visual_content": 10.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "The Fatu Network",
+        "sector": "Audiovisual (film, photography, TV, videography)",
+        "total_score": 30.0,
+        "social_media": 9.0,
+        "website": 8.0,
+        "visual_content": 7.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      },
+      {
+        "name": "Ninki Nanka Trail",
+        "sector": "Cultural heritage sites/museums",
+        "total_score": 29.0,
+        "social_media": 3.0,
+        "website": 9.0,
+        "visual_content": 8.0,
+        "website_url": "",
+        "facebook_url": "",
+        "instagram_url": ""
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": 1,
+      "category": "Social Media",
+      "gap": -2.22,
+      "current": 3.11,
+      "target": 5.33,
+      "impact": "High",
+      "difficulty": "Medium"
+    },
+    {
+      "priority": 2,
+      "category": "Website",
+      "gap": -2.94,
+      "current": 2.68,
+      "target": 5.62,
+      "impact": "High",
+      "difficulty": "Medium"
+    },
+    {
+      "priority": 3,
+      "category": "Digital Sales",
+      "gap": -1.77,
+      "current": 0.35,
+      "target": 2.12,
+      "impact": "High",
+      "difficulty": "High"
+    }
+  ]
+}

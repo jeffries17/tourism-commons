@@ -1,0 +1,3353 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-09T17:31:06.170779",
+    "title": "Gambia Creative Industries Sentiment Analysis",
+    "total_stakeholders": 12,
+    "total_reviews": 1316,
+    "unified_themes": [
+      "cultural_heritage",
+      "service_staff",
+      "facilities_infrastructure",
+      "accessibility_transport",
+      "value_money",
+      "safety_security",
+      "educational_value",
+      "artistic_creative",
+      "atmosphere_experience"
+    ]
+  },
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "abuko_nature_reserve",
+      "source": "gambia_creative",
+      "total_reviews": 185,
+      "average_rating": 3.2486486486486488,
+      "overall_sentiment": 0.14596171852186685,
+      "positive_rate": 0.572972972972973,
+      "language_distribution": {
+        "unknown": 185
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 3,
+        "2023": 3,
+        "2022": 3,
+        "2020": 5,
+        "2019": 15,
+        "2018": 13,
+        "2017": 17,
+        "2016": 23,
+        "2015": 31,
+        "2014": 26,
+        "2013": 19,
+        "2012": 18,
+        "2011": 1,
+        "2010": 1,
+        "2008": 1,
+        "2007": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.23,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.17,
+          "mentions": 100,
+          "distribution": {
+            "positive": 61,
+            "neutral": 32,
+            "negative": 7
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.04,
+          "mentions": 50,
+          "distribution": {
+            "positive": 16,
+            "neutral": 26,
+            "negative": 8
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.15,
+          "mentions": 117,
+          "distribution": {
+            "positive": 72,
+            "neutral": 36,
+            "negative": 9
+          }
+        },
+        "value_money": {
+          "score": 0.14,
+          "mentions": 87,
+          "distribution": {
+            "positive": 49,
+            "neutral": 32,
+            "negative": 6
+          }
+        },
+        "safety_security": {
+          "score": 0.09,
+          "mentions": 13,
+          "distribution": {
+            "positive": 7,
+            "neutral": 4,
+            "negative": 2
+          }
+        },
+        "educational_value": {
+          "score": 0.13,
+          "mentions": 65,
+          "distribution": {
+            "positive": 37,
+            "neutral": 23,
+            "negative": 5
+          }
+        },
+        "artistic_creative": {
+          "score": 0.18,
+          "mentions": 67,
+          "distribution": {
+            "positive": 47,
+            "neutral": 18,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.19,
+          "mentions": 117,
+          "distribution": {
+            "positive": 80,
+            "neutral": 29,
+            "negative": 8
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "The cattle market proved an interesting experience in culture and animal knowledge. Our wise local guide pointed out three types of cattle, from S\u00e9n\u00e9gal, Mali, and The Gambia. Soon we were able to dis...",
+            "sentiment": 0.4714285714285714,
+            "rating": 5
+          },
+          {
+            "text": "Anyone visiting here should be well aware of its birding heritage, what I would say is hire a good reputable guide. I have visited twice although the first visit yielded a good array of birdlife the s...",
+            "sentiment": 0.34305555555555556,
+            "rating": 5
+          },
+          {
+            "text": "Every where I looked I saw monkies.  We took an interesting walk in the reserve and were told about the different vegetation, the history  and the purpose of the reserve. Because I am a city girl the ...",
+            "sentiment": 0.3,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "great place for a day out ,dont forget your camera,great to have a guide to take you to the best locations",
+            "sentiment": 0.9,
+            "rating": 5
+          },
+          {
+            "text": "It was great in 2014...Very cheap. Our guide took us along the nicest paths...so we saw lots of monkeys.",
+            "sentiment": 0.6000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Nice walks in the forests with plenty of wildlife. We had a guide to take us around which was great. Very informative. I have visited here twice and enjoyed both visits.",
+            "sentiment": 0.5249999999999999,
+            "rating": 4
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "Hotel needs a little tlc , but look pass that and u would have a wonderful holiday , staff were so friendly and we had a laugh with lot of them , and went out with one of the staff for the day , good ...",
+            "sentiment": 0.33270833333333333,
+            "rating": 4
+          },
+          {
+            "text": "Every where I looked I saw monkies.  We took an interesting walk in the reserve and were told about the different vegetation, the history  and the purpose of the reserve. Because I am a city girl the ...",
+            "sentiment": 0.3,
+            "rating": 5
+          },
+          {
+            "text": "The nature is beautiful, and you can take a lovely walk and spot many birds. There&#39;s also a kind of mini zoo with some lovely animals, like hyenas. Many people have commented on how awful they fin...",
+            "sentiment": 0.2768939393939394,
+            "rating": 4
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "great place for a day out ,dont forget your camera,great to have a guide to take you to the best locations",
+            "sentiment": 0.9,
+            "rating": 5
+          },
+          {
+            "text": "A forest walk, ending with a visit to the three baboons and five hyenas. Nothing special, but it was a nice walk!",
+            "sentiment": 0.5535714285714286,
+            "rating": 2
+          },
+          {
+            "text": "Visited here with my gambian boyfriend, my son and another couple. I thought it was a really nice walk and plenty of animals to see. I particularly liked the fact that the majority of them were free t...",
+            "sentiment": 0.5333333333333333,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "It was great in 2014...Very cheap. Our guide took us along the nicest paths...so we saw lots of monkeys.",
+            "sentiment": 0.6000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "The riserva is beautiful, another occasion for a brilliant passeggiata. But not both the curate and the animals you see are pochisimi. In compensation the price for the income is low. ",
+            "sentiment": 0.5833333333333334,
+            "rating": 4
+          },
+          {
+            "text": "Visited here with my gambian boyfriend, my son and another couple. I thought it was a really nice walk and plenty of animals to see. I particularly liked the fact that the majority of them were free t...",
+            "sentiment": 0.5333333333333333,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "The &#39;protected&#39; forest itself is very disappointing and most of the animals have left, bar a few monkeys. We walked through the forest with a guide but there really was nothing to point out. A...",
+            "sentiment": -0.31799999999999995,
+            "rating": 1
+          },
+          {
+            "text": "Make sure you get here early in the morning. It&#39;s still quiet then, the animals are more active, and you&#39;ll be less bothered by mosquitoes. Take a guide with you. They&#39;ll tell you about th...",
+            "sentiment": 0.3,
+            "rating": 4
+          },
+          {
+            "text": "This is a good reserve if you are really interested in exploring the nature and go without any set expectations. There is no point going there just to tick the box on the places you visited. You need ...",
+            "sentiment": 0.23162593984962404,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Visited here with my gambian boyfriend, my son and another couple. I thought it was a really nice walk and plenty of animals to see. I particularly liked the fact that the majority of them were free t...",
+            "sentiment": 0.5333333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Nice walks in the forests with plenty of wildlife. We had a guide to take us around which was great. Very informative. I have visited here twice and enjoyed both visits.",
+            "sentiment": 0.5249999999999999,
+            "rating": 4
+          },
+          {
+            "text": "The cattle market proved an interesting experience in culture and animal knowledge. Our wise local guide pointed out three types of cattle, from S\u00e9n\u00e9gal, Mali, and The Gambia. Soon we were able to dis...",
+            "sentiment": 0.4714285714285714,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "The riserva is beautiful, another occasion for a brilliant passeggiata. But not both the curate and the animals you see are pochisimi. In compensation the price for the income is low. ",
+            "sentiment": 0.5833333333333334,
+            "rating": 4
+          },
+          {
+            "text": "Visited here with my gambian boyfriend, my son and another couple. I thought it was a really nice walk and plenty of animals to see. I particularly liked the fact that the majority of them were free t...",
+            "sentiment": 0.5333333333333333,
+            "rating": 5
+          },
+          {
+            "text": "The cattle market proved an interesting experience in culture and animal knowledge. Our wise local guide pointed out three types of cattle, from S\u00e9n\u00e9gal, Mali, and The Gambia. Soon we were able to dis...",
+            "sentiment": 0.4714285714285714,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "great place for a day out ,dont forget your camera,great to have a guide to take you to the best locations",
+            "sentiment": 0.9,
+            "rating": 5
+          },
+          {
+            "text": "It was great in 2014...Very cheap. Our guide took us along the nicest paths...so we saw lots of monkeys.",
+            "sentiment": 0.6000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "The national reservation abuko is nice place to visit during your stay in gambia despite there is not so much to see , but you can go inside the cage with hyena for example so good place for brave peo...",
+            "sentiment": 0.575,
+            "rating": 3
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "The &#39;protected&#39; forest itself is very disappointing and most of the animals have left, bar a few monkeys. We walked through the forest with a guide but there really was nothing to point out. A...",
+          "sentiment": -0.31799999999999995,
+          "rating": 1
+        },
+        {
+          "text": "It was included in a tour package but not recommended... Nothing to see... Only a few monkeys in a cage at the end.... Too bad, not recommended ",
+          "sentiment": -0.3,
+          "rating": 1
+        },
+        {
+          "text": "There are some monkeys, but you&#39;ll see them elsewhere too. The antelopes have already been eaten by the surrounding villages (according to our guide), the crocodiles are always underwater (yes, in...",
+          "sentiment": -0.2791666666666666,
+          "rating": 1
+        },
+        {
+          "text": "Pretty poor attraction. As said before, the animals caged at the back of the reserve are poorly maintained and look unhappy.\nGo else where!",
+          "sentiment": -0.26,
+          "rating": 2
+        },
+        {
+          "text": "We had a lovely time in Abuko, our guide was great and we saw loads of birds and monkeys... and even a snake! The one bad point is the awful &#39;zoo&#39; in the middle where they house baboons, hyena...",
+          "sentiment": -0.2571428571428571,
+          "rating": 4
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "wassu_stone_circles",
+      "source": "gambia_creative",
+      "total_reviews": 13,
+      "average_rating": 4.3076923076923075,
+      "overall_sentiment": 0.18629053952583366,
+      "positive_rate": 0.46153846153846156,
+      "language_distribution": {
+        "unknown": 13
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2023": 1,
+        "2022": 1,
+        "2020": 1,
+        "2019": 3,
+        "2018": 3,
+        "2017": 1,
+        "2016": 1,
+        "2013": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.41,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.22,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.22,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.11,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.22,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.15,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.1,
+          "mentions": 7,
+          "distribution": {
+            "positive": 3,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.23,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.41,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "I had a very wonderful experience.. visiting the stone circle wassu..it's also part of the history of the Gambia.the Stone respecting UNSCO..i believe it's also a holy place.in the in Gambia ",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "The stone man will tell you all about the stones. Except he won't, really. He'll get lost in numbers and theories  without really enlightening me on the origins of the stones. \n\nWhich is fine. We don'...",
+            "sentiment": 0.36944444444444446,
+            "rating": 5
+          },
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          },
+          {
+            "text": "My husband and I stopped here on our way to George Town we got to talk to the most knowledgeable man ever the stone man he really knows his stuff and explained everything to you and things start to ad...",
+            "sentiment": 0.21787878787878787,
+            "rating": 5
+          },
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          },
+          {
+            "text": "My husband and I stopped here on our way to George Town we got to talk to the most knowledgeable man ever the stone man he really knows his stuff and explained everything to you and things start to ad...",
+            "sentiment": 0.21787878787878787,
+            "rating": 5
+          },
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          },
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          },
+          {
+            "text": "Stone circles in Wassu is where you the fine the stone age record to the Gambia  just like the stone Hench in the UK ,there is not much one by them, commonly they have been agreed to graveyards or bur...",
+            "sentiment": 0.0033333333333333327,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          },
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          },
+          {
+            "text": "My husband and I stopped here on our way to George Town we got to talk to the most knowledgeable man ever the stone man he really knows his stuff and explained everything to you and things start to ad...",
+            "sentiment": 0.21787878787878787,
+            "rating": 5
+          },
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "I had a very wonderful experience.. visiting the stone circle wassu..it's also part of the history of the Gambia.the Stone respecting UNSCO..i believe it's also a holy place.in the in Gambia ",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "My husband and I stopped here on our way to George Town we got to talk to the most knowledgeable man ever the stone man he really knows his stuff and explained everything to you and things start to ad...",
+            "sentiment": 0.21787878787878787,
+            "rating": 5
+          },
+          {
+            "text": "We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including a crossing at Barra). The journey took us about 2 - 2.5 hours. We made the mistake of not leaving...",
+            "sentiment": 0.15195378151260505,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "I had a very wonderful experience.. visiting the stone circle wassu..it's also part of the history of the Gambia.the Stone respecting UNSCO..i believe it's also a holy place.in the in Gambia ",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "The stone man will tell you all about the stones. Except he won't, really. He'll get lost in numbers and theories  without really enlightening me on the origins of the stones. \n\nWhich is fine. We don'...",
+            "sentiment": 0.36944444444444446,
+            "rating": 5
+          },
+          {
+            "text": "I found the stone circles interesting. I had a good guide who shared a great amount of knowledge about the stones. It's a small area but it's impressively clean and the stones seem to be well maintain...",
+            "sentiment": 0.29305555555555557,
+            "rating": 4
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "cultural_heritage",
+          "score": 0.4064665138782786
+        },
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.4064665138782786
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "banjul_craft_market",
+      "source": "gambia_creative",
+      "total_reviews": 267,
+      "average_rating": 3.8352059925093633,
+      "overall_sentiment": 0.1946729891711221,
+      "positive_rate": 0.6404494382022472,
+      "language_distribution": {
+        "unknown": 267
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 3,
+        "2023": 2,
+        "2022": 1,
+        "2021": 1,
+        "2020": 12,
+        "2019": 33,
+        "2018": 25,
+        "2017": 20,
+        "2016": 47,
+        "2015": 20,
+        "2014": 35,
+        "2013": 32,
+        "2012": 30,
+        "2010": 1,
+        "2009": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.27,
+          "mentions": 22,
+          "distribution": {
+            "positive": 18,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.23,
+          "mentions": 87,
+          "distribution": {
+            "positive": 65,
+            "neutral": 21,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.15,
+          "mentions": 51,
+          "distribution": {
+            "positive": 32,
+            "neutral": 13,
+            "negative": 6
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.2,
+          "mentions": 110,
+          "distribution": {
+            "positive": 79,
+            "neutral": 29,
+            "negative": 2
+          }
+        },
+        "value_money": {
+          "score": 0.22,
+          "mentions": 107,
+          "distribution": {
+            "positive": 82,
+            "neutral": 24,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.17,
+          "mentions": 19,
+          "distribution": {
+            "positive": 13,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.2,
+          "mentions": 63,
+          "distribution": {
+            "positive": 46,
+            "neutral": 16,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.23,
+          "mentions": 98,
+          "distribution": {
+            "positive": 71,
+            "neutral": 23,
+            "negative": 4
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.26,
+          "mentions": 139,
+          "distribution": {
+            "positive": 112,
+            "neutral": 27,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "And authentic bes\u00f8g p\u00e5 Albert market i Banjul. Her er en masse indtryk for alle sanser. Bes\u00f8g gerne markedet med en en localguide. OBS. Her er meget d\u00e5rlige toiletforhold Man skal kunne klare \u201clugten\u201d...",
+            "sentiment": 0.625,
+            "rating": 4
+          },
+          {
+            "text": "Since most Gambians don&#39;t own a refrigerator, they shop at the market every day. Take a stroll and immerse yourself in the authentic atmosphere, filled with colors and scents.",
+            "sentiment": 0.5,
+            "rating": 5
+          },
+          {
+            "text": "I good market to start with. There is a bigger one in Serrakunda. You will need a guide that will help you around on both places. We recommend that you take a guide and a driver. Then you and the gudi...",
+            "sentiment": 0.48000000000000004,
+            "rating": 4
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "And authentic bes\u00f8g p\u00e5 Albert market i Banjul. Her er en masse indtryk for alle sanser. Bes\u00f8g gerne markedet med en en localguide. OBS. Her er meget d\u00e5rlige toiletforhold Man skal kunne klare \u201clugten\u201d...",
+            "sentiment": 0.625,
+            "rating": 4
+          },
+          {
+            "text": "V\u00e4ldigt stort, v\u00e4ldigt mycket att handla, v\u00e4ldigt billigt, pruta pruta pruta :) Vi \u00e5kte dit med lokal guide och k\u00e4nde oss v\u00e4ldigt trygga. M\u00e4nniskorna \u00e4r s\u00e5 trevliga och det \u00e4r l\u00e4tt att trivas. Absolut...",
+            "sentiment": 0.625,
+            "rating": 4
+          },
+          {
+            "text": "Incredible place, phenomenal people, no complaints at all. We went on many excursions with a guide and a 4x4, we had a blast. They have phenomenal beaches. The markets are amazing.",
+            "sentiment": 0.6,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "It's a good market for food, toiletries, fabric, fruits and crafts. I got some Sheabutter from the market",
+            "sentiment": 0.7,
+            "rating": 3
+          },
+          {
+            "text": "And authentic bes\u00f8g p\u00e5 Albert market i Banjul. Her er en masse indtryk for alle sanser. Bes\u00f8g gerne markedet med en en localguide. OBS. Her er meget d\u00e5rlige toiletforhold Man skal kunne klare \u201clugten\u201d...",
+            "sentiment": 0.625,
+            "rating": 4
+          },
+          {
+            "text": "Helt sikkert bes\u00f8g v\u00e6rd. Man skal dog kunne klare den megen uro, lugt, manglende toiletter og desperate s\u00e6lgere, som vil g\u00f8re hvad som helst for at f\u00e5 solgt.",
+            "sentiment": -0.6,
+            "rating": 3
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "You can find everything there. Food, clothes, spices, fabrics, fruit, chicken, presents, .....\ndo not forget to haggle.\n\n",
+            "sentiment": -0.6,
+            "rating": 4
+          },
+          {
+            "text": "A very busy market place with everybody selling everything, nice experience. Barter! barter!! barter!!!",
+            "sentiment": 0.565,
+            "rating": 3
+          },
+          {
+            "text": "Excellent market for material, and also for wood - best there is apart from Brikama... worth walking down on the beach towards the barra ferry as well - as this is an experience...",
+            "sentiment": 0.5361111111111111,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "We went as a group and this market was a good market! Good prices (that you barter for) good variety of stalls and the locals are all very nice! We were stuck between going to this Market and the Sere...",
+            "sentiment": 0.6708333333333334,
+            "rating": 4
+          },
+          {
+            "text": "Good and cheap gifts.  Can barter with the locals, to get the best price. Well worth visiting the markets.",
+            "sentiment": 0.6,
+            "rating": 5
+          },
+          {
+            "text": "Excellent market for material, and also for wood - best there is apart from Brikama... worth walking down on the beach towards the barra ferry as well - as this is an experience...",
+            "sentiment": 0.5361111111111111,
+            "rating": 4
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Mercato fantastico, quelli che si lamentano di fango e puzza vadano nei grandi centri commerciali...  trovi tutto cio' che riguarda vestiario e tant'altro... Consigliat andare con qualcuno del posto.....",
+            "sentiment": 0.5,
+            "rating": 4
+          },
+          {
+            "text": "Serrekunda market is huge so it a good idea to take a guide along to help you navigate, we spend a few hours at the Market experiencing the amazing sights sounds and smells never once did we feel thre...",
+            "sentiment": 0.36428571428571427,
+            "rating": 5
+          },
+          {
+            "text": "A super fun market where you can soak up the local atmosphere. Here you can buy nice things you won&#39;t find elsewhere in Gambia. It&#39;s also completely safe, but super busy.",
+            "sentiment": 0.3095238095238096,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "I good market to start with. There is a bigger one in Serrakunda. You will need a guide that will help you around on both places. We recommend that you take a guide and a driver. Then you and the gudi...",
+            "sentiment": 0.48000000000000004,
+            "rating": 4
+          },
+          {
+            "text": "Very interesting and authentic! Even better with a local guide who shares some really interesting facts. Well worth it.",
+            "sentiment": 0.42916666666666664,
+            "rating": 5
+          },
+          {
+            "text": "Albert market caters for tourists and visitors more than the huge and bustling Serekunda market, but there is plenty to see and smell as locals go about their lives and the place is full of jostle and...",
+            "sentiment": 0.4166666666666667,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "crafts you can do or watch tie and dye being done and then have a  chance to purchase any of the goods. wood crafts are excellent and an art in there selves.",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "It's a good market for food, toiletries, fabric, fruits and crafts. I got some Sheabutter from the market",
+            "sentiment": 0.7,
+            "rating": 3
+          },
+          {
+            "text": "We went as a group and this market was a good market! Good prices (that you barter for) good variety of stalls and the locals are all very nice! We were stuck between going to this Market and the Sere...",
+            "sentiment": 0.6708333333333334,
+            "rating": 4
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "crafts you can do or watch tie and dye being done and then have a  chance to purchase any of the goods. wood crafts are excellent and an art in there selves.",
+            "sentiment": 1.0,
+            "rating": 5
+          },
+          {
+            "text": "It's a good market for food, toiletries, fabric, fruits and crafts. I got some Sheabutter from the market",
+            "sentiment": 0.7,
+            "rating": 3
+          },
+          {
+            "text": "We went as a group and this market was a good market! Good prices (that you barter for) good variety of stalls and the locals are all very nice! We were stuck between going to this Market and the Sere...",
+            "sentiment": 0.6708333333333334,
+            "rating": 4
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "Helt sikkert bes\u00f8g v\u00e6rd. Man skal dog kunne klare den megen uro, lugt, manglende toiletter og desperate s\u00e6lgere, som vil g\u00f8re hvad som helst for at f\u00e5 solgt.",
+          "sentiment": -0.6,
+          "rating": 3
+        },
+        {
+          "text": "You can find everything there. Food, clothes, spices, fabrics, fruit, chicken, presents, .....\ndo not forget to haggle.\n\n",
+          "sentiment": -0.6,
+          "rating": 4
+        },
+        {
+          "text": "Not for the faint of heart or stomach. The smell makes you gag. Once you see it, you won&#39;t need it again.",
+          "sentiment": -0.5,
+          "rating": 3
+        },
+        {
+          "text": "The market is just plain disgusting. Lots of rotten fish and vegetables being sold, the stench is unbearable. The craftmarket is full of pushy people, just dragging you by your arm into their stores. ...",
+          "sentiment": -0.25285714285714284,
+          "rating": 1
+        },
+        {
+          "text": "I&#39;ve been to many markets in Africa, but none like this one: flies even on your clothes... The smell of sewage everywhere, dirt and garbage even at the food stalls. Rats at the meat and fish stall...",
+          "sentiment": -0.25,
+          "rating": 1
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "brikama_woodcarvers_market",
+      "source": "gambia_creative",
+      "total_reviews": 20,
+      "average_rating": 4.4,
+      "overall_sentiment": 0.25431816933066936,
+      "positive_rate": 0.8,
+      "language_distribution": {
+        "unknown": 20
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2022": 2,
+        "2019": 2,
+        "2018": 1,
+        "2016": 5,
+        "2015": 2,
+        "2014": 3,
+        "2013": 2,
+        "2012": 1,
+        "2009": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.33,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.24,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.36,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.21,
+          "mentions": 8,
+          "distribution": {
+            "positive": 6,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.26,
+          "mentions": 14,
+          "distribution": {
+            "positive": 12,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.32,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.19,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.26,
+          "mentions": 10,
+          "distribution": {
+            "positive": 8,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.3,
+          "mentions": 13,
+          "distribution": {
+            "positive": 11,
+            "neutral": 2,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Beautiful handcrafted crafts by a young, talented artist named Bayal. Here you&#39;ll find wood and stone statues, as well as hand-carved traditional masks, at very reasonable prices. The artist is ve...",
+            "sentiment": 0.3516666666666666,
+            "rating": 5
+          },
+          {
+            "text": "The Real Gambia That&#39;s what we experienced in our tremendous three week stay in February-March 2009. We were based in Brikama \u2013 a medium-sized town about 20 kms inland from the Atlantic and an hou...",
+            "sentiment": 0.31641208791208797,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Like many African markets, the Brikama market is a must-see. You can buy all kinds of food, clothing, footwear, household utensils, tools... and, of course, the famous djembes. You can also observe th...",
+            "sentiment": 0.32916666666666666,
+            "rating": 4
+          },
+          {
+            "text": "It&#39;s fun to stroll through this market and see all the wooden statues. But after two hours, you&#39;ve seen all the wood. We were here during our tour, and all in all, it was very enjoyable. Our t...",
+            "sentiment": 0.31666666666666665,
+            "rating": 4
+          },
+          {
+            "text": "The Real Gambia That&#39;s what we experienced in our tremendous three week stay in February-March 2009. We were based in Brikama \u2013 a medium-sized town about 20 kms inland from the Atlantic and an hou...",
+            "sentiment": 0.31641208791208797,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We were probably the first there that morning so we got some really good deals. The first sale of the day can be really cheap. We went as part of a 6 in 1 trip so it fitted in well. This is where the ...",
+            "sentiment": 0.4,
+            "rating": 5
+          },
+          {
+            "text": "Like many African markets, the Brikama market is a must-see. You can buy all kinds of food, clothing, footwear, household utensils, tools... and, of course, the famous djembes. You can also observe th...",
+            "sentiment": 0.32916666666666666,
+            "rating": 4
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Nice market with lots to see. Brikama is a pleasant town to visit, quite bustling, but pleasant.",
+            "sentiment": 0.688888888888889,
+            "rating": 4
+          },
+          {
+            "text": "Beautiful handcrafted crafts by a young, talented artist named Bayal. Here you&#39;ll find wood and stone statues, as well as hand-carved traditional masks, at very reasonable prices. The artist is ve...",
+            "sentiment": 0.3516666666666666,
+            "rating": 5
+          },
+          {
+            "text": "The Real Gambia That&#39;s what we experienced in our tremendous three week stay in February-March 2009. We were based in Brikama \u2013 a medium-sized town about 20 kms inland from the Atlantic and an hou...",
+            "sentiment": 0.31641208791208797,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Quite small - but great value - depending on your haggling skills !!\nAround halve the price of Senegambia and a nice day out.\nGood selection of wood products all hand made - and they will make to orde...",
+            "sentiment": 0.5875,
+            "rating": 4
+          },
+          {
+            "text": "The Brikama cattle market is definitely worth a visit. Be sure to connect with the local traders... wonderful conversations!",
+            "sentiment": 0.45,
+            "rating": 4
+          },
+          {
+            "text": "We were probably the first there that morning so we got some really good deals. The first sale of the day can be really cheap. We went as part of a 6 in 1 trip so it fitted in well. This is where the ...",
+            "sentiment": 0.4,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "The Real Gambia That&#39;s what we experienced in our tremendous three week stay in February-March 2009. We were based in Brikama \u2013 a medium-sized town about 20 kms inland from the Atlantic and an hou...",
+            "sentiment": 0.31641208791208797,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "The perfect place to watch the artisans at work and immerse yourself in their art. Much less touristy than the Senegambia Kraft Market. Bargaining is key, but try to squeeze through to the back (happy...",
+            "sentiment": 0.32875,
+            "rating": 5
+          },
+          {
+            "text": "It&#39;s fun to stroll through this market and see all the wooden statues. But after two hours, you&#39;ve seen all the wood. We were here during our tour, and all in all, it was very enjoyable. Our t...",
+            "sentiment": 0.31666666666666665,
+            "rating": 4
+          },
+          {
+            "text": "The Real Gambia That&#39;s what we experienced in our tremendous three week stay in February-March 2009. We were based in Brikama \u2013 a medium-sized town about 20 kms inland from the Atlantic and an hou...",
+            "sentiment": 0.31641208791208797,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Quite small - but great value - depending on your haggling skills !!\nAround halve the price of Senegambia and a nice day out.\nGood selection of wood products all hand made - and they will make to orde...",
+            "sentiment": 0.5875,
+            "rating": 4
+          },
+          {
+            "text": "We were probably the first there that morning so we got some really good deals. The first sale of the day can be really cheap. We went as part of a 6 in 1 trip so it fitted in well. This is where the ...",
+            "sentiment": 0.4,
+            "rating": 5
+          },
+          {
+            "text": "Beautiful handcrafted crafts by a young, talented artist named Bayal. Here you&#39;ll find wood and stone statues, as well as hand-carved traditional masks, at very reasonable prices. The artist is ve...",
+            "sentiment": 0.3516666666666666,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Nice market with lots to see. Brikama is a pleasant town to visit, quite bustling, but pleasant.",
+            "sentiment": 0.688888888888889,
+            "rating": 4
+          },
+          {
+            "text": "Quite small - but great value - depending on your haggling skills !!\nAround halve the price of Senegambia and a nice day out.\nGood selection of wood products all hand made - and they will make to orde...",
+            "sentiment": 0.5875,
+            "rating": 4
+          },
+          {
+            "text": "The Brikama cattle market is definitely worth a visit. Be sure to connect with the local traders... wonderful conversations!",
+            "sentiment": 0.45,
+            "rating": 4
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "facilities_infrastructure",
+          "score": 0.36458333333333337
+        },
+        {
+          "theme": "cultural_heritage",
+          "score": 0.33403937728937727
+        },
+        {
+          "theme": "safety_security",
+          "score": 0.31641208791208797
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "tanji_village_market",
+      "source": "gambia_creative",
+      "total_reviews": 54,
+      "average_rating": 4.314814814814815,
+      "overall_sentiment": 0.2531575715660617,
+      "positive_rate": 0.7592592592592593,
+      "language_distribution": {
+        "unknown": 54
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2022": 1,
+        "2020": 2,
+        "2019": 4,
+        "2018": 12,
+        "2017": 7,
+        "2016": 13,
+        "2015": 9,
+        "2014": 4,
+        "2013": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.23,
+          "mentions": 27,
+          "distribution": {
+            "positive": 21,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.2,
+          "mentions": 18,
+          "distribution": {
+            "positive": 13,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.24,
+          "mentions": 16,
+          "distribution": {
+            "positive": 14,
+            "neutral": 1,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.25,
+          "mentions": 29,
+          "distribution": {
+            "positive": 22,
+            "neutral": 7,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.24,
+          "mentions": 20,
+          "distribution": {
+            "positive": 17,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.25,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.22,
+          "mentions": 37,
+          "distribution": {
+            "positive": 29,
+            "neutral": 7,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.26,
+          "mentions": 33,
+          "distribution": {
+            "positive": 23,
+            "neutral": 9,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.31,
+          "mentions": 34,
+          "distribution": {
+            "positive": 30,
+            "neutral": 4,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Tanji Village is the principal fishing port and you can spend hours watching the boats come in, the sale of their catch, the smoking of the fish and the wonderful collection of ancient freezers to sto...",
+            "sentiment": 1.0,
+            "rating": 4
+          },
+          {
+            "text": "Experience how the tribes used to live. Experienced guide, and at the end, you&#39;ll enjoy a concert on the cora.",
+            "sentiment": 0.4454545454545455,
+            "rating": 3
+          },
+          {
+            "text": "In the Museum, you can see original instruments from the area, as well as their way of life and customs, their homes, their textiles, and more. ",
+            "sentiment": 0.4375,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "I had a guide named Tamba Jefang from Finfoot Birding, which was a unique experience. Beautiful park, saw many animals, and I would love to visit again.",
+            "sentiment": 0.55625,
+            "rating": 5
+          },
+          {
+            "text": "Experience how the tribes used to live. Experienced guide, and at the end, you&#39;ll enjoy a concert on the cora.",
+            "sentiment": 0.4454545454545455,
+            "rating": 3
+          },
+          {
+            "text": "You&#39;ll be amazed at how the people here still do everything traditionally. The colorful fishing boats are unloaded on the beach. The women process the fish: drying, cleaning, or smoking. And, as e...",
+            "sentiment": 0.29500000000000004,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "A beautiful, colorful scene. The fishing boats anchor just a few meters from the beach and the people hauling the fish ashore with large buckets, tubs, etc., on their heads. The fish are immediately s...",
+            "sentiment": 0.43285714285714283,
+            "rating": 5
+          },
+          {
+            "text": "The museum offers a nice introduction to Gambian life but, having just returned from a 4-day trip along the River Gambia with tour company &quot;Tour Gambia&quot; (100% recommended), we felt we knew a...",
+            "sentiment": 0.425,
+            "rating": 4
+          },
+          {
+            "text": "This museum is nice for knowing a bit more about the Gambian culture, nature, animals, instruments. I got a tour around, which I liked. When I asked I was also shown the houses you can stay in. They w...",
+            "sentiment": 0.41111111111111115,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Tanji Village is the principal fishing port and you can spend hours watching the boats come in, the sale of their catch, the smoking of the fish and the wonderful collection of ancient freezers to sto...",
+            "sentiment": 1.0,
+            "rating": 4
+          },
+          {
+            "text": "Tanja visited when the fishing boats arrived with their catch. It&#39;s an impressive sight because there are so many boats, so many fish species, and so many people. Highly recommended!",
+            "sentiment": 0.54,
+            "rating": 4
+          },
+          {
+            "text": "The Tanji Village Museum is located on the main road and is easy to find. While it may not be spectacular, it&#39;s very nicely designed and provides insight into the life and nature of Gambia. The we...",
+            "sentiment": 0.52,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Tanji Village is the principal fishing port and you can spend hours watching the boats come in, the sale of their catch, the smoking of the fish and the wonderful collection of ancient freezers to sto...",
+            "sentiment": 1.0,
+            "rating": 4
+          },
+          {
+            "text": "Highly recommended, and a wonderful experience. It smells like fish, but if you&#39;re there for an hour, you won&#39;t notice it anymore. And go to Tanji and see how the people live, visit the locals...",
+            "sentiment": 0.5365909090909091,
+            "rating": 5
+          },
+          {
+            "text": "Did this a part of the South Gambia Tour.\nFound it very interesting and the only place we visited that you did not get badgered.\nPrices in the shop were genuine and good value.",
+            "sentiment": 0.4375,
+            "rating": 4
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Wonder cultural exhibits, includes life size village site, artisans work for sale, demonstrations. Also modern secure camp huts for rent with flush toilet, sink, shower, clean bed with netting. Very f...",
+            "sentiment": 0.25347222222222227,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "When we visit Tanji fisherman village and all its particulars, the tradition of the smoking fish its also very nice to visit the museum.",
+            "sentiment": 0.78,
+            "rating": 4
+          },
+          {
+            "text": "The Tanji Village Museum is located on the main road and is easy to find. While it may not be spectacular, it&#39;s very nicely designed and provides insight into the life and nature of Gambia. The we...",
+            "sentiment": 0.52,
+            "rating": 4
+          },
+          {
+            "text": "Did this a part of the South Gambia Tour.\nFound it very interesting and the only place we visited that you did not get badgered.\nPrices in the shop were genuine and good value.",
+            "sentiment": 0.4375,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Tanji Village is the principal fishing port and you can spend hours watching the boats come in, the sale of their catch, the smoking of the fish and the wonderful collection of ancient freezers to sto...",
+            "sentiment": 1.0,
+            "rating": 4
+          },
+          {
+            "text": "When we visit Tanji fisherman village and all its particulars, the tradition of the smoking fish its also very nice to visit the museum.",
+            "sentiment": 0.78,
+            "rating": 4
+          },
+          {
+            "text": "I had a guide named Tamba Jefang from Finfoot Birding, which was a unique experience. Beautiful park, saw many animals, and I would love to visit again.",
+            "sentiment": 0.55625,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Tanji Village is the principal fishing port and you can spend hours watching the boats come in, the sale of their catch, the smoking of the fish and the wonderful collection of ancient freezers to sto...",
+            "sentiment": 1.0,
+            "rating": 4
+          },
+          {
+            "text": "When we visit Tanji fisherman village and all its particulars, the tradition of the smoking fish its also very nice to visit the museum.",
+            "sentiment": 0.78,
+            "rating": 4
+          },
+          {
+            "text": "I had a guide named Tamba Jefang from Finfoot Birding, which was a unique experience. Beautiful park, saw many animals, and I would love to visit again.",
+            "sentiment": 0.55625,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3136505001409741
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "kachikally_crocodile_pool",
+      "source": "gambia_creative",
+      "total_reviews": 300,
+      "average_rating": 4.056666666666667,
+      "overall_sentiment": 0.20658725142222237,
+      "positive_rate": 0.6866666666666666,
+      "language_distribution": {
+        "unknown": 300
+      },
+      "year_distribution": {
+        "2025": 12,
+        "2024": 16,
+        "2023": 18,
+        "2022": 12,
+        "2021": 3,
+        "2020": 29,
+        "2019": 83,
+        "2018": 105,
+        "2017": 22
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.2,
+          "mentions": 91,
+          "distribution": {
+            "positive": 67,
+            "neutral": 19,
+            "negative": 5
+          }
+        },
+        "service_staff": {
+          "score": 0.23,
+          "mentions": 127,
+          "distribution": {
+            "positive": 95,
+            "neutral": 29,
+            "negative": 3
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.16,
+          "mentions": 38,
+          "distribution": {
+            "positive": 27,
+            "neutral": 10,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.18,
+          "mentions": 157,
+          "distribution": {
+            "positive": 111,
+            "neutral": 36,
+            "negative": 10
+          }
+        },
+        "value_money": {
+          "score": 0.21,
+          "mentions": 125,
+          "distribution": {
+            "positive": 91,
+            "neutral": 30,
+            "negative": 4
+          }
+        },
+        "safety_security": {
+          "score": 0.24,
+          "mentions": 31,
+          "distribution": {
+            "positive": 25,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.2,
+          "mentions": 171,
+          "distribution": {
+            "positive": 127,
+            "neutral": 38,
+            "negative": 6
+          }
+        },
+        "artistic_creative": {
+          "score": 0.2,
+          "mentions": 73,
+          "distribution": {
+            "positive": 55,
+            "neutral": 17,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.29,
+          "mentions": 166,
+          "distribution": {
+            "positive": 142,
+            "neutral": 23,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Loved it here. Great experience and the staff were brilliant. Highlight of our trip. Lovely museum with some interesting history.",
+            "sentiment": 0.6799999999999999,
+            "rating": 5
+          },
+          {
+            "text": "This place is great!  You can actulally pet one of the crocodiles.  The history of how the pool was established was interesting.  Worth a visit!",
+            "sentiment": 0.625,
+            "rating": 5
+          },
+          {
+            "text": "Well there can\u2019t be many places in the world where you can have your photo taken stroking a crocodile.\nThe history of this sacred pool is very interesting and being so close to the crocodiles is an am...",
+            "sentiment": 0.5833333333333334,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Excellent food, great staff and a beautiful location.  The seafood is wonderful, home grown herbs and salads, good wine and garlic bread to die for!  Live music by two talented guys made the evenings ...",
+            "sentiment": 0.7148133116883117,
+            "rating": 5
+          },
+          {
+            "text": "Amazing time, great guide to help us through the crocodile pools, keep an eye out as there is wildlife everywhere.",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Loved it here. Great experience and the staff were brilliant. Highlight of our trip. Lovely museum with some interesting history.",
+            "sentiment": 0.6799999999999999,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "My son and I were apprehensive despite being told that the crocodiles were tame owing to the fact that they are well fed. Nevertheless, the staff were reassuring and lovely. It was a great experience ...",
+            "sentiment": 0.39583333333333337,
+            "rating": 5
+          },
+          {
+            "text": "Exciting to get up close to the crocodiles. Cheap trip. The pond isn&#39;t clean and there are too many crocodiles in it. Very touristy.",
+            "sentiment": 0.35333333333333333,
+            "rating": 4
+          },
+          {
+            "text": "This must see site was in walking distance from.our hotel,but it did mean a walk through Bakau old town which is a poverty striking area with lots of kids begging for sweets, so I was glad we hired a ...",
+            "sentiment": 0.3522777777777778,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Excellent food, great staff and a beautiful location.  The seafood is wonderful, home grown herbs and salads, good wine and garlic bread to die for!  Live music by two talented guys made the evenings ...",
+            "sentiment": 0.7148133116883117,
+            "rating": 5
+          },
+          {
+            "text": "Well there can\u2019t be many places in the world where you can have your photo taken stroking a crocodile.\nThe history of this sacred pool is very interesting and being so close to the crocodiles is an am...",
+            "sentiment": 0.5833333333333334,
+            "rating": 5
+          },
+          {
+            "text": "Great crocodile pool. Friendly staff. It&#39;s nice to see one up close and be able to touch it without any danger.",
+            "sentiment": 0.56875,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Another leg  of our excellent trip with lamin (lamgil trips and excursions).\n\nThe guy who talks with s brilliant English accent talks with passion how he looks after the crocodiles.\n\nA brilliant exper...",
+            "sentiment": 0.74,
+            "rating": 5
+          },
+          {
+            "text": "Amazing experience! Never thought I would ever touch a crocodile! They are very relaxed and don't mind people being around. Great value for money ",
+            "sentiment": 0.6458333333333334,
+            "rating": 5
+          },
+          {
+            "text": "This place is great!  You can actulally pet one of the crocodiles.  The history of how the pool was established was interesting.  Worth a visit!",
+            "sentiment": 0.625,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "It&#39;s wonderful to see how these animals are protected in a peaceful environment and well cared for!",
+            "sentiment": 0.65625,
+            "rating": 3
+          },
+          {
+            "text": "Great crocodile pool. Friendly staff. It&#39;s nice to see one up close and be able to touch it without any danger.",
+            "sentiment": 0.56875,
+            "rating": 4
+          },
+          {
+            "text": " A small park but very nice to see. Good price, 100 dalasi for one person. Worth a visit! \nNice to see the crocodiles. Staff was good on the security.\n",
+            "sentiment": 0.4841666666666667,
+            "rating": 4
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "We were given a tour by the men who look after the crocodiles and what a great team they are showing you all the hiding places that the crocodiles use. A must visit if you are in Gambia.",
+            "sentiment": 0.8,
+            "rating": 5
+          },
+          {
+            "text": "What a great place! Really enjoyed going around the museums, very interesting, but absolutely loved seeing the crocodiles, I got to stroke one, which is a first for me. Wonderful experience! ",
+            "sentiment": 0.6833333333333332,
+            "rating": 5
+          },
+          {
+            "text": "Loved it here. Great experience and the staff were brilliant. Highlight of our trip. Lovely museum with some interesting history.",
+            "sentiment": 0.6799999999999999,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "We were given a tour by the men who look after the crocodiles and what a great team they are showing you all the hiding places that the crocodiles use. A must visit if you are in Gambia.",
+            "sentiment": 0.8,
+            "rating": 5
+          },
+          {
+            "text": "Excellent food, great staff and a beautiful location.  The seafood is wonderful, home grown herbs and salads, good wine and garlic bread to die for!  Live music by two talented guys made the evenings ...",
+            "sentiment": 0.7148133116883117,
+            "rating": 5
+          },
+          {
+            "text": "Fancy petting a crocodile? Make sure a park guide is with you! There&#39;s also a painter at the park exit who creates beautiful African paintings.",
+            "sentiment": 0.4916666666666667,
+            "rating": 4
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "We were given a tour by the men who look after the crocodiles and what a great team they are showing you all the hiding places that the crocodiles use. A must visit if you are in Gambia.",
+            "sentiment": 0.8,
+            "rating": 5
+          },
+          {
+            "text": "Another leg  of our excellent trip with lamin (lamgil trips and excursions).\n\nThe guy who talks with s brilliant English accent talks with passion how he looks after the crocodiles.\n\nA brilliant exper...",
+            "sentiment": 0.74,
+            "rating": 5
+          },
+          {
+            "text": "Excellent food, great staff and a beautiful location.  The seafood is wonderful, home grown herbs and salads, good wine and garlic bread to die for!  Live music by two talented guys made the evenings ...",
+            "sentiment": 0.7148133116883117,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "Maybe twenty or thirty lame crocs sleeping around or inside the pond. They do not move. You may even touch them. That\u2019s it. You sat half an hour in the taxi to get there.",
+          "sentiment": -0.3333333333333333,
+          "rating": 3
+        },
+        {
+          "text": "There is a small museum at the entrance, very small park, we came out disappointed... We thought we would see about ten, or even maybe dozens of crocodiles but in the end we saw 3... Maybe we were unl...",
+          "sentiment": -0.33125,
+          "rating": 2
+        },
+        {
+          "text": "this is just a small park with crocodiles that look like they are drugged. they don't even hardly move and you can touch them.",
+          "sentiment": -0.27083333333333337,
+          "rating": 2
+        },
+        {
+          "text": "10-15 crocs 3 feet away and NO fences        MAD . \nThe walk down to the pool is a must , check out the shops selling hand crafted wooden animals , and cloths ",
+          "sentiment": -0.2601851851851852,
+          "rating": 4
+        },
+        {
+          "text": "Bakaussa l\u00e4hell\u00e4 Cape Point-ia sijaitsevassa rokotiilipuistossa n. 100 krokoa. Ennen puistoa pieni museo joka kertoo suppeasti Gambian historiaa. Ep\u00e4usko valtaa kulkijan l\u00e4hestytt\u00e4ess\u00e4 puistoa, koska ...",
+          "sentiment": -0.25,
+          "rating": 4
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "national_museum_gambia",
+      "source": "gambia_creative",
+      "total_reviews": 26,
+      "average_rating": 3.6923076923076925,
+      "overall_sentiment": 0.15816064989141912,
+      "positive_rate": 0.5769230769230769,
+      "language_distribution": {
+        "unknown": 26
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 1,
+        "2023": 1,
+        "2020": 5,
+        "2019": 10,
+        "2018": 2,
+        "2017": 5
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.19,
+          "mentions": 14,
+          "distribution": {
+            "positive": 10,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.3,
+          "mentions": 6,
+          "distribution": {
+            "positive": 5,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.2,
+          "mentions": 9,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.29,
+          "mentions": 7,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.19,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.05,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 1,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.18,
+          "mentions": 22,
+          "distribution": {
+            "positive": 14,
+            "neutral": 7,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.16,
+          "mentions": 15,
+          "distribution": {
+            "positive": 8,
+            "neutral": 6,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.26,
+          "mentions": 6,
+          "distribution": {
+            "positive": 5,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the L...",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "Three floors of exibits, sketching the (colonial) history of The Gambia. We were here as part of a group tour, but free to wander on our own. Most exhibits have an explanation an English nearby.\nStair...",
+            "sentiment": 0.375,
+            "rating": 4
+          },
+          {
+            "text": "This well-worn museum carries many gems of the history, archeology, and music of The Gambia. The artifacts cover from the Stone Age to the present with photographs, pottery, and displays. I really enj...",
+            "sentiment": 0.27499999999999997,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "A lovely museum, especially worth a visit if you&#39;re in Banjul. You can get an explanation from a guide. But if you take a taxi, the driver can also give you excellent explanations. Entire school c...",
+            "sentiment": 0.525,
+            "rating": 4
+          },
+          {
+            "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the L...",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "Our tour guides were very knowledgeable regarding the artifacts in the museum. Both Hadden and Omar were extremely nice, patients and great people to speak with. Thank you for the time you took to exp...",
+            "sentiment": 0.4083333333333334,
+            "rating": 4
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the L...",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "This well-worn museum carries many gems of the history, archeology, and music of The Gambia. The artifacts cover from the Stone Age to the present with photographs, pottery, and displays. I really enj...",
+            "sentiment": 0.27499999999999997,
+            "rating": 5
+          },
+          {
+            "text": "Artifacts, photos and reconstructions covering the history of Banjul and The Gambia. Suitable for a visit if around and hour. Small museum but covers interesting aspects of history. ",
+            "sentiment": 0.26666666666666666,
+            "rating": 3
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "A lovely museum, especially worth a visit if you&#39;re in Banjul. You can get an explanation from a guide. But if you take a taxi, the driver can also give you excellent explanations. Entire school c...",
+            "sentiment": 0.525,
+            "rating": 4
+          },
+          {
+            "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the L...",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "Three floors of exibits, sketching the (colonial) history of The Gambia. We were here as part of a group tour, but free to wander on our own. Most exhibits have an explanation an English nearby.\nStair...",
+            "sentiment": 0.375,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "A lovely museum, especially worth a visit if you&#39;re in Banjul. You can get an explanation from a guide. But if you take a taxi, the driver can also give you excellent explanations. Entire school c...",
+            "sentiment": 0.525,
+            "rating": 4
+          },
+          {
+            "text": "Three floors of exibits, sketching the (colonial) history of The Gambia. We were here as part of a group tour, but free to wander on our own. Most exhibits have an explanation an English nearby.\nStair...",
+            "sentiment": 0.375,
+            "rating": 4
+          },
+          {
+            "text": "It\u2019s a small museum but with a ton of material to read. It was interesting for me to see some of the items that originated from my country and had been adopted by the Gambians. It\u2019s worth going to and...",
+            "sentiment": 0.2625,
+            "rating": 4
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "This well-worn museum carries many gems of the history, archeology, and music of The Gambia. The artifacts cover from the Stone Age to the present with photographs, pottery, and displays. I really enj...",
+            "sentiment": 0.27499999999999997,
+            "rating": 5
+          },
+          {
+            "text": "This is one of the smallest national museums I have ever been to, but it was not a let-down. Crammed full of objects and displays it attempts to convey the prehistory, pre-colonial, colonial and post-...",
+            "sentiment": -0.125,
+            "rating": 3
+          },
+          {
+            "text": "Var inne i 1 minut. Inte mycket f\u00f6r oss att se p\u00e5. Lite historiska f\u00f6rem\u00e5l desto mer skriven information. \nEn silversmed p\u00e5 innerg\u00e5rden som var mer sev\u00e4rd f\u00f6r oss. ",
+            "sentiment": 0.0,
+            "rating": 2
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "A lovely museum, especially worth a visit if you&#39;re in Banjul. You can get an explanation from a guide. But if you take a taxi, the driver can also give you excellent explanations. Entire school c...",
+            "sentiment": 0.525,
+            "rating": 4
+          },
+          {
+            "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the L...",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "Our tour guides were very knowledgeable regarding the artifacts in the museum. Both Hadden and Omar were extremely nice, patients and great people to speak with. Thank you for the time you took to exp...",
+            "sentiment": 0.4083333333333334,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "One of my favourite things to do when travelling around the world is going to the musea where countries tell something about their national history. The National Museum of the Gambia is not like the L...",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "Our tour guides were very knowledgeable regarding the artifacts in the museum. Both Hadden and Omar were extremely nice, patients and great people to speak with. Thank you for the time you took to exp...",
+            "sentiment": 0.4083333333333334,
+            "rating": 4
+          },
+          {
+            "text": "Three floors of exibits, sketching the (colonial) history of The Gambia. We were here as part of a group tour, but free to wander on our own. Most exhibits have an explanation an English nearby.\nStair...",
+            "sentiment": 0.375,
+            "rating": 4
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "A lovely museum, especially worth a visit if you&#39;re in Banjul. You can get an explanation from a guide. But if you take a taxi, the driver can also give you excellent explanations. Entire school c...",
+            "sentiment": 0.525,
+            "rating": 4
+          },
+          {
+            "text": "Our tour guides were very knowledgeable regarding the artifacts in the museum. Both Hadden and Omar were extremely nice, patients and great people to speak with. Thank you for the time you took to exp...",
+            "sentiment": 0.4083333333333334,
+            "rating": 4
+          },
+          {
+            "text": "No flashy building on Independence Drive in Banjul, no slick presentations with all sorts of modern, possibly digital, gadgets, but very basic\u2014that&#39;s how the National Museum&#39;s accommodation an...",
+            "sentiment": 0.21833333333333332,
+            "rating": 4
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "arch_22_museum",
+      "source": "gambia_creative",
+      "total_reviews": 155,
+      "average_rating": 3.2193548387096773,
+      "overall_sentiment": 0.2272330737176036,
+      "positive_rate": 0.6580645161290323,
+      "language_distribution": {
+        "unknown": 155
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2023": 2,
+        "2022": 2,
+        "2021": 2,
+        "2020": 5,
+        "2019": 18,
+        "2018": 16,
+        "2017": 16,
+        "2016": 15,
+        "2015": 15,
+        "2014": 13,
+        "2013": 18,
+        "2012": 25,
+        "2011": 3,
+        "2010": 1,
+        "2008": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.2,
+          "mentions": 45,
+          "distribution": {
+            "positive": 30,
+            "neutral": 12,
+            "negative": 3
+          }
+        },
+        "service_staff": {
+          "score": 0.27,
+          "mentions": 18,
+          "distribution": {
+            "positive": 16,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.19,
+          "mentions": 52,
+          "distribution": {
+            "positive": 37,
+            "neutral": 13,
+            "negative": 2
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.24,
+          "mentions": 60,
+          "distribution": {
+            "positive": 46,
+            "neutral": 12,
+            "negative": 2
+          }
+        },
+        "value_money": {
+          "score": 0.23,
+          "mentions": 59,
+          "distribution": {
+            "positive": 46,
+            "neutral": 10,
+            "negative": 3
+          }
+        },
+        "safety_security": {
+          "score": 0.14,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.23,
+          "mentions": 59,
+          "distribution": {
+            "positive": 43,
+            "neutral": 13,
+            "negative": 3
+          }
+        },
+        "artistic_creative": {
+          "score": 0.24,
+          "mentions": 44,
+          "distribution": {
+            "positive": 32,
+            "neutral": 10,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.33,
+          "mentions": 83,
+          "distribution": {
+            "positive": 70,
+            "neutral": 11,
+            "negative": 2
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "Great symbol of the country\u2019s history. It literally takes minutes to appreciate it in all its glory so I wouldn\u2019t make a day trip of it ",
+            "sentiment": 0.8,
+            "rating": 5
+          },
+          {
+            "text": "The view from the arch is great and the history displayed inside is really interesting. \n\nNot the best thing to do in the Gambia, but worth a visit. ",
+            "sentiment": 0.6499999999999999,
+            "rating": 3
+          },
+          {
+            "text": "Great to see this monument newly created in Gambia. We went to see this beautiful arch and building at its slender. The history is very interesting about the revaluation that took place. Lovely restau...",
+            "sentiment": 0.5872727272727273,
+            "rating": 3
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Very good and interesting place to visit, free of charge by the way and who minds giving a tip for the worker who sits by the door at the end of your visit !!",
+            "sentiment": 0.6783333333333333,
+            "rating": 4
+          },
+          {
+            "text": "All the staff were brilliant, they looked after us all (7 in our party) superbly well. They were informative, we enjoyed their company so much that we asked for the same guides again. ",
+            "sentiment": 0.52,
+            "rating": 5
+          },
+          {
+            "text": "Good observation point, not too exciting. Some juju stuxff exhibited. Some tidiying up would be an ok pastime for the staff...",
+            "sentiment": 0.5,
+            "rating": 3
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "Great views from the top, but the 'museum' is woeful and some lighting in the stairs would have been nice ",
+            "sentiment": 0.6333333333333333,
+            "rating": 3
+          },
+          {
+            "text": "Great to see this monument newly created in Gambia. We went to see this beautiful arch and building at its slender. The history is very interesting about the revaluation that took place. Lovely restau...",
+            "sentiment": 0.5872727272727273,
+            "rating": 3
+          },
+          {
+            "text": "We stopped here on our visit to Banjul and it is easy to park nearby, there are eating and drinking facilities nearby so we stopped and took some photo's.  This is an easy tourist attraction to visit ...",
+            "sentiment": 0.5166666666666667,
+            "rating": 4
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Didn't have a chance to go up but passed by a couple of times. Looks impressive from a distance and good land mark.",
+            "sentiment": 0.85,
+            "rating": 3
+          },
+          {
+            "text": "For many years it was am impressive arch to drive around and photo.  Now that you can climb up it is worth it for the views.  I have taken great city life photos without hassle.",
+            "sentiment": 0.65,
+            "rating": 3
+          },
+          {
+            "text": "It was really nice to see the Arch in the night, as it was after the presidential election so the Arch was lit up through the night, making really a nice place to walk by. ",
+            "sentiment": 0.6,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Impressive looking arch and a great photo opportunity. Commemorates the revolution and worth an hour of your time if  you get the chance",
+            "sentiment": 0.7000000000000001,
+            "rating": 3
+          },
+          {
+            "text": "Very good and interesting place to visit, free of charge by the way and who minds giving a tip for the worker who sits by the door at the end of your visit !!",
+            "sentiment": 0.6783333333333333,
+            "rating": 4
+          },
+          {
+            "text": "For many years it was am impressive arch to drive around and photo.  Now that you can climb up it is worth it for the views.  I have taken great city life photos without hassle.",
+            "sentiment": 0.65,
+            "rating": 3
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "We were told at the entrance that the price for taking the stairs or the lift is the same. Infact, the person at the front encouraged us to take the 'safer' stairs.\n\nThe place has a wondeful history o...",
+            "sentiment": 0.3,
+            "rating": 3
+          },
+          {
+            "text": "You pay a ridiculously cheap entrance fee to the guardian (the staff at the hotel said it was free...) and here you go, up the arch. It was under renovation so it&#39;s a bit rough, you go through san...",
+            "sentiment": 0.23055555555555557,
+            "rating": 4
+          },
+          {
+            "text": "One of Banjul&#39;s few attractions. We didn&#39;t go up there because we didn&#39;t find it very attractive. It&#39;s strange that you can only cross it because of military or police vehicles, but ca...",
+            "sentiment": 0.17857142857142858,
+            "rating": 3
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "From the top of the arch, there&#39;s a beautiful view. You can plan this along with a visit to the national museum in Banjul.",
+            "sentiment": 0.675,
+            "rating": 3
+          },
+          {
+            "text": "Quite a hike up the steps to the top of the arch but a good museum display at the top. Great views of the area great photo stop",
+            "sentiment": 0.6599999999999999,
+            "rating": 4
+          },
+          {
+            "text": "The view from the arch is great and the history displayed inside is really interesting. \n\nNot the best thing to do in the Gambia, but worth a visit. ",
+            "sentiment": 0.6499999999999999,
+            "rating": 3
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "From the top of the arch, there&#39;s a beautiful view. You can plan this along with a visit to the national museum in Banjul.",
+            "sentiment": 0.675,
+            "rating": 3
+          },
+          {
+            "text": "Quite a hike up the steps to the top of the arch but a good museum display at the top. Great views of the area great photo stop",
+            "sentiment": 0.6599999999999999,
+            "rating": 4
+          },
+          {
+            "text": "The view from the arch is great and the history displayed inside is really interesting. \n\nNot the best thing to do in the Gambia, but worth a visit. ",
+            "sentiment": 0.6499999999999999,
+            "rating": 3
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Didn't have a chance to go up but passed by a couple of times. Looks impressive from a distance and good land mark.",
+            "sentiment": 0.85,
+            "rating": 3
+          },
+          {
+            "text": "Great symbol of the country\u2019s history. It literally takes minutes to appreciate it in all its glory so I wouldn\u2019t make a day trip of it ",
+            "sentiment": 0.8,
+            "rating": 5
+          },
+          {
+            "text": "looked amazing at night all lit up in the gambian flag!",
+            "sentiment": 0.7500000000000001,
+            "rating": 4
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "This building is a disgrace. The cafe no longer exists, the elevators are broken, the museum is filthy, and there&#39;s no light in the narrow spiral staircases. But there&#39;s still an entrance fee.",
+          "sentiment": -0.4,
+          "rating": 1
+        },
+        {
+          "text": "You either drive under it or around pending which way you are going. Looks a bit run down from the street side but has a bloody history. Worth looking out for on your way to the ferry or exploring the...",
+          "sentiment": -0.21851851851851856,
+          "rating": 3
+        },
+        {
+          "text": "The arch offers a beautiful view of the small capital, Banjul. But the shocking museum above it revealed a dark period in Gambia&#39;s history. One of the previous presidents, Jammeh, had ruled the co...",
+          "sentiment": -0.20185185185185184,
+          "rating": 3
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "atmosphere_experience",
+          "score": 0.3261679304759596
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "fort_bullen_barra_museum",
+      "source": "gambia_creative",
+      "total_reviews": 11,
+      "average_rating": 4.363636363636363,
+      "overall_sentiment": 0.2372901156082974,
+      "positive_rate": 0.8181818181818182,
+      "language_distribution": {
+        "unknown": 11
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2021": 2,
+        "2019": 5,
+        "2018": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.26,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.26,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.33,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.27,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.24,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.25,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.26,
+          "mentions": 10,
+          "distribution": {
+            "positive": 9,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.25,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.27,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "The fort is easy to find, has a convenient parking and nice scenic views. It's fairly small, but it has a surprisingly good exposition and even better guides who gave us a very informative tour about ...",
+            "sentiment": 0.387037037037037,
+            "rating": 5
+          },
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around...",
+            "sentiment": 0.333974358974359,
+            "rating": 5
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "The fort is easy to find, has a convenient parking and nice scenic views. It's fairly small, but it has a surprisingly good exposition and even better guides who gave us a very informative tour about ...",
+            "sentiment": 0.387037037037037,
+            "rating": 5
+          },
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "Get a guide to take you over on the ferry from Banjul and then walk 10 mins. A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusi...",
+            "sentiment": 0.2903703703703704,
+            "rating": 5
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around...",
+            "sentiment": 0.333974358974359,
+            "rating": 5
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "The fort is easy to find, has a convenient parking and nice scenic views. It's fairly small, but it has a surprisingly good exposition and even better guides who gave us a very informative tour about ...",
+            "sentiment": 0.387037037037037,
+            "rating": 5
+          },
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around...",
+            "sentiment": 0.333974358974359,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "Get a guide to take you over on the ferry from Banjul and then walk 10 mins. A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusi...",
+            "sentiment": 0.2903703703703704,
+            "rating": 5
+          },
+          {
+            "text": "A guided tour of the remains here is a good introduction to the positive role that Great Britain played in trying to end the slave trade. There are artifacts from the past when the fort was to help pr...",
+            "sentiment": 0.24747474747474746,
+            "rating": 3
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "A guided tour of the remains here is a good introduction to the positive role that Great Britain played in trying to end the slave trade. There are artifacts from the past when the fort was to help pr...",
+            "sentiment": 0.24747474747474746,
+            "rating": 3
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "The fort is easy to find, has a convenient parking and nice scenic views. It's fairly small, but it has a surprisingly good exposition and even better guides who gave us a very informative tour about ...",
+            "sentiment": 0.387037037037037,
+            "rating": 5
+          },
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around...",
+            "sentiment": 0.333974358974359,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around...",
+            "sentiment": 0.333974358974359,
+            "rating": 5
+          },
+          {
+            "text": "Get a guide to take you over on the ferry from Banjul and then walk 10 mins. A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusi...",
+            "sentiment": 0.2903703703703704,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "The fort is easy to find, has a convenient parking and nice scenic views. It's fairly small, but it has a surprisingly good exposition and even better guides who gave us a very informative tour about ...",
+            "sentiment": 0.387037037037037,
+            "rating": 5
+          },
+          {
+            "text": "This place should be better known! The museum here is just as good as the main national one in Banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable c...",
+            "sentiment": 0.37250000000000005,
+            "rating": 4
+          },
+          {
+            "text": "I visited Barra on a whim, not particularly for the fort, but for the ferry ride there and back. I approached the fort, not really thinking much of it and thinking I would have a peak then turn around...",
+            "sentiment": 0.333974358974359,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "facilities_infrastructure",
+          "score": 0.333974358974359
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "bakau_craft_market",
+      "source": "gambia_creative",
+      "total_reviews": 47,
+      "average_rating": 4.23404255319149,
+      "overall_sentiment": 0.2647248186784661,
+      "positive_rate": 0.851063829787234,
+      "language_distribution": {
+        "unknown": 47
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2020": 2,
+        "2019": 2,
+        "2018": 4,
+        "2017": 8,
+        "2016": 11,
+        "2015": 14,
+        "2014": 4,
+        "2013": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.18,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.32,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.22,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.27,
+          "mentions": 15,
+          "distribution": {
+            "positive": 13,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.24,
+          "mentions": 28,
+          "distribution": {
+            "positive": 24,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.28,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.26,
+          "mentions": 10,
+          "distribution": {
+            "positive": 8,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.32,
+          "mentions": 26,
+          "distribution": {
+            "positive": 25,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.3,
+          "mentions": 30,
+          "distribution": {
+            "positive": 29,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "After visiting the country for over 30 years we always take school groups here. This safe, relaxed and authentic market offers value for money and some terrific souvenirs. Haggling is a must but all p...",
+            "sentiment": 0.275,
+            "rating": 5
+          },
+          {
+            "text": "Like so many markets around Africa, and the world for that matter, if you have not been to many, this will be something new and exciting even though it is small. If you have traveled extensively, you ...",
+            "sentiment": 0.08999795249795249,
+            "rating": 3
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "I loved everything about Gambia the people very friendly must do tours to schools families and Banjul.restaurants very good  Sea Shells ex, also Darbos good music",
+            "sentiment": 0.6993750000000001,
+            "rating": 4
+          },
+          {
+            "text": "Lille is marked, but the man can see the beautiful ting p\u00e5. Dette will level up with bedre. Man beh\u00f8ves ikke guide med. Husk ikke at pay the first price of the cigar, one forhandle with my city Anbefa...",
+            "sentiment": 0.39999999999999997,
+            "rating": 4
+          },
+          {
+            "text": "The craftmanship put into the figures are outstanding true Gambia products. Very busy market and plenty of stalls to visit and gifts for home and very reasonable priced. Get yourself a local guide for...",
+            "sentiment": 0.3819047619047619,
+            "rating": 4
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "After the hassle of Albert Market in Banjul - Bakau was a delight.  Friendly un-pressured stall holders meant we could browse and find things we wanted.",
+            "sentiment": 0.375,
+            "rating": 4
+          },
+          {
+            "text": "I have visited the country several times and have yet to discover another market to equal this one. The stall holders are friendly and in most cases low pressure, just come and look. I buy most of my ...",
+            "sentiment": 0.2426339285714286,
+            "rating": 5
+          },
+          {
+            "text": "I went early, about 9am as the little shops were opening. It was quiet and cool at this time. There was no pressure to buy, but encouragement to look inside each shop - not onerous. The quality of goo...",
+            "sentiment": 0.1793981481481481,
+            "rating": 4
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Sand pictures are excellent and you can order your own designs. A lovely selection of sizes and styles.",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "brilliant, great experience at the market , lovely local crafts to buy . also walk along shores of Gambian river to see fishermen in action . Go with Habaib he will look after you show you things that...",
+            "sentiment": 0.41111111111111115,
+            "rating": 4
+          },
+          {
+            "text": "The craftmanship put into the figures are outstanding true Gambia products. Very busy market and plenty of stalls to visit and gifts for home and very reasonable priced. Get yourself a local guide for...",
+            "sentiment": 0.3819047619047619,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "They have some really good work here. I bought some very good African paintings here, though I did have to barter for them. All the shops here are worth a look and see some of the locals doing the woo...",
+            "sentiment": 0.542,
+            "rating": 5
+          },
+          {
+            "text": "I like this market because there is less hassle than some of the others in Gambia. You can see the things being made. Men with a chunk of wood between their feet hammering away and some of the things ...",
+            "sentiment": 0.44666666666666666,
+            "rating": 5
+          },
+          {
+            "text": "Same same really loads of different things to pick from the best part the hussle and getting the best price. You can see alot of work has gone into the crafting of the goods. Good gifts for home.",
+            "sentiment": 0.4142857142857143,
+            "rating": 4
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "After visiting the country for over 30 years we always take school groups here. This safe, relaxed and authentic market offers value for money and some terrific souvenirs. Haggling is a must but all p...",
+            "sentiment": 0.275,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "I loved everything about Gambia the people very friendly must do tours to schools families and Banjul.restaurants very good  Sea Shells ex, also Darbos good music",
+            "sentiment": 0.6993750000000001,
+            "rating": 4
+          },
+          {
+            "text": "I love visiting the craft market where you can actually see the goods on sale being made. The shop keepers are keen to show you around their shops and are willing to talk to you and explain how they d...",
+            "sentiment": 0.35,
+            "rating": 5
+          },
+          {
+            "text": "It&#39;s definitely worth taking a look at the fun things they make. They try to explain what they do and how, which is really fun for the kids.",
+            "sentiment": 0.3,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Sand pictures are excellent and you can order your own designs. A lovely selection of sizes and styles.",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "I loved everything about Gambia the people very friendly must do tours to schools families and Banjul.restaurants very good  Sea Shells ex, also Darbos good music",
+            "sentiment": 0.6993750000000001,
+            "rating": 4
+          },
+          {
+            "text": "Fantastic  place  to go to beautiful wooden  caving gorgeous . wish I could  buy lots and lots of things .it's brilliant  to just watch these  people  making  these cavings ",
+            "sentiment": 0.5700000000000001,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Sand pictures are excellent and you can order your own designs. A lovely selection of sizes and styles.",
+            "sentiment": 0.7000000000000001,
+            "rating": 5
+          },
+          {
+            "text": "I loved everything about Gambia the people very friendly must do tours to schools families and Banjul.restaurants very good  Sea Shells ex, also Darbos good music",
+            "sentiment": 0.6993750000000001,
+            "rating": 4
+          },
+          {
+            "text": "Fantastic  place  to go to beautiful wooden  caving gorgeous . wish I could  buy lots and lots of things .it's brilliant  to just watch these  people  making  these cavings ",
+            "sentiment": 0.5700000000000001,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "service_staff",
+          "score": 0.31979915223665223
+        },
+        {
+          "theme": "artistic_creative",
+          "score": 0.31736202029505606
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "senegambia_craft_market",
+      "source": "gambia_creative",
+      "total_reviews": 214,
+      "average_rating": 3.5,
+      "overall_sentiment": 0.20755817415232258,
+      "positive_rate": 0.6682242990654206,
+      "language_distribution": {
+        "unknown": 214
+      },
+      "year_distribution": {
+        "2024": 9,
+        "2023": 4,
+        "2022": 2,
+        "2020": 6,
+        "2019": 8,
+        "2018": 31,
+        "2017": 28,
+        "2016": 61,
+        "2015": 56,
+        "2014": 9
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.2,
+          "mentions": 15,
+          "distribution": {
+            "positive": 10,
+            "neutral": 5,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.3,
+          "mentions": 32,
+          "distribution": {
+            "positive": 26,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.18,
+          "mentions": 25,
+          "distribution": {
+            "positive": 17,
+            "neutral": 7,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.24,
+          "mentions": 69,
+          "distribution": {
+            "positive": 52,
+            "neutral": 14,
+            "negative": 3
+          }
+        },
+        "value_money": {
+          "score": 0.22,
+          "mentions": 108,
+          "distribution": {
+            "positive": 78,
+            "neutral": 27,
+            "negative": 3
+          }
+        },
+        "safety_security": {
+          "score": 0.16,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.2,
+          "mentions": 41,
+          "distribution": {
+            "positive": 29,
+            "neutral": 11,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.25,
+          "mentions": 78,
+          "distribution": {
+            "positive": 58,
+            "neutral": 18,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.28,
+          "mentions": 119,
+          "distribution": {
+            "positive": 102,
+            "neutral": 14,
+            "negative": 3
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "It\u2019s beyond impressive that the people of Africa have kept traditional crafting so alive and well. Everything is one of a kind, and so authentic! MOST ITEMS ARE HAND MADE. From paintings, to carvings,...",
+            "sentiment": 0.4244588744588745,
+            "rating": 5
+          },
+          {
+            "text": "Love visiting any market in the world. This market has many stalls lots of banter, Lots of bracelets for sale, everyone wants you the look in their shops on their stalls. Love chatting with the locals...",
+            "sentiment": 0.41500000000000004,
+            "rating": 4
+          },
+          {
+            "text": "The Positives:\nInteresting area to browse and close to all the main Kololi hotels. Good range of crafts that make good tourist souvenirs. Interesting beak from hotel/pool/beach. \n\nThe Negatives:\nThe m...",
+            "sentiment": 0.3875,
+            "rating": 3
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Very nice arts and crafts! Be adviced, take a good trusty guide for the best prices!\nYou can find almost everthing nice there. Best wood carvings in town. And after shopping you can drink a beer at AL...",
+            "sentiment": 0.8550000000000001,
+            "rating": 5
+          },
+          {
+            "text": "A very nice and friendly place. Lots of excellent crafts and good prices. \nFriendly people.\nRecommended for everyone. ",
+            "sentiment": 0.6460000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Very interesting to see Arts and crafts batik in senegambia craft market for the Best local Guide to show you around please kindly contact +220 7647423 \n\nThank you for your kindly attention! \nWelcome ...",
+            "sentiment": 0.6333333333333333,
+            "rating": 4
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "love having a look around the market but tends to be a rush as you do get a lot of hassle to buy \nif store holders gave you time to look at your own pace they would sell a lot more ",
+            "sentiment": 0.5333333333333333,
+            "rating": 3
+          },
+          {
+            "text": "A bit hectic but interesting, noisy  but friendly, some of the stall holders tried their very best but alas not all were successful",
+            "sentiment": 0.445,
+            "rating": 3
+          },
+          {
+            "text": "The Positives:\nInteresting area to browse and close to all the main Kololi hotels. Good range of crafts that make good tourist souvenirs. Interesting beak from hotel/pool/beach. \n\nThe Negatives:\nThe m...",
+            "sentiment": 0.3875,
+            "rating": 3
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Very nice arts and crafts! Be adviced, take a good trusty guide for the best prices!\nYou can find almost everthing nice there. Best wood carvings in town. And after shopping you can drink a beer at AL...",
+            "sentiment": 0.8550000000000001,
+            "rating": 5
+          },
+          {
+            "text": "a great place to pick up a bargin. Do not be put off by the haggling they do expect it. A good tip is to go in the evening about 7 before they close",
+            "sentiment": 0.75,
+            "rating": 4
+          },
+          {
+            "text": "Take your time to visit this market. Talk to the sellers and be fair and they will be fair too. Haggle and you will arrive at a price that is acceptable to both parties.",
+            "sentiment": 0.7,
+            "rating": 5
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Very nice arts and crafts! Be adviced, take a good trusty guide for the best prices!\nYou can find almost everthing nice there. Best wood carvings in town. And after shopping you can drink a beer at AL...",
+            "sentiment": 0.8550000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Take your time to visit this market. Talk to the sellers and be fair and they will be fair too. Haggle and you will arrive at a price that is acceptable to both parties.",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "Try this craft market, nice people and they have it all, good prices with quality products.\nVisit stand number 56 - ask for Rake - Quality products and good prices.",
+            "sentiment": 0.6666666666666666,
+            "rating": 5
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Talk about busy, colourful, sights you wouldn&#39;t see in a market in the UK. Our taxi driver had his number plates removed by the police for parking in the wrong area and then had to pay a fine to g...",
+            "sentiment": 0.2333333333333333,
+            "rating": 5
+          },
+          {
+            "text": "Senegambia Craft Market is right on the beautiful tourist strip at Kololi. To get there, head down the Bertil Harding Highway southbound until you get to the Senegambia Junction. The Highway and Junct...",
+            "sentiment": 0.20986271986271982,
+            "rating": 5
+          },
+          {
+            "text": "The bumsters are really out in force here. Every cubicle feels like a danger zone. You get hassled non stop and I felt very threatened and could not wait to get away.",
+            "sentiment": 0.2,
+            "rating": 1
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "A nice tourist spot to buy souvenirs! It&#39;s great to see local artists at work carving wood.",
+            "sentiment": 0.5166666666666667,
+            "rating": 5
+          },
+          {
+            "text": "Lots of touristy stuff, it&#39;s more fun to browse at Serekunda market. It&#39;s fun to see and great for bargaining.\n\n",
+            "sentiment": 0.47500000000000003,
+            "rating": 3
+          },
+          {
+            "text": "a lovely market brilliant for carvings and afican jewellery etc lots of fun bartering offer then about a third of the price they quote please visit Gambia no ebola there they need tourism",
+            "sentiment": 0.425,
+            "rating": 5
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Very nice arts and crafts! Be adviced, take a good trusty guide for the best prices!\nYou can find almost everthing nice there. Best wood carvings in town. And after shopping you can drink a beer at AL...",
+            "sentiment": 0.8550000000000001,
+            "rating": 5
+          },
+          {
+            "text": "Take your time to visit this market. Talk to the sellers and be fair and they will be fair too. Haggle and you will arrive at a price that is acceptable to both parties.",
+            "sentiment": 0.7,
+            "rating": 5
+          },
+          {
+            "text": "A very nice and friendly place. Lots of excellent crafts and good prices. \nFriendly people.\nRecommended for everyone. ",
+            "sentiment": 0.6460000000000001,
+            "rating": 5
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Great market for souvenirs! The stall owners can be pushy, but remember you don't have to buy everything they ask you too! ",
+            "sentiment": 1.0,
+            "rating": 4
+          },
+          {
+            "text": "Very nice arts and crafts! Be adviced, take a good trusty guide for the best prices!\nYou can find almost everthing nice there. Best wood carvings in town. And after shopping you can drink a beer at AL...",
+            "sentiment": 0.8550000000000001,
+            "rating": 5
+          },
+          {
+            "text": "a great place to pick up a bargin. Do not be put off by the haggling they do expect it. A good tip is to go in the evening about 7 before they close",
+            "sentiment": 0.75,
+            "rating": 4
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [
+        {
+          "text": "Unfortunately, they don&#39;t learn how to stop; they pull you in almost everywhere. It&#39;s impossible to look around in peace here, such a shame. So, off to Serunda Market instead.",
+          "sentiment": -0.38888888888888884,
+          "rating": 1
+        },
+        {
+          "text": "The craft market is nearby the \"Strip\" and you find all craft workers concentrated on one spot. So not many sellers borders you on the beach and in the streets.",
+          "sentiment": -0.25,
+          "rating": 3
+        }
+      ],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "service_staff",
+          "score": 0.3049614583566431
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "kunta_kinteh_island",
+      "source": "gambia_creative",
+      "total_reviews": 24,
+      "average_rating": 4.208333333333333,
+      "overall_sentiment": 0.19452760665603427,
+      "positive_rate": 0.75,
+      "language_distribution": {
+        "unknown": 24
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 6,
+        "2023": 6,
+        "2022": 3,
+        "2021": 1,
+        "2020": 1,
+        "2019": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.14,
+          "mentions": 20,
+          "distribution": {
+            "positive": 14,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.19,
+          "mentions": 15,
+          "distribution": {
+            "positive": 11,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.13,
+          "mentions": 6,
+          "distribution": {
+            "positive": 5,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.15,
+          "mentions": 17,
+          "distribution": {
+            "positive": 12,
+            "neutral": 5,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.16,
+          "mentions": 11,
+          "distribution": {
+            "positive": 8,
+            "neutral": 3,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.3,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.17,
+          "mentions": 21,
+          "distribution": {
+            "positive": 15,
+            "neutral": 6,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.2,
+          "mentions": 8,
+          "distribution": {
+            "positive": 6,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.21,
+          "mentions": 12,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "cultural_heritage": [
+          {
+            "text": "A super fun day trip with our local guide Willie (Whatsapp +220 780 7203) that included an informative visit to Kunta Kinteh Island and then the Slavery Museum. Everything was done at our own pace, we...",
+            "sentiment": 0.37222222222222223,
+            "rating": 5
+          },
+          {
+            "text": "We met Famara on our second day in Gambia. We were sitting on the terrace when Famara approached us and asked if he could show us his photo album of his trips. Famara was very enthusiastic about his t...",
+            "sentiment": 0.34917107583774254,
+            "rating": 4
+          },
+          {
+            "text": "A fascinating day trip around the island learning about the slave trade and past history.  Both of us enjoyed looking around although it was hot the day we visited",
+            "sentiment": 0.3,
+            "rating": 4
+          }
+        ],
+        "service_staff": [
+          {
+            "text": "Day trip to kunta kinte island. With a local tour guard.  We offer the best service eve \nWith keba ecotours gambia u get the best experience u need to now \n",
+            "sentiment": 0.6666666666666666,
+            "rating": 3
+          },
+          {
+            "text": "A super fun day trip with our local guide Willie (Whatsapp +220 780 7203) that included an informative visit to Kunta Kinteh Island and then the Slavery Museum. Everything was done at our own pace, we...",
+            "sentiment": 0.37222222222222223,
+            "rating": 5
+          },
+          {
+            "text": "We met Famara on our second day in Gambia. We were sitting on the terrace when Famara approached us and asked if he could show us his photo album of his trips. Famara was very enthusiastic about his t...",
+            "sentiment": 0.34917107583774254,
+            "rating": 4
+          }
+        ],
+        "facilities_infrastructure": [
+          {
+            "text": "We visited this with our local driver and guide, Muhammed Camara (also known as Big Mo). Mo arrived at our hotel at the agreed-upon time, drove us to the ferry, and arranged our ferry tickets. He also...",
+            "sentiment": 0.2520634920634921,
+            "rating": 4
+          },
+          {
+            "text": "The experience as a whole is definitely one that everyone should take time to participate in, but be warned that an entire day should be set aside for this adventure. Depending on where you start out,...",
+            "sentiment": 0.24057971014492754,
+            "rating": 3
+          },
+          {
+            "text": "Although basically an interesting trip it was spoiled by the lack of investment in the sites visited, this is generally the case for most things in The Gambia. The government really ought to put some ...",
+            "sentiment": 0.14500000000000002,
+            "rating": 3
+          }
+        ],
+        "accessibility_transport": [
+          {
+            "text": "Took the ferry at 6 am from Banjul to Barra.   Took a taxi from there for a 30 minute ride to a beautiful fishing village, and from there took a nice boat ride to Kunta Kinteh island, which is a very ...",
+            "sentiment": 0.5166666666666666,
+            "rating": 5
+          },
+          {
+            "text": "We met Famara on our second day in Gambia. We were sitting on the terrace when Famara approached us and asked if he could show us his photo album of his trips. Famara was very enthusiastic about his t...",
+            "sentiment": 0.34917107583774254,
+            "rating": 4
+          },
+          {
+            "text": "We visited this with our local driver and guide, Muhammed Camara (also known as Big Mo). Mo arrived at our hotel at the agreed-upon time, drove us to the ferry, and arranged our ferry tickets. He also...",
+            "sentiment": 0.2520634920634921,
+            "rating": 4
+          }
+        ],
+        "value_money": [
+          {
+            "text": "Took the ferry at 6 am from Banjul to Barra.   Took a taxi from there for a 30 minute ride to a beautiful fishing village, and from there took a nice boat ride to Kunta Kinteh island, which is a very ...",
+            "sentiment": 0.5166666666666666,
+            "rating": 5
+          },
+          {
+            "text": "We visited this with our local driver and guide, Muhammed Camara (also known as Big Mo). Mo arrived at our hotel at the agreed-upon time, drove us to the ferry, and arranged our ferry tickets. He also...",
+            "sentiment": 0.2520634920634921,
+            "rating": 4
+          },
+          {
+            "text": "The experience as a whole is definitely one that everyone should take time to participate in, but be warned that an entire day should be set aside for this adventure. Depending on where you start out,...",
+            "sentiment": 0.24057971014492754,
+            "rating": 3
+          }
+        ],
+        "safety_security": [
+          {
+            "text": "Day trip to kunta kinte island. With a local tour guard.  We offer the best service eve \nWith keba ecotours gambia u get the best experience u need to now \n",
+            "sentiment": 0.6666666666666666,
+            "rating": 3
+          },
+          {
+            "text": "Dutch history books can go in the fireplace. During this excursion, I heard the true story from the tour guide and a local historian. That doesn&#39;t change the fact that the slave trade and slavery ...",
+            "sentiment": -0.060416666666666674,
+            "rating": 5
+          }
+        ],
+        "educational_value": [
+          {
+            "text": "Day trip to kunta kinte island. With a local tour guard.  We offer the best service eve \nWith keba ecotours gambia u get the best experience u need to now \n",
+            "sentiment": 0.6666666666666666,
+            "rating": 3
+          },
+          {
+            "text": "A super fun day trip with our local guide Willie (Whatsapp +220 780 7203) that included an informative visit to Kunta Kinteh Island and then the Slavery Museum. Everything was done at our own pace, we...",
+            "sentiment": 0.37222222222222223,
+            "rating": 5
+          },
+          {
+            "text": "We met Famara on our second day in Gambia. We were sitting on the terrace when Famara approached us and asked if he could show us his photo album of his trips. Famara was very enthusiastic about his t...",
+            "sentiment": 0.34917107583774254,
+            "rating": 4
+          }
+        ],
+        "artistic_creative": [
+          {
+            "text": "Took the ferry at 6 am from Banjul to Barra.   Took a taxi from there for a 30 minute ride to a beautiful fishing village, and from there took a nice boat ride to Kunta Kinteh island, which is a very ...",
+            "sentiment": 0.5166666666666666,
+            "rating": 5
+          },
+          {
+            "text": "We met Famara on our second day in Gambia. We were sitting on the terrace when Famara approached us and asked if he could show us his photo album of his trips. Famara was very enthusiastic about his t...",
+            "sentiment": 0.34917107583774254,
+            "rating": 4
+          },
+          {
+            "text": "We visited this with our local driver and guide, Muhammed Camara (also known as Big Mo). Mo arrived at our hotel at the agreed-upon time, drove us to the ferry, and arranged our ferry tickets. He also...",
+            "sentiment": 0.2520634920634921,
+            "rating": 4
+          }
+        ],
+        "atmosphere_experience": [
+          {
+            "text": "Day trip to kunta kinte island. With a local tour guard.  We offer the best service eve \nWith keba ecotours gambia u get the best experience u need to now \n",
+            "sentiment": 0.6666666666666666,
+            "rating": 3
+          },
+          {
+            "text": "Took the ferry at 6 am from Banjul to Barra.   Took a taxi from there for a 30 minute ride to a beautiful fishing village, and from there took a nice boat ride to Kunta Kinteh island, which is a very ...",
+            "sentiment": 0.5166666666666666,
+            "rating": 5
+          },
+          {
+            "text": "A super fun day trip with our local guide Willie (Whatsapp +220 780 7203) that included an informative visit to Kunta Kinteh Island and then the Slavery Museum. Everything was done at our own pace, we...",
+            "sentiment": 0.37222222222222223,
+            "rating": 5
+          }
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": [],
+      "management_response": {
+        "total_responses": 0,
+        "response_rate": 0.0,
+        "management_response_rate": 0.0
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 0.303125
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    }
+  ]
+}

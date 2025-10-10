@@ -1,170 +1,220 @@
-# Sentiment Analysis Workflow
+# Sentiment Analysis & ITOS Assessment
 
-This folder contains the complete sentiment analysis workflow for tourism stakeholder reviews, including data processing, translation, analysis, and visualization.
+This directory contains Python scripts for tourism stakeholder sentiment analysis and International Tour Operator (ITO) assessment.
 
-## 📁 Folder Structure
+---
+
+## 📁 Directory Structure
 
 ```
 sentiment/
-├── scripts/           # Python analysis scripts
-├── data/             # Raw and processed data
-│   ├── config/       # Configuration files
-│   ├── raw_reviews/  # Original review data
-│   └── processed/    # Processed data
-├── output/           # Analysis results and reports
-├── workflows/        # Documentation and workflows
-└── README.md         # This file
+├── scripts/          # Python analysis scripts
+│   ├── analyzers/   # ITOS analyzer modules
+│   └── *.py         # Main analysis scripts
+├── data/
+│   ├── config/      # Configuration files (keywords, entities, patterns)
+│   └── sentiment_data/ # Review data by stakeholder
+├── output/          # Analysis results (CSV, JSON)
+└── workflows/       # Workflow documentation
 ```
+
+---
 
 ## 🚀 Quick Start
 
-### 1. Setup Environment
+### Setup Environment
+
 ```bash
 cd sentiment/scripts
 python -m venv ../sentiment_env
-source ../sentiment_env/bin/activate  # On Windows: ../sentiment_env/Scripts/activate
+source ../sentiment_env/bin/activate  # Windows: ../sentiment_env/Scripts/activate
 pip install -r ../../requirements.txt
 ```
 
-### 2. Data Preparation
-```bash
-# Separate reviews by stakeholder
-python separate_reviews_by_stakeholder.py
+---
 
-# Translate reviews to English
-python batch_translate.py
+## 📊 Two Main Workflows
+
+### 1. ITO Assessment (Operational Analysis)
+
+**What it does:** Analyzes how tour operators market Gambia (32 metrics per ITO)
+
+**Run:**
+```bash
+python run_ito_assessment_from_sheet.py
 ```
 
-### 3. Run Analysis
+**Output:** 
+- CSV file with 32 columns (ready for Google Sheets)
+- Activity coverage (12 categories)
+- Product types, booking pathways, local partnerships
+
+**Documentation:** See `../docs/ITOS_README.md`
+
+---
+
+### 2. Stakeholder Sentiment Analysis (Review Analysis)
+
+**What it does:** Analyzes TripAdvisor/Google reviews for tourism stakeholders
+
+**Steps:**
+
 ```bash
-# Comprehensive sentiment analysis
+# 1. Separate reviews by stakeholder
+python separate_reviews_by_stakeholder.py
+
+# 2. Translate reviews to English (if needed)
+python batch_translate.py
+
+# 3. Run comprehensive sentiment analysis
 python comprehensive_sentiment_analysis.py
 
-# Generate detailed insights
+# 4. Generate detailed insights
 python generate_detailed_insights.py
 ```
 
-### 4. View Results
-```bash
-# Local dashboard
-python local_dashboard.py
+**Output:**
+- Sentiment scores by theme
+- Critical area identification  
+- Quote extraction
+- Google Sheets-ready CSV
 
-# Or access via web app at http://localhost:5173
-```
+---
 
-## 📊 Scripts Overview
+## 🔧 Key Scripts
 
-### Core Analysis Scripts
-- **`comprehensive_sentiment_analysis.py`** - Main analysis engine
-- **`enhanced_sentiment_analysis.py`** - Enhanced sentiment analysis with themes
-- **`enhanced_theme_analysis.py`** - Deep theme-based analysis
-- **`generate_detailed_insights.py`** - Generate detailed insights and reports
-
-### Data Processing Scripts
-- **`separate_reviews_by_stakeholder.py`** - Separate reviews by stakeholder
-- **`translate_reviews.py`** - Translate reviews to English
-- **`batch_translate.py`** - Batch translation workflow
-
-### Integration Scripts
-- **`firebase_sentiment_integration.py`** - Firebase integration
-- **`automated_sentiment_pipeline.py`** - Complete automated pipeline
-- **`local_dashboard.py`** - Local visualization dashboard
-
-## 📈 Output Files
-
-### Analysis Results
-- **`comprehensive_sentiment_analysis_results.json`** - Complete analysis results
-- **`sentiment_analysis_google_sheets.csv`** - Google Sheets ready data
-- **`enhanced_theme_analysis_results.json`** - Theme analysis results
-
-### Visualizations
-- **`sentiment_analysis_dashboard.png`** - Dashboard visualization (if matplotlib available)
-
-## 🔧 Configuration
-
-### Analysis Themes (`data/config/analysis_themes.json`)
-Defines the themes for sentiment analysis:
-- Universal themes (applies to all stakeholders)
-- Sector-specific themes (tourism, cultural, etc.)
-
-### Stakeholder Mapping (`data/config/stakeholder_mapping.json`)
-Maps place names to stakeholder categories for data separation.
-
-## 📊 Features
+### ITOS Assessment
+- `run_ito_assessment_from_sheet.py` - Main orchestrator
+- `complete_ito_assessment.py` - Core assessment engine
+- `analyzers/activity_extractor.py` - 12 activity categories
+- `analyzers/product_classifier.py` - Product type detection
+- `analyzers/audience_analyzer.py` - Target audience detection
+- `itos_data_models.py` - Data structures
 
 ### Sentiment Analysis
-- **Overall sentiment scoring** (-1 to +1 scale)
-- **Theme-specific analysis** with detailed breakdowns
-- **Critical area identification** with priority levels
-- **Quote extraction** for improvement insights
+- `comprehensive_sentiment_analysis.py` - Main sentiment engine
+- `enhanced_sentiment_analysis.py` - Theme-based analysis
+- `generate_detailed_insights.py` - Insight generation
+- `batch_translate.py` - Google Cloud translation
 
 ### Data Processing
-- **Multi-language support** with Google Cloud Translation
-- **Stakeholder categorization** with keyword matching
-- **Data validation** and error handling
-- **Batch processing** for efficiency
+- `separate_reviews_by_stakeholder.py` - Split review datasets
+- `itos_web_scraper.py` - Scrape ITO websites
 
-### Visualization
-- **Interactive charts** (donut, bar charts)
-- **Dashboard views** for different audiences
-- **Export capabilities** for Google Sheets
-- **Local and web-based** visualization options
+---
 
-## 🌐 Web Integration
+## 📋 Configuration Files
 
-The sentiment analysis is integrated into the main web application:
+Located in `data/config/`:
 
-- **API Endpoints**: `/sentiment/summary`, `/sentiment/all`, `/sentiment/stakeholder/:name`
-- **Frontend Component**: React-based dashboard with Chart.js visualizations
-- **Real-time Updates**: Automatic data refresh and visualization
+### ITOS Assessment
+- `activity_keywords_comprehensive.json` - 400+ keywords for 12 activities
+- `audience_indicators.json` - 8 target audience patterns
+- `gambian_entities.json` - 150+ Gambian hotels/attractions/DMCs
+- `seasonality_patterns.json` - Seasonal marketing phrases
 
-## 📋 Workflow Steps
+### Sentiment Analysis
+- `analysis_themes.json` - Universal and sector themes
+- `stakeholder_mapping.json` - Review source to stakeholder mapping
 
-1. **Data Collection** - Gather reviews from various sources
-2. **Data Separation** - Separate by stakeholder using mapping rules
-3. **Translation** - Translate to English for analysis
-4. **Analysis** - Run comprehensive sentiment analysis
-5. **Visualization** - Generate charts and dashboards
-6. **Integration** - Feed results to web application
-7. **Reporting** - Generate reports and insights
+---
 
-## 🔍 Troubleshooting
+## 📤 Output Files
 
-### Common Issues
-- **Translation API errors**: Check Google Cloud credentials
-- **File not found errors**: Verify file paths in scripts
-- **Memory issues**: Process data in smaller batches
-- **Chart rendering**: Ensure Chart.js is properly installed
+All outputs go to `output/`:
 
-### Debug Mode
-Run scripts with verbose output:
+### ITOS Assessment
+- `ito_assessment_results_YYYYMMDD_HHMMSS.csv` - Import to Google Sheets
+- `ito_assessment_results_YYYYMMDD_HHMMSS.json` - Detailed data
+
+### Sentiment Analysis
+- `comprehensive_sentiment_analysis_results.json` - Complete analysis
+- `sentiment_analysis_google_sheets.csv` - Google Sheets format
+- `*_sentiment_analysis_google_sheets.csv` - Sector-specific results
+
+---
+
+## 🎯 Common Tasks
+
+### Task: Assess All ITOs
 ```bash
-python -u comprehensive_sentiment_analysis.py
+cd scripts
+python run_ito_assessment_from_sheet.py
+# Import output CSV to Google Sheets
 ```
 
-## 📚 Dependencies
+### Task: Analyze Tour Operator Reviews
+```bash
+cd scripts
+python analyze_tour_operators.py
+# Output: tour_operators_sentiment_analysis_google_sheets.csv
+```
 
-See `../../requirements.txt` for complete Python dependencies.
+### Task: Analyze Creative Industry Reviews
+```bash
+cd scripts
+python analyze_creative_industries.py
+# Output: creative_industries_sentiment_analysis_google_sheets.csv
+```
 
-Key packages:
-- `google-cloud-translate` - Translation services
-- `nltk` - Natural language processing
-- `pandas` - Data manipulation
-- `matplotlib` - Visualization
-- `chart.js` - Web charts (via npm)
+### Task: Scrape New ITO Data
+```bash
+cd scripts
+python itos_web_scraper.py
+# Updates ITO content for assessment
+```
 
-## 🤝 Contributing
+---
 
-When adding new features:
-1. Update configuration files as needed
-2. Add tests for new functionality
-3. Update this README
-4. Ensure backward compatibility
+## 🐛 Troubleshooting
 
-## 📞 Support
+### Import Errors
+**Solution:** Ensure virtual environment is activated and dependencies installed
+```bash
+source ../sentiment_env/bin/activate
+pip install -r ../../requirements.txt
+```
 
-For issues or questions:
-1. Check the troubleshooting section
-2. Review script logs for error messages
-3. Verify file paths and permissions
-4. Check API credentials and quotas
+### Google Sheets API Errors
+**Solution:** Check credentials in environment variables
+```bash
+export GOOGLE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}'
+```
+
+### Low Detection Rates
+**Solution:** 
+- Check keyword configuration files
+- Ensure content has sufficient length (200+ words)
+- Review confidence thresholds in analyzer code
+
+---
+
+## 📚 Documentation
+
+- **ITOS Assessment:** `../docs/ITOS_README.md` - Complete guide
+- **Workflows:** `workflows/SENTIMENT_WORKFLOW.md` - Detailed process
+- **Translation:** `workflows/TRANSLATION_WORKFLOW.md` - Translation guide
+
+---
+
+## 🔄 Workflow Diagrams
+
+### ITOS Assessment Flow
+```
+ITO Data → Activity Extractor → Product Classifier → Audience Analyzer 
+         → Booking Detector → Pricing Analyzer → Partnership Matcher
+         → CSV/JSON Output → Google Sheets Import
+```
+
+### Sentiment Analysis Flow
+```
+Raw Reviews → Separate by Stakeholder → Translate (if needed)
+           → Sentiment Analysis → Theme Extraction → Quote Extraction
+           → CSV/JSON Output → Google Sheets Import
+```
+
+---
+
+**Last Updated:** October 2025  
+**Python Version:** 3.9+  
+**Primary Maintainer:** Tourism Commons Team

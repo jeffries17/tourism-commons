@@ -1,0 +1,275 @@
+[
+  {
+    "survey_type": "CI",
+    "response_id": "Response 1",
+    "respondent_id": "7YV5riVXc3Wfu3r",
+    "survey_business_name": "Galloya Street Arts ",
+    "matched": true,
+    "matched_participant": "Galloya Street Arts",
+    "match_confidence": 1.0,
+    "sheet_row": 20,
+    "sheet_tab": "CI Assessment",
+    "total_score": 17.0,
+    "foundation_score": 4.75,
+    "capability_score": 8.0,
+    "growth_score": 4.25,
+    "tier": "Intermediate",
+    "breakdown": {
+      "foundation": {
+        "website": 2.0,
+        "social_platforms": 0.75,
+        "posting_frequency": 1.5,
+        "online_sales": 0.5,
+        "review_management": 0.0
+      },
+      "capability": {
+        "comfort_level": 3.0,
+        "device_access": 0.5,
+        "internet": 1.5,
+        "analytics": 3.0
+      },
+      "growth": {
+        "marketing_knowledge": 1.0,
+        "challenge_type": 0.5,
+        "content_creation": 1.5,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 1.25
+      }
+    }
+  },
+  {
+    "survey_type": "CI",
+    "response_id": "Response 2",
+    "respondent_id": "FeHlvzx1gBS7hR9",
+    "survey_business_name": "Flex Fuzion Entertainment & Dance Academy",
+    "matched": true,
+    "matched_participant": "Flex Fuzion Entertainment & Dance Academy",
+    "match_confidence": 1.0,
+    "sheet_row": 4,
+    "sheet_tab": "CI Assessment",
+    "total_score": 17.0,
+    "foundation_score": 6.0,
+    "capability_score": 6.0,
+    "growth_score": 5.0,
+    "tier": "Intermediate",
+    "breakdown": {
+      "foundation": {
+        "website": 0.5,
+        "social_platforms": 3.0,
+        "posting_frequency": 1.5,
+        "online_sales": 0.5,
+        "review_management": 0.5
+      },
+      "capability": {
+        "comfort_level": 3.0,
+        "device_access": 0.5,
+        "internet": 1.5,
+        "analytics": 1.0
+      },
+      "growth": {
+        "marketing_knowledge": 2.0,
+        "challenge_type": 0.5,
+        "content_creation": 1.5,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 1.0
+      }
+    }
+  },
+  {
+    "survey_type": "CI",
+    "response_id": "Response 3",
+    "respondent_id": "7hXI9TsPe4QUjeZ",
+    "survey_business_name": "Ebunjan Performing Arts Association ",
+    "matched": true,
+    "matched_participant": "Ebunjan Theatre (Performing Arts Centre)",
+    "match_confidence": 0.7123287671232876,
+    "sheet_row": 61,
+    "sheet_tab": "CI Assessment",
+    "total_score": 17.75,
+    "foundation_score": 5.5,
+    "capability_score": 8.0,
+    "growth_score": 4.25,
+    "tier": "Intermediate",
+    "breakdown": {
+      "foundation": {
+        "website": 2.0,
+        "social_platforms": 0.75,
+        "posting_frequency": 1.5,
+        "online_sales": 0.75,
+        "review_management": 0.5
+      },
+      "capability": {
+        "comfort_level": 3.0,
+        "device_access": 0.5,
+        "internet": 1.5,
+        "analytics": 3.0
+      },
+      "growth": {
+        "marketing_knowledge": 1.0,
+        "challenge_type": 0.5,
+        "content_creation": 1.5,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 1.25
+      }
+    }
+  },
+  {
+    "survey_type": "CI",
+    "response_id": "Response 4",
+    "respondent_id": "oUhHUFQAnFwwJxe",
+    "survey_business_name": "Yaws Creation",
+    "matched": true,
+    "matched_participant": "Yaws Creations",
+    "match_confidence": 0.9629629629629629,
+    "sheet_row": 12,
+    "sheet_tab": "CI Assessment",
+    "total_score": 17.5,
+    "foundation_score": 5.75,
+    "capability_score": 6.5,
+    "growth_score": 5.25,
+    "tier": "Intermediate",
+    "breakdown": {
+      "foundation": {
+        "website": 0.5,
+        "social_platforms": 3.0,
+        "posting_frequency": 1.5,
+        "online_sales": 0.75,
+        "review_management": 0.0
+      },
+      "capability": {
+        "comfort_level": 2.0,
+        "device_access": 0.5,
+        "internet": 2.0,
+        "analytics": 2.0
+      },
+      "growth": {
+        "marketing_knowledge": 2.0,
+        "challenge_type": 0.5,
+        "content_creation": 1.5,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 1.25
+      }
+    }
+  },
+  {
+    "survey_type": "CI",
+    "response_id": "Response 5",
+    "respondent_id": "4JlkeuUxtYCAwNa",
+    "survey_business_name": "Abuko pottery Centre ",
+    "matched": true,
+    "matched_participant": "Abuko Pottery Center",
+    "match_confidence": 0.95,
+    "sheet_row": 43,
+    "sheet_tab": "CI Assessment",
+    "total_score": 20.25,
+    "foundation_score": 8.25,
+    "capability_score": 8.5,
+    "growth_score": 3.5,
+    "tier": "Advanced",
+    "breakdown": {
+      "foundation": {
+        "website": 2.0,
+        "social_platforms": 3.0,
+        "posting_frequency": 2.0,
+        "online_sales": 0.75,
+        "review_management": 0.5
+      },
+      "capability": {
+        "comfort_level": 3.0,
+        "device_access": 0.5,
+        "internet": 2.0,
+        "analytics": 3.0
+      },
+      "growth": {
+        "marketing_knowledge": 0.5,
+        "challenge_type": 0.5,
+        "content_creation": 1.5,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 1.0
+      }
+    }
+  },
+  {
+    "survey_type": "TO",
+    "response_id": "Response 1",
+    "respondent_id": "MEsRdNqKuAj8yXa",
+    "survey_business_name": "Ecotours ",
+    "matched": true,
+    "matched_participant": "Eco Tours",
+    "match_confidence": 0.9411764705882353,
+    "sheet_row": 6,
+    "sheet_tab": "TO Assessment",
+    "total_score": 15.0,
+    "foundation_score": 4.0,
+    "capability_score": 6.5,
+    "growth_score": 4.5,
+    "tier": "Intermediate",
+    "breakdown": {
+      "foundation": {
+        "website": 1.0,
+        "social_platforms": 1.5,
+        "posting_frequency": 1.5,
+        "online_sales": 0.0,
+        "review_management": 0.0
+      },
+      "capability": {
+        "comfort_level": 3.0,
+        "device_access": 0.5,
+        "internet": 2.0,
+        "analytics": 1.0
+      },
+      "growth": {
+        "marketing_knowledge": 2.0,
+        "challenge_type": 0.5,
+        "content_creation": 1.5,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 0.5
+      }
+    }
+  },
+  {
+    "survey_type": "TO",
+    "response_id": "Response 2",
+    "respondent_id": "4MRrcTwGeJEZXJX",
+    "survey_business_name": "BUSHWHACKER TOURS ",
+    "matched": true,
+    "matched_participant": "Bushwhacker Tours",
+    "match_confidence": 1.0,
+    "sheet_row": 7,
+    "sheet_tab": "TO Assessment",
+    "total_score": 18.0,
+    "foundation_score": 6.5,
+    "capability_score": 7.0,
+    "growth_score": 4.5,
+    "tier": "Intermediate",
+    "breakdown": {
+      "foundation": {
+        "website": 1.0,
+        "social_platforms": 3.0,
+        "posting_frequency": 1.0,
+        "online_sales": 0.0,
+        "review_management": 1.5
+      },
+      "capability": {
+        "comfort_level": 2.0,
+        "device_access": 0.5,
+        "internet": 1.5,
+        "analytics": 3.0
+      },
+      "growth": {
+        "marketing_knowledge": 2.0,
+        "challenge_type": 0.5,
+        "content_creation": 1.0,
+        "monthly_investment": 0.0,
+        "training": 0.0,
+        "growth_ambition": 1.0
+      }
+    }
+  }
+]

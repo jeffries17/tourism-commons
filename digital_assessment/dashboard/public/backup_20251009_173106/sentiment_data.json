@@ -1,0 +1,1766 @@
+{
+  "summary": {},
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "abuko_nature_reserve",
+      "total_reviews": 185,
+      "average_rating": 3.2,
+      "overall_sentiment": 0.348,
+      "positive_rate": 71.3,
+      "language_distribution": {
+        "en": 185
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 3,
+        "2023": 3,
+        "2022": 3,
+        "2020": 5,
+        "2019": 15,
+        "2018": 13,
+        "2017": 17,
+        "2016": 23,
+        "2015": 31,
+        "2014": 26,
+        "2013": 19,
+        "2012": 18,
+        "2011": 1,
+        "2010": 1,
+        "2008": 1,
+        "2007": 1
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.62,
+          "mentions": 23,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.92,
+          "mentions": 35,
+          "distribution": {
+            "positive": 35,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.6,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "infrastructure_state": {
+          "score": -0.12,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "accessibility_comfort": {
+          "score": -0.43,
+          "mentions": 20,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 15
+          }
+        },
+        "value_pricing": {
+          "score": 0.02,
+          "mentions": 21,
+          "distribution": {
+            "positive": 10,
+            "neutral": 1,
+            "negative": 10
+          }
+        },
+        "safety_security": {
+          "score": -0.33,
+          "mentions": 6,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 4
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "was so peaceful and amazing all at the same time worth a visit, for a tour and culture and traditions and seeing the baboo's"
+        ],
+        "guide_quality": [
+          "we had a guide that was very helpful and friendly and at a good price",
+          "staff were not pushy at all and were friendly",
+          "the monkeys aren&#39;t very friendly"
+        ],
+        "cultural_value": [
+          "africa at its finest, the &quot;national zoo of gambia,&quot; a few hyenas and baboons\u2014you shouldn&#39;t expect anything more, but this is a unique experience",
+          "our wise local guide pointed out three types of cattle, from s\u00e9n\u00e9gal, mali, and the gambia",
+          "a beautiful and well-maintained forest where you can spot birds with a local guide"
+        ],
+        "ferry_service": [
+          "what follows is in essence a very nice walk following a well worn path through shady and peaceful woodland, a few birds along the way but nothing you won&#39;t see around your hotel, an army of ants crossing the path, some epic spider&#39;s webs, but not much else",
+          "i only gave two stars because the forest itself is quite nice to walk around and i came with low expectations but i had the opportunity of taking a day trip from one of the beach resorts earlier in my holiday and i'm really glad i didn't",
+          "hotel needs a little tlc , but look pass that and u would have a wonderful holiday , staff were so friendly and we had a laugh with lot of them , and went out with one of the staff for the day , good ok , pool kept nice and clean by ( chicken legs ha ha ) he was a great laugh, pa for fishing trip (great day out ) and well pa in side bar he crazy and so much fun ,ok to go to town the boy do wait out side hotel but you can just say no thank you , we didn't and they carry yr shopping and tell u about the town ( all they ask is a english pound , that's cheap to learn a lot"
+        ],
+        "infrastructure_state": [
+          "it&#39;s a shame to see the hyenas in their cage in poor condition",
+          "never seen animals is such appalling conditions, no clean water, hyenas that were so mange ridden it must of been awful for them in the heat",
+          "the hyenas weren&#39;t in good condition either"
+        ],
+        "accessibility_comfort": [
+          "our guide was nice enough but basically it&#39;s a long walk down a path through bushes",
+          "then more walking until finally you get to the world&#39;s most depressing zoo - where they&#39;ll tell you some thoroughly unconvincing nonsense about why these baboons needed to be in an enclosure rather than just free",
+          "after this it was a boiling hot walk through a sandy path with more nonsensical waffling from the smelly guide"
+        ],
+        "value_pricing": [
+          "a waste of time and money",
+          "two birds in the distance - use the expensive binoculars",
+          "at this time, it&#39;s definitely not worth visiting the reserve"
+        ],
+        "safety_security": [
+          "apparently it is too \u201cdangerous\u201d to go without a guide",
+          "if you don&#39;t know where to look, very dangerous&#39;",
+          "they do look dangerous but we had a ranger protecting us while we take our picture with them having behind us in the close proximity"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Accessibility Comfort",
+          "sentiment_score": -0.4333333333333333,
+          "mention_count": 20,
+          "quotes": [
+            "our guide was nice enough but basically it&#39;s a long walk down a path through bushes",
+            "then more walking until finally you get to the world&#39;s most depressing zoo - where they&#39;ll tell you some thoroughly unconvincing nonsense about why these baboons needed to be in an enclosure rather than just free",
+            "after this it was a boiling hot walk through a sandy path with more nonsensical waffling from the smelly guide"
+          ],
+          "priority": "high"
+        },
+        {
+          "theme": "Safety Security",
+          "sentiment_score": -0.3333333333333333,
+          "mention_count": 6,
+          "quotes": [
+            "apparently it is too \u201cdangerous\u201d to go without a guide",
+            "if you don&#39;t know where to look, very dangerous&#39;",
+            "they do look dangerous but we had a ranger protecting us while we take our picture with them having behind us in the close proximity"
+          ],
+          "priority": "high"
+        },
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.125,
+          "mention_count": 4,
+          "quotes": [
+            "it&#39;s a shame to see the hyenas in their cage in poor condition",
+            "never seen animals is such appalling conditions, no clean water, hyenas that were so mange ridden it must of been awful for them in the heat",
+            "the hyenas weren&#39;t in good condition either"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "The animals&#39; living conditions are terrible",
+          "Was so disappointed with this place",
+          "We were a bit disappointed; perhaps we were there at the wrong time",
+          "We had no interest in visiting the &quot;zoo&quot; preferring to spend our time looking for birds and we were not disappointed",
+          "We had previously visited other reserves in Gambia and this one disappointed us",
+          "The &#39;protected&#39; forest itself is very disappointing and most of the animals have left, bar a few monkeys",
+          "Many people have commented on how awful they find the animals in cages, but it&#39;s not much different from a zoo in our home country",
+          "It&#39;s a shame to see the hyenas in their cage in poor condition",
+          "For many years ago it was a nice place where they had names on evert special trees and there were so many different animals there, but now I&#39;m disappointed because it&#39;s mostly apes and births there now day",
+          "Never seen animals is such appalling conditions, no clean water, Hyenas that were so mange ridden it must of been awful for them in the heat",
+          "Our guide was great and very informative but the lack of animals was disappointing and I&#39;m sure we walked a couple of hours",
+          "The Hyenas were in an awful state, one was surrounded by vultures and it was obvious he was sick",
+          "We went late morning and were disappointed: little to see, some caged hyenas, self appointed guide, aggressive monkeys (not like Bijolo)",
+          "Was a terrible day out, it would be a bit better if they cleared all the wood carving sellers away - or only let one or two sell - not around 10 that you have to pass on your way out, all selling the same things",
+          "We were actually a bit disappointed with this park",
+          "I may have ideas as to how this could be improved and would love to be able to help in someway",
+          "We were sorry we didn&#39;t see crocs from the lookout point across the pool, and were disappointed and saddened by the dirty-looking &#39;animal orphanage&#39; - even if they did have hyenas and pelicans",
+          "The one bad point is the awful &#39;zoo&#39; in the middle where they house baboons, hyenas and turtles",
+          "We saw very little and were very disappointed",
+          "The hyenas were pacing up and down ie exhibiting stereotypical behavior, which was not good to see at all"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 185,
+        "gap_opportunity": 185
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.9238095238095239
+        },
+        {
+          "theme": "guide_quality",
+          "score": 0.6248792270531401
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "accessibility_comfort",
+          "score": -0.4333333333333333
+        },
+        {
+          "theme": "safety_security",
+          "score": -0.3333333333333333
+        },
+        {
+          "theme": "infrastructure_state",
+          "score": -0.125
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "wassu_stone_circles",
+      "total_reviews": 13,
+      "average_rating": 4.3,
+      "overall_sentiment": 0.646,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 13
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2023": 1,
+        "2022": 1,
+        "2020": 1,
+        "2019": 3,
+        "2018": 3,
+        "2017": 1,
+        "2016": 1,
+        "2013": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.29,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "my husband and i stopped here on our way to george town we got to talk to the most knowledgeable man ever the stone man he really knows his stuff and explained everything to you and things start to add up once he starts to explain it all to you , as myself and my husband are into spiritaul things we just couldn\u2019t get enough of the place",
+          "it is 1,000% safe, the people are lovely and friendly"
+        ],
+        "cultural_value": [
+          "due to local beliefs and respect the other circles have not been excavated",
+          "in the middle of no-where, in a country where electricity is a luxury, that was a very special treat",
+          "stunning special place"
+        ],
+        "safety_security": [
+          "it is 1,000% safe, the people are lovely and friendly"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 13,
+        "gap_opportunity": 13
+      },
+      "key_strengths": [
+        {
+          "theme": "cultural_value",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "banjul_craft_market",
+      "total_reviews": 267,
+      "average_rating": 3.8,
+      "overall_sentiment": 0.765,
+      "positive_rate": 92.7,
+      "language_distribution": {
+        "en": 267
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 3,
+        "2023": 2,
+        "2022": 1,
+        "2021": 1,
+        "2020": 12,
+        "2019": 33,
+        "2018": 25,
+        "2017": 20,
+        "2016": 47,
+        "2015": 20,
+        "2014": 35,
+        "2013": 32,
+        "2012": 30,
+        "2010": 1,
+        "2009": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.66,
+          "mentions": 25,
+          "distribution": {
+            "positive": 23,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.92,
+          "mentions": 94,
+          "distribution": {
+            "positive": 94,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.33,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.49,
+          "mentions": 15,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 4
+          }
+        },
+        "value_pricing": {
+          "score": 0.43,
+          "mentions": 21,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 5
+          }
+        },
+        "safety_security": {
+          "score": 0.75,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "excellent english is spoken, which is helpful for negotiating",
+          "the people are generally friendly",
+          "however, one should not be afraid of direct contact with the always friendly vendors and should not be afraid of the sometimes narrow alleys between the stalls"
+        ],
+        "cultural_value": [
+          "nothing special to see if you have been to similar markets and a hassle when \u201cguides\u201d won\u2019t leave you alone",
+          "you cannot take photos of locals unless you buy from them",
+          "didn\u2019t buy  much but  nice to see locals selling their food"
+        ],
+        "ferry_service": [
+          "he was very good at adjusting the trip after our needs"
+        ],
+        "accessibility_comfort": [
+          "i felt very comfortable walking around with someone who was familiar with the do&#39;s and don&#39;ts of the market, so i was very happy to have a guide",
+          "and tell us that you can handle it better and be more comfortable with it because you are more than happy with your religion",
+          "it\u2019s best to go with a guide or someone that knows the place as it\u2019s easy to get lost in the winding alleys and narrow ways"
+        ],
+        "value_pricing": [
+          "nothing to see except locals buying cheap chinese rubbish and food",
+          "souvenirs were a bit more expensive than the bakau craft market",
+          "it was a really busy market selling everything but it's worth it more for the experience than to buy stuff"
+        ],
+        "safety_security": [
+          "it&#39;s safe, no one will bother you",
+          "it is not safe to go alone as you get too much hassle and pick picketers",
+          "guidelines regarding hygiene and food safety, as we know them, will likely be unfamiliar here"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "Grit your teeth, ignore the bumsters, and go your own way, and you won&#39;t be disappointed",
+          "Most of what is on sale is poor quality Chinese produce"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 267,
+        "gap_opportunity": 267
+      },
+      "key_strengths": [
+        {
+          "theme": "cultural_value",
+          "score": 0.9177304964539008
+        },
+        {
+          "theme": "safety_security",
+          "score": 0.75
+        },
+        {
+          "theme": "guide_quality",
+          "score": 0.6607619047619047
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "brikama_woodcarvers_market",
+      "total_reviews": 20,
+      "average_rating": 4.4,
+      "overall_sentiment": 0.508,
+      "positive_rate": 81.2,
+      "language_distribution": {
+        "en": 20
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2022": 2,
+        "2019": 2,
+        "2018": 1,
+        "2016": 5,
+        "2015": 2,
+        "2014": 3,
+        "2013": 2,
+        "2012": 1,
+        "2009": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.78,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.96,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.5,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": -1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "value_pricing": {
+          "score": 0.1,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "it is a little difficult to just browse here as all the sellers call out for you to visit their 'shop', however the atmosphere is friendly",
+          "the people are extremely friendly and kind",
+          "birds and animals we saw hippos and crocodiles and a huge variety of bird-life along small backwaters that make the gambia so attractive to bird-watchers abdoulie was an excellent guide with a wealth of local knowledge and contacts which made the trip run smoothly and tailored to what we wanted to see we never felt we were being herded along on a package tour"
+        ],
+        "cultural_value": [
+          "here you&#39;ll find wood and stone statues, as well as hand-carved traditional masks, at very reasonable prices",
+          "well worth a visit to see local carvers at work and displaying their item for sale if you see something you like always haggle and you will get it for somewhere half the asking price",
+          "this craft market at the border of the senegambia is one of many in gambia and displays a wide variety of hand made local products"
+        ],
+        "ferry_service": [
+          "our trip took in the wassu stone circles (evidence of ancient civilization here); the wonderful janjanbureh camp with its perfect location on the river gambia and good quality accommodation and food; the historic towns of janjanbureh and kuntaur, the bustling &#39;crossroad&#39; town of farafenni, the riverside tendaba camp and the rural villages along the country&#39;s south road",
+          "birds and animals we saw hippos and crocodiles and a huge variety of bird-life along small backwaters that make the gambia so attractive to bird-watchers abdoulie was an excellent guide with a wealth of local knowledge and contacts which made the trip run smoothly and tailored to what we wanted to see we never felt we were being herded along on a package tour"
+        ],
+        "accessibility_comfort": [
+          "it is a little difficult to just browse here as all the sellers call out for you to visit their 'shop', however the atmosphere is friendly"
+        ],
+        "value_pricing": [
+          "bargaining is key, but try to squeeze through to the back (happy corner) for less pushiness and fair prices",
+          "keep in mind that you should bargain, but don&#39;t go overboard, as they think it&#39;s a big price, and a difference of a few euros might not be too much for you",
+          "here you&#39;ll find wood and stone statues, as well as hand-carved traditional masks, at very reasonable prices"
+        ],
+        "safety_security": [
+          "a real experience the trip was a mind-altering experience into the way of life of a country with wonderful people and beautiful scenery in which the hospitality was outstanding and where we felt welcome and safe at all times"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Accessibility Comfort",
+          "sentiment_score": -1.0,
+          "mention_count": 1,
+          "quotes": [
+            "it is a little difficult to just browse here as all the sellers call out for you to visit their 'shop', however the atmosphere is friendly"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 20,
+        "gap_opportunity": 20
+      },
+      "key_strengths": [
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.96
+        },
+        {
+          "theme": "guide_quality",
+          "score": 0.7777777777777778
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "accessibility_comfort",
+          "score": -1.0
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "tanji_village_market",
+      "total_reviews": 54,
+      "average_rating": 4.3,
+      "overall_sentiment": 0.883,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 54
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2022": 1,
+        "2020": 2,
+        "2019": 4,
+        "2018": 12,
+        "2017": 7,
+        "2016": 13,
+        "2015": 9,
+        "2014": 4,
+        "2013": 1
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.75,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.93,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.92,
+          "mentions": 24,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.5,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 0.71,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "this small museum gives a fascinating insight into the gambian way of life and its traditions",
+          "off the tour visit for sometime but worth going in a taxi, 200d each to go in very informative and lots of live craft to watch done in the traditional way, we have not been for some time and it has improved, would not visit every year but would return in future"
+        ],
+        "guide_quality": [
+          "our guide was very knowledgeable and i came a way with a real insight into traditional gambian village life",
+          "i also watched a weaver busy with his craft and listened to traditional songs played by a band of musicians while sitting in the bantaba sipping tea and trying to appease my customary curiosity by firing unending questions at the knowledgeable guide",
+          "the guides are knowledgeable and informative"
+        ],
+        "cultural_value": [
+          "i had a guide named tamba jefang from finfoot birding, which was a unique experience",
+          "it would be nice if there were regular, lively cultural events, such as traditional festivals with music and dance, and other things that go with it",
+          "you&#39;ll be amazed at how the people here still do everything traditionally"
+        ],
+        "ferry_service": [
+          "the museum offers a nice introduction to gambian life but, having just returned from a 4-day trip along the river gambia with tour company &quot;tour gambia&quot; (100% recommended), we felt we knew a lot of what was told us and/or had already seen many of the exhibits in a more natural setting - ie in a real village, or had seen the wildlife or birds along the river or mangrove backwaters",
+          "hundreds, even thousands, of residents gather on a good 200 meters of beach to empty a dozen primitive fishing boats"
+        ],
+        "accessibility_comfort": [
+          "they were comfortable",
+          "don&#39;t expect a fancy place like one of the hotels in the touristic areas, but you have everything you need, like flushing toilet, comfortable bed, shower, etc",
+          "the tanji village museum is located on the main road and is easy to find"
+        ],
+        "value_pricing": [
+          "prices in the shop were genuine and good value",
+          "the cost was very reasonable at d150 for adults and d25 for children",
+          "good demostrations and our tour guide was informative and friendly i think the wildlife section could be updated and the old huts where the head of the villiage and the families lived could do with a repaint otherwise i enjoyed my visit to this museum located to the south of tanji on the main highway traditional african drums and other instruments are played and you can sit in the bar to listen to the african music and partake in light refreshments at reasonable prices"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "It got extremely crowded (but not as pungently awful as the smoking area)",
+          "The smell was awful but made the visit"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 54,
+        "gap_opportunity": 54
+      },
+      "key_strengths": [
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "guide_quality",
+          "score": 0.9285714285714286
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.9222222222222222
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "kachikally_crocodile_pool",
+      "total_reviews": 300,
+      "average_rating": 4.1,
+      "overall_sentiment": 0.705,
+      "positive_rate": 89.0,
+      "language_distribution": {
+        "en": 300
+      },
+      "year_distribution": {
+        "2025": 12,
+        "2024": 16,
+        "2023": 18,
+        "2022": 12,
+        "2021": 3,
+        "2020": 29,
+        "2019": 83,
+        "2018": 105,
+        "2017": 22
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.92,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.78,
+          "mentions": 26,
+          "distribution": {
+            "positive": 25,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.89,
+          "mentions": 71,
+          "distribution": {
+            "positive": 71,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.33,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.13,
+          "mentions": 17,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 8
+          }
+        },
+        "value_pricing": {
+          "score": 0.47,
+          "mentions": 33,
+          "distribution": {
+            "positive": 25,
+            "neutral": 0,
+            "negative": 8
+          }
+        },
+        "safety_security": {
+          "score": 0.84,
+          "mentions": 16,
+          "distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "the history and legend are definitely worth taking in, and perhaps you&#39;ll change your perspective",
+          "the history of this sacred pool is very interesting and being so close to the crocodiles is an amazing experience",
+          "what an amazing experience from when you arrive to see the interesting museum with local instruments and the history of the gambia, then on to the crocodile pool"
+        ],
+        "guide_quality": [
+          "amazing time, our guide keba was very kind and helpful at getting us to all of our destinations",
+          "ali is a very friendly man",
+          "the pool guides are knowledgeable and friendly"
+        ],
+        "cultural_value": [
+          "they do ask for a donation to \"feed\" the crocodiles and some locals selling pencils and books for the local children",
+          "we walked from cape point (approx 20 minutes) with very little hassle so had the added bonus of seeing where the locals live",
+          "if you are in the area you should make the visit and from further afield it would be worth negotiating a price with a local taxi driver"
+        ],
+        "ferry_service": [
+          "a good local trip and interesting museum that explains a great deal of the gambian history",
+          "with a historical museum to walk through, educating us of gambian soldiers who fought in the world war and local traditional practices, and much more was a nice informative way to start of a great trip",
+          "off the beaten track and through a very poor area in bakou, you get to see a more real side of gambia on your journey there"
+        ],
+        "accessibility_comfort": [
+          "never believed i could be comfortable walking amongst a bunch of very large crocodiles, and even petting one, but i was",
+          "our hotel,but it did mean a walk through bakau old town which is a poverty striking area with lots of kids begging for sweets, so i was glad we hired a guy from the beach to take us there, as his presence made the journey there very easy",
+          "there is a well trodden path, through some huge trees and local monkeys until you hit the pool, where rangers will arrange for visitors to pose with and touch the crocs for some great photo opportunities"
+        ],
+        "value_pricing": [
+          "and at 100 dalsi spot, it&#39;s cheap",
+          "we called in here on the way back to our hotel and it was definitely worth it",
+          "d100 entry fee was reasonable and they may ask for a donation at the end which is completely up to you if you want to give some"
+        ],
+        "safety_security": [
+          "living in florida, i know to keep a safe distance form alligators",
+          "very knowledgeable guides ensure your visit is safe",
+          "they tell you where to walk to stay safe"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "There is a small museum at the entrance, very small park, we came out disappointed",
+          "Was kind if disappointing so short but, worth it",
+          "Touching a crocodile has to be a bucket list things to do & we were not disappointed",
+          "Anyway they enjoyed the experience, pool men could be better informed and interactive in the job role",
+          "Wasn't disappointed, there's looots of them in a small pool, lying around everywhere, calm and lazy just lounging",
+          "The road are terrible and if you have to walk you realize you walking along open sewer"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.33333333333333337,
+        "total_responses": 1,
+        "total_reviews": 300,
+        "gap_opportunity": 299
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 0.9166666666666666
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.8920187793427229
+        },
+        {
+          "theme": "safety_security",
+          "score": 0.84375
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "national_museum_gambia",
+      "total_reviews": 26,
+      "average_rating": 3.7,
+      "overall_sentiment": 0.727,
+      "positive_rate": 90.9,
+      "language_distribution": {
+        "en": 26
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 1,
+        "2023": 1,
+        "2020": 5,
+        "2019": 10,
+        "2018": 2,
+        "2017": 5
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.5,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.83,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 1.0,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "infrastructure_state": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": -1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "these precious, valuable historical items are not well-protected and exposed to air and people touching them,  the items merit a financial investment to upgrade how the items are conserved"
+        ],
+        "guide_quality": [
+          "our tour guides were very knowledgeable regarding the artifacts in the museum",
+          "but if you take a taxi, the driver can also give you excellent explanations",
+          "the only employee was friendly and helpful"
+        ],
+        "cultural_value": [
+          "here, with respect for the history of the country and its people, and with modest resources, a place has been created that uniquely illuminates the harsh aspects of life in an african country (then and now)",
+          "when in banjul, take a look into this small but fairly well organized museum over gambian history and a glimpse of the local culture",
+          "a lovely museum, especially worth a visit if you&#39;re in banjul"
+        ],
+        "infrastructure_state": [
+          "no flashy building on independence drive in banjul, no slick presentations with all sorts of modern, possibly digital, gadgets, but very basic\u2014that&#39;s how the national museum&#39;s accommodation and layout can be characterized",
+          "the museum artifacts are not kept in good condition"
+        ],
+        "accessibility_comfort": [
+          "restroom is in another building, not wheel chair accessible"
+        ],
+        "safety_security": [
+          "located in an old colonial building it is home to historical documents and displays concerning the gambia"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Safety Security",
+          "sentiment_score": -1.0,
+          "mention_count": 1,
+          "quotes": [
+            "located in an old colonial building it is home to historical documents and displays concerning the gambia"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 3.8461538461538463,
+        "total_responses": 1,
+        "total_reviews": 26,
+        "gap_opportunity": 25
+      },
+      "key_strengths": [
+        {
+          "theme": "cultural_value",
+          "score": 1.0
+        },
+        {
+          "theme": "infrastructure_state",
+          "score": 1.0
+        },
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "safety_security",
+          "score": -1.0
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "arch_22_museum",
+      "total_reviews": 155,
+      "average_rating": 3.2,
+      "overall_sentiment": 0.528,
+      "positive_rate": 77.8,
+      "language_distribution": {
+        "en": 155
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2023": 2,
+        "2022": 2,
+        "2021": 2,
+        "2020": 5,
+        "2019": 18,
+        "2018": 16,
+        "2017": 16,
+        "2016": 15,
+        "2015": 15,
+        "2014": 13,
+        "2013": 18,
+        "2012": 25,
+        "2011": 3,
+        "2010": 1,
+        "2008": 1
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.75,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.97,
+          "mentions": 19,
+          "distribution": {
+            "positive": 19,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "infrastructure_state": {
+          "score": -0.14,
+          "mentions": 7,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 4
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.5,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "value_pricing": {
+          "score": 0.2,
+          "mentions": 15,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 6
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "it isn&#39;t that beautiful but it has a bloody history that will tell you about the dictator and the killings going on in front of the arch",
+          "nice to see and definitely worth climbing, because from above you can clearly see that gambia is an island, halfway up the arch there is a small room decorated with historical items"
+        ],
+        "guide_quality": [
+          "for 50 dalasi, you get a tour of the arch all the way to the top, and an excellent view of banjul",
+          "the guides take great care of you and are very informative",
+          "they were informative, we enjoyed their company so much that we asked for the same guides again"
+        ],
+        "cultural_value": [
+          "entrance is 100 dalasis for foreigners, a few steps, then a beautiful view, and above all, it&#39;s a gathering place for locals",
+          "leggendo le guide pensi che sia qualcosa di importante da vedere, per\u00f2 quando ci arrivi, ti accorgi che non \u00e8 niente di speciale",
+          "it is very much a local landmark"
+        ],
+        "ferry_service": [
+          "the view over banjul was brill, entrance fee was very cheap less than 50p theres a small museum inside which is interesting, and when you come down across the road is billys bar where they sell good cold cheap drinks service with a smile"
+        ],
+        "infrastructure_state": [
+          "the condition is shockingly poor, and while there are a few rooms to look at, they&#39;re without light, very neglected, and everything is falling apart",
+          "the building is in a sorry state, and the elevator is broken, so it&#39;s not really worth seeing for people with disabilities; you have to climb the stairs",
+          "it&#39;s in poor condition anyway, and i would advise against visiting it due to the risk of accidents (elevator shaft open, etc"
+        ],
+        "accessibility_comfort": [
+          "access to the upper floors can be made through a series of several marble spiral stairs",
+          "we stopped here on our visit to banjul and it is easy to park nearby, there are eating and drinking facilities nearby so we stopped and took some photo's",
+          "this is an easy tourist attraction to visit and it is also nice if you want to take your own picnic, plenty of space"
+        ],
+        "value_pricing": [
+          "not worth a visit if it weren&#39;t for the view; a quick stop, and that&#39;s enough; it&#39;s a shame they don&#39;t take care of it a bit",
+          "it&#39;s not worth going there just for the arch; you can easily see it as part of a city tour",
+          "not worth looking at it"
+        ],
+        "safety_security": [
+          "unfortunately it\u2019s not been well looked after and maintained- the elevator doesn\u2019t work and the stairway is really dark which is dangerous because it\u2019s a winding, loopy staircase",
+          "infact, the person at the front encouraged us to take the 'safer' stairs"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.14285714285714285,
+          "mention_count": 7,
+          "quotes": [
+            "the condition is shockingly poor, and while there are a few rooms to look at, they&#39;re without light, very neglected, and everything is falling apart",
+            "the building is in a sorry state, and the elevator is broken, so it&#39;s not really worth seeing for people with disabilities; you have to climb the stairs",
+            "it&#39;s in poor condition anyway, and i would advise against visiting it due to the risk of accidents (elevator shaft open, etc"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "Museum at the top was very disappointing",
+          "It&#39;s in poor condition anyway, and I would advise against visiting it due to the risk of accidents (elevator shaft open, etc",
+          "Greeted by two lovely ladies and set the task of counting the steps to the top I was quite disappointed by the rather tatty &#39;museum&#39; exhibits on the way up and not really knowing what to expect was quite underwhelmed by the view(s) from the top"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.6451612903225806,
+        "total_responses": 1,
+        "total_reviews": 155,
+        "gap_opportunity": 154
+      },
+      "key_strengths": [
+        {
+          "theme": "historical_significance",
+          "score": 1.0
+        },
+        {
+          "theme": "ferry_service",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.9736842105263158
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "infrastructure_state",
+          "score": -0.14285714285714285
+        }
+      ],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "fort_bullen_barra_museum",
+      "total_reviews": 11,
+      "average_rating": 4.4,
+      "overall_sentiment": 0.839,
+      "positive_rate": 100.0,
+      "language_distribution": {
+        "en": 11
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2021": 2,
+        "2019": 5,
+        "2018": 3
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.75,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.83,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.75,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "it was amazing to learn about the history and significance of the structure itself as well as the history, language and culture of the gambian north bank",
+          "halima, the excellent tour guide, provided us with a fascinating insight into how the fort operated; its role in the abolition of slavery and the wider historical context",
+          "a well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusiastic curator who showed us around"
+        ],
+        "guide_quality": [
+          "the museum here is just as good as the main national one in banjul, and because there are so few visitors, you get your own guided tour from the very knowledgeable curator who works there",
+          "the museum guide was particularly helpful and explained the history of the place in detail",
+          "the guide was informative and worth having"
+        ],
+        "cultural_value": [
+          "a local guide explains the details",
+          "just up the beach from fort bullen, a local educator is putting together a black cultural archive"
+        ],
+        "accessibility_comfort": [
+          "easily accessible and hugely enlightening",
+          "i am based in fajara, and it was easy to catch a couple of bush taxis, get the ferry and the walk to the fort from the ferry terminal in barra",
+          "the fort is easy to find, has a convenient parking and nice scenic views"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "This place should be better known",
+          "A well done museum  with ghoulish artifacts but a wonderful history of the terrible slave trade presented by a very enthusiastic curator who showed us around"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 11,
+        "gap_opportunity": 11
+      },
+      "key_strengths": [
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "guide_quality",
+          "score": 0.8333333333333334
+        },
+        {
+          "theme": "historical_significance",
+          "score": 0.75
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "bakau_craft_market",
+      "total_reviews": 47,
+      "average_rating": 4.2,
+      "overall_sentiment": 0.839,
+      "positive_rate": 93.5,
+      "language_distribution": {
+        "en": 47
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2020": 2,
+        "2019": 2,
+        "2018": 4,
+        "2017": 8,
+        "2016": 11,
+        "2015": 14,
+        "2014": 4,
+        "2013": 1
+      },
+      "theme_scores": {
+        "guide_quality": {
+          "score": 0.93,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.97,
+          "mentions": 15,
+          "distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 0.43,
+          "mentions": 7,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "guide_quality": [
+          "very friendly people selling their wares",
+          "while all the traders were extremely friendly and eager for us to buy, none of them were aggressively pushy and all of them kept smiling even when we didn't buy from their stalls",
+          "the stall holders are friendly and in most cases low pressure, just come and look"
+        ],
+        "cultural_value": [
+          "local to ngala lodge hotel, the goods here seem to be of a better quality than some of the other markets",
+          "love all the colourful costumes the local women wear",
+          "locals a bit too pushy with tourists just be firm and walk away"
+        ],
+        "accessibility_comfort": [
+          "it was interesting and easy to walk around with very little hassle"
+        ],
+        "value_pricing": [
+          "worth seeing, but quite expensive",
+          "a little haggling is recommended, but when something is already so cheap, i have a hard time doing so and don&#39;t go overboard",
+          "not some cheap chinese reproduction"
+        ],
+        "safety_security": [
+          "this safe, relaxed and authentic market offers value for money and some terrific souvenirs"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {},
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 47,
+        "gap_opportunity": 47
+      },
+      "key_strengths": [
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.9666666666666667
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "senegambia_craft_market",
+      "total_reviews": 214,
+      "average_rating": 3.5,
+      "overall_sentiment": 0.733,
+      "positive_rate": 88.5,
+      "language_distribution": {
+        "en": 214
+      },
+      "year_distribution": {
+        "2024": 9,
+        "2023": 4,
+        "2022": 2,
+        "2020": 6,
+        "2019": 8,
+        "2018": 31,
+        "2017": 28,
+        "2016": 61,
+        "2015": 56,
+        "2014": 9
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.22,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.93,
+          "mentions": 22,
+          "distribution": {
+            "positive": 22,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.96,
+          "mentions": 46,
+          "distribution": {
+            "positive": 46,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 1.0,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_comfort": {
+          "score": 0.25,
+          "mentions": 8,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 3
+          }
+        },
+        "value_pricing": {
+          "score": 0.22,
+          "mentions": 22,
+          "distribution": {
+            "positive": 14,
+            "neutral": 1,
+            "negative": 7
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "batik fabrics, with their intricate patterns and vibrant colors, added a touch of vibrancy to the market, while traditional clothing offered a fascinating glimpse into local culture",
+          "perhaps you will even catch some djembe players in action or just buy one of these beautifully made traditional drums to take home"
+        ],
+        "guide_quality": [
+          "offer a 1/3 and meet in the middle unless you&#39;re very generous and pay their inflated price all good fun and they certainly won&#39;t sell at a loss they&#39;re great vendors, chatty, friendly and interested in where you&#39;re from",
+          "badou and tapha jewelleries are very friendly men with beautiful, reasonably priced jewelry",
+          "everyone was very friendly and just wanted you to buy from them, i laughed and explained to one lady i didn&#39;t have enough money to spend on every stall, she laughed to so a polite no thank you and i&#39;m all spent up was enough for them to stop, but we never really felt like it was a shark frenzy we thought everyone was very friendly, and would happily go again again for an hour or two"
+        ],
+        "cultural_value": [
+          "this market has lots of decent local craft items but the problem is some of the stall holders are so pushy it wears you down, even experienced travellers avoid it",
+          "very interesting to see arts and crafts batik in senegambia craft market for the best local guide to show you around please kindly contact +220 7647423 \n\nthank you for your kindly attention",
+          "a great little market for authentic african souvenirs (bags, keychains, statues, paintings, jewelry)"
+        ],
+        "ferry_service": [
+          "nice wood carving market where you can buy all sorts of things, also various clothes at good prices, easy to find at the beginning of the strip",
+          "nice little market with jewary bags that kind of stuff just off the strip very busy so keep an eye on you bags nice people",
+          "near the top of the strip, the craft market seems to be stocked with imported goods than locally crafted ones, and most of the stalls looked very similar"
+        ],
+        "accessibility_comfort": [
+          "be sure to enter with some self-control, because it\u2019s easy to want to buy every single thing you see",
+          "i was shouted at by one store owner as i was effecting his business i know thus is a difficult time for gambians but found it very hostile and some if them very angry and aggressive i certainly wont be visiting again",
+          "wife bought usual wooden carving and stuff for presents to take home (or tat as i call it)   \neasy to find at crossroads on the strip"
+        ],
+        "value_pricing": [
+          "cheap nic naks in small stalls found at the top end of the strip",
+          "go early before all the stalls are set up and you will find things much cheaper than inside the hotels themselves",
+          "the only difference is that they are more expensive as this market is for tourists"
+        ]
+      },
+      "critical_areas": [],
+      "improvement_quotes": {
+        "general_improvements": [
+          "We met a guy in a bar one night who said he could make carvings of our pets, so I asked if I could see his work and it was spot on, we agreed a price I messaged a photos of the dogs and paid a deposit, he issued a receipt with phone number and all info, if you want anything like this go to unit 12, you will not be disappointed",
+          "Many of the carvings are of a poor quality and they are liable to split when brought home",
+          "This is a very small craft market in the strip, where you can buy some souvenirs and you don't have to suffer the terrible smell of bigger markets such as the one in Banjul"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.46728971962616817,
+        "total_responses": 1,
+        "total_reviews": 214,
+        "gap_opportunity": 213
+      },
+      "key_strengths": [
+        {
+          "theme": "ferry_service",
+          "score": 1.0
+        },
+        {
+          "theme": "cultural_value",
+          "score": 0.963768115942029
+        },
+        {
+          "theme": "guide_quality",
+          "score": 0.9318181818181818
+        }
+      ],
+      "key_weaknesses": [],
+      "sector_insights": {}
+    },
+    {
+      "stakeholder_name": "kunta_kinteh_island",
+      "total_reviews": 24,
+      "average_rating": 4.2,
+      "overall_sentiment": 0.588,
+      "positive_rate": 81.5,
+      "language_distribution": {
+        "en": 24
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 6,
+        "2023": 6,
+        "2022": 3,
+        "2021": 1,
+        "2020": 1,
+        "2019": 3
+      },
+      "theme_scores": {
+        "historical_significance": {
+          "score": 0.78,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "guide_quality": {
+          "score": 0.6,
+          "mentions": 6,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "cultural_value": {
+          "score": 0.77,
+          "mentions": 9,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "ferry_service": {
+          "score": 0.19,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 1
+          }
+        },
+        "infrastructure_state": {
+          "score": -0.75,
+          "mentions": 2,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "accessibility_comfort": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_pricing": {
+          "score": 1.0,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "theme_quotes": {
+        "historical_significance": [
+          "however, hearing the history definitely makes it an important and worthwhile visit",
+          "a beautiful place with a terribly sad history",
+          "a fascinating day trip around the island learning about the slave trade and past history"
+        ],
+        "guide_quality": [
+          "he also always has cold drinks (water and soft drinks) for you, which was very helpful considering the temperatures",
+          "he was very knowledgeable and answered all of my questions",
+          "our guide abdul was so insightful and knowledgeable"
+        ],
+        "cultural_value": [
+          "we visited this with our local driver and guide, muhammed camara (also known as big mo)",
+          "during this excursion, i heard the true story from the tour guide and a local historian",
+          "with a local tour guard"
+        ],
+        "ferry_service": [
+          "took a taxi from there for a 30 minute ride to a beautiful fishing village, and from there took a nice boat ride to kunta kinteh island, which is a very tiny island",
+          "the ferry is inconsistent and isn&#39;t in the best of shape",
+          "however, a word of warning, the journey to get there is long (took us 10 hours there and back through there was a problem with the ferry so might be 8 on a good day)"
+        ],
+        "infrastructure_state": [
+          "as another review said - i do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+          "the government really ought to put some money into the more popular visitors sites, the slavery museum and its exhibits were of poor quality and kunta kinteh island could do with a complete makeover before it suffers from further decay"
+        ],
+        "accessibility_comfort": [
+          "big mo is highly recommended if you&#39;re looking for a reliable, english-speaking guide who&#39;s easy to work with and arranges everything perfectly for you"
+        ],
+        "value_pricing": [
+          "the trip was cheaper, the group smaller (we didn&#39;t lose an hour picking up from various other hotels) and the transport was in a mix of pick-up trucks and jeeps, as well as the ferry to the north and the small boat to the island",
+          "the journey from kololi to kunta kinteh is a long one, but well worth it to learn more about the appalling trade in human lives that was carried out",
+          "i expect we were overcharged and while it&#39;s a good place to visit, and the ferry and pirogue were also good experiences, i don&#39;t think it was worth it in terms of the cost and time traveling"
+        ],
+        "safety_security": [
+          "after this, i can safely say that what we did was wrong, but we are not the main culprits"
+        ]
+      },
+      "critical_areas": [
+        {
+          "theme": "Infrastructure State",
+          "sentiment_score": -0.75,
+          "mention_count": 2,
+          "quotes": [
+            "as another review said - i do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+            "the government really ought to put some money into the more popular visitors sites, the slavery museum and its exhibits were of poor quality and kunta kinteh island could do with a complete makeover before it suffers from further decay"
+          ],
+          "priority": "high"
+        }
+      ],
+      "improvement_quotes": {
+        "general_improvements": [
+          "As another review said - I do wish they would keep up with it more if possible, as it's likely to be gone one day in the not-so-distant future due to decay (per our guide, even)",
+          "The government really ought to put some money into the more popular visitors sites, the Slavery museum and its exhibits were of poor quality and Kunta Kinteh Island could do with a complete makeover before it suffers from further decay",
+          "Then a pirogue boat to the island where a guide (with not great English) will show you around for about 30/40 minutes"
+        ]
+      },
+      "management_response": {
+        "response_rate": 0.0,
+        "total_responses": 0,
+        "total_reviews": 24,
+        "gap_opportunity": 24
+      },
+      "key_strengths": [
+        {
+          "theme": "accessibility_comfort",
+          "score": 1.0
+        },
+        {
+          "theme": "value_pricing",
+          "score": 1.0
+        },
+        {
+          "theme": "safety_security",
+          "score": 1.0
+        }
+      ],
+      "key_weaknesses": [
+        {
+          "theme": "infrastructure_state",
+          "score": -0.75
+        }
+      ],
+      "sector_insights": {}
+    }
+  ]
+}

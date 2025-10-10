@@ -138,6 +138,10 @@ class ReviewTranslator:
         for i, review in enumerate(reviews):
             print(f"  Processing review {i+1}/{len(reviews)}", end='\r')
             
+            # Skip None reviews
+            if review is None:
+                continue
+            
             # Combine title and text for language detection
             combined_text = f"{review.get('title', '')} {review.get('text', '')}"
             
@@ -146,8 +150,9 @@ class ReviewTranslator:
             language_stats[detected_lang] = language_stats.get(detected_lang, 0) + 1
             
             # Create processed review
+            user = review.get('user') or {}
             processed_review = {
-                'review_id': f"{review.get('user', {}).get('userId', 'unknown')}_{i}",
+                'review_id': f"{user.get('userId', 'unknown')}_{i}",
                 'title': review.get('title', ''),
                 'text': review.get('text', ''),
                 'rating': review.get('rating', 0),
@@ -156,11 +161,11 @@ class ReviewTranslator:
                 'language_detected': detected_lang,
                 'language_original': detected_lang,
                 'user': {
-                    'user_id': review.get('user', {}).get('userId', '') if review.get('user') else '',
-                    'name': review.get('user', {}).get('name', '') if review.get('user') else '',
-                    'location': review.get('user', {}).get('userLocation', {}).get('name', 'Unknown') if review.get('user') and review.get('user', {}).get('userLocation') else 'Unknown',
-                    'review_count': review.get('user', {}).get('contributions', {}).get('totalContributions', 0) if review.get('user') and review.get('user', {}).get('contributions') else 0,
-                    'helpful_votes': review.get('user', {}).get('contributions', {}).get('helpfulVotes', 0) if review.get('user') and review.get('user', {}).get('contributions') else 0
+                    'user_id': user.get('userId', ''),
+                    'name': user.get('name', ''),
+                    'location': user.get('userLocation', {}).get('name', 'Unknown') if user.get('userLocation') else 'Unknown',
+                    'review_count': user.get('contributions', {}).get('totalContributions', 0) if user.get('contributions') else 0,
+                    'helpful_votes': user.get('contributions', {}).get('helpfulVotes', 0) if user.get('contributions') else 0
                 },
                 'place_info': {
                     'name': review.get('placeInfo', {}).get('name', '') if review.get('placeInfo') else '',

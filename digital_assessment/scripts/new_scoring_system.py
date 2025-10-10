@@ -27,7 +27,7 @@ USER_AGENT = (
 )
 REQUEST_TIMEOUT_SECONDS = 15
 
-# Sector-specific weighting multipliers
+# Sector-specific weighting multipliers (all sum to 7.0x = 70 points max)
 SECTOR_WEIGHTS = {
     'creative': {
         'social_media': 2.2,      # 22 points
@@ -38,12 +38,12 @@ SECTOR_WEIGHTS = {
         'platform_integration': 0.5  # 5 points
     },
     'tour_operator': {
-        'social_media': 1.4,      # 14 points
-        'visual_content': 1.0,    # 10 points
-        'website': 1.5,           # 15 points
-        'discoverability': 1.5,   # 15 points
-        'digital_sales': 1.2,     # 12 points
-        'platform_integration': 1.0  # 10 points
+        'social_media': 1.1,      # 11 points
+        'visual_content': 0.8,    # 8 points
+        'website': 1.2,           # 12 points
+        'discoverability': 2.1,   # 21 points
+        'digital_sales': 1.0,     # 10 points
+        'platform_integration': 0.8  # 8 points
     }
 }
 

@@ -85,3 +85,21 @@ tourism-development-*.json
 **/api-keys.json
 **/secrets.json
 **/*-key.json
+**/client_secret*.json
+**/config/tourism-development-*.json
+
+# Sentiment data - raw reviews (too large for git)
+**/raw_reviews/**
+**/sentiment_data/raw_reviews/**
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Data outputs that can be regenerated
+**/ito_scraped/
+**/ito_analyzed/
+
+# Local data folder - not for git
+/local_data/

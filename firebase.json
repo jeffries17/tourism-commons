@@ -1,6 +1,9 @@
 {
+  "functions": {
+    "source": "digital_assessment/functions"
+  },
   "hosting": {
-    "public": "digital_assessment/hosting/public",
+    "public": "digital_assessment/dashboard/dist",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,20 +11,11 @@
     ],
     "headers": [
       {
-        "source": "**/*.{js,css,png,jpg,svg}",
+        "source": "**/*.@(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)",
         "headers": [
           {
             "key": "Cache-Control",
             "value": "public,max-age=31536000,immutable"
-          }
-        ]
-      },
-      {
-        "source": "**/*.js",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "application/javascript; charset=utf-8"
           }
         ]
       }
@@ -29,14 +23,17 @@
     "rewrites": [
       {
         "source": "/api/**",
-        "function": "api"
+        "function": {
+          "functionId": "api",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/gambia-itc/**",
-        "destination": "/gambia-itc/index.html"
+        "destination": "/index.html"
       },
       {
-        "source": "!/**/*.{js,css,png,jpg,svg,ico,woff,woff2,ttf,eot}",
+        "source": "**",
         "destination": "/index.html"
       }
     ]

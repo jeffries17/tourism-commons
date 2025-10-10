@@ -1,0 +1,4126 @@
+{
+  "metadata": {
+    "generated_at": "",
+    "title": "Regional Competitors Sentiment Analysis",
+    "total_stakeholders": 45,
+    "total_reviews": 3096,
+    "countries": [
+      "Benin",
+      "Cape Verde",
+      "Ghana",
+      "Nigeria",
+      "Senegal"
+    ],
+    "unified_themes": [
+      "cultural_heritage",
+      "service_staff",
+      "facilities_infrastructure",
+      "accessibility_transport",
+      "value_money",
+      "safety_security",
+      "educational_value",
+      "artistic_creative",
+      "atmosphere_experience"
+    ]
+  },
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "mus\u00e9e_de_la_fondation_zinsou_ouidah",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 51,
+      "average_rating": 4.47,
+      "overall_sentiment": 0.819,
+      "positive_rate": 0.922,
+      "language_distribution": {
+        "en": 51
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2023": 2,
+        "2022": 3,
+        "2021": 1,
+        "2020": 1,
+        "2019": 8,
+        "2018": 9,
+        "2017": 8,
+        "2016": 4,
+        "2015": 8,
+        "2014": 5
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.81,
+          "mentions": 19,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.84,
+          "mentions": 79,
+          "distribution": {
+            "positive": 47,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.92,
+          "mentions": 25,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.85,
+          "mentions": 51,
+          "distribution": {
+            "positive": 31,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.88,
+          "mentions": 36,
+          "distribution": {
+            "positive": 29,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.94,
+          "mentions": 12,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.92,
+          "mentions": 21,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.97,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "mus\u00e9e_ethnographique_de_porto_novo",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 29,
+      "average_rating": 3.72,
+      "overall_sentiment": 0.387,
+      "positive_rate": 0.69,
+      "language_distribution": {
+        "en": 29
+      },
+      "year_distribution": {
+        "2019": 5,
+        "2018": 7,
+        "2017": 4,
+        "2016": 6,
+        "2015": 1,
+        "2014": 1,
+        "2013": 2,
+        "2012": 2,
+        "2010": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.4,
+          "mentions": 25,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.05,
+          "mentions": 3,
+          "distribution": {
+            "positive": 0,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.48,
+          "mentions": 43,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.62,
+          "mentions": 21,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.02,
+          "mentions": 5,
+          "distribution": {
+            "positive": 0,
+            "neutral": 5,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.3,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.58,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.52,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "palais_des_rois_d'abomey_royal_palaces",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 103,
+      "average_rating": 3.7,
+      "overall_sentiment": 0.408,
+      "positive_rate": 0.718,
+      "language_distribution": {
+        "en": 103
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2024": 4,
+        "2023": 4,
+        "2022": 2,
+        "2021": 1,
+        "2020": 3,
+        "2019": 9,
+        "2018": 16,
+        "2017": 11,
+        "2016": 17,
+        "2015": 14,
+        "2014": 9,
+        "2013": 6,
+        "2012": 5,
+        "2010": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.48,
+          "mentions": 94,
+          "distribution": {
+            "positive": 67,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.47,
+          "mentions": 61,
+          "distribution": {
+            "positive": 52,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.81,
+          "mentions": 28,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.3,
+          "mentions": 39,
+          "distribution": {
+            "positive": 31,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.5,
+          "mentions": 159,
+          "distribution": {
+            "positive": 76,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.56,
+          "mentions": 64,
+          "distribution": {
+            "positive": 58,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.57,
+          "mentions": 31,
+          "distribution": {
+            "positive": 28,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.31,
+          "mentions": 20,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "ouidah_museum_of_history_portuguese_fort",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 78,
+      "average_rating": 4.05,
+      "overall_sentiment": 0.29,
+      "positive_rate": 0.667,
+      "language_distribution": {
+        "en": 78
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2020": 3,
+        "2019": 12,
+        "2018": 15,
+        "2017": 12,
+        "2016": 13,
+        "2015": 9,
+        "2014": 9,
+        "2013": 4
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.27,
+          "mentions": 105,
+          "distribution": {
+            "positive": 0,
+            "neutral": 60,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.42,
+          "mentions": 37,
+          "distribution": {
+            "positive": 34,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.41,
+          "mentions": 84,
+          "distribution": {
+            "positive": 47,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.49,
+          "mentions": 35,
+          "distribution": {
+            "positive": 32,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.43,
+          "mentions": 16,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.26,
+          "mentions": 14,
+          "distribution": {
+            "positive": 0,
+            "neutral": 11,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.41,
+          "mentions": 16,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.41,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "cotonou_artisanal_center_march\u00e9_des_arts",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 101,
+      "average_rating": 3.77,
+      "overall_sentiment": 0.493,
+      "positive_rate": 0.782,
+      "language_distribution": {
+        "en": 101
+      },
+      "year_distribution": {
+        "2023": 5,
+        "2022": 1,
+        "2020": 3,
+        "2019": 8,
+        "2018": 19,
+        "2017": 19,
+        "2016": 17,
+        "2015": 25,
+        "2014": 1,
+        "2013": 1,
+        "2012": 1,
+        "2009": 1
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.6,
+          "mentions": 138,
+          "distribution": {
+            "positive": 80,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.71,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.55,
+          "mentions": 52,
+          "distribution": {
+            "positive": 43,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.48,
+          "mentions": 39,
+          "distribution": {
+            "positive": 34,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.56,
+          "mentions": 18,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.72,
+          "mentions": 13,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.52,
+          "mentions": 27,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.38,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "mus\u00e9e_royal_honm\u00e9_porto_novo_royal_palace",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 20,
+      "average_rating": 3.9,
+      "overall_sentiment": 0.34,
+      "positive_rate": 0.65,
+      "language_distribution": {
+        "en": 20
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2022": 1,
+        "2019": 2,
+        "2018": 3,
+        "2017": 1,
+        "2016": 5,
+        "2014": 1,
+        "2013": 3,
+        "2012": 2,
+        "2011": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.22,
+          "mentions": 16,
+          "distribution": {
+            "positive": 0,
+            "neutral": 12,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.45,
+          "mentions": 13,
+          "distribution": {
+            "positive": 5,
+            "neutral": 8,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.38,
+          "mentions": 25,
+          "distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.34,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.49,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.32,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": -0.34,
+          "mentions": 3,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.95,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "march\u00e9_dantokpa",
+      "source": "regional",
+      "country": "Benin",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 64,
+      "average_rating": 3.98,
+      "overall_sentiment": 0.518,
+      "positive_rate": 0.797,
+      "language_distribution": {
+        "en": 64
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 2,
+        "2023": 1,
+        "2022": 2,
+        "2021": 1,
+        "2020": 4,
+        "2019": 5,
+        "2018": 11,
+        "2017": 6,
+        "2016": 14,
+        "2015": 5,
+        "2014": 3,
+        "2013": 5,
+        "2012": 1,
+        "2008": 1,
+        "2007": 1
+      },
+      "theme_scores": {
+        "value_money": {
+          "score": 0.57,
+          "mentions": 25,
+          "distribution": {
+            "positive": 20,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.68,
+          "mentions": 23,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.61,
+          "mentions": 31,
+          "distribution": {
+            "positive": 27,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.55,
+          "mentions": 13,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.64,
+          "mentions": 16,
+          "distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.9,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.5,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "museu_da_tabanca_ch\u00e3_de_tanque",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 2,
+      "average_rating": 4.0,
+      "overall_sentiment": 0.35,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 2
+      },
+      "year_distribution": {
+        "2016": 1,
+        "2014": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.57,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.35,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.35,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.57,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.57,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.57,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.57,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "centro_cultural_do_mindelo",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 17,
+      "average_rating": 4.12,
+      "overall_sentiment": 0.581,
+      "positive_rate": 0.765,
+      "language_distribution": {
+        "en": 17
+      },
+      "year_distribution": {
+        "2019": 1,
+        "2017": 3,
+        "2016": 5,
+        "2015": 6,
+        "2014": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.66,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.84,
+          "mentions": 11,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.8,
+          "mentions": 33,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.94,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.92,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.84,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.73,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.9,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "museu_etnogr\u00e1fico_da_praia",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 24,
+      "average_rating": 3.42,
+      "overall_sentiment": 0.47,
+      "positive_rate": 0.708,
+      "language_distribution": {
+        "en": 24
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2024": 2,
+        "2022": 1,
+        "2020": 1,
+        "2019": 1,
+        "2018": 4,
+        "2017": 6,
+        "2016": 6,
+        "2015": 2
+      },
+      "theme_scores": {
+        "educational_value": {
+          "score": 0.67,
+          "mentions": 15,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.61,
+          "mentions": 13,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.69,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.43,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.54,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.71,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.64,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.78,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "vis\u00f5es_africanas_sal",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 2,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.325,
+      "positive_rate": 0.5,
+      "language_distribution": {
+        "en": 2
+      },
+      "year_distribution": {
+        "2017": 1,
+        "2016": 1
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.49,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.65,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "fortaleza_real_de_s\u00e3o_filipe_cidade_velha",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 300,
+      "average_rating": 3.82,
+      "overall_sentiment": 0.502,
+      "positive_rate": 0.727,
+      "language_distribution": {
+        "en": 300
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2024": 4,
+        "2023": 5,
+        "2022": 1,
+        "2021": 4,
+        "2020": 13,
+        "2019": 43,
+        "2018": 47,
+        "2017": 51,
+        "2016": 70,
+        "2015": 45,
+        "2014": 14
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.61,
+          "mentions": 85,
+          "distribution": {
+            "positive": 82,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.71,
+          "mentions": 144,
+          "distribution": {
+            "positive": 102,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.78,
+          "mentions": 115,
+          "distribution": {
+            "positive": 101,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.72,
+          "mentions": 50,
+          "distribution": {
+            "positive": 47,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.66,
+          "mentions": 128,
+          "distribution": {
+            "positive": 94,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.7,
+          "mentions": 44,
+          "distribution": {
+            "positive": 37,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.69,
+          "mentions": 111,
+          "distribution": {
+            "positive": 89,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.73,
+          "mentions": 46,
+          "distribution": {
+            "positive": 40,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "djunta_mo_art_sal",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 150,
+      "average_rating": 4.95,
+      "overall_sentiment": 0.687,
+      "positive_rate": 0.82,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 21,
+        "2024": 29,
+        "2023": 34,
+        "2022": 25,
+        "2021": 10,
+        "2020": 10,
+        "2019": 19,
+        "2018": 2
+      },
+      "theme_scores": {
+        "educational_value": {
+          "score": 0.91,
+          "mentions": 18,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.9,
+          "mentions": 76,
+          "distribution": {
+            "positive": 50,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.87,
+          "mentions": 46,
+          "distribution": {
+            "positive": 40,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.78,
+          "mentions": 115,
+          "distribution": {
+            "positive": 85,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.95,
+          "mentions": 36,
+          "distribution": {
+            "positive": 30,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.84,
+          "mentions": 17,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.66,
+          "mentions": 22,
+          "distribution": {
+            "positive": 22,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "sala_museu_am\u00edlcar_cabral",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 12,
+      "average_rating": 4.17,
+      "overall_sentiment": 0.767,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 12
+      },
+      "year_distribution": {
+        "2021": 1,
+        "2020": 1,
+        "2019": 3,
+        "2018": 3,
+        "2017": 4
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.72,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.73,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.91,
+          "mentions": 15,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.98,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.55,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.75,
+          "mentions": 7,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.61,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "capvertdesign+artesanato_mindelo",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Fashion & Design",
+      "sector_category": "Fashion & Design",
+      "total_reviews": 55,
+      "average_rating": 4.44,
+      "overall_sentiment": 0.684,
+      "positive_rate": 0.855,
+      "language_distribution": {
+        "en": 55
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2023": 3,
+        "2022": 2,
+        "2020": 2,
+        "2019": 6,
+        "2018": 7,
+        "2017": 13,
+        "2016": 15,
+        "2015": 6
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.81,
+          "mentions": 85,
+          "distribution": {
+            "positive": 44,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.52,
+          "mentions": 13,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.87,
+          "mentions": 43,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.74,
+          "mentions": 29,
+          "distribution": {
+            "positive": 21,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.83,
+          "mentions": 17,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.83,
+          "mentions": 16,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.82,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.95,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "ces\u00e1ria_\u00e9vora",
+      "source": "regional",
+      "country": "Cape Verde",
+      "sector": "Music (artists, production, venues, education)",
+      "sector_category": "Music & Venues",
+      "total_reviews": 29,
+      "average_rating": 4.1,
+      "overall_sentiment": 0.654,
+      "positive_rate": 0.862,
+      "language_distribution": {
+        "en": 29
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2024": 2,
+        "2023": 3,
+        "2022": 2,
+        "2021": 2,
+        "2020": 6,
+        "2019": 12
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.64,
+          "mentions": 52,
+          "distribution": {
+            "positive": 35,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.54,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.77,
+          "mentions": 11,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.78,
+          "mentions": 14,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.89,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.86,
+          "mentions": 7,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.92,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.95,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "cape_coast_castle_central_region",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 4.67,
+      "overall_sentiment": 0.279,
+      "positive_rate": 0.633,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 6,
+        "2024": 7,
+        "2023": 18,
+        "2022": 19,
+        "2021": 6,
+        "2020": 13,
+        "2019": 57,
+        "2018": 24
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.28,
+          "mentions": 194,
+          "distribution": {
+            "positive": 0,
+            "neutral": 116,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.35,
+          "mentions": 238,
+          "distribution": {
+            "positive": 112,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.45,
+          "mentions": 63,
+          "distribution": {
+            "positive": 54,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.47,
+          "mentions": 80,
+          "distribution": {
+            "positive": 75,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.34,
+          "mentions": 51,
+          "distribution": {
+            "positive": 45,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.14,
+          "mentions": 16,
+          "distribution": {
+            "positive": 0,
+            "neutral": 16,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.35,
+          "mentions": 48,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.16,
+          "mentions": 18,
+          "distribution": {
+            "positive": 0,
+            "neutral": 16,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "swopa_\u2013_sirigu_women's_org._for_pottery_&_art_sirigu",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 9,
+      "average_rating": 4.44,
+      "overall_sentiment": 0.814,
+      "positive_rate": 0.889,
+      "language_distribution": {
+        "en": 9
+      },
+      "year_distribution": {
+        "2023": 1,
+        "2022": 1,
+        "2018": 3,
+        "2017": 1,
+        "2016": 1,
+        "2015": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.96,
+          "mentions": 6,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.98,
+          "mentions": 10,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.97,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.97,
+          "mentions": 6,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.98,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.98,
+          "mentions": 8,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.97,
+          "mentions": 10,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.99,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "kwame_nkrumah_mausoleum_&_memorial_park_accra",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 4.25,
+      "overall_sentiment": 0.667,
+      "positive_rate": 0.867,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 9,
+        "2023": 9,
+        "2022": 4,
+        "2021": 4,
+        "2020": 31,
+        "2019": 88
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.75,
+          "mentions": 81,
+          "distribution": {
+            "positive": 71,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.76,
+          "mentions": 162,
+          "distribution": {
+            "positive": 96,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.84,
+          "mentions": 64,
+          "distribution": {
+            "positive": 55,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.83,
+          "mentions": 49,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.78,
+          "mentions": 27,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.8,
+          "mentions": 46,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.67,
+          "mentions": 39,
+          "distribution": {
+            "positive": 35,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.79,
+          "mentions": 25,
+          "distribution": {
+            "positive": 19,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "national_theatre_of_ghana_accra",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 27,
+      "average_rating": 3.81,
+      "overall_sentiment": 0.642,
+      "positive_rate": 0.889,
+      "language_distribution": {
+        "en": 27
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2019": 4,
+        "2018": 1,
+        "2017": 1,
+        "2016": 4,
+        "2015": 3,
+        "2014": 7,
+        "2013": 5,
+        "2011": 1
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.74,
+          "mentions": 33,
+          "distribution": {
+            "positive": 22,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.69,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.77,
+          "mentions": 12,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.68,
+          "mentions": 4,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.77,
+          "mentions": 12,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.85,
+          "mentions": 8,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.82,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.84,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "christie_brown_accra",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Fashion & Design",
+      "sector_category": "Fashion & Design",
+      "total_reviews": 2,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.886,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 2
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2019": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.89,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.89,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.78,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.89,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.78,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.78,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.99,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "global_mamas_krobo_beads_&_batik",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 49,
+      "average_rating": 4.96,
+      "overall_sentiment": 0.949,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 49
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 5,
+        "2023": 2,
+        "2022": 2,
+        "2021": 1,
+        "2020": 2,
+        "2019": 6,
+        "2018": 13,
+        "2017": 14
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.96,
+          "mentions": 47,
+          "distribution": {
+            "positive": 38,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.95,
+          "mentions": 50,
+          "distribution": {
+            "positive": 35,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.95,
+          "mentions": 30,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.95,
+          "mentions": 13,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.94,
+          "mentions": 12,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.94,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.97,
+          "mentions": 10,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.97,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "national_museum_of_ghana_accra",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 3.25,
+      "overall_sentiment": 0.453,
+      "positive_rate": 0.72,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 2,
+        "2023": 3,
+        "2022": 2,
+        "2020": 1,
+        "2019": 7,
+        "2018": 9,
+        "2017": 9,
+        "2016": 20,
+        "2015": 44,
+        "2014": 26,
+        "2013": 20,
+        "2012": 7
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.6,
+          "mentions": 116,
+          "distribution": {
+            "positive": 72,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.57,
+          "mentions": 141,
+          "distribution": {
+            "positive": 88,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.51,
+          "mentions": 53,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.69,
+          "mentions": 57,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.46,
+          "mentions": 91,
+          "distribution": {
+            "positive": 74,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.66,
+          "mentions": 18,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.6,
+          "mentions": 13,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.61,
+          "mentions": 22,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "elmina_castle_central_region",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 4.57,
+      "overall_sentiment": 0.314,
+      "positive_rate": 0.667,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 3,
+        "2024": 10,
+        "2023": 7,
+        "2022": 10,
+        "2021": 3,
+        "2020": 13,
+        "2019": 33,
+        "2018": 62,
+        "2017": 9
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.25,
+          "mentions": 194,
+          "distribution": {
+            "positive": 0,
+            "neutral": 111,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.23,
+          "mentions": 54,
+          "distribution": {
+            "positive": 40,
+            "neutral": 9,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.38,
+          "mentions": 251,
+          "distribution": {
+            "positive": 114,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.39,
+          "mentions": 105,
+          "distribution": {
+            "positive": 93,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.3,
+          "mentions": 41,
+          "distribution": {
+            "positive": 27,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.16,
+          "mentions": 27,
+          "distribution": {
+            "positive": 0,
+            "neutral": 21,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.27,
+          "mentions": 71,
+          "distribution": {
+            "positive": 0,
+            "neutral": 60,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.45,
+          "mentions": 61,
+          "distribution": {
+            "positive": 46,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "artists_alliance_gallery_accra",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 43,
+      "average_rating": 4.67,
+      "overall_sentiment": 0.821,
+      "positive_rate": 0.953,
+      "language_distribution": {
+        "en": 43
+      },
+      "year_distribution": {
+        "2025": 4,
+        "2024": 4,
+        "2023": 4,
+        "2022": 2,
+        "2021": 2,
+        "2020": 3,
+        "2019": 6,
+        "2018": 1,
+        "2017": 1,
+        "2016": 6,
+        "2015": 8,
+        "2014": 2
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.89,
+          "mentions": 122,
+          "distribution": {
+            "positive": 44,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.86,
+          "mentions": 17,
+          "distribution": {
+            "positive": 14,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.92,
+          "mentions": 24,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.92,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.84,
+          "mentions": 28,
+          "distribution": {
+            "positive": 19,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.81,
+          "mentions": 11,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.85,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.92,
+          "mentions": 6,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "school_of_performing_arts,_univ._of_ghana_legon",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Music (artists, production, venues, education)",
+      "sector_category": "Music & Venues",
+      "total_reviews": 20,
+      "average_rating": 3.15,
+      "overall_sentiment": 0.32,
+      "positive_rate": 0.6,
+      "language_distribution": {
+        "en": 20
+      },
+      "year_distribution": {
+        "2019": 2,
+        "2018": 1,
+        "2017": 3,
+        "2016": 5,
+        "2015": 3,
+        "2014": 1,
+        "2013": 1,
+        "2012": 3,
+        "2011": 1
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.21,
+          "mentions": 18,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.51,
+          "mentions": 17,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.89,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.67,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": -0.2,
+          "mentions": 3,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 3
+          }
+        },
+        "service_staff": {
+          "score": 0.95,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "osu_castle_christiansborg,_accra",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 66,
+      "average_rating": 4.09,
+      "overall_sentiment": 0.52,
+      "positive_rate": 0.773,
+      "language_distribution": {
+        "en": 66
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 3,
+        "2022": 3,
+        "2021": 1,
+        "2020": 7,
+        "2019": 22,
+        "2018": 18,
+        "2017": 7
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.56,
+          "mentions": 81,
+          "distribution": {
+            "positive": 48,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.55,
+          "mentions": 120,
+          "distribution": {
+            "positive": 54,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.78,
+          "mentions": 22,
+          "distribution": {
+            "positive": 19,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.61,
+          "mentions": 51,
+          "distribution": {
+            "positive": 43,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.48,
+          "mentions": 24,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.58,
+          "mentions": 12,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.67,
+          "mentions": 27,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.62,
+          "mentions": 16,
+          "distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "bonwire_kente_museum_&_weaving_ashanti",
+      "source": "regional",
+      "country": "Ghana",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 7,
+      "average_rating": 4.43,
+      "overall_sentiment": 0.762,
+      "positive_rate": 0.857,
+      "language_distribution": {
+        "en": 7
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2018": 1,
+        "2017": 2,
+        "2016": 1,
+        "2015": 1,
+        "2014": 1
+      },
+      "theme_scores": {
+        "atmosphere_experience": {
+          "score": 0.93,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.91,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.88,
+          "mentions": 3,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.87,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.97,
+          "mentions": 4,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.97,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "muson_centre_lagos",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 15,
+      "average_rating": 4.13,
+      "overall_sentiment": 0.745,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 15
+      },
+      "year_distribution": {
+        "2018": 1,
+        "2017": 8,
+        "2016": 6
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.83,
+          "mentions": 28,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.86,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.83,
+          "mentions": 7,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.54,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.53,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.92,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.98,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "lekki_arts_&_crafts_market_lagos",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 150,
+      "average_rating": 4.0,
+      "overall_sentiment": 0.659,
+      "positive_rate": 0.873,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2023": 2,
+        "2022": 1,
+        "2021": 1,
+        "2020": 7,
+        "2019": 18,
+        "2018": 26,
+        "2017": 30,
+        "2016": 59,
+        "2015": 5
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.67,
+          "mentions": 214,
+          "distribution": {
+            "positive": 120,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.68,
+          "mentions": 109,
+          "distribution": {
+            "positive": 83,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.76,
+          "mentions": 49,
+          "distribution": {
+            "positive": 44,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.71,
+          "mentions": 21,
+          "distribution": {
+            "positive": 21,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.87,
+          "mentions": 16,
+          "distribution": {
+            "positive": 15,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.59,
+          "mentions": 69,
+          "distribution": {
+            "positive": 53,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.77,
+          "mentions": 8,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.63,
+          "mentions": 36,
+          "distribution": {
+            "positive": 34,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "national_museum,_lagos",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 54,
+      "average_rating": 3.2,
+      "overall_sentiment": 0.529,
+      "positive_rate": 0.7959999999999999,
+      "language_distribution": {
+        "en": 54
+      },
+      "year_distribution": {
+        "2023": 2,
+        "2022": 1,
+        "2020": 2,
+        "2019": 2,
+        "2018": 9,
+        "2017": 8,
+        "2016": 14,
+        "2015": 14,
+        "2014": 2
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.58,
+          "mentions": 44,
+          "distribution": {
+            "positive": 36,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.55,
+          "mentions": 22,
+          "distribution": {
+            "positive": 19,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.63,
+          "mentions": 30,
+          "distribution": {
+            "positive": 21,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.71,
+          "mentions": 41,
+          "distribution": {
+            "positive": 25,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.67,
+          "mentions": 44,
+          "distribution": {
+            "positive": 29,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.76,
+          "mentions": 12,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.65,
+          "mentions": 10,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.1,
+          "mentions": 10,
+          "distribution": {
+            "positive": 0,
+            "neutral": 9,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "sukur_cultural_landscape_adamawa",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 1,
+      "average_rating": 5.0,
+      "overall_sentiment": -0.252,
+      "positive_rate": 0.0,
+      "language_distribution": {
+        "en": 1
+      },
+      "year_distribution": {
+        "2013": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": -0.25,
+          "mentions": 2,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "abuja_arts_&_craft_village",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 123,
+      "average_rating": 3.89,
+      "overall_sentiment": 0.659,
+      "positive_rate": 0.87,
+      "language_distribution": {
+        "en": 123
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2023": 1,
+        "2021": 1,
+        "2020": 2,
+        "2019": 12,
+        "2018": 8,
+        "2017": 32,
+        "2016": 43,
+        "2015": 14,
+        "2014": 9
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.71,
+          "mentions": 212,
+          "distribution": {
+            "positive": 111,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.86,
+          "mentions": 28,
+          "distribution": {
+            "positive": 25,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.93,
+          "mentions": 9,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.71,
+          "mentions": 67,
+          "distribution": {
+            "positive": 48,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.78,
+          "mentions": 42,
+          "distribution": {
+            "positive": 36,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.74,
+          "mentions": 25,
+          "distribution": {
+            "positive": 22,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.92,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.7,
+          "mentions": 27,
+          "distribution": {
+            "positive": 26,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "omenka_gallery_lagos",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 1,
+      "average_rating": 5.0,
+      "overall_sentiment": 0.869,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 1
+      },
+      "year_distribution": {
+        "2017": 1
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.87,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "nike_art_foundation_lagos/abuja/oshogbo",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 150,
+      "average_rating": 4.87,
+      "overall_sentiment": 0.923,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 150
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.92,
+          "mentions": 223,
+          "distribution": {
+            "positive": 145,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.94,
+          "mentions": 229,
+          "distribution": {
+            "positive": 128,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.93,
+          "mentions": 110,
+          "distribution": {
+            "positive": 64,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.93,
+          "mentions": 119,
+          "distribution": {
+            "positive": 82,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.93,
+          "mentions": 5,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.91,
+          "mentions": 16,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.94,
+          "mentions": 14,
+          "distribution": {
+            "positive": 13,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.97,
+          "mentions": 3,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "national_theatre,_lagos",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Performing and visual arts",
+      "sector_category": "Performing Arts",
+      "total_reviews": 18,
+      "average_rating": 3.44,
+      "overall_sentiment": 0.735,
+      "positive_rate": 0.9440000000000001,
+      "language_distribution": {
+        "en": 18
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2022": 1,
+        "2018": 1,
+        "2017": 1,
+        "2016": 4,
+        "2015": 2,
+        "2014": 4,
+        "2013": 4
+      },
+      "theme_scores": {
+        "atmosphere_experience": {
+          "score": 0.7,
+          "mentions": 8,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.81,
+          "mentions": 8,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.85,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.78,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.77,
+          "mentions": 25,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.94,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.92,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.92,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "new_afrika_shrine_lagos_\u2013_venue",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Music (artists, production, venues, education)",
+      "sector_category": "Music & Venues",
+      "total_reviews": 26,
+      "average_rating": 4.38,
+      "overall_sentiment": 0.803,
+      "positive_rate": 0.9229999999999999,
+      "language_distribution": {
+        "en": 26
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2024": 2,
+        "2023": 1,
+        "2022": 1,
+        "2020": 1,
+        "2019": 2,
+        "2018": 2,
+        "2017": 7,
+        "2016": 7,
+        "2015": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.69,
+          "mentions": 7,
+          "distribution": {
+            "positive": 5,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.85,
+          "mentions": 49,
+          "distribution": {
+            "positive": 27,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.92,
+          "mentions": 16,
+          "distribution": {
+            "positive": 12,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.93,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 1.0,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.79,
+          "mentions": 13,
+          "distribution": {
+            "positive": 9,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.99,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.65,
+          "mentions": 7,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "osun_osogbo_sacred_grove_osun_state",
+      "source": "regional",
+      "country": "Nigeria",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 38,
+      "average_rating": 4.58,
+      "overall_sentiment": 0.808,
+      "positive_rate": 0.9470000000000001,
+      "language_distribution": {
+        "en": 38
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2024": 1,
+        "2022": 2,
+        "2021": 1,
+        "2020": 5,
+        "2018": 3,
+        "2017": 13,
+        "2016": 4,
+        "2015": 2,
+        "2014": 4,
+        "2013": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.82,
+          "mentions": 35,
+          "distribution": {
+            "positive": 23,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.87,
+          "mentions": 47,
+          "distribution": {
+            "positive": 24,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.89,
+          "mentions": 29,
+          "distribution": {
+            "positive": 19,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.92,
+          "mentions": 35,
+          "distribution": {
+            "positive": 25,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.91,
+          "mentions": 23,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.89,
+          "mentions": 27,
+          "distribution": {
+            "positive": 18,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.93,
+          "mentions": 6,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.84,
+          "mentions": 8,
+          "distribution": {
+            "positive": 6,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "manufacture_s\u00e9n\u00e9galaise_des_arts_d\u00e9coratifs_thi\u00e8s",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 3,
+      "average_rating": 4.67,
+      "overall_sentiment": 0.893,
+      "positive_rate": 1.0,
+      "language_distribution": {
+        "en": 3
+      },
+      "year_distribution": {
+        "2020": 1,
+        "2019": 1,
+        "2018": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.86,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.89,
+          "mentions": 7,
+          "distribution": {
+            "positive": 3,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.86,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.88,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.88,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "\u00eele_de_gor\u00e9e_gor\u00e9e_island",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 4.23,
+      "overall_sentiment": 0.413,
+      "positive_rate": 0.74,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 29,
+        "2024": 25,
+        "2023": 42,
+        "2022": 33,
+        "2021": 6,
+        "2020": 15
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.54,
+          "mentions": 177,
+          "distribution": {
+            "positive": 105,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.47,
+          "mentions": 142,
+          "distribution": {
+            "positive": 92,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.64,
+          "mentions": 78,
+          "distribution": {
+            "positive": 62,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.4,
+          "mentions": 40,
+          "distribution": {
+            "positive": 31,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.51,
+          "mentions": 73,
+          "distribution": {
+            "positive": 64,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.28,
+          "mentions": 67,
+          "distribution": {
+            "positive": 0,
+            "neutral": 51,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.45,
+          "mentions": 64,
+          "distribution": {
+            "positive": 49,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.42,
+          "mentions": 36,
+          "distribution": {
+            "positive": 31,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "la_maison_des_esclaves_house_of_slaves",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 4.35,
+      "overall_sentiment": 0.092,
+      "positive_rate": 0.473,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 5,
+        "2024": 5,
+        "2023": 13,
+        "2022": 13,
+        "2021": 7,
+        "2020": 22,
+        "2019": 85
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.06,
+          "mentions": 157,
+          "distribution": {
+            "positive": 0,
+            "neutral": 99,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": -0.02,
+          "mentions": 41,
+          "distribution": {
+            "positive": 0,
+            "neutral": 39,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.18,
+          "mentions": 35,
+          "distribution": {
+            "positive": 0,
+            "neutral": 32,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.19,
+          "mentions": 104,
+          "distribution": {
+            "positive": 0,
+            "neutral": 76,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.27,
+          "mentions": 50,
+          "distribution": {
+            "positive": 0,
+            "neutral": 45,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.28,
+          "mentions": 44,
+          "distribution": {
+            "positive": 0,
+            "neutral": 38,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.16,
+          "mentions": 20,
+          "distribution": {
+            "positive": 0,
+            "neutral": 19,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.29,
+          "mentions": 17,
+          "distribution": {
+            "positive": 0,
+            "neutral": 15,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "le_sandaga",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 87,
+      "average_rating": 3.2,
+      "overall_sentiment": 0.239,
+      "positive_rate": 0.575,
+      "language_distribution": {
+        "en": 87
+      },
+      "year_distribution": {
+        "2024": 2,
+        "2023": 4,
+        "2022": 1,
+        "2021": 1,
+        "2020": 2,
+        "2019": 2,
+        "2018": 15,
+        "2017": 8,
+        "2016": 11,
+        "2015": 8,
+        "2014": 10,
+        "2013": 14,
+        "2012": 6,
+        "2011": 2,
+        "2009": 1
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.44,
+          "mentions": 49,
+          "distribution": {
+            "positive": 42,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.28,
+          "mentions": 53,
+          "distribution": {
+            "positive": 0,
+            "neutral": 42,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.31,
+          "mentions": 34,
+          "distribution": {
+            "positive": 31,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.28,
+          "mentions": 31,
+          "distribution": {
+            "positive": 0,
+            "neutral": 28,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.32,
+          "mentions": 17,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.27,
+          "mentions": 4,
+          "distribution": {
+            "positive": 0,
+            "neutral": 4,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.4,
+          "mentions": 29,
+          "distribution": {
+            "positive": 26,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.25,
+          "mentions": 8,
+          "distribution": {
+            "positive": 0,
+            "neutral": 7,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "village_artisanal_de_soumb\u00e9dioune",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 13,
+      "average_rating": 4.0,
+      "overall_sentiment": 0.544,
+      "positive_rate": 0.846,
+      "language_distribution": {
+        "en": 13
+      },
+      "year_distribution": {
+        "2025": 1,
+        "2023": 2,
+        "2022": 1,
+        "2020": 1,
+        "2019": 6,
+        "2018": 2
+      },
+      "theme_scores": {
+        "value_money": {
+          "score": 0.74,
+          "mentions": 8,
+          "distribution": {
+            "positive": 8,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.7,
+          "mentions": 13,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.11,
+          "mentions": 2,
+          "distribution": {
+            "positive": 0,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.81,
+          "mentions": 5,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.95,
+          "mentions": 2,
+          "distribution": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.73,
+          "mentions": 1,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": -0.61,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 1
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "monument_de_la_renaissance_africaine",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Cultural heritage sites/museums",
+      "sector_category": "Museums & Heritage",
+      "total_reviews": 150,
+      "average_rating": 4.11,
+      "overall_sentiment": 0.59,
+      "positive_rate": 0.813,
+      "language_distribution": {
+        "en": 150
+      },
+      "year_distribution": {
+        "2025": 9,
+        "2024": 8,
+        "2023": 26,
+        "2022": 16,
+        "2021": 9,
+        "2020": 28,
+        "2019": 54
+      },
+      "theme_scores": {
+        "educational_value": {
+          "score": 0.66,
+          "mentions": 57,
+          "distribution": {
+            "positive": 37,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.78,
+          "mentions": 25,
+          "distribution": {
+            "positive": 21,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.6,
+          "mentions": 65,
+          "distribution": {
+            "positive": 54,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.54,
+          "mentions": 13,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.74,
+          "mentions": 34,
+          "distribution": {
+            "positive": 29,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.67,
+          "mentions": 12,
+          "distribution": {
+            "positive": 11,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.85,
+          "mentions": 50,
+          "distribution": {
+            "positive": 45,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.61,
+          "mentions": 20,
+          "distribution": {
+            "positive": 16,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    {
+      "stakeholder_name": "village_des_arts_de_dakar",
+      "source": "regional",
+      "country": "Senegal",
+      "sector": "Crafts and artisan products",
+      "sector_category": "Crafts & Artisans",
+      "total_reviews": 107,
+      "average_rating": 4.07,
+      "overall_sentiment": 0.594,
+      "positive_rate": 0.7759999999999999,
+      "language_distribution": {
+        "en": 107
+      },
+      "year_distribution": {
+        "2024": 1,
+        "2023": 3,
+        "2019": 8,
+        "2018": 15,
+        "2017": 17,
+        "2016": 27,
+        "2015": 25,
+        "2014": 11
+      },
+      "theme_scores": {
+        "artistic_creative": {
+          "score": 0.66,
+          "mentions": 224,
+          "distribution": {
+            "positive": 103,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.79,
+          "mentions": 39,
+          "distribution": {
+            "positive": 33,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.71,
+          "mentions": 41,
+          "distribution": {
+            "positive": 34,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.54,
+          "mentions": 35,
+          "distribution": {
+            "positive": 28,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "cultural_heritage": {
+          "score": 0.71,
+          "mentions": 7,
+          "distribution": {
+            "positive": 7,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.88,
+          "mentions": 11,
+          "distribution": {
+            "positive": 10,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.7,
+          "mentions": 19,
+          "distribution": {
+            "positive": 17,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.91,
+          "mentions": 4,
+          "distribution": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      }
+    }
+  ]
+}

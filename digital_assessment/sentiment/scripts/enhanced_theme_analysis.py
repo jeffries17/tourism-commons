@@ -1,317 +1,327 @@
 #!/usr/bin/env python3
 """
-Enhanced Theme Analysis with Quote Extraction
-Provides deep thematic analysis with specific quotes and improvement areas
+Enhanced Theme Analysis with Unified Taxonomy
+Provides cross-regional comparison with standardized themes
 """
 
-import json
-import re
 from collections import defaultdict, Counter
-from typing import Dict, List, Tuple
-import numpy as np
+from typing import List, Dict
+import re
+from textblob import TextBlob
 
 class EnhancedThemeAnalyzer:
+    """
+    Unified theme taxonomy for cross-regional comparison
+    9 core themes applicable to all stakeholder types and countries
+    """
+    
     def __init__(self):
-        # Define tourism-specific themes with detailed keywords
+        # UNIFIED THEME TAXONOMY
         self.themes = {
-            'historical_significance': {
-                'keywords': ['history', 'historical', 'heritage', 'past', 'story', 'significance', 'important', 'meaningful', 'cultural', 'tradition'],
-                'positive': ['fascinating', 'amazing', 'incredible', 'wonderful', 'beautiful', 'worth', 'valuable'],
-                'negative': ['boring', 'disappointing', 'overrated', 'uninteresting', 'forgotten']
+            'cultural_heritage': {
+                'display_name': 'Cultural & Heritage Value',
+                'keywords': [
+                    'culture', 'cultural', 'heritage', 'history', 'historical',
+                    'authentic', 'authenticity', 'traditional', 'significance', 'preservation',
+                    'legacy', 'ancestor', 'ancestral', 'origin', 'custom', 'ritual',
+                    'tribe', 'tribal', 'slavery', 'monument', 'historic', 'slave',
+                    'colonial', 'ancient', 'sacred', 'spiritual', 'religion', 'religious'
+                ],
+                'weight': 1.0
             },
-            'guide_quality': {
-                'keywords': ['guide', 'tour', 'explanation', 'knowledge', 'expert', 'staff', 'service', 'helpful', 'friendly'],
-                'positive': ['excellent', 'knowledgeable', 'helpful', 'friendly', 'professional', 'informative'],
-                'negative': ['poor', 'unhelpful', 'rude', 'unprofessional', 'confusing', 'lacking']
+            
+            'service_staff': {
+                'display_name': 'Service & Staff Quality',
+                'keywords': [
+                    'staff', 'guide', 'service', 'friendly', 'helpful',
+                    'knowledgeable', 'hospitable', 'welcoming', 'professional',
+                    'courteous', 'attentive', 'tour guide', 'host', 'hostess',
+                    'informative', 'passionate', 'enthusiastic', 'crew',
+                    'employee', 'worker', 'receptionist', 'manager'
+                ],
+                'weight': 1.0
             },
-            'cultural_value': {
-                'keywords': ['culture', 'authentic', 'local', 'traditional', 'experience', 'unique', 'special', 'meaningful'],
-                'positive': ['authentic', 'unique', 'special', 'meaningful', 'cultural', 'traditional', 'local'],
-                'negative': ['touristy', 'fake', 'commercial', 'artificial', 'disappointing']
+            
+            'facilities_infrastructure': {
+                'display_name': 'Facilities & Infrastructure',
+                'keywords': [
+                    'facilities', 'facility', 'infrastructure', 'building', 'maintenance',
+                    'clean', 'cleanliness', 'condition', 'restroom', 'bathroom', 'toilet',
+                    'amenities', 'upkeep', 'repair', 'modern', 'renovate', 'renovation',
+                    'deteriorat', 'decay', 'neglect', 'dirty', 'filthy', 'old',
+                    'structure', 'construction', 'air condition', 'lighting'
+                ],
+                'weight': 1.0
             },
-            'ferry_service': {
-                'keywords': ['ferry', 'boat', 'transport', 'crossing', 'ride', 'journey', 'trip', 'service'],
-                'positive': ['smooth', 'reliable', 'comfortable', 'efficient', 'good', 'nice'],
-                'negative': ['inconsistent', 'unreliable', 'poor', 'bad', 'broken', 'delayed', 'cancelled']
+            
+            'accessibility_transport': {
+                'display_name': 'Accessibility & Transport',
+                'keywords': [
+                    'access', 'accessible', 'transport', 'transportation',
+                    'location', 'parking', 'directions', 'signage', 'sign', 'signpost',
+                    'ferry', 'boat', 'bus', 'taxi', 'drive', 'driving', 'walk', 'walking',
+                    'reach', 'reaching', 'find', 'finding', 'navigate', 'navigation',
+                    'wayfinding', 'entrance', 'approach', 'arrive', 'arrival',
+                    'distance', 'far', 'close', 'nearby', 'remote', 'isolated'
+                ],
+                'weight': 1.0
             },
-            'infrastructure_state': {
-                'keywords': ['infrastructure', 'maintenance', 'condition', 'state', 'building', 'facility', 'site', 'grounds', 'deterioration', 'decay'],
-                'positive': ['well-maintained', 'clean', 'good condition', 'modern', 'updated', 'preserved'],
-                'negative': ['dilapidated', 'deteriorating', 'decay', 'poor condition', 'run-down', 'neglected', 'broken', 'needs work']
+            
+            'value_money': {
+                'display_name': 'Value for Money',
+                'keywords': [
+                    'price', 'pricing', 'value', 'expensive', 'cheap',
+                    'worth', 'worthwhile', 'money', 'cost', 'fee', 'charge', 'admission',
+                    'ticket', 'affordable', 'overpriced', 'reasonable', 'bargain',
+                    'rip off', 'ripoff', 'waste', 'free', 'donation',
+                    'budget', 'payment', 'paid', 'pay'
+                ],
+                'weight': 1.0
             },
-            'accessibility_comfort': {
-                'keywords': ['access', 'accessible', 'comfort', 'easy', 'difficult', 'walking', 'stairs', 'path', 'terrain'],
-                'positive': ['easy', 'accessible', 'comfortable', 'convenient', 'smooth'],
-                'negative': ['difficult', 'hard', 'inaccessible', 'challenging', 'rough', 'uncomfortable']
-            },
-            'value_pricing': {
-                'keywords': ['price', 'cost', 'value', 'worth', 'expensive', 'cheap', 'money', 'fee', 'ticket'],
-                'positive': ['good value', 'worth it', 'reasonable', 'fair', 'cheap', 'affordable'],
-                'negative': ['expensive', 'overpriced', 'not worth', 'waste', 'rip-off', 'too much']
-            },
+            
             'safety_security': {
-                'keywords': ['safe', 'security', 'dangerous', 'risk', 'concern', 'worry', 'fear', 'protection'],
-                'positive': ['safe', 'secure', 'protected', 'comfortable', 'reassuring'],
-                'negative': ['dangerous', 'unsafe', 'risky', 'concerning', 'worrying', 'scary']
+                'display_name': 'Safety & Security',
+                'keywords': [
+                    'safe', 'safety', 'security', 'dangerous', 'danger',
+                    'risk', 'risky', 'crime', 'guard', 'secure', 'protection',
+                    'protect', 'threat', 'threatening', 'hazard', 'precaution',
+                    'unsafe', 'insecure', 'theft', 'steal', 'robber', 'robbery',
+                    'police', 'emergency', 'fear'
+                ],
+                'weight': 1.0
+            },
+            
+            'educational_value': {
+                'display_name': 'Educational & Informational Value',
+                'keywords': [
+                    'learn', 'learning', 'educational', 'education', 'information',
+                    'informative', 'exhibit', 'exhibition', 'explanation', 'explain',
+                    'knowledge', 'knowledgeable', 'teach', 'teaching', 'insight', 'discover',
+                    'understand', 'understanding', 'interpretation', 'label', 'plaque',
+                    'display', 'museum', 'gallery', 'tour', 'presentation',
+                    'fact', 'detail', 'detailed', 'description'
+                ],
+                'weight': 1.0
+            },
+            
+            'artistic_creative': {
+                'display_name': 'Artistic & Creative Quality',
+                'keywords': [
+                    'art', 'artistic', 'creative', 'creativity', 'beautiful', 'beauty',
+                    'crafts', 'craftsman', 'craftsmanship', 'design', 'aesthetic', 'gallery',
+                    'artist', 'artwork', 'collection', 'masterpiece', 'piece',
+                    'visual', 'handmade', 'hand made', 'music', 'musical', 'performance',
+                    'perform', 'show', 'display', 'colorful', 'vibrant',
+                    'sculpture', 'paint', 'painting', 'draw', 'drawing'
+                ],
+                'weight': 1.0
+            },
+            
+            'atmosphere_experience': {
+                'display_name': 'Atmosphere & Overall Experience',
+                'keywords': [
+                    'atmosphere', 'atmospheric', 'ambiance', 'ambience', 'experience',
+                    'enjoyable', 'pleasant', 'memorable', 'vibe', 'feel', 'feeling',
+                    'environment', 'setting', 'mood', 'wonderful', 'fantastic',
+                    'amazing', 'excellent', 'great', 'good', 'nice', 'lovely',
+                    'boring', 'dull', 'disappointing', 'disappointment', 'underwhelming',
+                    'impressive', 'stunning', 'breathtaking', 'peaceful', 'serene'
+                ],
+                'weight': 1.0
             }
         }
+    
+    def analyze_text_for_themes(self, text: str) -> Dict[str, float]:
+        """Analyze text and return theme scores"""
+        text_lower = text.lower()
+        theme_scores = {}
         
-        # Management response patterns
-        self.management_patterns = [
-            r'owner response',
-            r'management response', 
-            r'response from',
-            r'response by',
-            r'thank you for',
-            r'we appreciate',
-            r'we apologize'
-        ]
-
-    def analyze_theme_sentiment(self, text: str, theme: str) -> Tuple[float, List[str]]:
-        """Analyze sentiment for a specific theme and extract relevant quotes"""
-        theme_config = self.themes.get(theme, {})
-        keywords = theme_config.get('keywords', [])
-        positive_words = theme_config.get('positive', [])
-        negative_words = theme_config.get('negative', [])
-        
-        if not keywords:
-            return 0.0, []
-        
-        # Find sentences containing theme keywords
-        theme_sentences = []
-        sentences = re.split(r'[.!?]+', text.lower())
-        
-        for sentence in sentences:
-            if any(keyword in sentence for keyword in keywords):
-                theme_sentences.append(sentence.strip())
-        
-        if not theme_sentences:
-            return 0.0, []
-        
-        # Calculate sentiment for each sentence
-        sentiment_scores = []
-        relevant_quotes = []
-        
-        for sentence in theme_sentences:
-            positive_count = sum(1 for word in positive_words if word in sentence)
-            negative_count = sum(1 for word in negative_words if word in sentence)
+        for theme_key, theme_config in self.themes.items():
+            # Count keyword matches
+            matches = 0
+            for keyword in theme_config['keywords']:
+                if keyword in text_lower:
+                    matches += 1
             
-            if positive_count + negative_count == 0:
-                sentiment_scores.append(0.0)
+            # Calculate theme relevance score (0-1)
+            # More matches = higher relevance
+            if matches > 0:
+                # Normalize by text length (per 100 words) to account for review length
+                word_count = len(text.split())
+                normalized_matches = (matches / max(word_count / 100, 1))
+                theme_scores[theme_key] = min(normalized_matches * theme_config['weight'], 1.0)
             else:
-                sentiment = (positive_count - negative_count) / (positive_count + negative_count)
-                sentiment_scores.append(sentiment)
-                
-                # Extract meaningful quotes (longer than 20 characters)
-                if len(sentence) > 20:
-                    relevant_quotes.append(sentence)
+                theme_scores[theme_key] = 0.0
         
-        # Calculate overall theme sentiment
-        if sentiment_scores:
-            theme_sentiment = np.mean(sentiment_scores)
-        else:
-            theme_sentiment = 0.0
-        
-        return theme_sentiment, relevant_quotes[:3]  # Top 3 quotes
-
-    def extract_improvement_quotes(self, reviews: List[Dict]) -> Dict[str, List[str]]:
-        """Extract specific quotes about areas needing improvement"""
-        improvement_quotes = defaultdict(list)
+        return theme_scores
+    
+    def get_sentiment_score(self, text: str) -> float:
+        """Get sentiment polarity for text"""
+        try:
+            blob = TextBlob(text)
+            return blob.sentiment.polarity
+        except:
+            return 0.0
+    
+    def extract_theme_quotes(self, reviews: List[Dict], theme_key: str, limit: int = 5) -> List[str]:
+        """Extract relevant quotes for a specific theme"""
+        theme_keywords = self.themes[theme_key]['keywords']
+        quotes = []
         
         for review in reviews:
             text = review.get('text', '').lower()
-            
-            # Look for improvement-related phrases
-            improvement_patterns = [
-                r'needs?\s+(?:improvement|work|fixing|attention)',
-                r'could\s+(?:be\s+)?(?:better|improved)',
-                r'should\s+(?:be\s+)?(?:improved|fixed|better)',
-                r'wish\s+(?:they\s+)?(?:would|could)',
-                r'disappointed',
-                r'disappointing',
-                r'let\s+down',
-                r'not\s+(?:good|great|excellent)',
-                r'poor\s+(?:quality|condition|service)',
-                r'terrible',
-                r'awful',
-                r'horrible'
-            ]
-            
-            for pattern in improvement_patterns:
-                matches = re.findall(pattern, text)
-                if matches:
-                    # Extract the full sentence containing the improvement mention
-                    sentences = re.split(r'[.!?]+', review.get('text', ''))
-                    for sentence in sentences:
-                        if re.search(pattern, sentence.lower()):
-                            if len(sentence.strip()) > 30:  # Meaningful length
-                                improvement_quotes['general_improvements'].append(sentence.strip())
-                                break
-        
-        return dict(improvement_quotes)
-
-    def analyze_management_response(self, reviews: List[Dict]) -> Dict:
-        """Analyze management response patterns"""
-        total_reviews = len(reviews)
-        responses = 0
-        
-        for review in reviews:
-            # Check for owner response
-            if review.get('ownerResponse'):
-                responses += 1
-            else:
-                # Check text for management response patterns
-                text = review.get('text', '').lower()
-                if any(re.search(pattern, text) for pattern in self.management_patterns):
-                    responses += 1
-        
-        response_rate = (responses / total_reviews) * 100 if total_reviews > 0 else 0
-        
-        return {
-            'response_rate': response_rate,
-            'total_responses': responses,
-            'total_reviews': total_reviews,
-            'gap_opportunity': total_reviews - responses
-        }
-
-    def generate_theme_insights(self, reviews: List[Dict]) -> Dict:
-        """Generate comprehensive theme insights with quotes"""
-        theme_results = {}
-        all_quotes = defaultdict(list)
-        
-        for theme in self.themes.keys():
-            theme_scores = []
-            theme_quotes = []
-            
-            for review in reviews:
-                text = review.get('text', '')
-                sentiment, quotes = self.analyze_theme_sentiment(text, theme)
-                
-                if sentiment != 0:  # Only include themes with actual mentions
-                    theme_scores.append(sentiment)
-                    theme_quotes.extend(quotes)
-            
-            if theme_scores:
-                theme_results[theme] = {
-                    'average_sentiment': np.mean(theme_scores),
-                    'mention_count': len(theme_scores),
-                    'quotes': theme_quotes[:5],  # Top 5 quotes
-                    'sentiment_distribution': {
-                        'positive': len([s for s in theme_scores if s > 0.2]),
-                        'neutral': len([s for s in theme_scores if -0.2 <= s <= 0.2]),
-                        'negative': len([s for s in theme_scores if s < -0.2])
-                    }
-                }
-        
-        # Extract improvement quotes
-        improvement_quotes = self.extract_improvement_quotes(reviews)
-        
-        # Analyze management response
-        management_analysis = self.analyze_management_response(reviews)
-        
-        return {
-            'theme_analysis': theme_results,
-            'improvement_quotes': improvement_quotes,
-            'management_response': management_analysis,
-            'critical_areas': self.identify_critical_areas(theme_results)
-        }
-
-    def identify_critical_areas(self, theme_results: Dict) -> List[Dict]:
-        """Identify critical areas needing improvement"""
-        critical_areas = []
-        
-        for theme, data in theme_results.items():
-            if data['average_sentiment'] < -0.1:  # Negative sentiment threshold
-                critical_areas.append({
-                    'theme': theme.replace('_', ' ').title(),
-                    'sentiment_score': data['average_sentiment'],
-                    'mention_count': data['mention_count'],
-                    'quotes': data['quotes'][:3],  # Top 3 quotes
-                    'priority': 'high' if data['average_sentiment'] < -0.2 else 'medium'
+            # Check if review mentions this theme
+            if any(keyword in text for keyword in theme_keywords):
+                # Get original case text for display
+                original_text = review.get('text', '')
+                sentiment = self.get_sentiment_score(original_text)
+                quotes.append({
+                    'text': original_text[:200] + '...' if len(original_text) > 200 else original_text,
+                    'sentiment': sentiment,
+                    'rating': review.get('rating', 0)
                 })
         
-        # Sort by sentiment score (most negative first)
-        critical_areas.sort(key=lambda x: x['sentiment_score'])
-        
-        return critical_areas
-
+        # Sort by sentiment (get both positive and negative examples)
+        quotes.sort(key=lambda x: abs(x['sentiment']), reverse=True)
+        return quotes[:limit]
+    
     def generate_dashboard_data(self, reviews: List[Dict], stakeholder_name: str) -> Dict:
-        """Generate comprehensive dashboard data"""
-        insights = self.generate_theme_insights(reviews)
+        """Generate comprehensive dashboard data with theme analysis"""
         
-        # Calculate overall metrics
+        # Initialize aggregators
         total_reviews = len(reviews)
-        ratings = [r.get('rating', 0) for r in reviews if r.get('rating')]
-        avg_rating = np.mean(ratings) if ratings else 0
+        sentiment_scores = []
+        ratings = []
+        theme_data = {theme: {
+            'scores': [],
+            'sentiments': [],
+            'mentions': 0,
+            'quotes': []
+        } for theme in self.themes.keys()}
         
-        # Calculate overall sentiment
-        all_sentiments = []
+        language_dist = Counter()
+        year_dist = Counter()
+        
+        # Management response tracking
+        responses = 0
+        
+        # Process each review
         for review in reviews:
             text = review.get('text', '')
-            for theme in self.themes.keys():
-                sentiment, _ = self.analyze_theme_sentiment(text, theme)
-                if sentiment != 0:
-                    all_sentiments.append(sentiment)
+            rating = review.get('rating', 0)
+            
+            if not text:
+                continue
+            
+            # Overall sentiment
+            sentiment = self.get_sentiment_score(text)
+            sentiment_scores.append(sentiment)
+            ratings.append(rating)
+            
+            # Language tracking
+            lang = review.get('language', 'unknown')
+            language_dist[lang] += 1
+            
+            # Year tracking
+            date_str = review.get('date', '')
+            if date_str:
+                try:
+                    year = date_str.split('-')[0] if '-' in date_str else date_str[:4]
+                    year_dist[year] += 1
+                except:
+                    pass
+            
+            # Management response
+            if review.get('management_response'):
+                responses += 1
+            
+            # Theme analysis
+            theme_scores = self.analyze_text_for_themes(text)
+            for theme_key, relevance_score in theme_scores.items():
+                if relevance_score > 0.1:  # Threshold for theme mention
+                    theme_data[theme_key]['scores'].append(relevance_score)
+                    theme_data[theme_key]['sentiments'].append(sentiment)
+                    theme_data[theme_key]['mentions'] += 1
         
-        overall_sentiment = np.mean(all_sentiments) if all_sentiments else 0
+        # Extract quotes for each theme
+        for theme_key in self.themes.keys():
+            theme_data[theme_key]['quotes'] = self.extract_theme_quotes(reviews, theme_key, limit=5)
         
-        # Language distribution
-        languages = [r.get('language_detected', 'unknown') for r in reviews]
-        language_dist = dict(Counter(languages))
+        # Calculate aggregates
+        avg_sentiment = sum(sentiment_scores) / len(sentiment_scores) if sentiment_scores else 0
+        avg_rating = sum(ratings) / len(ratings) if ratings else 0
+        positive_rate = len([s for s in sentiment_scores if s > 0.1]) / len(sentiment_scores) if sentiment_scores else 0
         
-        # Year distribution
-        years = []
+        # Process theme analysis
+        theme_analysis = {}
+        critical_areas = []
+        
+        for theme_key, data in theme_data.items():
+            if data['mentions'] > 0:
+                avg_theme_sentiment = sum(data['sentiments']) / len(data['sentiments'])
+                avg_relevance = sum(data['scores']) / len(data['scores'])
+                
+                # Calculate sentiment distribution
+                positive = len([s for s in data['sentiments'] if s > 0.1])
+                neutral = len([s for s in data['sentiments'] if -0.1 <= s <= 0.1])
+                negative = len([s for s in data['sentiments'] if s < -0.1])
+                
+                theme_analysis[theme_key] = {
+                    'average_sentiment': avg_theme_sentiment,
+                    'average_relevance': avg_relevance,
+                    'mention_count': data['mentions'],
+                    'sentiment_distribution': {
+                        'positive': positive,
+                        'neutral': neutral,
+                        'negative': negative
+                    },
+                    'quotes': data['quotes']
+                }
+                
+                # Flag critical areas (negative sentiment + high mentions)
+                if avg_theme_sentiment < -0.1 and data['mentions'] >= 3:
+                    critical_areas.append({
+                        'theme': self.themes[theme_key]['display_name'],
+                        'sentiment': avg_theme_sentiment,
+                        'mentions': data['mentions']
+                    })
+        
+        # Sort critical areas by severity
+        critical_areas.sort(key=lambda x: x['sentiment'])
+        
+        # Extract improvement quotes (negative reviews)
+        improvement_quotes = []
         for review in reviews:
-            date = review.get('date', '')
-            if date:
-                year = date.split('-')[0] if '-' in date else date[:4]
-                years.append(year)
-        year_dist = dict(Counter(years))
+            text = review.get('text', '')
+            if text:
+                sentiment = self.get_sentiment_score(text)
+                if sentiment < -0.2:  # Negative threshold
+                    improvement_quotes.append({
+                        'text': text[:200] + '...' if len(text) > 200 else text,
+                        'sentiment': sentiment,
+                        'rating': review.get('rating', 0)
+                    })
+        improvement_quotes.sort(key=lambda x: x['sentiment'])
+        improvement_quotes = improvement_quotes[:5]
+        
+        # Management response data
+        management_response = {
+            'total_responses': responses,
+            'response_rate': responses / total_reviews if total_reviews > 0 else 0,
+            'management_response_rate': responses / total_reviews if total_reviews > 0 else 0
+        }
         
         return {
             'stakeholder_name': stakeholder_name,
             'total_reviews': total_reviews,
-            'average_rating': round(avg_rating, 1),
-            'overall_sentiment': round(overall_sentiment, 3),
-            'positive_rate': round(len([s for s in all_sentiments if s > 0.2]) / len(all_sentiments) * 100, 1) if all_sentiments else 0,
-            'language_distribution': language_dist,
-            'year_distribution': year_dist,
-            'theme_analysis': insights['theme_analysis'],
-            'critical_areas': insights['critical_areas'],
-            'improvement_quotes': insights['improvement_quotes'],
-            'management_response': insights['management_response']
+            'average_rating': avg_rating,
+            'overall_sentiment': avg_sentiment,
+            'positive_rate': positive_rate,
+            'language_distribution': dict(language_dist),
+            'year_distribution': dict(year_dist),
+            'theme_analysis': theme_analysis,
+            'critical_areas': critical_areas,
+            'improvement_quotes': improvement_quotes,
+            'management_response': management_response
         }
 
-def main():
-    """Test the enhanced theme analysis"""
-    analyzer = EnhancedThemeAnalyzer()
-    
-    # Load sample data
-    with open('../data/sentiment_data/raw_reviews/oct_2025/gambia/abuko_nature_reserve/abuko_nature_reserve_reviews_ENG.json', 'r') as f:
-        data = json.load(f)
-    
-    reviews = data.get('reviews', [])
-    
-    # Generate dashboard data
-    dashboard_data = analyzer.generate_dashboard_data(reviews, 'Kunta Kinteh Island')
-    
-    # Save results
-    with open('enhanced_theme_analysis_results.json', 'w') as f:
-        json.dump(dashboard_data, f, indent=2)
-    
-    print("🎯 Enhanced Theme Analysis Complete!")
-    print(f"📊 Analyzed {dashboard_data['total_reviews']} reviews")
-    print(f"📈 Overall Sentiment: {dashboard_data['overall_sentiment']}")
-    print(f"⭐ Average Rating: {dashboard_data['average_rating']}/5")
-    print(f"📝 Critical Areas: {len(dashboard_data['critical_areas'])}")
-    
-    # Print critical areas
-    if dashboard_data['critical_areas']:
-        print("\n⚠️ Critical Areas for Improvement:")
-        for area in dashboard_data['critical_areas']:
-            print(f"  • {area['theme']}: {area['sentiment_score']:.2f} sentiment")
-            for quote in area['quotes'][:2]:
-                print(f"    \"{quote[:100]}...\"")
-
-if __name__ == "__main__":
-    main()

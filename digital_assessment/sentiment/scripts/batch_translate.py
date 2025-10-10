@@ -8,7 +8,7 @@ import os
 import glob
 from translate_reviews import ReviewTranslator
 
-def find_review_files(base_dir="../data/raw_reviews/oct_2025"):
+def find_review_files(base_dir="../data/sentiment_data/raw_reviews/oct_2025"):
     """Find all review JSON files that need translation"""
     pattern = f"{base_dir}/**/*_reviews.json"
     files = glob.glob(pattern, recursive=True)

@@ -1,0 +1,1284 @@
+{
+  "metadata": {
+    "generated": "2025-10-07T08:15:08.676742",
+    "total_tours_analyzed": 57,
+    "data_source": "ITO Tour Analysis",
+    "version": "1.0"
+  },
+  "overview": {
+    "total_tours": 57,
+    "total_operators": 30,
+    "avg_sentiment": 0.24,
+    "avg_creative_score": 17.9,
+    "sentiment_distribution": {
+      "very_positive": 9,
+      "positive": 17,
+      "neutral": 31,
+      "negative": 0
+    },
+    "packaging_breakdown": {
+      "Gambia + Senegal (Gambia primary)": 17,
+      "Multi-country package": 2,
+      "Gambia Solo": 21,
+      "Gambia-focused multi-country": 5,
+      "Multi-country (Gambia minor)": 2,
+      "Senegal + Gambia (add-on)": 10
+    },
+    "top_themes": [
+      {
+        "theme": "Beach/Resort",
+        "count": 54
+      },
+      {
+        "theme": "Wildlife/Nature",
+        "count": 52
+      },
+      {
+        "theme": "Cultural Heritage",
+        "count": 42
+      },
+      {
+        "theme": "Birding/Specialist",
+        "count": 13
+      },
+      {
+        "theme": "Roots/Diaspora",
+        "count": 4
+      }
+    ]
+  },
+  "sector_analysis": {
+    "heritage": {
+      "avg_score": 4.8,
+      "max_score": 10,
+      "min_score": 0,
+      "mention_rate": 73.7,
+      "avg_when_mentioned": 6.5,
+      "distribution": {
+        "0": 15,
+        "1-3": 9,
+        "4-6": 12,
+        "7-9": 10,
+        "10": 11
+      }
+    },
+    "crafts": {
+      "avg_score": 2.1,
+      "max_score": 10,
+      "min_score": 0,
+      "mention_rate": 64.9,
+      "avg_when_mentioned": 3.2,
+      "distribution": {
+        "0": 20,
+        "1-3": 25,
+        "4-6": 9,
+        "7-9": 1,
+        "10": 2
+      }
+    },
+    "music": {
+      "avg_score": 1.5,
+      "max_score": 9,
+      "min_score": 0,
+      "mention_rate": 50.9,
+      "avg_when_mentioned": 2.9,
+      "distribution": {
+        "0": 28,
+        "1-3": 24,
+        "4-6": 2,
+        "7-9": 3,
+        "10": 0
+      }
+    },
+    "performing_arts": {
+      "avg_score": 1.1,
+      "max_score": 7,
+      "min_score": 0,
+      "mention_rate": 40.4,
+      "avg_when_mentioned": 2.8,
+      "distribution": {
+        "0": 34,
+        "1-3": 16,
+        "4-6": 6,
+        "7-9": 1,
+        "10": 0
+      }
+    },
+    "festivals": {
+      "avg_score": 0.9,
+      "max_score": 10,
+      "min_score": 0,
+      "mention_rate": 26.3,
+      "avg_when_mentioned": 3.6,
+      "distribution": {
+        "0": 42,
+        "1-3": 9,
+        "4-6": 3,
+        "7-9": 2,
+        "10": 1
+      }
+    },
+    "audiovisual": {
+      "avg_score": 1.0,
+      "max_score": 10,
+      "min_score": 0,
+      "mention_rate": 40.4,
+      "avg_when_mentioned": 2.6,
+      "distribution": {
+        "0": 34,
+        "1-3": 21,
+        "4-6": 1,
+        "7-9": 0,
+        "10": 1
+      }
+    },
+    "fashion": {
+      "avg_score": 0.5,
+      "max_score": 5,
+      "min_score": 0,
+      "mention_rate": 29.8,
+      "avg_when_mentioned": 1.8,
+      "distribution": {
+        "0": 40,
+        "1-3": 16,
+        "4-6": 1,
+        "7-9": 0,
+        "10": 0
+      }
+    },
+    "publishing": {
+      "avg_score": 2.3,
+      "max_score": 10,
+      "min_score": 0,
+      "mention_rate": 64.9,
+      "avg_when_mentioned": 3.6,
+      "distribution": {
+        "0": 20,
+        "1-3": 21,
+        "4-6": 13,
+        "7-9": 2,
+        "10": 1
+      }
+    }
+  },
+  "operator_rankings": {
+    "top_10_champions": [
+      {
+        "operator": "Olympic Holidays",
+        "country": "Unknown (Greek / Cyprus / UK)",
+        "num_tours": 1,
+        "avg_creative_score": 45.0,
+        "avg_sentiment": 0.4,
+        "top_sectors": [
+          {
+            "sector": "crafts",
+            "avg_score": 10.0
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 7.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 6.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.olympicholidays.com/destinations/the-gambia/"
+        ]
+      },
+      {
+        "operator": "TransAfrica",
+        "country": "West Africa",
+        "num_tours": 9,
+        "avg_creative_score": 33.0,
+        "avg_sentiment": 0.1,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 7.9
+          },
+          {
+            "sector": "festivals",
+            "avg_score": 4.6
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 4.6
+          }
+        ],
+        "sample_urls": [
+          "https://transafrica.biz/en/travel/2025-the-african-west-coast-10-days-senegal-and-the-gambia/",
+          "https://transafrica.biz/en/travel/2025-the-african-west-coast-10-days-senegal-and-the-gambia/"
+        ]
+      },
+      {
+        "operator": "Intrepid Travel UK",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 31.9,
+        "avg_sentiment": 0.15,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "music",
+            "avg_score": 4.5
+          }
+        ],
+        "sample_urls": [
+          "https://www.intrepidtravel.com/uk/gambia",
+          "https://www.intrepidtravel.com/uk/senegal/senegal-gambia-adventure-161244"
+        ]
+      },
+      {
+        "operator": "Naturetrek",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 31.9,
+        "avg_sentiment": 0.35,
+        "top_sectors": [
+          {
+            "sector": "audiovisual",
+            "avg_score": 8.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 4.5
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 4.5
+          }
+        ],
+        "sample_urls": [
+          "https://www.naturetrek.co.uk/destinations/africa/gambia",
+          "https://www.naturetrek.co.uk/tours/the-gambia-in-style-photography-special"
+        ]
+      },
+      {
+        "operator": "Adventure Life",
+        "country": "USA",
+        "num_tours": 4,
+        "avg_creative_score": 27.5,
+        "avg_sentiment": 0.15,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 10.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 3.5
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.adventure-life.com/africa/cruises/18461/rivers-of-west-africa-banjul-to-banjul",
+          "https://www.adventure-life.com/africa/cruises/18460/rivers-of-west-africa-dakar-to-dakar"
+        ]
+      },
+      {
+        "operator": "Holiday Hypermarket",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 26.2,
+        "avg_sentiment": 0.4,
+        "top_sectors": [
+          {
+            "sector": "crafts",
+            "avg_score": 7.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "music",
+            "avg_score": 5.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.holidayhypermarket.co.uk/destinations/gambia"
+        ]
+      },
+      {
+        "operator": "Explore",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 25.0,
+        "avg_sentiment": 0.0,
+        "top_sectors": [
+          {
+            "sector": "performing_arts",
+            "avg_score": 6.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 4.0
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 4.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.explore.co.uk/destinations/africa/the-gambia",
+          "https://www.explore.co.uk/holidays/senegal-and-the-gambia"
+        ]
+      },
+      {
+        "operator": "Hays Travel",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 21.2,
+        "avg_sentiment": 0.4,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 9.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.haystravel.co.uk/destinations/africa/gambia/"
+        ]
+      },
+      {
+        "operator": "The Gambia Experience",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 18.1,
+        "avg_sentiment": 0.35,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.gambia.co.uk/",
+          "https://www.gambia.co.uk/rivers-of-west-africa-7-night-cruise?rg=19000425&oo=false&back=true, https://www.gambia.co.uk/birdlife-of-the-gambia?rg=19000425&oo=false&back=true"
+        ]
+      },
+      {
+        "operator": "Responsible Travel",
+        "country": "Unknown",
+        "num_tours": 4,
+        "avg_creative_score": 16.6,
+        "avg_sentiment": 0.12,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 8.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.responsibletravel.com/holidays/gambia",
+          "https://www.responsibletravel.com/holiday/33806/west-africa-river-cruise-holiday"
+        ]
+      }
+    ],
+    "bottom_10": [
+      {
+        "operator": "Ving",
+        "country": "Sweden",
+        "num_tours": 1,
+        "avg_creative_score": 6.2,
+        "avg_sentiment": 0.0,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 4.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.ving.se/gambia/"
+        ]
+      },
+      {
+        "operator": "Wild Birding",
+        "country": "International",
+        "num_tours": 2,
+        "avg_creative_score": 6.2,
+        "avg_sentiment": 0.3,
+        "top_sectors": [
+          {
+            "sector": "fashion",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://wildbirding.tours/tour-item/wild-gambia-birding/",
+          "https://wildbirding.tours/tour-item/wild-gambia-birding/"
+        ]
+      },
+      {
+        "operator": "Fleewinter",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 5.0,
+        "avg_sentiment": 0.2,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/",
+          "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/"
+        ]
+      },
+      {
+        "operator": "First Choice",
+        "country": "UK (TUI Group)",
+        "num_tours": 2,
+        "avg_creative_score": 4.3,
+        "avg_sentiment": 0.35,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.firstchoice.co.uk/holiday/location/overview/Gambia-GMB",
+          "https://www.firstchoice.co.uk/holiday/deals/tailored-deals?units[]=GMB"
+        ]
+      },
+      {
+        "operator": "Meier's Weltreisen",
+        "country": "Germany",
+        "num_tours": 1,
+        "avg_creative_score": 3.8,
+        "avg_sentiment": 0.5,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.meiers-weltreisen.de/reiseziele/afrika/gambia"
+        ]
+      },
+      {
+        "operator": "Thomas Cook UK",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 3.8,
+        "avg_sentiment": 0.7,
+        "top_sectors": [
+          {
+            "sector": "publishing",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.thomascook.com/holidays/gambia/package"
+        ]
+      },
+      {
+        "operator": "Apollo",
+        "country": "Sweden",
+        "num_tours": 1,
+        "avg_creative_score": 2.5,
+        "avg_sentiment": 0.6,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.apollo.se/gambia"
+        ]
+      },
+      {
+        "operator": "Serenity Holidays",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 2.5,
+        "avg_sentiment": 0.6,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.serenity.co.uk/destinations/gambia"
+        ]
+      },
+      {
+        "operator": "Tjareborg",
+        "country": "Finland",
+        "num_tours": 1,
+        "avg_creative_score": 1.2,
+        "avg_sentiment": 0.0,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.tjareborg.fi/gambia"
+        ]
+      },
+      {
+        "operator": "Neckermann Reisen",
+        "country": "Germany",
+        "num_tours": 1,
+        "avg_creative_score": 0.0,
+        "avg_sentiment": 0.6,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://neckermann.be/nl/vakanties/exotische-vakanties/gambia"
+        ]
+      }
+    ],
+    "all_operators": [
+      {
+        "operator": "Olympic Holidays",
+        "country": "Unknown (Greek / Cyprus / UK)",
+        "num_tours": 1,
+        "avg_creative_score": 45.0,
+        "avg_sentiment": 0.4,
+        "top_sectors": [
+          {
+            "sector": "crafts",
+            "avg_score": 10.0
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 7.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 6.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.olympicholidays.com/destinations/the-gambia/"
+        ]
+      },
+      {
+        "operator": "TransAfrica",
+        "country": "West Africa",
+        "num_tours": 9,
+        "avg_creative_score": 33.0,
+        "avg_sentiment": 0.1,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 7.9
+          },
+          {
+            "sector": "festivals",
+            "avg_score": 4.6
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 4.6
+          }
+        ],
+        "sample_urls": [
+          "https://transafrica.biz/en/travel/2025-the-african-west-coast-10-days-senegal-and-the-gambia/",
+          "https://transafrica.biz/en/travel/2025-the-african-west-coast-10-days-senegal-and-the-gambia/"
+        ]
+      },
+      {
+        "operator": "Intrepid Travel UK",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 31.9,
+        "avg_sentiment": 0.15,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "music",
+            "avg_score": 4.5
+          }
+        ],
+        "sample_urls": [
+          "https://www.intrepidtravel.com/uk/gambia",
+          "https://www.intrepidtravel.com/uk/senegal/senegal-gambia-adventure-161244"
+        ]
+      },
+      {
+        "operator": "Naturetrek",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 31.9,
+        "avg_sentiment": 0.35,
+        "top_sectors": [
+          {
+            "sector": "audiovisual",
+            "avg_score": 8.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 4.5
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 4.5
+          }
+        ],
+        "sample_urls": [
+          "https://www.naturetrek.co.uk/destinations/africa/gambia",
+          "https://www.naturetrek.co.uk/tours/the-gambia-in-style-photography-special"
+        ]
+      },
+      {
+        "operator": "Adventure Life",
+        "country": "USA",
+        "num_tours": 4,
+        "avg_creative_score": 27.5,
+        "avg_sentiment": 0.15,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 10.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 3.5
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.adventure-life.com/africa/cruises/18461/rivers-of-west-africa-banjul-to-banjul",
+          "https://www.adventure-life.com/africa/cruises/18460/rivers-of-west-africa-dakar-to-dakar"
+        ]
+      },
+      {
+        "operator": "Holiday Hypermarket",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 26.2,
+        "avg_sentiment": 0.4,
+        "top_sectors": [
+          {
+            "sector": "crafts",
+            "avg_score": 7.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "music",
+            "avg_score": 5.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.holidayhypermarket.co.uk/destinations/gambia"
+        ]
+      },
+      {
+        "operator": "Explore",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 25.0,
+        "avg_sentiment": 0.0,
+        "top_sectors": [
+          {
+            "sector": "performing_arts",
+            "avg_score": 6.0
+          },
+          {
+            "sector": "heritage",
+            "avg_score": 4.0
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 4.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.explore.co.uk/destinations/africa/the-gambia",
+          "https://www.explore.co.uk/holidays/senegal-and-the-gambia"
+        ]
+      },
+      {
+        "operator": "Hays Travel",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 21.2,
+        "avg_sentiment": 0.4,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 9.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 5.0
+          },
+          {
+            "sector": "publishing",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.haystravel.co.uk/destinations/africa/gambia/"
+        ]
+      },
+      {
+        "operator": "The Gambia Experience",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 18.1,
+        "avg_sentiment": 0.35,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.gambia.co.uk/",
+          "https://www.gambia.co.uk/rivers-of-west-africa-7-night-cruise?rg=19000425&oo=false&back=true, https://www.gambia.co.uk/birdlife-of-the-gambia?rg=19000425&oo=false&back=true"
+        ]
+      },
+      {
+        "operator": "Responsible Travel",
+        "country": "Unknown",
+        "num_tours": 4,
+        "avg_creative_score": 16.6,
+        "avg_sentiment": 0.12,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 8.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.responsibletravel.com/holidays/gambia",
+          "https://www.responsibletravel.com/holiday/33806/west-africa-river-cruise-holiday"
+        ]
+      },
+      {
+        "operator": "Luxotour",
+        "country": "Spain",
+        "num_tours": 2,
+        "avg_creative_score": 16.3,
+        "avg_sentiment": 0.05,
+        "top_sectors": [
+          {
+            "sector": "publishing",
+            "avg_score": 5.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.luxotour.com/en/africa/gambia",
+          "https://www.luxotour.com/en/africa/gambia/sindola-and-south-gambia"
+        ]
+      },
+      {
+        "operator": "Overlanding West Africa",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 16.2,
+        "avg_sentiment": 0.25,
+        "top_sectors": [
+          {
+            "sector": "music",
+            "avg_score": 4.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.overlandingwestafrica.com/trip-overview-availability/",
+          "https://www.overlandingwestafrica.com/dakar-to-freetown/"
+        ]
+      },
+      {
+        "operator": "World Insight",
+        "country": "Germany",
+        "num_tours": 2,
+        "avg_creative_score": 15.0,
+        "avg_sentiment": 0.5,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 10.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.world-insight.de/erlebnisreisen/senegal-und-gambia/",
+          "https://www.world-insight.de/erlebnisreisen/senegal-und-gambia/"
+        ]
+      },
+      {
+        "operator": "Palace Travel",
+        "country": "USA",
+        "num_tours": 1,
+        "avg_creative_score": 13.8,
+        "avg_sentiment": 0.0,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 10.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.palacetravel.com/places/gambia/"
+        ]
+      },
+      {
+        "operator": "Corendon",
+        "country": "Netherlands",
+        "num_tours": 1,
+        "avg_creative_score": 10.0,
+        "avg_sentiment": 0.5,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 3.0
+          },
+          {
+            "sector": "crafts",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.corendon.nl/gambia"
+        ]
+      },
+      {
+        "operator": "Wildlife Worldwide",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 9.4,
+        "avg_sentiment": 0.3,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.wildlifeworldwide.com/discover/gambia",
+          "https://www.wildlifeworldwide.com/group-tours/west-african-birdwatch"
+        ]
+      },
+      {
+        "operator": "Birding Ecotours",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 8.8,
+        "avg_sentiment": 0.15,
+        "top_sectors": [
+          {
+            "sector": "audiovisual",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.birdingecotours.com/destination/gambia-birding-tours/",
+          "https://www.birdingecotours.com/tour/birding-tour-gambia-gateway-to-africa/"
+        ]
+      },
+      {
+        "operator": "Spector Travel Boston",
+        "country": "USA",
+        "num_tours": 2,
+        "avg_creative_score": 8.8,
+        "avg_sentiment": 0.3,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.spectortravel.com/roots-culture-tours/the-gambia/",
+          "https://www.spectortravel.com/roots-culture-tours/the-gambia/"
+        ]
+      },
+      {
+        "operator": "African Travel Seminars",
+        "country": "USA",
+        "num_tours": 1,
+        "avg_creative_score": 7.5,
+        "avg_sentiment": 0.2,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 5.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.africantravelseminars.com/senegal"
+        ]
+      },
+      {
+        "operator": "Spies (Globus Danmark)",
+        "country": "Denmark",
+        "num_tours": 1,
+        "avg_creative_score": 7.5,
+        "avg_sentiment": 0.0,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 4.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.spies.dk/gambia"
+        ]
+      },
+      {
+        "operator": "Ving",
+        "country": "Sweden",
+        "num_tours": 1,
+        "avg_creative_score": 6.2,
+        "avg_sentiment": 0.0,
+        "top_sectors": [
+          {
+            "sector": "heritage",
+            "avg_score": 4.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.ving.se/gambia/"
+        ]
+      },
+      {
+        "operator": "Wild Birding",
+        "country": "International",
+        "num_tours": 2,
+        "avg_creative_score": 6.2,
+        "avg_sentiment": 0.3,
+        "top_sectors": [
+          {
+            "sector": "fashion",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://wildbirding.tours/tour-item/wild-gambia-birding/",
+          "https://wildbirding.tours/tour-item/wild-gambia-birding/"
+        ]
+      },
+      {
+        "operator": "Fleewinter",
+        "country": "UK",
+        "num_tours": 2,
+        "avg_creative_score": 5.0,
+        "avg_sentiment": 0.2,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/",
+          "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/"
+        ]
+      },
+      {
+        "operator": "First Choice",
+        "country": "UK (TUI Group)",
+        "num_tours": 2,
+        "avg_creative_score": 4.3,
+        "avg_sentiment": 0.35,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.firstchoice.co.uk/holiday/location/overview/Gambia-GMB",
+          "https://www.firstchoice.co.uk/holiday/deals/tailored-deals?units[]=GMB"
+        ]
+      },
+      {
+        "operator": "Meier's Weltreisen",
+        "country": "Germany",
+        "num_tours": 1,
+        "avg_creative_score": 3.8,
+        "avg_sentiment": 0.5,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.meiers-weltreisen.de/reiseziele/afrika/gambia"
+        ]
+      },
+      {
+        "operator": "Thomas Cook UK",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 3.8,
+        "avg_sentiment": 0.7,
+        "top_sectors": [
+          {
+            "sector": "publishing",
+            "avg_score": 3.0
+          }
+        ],
+        "sample_urls": [
+          "https://www.thomascook.com/holidays/gambia/package"
+        ]
+      },
+      {
+        "operator": "Apollo",
+        "country": "Sweden",
+        "num_tours": 1,
+        "avg_creative_score": 2.5,
+        "avg_sentiment": 0.6,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.apollo.se/gambia"
+        ]
+      },
+      {
+        "operator": "Serenity Holidays",
+        "country": "UK",
+        "num_tours": 1,
+        "avg_creative_score": 2.5,
+        "avg_sentiment": 0.6,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.serenity.co.uk/destinations/gambia"
+        ]
+      },
+      {
+        "operator": "Tjareborg",
+        "country": "Finland",
+        "num_tours": 1,
+        "avg_creative_score": 1.2,
+        "avg_sentiment": 0.0,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://www.tjareborg.fi/gambia"
+        ]
+      },
+      {
+        "operator": "Neckermann Reisen",
+        "country": "Germany",
+        "num_tours": 1,
+        "avg_creative_score": 0.0,
+        "avg_sentiment": 0.6,
+        "top_sectors": [],
+        "sample_urls": [
+          "https://neckermann.be/nl/vakanties/exotische-vakanties/gambia"
+        ]
+      }
+    ]
+  },
+  "packaging_analysis": {
+    "Gambia + Senegal (Gambia primary)": {
+      "count": 17,
+      "avg_gambia_percentage": 70.6,
+      "avg_creative_score": 17.5,
+      "operators": [
+        "World Insight",
+        "Responsible Travel",
+        "The Gambia Experience",
+        "Fleewinter",
+        "Birding Ecotours"
+      ]
+    },
+    "Multi-country package": {
+      "count": 2,
+      "avg_gambia_percentage": 39.5,
+      "avg_creative_score": 26.9,
+      "operators": [
+        "Adventure Life"
+      ]
+    },
+    "Gambia Solo": {
+      "count": 21,
+      "avg_gambia_percentage": 96.8,
+      "avg_creative_score": 13.6,
+      "operators": [
+        "Luxotour",
+        "Neckermann Reisen",
+        "Olympic Holidays",
+        "Naturetrek",
+        "Explore"
+      ]
+    },
+    "Gambia-focused multi-country": {
+      "count": 5,
+      "avg_gambia_percentage": 77.8,
+      "avg_creative_score": 7.5,
+      "operators": [
+        "Responsible Travel",
+        "Wildlife Worldwide",
+        "Birding Ecotours",
+        "Tjareborg"
+      ]
+    },
+    "Multi-country (Gambia minor)": {
+      "count": 2,
+      "avg_gambia_percentage": 4.5,
+      "avg_creative_score": 2.5,
+      "operators": [
+        "Overlanding West Africa",
+        "First Choice"
+      ]
+    },
+    "Senegal + Gambia (add-on)": {
+      "count": 10,
+      "avg_gambia_percentage": 35.6,
+      "avg_creative_score": 33.9,
+      "operators": [
+        "Overlanding West Africa",
+        "TransAfrica",
+        "Intrepid Travel UK"
+      ]
+    }
+  },
+  "gap_analysis": {
+    "status": "COMPLETED",
+    "description": "Gap analysis comparing ITO perception vs Gambia actual offerings",
+    "generated": "2025-10-07T08:15:08.676742",
+    "items": [
+      {
+        "sector": "Cultural heritage sites/museums",
+        "ito_sector_key": "heritage",
+        "gambia_capacity": 18.0,
+        "ito_visibility": 48.0,
+        "gap_score": -30.0,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Cultural heritage sites/museums. Focus resources elsewhere."
+      },
+      {
+        "sector": "Music (artists, production, venues, education)",
+        "ito_sector_key": "music",
+        "gambia_capacity": 0,
+        "ito_visibility": 15.0,
+        "gap_score": -15.0,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Music (artists, production, venues, education). Focus resources elsewhere."
+      },
+      {
+        "sector": "Marketing/advertising/publishing",
+        "ito_sector_key": "publishing",
+        "gambia_capacity": 60.3,
+        "ito_visibility": 23.0,
+        "gap_score": 37.3,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Marketing/advertising/publishing. Focus resources elsewhere."
+      },
+      {
+        "sector": "Crafts and artisan products",
+        "ito_sector_key": "crafts",
+        "gambia_capacity": 8.3,
+        "ito_visibility": 21.0,
+        "gap_score": -12.7,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Crafts and artisan products. Focus resources elsewhere."
+      },
+      {
+        "sector": "Performing and visual arts (dance, fine arts, galleries, photography, theatre)",
+        "ito_sector_key": "performing_arts",
+        "gambia_capacity": 24.3,
+        "ito_visibility": 11.0,
+        "gap_score": 13.3,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Performing and visual arts (dance, fine arts, galleries, photography, theatre). Focus resources elsewhere."
+      },
+      {
+        "sector": "Audiovisual (film, TV, video, photography, animation)",
+        "ito_sector_key": "audiovisual",
+        "gambia_capacity": 45.4,
+        "ito_visibility": 10.0,
+        "gap_score": 35.4,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Audiovisual (film, TV, video, photography, animation). Focus resources elsewhere."
+      },
+      {
+        "sector": "Fashion & Design (design, production, textiles)",
+        "ito_sector_key": "fashion",
+        "gambia_capacity": 21.0,
+        "ito_visibility": 5.0,
+        "gap_score": 16.0,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Fashion & Design (design, production, textiles). Focus resources elsewhere."
+      },
+      {
+        "sector": "Festivals and cultural events",
+        "ito_sector_key": "festivals",
+        "gambia_capacity": 14.3,
+        "ito_visibility": 9.0,
+        "gap_score": 5.3,
+        "gap_type": "Low Priority",
+        "recommendation": "Monitor - both supply and demand are low for Festivals and cultural events. Focus resources elsewhere."
+      }
+    ]
+  },
+  "opportunities_matrix": {
+    "status": "PLACEHOLDER",
+    "description": "Digital positioning opportunities matrix per TOR Output 2",
+    "required_analysis": [
+      "Competitive advantages (what Gambia does better)",
+      "Market gaps (what competitors offer that Gambia doesn't)",
+      "ITO demand signals (what operators are looking for)",
+      "Gambia supply reality (what's actually available)"
+    ],
+    "planned_quadrants": {
+      "competitive_advantage": {
+        "description": "Strong supply + High ITO demand",
+        "sectors": []
+      },
+      "hidden_gems": {
+        "description": "Strong supply + Low ITO visibility",
+        "sectors": []
+      },
+      "market_gaps": {
+        "description": "Weak supply + High ITO demand",
+        "sectors": []
+      },
+      "low_priority": {
+        "description": "Weak supply + Low ITO demand",
+        "sectors": []
+      }
+    }
+  },
+  "persona_insights": {
+    "status": "PLACEHOLDER",
+    "description": "Creative tourism persona development per TOR Output 2",
+    "required_analysis": [
+      "Deep text analysis of ITO marketing language",
+      "Activity patterns by tour type",
+      "Price point analysis",
+      "Target audience indicators in tour descriptions"
+    ],
+    "preliminary_insights": {
+      "heritage_seekers": {
+        "operators": [
+          "Adventure Life",
+          "Swan Hellenic"
+        ],
+        "characteristics": "UNESCO sites, slave trade history, cultural immersion",
+        "avg_creative_score": "TBD"
+      },
+      "nature_enthusiasts": {
+        "operators": [
+          "Wild Birding",
+          "Wildlife Worldwide"
+        ],
+        "characteristics": "Birding, wildlife, eco-tourism",
+        "avg_creative_score": "TBD"
+      },
+      "beach_vacationers": {
+        "operators": [
+          "Apollo",
+          "TUI",
+          "Meier's Weltreisen"
+        ],
+        "characteristics": "Sun, beach, resort-based, minimal cultural",
+        "avg_creative_score": "TBD"
+      }
+    }
+  },
+  "regional_comparison": {
+    "status": "PLACEHOLDER",
+    "description": "Regional positioning analysis per TOR Output 2",
+    "required_analysis": [
+      "Senegal mention frequency and context",
+      "Cape Verde mention frequency and context",
+      "Multi-country package analysis",
+      "Time allocation per country in tours"
+    ],
+    "data_available": {
+      "gambia_solo_tours": "TBD from packaging data",
+      "gambia_senegal_tours": "TBD",
+      "gambia_cape_verde_tours": "TBD",
+      "multi_west_africa_tours": "TBD"
+    }
+  }
+}
