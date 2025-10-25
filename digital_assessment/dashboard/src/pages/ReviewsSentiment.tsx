@@ -55,7 +55,7 @@ export default function ReviewsSentiment() {
   const { data: participants } = useParticipants();
 
   useEffect(() => {
-    const basePath = import.meta.env.PROD ? '/gambia-itc' : '';
+    const basePath = '';
     
     // Load all three datasets
     Promise.all([

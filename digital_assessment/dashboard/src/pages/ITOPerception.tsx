@@ -174,9 +174,7 @@ export default function ITOPerception() {
   const [selectedOperatorCountry, setSelectedOperatorCountry] = useState<string>('All');
 
   useEffect(() => {
-    const dataPath = import.meta.env.PROD 
-      ? '/gambia-itc/dashboard_ito_data.json'
-      : '/dashboard_ito_data.json';
+    const dataPath = '/dashboard_ito_data.json';
     
     fetch(dataPath)
       .then(res => res.json())
@@ -184,9 +182,7 @@ export default function ITOPerception() {
       .catch(err => console.error('Failed to load ITO data:', err));
 
     // Load regional analysis data
-    const regionalPath = import.meta.env.PROD
-      ? '/gambia-itc/ito_regional_analysis.json'
-      : '/ito_regional_analysis.json';
+    const regionalPath = '/ito_regional_analysis.json';
     
     fetch(regionalPath)
       .then(res => res.json())

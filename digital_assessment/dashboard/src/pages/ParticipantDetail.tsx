@@ -46,7 +46,7 @@ export default function ParticipantDetail() {
   const [allSentimentData, setAllSentimentData] = useState<any[]>([]);
   
   useEffect(() => {
-    const basePath = import.meta.env.PROD ? '/gambia-itc' : '';
+    const basePath = '';
     
     // Load all three sentiment datasets (creative industries, tour operators, regional)
     Promise.all([
