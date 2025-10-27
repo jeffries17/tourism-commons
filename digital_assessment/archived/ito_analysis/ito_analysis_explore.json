@@ -1,0 +1,35 @@
+{
+  "operator": "Explore",
+  "sentiment_score": 0.0,
+  "sentiment_magnitude": 134.1999969482422,
+  "creative_tourism_score": 42.5,
+  "sector_scores": {
+    "music": 2,
+    "crafts": 4,
+    "heritage": 8,
+    "fashion": 0,
+    "festivals": 1,
+    "audiovisual": 4,
+    "performing_arts": 9,
+    "publishing": 6
+  },
+  "sector_justifications": {
+    "music": "Brief mention (2×): jazz, music",
+    "crafts": "Described (5 mentions, 3 unique terms): batik, craft, market",
+    "heritage": "Featured (15 mentions across 6 terms): colonial, heritage, heritage site, historical, history... [+1 for diversity]",
+    "fashion": "Not mentioned",
+    "festivals": "Brief mention (1×): event",
+    "audiovisual": "Described (5 mentions, 1 unique terms): video",
+    "performing_arts": "Featured (20 mentions across 3 terms): performance, performing, show...",
+    "publishing": "Featured (12 mentions across 1 terms): book..."
+  },
+  "primary_themes": [
+    "Wildlife/Nature",
+    "Beach/Resort",
+    "Cultural Heritage"
+  ],
+  "best_cultural_quote": "The Gambia is also a country that's rich in culture, with small fishing villages and incredible nature reserves offering plenty for visitors to explore",
+  "best_positive_quote": "The Gambia is also a country that's rich in culture, with small fishing villages and incredible nature reserves offering plenty for visitors to explore",
+  "gambia_percentage_ai": 69,
+  "analyzed_at": "2025-10-06T19:36:03.945814"
+}

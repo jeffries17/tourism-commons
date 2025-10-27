@@ -1,0 +1,161 @@
+{
+  "destination_packaging_types": {
+    "standalone_destination": {
+      "name": "Standalone Destination",
+      "description": "The Gambia is sold as a single, primary destination",
+      "keywords": [
+        "gambia", "gambian", "smiling coast", "smiling coast of africa",
+        "banjul", "serrekunda", "kololi", "kotu", "fajara",
+        "gambia only", "gambia tour", "gambia holiday", "gambia vacation",
+        "gambia trip", "gambia experience", "gambia adventure",
+        "visit gambia", "discover gambia", "explore gambia",
+        "gambia destination", "gambia country", "gambia nation"
+      ],
+      "indicators": [
+        "dedicated gambia tours", "gambia-focused itineraries",
+        "gambia-specific packages", "gambia-only programs",
+        "gambia as main destination", "gambia primary focus"
+      ],
+      "weight": 1.0,
+      "priority": "high"
+    },
+    "multi_destination_package": {
+      "name": "Multi-Destination Package",
+      "description": "The Gambia is part of a larger multi-destination package",
+      "keywords": [
+        "multi-destination", "multi country", "multi nation",
+        "combination", "combined", "package", "packages",
+        "tour package", "holiday package", "vacation package",
+        "itinerary", "itineraries", "route", "routes",
+        "circuit", "circuits", "journey", "journeys",
+        "expedition", "expeditions", "adventure", "adventures"
+      ],
+      "indicators": [
+        "multi-destination tours", "combined packages",
+        "regional itineraries", "circuit tours",
+        "multi-country programs", "cross-border experiences"
+      ],
+      "weight": 0.8,
+      "priority": "high"
+    },
+    "senegal_gambia_combination": {
+      "name": "Senegal-Gambia Combination",
+      "description": "The Gambia is combined specifically with Senegal",
+      "keywords": [
+        "senegal", "senegalese", "senegambia", "senegambian",
+        "dakar", "saint-louis", "goree", "goree island",
+        "senegal and gambia", "gambia and senegal",
+        "senegambia tour", "senegambia package",
+        "senegal gambia", "gambia senegal",
+        "west africa", "west african", "west africa tour"
+      ],
+      "indicators": [
+        "senegal-gambia packages", "senegambia tours",
+        "west africa combinations", "regional senegal-gambia",
+        "cross-border senegal-gambia", "senegal-gambia circuit"
+      ],
+      "weight": 1.2,
+      "priority": "high"
+    },
+    "cruise_destination": {
+      "name": "Cruise Destination",
+      "description": "The Gambia is included as a cruise port of call",
+      "keywords": [
+        "cruise", "cruises", "cruising", "cruise ship",
+        "port of call", "port call", "shore excursion",
+        "cruise stop", "cruise destination", "cruise port",
+        "ocean cruise", "river cruise", "gambia river cruise",
+        "atlantic cruise", "west africa cruise",
+        "cruise itinerary", "cruise package", "cruise tour"
+      ],
+      "indicators": [
+        "cruise shore excursions", "port of call visits",
+        "cruise ship stops", "river cruise experiences",
+        "ocean cruise destinations", "cruise port calls"
+      ],
+      "weight": 0.9,
+      "priority": "medium"
+    },
+    "add_on_destination": {
+      "name": "Add-On Destination",
+      "description": "The Gambia is offered as an optional add-on to other destinations",
+      "keywords": [
+        "add-on", "add on", "extension", "extend", "extended",
+        "optional", "option", "additional", "extra",
+        "supplement", "supplementary", "bonus", "bonus destination",
+        "side trip", "side tour", "excursion", "excursions",
+        "day trip", "day tour", "short trip", "short tour"
+      ],
+      "indicators": [
+        "optional extensions", "add-on packages",
+        "bonus destinations", "supplementary tours",
+        "optional side trips", "extended itineraries"
+      ],
+      "weight": 0.6,
+      "priority": "medium"
+    },
+    "transit_destination": {
+      "name": "Transit Destination",
+      "description": "The Gambia is used as a transit point or gateway",
+      "keywords": [
+        "transit", "transiting", "gateway", "gateways",
+        "entry point", "entry points", "access point",
+        "starting point", "ending point", "base", "bases",
+        "hub", "hubs", "center", "centers", "centre", "centres",
+        "headquarters", "base camp", "launching point"
+      ],
+      "indicators": [
+        "transit hub", "gateway destination",
+        "entry point", "base for exploration",
+        "launching point", "transit stop"
+      ],
+      "weight": 0.4,
+      "priority": "low"
+    }
+  },
+  "packaging_indicators": {
+    "standalone_indicators": [
+      "gambia-only", "gambia focused", "gambia dedicated",
+      "gambia primary", "gambia main", "gambia exclusive",
+      "gambia specialist", "gambia expert", "gambia specialist"
+    ],
+    "package_indicators": [
+      "multi-destination", "multi-country", "combination",
+      "package tour", "holiday package", "vacation package",
+      "circuit tour", "regional tour", "west africa tour"
+    ],
+    "cruise_indicators": [
+      "cruise ship", "port of call", "shore excursion",
+      "river cruise", "ocean cruise", "cruise stop"
+    ],
+    "addon_indicators": [
+      "add-on", "extension", "optional", "bonus",
+      "side trip", "day trip", "supplementary"
+    ]
+  },
+  "gambia_specific_packaging": {
+    "standalone_phrases": [
+      "gambia only", "gambia tour", "gambia holiday",
+      "gambia vacation", "gambia trip", "gambia experience",
+      "visit gambia", "discover gambia", "explore gambia",
+      "gambia destination", "gambia country"
+    ],
+    "combination_phrases": [
+      "senegal and gambia", "gambia and senegal",
+      "senegambia tour", "west africa tour",
+      "gambia senegal", "senegal gambia"
+    ],
+    "cruise_phrases": [
+      "gambia river cruise", "gambia cruise",
+      "cruise to gambia", "gambia port",
+      "gambia shore excursion"
+    ]
+  },
+  "analysis_weights": {
+    "keyword_match_weight": 1.0,
+    "indicator_match_weight": 1.5,
+    "gambia_specific_weight": 1.3,
+    "context_weight": 1.2,
+    "frequency_weight": 1.1
+  }
+}

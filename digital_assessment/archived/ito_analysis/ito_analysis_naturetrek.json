@@ -1,0 +1,35 @@
+{
+  "operator": "Naturetrek",
+  "sentiment_score": 0.5,
+  "sentiment_magnitude": 518.0,
+  "creative_tourism_score": 65.0,
+  "sector_scores": {
+    "music": 0,
+    "crafts": 8,
+    "heritage": 10,
+    "fashion": 4,
+    "festivals": 0,
+    "audiovisual": 10,
+    "performing_arts": 10,
+    "publishing": 10
+  },
+  "sector_justifications": {
+    "music": "Not mentioned",
+    "crafts": "Featured (17 mentions across 2 terms): craft, market...",
+    "heritage": "Heavily featured (48 mentions, 1 unique terms): history...",
+    "fashion": "Described (5 mentions, 1 unique terms): tailor",
+    "festivals": "Not mentioned",
+    "audiovisual": "Heavily featured (33 mentions, 3 unique terms): camera, photo, photography...",
+    "performing_arts": "Heavily featured (72 mentions, 1 unique terms): show...",
+    "publishing": "Heavily featured (76 mentions, 3 unique terms): author, book, print..."
+  },
+  "primary_themes": [
+    "Beach/Resort",
+    "Wildlife/Nature",
+    "Birding/Specialist"
+  ],
+  "best_cultural_quote": "I particularly love Mandina’s Floating Lodges, and the chance to watch for Giant Kingfishers from the comfort of your bed",
+  "best_positive_quote": "Mandina Lodge was very special - set in the Makasutu Cultural Forest on a tributary of the Gambia river, it had unusual accommodation, wonderful fresh food and friendly knowledgeable local guides",
+  "gambia_percentage_ai": 92,
+  "analyzed_at": "2025-10-06T19:36:15.655322"
+}

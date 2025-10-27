@@ -1,0 +1,220 @@
+{
+  "audience_types": {
+    "families": {
+      "keywords": [
+        "family", "families", "children", "kids", "child", "family-friendly",
+        "all ages", "safe for children", "childcare", "kid-friendly",
+        "family holiday", "family vacation", "family tour",
+        "suitable for children", "children welcome", "family adventure",
+        "family group", "multi-generational", "grandparents"
+      ],
+      "tone_words": [
+        "fun", "educational", "safe", "easy", "gentle", "suitable",
+        "enjoyable for all", "accessible", "engaging", "interactive"
+      ],
+      "negative_indicators": [
+        "adults only", "18+", "21+", "no children", "mature audiences",
+        "not suitable for children", "adult-oriented"
+      ],
+      "activities": [
+        "beach", "wildlife watching", "simple activities", "nature walk",
+        "cultural village", "family resort", "pool", "playground"
+      ],
+      "weight": 1.0,
+      "threshold": 2
+    },
+    "older_couples": {
+      "keywords": [
+        "couple", "couples", "romantic", "relaxing", "peaceful", "tranquil",
+        "mature travellers", "mature travelers", "retirement", "retirees",
+        "comfort", "comfortable", "senior", "seniors", "50+", "60+",
+        "leisurely", "slow-paced", "unhurried", "gentle pace"
+      ],
+      "tone_words": [
+        "refined", "tranquil", "comfortable", "leisurely", "gentle",
+        "unhurried", "peaceful", "serene", "relaxed", "sophisticated",
+        "elegant", "dignified", "premium"
+      ],
+      "negative_indicators": [
+        "strenuous", "challenging", "extreme", "party", "nightlife",
+        "backpacker", "budget hostel", "party scene"
+      ],
+      "activities": [
+        "birdwatching", "river cruise", "cultural tours", "gentle walks",
+        "resort relaxation", "heritage sites", "guided tours", "spa"
+      ],
+      "weight": 1.0,
+      "threshold": 2
+    },
+    "backpackers": {
+      "keywords": [
+        "budget", "affordable", "cheap", "low-cost", "backpacker", "backpacking",
+        "hostel", "hostels", "dormitory", "dorm", "independent travel",
+        "budget-friendly", "economical", "shoestring", "budget traveller",
+        "budget traveler", "independent traveller", "independent traveler"
+      ],
+      "tone_words": [
+        "adventurous", "flexible", "authentic", "local", "independent",
+        "grassroots", "off the beaten path", "raw", "real", "unpolished"
+      ],
+      "negative_indicators": [
+        "luxury", "exclusive", "premium", "5-star", "five-star",
+        "upscale", "high-end", "deluxe"
+      ],
+      "activities": [
+        "local transport", "street food", "hostels", "local markets",
+        "budget tours", "shared accommodation", "public transport"
+      ],
+      "weight": 1.0,
+      "threshold": 2
+    },
+    "adventure_travellers": {
+      "keywords": [
+        "adventure", "adventurer", "adventurous", "expedition", "explorer",
+        "challenge", "challenging", "active", "outdoor", "outdoors",
+        "trekking", "hiking", "safari", "expedition",
+        "adrenaline", "thrill", "thrilling", "action", "extreme",
+        "adventure tour", "active holiday", "outdoor adventure"
+      ],
+      "tone_words": [
+        "exciting", "thrilling", "challenging", "active", "dynamic",
+        "exhilarating", "adventurous", "bold", "daring", "rugged"
+      ],
+      "negative_indicators": [
+        "gentle", "easy", "relaxing", "resort-based", "sedentary",
+        "passive", "beach lounging"
+      ],
+      "activities": [
+        "safari", "kayaking", "trekking", "cycling", "hiking",
+        "wildlife tracking", "river expeditions", "outdoor activities"
+      ],
+      "weight": 1.0,
+      "threshold": 2
+    },
+    "diaspora_heritage": {
+      "keywords": [
+        "roots", "roots tourism", "heritage", "ancestry", "ancestral",
+        "african american", "african-american", "afro-american",
+        "diaspora", "black heritage", "kunta kinteh", "kunta kinte",
+        "alex haley", "slave trade", "slavery", "slavery history",
+        "genealogy", "genealogical", "roots tour", "heritage tour",
+        "ancestral homeland", "motherland", "return to roots",
+        "roots experience", "heritage journey", "cultural roots",
+        "african heritage", "transatlantic slave trade"
+      ],
+      "tone_words": [
+        "meaningful", "emotional", "profound", "heritage", "cultural connection",
+        "spiritual", "significant", "identity", "remembrance",
+        "commemoration", "healing", "reconnection", "discovery"
+      ],
+      "negative_indicators": [],
+      "activities": [
+        "roots tours", "kunta kinteh island", "james island",
+        "historical sites", "village visits", "cultural immersion",
+        "heritage sites", "museums", "genealogy research"
+      ],
+      "weight": 1.5,
+      "threshold": 1
+    },
+    "luxury_travellers": {
+      "keywords": [
+        "luxury", "luxurious", "exclusive", "premium", "high-end",
+        "5-star", "five-star", "boutique", "private", "concierge",
+        "vip", "upscale", "deluxe", "first-class", "bespoke",
+        "tailor-made", "tailored", "personalized", "personalised",
+        "luxury resort", "luxury hotel", "luxury accommodation",
+        "private tour", "private guide", "butler service"
+      ],
+      "tone_words": [
+        "sophisticated", "exclusive", "premium", "bespoke", "elegant",
+        "refined", "exquisite", "sumptuous", "lavish", "opulent",
+        "world-class", "exceptional", "superior"
+      ],
+      "negative_indicators": [
+        "budget", "cheap", "basic", "simple", "hostel",
+        "dormitory", "shared", "economy"
+      ],
+      "activities": [
+        "private tours", "boutique hotels", "fine dining", "spa",
+        "exclusive experiences", "private transfers", "premium lodges"
+      ],
+      "weight": 1.0,
+      "threshold": 2
+    },
+    "groups": {
+      "keywords": [
+        "group", "groups", "group travel", "group tour", "group booking",
+        "escorted tour", "guided group", "tour group",
+        "minimum 6", "minimum 8", "minimum 10", "minimum group size",
+        "coach tour", "group departures", "set departures",
+        "accompanied tour", "group holiday", "group vacation",
+        "group itinerary", "group size", "max group size"
+      ],
+      "tone_words": [
+        "social", "shared experience", "guided", "together",
+        "communal", "group activity", "collective", "shared"
+      ],
+      "negative_indicators": [
+        "private", "individual", "solo", "independent",
+        "one-on-one", "exclusive", "personal"
+      ],
+      "activities": [
+        "group tours", "group activities", "coach tours",
+        "escorted tours", "group excursions", "shared transfers"
+      ],
+      "weight": 1.0,
+      "threshold": 2
+    },
+    "students": {
+      "keywords": [
+        "student", "students", "educational", "education", "school",
+        "university", "college", "study abroad", "learning",
+        "academic", "educational tour", "school group",
+        "student group", "student discount", "student rate",
+        "youth", "young people", "gap year", "educational travel",
+        "study tour", "educational program", "field trip"
+      ],
+      "tone_words": [
+        "educational", "affordable", "learning", "discovery",
+        "academic", "study", "knowledge", "formative"
+      ],
+      "negative_indicators": [
+        "luxury", "exclusive", "mature", "retirees"
+      ],
+      "activities": [
+        "educational tours", "cultural immersion", "volunteering",
+        "community projects", "study programs", "field research"
+      ],
+      "weight": 1.0,
+      "threshold": 1
+    }
+  },
+  "detection_rules": {
+    "confidence_threshold": 0.4,
+    "min_keyword_matches": {
+      "families": 2,
+      "older_couples": 2,
+      "backpackers": 2,
+      "adventure_travellers": 2,
+      "diaspora_heritage": 1,
+      "luxury_travellers": 2,
+      "groups": 2,
+      "students": 1
+    },
+    "multi_audience_allowed": true,
+    "max_audiences_per_ito": 3,
+    "notes": "An ITO can target multiple audiences. Include up to 3 most confident matches."
+  },
+  "scoring_weights": {
+    "keyword_match": 0.4,
+    "tone_match": 0.3,
+    "activity_match": 0.2,
+    "negative_penalty": 0.1
+  },
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-09-30",
+    "description": "Audience detection indicators for ITOS assessment based on marketing language and sentiment",
+    "total_audiences": 8
+  }
+}

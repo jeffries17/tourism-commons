@@ -1,0 +1,13 @@
+stakeholder_name,industry,total_reviews,average_rating,overall_sentiment,positive_rate,language_diversity,analysis_date,service_quality_score,service_quality_mentions,educational_value_score,educational_value_mentions,value_pricing_score,value_pricing_mentions,artistic_creative_quality_score,artistic_creative_quality_mentions,authenticity_culture_score,authenticity_culture_mentions,infrastructure_score,infrastructure_mentions,ferry_service_score,ferry_service_mentions,english_reviews,dutch_reviews,german_reviews,spanish_reviews,french_reviews,critical_areas_count,management_response_rate,top_strength,top_weakness
+abuko_nature_reserve,creative_industries,185,3.2,0.348,71.3,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,185,0,0,0,0,3,0.0,none,none
+wassu_stone_circles,creative_industries,13,4.3,0.646,100.0,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0,0.0,none,none
+banjul_craft_market,creative_industries,267,3.8,0.765,92.7,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,267,0,0,0,0,0,0.0,none,none
+brikama_woodcarvers_market,creative_industries,20,4.4,0.508,81.2,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,1,0.0,none,none
+tanji_village_market,creative_industries,54,4.3,0.883,100.0,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0.0,none,none
+kachikally_crocodile_pool,creative_industries,300,4.1,0.705,89.0,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0.33333333333333337,none,none
+national_museum_gambia,creative_industries,26,3.7,0.727,90.9,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,1,3.8461538461538463,none,none
+arch_22_museum,creative_industries,155,3.2,0.528,77.8,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,155,0,0,0,0,1,0.6451612903225806,none,none
+fort_bullen_barra_museum,creative_industries,11,4.4,0.839,100.0,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,0.0,none,none
+bakau_craft_market,creative_industries,47,4.2,0.839,93.5,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,0,0,0.0,none,none
+senegambia_craft_market,creative_industries,214,3.5,0.733,88.5,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,214,0,0,0,0,0,0.46728971962616817,none,none
+kunta_kinteh_island,creative_industries,24,4.2,0.588,81.5,1,2025-09-22 07:32:17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,1,0.0,none,none

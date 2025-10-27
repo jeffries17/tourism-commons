@@ -1,0 +1,1036 @@
+{
+  "tab_name": "CI_Survey",
+  "total_columns": 118,
+  "total_responses": 5,
+  "columns": [
+    {
+      "index": 1,
+      "letter": "A",
+      "header": "Survey ID",
+      "responses": 5,
+      "sample_values": [
+        "s-1757663266730-0263",
+        "s-1757663266730-0263",
+        "s-1757663266730-0263"
+      ]
+    },
+    {
+      "index": 2,
+      "letter": "B",
+      "header": "Response ID",
+      "responses": 5,
+      "sample_values": [
+        "Response 1",
+        "Response 2",
+        "Response 3"
+      ]
+    },
+    {
+      "index": 3,
+      "letter": "C",
+      "header": "Respondent ID",
+      "responses": 5,
+      "sample_values": [
+        "7YV5riVXc3Wfu3r",
+        "FeHlvzx1gBS7hR9",
+        "7hXI9TsPe4QUjeZ"
+      ]
+    },
+    {
+      "index": 4,
+      "letter": "D",
+      "header": "Response status",
+      "responses": 5,
+      "sample_values": [
+        "Submitted",
+        "Submitted",
+        "Submitted"
+      ]
+    },
+    {
+      "index": 5,
+      "letter": "E",
+      "header": "Response datetime",
+      "responses": 5,
+      "sample_values": [
+        "02-10-2025 at 00:34:21",
+        "20-09-2025 at 15:20:38",
+        "19-09-2025 at 15:15:19"
+      ]
+    },
+    {
+      "index": 6,
+      "letter": "F",
+      "header": "GPS coordinates",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 7,
+      "letter": "G",
+      "header": "Response language",
+      "responses": 5,
+      "sample_values": [
+        "English (United Kingdom)",
+        "English (United Kingdom)",
+        "English (United Kingdom)"
+      ]
+    },
+    {
+      "index": 8,
+      "letter": "H",
+      "header": "Collector",
+      "responses": 5,
+      "sample_values": [
+        "Online",
+        "Online",
+        "Online"
+      ]
+    },
+    {
+      "index": 9,
+      "letter": "I",
+      "header": "Response edit",
+      "responses": 5,
+      "sample_values": [
+        "N/A",
+        "N/A",
+        "N/A"
+      ]
+    },
+    {
+      "index": 10,
+      "letter": "J",
+      "header": "By whom",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 11,
+      "letter": "K",
+      "header": "Notes",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 12,
+      "letter": "L",
+      "header": "Q1. Name (first, last)",
+      "responses": 5,
+      "sample_values": [
+        "Amadou Bah",
+        "Ndey Fatou Jabang",
+        "Janet Badjan-Young"
+      ]
+    },
+    {
+      "index": 13,
+      "letter": "M",
+      "header": "Q2. Name of organization/business",
+      "responses": 5,
+      "sample_values": [
+        "Galloya Street Arts",
+        "Flex Fuzion",
+        "Ebunjan Performing Arts Association"
+      ]
+    },
+    {
+      "index": 14,
+      "letter": "N",
+      "header": "Q3. Your role in your organization/business",
+      "responses": 5,
+      "sample_values": [
+        "Vice president",
+        "Creative Director/ CEO",
+        "Creative  and Artistic Management"
+      ]
+    },
+    {
+      "index": 15,
+      "letter": "O",
+      "header": "Q4. Please select the area of your activity:",
+      "responses": 5,
+      "sample_values": [
+        "Creative Industries (Arts, crafts, film, entertainment, etc.)",
+        "Creative Industries (Arts, crafts, film, entertainment, etc.)",
+        "Creative Industries (Arts, crafts, film, entertainment, etc.)"
+      ]
+    },
+    {
+      "index": 16,
+      "letter": "P",
+      "header": "Q5. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 17,
+      "letter": "Q",
+      "header": "Q6. What best describes your creative industry sector?",
+      "responses": 5,
+      "sample_values": [
+        "Crafts and artisan products",
+        "Performing and visual arts (dance, fine arts, galleries, fine photography, theatre)",
+        "Performing and visual arts (dance, fine arts, galleries, fine photography, theatre)"
+      ]
+    },
+    {
+      "index": 18,
+      "letter": "R",
+      "header": "Q7. Where is your organization/business located?",
+      "responses": 5,
+      "sample_values": [
+        "West Coast Region",
+        "Greater Banjul Area (Banjul, Kanifing, Brikama)",
+        "Greater Banjul Area (Banjul, Kanifing, Brikama)"
+      ]
+    },
+    {
+      "index": 19,
+      "letter": "S",
+      "header": "Q8. How long have you been operating?",
+      "responses": 5,
+      "sample_values": [
+        "4-10 years",
+        "4-10 years",
+        "More than 10 years"
+      ]
+    },
+    {
+      "index": 20,
+      "letter": "T",
+      "header": "Q9. How do you currently make money from your creative work? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Direct sales to customers",
+        "Performance fees/bookings; Teaching/training services; Government contracts; Donations/grants",
+        "Performance fees/bookings; Donations/grants"
+      ]
+    },
+    {
+      "index": 21,
+      "letter": "U",
+      "header": "Q10. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 22,
+      "letter": "V",
+      "header": "Q11. Who in your business/organization is primarily responsible for digital marketing and online presence? (Select one)",
+      "responses": 5,
+      "sample_values": [
+        "We don't do digital marketing",
+        "Dedicated staff member",
+        "Dedicated staff member"
+      ]
+    },
+    {
+      "index": 23,
+      "letter": "W",
+      "header": "Q12. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 24,
+      "letter": "X",
+      "header": "Q13. What is the demographic profile of your current customers? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Young Gambians (18-35)",
+        "Older Gambians (35+); Young Gambians (18-35); Younger international tourists (up to 34); Older inter",
+        "Young Gambians (18-35); Older Gambians (35+); Older international tourists (35+); Younger internatio"
+      ]
+    },
+    {
+      "index": 25,
+      "letter": "Y",
+      "header": "Q14. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 26,
+      "letter": "Z",
+      "header": "Q15. What new customer groups would you most like to attract? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Young Gambians (18-35)",
+        "Diaspora Gambians visiting; Other West African visitors; Business/corporate clients; Older internati",
+        "Government/institutional clients; Diaspora Gambians visiting; Other West African visitors; Business/"
+      ]
+    },
+    {
+      "index": 27,
+      "letter": "AA",
+      "header": "Q16. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 28,
+      "letter": "AB",
+      "header": "Q17. Do you have a website for your business/organization?",
+      "responses": 5,
+      "sample_values": [
+        "Yes, and it's regularly updated",
+        "No, but I want one",
+        "Yes, and it's regularly updated"
+      ]
+    },
+    {
+      "index": 29,
+      "letter": "AC",
+      "header": "Q18. Which social media platforms do you actively use for your business? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Instagram",
+        "Facebook; Instagram; WhatsApp Business; YouTube; TikTok; Twitter/X",
+        "Facebook"
+      ]
+    },
+    {
+      "index": 30,
+      "letter": "AD",
+      "header": "Q19. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 31,
+      "letter": "AE",
+      "header": "Q20. How often do you post content about your work online?",
+      "responses": 5,
+      "sample_values": [
+        "Weekly",
+        "Weekly",
+        "Weekly"
+      ]
+    },
+    {
+      "index": 32,
+      "letter": "AF",
+      "header": "Q21. Can customers buy your products/services online?",
+      "responses": 5,
+      "sample_values": [
+        "No, but I would like this option",
+        "No, but I would like this option",
+        "Yes, through other platforms (Facebook, WhatsApp, etc.)"
+      ]
+    },
+    {
+      "index": 33,
+      "letter": "AG",
+      "header": "Q22. Where do customers typically leave reviews about your business? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "We don't get reviews",
+        "Facebook page; WhatsApp status/stories; Word of mouth (not online)",
+        "Facebook page; Word of mouth (not online)"
+      ]
+    },
+    {
+      "index": 34,
+      "letter": "AH",
+      "header": "Q23. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 35,
+      "letter": "AI",
+      "header": "Q24. How comfortable are you with using digital tools for business?",
+      "responses": 5,
+      "sample_values": [
+        "Very comfortable - I learn new tools quickly and do it myself",
+        "Very comfortable - I learn new tools quickly and do it myself",
+        "Very comfortable - I learn new tools quickly and do it myself"
+      ]
+    },
+    {
+      "index": 36,
+      "letter": "AJ",
+      "header": "Q25. What devices do you primarily use for business activities? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Smartphone only",
+        "Smartphone only; Computer/laptop; Professional camera/video equipment",
+        "Computer/laptop"
+      ]
+    },
+    {
+      "index": 37,
+      "letter": "AK",
+      "header": "Q26. How reliable is your internet connection?",
+      "responses": 5,
+      "sample_values": [
+        "Usually reliable - occasional issues",
+        "Usually reliable - occasional issues",
+        "Usually reliable - occasional issues"
+      ]
+    },
+    {
+      "index": 38,
+      "letter": "AL",
+      "header": "Q27. Do you currently track how many people visit your online profiles or see your posts?",
+      "responses": 5,
+      "sample_values": [
+        "Yes, I check regularly (weekly/monthly)",
+        "No, but I would like to learn how",
+        "Yes, I check regularly (weekly/monthly)"
+      ]
+    },
+    {
+      "index": 39,
+      "letter": "AM",
+      "header": "Q28. Which of the following do you consider part of digital marketing? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Social media posting (Facebook, Instagram); Online advertising (Facebook ads, Google ads); WhatsApp ",
+        "Social media posting (Facebook, Instagram); Having a website; Online advertising (Facebook ads, Goog",
+        "Social media posting (Facebook, Instagram); Online advertising (Facebook ads, Google ads); Email mar"
+      ]
+    },
+    {
+      "index": 40,
+      "letter": "AN",
+      "header": "Q29. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 41,
+      "letter": "AO",
+      "header": "Q30. What is your biggest challenge with digital marketing? (Select one)",
+      "responses": 5,
+      "sample_values": [
+        "Too expensive (internet, phone data, etc.)",
+        "Too expensive (internet, phone data, etc.)",
+        "Language barriers (most content is in English)"
+      ]
+    },
+    {
+      "index": 42,
+      "letter": "AP",
+      "header": "Q31. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 43,
+      "letter": "AQ",
+      "header": "Q32. How do you currently create content for promotion? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "I write my own descriptions/stories about my work",
+        "I take my own photos; I make my own videos; I hire a photographer/videographer; I write my own descr",
+        "I write my own descriptions/stories about my work; I take my own photos; I hire a photographer/video"
+      ]
+    },
+    {
+      "index": 44,
+      "letter": "AR",
+      "header": "Q33. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 45,
+      "letter": "AS",
+      "header": "Q34. When you need help with websites or digital advertising, where do you look for services? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "Ask friends/family for recommendations",
+        "Ask other business owners; Search online (Google, Facebook); Ask friends/family for recommendations;",
+        "I don't need these services; Search online (Google, Facebook)"
+      ]
+    },
+    {
+      "index": 46,
+      "letter": "AT",
+      "header": "Q35. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 47,
+      "letter": "AU",
+      "header": "Q36. What could you realistically afford to pay for website development or digital advertising services?",
+      "responses": 5,
+      "sample_values": [
+        "D15,000-30,000 total",
+        "Less than D5,000 total",
+        "D5,000-15,000 total"
+      ]
+    },
+    {
+      "index": 48,
+      "letter": "AV",
+      "header": "Q37. How much do you typically spend per month on internet/phone data for business?",
+      "responses": 5,
+      "sample_values": [
+        "D300-500",
+        "More than D500",
+        "More than D500"
+      ]
+    },
+    {
+      "index": 49,
+      "letter": "AW",
+      "header": "Q38. Have you ever received training on digital marketing or online business?",
+      "responses": 5,
+      "sample_values": [
+        "No, but I would be interested",
+        "Yes, informal help from friends/family",
+        "No, but I would be interested"
+      ]
+    },
+    {
+      "index": 50,
+      "letter": "AX",
+      "header": "Q39. In the next 2 years, what would help your business most? (Select all that apply)",
+      "responses": 5,
+      "sample_values": [
+        "More social media followers; Online payment system; Professional business photos/videos; Training on",
+        "Better website; Online payment system; Training on digital marketing; Better internet connection; He",
+        "Training on digital marketing; More social media followers; Better website; Professional business ph"
+      ]
+    },
+    {
+      "index": 51,
+      "letter": "AY",
+      "header": "Q40. How much could you realistically invest in improving your digital presence?",
+      "responses": 5,
+      "sample_values": [
+        "D1,000-5,000 per year",
+        "D1,000-5,000 per year",
+        "D5,000-15,000 per year"
+      ]
+    },
+    {
+      "index": 52,
+      "letter": "AZ",
+      "header": "Q41. Would you be interested in joining a group training program on digital marketing?",
+      "responses": 5,
+      "sample_values": [
+        "Yes, definitely",
+        "Yes, definitely",
+        "Yes, if it's affordable"
+      ]
+    },
+    {
+      "index": 53,
+      "letter": "BA",
+      "header": "Q42. How do LOCAL Gambians typically find out about your events? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 54,
+      "letter": "BB",
+      "header": "Q43. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 55,
+      "letter": "BC",
+      "header": "Q44. How do INTERNATIONAL VISITORS typically find out about your events? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 56,
+      "letter": "BD",
+      "header": "Q45.  If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 57,
+      "letter": "BE",
+      "header": "Q46. Do you sell tickets online?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 58,
+      "letter": "BF",
+      "header": "Q47. Do you share photos and videos from your events online?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 59,
+      "letter": "BG",
+      "header": "Q48. What percentage of your event attendees are international tourists?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 60,
+      "letter": "BH",
+      "header": "Q49. Do you collaborate digitally with other festivals or events for cross-promotion?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 61,
+      "letter": "BI",
+      "header": "Q50. How do LOCAL clients typically find your services? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 62,
+      "letter": "BJ",
+      "header": "Q51. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 63,
+      "letter": "BK",
+      "header": "Q52. How do INTERNATIONAL clients or tourists discover your work? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 64,
+      "letter": "BL",
+      "header": "Q53. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 65,
+      "letter": "BM",
+      "header": "Q54. What digital platforms do you use to showcase your work? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 66,
+      "letter": "BN",
+      "header": "Q55. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 67,
+      "letter": "BO",
+      "header": "Q56. How do you deliver final products to clients?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 68,
+      "letter": "BP",
+      "header": "Q57. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 69,
+      "letter": "BQ",
+      "header": "Q58. What type of clients do you primarily serve? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 70,
+      "letter": "BR",
+      "header": "Q59. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 71,
+      "letter": "BS",
+      "header": "Q60. How do LOCAL businesses typically find your services? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 72,
+      "letter": "BT",
+      "header": "Q61. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 73,
+      "letter": "BU",
+      "header": "Q62. How do you deliver your marketing/publishing services? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 74,
+      "letter": "BV",
+      "header": "Q63. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 75,
+      "letter": "BW",
+      "header": "Q64. Do you help clients with their digital marketing?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 76,
+      "letter": "BX",
+      "header": "Q65. Where do you primarily sell your products? (Select all that apply)",
+      "responses": 2,
+      "sample_values": [
+        "Local markets (Albert Market, Serrekunda, etc.); Direct to tourists at hotels/beaches",
+        "Direct to tourists at hotels/beaches; Local markets (Albert Market, Serrekunda, etc.)"
+      ]
+    },
+    {
+      "index": 77,
+      "letter": "BY",
+      "header": "Q66. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 78,
+      "letter": "BZ",
+      "header": "Q67. How do LOCAL customers typically find your products? (Select all that apply)",
+      "responses": 2,
+      "sample_values": [
+        "Visiting local markets; Local events/exhibitions",
+        "Visiting local markets; WhatsApp/social media posts; Local events/exhibitions; Community networks"
+      ]
+    },
+    {
+      "index": 79,
+      "letter": "CA",
+      "header": "Q68. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 80,
+      "letter": "CB",
+      "header": "Q69. How do INTERNATIONAL TOURISTS typically find your products? (Select all that apply)",
+      "responses": 2,
+      "sample_values": [
+        "Tourist markets/craft centers; Tour operator recommendations; Online before visiting",
+        "Tourist markets/craft centers; Instagram/social media; Tour operator recommendations; Hotel gift sho"
+      ]
+    },
+    {
+      "index": 81,
+      "letter": "CC",
+      "header": "Q70. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 82,
+      "letter": "CD",
+      "header": "Q71. What kinds of photos do you mainly use of your products?",
+      "responses": 2,
+      "sample_values": [
+        "Photos I took myself that I am happy with",
+        "Professional photos"
+      ]
+    },
+    {
+      "index": 83,
+      "letter": "CE",
+      "header": "Q72. How do customers typically place orders with you?",
+      "responses": 2,
+      "sample_values": [
+        "Through social media",
+        "Phone calls"
+      ]
+    },
+    {
+      "index": 84,
+      "letter": "CF",
+      "header": "Q73. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 85,
+      "letter": "CG",
+      "header": "Q74. What percentage of your sales come from tourists vs local customers?",
+      "responses": 2,
+      "sample_values": [
+        "Mostly tourists (70%+)",
+        "Mix of both (30-70% tourists)"
+      ]
+    },
+    {
+      "index": 86,
+      "letter": "CH",
+      "header": "Q75. Please select the most relevant design discipline",
+      "responses": 1,
+      "sample_values": [
+        "Fashion"
+      ]
+    },
+    {
+      "index": 87,
+      "letter": "CI",
+      "header": "Q76. What design services do you offer? (Select all that apply)",
+      "responses": 1,
+      "sample_values": [
+        "Custom/bespoke design services; Standard/pre-made designs; Design consultation services; Traditional"
+      ]
+    },
+    {
+      "index": 88,
+      "letter": "CJ",
+      "header": "Q77. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 89,
+      "letter": "CK",
+      "header": "Q78. How do you showcase your design work digitally?",
+      "responses": 1,
+      "sample_values": [
+        "Social media posts/stories; Design platforms/marketplaces"
+      ]
+    },
+    {
+      "index": 90,
+      "letter": "CL",
+      "header": "Q79. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 91,
+      "letter": "CM",
+      "header": "Q80. How do LOCAL customers discover your products/services? (Select all that apply)",
+      "responses": 1,
+      "sample_values": [
+        "Local shows/events; Social media (Instagram, Facebook); Word of mouth/direct referrals; Physical sho"
+      ]
+    },
+    {
+      "index": 92,
+      "letter": "CN",
+      "header": "Q81. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 93,
+      "letter": "CO",
+      "header": "Q82. How do INTERNATIONAL clients or tourists find your work? (Select all that apply)",
+      "responses": 1,
+      "sample_values": [
+        "Online store/e-commerce platforms; Hotel boutiques/gift shops/physical store; Social media platforms"
+      ]
+    },
+    {
+      "index": 94,
+      "letter": "CP",
+      "header": "Q83. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 95,
+      "letter": "CQ",
+      "header": "Q84. How do you share your music with LOCAL audiences? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 96,
+      "letter": "CR",
+      "header": "Q85. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 97,
+      "letter": "CS",
+      "header": "Q86.  How do you think INTERNATIONAL VISITORS discover your music? (Select all that apply)",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 98,
+      "letter": "CT",
+      "header": "Q87. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 99,
+      "letter": "CU",
+      "header": "Q88. How often do you promote your performances online?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 100,
+      "letter": "CV",
+      "header": "Q89. Have you ever earned money from online music platforms?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 101,
+      "letter": "CW",
+      "header": "Q90. Do you record and share videos of your performances?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 102,
+      "letter": "CX",
+      "header": "Q91. What percentage of your audience/income comes from tourists?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 103,
+      "letter": "CY",
+      "header": "Q92. What type of performing/visual arts do you focus on? (Select all that apply)",
+      "responses": 2,
+      "sample_values": [
+        "Traditional dance/performance; Contemporary dance/theatre/performance; Art education/workshops",
+        "Traditional dance/performance; Contemporary dance/theatre/performance"
+      ]
+    },
+    {
+      "index": 104,
+      "letter": "CZ",
+      "header": "Q93. How do LOCAL Gambians discover your work/performances?",
+      "responses": 2,
+      "sample_values": [
+        "Word of mouth; Social media posts; Local newspapers/radio",
+        "Community events; Word of mouth; Social media posts; Local newspapers/radio"
+      ]
+    },
+    {
+      "index": 105,
+      "letter": "DA",
+      "header": "Q94. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 106,
+      "letter": "DB",
+      "header": "Q95. How do INTERNATIONAL VISITORS find your work/performances?",
+      "responses": 2,
+      "sample_values": [
+        "Social media (Instagram, Facebook)",
+        "Social media (Instagram, Facebook)"
+      ]
+    },
+    {
+      "index": 107,
+      "letter": "DC",
+      "header": "Q96. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 108,
+      "letter": "DD",
+      "header": "Q97. Do you document your work/performances digitally?",
+      "responses": 2,
+      "sample_values": [
+        "Yes, professional photography/video",
+        "Yes, with my own equipment"
+      ]
+    },
+    {
+      "index": 109,
+      "letter": "DE",
+      "header": "Q98. Do you sell your work online?",
+      "responses": 2,
+      "sample_values": [
+        "Occasionally",
+        "Yes, regularly"
+      ]
+    },
+    {
+      "index": 110,
+      "letter": "DF",
+      "header": "Q99. How do LOCAL visitors typically learn about your site?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 111,
+      "letter": "DG",
+      "header": "Q100. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 112,
+      "letter": "DH",
+      "header": "Q101. How do INTERNATIONAL TOURISTS discover your site?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 113,
+      "letter": "DI",
+      "header": "Q102. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 114,
+      "letter": "DJ",
+      "header": "Q103. Do you have digital content about your site's history/significance?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 115,
+      "letter": "DK",
+      "header": "Q104. What digital services do you offer visitors?",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 116,
+      "letter": "DL",
+      "header": "Q105. If Other, please specify:",
+      "responses": 0,
+      "sample_values": []
+    },
+    {
+      "index": 117,
+      "letter": "DM",
+      "header": "Q106. Would you be available for a 15-minute phone interview to discuss your responses in more detail?",
+      "responses": 5,
+      "sample_values": [
+        "Yes",
+        "Maybe, depending on timing",
+        "Yes"
+      ]
+    },
+    {
+      "index": 118,
+      "letter": "DN",
+      "header": "Q107. Contact information for follow-up (phone, WhatsApp, email)",
+      "responses": 5,
+      "sample_values": [
+        "351 3996",
+        "jabangnf@gmail.com +220 7177996",
+        "ebunjan @gmail.com"
+      ]
+    }
+  ]
+}

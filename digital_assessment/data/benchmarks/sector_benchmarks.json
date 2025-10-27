@@ -1,0 +1,522 @@
+{
+  "Cultural heritage sites/museums": {
+    "sector": "Cultural heritage sites/museums",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 23.2,
+        "avg_social_media": 4.4,
+        "avg_website": 7.2,
+        "avg_visual_content": 1.2,
+        "avg_discoverability": 4.6,
+        "avg_digital_sales": 3.6,
+        "avg_platform_integration": 2.2
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 19.0,
+        "avg_social_media": 3.6,
+        "avg_website": 5.4,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 4.2,
+        "avg_digital_sales": 2.0,
+        "avg_platform_integration": 2.4
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 18.4,
+        "avg_social_media": 4.4,
+        "avg_website": 6.4,
+        "avg_visual_content": 1.6,
+        "avg_discoverability": 2.4,
+        "avg_digital_sales": 2.0,
+        "avg_platform_integration": 1.6
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 9.8,
+        "avg_social_media": 2.8,
+        "avg_website": 1.8,
+        "avg_visual_content": 0.8,
+        "avg_discoverability": 2.8,
+        "avg_digital_sales": 0.4,
+        "avg_platform_integration": 1.2
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 20.6,
+        "avg_social_media": 4.2,
+        "avg_website": 5.4,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 4.4,
+        "avg_digital_sales": 2.4,
+        "avg_platform_integration": 2.8
+      }
+    },
+    "regional_avg": 18.2,
+    "regional_category_avgs": {
+      "social_media": 3.88,
+      "website": 5.24,
+      "visual_content": 1.28,
+      "discoverability": 3.68,
+      "digital_sales": 2.08,
+      "platform_integration": 2.04
+    }
+  },
+  "Crafts and artisan products": {
+    "sector": "Crafts and artisan products",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 15.8,
+        "avg_social_media": 5.0,
+        "avg_website": 4.2,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 2.4,
+        "avg_digital_sales": 1.2,
+        "avg_platform_integration": 1.6
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 16.6,
+        "avg_social_media": 6.2,
+        "avg_website": 3.4,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 2.4,
+        "avg_digital_sales": 1.4,
+        "avg_platform_integration": 1.8
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 24.0,
+        "avg_social_media": 4.4,
+        "avg_website": 7.6,
+        "avg_visual_content": 2.8,
+        "avg_discoverability": 3.2,
+        "avg_digital_sales": 3.8,
+        "avg_platform_integration": 2.2
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 10.0,
+        "avg_social_media": 2.4,
+        "avg_website": 3.2,
+        "avg_visual_content": 1.2,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 1.4,
+        "avg_platform_integration": 1.0
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 19.2,
+        "avg_social_media": 5.4,
+        "avg_website": 5.4,
+        "avg_visual_content": 2.2,
+        "avg_discoverability": 2.4,
+        "avg_digital_sales": 2.2,
+        "avg_platform_integration": 1.6
+      }
+    },
+    "regional_avg": 17.12,
+    "regional_category_avgs": {
+      "social_media": 4.68,
+      "website": 4.76,
+      "visual_content": 1.8,
+      "discoverability": 2.24,
+      "digital_sales": 2.0,
+      "platform_integration": 1.64
+    }
+  },
+  "Festivals and cultural events": {
+    "sector": "Festivals and cultural events",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 11.6,
+        "avg_social_media": 4.0,
+        "avg_website": 4.0,
+        "avg_visual_content": 1.0,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 1.2,
+        "avg_platform_integration": 0.8
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 17.0,
+        "avg_social_media": 4.8,
+        "avg_website": 7.0,
+        "avg_visual_content": 1.2,
+        "avg_discoverability": 1.0,
+        "avg_digital_sales": 2.2,
+        "avg_platform_integration": 0.8
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 13.0,
+        "avg_social_media": 3.6,
+        "avg_website": 4.8,
+        "avg_visual_content": 1.0,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 1.8,
+        "avg_platform_integration": 1.0
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 19.2,
+        "avg_social_media": 6.4,
+        "avg_website": 6.8,
+        "avg_visual_content": 1.2,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 2.6,
+        "avg_platform_integration": 1.4
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 16.4,
+        "avg_social_media": 5.4,
+        "avg_website": 5.4,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 1.0,
+        "avg_digital_sales": 1.8,
+        "avg_platform_integration": 1.4
+      }
+    },
+    "regional_avg": 15.44,
+    "regional_category_avgs": {
+      "social_media": 4.84,
+      "website": 5.6,
+      "visual_content": 1.16,
+      "discoverability": 0.84,
+      "digital_sales": 1.92,
+      "platform_integration": 1.08
+    }
+  },
+  "Performing and visual arts": {
+    "sector": "Performing and visual arts",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 16.8,
+        "avg_social_media": 4.4,
+        "avg_website": 6.2,
+        "avg_visual_content": 1.6,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 3.0,
+        "avg_platform_integration": 0.8
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 6.2,
+        "avg_social_media": 3.2,
+        "avg_website": 0.0,
+        "avg_visual_content": 0.2,
+        "avg_discoverability": 1.8,
+        "avg_digital_sales": 0.0,
+        "avg_platform_integration": 1.0
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 28.6,
+        "avg_social_media": 7.0,
+        "avg_website": 8.4,
+        "avg_visual_content": 3.0,
+        "avg_discoverability": 3.8,
+        "avg_digital_sales": 3.4,
+        "avg_platform_integration": 3.0
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 14.4,
+        "avg_social_media": 4.8,
+        "avg_website": 4.2,
+        "avg_visual_content": 1.0,
+        "avg_discoverability": 1.4,
+        "avg_digital_sales": 1.6,
+        "avg_platform_integration": 1.4
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 15.2,
+        "avg_social_media": 6.4,
+        "avg_website": 3.6,
+        "avg_visual_content": 1.0,
+        "avg_discoverability": 2.0,
+        "avg_digital_sales": 1.0,
+        "avg_platform_integration": 1.2
+      }
+    },
+    "regional_avg": 16.24,
+    "regional_category_avgs": {
+      "social_media": 5.16,
+      "website": 4.48,
+      "visual_content": 1.36,
+      "discoverability": 1.96,
+      "digital_sales": 1.8,
+      "platform_integration": 1.48
+    }
+  },
+  "Music (artists, production, venues, education)": {
+    "sector": "Music (artists, production, venues, education)",
+    "total_entities": 24,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 17.4,
+        "avg_social_media": 7.0,
+        "avg_website": 5.4,
+        "avg_visual_content": 1.0,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 2.0,
+        "avg_platform_integration": 1.2
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 11.2,
+        "avg_social_media": 4.6,
+        "avg_website": 3.4,
+        "avg_visual_content": 0.8,
+        "avg_discoverability": 1.2,
+        "avg_digital_sales": 0.6,
+        "avg_platform_integration": 0.6
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 24.0,
+        "avg_social_media": 7.6,
+        "avg_website": 6.0,
+        "avg_visual_content": 3.0,
+        "avg_discoverability": 2.8,
+        "avg_digital_sales": 3.2,
+        "avg_platform_integration": 1.4
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 10.6,
+        "avg_social_media": 3.8,
+        "avg_website": 4.2,
+        "avg_visual_content": 0.4,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 1.0,
+        "avg_platform_integration": 0.6
+      },
+      "Ghana": {
+        "num_entities": 4,
+        "avg_total_score": 11.75,
+        "avg_social_media": 6.5,
+        "avg_website": 2.25,
+        "avg_visual_content": 0.75,
+        "avg_discoverability": 1.25,
+        "avg_digital_sales": 0.5,
+        "avg_platform_integration": 0.5
+      }
+    },
+    "regional_avg": 15.12,
+    "regional_category_avgs": {
+      "social_media": 5.88,
+      "website": 4.33,
+      "visual_content": 1.21,
+      "discoverability": 1.33,
+      "digital_sales": 1.5,
+      "platform_integration": 0.88
+    }
+  },
+  "Fashion & Design": {
+    "sector": "Fashion & Design",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 23.0,
+        "avg_social_media": 6.4,
+        "avg_website": 8.2,
+        "avg_visual_content": 2.6,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 3.4,
+        "avg_platform_integration": 1.8
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 13.2,
+        "avg_social_media": 5.0,
+        "avg_website": 4.0,
+        "avg_visual_content": 0.8,
+        "avg_discoverability": 1.2,
+        "avg_digital_sales": 1.4,
+        "avg_platform_integration": 0.8
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 20.4,
+        "avg_social_media": 7.0,
+        "avg_website": 6.8,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 3.6,
+        "avg_platform_integration": 1.0
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 12.4,
+        "avg_social_media": 5.8,
+        "avg_website": 3.6,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 0.4,
+        "avg_digital_sales": 0.8,
+        "avg_platform_integration": 0.4
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 26.6,
+        "avg_social_media": 7.0,
+        "avg_website": 9.0,
+        "avg_visual_content": 2.6,
+        "avg_discoverability": 1.6,
+        "avg_digital_sales": 5.0,
+        "avg_platform_integration": 1.4
+      }
+    },
+    "regional_avg": 19.12,
+    "regional_category_avgs": {
+      "social_media": 6.24,
+      "website": 6.32,
+      "visual_content": 1.76,
+      "discoverability": 0.88,
+      "digital_sales": 2.84,
+      "platform_integration": 1.08
+    }
+  },
+  "Audiovisual (film, photography, TV, videography)": {
+    "sector": "Audiovisual (film, photography, TV, videography)",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 10.0,
+        "avg_social_media": 4.0,
+        "avg_website": 2.6,
+        "avg_visual_content": 1.2,
+        "avg_discoverability": 0.4,
+        "avg_digital_sales": 0.8,
+        "avg_platform_integration": 1.0
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 21.6,
+        "avg_social_media": 6.2,
+        "avg_website": 8.2,
+        "avg_visual_content": 2.2,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 3.0,
+        "avg_platform_integration": 1.2
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 25.8,
+        "avg_social_media": 7.6,
+        "avg_website": 9.0,
+        "avg_visual_content": 3.4,
+        "avg_discoverability": 1.0,
+        "avg_digital_sales": 3.4,
+        "avg_platform_integration": 1.4
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 14.0,
+        "avg_social_media": 5.6,
+        "avg_website": 4.2,
+        "avg_visual_content": 1.2,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 1.4,
+        "avg_platform_integration": 1.0
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 22.4,
+        "avg_social_media": 6.4,
+        "avg_website": 8.6,
+        "avg_visual_content": 1.8,
+        "avg_discoverability": 1.0,
+        "avg_digital_sales": 3.4,
+        "avg_platform_integration": 1.2
+      }
+    },
+    "regional_avg": 18.76,
+    "regional_category_avgs": {
+      "social_media": 5.96,
+      "website": 6.52,
+      "visual_content": 1.96,
+      "discoverability": 0.76,
+      "digital_sales": 2.4,
+      "platform_integration": 1.16
+    }
+  },
+  "Marketing/advertising/publishing": {
+    "sector": "Marketing/advertising/publishing",
+    "total_entities": 25,
+    "countries": {
+      "Senegal": {
+        "num_entities": 5,
+        "avg_total_score": 18.4,
+        "avg_social_media": 4.8,
+        "avg_website": 8.2,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 2.6,
+        "avg_platform_integration": 0.8
+      },
+      "Cape Verde": {
+        "num_entities": 5,
+        "avg_total_score": 22.6,
+        "avg_social_media": 6.6,
+        "avg_website": 8.6,
+        "avg_visual_content": 1.8,
+        "avg_discoverability": 0.8,
+        "avg_digital_sales": 3.4,
+        "avg_platform_integration": 1.4
+      },
+      "Nigeria": {
+        "num_entities": 5,
+        "avg_total_score": 24.8,
+        "avg_social_media": 7.6,
+        "avg_website": 8.2,
+        "avg_visual_content": 3.4,
+        "avg_discoverability": 2.2,
+        "avg_digital_sales": 2.0,
+        "avg_platform_integration": 1.4
+      },
+      "Benin": {
+        "num_entities": 5,
+        "avg_total_score": 14.2,
+        "avg_social_media": 4.6,
+        "avg_website": 6.0,
+        "avg_visual_content": 0.6,
+        "avg_discoverability": 0.6,
+        "avg_digital_sales": 1.8,
+        "avg_platform_integration": 0.6
+      },
+      "Ghana": {
+        "num_entities": 5,
+        "avg_total_score": 20.0,
+        "avg_social_media": 6.4,
+        "avg_website": 7.4,
+        "avg_visual_content": 1.4,
+        "avg_discoverability": 1.4,
+        "avg_digital_sales": 2.0,
+        "avg_platform_integration": 1.4
+      }
+    },
+    "regional_avg": 20.0,
+    "regional_category_avgs": {
+      "social_media": 6.0,
+      "website": 7.68,
+      "visual_content": 1.72,
+      "discoverability": 1.12,
+      "digital_sales": 2.36,
+      "platform_integration": 1.12
+    }
+  }
+}

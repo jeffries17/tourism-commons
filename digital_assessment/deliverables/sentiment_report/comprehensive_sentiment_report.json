@@ -1,0 +1,236 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-23T21:39:31.407967",
+    "data_sources_used": [
+      "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/sentiment_analysis_results.json",
+      "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/regional_sentiment/regional_sentiment_analysis.json"
+    ],
+    "validation_status": "verified",
+    "cross_check_results": {
+      "total_reviews": {
+        "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/sentiment_analysis_results.json": 1316,
+        "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/regional_sentiment/regional_sentiment_analysis.json": 3096
+      },
+      "total_reviews_consistent": false,
+      "language_distributions": {
+        "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/sentiment_analysis_results.json": {
+          "nl": 447,
+          "de": 59,
+          "en": 734,
+          "es": 45,
+          "fr": 31
+        }
+      }
+    }
+  },
+  "key_findings": {
+    "total_reviews_analyzed": 4412,
+    "language_distribution": {
+      "nl": 447,
+      "de": 59,
+      "en": 734,
+      "es": 45,
+      "fr": 31
+    },
+    "language_percentages": {
+      "nl": 34.0,
+      "de": 4.5,
+      "en": 55.8,
+      "es": 3.4,
+      "fr": 2.4
+    },
+    "average_sentiment": 0.617,
+    "average_rating": 4.13
+  },
+  "methodology": {
+    "data_sources": [
+      "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/sentiment_analysis_results.json",
+      "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/regional_sentiment/regional_sentiment_analysis.json"
+    ],
+    "validation_process": "Cross-checked across multiple sources",
+    "theme_taxonomy": {
+      "service_quality": {
+        "keywords": [
+          "guide",
+          "staff",
+          "friendly",
+          "helpful",
+          "service",
+          "professional",
+          "knowledgeable"
+        ],
+        "description": "Quality of service delivery and staff interactions"
+      },
+      "artistic_creative_quality": {
+        "keywords": [
+          "art",
+          "artist",
+          "creative",
+          "beautiful",
+          "amazing",
+          "wonderful",
+          "exhibition"
+        ],
+        "description": "Appreciation for artistic and creative elements"
+      },
+      "value_pricing": {
+        "keywords": [
+          "price",
+          "value",
+          "expensive",
+          "cheap",
+          "worth",
+          "cost",
+          "affordable"
+        ],
+        "description": "Perception of value for money and pricing"
+      },
+      "authenticity_culture": {
+        "keywords": [
+          "authentic",
+          "culture",
+          "traditional",
+          "local",
+          "genuine",
+          "heritage"
+        ],
+        "description": "Authenticity and cultural authenticity"
+      },
+      "educational_value": {
+        "keywords": [
+          "learn",
+          "educational",
+          "informative",
+          "history",
+          "knowledge",
+          "interesting"
+        ],
+        "description": "Educational and learning value"
+      },
+      "infrastructure": {
+        "keywords": [
+          "building",
+          "facility",
+          "clean",
+          "maintained",
+          "restoration",
+          "preserved"
+        ],
+        "description": "Physical infrastructure and facilities"
+      },
+      "atmosphere_ambiance": {
+        "keywords": [
+          "atmosphere",
+          "ambiance",
+          "feeling",
+          "vibe",
+          "experience",
+          "peaceful"
+        ],
+        "description": "Overall atmosphere and ambiance"
+      },
+      "accessibility_comfort": {
+        "keywords": [
+          "access",
+          "comfortable",
+          "easy",
+          "convenient",
+          "accessible",
+          "transport"
+        ],
+        "description": "Accessibility and comfort factors"
+      }
+    },
+    "sector_mapping": {
+      "Cultural heritage sites/museums": "Museums & Heritage",
+      "Crafts and artisan products": "Crafts & Artisans",
+      "Performing and visual arts": "Performing Arts",
+      "Music (artists, production, venues, education)": "Music & Venues",
+      "Festivals and cultural events": "Festivals"
+    }
+  },
+  "sector_analysis": {
+    "Museums & Heritage": {
+      "total_reviews": 1808,
+      "avg_sentiment": 0.442,
+      "avg_rating": 4.09,
+      "stakeholders": 19,
+      "theme_performance": {}
+    },
+    "Crafts & Artisans": {
+      "total_reviews": 1013,
+      "avg_sentiment": 0.672,
+      "avg_rating": 4.25,
+      "stakeholders": 13,
+      "theme_performance": {}
+    },
+    "Performing Arts": {
+      "total_reviews": 143,
+      "avg_sentiment": 0.632,
+      "avg_rating": 4.26,
+      "stakeholders": 8,
+      "theme_performance": {}
+    },
+    "Fashion & Design": {
+      "total_reviews": 57,
+      "avg_sentiment": 0.785,
+      "avg_rating": 4.72,
+      "stakeholders": 2,
+      "theme_performance": {}
+    },
+    "Music & Venues": {
+      "total_reviews": 75,
+      "avg_sentiment": 0.592,
+      "avg_rating": 3.88,
+      "stakeholders": 3,
+      "theme_performance": {}
+    }
+  },
+  "regional_analysis": {
+    "Benin": {
+      "total_reviews": 446,
+      "avg_sentiment": 0.465,
+      "avg_rating": 3.94,
+      "stakeholders": 7,
+      "countries": [
+        "Benin"
+      ]
+    },
+    "Cape Verde": {
+      "total_reviews": 591,
+      "avg_sentiment": 0.558,
+      "avg_rating": 4.22,
+      "stakeholders": 9,
+      "countries": [
+        "Cape Verde"
+      ]
+    },
+    "Ghana": {
+      "total_reviews": 823,
+      "avg_sentiment": 0.619,
+      "avg_rating": 4.27,
+      "stakeholders": 12,
+      "countries": [
+        "Ghana"
+      ]
+    },
+    "Nigeria": {
+      "total_reviews": 576,
+      "avg_sentiment": 0.648,
+      "avg_rating": 4.25,
+      "stakeholders": 10,
+      "countries": [
+        "Nigeria"
+      ]
+    },
+    "Senegal": {
+      "total_reviews": 660,
+      "avg_sentiment": 0.481,
+      "avg_rating": 4.09,
+      "stakeholders": 7,
+      "countries": [
+        "Senegal"
+      ]
+    }
+  }
+}

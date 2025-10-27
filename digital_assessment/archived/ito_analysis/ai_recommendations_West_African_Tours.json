@@ -1,0 +1,31 @@
+{
+  "stakeholder": "West African Tours",
+  "sector": "Tour Operator",
+  "recommendations": {
+    "Social Media": {
+      "score": "4",
+      "recommendation": "\"Create a monthly content calendar for Facebook, planning at least 4 posts ahead. This helps you increase posting frequency, engage followers consistently, and improve overall interaction, making your presence more dynamic despite limited internet access.\""
+    },
+    "Website": {
+      "score": "7",
+      "recommendation": "\"Create a blog section on your website to regularly share travel tips, local culture, and tour highlights. This helps you improve SEO, engage visitors, and encourage repeat visits, enhancing your overall online presence.\""
+    },
+    "Visual Content": {
+      "score": "4",
+      "recommendation": "Host a \"Photo Day\" event where customers can explore a scenic tour location, take photos, and share their experiences via WhatsApp. This helps you generate authentic, user-generated content that showcases real experiences and improves visual storytelling."
+    },
+    "Discoverability": {
+      "score": "3",
+      "recommendation": "Create and optimize a Google My Business listing with complete information, photos, and location details. This helps you appear in local search results and Google Maps, making it easier for tourists to find and choose your services."
+    },
+    "Digital Sales": {
+      "score": "2",
+      "recommendation": "Set up a simple WhatsApp booking system by creating a dedicated business account and sharing your tour offerings via broadcast messages. This helps you facilitate bookings directly and efficiently, catering to your customers' preferred communication method."
+    },
+    "Platform Integration": {
+      "score": "2",
+      "recommendation": "Create a Google My Business listing and register on TripAdvisor. This helps you increase visibility when tourists search for tours, connect with potential customers through reviews, and enhance your credibility within the tourism ecosystem."
+    }
+  },
+  "timestamp": "2025-10-02T17:46:03.273236"
+}

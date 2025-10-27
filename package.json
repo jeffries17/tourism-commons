@@ -1,0 +1,12 @@
+{
+  "name": "tourism-commons",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build:website && npm run build:tools",
+    "build:website": "mkdir -p build && cp website/index.html build/landing.html",
+    "build:tools": "cd tools/digital-assessment && npm run build && cd ../.. && cp -r tools/digital-assessment/dist/* build/",
+    "dev": "cd tools/digital-assessment && npm run dev",
+    "deploy": "npm run build && firebase deploy --only hosting"
+  }
+}
+

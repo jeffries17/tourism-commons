@@ -1,0 +1,121 @@
+{
+  "project": {
+    "id": "benin",
+    "name": "Benin",
+    "slug": "benin-itc",
+    "basename": "/benin-itc",
+    "displayName": "Benin",
+    "description": "Digital Assessment for Benin Creative Industries & Tourism",
+    
+    "theme": {
+      "primaryColor": "#008751",
+      "secondaryColor": "#005b36",
+      "logo": "/benin-logo.svg",
+      "backgroundImage": null
+    },
+    
+    "features": {
+      "enableRegionalAnalysis": true,
+      "enableITOPerception": true,
+      "enableSentimentAnalysis": true,
+      "enableSectorAnalysis": true,
+      "enableParticipantAnalysis": true,
+      "enableMethodology": true
+    },
+    
+    "data": {
+      "sources": {
+        "participants": "./projects/benin/data/participants.json",
+        "regional": "./projects/benin/data/dashboard_region_data.json",
+        "sentiment": "./projects/benin/data/sentiment_data.json",
+        "ito": "./projects/benin/data/dashboard_ito_data.json",
+        "regional_sentiment": "./projects/benin/data/regional_sentiment.json",
+        "tour_operators_sentiment": "./projects/benin/data/tour_operators_sentiment.json",
+        "ito_regional": "./projects/benin/data/ito_regional_analysis.json"
+      },
+      "cacheTime": 3600
+    },
+    
+    "routes": [
+      {
+        "path": "/",
+        "component": "Dashboard",
+        "name": "Dashboard",
+        "admin": false,
+        "participant": true
+      },
+      {
+        "path": "/participants",
+        "component": "ParticipantList",
+        "name": "Participants",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/sectors",
+        "component": "SectorOverview",
+        "name": "Sectors",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/region",
+        "component": "RegionalAnalysis",
+        "name": "Region",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/ito-perception",
+        "component": "ITOPerception",
+        "name": "ITO Perception",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/reviews-sentiment",
+        "component": "ReviewsSentiment",
+        "name": "Reviews & Sentiment",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/methodology",
+        "component": "Methodology",
+        "name": "Methodology",
+        "admin": false,
+        "participant": false
+      }
+    ],
+    
+    "api": {
+      "endpoints": {
+        "auth": "/api/auth",
+        "participants": "/api/participants",
+        "scores": "/api/scores"
+      }
+    },
+    
+    "googleSheets": {
+      "spreadsheetId": "TBD",
+      "sheets": {
+        "participants": "Participants",
+        "survey": "Survey Responses",
+        "regional": "Regional Assessment"
+      }
+    },
+    
+    "deployment": {
+      "hosting": "tourism-development-d620c",
+      "domain": "tourismcommons.org",
+      "baseURL": "https://tourismcommons.org/benin-itc"
+    },
+    
+    "metadata": {
+      "created": "2025-10-27",
+      "lastUpdated": "2025-10-27",
+      "version": "1.0.0"
+    }
+  }
+}
+

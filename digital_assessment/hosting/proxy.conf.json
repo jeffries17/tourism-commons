@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "http://localhost:5001/tourism-development-d620c/us-central1",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
+

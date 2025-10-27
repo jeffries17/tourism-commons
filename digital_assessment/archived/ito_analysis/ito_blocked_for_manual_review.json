@@ -1,0 +1,42 @@
+{
+  "total_blocked": 6,
+  "blocked_by_operator": {
+    "Adventure Life": [
+      {
+        "page_type": "Tour/Itinerary",
+        "url": "https://www.adventure-life.com/africa/cruises/18461/rivers-of-west-africa-banjul-to-banjul",
+        "title": "Rivers Of West Africa Banjul To Banjul"
+      },
+      {
+        "page_type": "Tour/Itinerary",
+        "url": "https://www.adventure-life.com/africa/cruises/18460/rivers-of-west-africa-dakar-to-dakar",
+        "title": "Rivers Of West Africa Dakar To Dakar"
+      },
+      {
+        "page_type": "Tour/Itinerary",
+        "url": "https://www.adventure-life.com/africa/cruises/18516/cruise-west-africa-the-slavery-coast",
+        "title": "Cruise West Africa The Slavery Coast"
+      },
+      {
+        "page_type": "Tour/Itinerary",
+        "url": "https://www.adventure-life.com/africa/cruises/18514/the-slavery-coast-cruise-from-senegal-to-ghana",
+        "title": "The Slavery Coast Cruise From Senegal To Ghana"
+      }
+    ],
+    "Apollo": [
+      {
+        "page_type": "Destination Page",
+        "url": "https://www.apollo.se/gambia",
+        "title": ""
+      }
+    ],
+    "Meier’s Weltreisen": [
+      {
+        "page_type": "Destination Page",
+        "url": "https://www.meiers-weltreisen.de/reiseziele/afrika/gambia",
+        "title": ""
+      }
+    ]
+  },
+  "generated_at": "2025-10-06T20:42:13.002580"
+}

@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "total_assessed": 3,
+    "successful": 3,
+    "failed": 0,
+    "timestamp": "2025-09-30T08:52:20.192881"
+  },
+  "assessments": [
+    {
+      "operator_name": "African Travel Seminars",
+      "country_region": "",
+      "website_url": "",
+      "gambia_page_url": "https://www.africantravelseminars.com/senegal",
+      "gambia_tour_pages": [],
+      "visibility_navigation": "Unknown",
+      "product_type": "Flight+Hotel",
+      "itinerary_depth": {
+        "gambia_percentage": 50.0,
+        "detail_level": "Summary only",
+        "total_days": null,
+        "countries_breakdown": {
+          "Gambia": 2,
+          "Senegal": 2
+        },
+        "has_multi_country": true
+      },
+      "activities": {
+        "sun_beach": false,
+        "nature_wildlife": false,
+        "adventure": false,
+        "culture_heritage": true,
+        "festivals_events": true,
+        "audiovisual": false,
+        "marketing_advertising_publishing": true,
+        "crafts_artisan": false,
+        "fashion_design": false,
+        "music": false,
+        "performing_visual_arts": false,
+        "heritage_sites_museums": false
+      },
+      "target_audiences": [],
+      "audience_confidence_scores": {
+        "families": 0.025,
+        "older_couples": 0.0,
+        "backpackers": 0.0,
+        "adventure_travellers": 0.0,
+        "diaspora_heritage": 0.064,
+        "luxury_travellers": 0.0,
+        "groups": 0.0,
+        "students": 0.0
+      },
+      "booking_pathway": "Enquiry-only",
+      "price_transparency": "Unknown",
+      "media_presentation": {
+        "quality": "Unknown",
+        "has_ugc_testimonials": false,
+        "has_tripadvisor": false,
+        "image_count": 0,
+        "video_count": 0,
+        "has_destination_specific_images": false
+      },
+      "languages_available": [
+        "en"
+      ],
+      "local_integration": {
+        "hotels_mentioned": [],
+        "attractions_mentioned": [],
+        "dmc_mentioned": [],
+        "has_local_partnerships": false,
+        "integration_score": 0
+      },
+      "seasonality_framing": [],
+      "last_scraped": "2025-09-30T08:52:20.184036",
+      "scrape_status": "Success",
+      "scrape_errors": [],
+      "raw_content_length": 324
+    },
+    {
+      "operator_name": "Apollo",
+      "country_region": "",
+      "website_url": "",
+      "gambia_page_url": "https://www.apollo.se/gambia",
+      "gambia_tour_pages": [],
+      "visibility_navigation": "Unknown",
+      "product_type": "Flight+Hotel",
+      "itinerary_depth": {
+        "gambia_percentage": 92.5925925925926,
+        "detail_level": "Summary only",
+        "total_days": null,
+        "countries_breakdown": {
+          "Gambia": 25,
+          "Senegal": 2
+        },
+        "has_multi_country": true
+      },
+      "activities": {
+        "sun_beach": true,
+        "nature_wildlife": false,
+        "adventure": false,
+        "culture_heritage": false,
+        "festivals_events": false,
+        "audiovisual": true,
+        "marketing_advertising_publishing": true,
+        "crafts_artisan": false,
+        "fashion_design": false,
+        "music": false,
+        "performing_visual_arts": false,
+        "heritage_sites_museums": false
+      },
+      "target_audiences": [],
+      "audience_confidence_scores": {
+        "families": 0.025,
+        "older_couples": 0.025,
+        "backpackers": 0.0,
+        "adventure_travellers": 0.0,
+        "diaspora_heritage": 0.0,
+        "luxury_travellers": 0.029,
+        "groups": 0.0,
+        "students": 0.0
+      },
+      "booking_pathway": "Enquiry-only",
+      "price_transparency": "Unknown",
+      "media_presentation": {
+        "quality": "Unknown",
+        "has_ugc_testimonials": false,
+        "has_tripadvisor": false,
+        "image_count": 0,
+        "video_count": 0,
+        "has_destination_specific_images": false
+      },
+      "languages_available": [
+        "en"
+      ],
+      "local_integration": {
+        "hotels_mentioned": [],
+        "attractions_mentioned": [],
+        "dmc_mentioned": [],
+        "has_local_partnerships": false,
+        "integration_score": 0
+      },
+      "seasonality_framing": [],
+      "last_scraped": "2025-09-30T08:52:20.188381",
+      "scrape_status": "Success",
+      "scrape_errors": [],
+      "raw_content_length": 5948
+    },
+    {
+      "operator_name": "Birding Ecotours",
+      "country_region": "",
+      "website_url": "",
+      "gambia_page_url": "https://www.birdingecotours.com/destination/gambia-birding-tours/",
+      "gambia_tour_pages": [],
+      "visibility_navigation": "Unknown",
+      "product_type": "Flight+Hotel",
+      "itinerary_depth": {
+        "gambia_percentage": 82.05128205128204,
+        "detail_level": "Summary only",
+        "total_days": null,
+        "countries_breakdown": {
+          "Gambia": 32,
+          "Senegal": 5,
+          "Guinea": 1,
+          "Mali": 1
+        },
+        "has_multi_country": true
+      },
+      "activities": {
+        "sun_beach": true,
+        "nature_wildlife": true,
+        "adventure": true,
+        "culture_heritage": false,
+        "festivals_events": false,
+        "audiovisual": false,
+        "marketing_advertising_publishing": true,
+        "crafts_artisan": false,
+        "fashion_design": true,
+        "music": false,
+        "performing_visual_arts": true,
+        "heritage_sites_museums": true
+      },
+      "target_audiences": [],
+      "audience_confidence_scores": {
+        "families": 0.076,
+        "older_couples": 0.088,
+        "backpackers": 0.06,
+        "adventure_travellers": 0.0,
+        "diaspora_heritage": 0.043,
+        "luxury_travellers": 0.0,
+        "groups": 0.0,
+        "students": 0.037
+      },
+      "booking_pathway": "Enquiry-only",
+      "price_transparency": "Unknown",
+      "media_presentation": {
+        "quality": "Unknown",
+        "has_ugc_testimonials": true,
+        "has_tripadvisor": false,
+        "image_count": 0,
+        "video_count": 0,
+        "has_destination_specific_images": false
+      },
+      "languages_available": [
+        "fr"
+      ],
+      "local_integration": {
+        "hotels_mentioned": [
+          "senegambia beach hotel"
+        ],
+        "attractions_mentioned": [],
+        "dmc_mentioned": [
+          "gambia bird"
+        ],
+        "has_local_partnerships": true,
+        "integration_score": 2
+      },
+      "seasonality_framing": [],
+      "last_scraped": "2025-09-30T08:52:20.192791",
+      "scrape_status": "Success",
+      "scrape_errors": [],
+      "raw_content_length": 6150
+    }
+  ]
+}

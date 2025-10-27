@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "generated": "2025-10-22T18:35:14.642370",
+    "total_stakeholders": 236,
+    "countries_analyzed": 6,
+    "sectors_analyzed": 7,
+    "music_entries_removed": 0
+  },
+  "country_rankings": [
+    {
+      "country": "Nigeria",
+      "avg_score": 25.57,
+      "entity_count": 35
+    },
+    {
+      "country": "Ghana",
+      "avg_score": 23.83,
+      "entity_count": 35
+    },
+    {
+      "country": "Senegal",
+      "avg_score": 20.57,
+      "entity_count": 35
+    },
+    {
+      "country": "The Gambia",
+      "avg_score": 20.34,
+      "entity_count": 61
+    },
+    {
+      "country": "Cape Verde",
+      "avg_score": 19.11,
+      "entity_count": 35
+    },
+    {
+      "country": "Benin",
+      "avg_score": 16.31,
+      "entity_count": 35
+    }
+  ],
+  "sector_comparison": [
+    {
+      "sector": "Crafts and artisan products",
+      "gambia_avg": 8.433333333333334,
+      "gambia_count": 12,
+      "regional_avg": 16.22,
+      "regional_count": 37,
+      "gap": -7.79
+    },
+    {
+      "sector": "Festivals and cultural events",
+      "gambia_avg": 14.092307692307692,
+      "gambia_count": 13,
+      "regional_avg": 16.9,
+      "regional_count": 38,
+      "gap": -2.81
+    },
+    {
+      "sector": "Fashion & Design",
+      "gambia_avg": 20.833333333333332,
+      "gambia_count": 12,
+      "regional_avg": 23.27,
+      "regional_count": 37,
+      "gap": -2.44
+    },
+    {
+      "sector": "Cultural heritage sites/museums",
+      "gambia_avg": 18.01111111111111,
+      "gambia_count": 9,
+      "regional_avg": 19.5,
+      "regional_count": 34,
+      "gap": -1.49
+    },
+    {
+      "sector": "Performing and visual arts",
+      "gambia_avg": 24.333333333333332,
+      "gambia_count": 6,
+      "regional_avg": 19.81,
+      "regional_count": 31,
+      "gap": 4.53
+    },
+    {
+      "sector": "Audiovisual (film, photography, TV, videography)",
+      "gambia_avg": 42.237500000000004,
+      "gambia_count": 8,
+      "regional_avg": 27.33,
+      "regional_count": 33,
+      "gap": 14.91
+    },
+    {
+      "sector": "Marketing/advertising/publishing",
+      "gambia_avg": 60.3,
+      "gambia_count": 1,
+      "regional_avg": 24.9,
+      "regional_count": 26,
+      "gap": 35.4
+    }
+  ],
+  "category_leaders": {
+    "social_media": {
+      "regional": [
+        {
+          "name": "Filmhouse Cinemas (Lekki IMAX, Lagos)",
+          "country": "Nigeria",
+          "score": 9
+        },
+        {
+          "name": "Record TV Cabo Verde",
+          "country": "Cape Verde",
+          "score": 9
+        },
+        {
+          "name": "Soundcity TV (Lagos)",
+          "country": "Nigeria",
+          "score": 9
+        },
+        {
+          "name": "Segbeya CINÉ - BÉNIN",
+          "country": "Benin",
+          "score": 9
+        },
+        {
+          "name": "Village des Arts de Dakar",
+          "country": "Senegal",
+          "score": 9
+        }
+      ]
+    },
+    "website": {
+      "regional": [
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "score": 10
+        },
+        {
+          "name": "RTC – Radiotelevisão Caboverdiana",
+          "country": "Cape Verde",
+          "score": 9
+        },
+        {
+          "name": "RCV – Rádio de Cabo Verde",
+          "country": "Cape Verde",
+          "score": 9
+        },
+        {
+          "name": "Ghana Broadcasting Corporation (GBC)",
+          "country": "Ghana",
+          "score": 9
+        },
+        {
+          "name": "AFRIFF – Africa Int’l Film Festival (Lagos)",
+          "country": "Nigeria",
+          "score": 9
+        }
+      ]
+    },
+    "visual_content": {
+      "regional": [
+        {
+          "name": "RTC – Radiotelevisão Caboverdiana",
+          "country": "Cape Verde",
+          "score": 10
+        },
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "score": 10
+        },
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "score": 10
+        },
+        {
+          "name": "Baba Tree Basket Company (Bolgatanga)",
+          "country": "Ghana",
+          "score": 10
+        },
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "score": 10
+        }
+      ]
+    }
+  },
+  "sector_analysis": [
+    {
+      "sector": "Audiovisual (film, photography, TV, videography)",
+      "regional_avg": 27.3,
+      "gambia_avg": 42.2,
+      "gap": 14.9,
+      "gambia_rank": null,
+      "gambia_count": 8,
+      "regional_count": 33,
+      "top_3": [
+        {
+          "name": "What’s On – Gambia",
+          "country": "The Gambia",
+          "score": 58.2
+        },
+        {
+          "name": "Kerr Fatou",
+          "country": "The Gambia",
+          "score": 56.4
+        },
+        {
+          "name": "The Fatu Network",
+          "country": "The Gambia",
+          "score": 51.2
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 4.5,
+        "avg_website": 4.9,
+        "avg_visual_content": 4.4
+      }
+    },
+    {
+      "sector": "Crafts and artisan products",
+      "regional_avg": 16.2,
+      "gambia_avg": 8.4,
+      "gap": -7.8,
+      "gambia_rank": null,
+      "gambia_count": 12,
+      "regional_count": 37,
+      "top_3": [
+        {
+          "name": "Global Mamas (Krobo beads & batik)",
+          "country": "Ghana",
+          "score": 39
+        },
+        {
+          "name": "Nike Art Foundation (Lagos/Abuja/Oshogbo)",
+          "country": "Nigeria",
+          "score": 38
+        },
+        {
+          "name": "Abuko Pottery Center",
+          "country": "The Gambia",
+          "score": 35.1
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 3.2,
+        "avg_website": 3.2,
+        "avg_visual_content": 3.1
+      }
+    },
+    {
+      "sector": "Cultural heritage sites/museums",
+      "regional_avg": 19.5,
+      "gambia_avg": 18.0,
+      "gap": -1.5,
+      "gambia_rank": null,
+      "gambia_count": 9,
+      "regional_count": 34,
+      "top_3": [
+        {
+          "name": "Ninki Nanka Trail",
+          "country": "The Gambia",
+          "score": 42.3
+        },
+        {
+          "name": "Musée de la Fondation Zinsou (Ouidah)",
+          "country": "Benin",
+          "score": 38
+        },
+        {
+          "name": "Musée des Civilisations Noires",
+          "country": "Senegal",
+          "score": 37
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 2.9,
+        "avg_website": 3.9,
+        "avg_visual_content": 2.3
+      }
+    },
+    {
+      "sector": "Fashion & Design",
+      "regional_avg": 23.3,
+      "gambia_avg": 20.8,
+      "gap": -2.4,
+      "gambia_rank": null,
+      "gambia_count": 12,
+      "regional_count": 37,
+      "top_3": [
+        {
+          "name": "Sawallo Couture",
+          "country": "The Gambia",
+          "score": 54.0
+        },
+        {
+          "name": "Fashion Weekend Gambia",
+          "country": "The Gambia",
+          "score": 52.1
+        },
+        {
+          "name": "Christie Brown (Accra)",
+          "country": "Ghana",
+          "score": 39
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 4.2,
+        "avg_website": 4.3,
+        "avg_visual_content": 4.8
+      }
+    },
+    {
+      "sector": "Festivals and cultural events",
+      "regional_avg": 16.9,
+      "gambia_avg": 14.1,
+      "gap": -2.8,
+      "gambia_rank": null,
+      "gambia_count": 13,
+      "regional_count": 38,
+      "top_3": [
+        {
+          "name": "Janjanbureh Kankurang Festival",
+          "country": "The Gambia",
+          "score": 49.0
+        },
+        {
+          "name": "Amsterdam–Plymouth–Banjul Rally",
+          "country": "The Gambia",
+          "score": 39.9
+        },
+        {
+          "name": "Gam Music Award",
+          "country": "The Gambia",
+          "score": 36.2
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 3.2,
+        "avg_website": 3.7,
+        "avg_visual_content": 2.7
+      }
+    },
+    {
+      "sector": "Marketing/advertising/publishing",
+      "regional_avg": 24.9,
+      "gambia_avg": 60.3,
+      "gap": 35.4,
+      "gambia_rank": null,
+      "gambia_count": 1,
+      "regional_count": 26,
+      "top_3": [
+        {
+          "name": "My Gambia (online magazine)",
+          "country": "The Gambia",
+          "score": 60.3
+        },
+        {
+          "name": "Expresso das Ilhas (weekly newspaper)",
+          "country": "Cape Verde",
+          "score": 31
+        },
+        {
+          "name": "Modern Ghana",
+          "country": "Ghana",
+          "score": 30
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 5.8,
+        "avg_website": 7.4,
+        "avg_visual_content": 5.0
+      }
+    },
+    {
+      "sector": "Performing and visual arts",
+      "regional_avg": 19.8,
+      "gambia_avg": 24.3,
+      "gap": 4.5,
+      "gambia_rank": null,
+      "gambia_count": 6,
+      "regional_count": 31,
+      "top_3": [
+        {
+          "name": "Flex Fuzion Entertainment & Dance Academy",
+          "country": "The Gambia",
+          "score": 40.2
+        },
+        {
+          "name": "MUSON Centre (Lagos)",
+          "country": "Nigeria",
+          "score": 37
+        },
+        {
+          "name": "National Theatre, Lagos",
+          "country": "Nigeria",
+          "score": 36
+        }
+      ],
+      "success_patterns": {
+        "avg_social_media": 4.2,
+        "avg_website": 3.6,
+        "avg_visual_content": 3.1
+      }
+    }
+  ]
+}

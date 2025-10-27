@@ -1,0 +1,55 @@
+{
+  "name": "West African Tours",
+  "region": "Gambia",
+  "assessment_date": "2025-10-01T16:01:59.541768",
+  "assessment_method": "automated_test",
+  "discovered_urls": {
+    "website": "https://westafricantoursinfo.com/",
+    "facebook": null,
+    "instagram": null,
+    "tripadvisor": "https://www.tripadvisor.co.uk/ShowTopic-g293794-i9249-k7622963-o20-West_African_Tours_tour_company-Gambia.html",
+    "directories": [
+      "https://www.accessgambia.com/information/west-african-tours.html"
+    ]
+  },
+  "discoverability_criteria": {
+    "DIS1_in_search": 1,
+    "DIS2_gmb_exists": "",
+    "DIS3_one_directory": 1,
+    "DIS4_first_page": 1,
+    "DIS5_gmb_photos": "",
+    "DIS6_multiple_directories": 0,
+    "DIS7_has_reviews": "",
+    "DIS8_5plus_reviews": "",
+    "DIS9_responds_reviews": "",
+    "DIS10_backlinks": ""
+  },
+  "website_criteria": {
+    "WEB1_exists_loads": 1,
+    "WEB2_mobile_friendly": 1,
+    "WEB3_no_major_issues": 1,
+    "WEB4_services_described": 0,
+    "WEB5_contact_visible": 0,
+    "WEB6_working_forms": 1,
+    "WEB7_updated_recently": 0,
+    "WEB8_modern_design": "",
+    "WEB9_multiple_pages": 0,
+    "WEB10_links_to_social": 0
+  },
+  "discoverability_raw": 3,
+  "website_raw": 4,
+  "total_automated": 7,
+  "manual_review_needed": [
+    "DIS2",
+    "DIS5",
+    "DIS7",
+    "DIS8",
+    "DIS9",
+    "DIS10",
+    "WEB8",
+    "Social Media (all 10)",
+    "Visual Content (all 10)",
+    "Digital Sales (all 10)",
+    "Platform Integration (all 10)"
+  ]
+}

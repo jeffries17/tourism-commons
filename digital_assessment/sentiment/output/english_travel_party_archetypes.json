@@ -1,0 +1,57 @@
+{
+  "total_english_reviews": 713,
+  "travel_party_distribution": {
+    "unknown": 592,
+    "family": 48,
+    "couple": 41,
+    "solo": 11,
+    "group": 21
+  },
+  "archetype_analysis": {
+    "unknown": {
+      "sample_size": 592,
+      "avg_rating": 3.83,
+      "sample_quotes": [
+        "Tribute Arch That Offers a Great View of the City We appreciated the tasteful tribute to the military coup July 1994 that offers views of Banjul.  Thi...",
+        "Panoramic View of Banjul Located on the Banjul-Serrekunda highway into Banjul, is the commemorative arch built in 1996 Provisional Ruling Council over...",
+        "It is beautiful to visit the circle at wasu where you can spot different types of stone  I had a very wonderful experience.. visiting the stone circle..."
+      ]
+    },
+    "family": {
+      "sample_size": 48,
+      "avg_rating": 4.17,
+      "sample_quotes": [
+        "Nice little museum at the top with a really good guide We went up there to activate our kids a bit - we expected a nice view, which was indeed nice, b...",
+        "A lovely little gem We really enjoyed it here and spent longer than we expected.  The artifacts etc are quite dated but they are well put together and...",
+        "Good example of a fishing village I really enjoyed this visit. We went around the smoke huts where the process was explained to us, we met the ladies ..."
+      ]
+    },
+    "couple": {
+      "sample_size": 41,
+      "avg_rating": 3.73,
+      "sample_quotes": [
+        "Highly recommended amazing energies  My husband and I stopped here on our way to George Town we got to talk to the most knowledgeable man ever the sto...",
+        "Wassu Stone Circles, Gambia  - Not to be missed We drove from Farafenni to Wassu (Farafenni is about 3 hours away from the Kombo/Serrukunda, including...",
+        "Honeymoon visit Great little market full of woodworking pieces jewellery and trinkets you will be approached a lot just remember be polite and just sa..."
+      ]
+    },
+    "solo": {
+      "sample_size": 11,
+      "avg_rating": 3.55,
+      "sample_quotes": [
+        "Dont Go Alone Senegambia market is huge filled with people shoulder to shoulder selling everything from sunglasses to cement and anything inbetween.\nT...",
+        "Market visit Banjul It’s a tourist market mainly . Very repetitive. But some nice hand made prices . You have to haggle but stuff is junk really. You ...",
+        "Great visit Get a guide to take you over on the ferry from Banjul and then walk 10 mins. A well done museum  with ghoulish artifacts but a wonderful h..."
+      ]
+    },
+    "group": {
+      "sample_size": 21,
+      "avg_rating": 3.57,
+      "sample_quotes": [
+        "Roots Tour with Armstrong Tours My friends and I booked the Roots day trip to Kunta Kinteh Island with Armstrong Tours, who were based opposite the Ne...",
+        "Intersting exhibits on the (colonial) history of Gambia Three floors of exibits, sketching the (colonial) history of The Gambia. We were here as part ...",
+        "Crocodiles Up Close, so See You Later Alligator What a great visit to the crocodile pool today for our group.  Living in Florida, I know to keep a saf..."
+      ]
+    }
+  }
+}

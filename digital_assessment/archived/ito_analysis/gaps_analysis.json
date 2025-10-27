@@ -1,0 +1,30 @@
+{
+  "gaps": [
+    {
+      "row": 65,
+      "sector": "Music (artists, production, venues, education)",
+      "country": "Cape Verde"
+    },
+    {
+      "row": 131,
+      "sector": "Crafts and artisan products",
+      "country": "Benin"
+    },
+    {
+      "row": 141,
+      "sector": "Performing and visual arts",
+      "country": "Benin"
+    },
+    {
+      "row": 150,
+      "sector": "Fashion & Design",
+      "country": "Benin"
+    },
+    {
+      "row": 151,
+      "sector": "Fashion & Design",
+      "country": "Benin"
+    }
+  ],
+  "participant_count": 194
+}

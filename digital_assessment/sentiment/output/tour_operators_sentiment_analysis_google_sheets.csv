@@ -1,0 +1,16 @@
+Stakeholder Name,Industry,Total Reviews,Average Rating,Overall Sentiment,Positive Rate,Language Distribution,Critical Areas Count,Management Response Rate,Analysis Date
+timo_tours_gambia,tour_operators,12,4.4,0.834,91.7,"{""en"": 5, ""nl"": 6, ""de"": 1}",0,0.0,2025-09-23T08:30:18.788336
+simon_tours,tour_operators,108,4.8,0.912,91.7,"{""nl"": 92, ""en"": 16}",0,0.0,2025-09-23T08:30:18.822832
+janeya_tours,tour_operators,73,4.8,0.912,89.0,"{""nl"": 53, ""en"": 20}",0,0.0,2025-09-23T08:30:18.846081
+bushwhacker_tours,tour_operators,170,4.9,0.937,92.4,"{""de"": 5, ""en"": 65, ""nl"": 98, ""es"": 1, ""fr"": 1}",0,0.0,2025-09-23T08:30:18.908927
+kawsu_tours,tour_operators,18,4.8,0.911,88.9,"{""fr"": 1, ""en"": 8, ""nl"": 8, ""de"": 1}",0,0.0,2025-09-23T08:30:18.915269
+arch_tours,tour_operators,300,4.8,0.919,93.7,"{""en"": 94, ""nl"": 196, ""de"": 5, ""fr"": 4, ""es"": 1}",0,0.0,2025-09-23T08:30:19.040124
+senegambia_birding,tour_operators,2,5.0,1.0,100.0,"{""nl"": 2}",0,0.0,2025-09-23T08:30:19.041851
+fatou_tours,tour_operators,19,4.9,0.901,89.5,"{""nl"": 16, ""en"": 3}",0,0.0,2025-09-23T08:30:19.050023
+lams_tours,tour_operators,128,4.9,0.869,81.2,"{""en"": 38, ""fr"": 7, ""de"": 3, ""nl"": 76, ""es"": 4}",0,0.0,2025-09-23T08:30:19.101953
+black_white_safari,tour_operators,300,4.9,0.945,95.3,"{""nl"": 178, ""en"": 94, ""fr"": 14, ""de"": 14}",0,0.0,2025-09-23T08:30:19.221800
+omi_tours,tour_operators,31,4.7,0.922,90.3,"{""nl"": 21, ""en"": 9, ""de"": 1}",0,0.0,2025-09-23T08:30:19.233827
+african_adventure_tours,tour_operators,32,4.2,0.792,87.5,"{""en"": 6, ""nl"": 26}",0,0.0,2025-09-23T08:30:19.245248
+aji_tours,tour_operators,33,4.7,0.918,90.9,"{""en"": 12, ""nl"": 16, ""es"": 1, ""fr"": 2, ""de"": 2}",0,0.0,2025-09-23T08:30:19.253913
+eco_tours,tour_operators,19,4.5,0.819,84.2,"{""en"": 4, ""de"": 5, ""nl"": 8, ""fr"": 2}",0,0.0,2025-09-23T08:30:19.261724
+santosu_tours,tour_operators,25,5.0,0.934,96.0,"{""nl"": 23, ""en"": 2}",0,0.0,2025-09-23T08:30:19.271058

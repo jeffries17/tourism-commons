@@ -1,0 +1,29 @@
+{
+  "completed": [
+    "Mus\u00e9e Th\u00e9odore Monod (IFAN)",
+    "Mus\u00e9e des Civilisations Noires",
+    "La Maison des Esclaves (House of Slaves)",
+    "\u00cele de Gor\u00e9e (Gor\u00e9e Island)",
+    "Monument de la Renaissance Africaine",
+    "Village des Arts de Dakar",
+    "Village artisanal de Soumb\u00e9dioune",
+    "A\u00efssa Dione Tissus",
+    "Manufacture S\u00e9n\u00e9galaise des Arts D\u00e9coratifs (Thi\u00e8s)",
+    "Le Sandaga",
+    "Festival international de Jazz de Saint-Louis",
+    "Dak\u2019Art \u2013 Dakar Biennale",
+    "Festival de Gor\u00e9e",
+    "Le Fanal (Carnaval de Saint-Louis)",
+    "Festival Ab\u00e9n\u00e9 (Casamance)"
+  ],
+  "current_batch": 0,
+  "total_processed": 15,
+  "started_at": "2025-10-04T11:02:41.220348",
+  "improvement_notes": [
+    {
+      "batch": 1,
+      "notes": "Notes about this batch: for 1, we do have tripadvisor - https://www.tripadvisor.fr/Attraction_Review-g293831-d1011613-Reviews-IFAN_Museum_African_Arts_Museum-Dakar_Dakar_Region.html ... maybe our search also needs to include tripadivsor + the name, but not in quotes. 2 also has a tripadvisor - https://www.tripadvisor.fr/Attraction_Review-g293831-d19595174-Reviews-Museum_of_Black_Civilizations-Dakar_Dakar_Region.html, 3 has facebook - https://www.facebook.com/p/Maison-des-Esclaves-Gor%C3%A9e-100064683037132/ - 4 has a facebook page https://www.facebook.com/toutsurgoree/ and an instagram https://www.instagram.com/islandofgoree/?hl=en",
+      "timestamp": "2025-10-04T11:10:59.335786"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "project": {
+    "id": "gambia",
+    "name": "The Gambia",
+    "slug": "gambia-itc",
+    "basename": "/gambia-itc",
+    "displayName": "The Gambia",
+    "description": "Digital Assessment for The Gambia Creative Industries & Tourism",
+    
+    "theme": {
+      "primaryColor": "#0066cc",
+      "secondaryColor": "#003366",
+      "logo": "/gambia-favicon.svg",
+      "backgroundImage": null
+    },
+    
+    "features": {
+      "enableRegionalAnalysis": true,
+      "enableITOPerception": true,
+      "enableSentimentAnalysis": true,
+      "enableSectorAnalysis": true,
+      "enableParticipantAnalysis": true,
+      "enableMethodology": true
+    },
+    
+    "data": {
+      "sources": {
+        "participants": "./projects/gambia/data/participants.json",
+        "regional": "./projects/gambia/data/dashboard_region_data.json",
+        "sentiment": "./projects/gambia/data/sentiment_data.json",
+        "ito": "./projects/gambia/data/dashboard_ito_data.json",
+        "regional_sentiment": "./projects/gambia/data/regional_sentiment.json",
+        "tour_operators_sentiment": "./projects/gambia/data/tour_operators_sentiment.json",
+        "ito_regional": "./projects/gambia/data/ito_regional_analysis.json"
+      },
+      "cacheTime": 3600
+    },
+    
+    "routes": [
+      {
+        "path": "/",
+        "component": "Dashboard",
+        "name": "Dashboard",
+        "admin": false,
+        "participant": true
+      },
+      {
+        "path": "/participants",
+        "component": "ParticipantList",
+        "name": "Participants",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/sectors",
+        "component": "SectorOverview",
+        "name": "Sectors",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/region",
+        "component": "RegionalAnalysis",
+        "name": "Region",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/ito-perception",
+        "component": "ITOPerception",
+        "name": "ITO Perception",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/reviews-sentiment",
+        "component": "ReviewsSentiment",
+        "name": "Reviews & Sentiment",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/methodology",
+        "component": "Methodology",
+        "name": "Methodology",
+        "admin": false,
+        "participant": false
+      }
+    ],
+    
+    "api": {
+      "endpoints": {
+        "auth": "/api/auth",
+        "participants": "/api/participants",
+        "scores": "/api/scores"
+      }
+    },
+    
+    "googleSheets": {
+      "spreadsheetId": "1yxzgYWme1xW9uMX3jSz6t9BFI-tdV14UVmPiDjW_XCM",
+      "sheets": {
+        "participants": "Participants",
+        "survey": "Survey Responses",
+        "regional": "Regional Assessment"
+      }
+    },
+    
+    "deployment": {
+      "hosting": "tourism-development-d620c",
+      "domain": "tourismcommons.org",
+      "baseURL": "https://tourismcommons.org/gambia-itc"
+    },
+    
+    "metadata": {
+      "created": "2024-09-01",
+      "lastUpdated": "2025-10-26",
+      "version": "1.0.0"
+    }
+  }
+}
+

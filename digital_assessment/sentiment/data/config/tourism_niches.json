@@ -1,0 +1,159 @@
+{
+  "tourism_niches": {
+    "culture_heritage": {
+      "name": "Culture & Heritage",
+      "description": "Cultural sites, museums, traditional villages, historical significance, UNESCO sites",
+      "keywords": [
+        "culture", "cultural", "heritage", "historical", "history", "tradition", "traditional",
+        "museum", "museums", "monument", "monuments", "unesco", "world heritage", "historic",
+        "ancient", "archaeological", "archaeology", "village", "villages", "tribal", "ethnic",
+        "folklore", "customs", "rituals", "ceremonies", "festivals", "celebrations",
+        "artifacts", "relics", "ruins", "fortress", "castle", "palace", "temple",
+        "sacred", "spiritual", "religious", "pilgrimage", "shrine", "sanctuary"
+      ],
+      "gambia_examples": [
+        "Kunta Kinteh Island", "Wassu Stone Circles", "Arch 22 Museum", "National Museum",
+        "James Island", "Albreda Museum", "Slavery Museum", "Roots Heritage",
+        "Juffureh", "Juffure", "Kunta Kinteh", "Goree Island", "Senegambia"
+      ],
+      "weight": 1.3,
+      "priority": "high"
+    },
+    "nature_wildlife": {
+      "name": "Nature & Wildlife",
+      "description": "Birdwatching, wildlife, nature reserves, eco-tourism, conservation",
+      "keywords": [
+        "nature", "wildlife", "birds", "birdwatching", "birding", "eco", "ecotourism",
+        "conservation", "reserve", "reserves", "park", "parks", "forest", "forests",
+        "safari", "safaris", "animals", "wildlife", "mammals", "reptiles", "amphibians",
+        "flora", "fauna", "biodiversity", "endangered", "species", "habitat", "habitats",
+        "migration", "migratory", "breeding", "nesting", "feeding", "observation",
+        "photography", "wildlife photography", "nature photography", "eco-friendly",
+        "sustainable", "environmental", "green", "organic", "natural"
+      ],
+      "gambia_examples": [
+        "Abuko Nature Reserve", "Brufut Woods", "Bijilo Forest", "Tanji Bird Reserve",
+        "Kiang West National Park", "River Gambia National Park", "Niumi National Park",
+        "Makasutu Cultural Forest", "Fathala Wildlife Reserve", "Senegambia Birding"
+      ],
+      "weight": 1.4,
+      "priority": "high"
+    },
+    "adventure_outdoor": {
+      "name": "Adventure & Outdoor",
+      "description": "Safaris, hiking, outdoor activities, adventure sports, exploration",
+      "keywords": [
+        "adventure", "outdoor", "outdoors", "hiking", "trekking", "walking", "trails",
+        "safari", "safaris", "exploration", "expedition", "expeditions", "journey",
+        "journeys", "expedition", "adventure", "thrilling", "exciting", "challenging",
+        "extreme", "sports", "activities", "recreation", "recreational", "leisure",
+        "camping", "camp", "camps", "climbing", "rock climbing", "mountain", "mountains",
+        "river", "rivers", "cruise", "cruises", "boat", "boats", "canoe", "canoeing",
+        "kayaking", "rafting", "fishing", "hunting", "cycling", "biking", "running",
+        "jogging", "swimming", "diving", "snorkeling", "surfing", "windsurfing"
+      ],
+      "gambia_examples": [
+        "River Gambia cruises", "Mangrove tours", "Beach activities", "Water sports",
+        "Fishing trips", "Boat excursions", "River safaris", "Adventure tours",
+        "Outdoor activities", "Nature walks", "Forest trails", "Beach walks"
+      ],
+      "weight": 1.2,
+      "priority": "medium"
+    },
+    "community_homestay": {
+      "name": "Community & Homestay",
+      "description": "Local communities, homestays, village visits, cultural immersion, authentic experiences",
+      "keywords": [
+        "community", "communities", "local", "locals", "homestay", "homestays",
+        "village", "villages", "rural", "countryside", "authentic", "authenticity",
+        "immersion", "cultural immersion", "experience", "experiences", "interaction",
+        "interactions", "people", "residents", "inhabitants", "citizens", "families",
+        "households", "homes", "accommodation", "lodging", "guesthouse", "guesthouses",
+        "bed", "breakfast", "b&b", "hostel", "hostels", "backpacker", "backpackers",
+        "budget", "affordable", "cheap", "inexpensive", "local", "traditional",
+        "indigenous", "native", "customs", "traditions", "lifestyle", "way of life"
+      ],
+      "gambia_examples": [
+        "Village homestays", "Community-based tourism", "Local family stays",
+        "Rural accommodation", "Traditional villages", "Cultural experiences",
+        "Local interactions", "Community projects", "Village tours", "Rural tourism"
+      ],
+      "weight": 1.1,
+      "priority": "medium"
+    },
+    "culinary_dining": {
+      "name": "Culinary & Dining",
+      "description": "Local cuisine, food tours, traditional meals, cooking experiences, gastronomy",
+      "keywords": [
+        "food", "cuisine", "culinary", "dining", "restaurant", "restaurants", "meal",
+        "meals", "cooking", "cook", "chef", "chefs", "recipe", "recipes", "ingredients",
+        "spices", "flavors", "taste", "tasting", "gastronomy", "gourmet", "delicious",
+        "tasty", "flavorful", "traditional", "local", "authentic", "fresh", "organic",
+        "market", "markets", "street food", "street", "vendor", "vendors", "stall",
+        "stalls", "cafe", "cafes", "bar", "bars", "pub", "pubs", "drink", "drinks",
+        "beverage", "beverages", "wine", "beer", "cocktail", "cocktails", "juice",
+        "juices", "tea", "coffee", "breakfast", "lunch", "dinner", "snack", "snacks"
+      ],
+      "gambia_examples": [
+        "Local cuisine", "Traditional meals", "Street food", "Market visits",
+        "Cooking classes", "Food tours", "Restaurant experiences", "Local drinks",
+        "Traditional beverages", "Culinary experiences", "Gastronomy tours"
+      ],
+      "weight": 1.0,
+      "priority": "medium"
+    },
+    "creative_industries": {
+      "name": "Creative Industries",
+      "description": "Arts, crafts, music, dance, creative workshops, artisan products",
+      "keywords": [
+        "art", "arts", "artistic", "artist", "artists", "craft", "crafts", "craftsman",
+        "craftsmen", "artisan", "artisans", "handmade", "handcrafted", "creative",
+        "creativity", "music", "musical", "musician", "musicians", "dance", "dancing",
+        "performance", "performances", "show", "shows", "concert", "concerts",
+        "festival", "festivals", "workshop", "workshops", "class", "classes",
+        "lesson", "lessons", "training", "education", "learning", "skill", "skills",
+        "talent", "talented", "gifted", "master", "masters", "expert", "experts",
+        "professional", "professionals", "gallery", "galleries", "exhibition",
+        "exhibitions", "display", "displays", "showcase", "showcases", "studio",
+        "studios", "workshop", "workshops", "atelier", "ateliers", "design",
+        "designer", "designers", "fashion", "textile", "textiles", "fabric",
+        "fabrics", "pottery", "ceramics", "woodwork", "woodworking", "sculpture",
+        "sculptures", "painting", "paintings", "drawing", "drawings", "photography",
+        "photographer", "photographers", "film", "filming", "video", "videos",
+        "documentary", "documentaries", "media", "multimedia", "digital", "technology"
+      ],
+      "gambia_examples": [
+        "Brikama Woodcarvers Market", "Banjul Craft Market", "Art galleries",
+        "Craft workshops", "Music performances", "Dance shows", "Cultural festivals",
+        "Art exhibitions", "Creative workshops", "Artisan products", "Handicrafts",
+        "Traditional crafts", "Contemporary art", "Cultural performances"
+      ],
+      "weight": 1.2,
+      "priority": "high"
+    }
+  },
+  "gambia_specific_keywords": {
+    "destination_keywords": [
+      "gambia", "gambian", "banjul", "serrekunda", "kololi", "kotu", "fajara",
+      "senegambia", "west africa", "africa", "african", "atlantic", "ocean",
+      "river gambia", "gambia river", "smiling coast", "smiling coast of africa"
+    ],
+    "cultural_keywords": [
+      "mandinka", "wolof", "fula", "jola", "serer", "tukulor", "moorish",
+      "kunta kinteh", "roots", "alex haley", "slavery", "slave trade",
+      "james island", "wassu", "stone circles", "senegambian", "gambian"
+    ],
+    "natural_keywords": [
+      "mangroves", "mangrove", "wetlands", "estuary", "delta", "coastline",
+      "beaches", "beach", "sand", "dunes", "forests", "woodlands", "savanna",
+      "grassland", "wetland", "marsh", "swamp", "riverine", "riparian"
+    ]
+  },
+  "analysis_weights": {
+    "keyword_match_weight": 1.0,
+    "example_match_weight": 1.5,
+    "gambia_specific_weight": 1.3,
+    "context_weight": 1.2,
+    "frequency_weight": 1.1
+  }
+}

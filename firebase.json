@@ -3,7 +3,7 @@
     "source": "digital_assessment/functions"
   },
   "hosting": {
-    "public": "digital_assessment/dashboard/dist",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -29,13 +29,19 @@
         }
       },
       {
+        "source": "/benin-sentiment",
+        "destination": "/index.html"
+      },
+      {
         "source": "/gambia-itc/**",
         "destination": "/index.html"
       },
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/landing.html"
       }
-    ]
+    ],
+      "cleanUrls": true,
+      "trailingSlash": false
   }
 }

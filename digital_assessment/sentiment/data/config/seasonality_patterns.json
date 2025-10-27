@@ -1,0 +1,214 @@
+{
+  "seasonal_frames": {
+    "winter_sun": {
+      "keywords": [
+        "winter sun",
+        "escape winter",
+        "winter warmth",
+        "winter getaway",
+        "winter destination",
+        "winter break",
+        "warm winter",
+        "winter holidays",
+        "winter sunshine",
+        "escape the cold",
+        "winter paradise",
+        "winter retreat"
+      ],
+      "months": ["november", "december", "january", "february", "march", "april"],
+      "weight": 1.5,
+      "description": "Positioned as winter sun destination for European markets"
+    },
+    "year_round": {
+      "keywords": [
+        "year-round",
+        "year round",
+        "all year",
+        "any season",
+        "always warm",
+        "365 days",
+        "anytime",
+        "any time of year",
+        "throughout the year",
+        "all seasons",
+        "always available",
+        "visit anytime"
+      ],
+      "months": [],
+      "weight": 1.0,
+      "description": "Marketed as year-round destination"
+    },
+    "dry_season": {
+      "keywords": [
+        "dry season",
+        "best time to visit",
+        "peak season",
+        "optimal time",
+        "ideal months",
+        "perfect weather",
+        "best season",
+        "high season",
+        "prime season",
+        "best period",
+        "recommended months"
+      ],
+      "months": ["november", "december", "january", "february", "march", "april", "may"],
+      "weight": 1.2,
+      "description": "Emphasizes dry season (November-May)"
+    },
+    "birding_season": {
+      "keywords": [
+        "birding season",
+        "bird migration",
+        "migration season",
+        "best for birdwatching",
+        "peak birding",
+        "bird season",
+        "migratory birds",
+        "bird watching season",
+        "ornithology season",
+        "birders season"
+      ],
+      "months": ["november", "december", "january", "february", "march"],
+      "weight": 1.0,
+      "description": "Highlights birding/migration season"
+    },
+    "rainy_season": {
+      "keywords": [
+        "rainy season",
+        "wet season",
+        "green season",
+        "low season",
+        "off-season",
+        "off season",
+        "monsoon",
+        "rains",
+        "rainfall",
+        "quieter months"
+      ],
+      "months": ["june", "july", "august", "september", "october"],
+      "weight": 0.8,
+      "description": "Mentions rainy/green season (June-October)"
+    },
+    "christmas_new_year": {
+      "keywords": [
+        "christmas",
+        "new year",
+        "festive season",
+        "holiday season",
+        "december holidays",
+        "new year's",
+        "christmas break",
+        "festive break",
+        "end of year"
+      ],
+      "months": ["december", "january"],
+      "weight": 1.2,
+      "description": "Specifically targets Christmas/New Year period"
+    },
+    "summer_holidays": {
+      "keywords": [
+        "summer holidays",
+        "summer vacation",
+        "summer break",
+        "summer getaway",
+        "school holidays",
+        "july august",
+        "peak summer"
+      ],
+      "months": ["july", "august"],
+      "weight": 1.0,
+      "description": "Targets European summer holiday period"
+    },
+    "cultural_events": {
+      "keywords": [
+        "roots festival",
+        "international roots festival",
+        "roots homecoming",
+        "cultural festival",
+        "festival season",
+        "special events",
+        "annual festival",
+        "cultural celebrations"
+      ],
+      "months": [],
+      "weight": 1.0,
+      "description": "Emphasizes cultural events and festivals"
+    }
+  },
+  "month_patterns": {
+    "november": {
+      "season": "dry_season_start",
+      "characteristics": ["dry season begins", "birding season starts", "cooler weather"]
+    },
+    "december": {
+      "season": "peak_winter_sun",
+      "characteristics": ["christmas holidays", "peak season", "winter sun", "birding"]
+    },
+    "january": {
+      "season": "peak_winter_sun",
+      "characteristics": ["new year", "peak season", "winter sun", "birding"]
+    },
+    "february": {
+      "season": "peak_winter_sun",
+      "characteristics": ["peak season", "winter sun", "birding", "roots festival"]
+    },
+    "march": {
+      "season": "dry_season",
+      "characteristics": ["dry season", "good weather", "spring break"]
+    },
+    "april": {
+      "season": "dry_season",
+      "characteristics": ["dry season", "easter holidays", "warm"]
+    },
+    "may": {
+      "season": "shoulder",
+      "characteristics": ["dry season ending", "warmer", "quieter"]
+    },
+    "june": {
+      "season": "rainy_season_start",
+      "characteristics": ["rains begin", "green season", "low season"]
+    },
+    "july": {
+      "season": "rainy_season",
+      "characteristics": ["wet season", "summer holidays", "green landscape"]
+    },
+    "august": {
+      "season": "rainy_season",
+      "characteristics": ["wet season", "summer holidays", "lush vegetation"]
+    },
+    "september": {
+      "season": "rainy_season",
+      "characteristics": ["wet season", "low season", "quieter"]
+    },
+    "october": {
+      "season": "rainy_season_end",
+      "characteristics": ["rains ending", "shoulder season", "green landscape"]
+    }
+  },
+  "detection_rules": {
+    "min_keyword_matches": 1,
+    "allow_multiple_frames": true,
+    "case_sensitive": false,
+    "notes": "An ITO can use multiple seasonal frames (e.g., both 'winter sun' and 'dry season')"
+  },
+  "target_markets": {
+    "winter_sun": ["UK", "Germany", "Netherlands", "Belgium", "Scandinavia"],
+    "year_round": ["Global"],
+    "dry_season": ["All markets"],
+    "birding_season": ["Specialist birding markets"],
+    "christmas_new_year": ["European", "North American"],
+    "summer_holidays": ["European families"]
+  },
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-09-30",
+    "description": "Seasonality framing patterns for ITOS assessment",
+    "total_frames": 8,
+    "gambia_seasons": {
+      "dry_season": "November-May",
+      "rainy_season": "June-October",
+      "peak_tourism": "November-March"
+    }
+  }
+}

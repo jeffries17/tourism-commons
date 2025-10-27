@@ -1,0 +1,330 @@
+INFO: file_cache is only supported with oauth2client<4.0.0
+INFO: Scraping: Adventure Life
+INFO:   ✓ 69,509 chars from 4 pages
+INFO: Scraping: African Travel Seminars
+INFO:   ✓ 389 chars from 1 pages
+INFO: Scraping: Apollo
+INFO:   ✓ 6,055 chars from 1 pages
+INFO: Scraping: Birding Ecotours
+INFO:   ✓ 19,881 chars from 2 pages
+INFO: Scraping: Corendon
+INFO:   ✓ 23,039 chars from 1 pages
+INFO: Scraping: Explore
+INFO:   ✓ 42,086 chars from 2 pages
+INFO: Scraping: First Choice
+INFO:   ✓ 9,715 chars from 2 pages
+INFO: Scraping: Fleewinter
+INFO:   ✓ 15,781 chars from 2 pages
+INFO: Scraping: Hays Travel
+INFO:   ✓ 4,937 chars from 1 pages
+INFO: Scraping: Holiday Hypermarket
+INFO:   ✓ 15,569 chars from 1 pages
+INFO: Scraping: Intrepid Travel UK
+INFO:   ✓ 23,368 chars from 2 pages
+INFO: Scraping: Love Holidays
+WARNING:   ✗ Failed: 403 Client Error: Forbidden for url: https://www.loveholidays.com/holidays/gambia-holidays.html
+INFO:   ✓ 0 chars from 0 pages
+INFO: Scraping: Luxotour
+INFO:   ✓ 16,971 chars from 2 pages
+INFO: Scraping: Meier’s Weltreisen
+INFO:   ✓ 8,750 chars from 1 pages
+INFO: Scraping: Naturetrek
+WARNING:   ✗ Failed: 404 Client Error: Not Found for url: https://www.naturetrek.co.uk/tours/the-gambia-in-style,%20https://www.naturetrek.co.uk/tours/gambia
+INFO:   ✓ 17,608 chars from 2 pages
+INFO: Scraping: Neckermann Reisen
+INFO:   ✓ 1,311 chars from 1 pages
+INFO: Scraping: Olympic Holidays
+INFO:   ✓ 9,588 chars from 1 pages
+INFO: Scraping: On The Beach
+WARNING:   ✗ Failed: 403 Client Error: Forbidden for url: https://www.onthebeach.co.uk/destinations/gambia
+INFO:   ✓ 0 chars from 0 pages
+INFO: Scraping: Overlanding West Africa
+INFO:   ✓ 23,060 chars from 2 pages
+INFO: Scraping: Overseas Adventure Travel
+WARNING:   ✗ Failed: 403 Client Error: Forbidden for url: https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries
+WARNING:   ✗ Failed: 403 Client Error: Forbidden for url: https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries
+INFO:   ✓ 0 chars from 0 pages
+INFO: Scraping: Palace Travel
+INFO:   ✓ 3,010 chars from 1 pages
+INFO: Scraping: Responsible Travel
+INFO:   ✓ 28,610 chars from 4 pages
+INFO: Scraping: Serenity Holidays
+INFO:   ✓ 2,065 chars from 1 pages
+INFO: Scraping: Spector Travel Boston
+INFO:   ✓ 7,139 chars from 2 pages
+INFO: Scraping: Spies (Globus Danmark)
+INFO:   ✓ 18,415 chars from 1 pages
+INFO: Scraping: The Gambia Experience
+INFO:   ✓ 16,509 chars from 2 pages
+INFO: Scraping: Thomas Cook UK
+INFO:   ✓ 2,666 chars from 1 pages
+INFO: Scraping: Tjareborg
+INFO:   ✓ 5,098 chars from 1 pages
+INFO: Scraping: TransAfrica
+INFO:   ✓ 189,471 chars from 9 pages
+INFO: Scraping: TUI
+INFO:   ✓ 3,900 chars from 1 pages
+INFO: Scraping: TUI (Netherlands)
+INFO:   ✓ 6,660 chars from 1 pages
+INFO: Scraping: TUI UK
+INFO:   ✓ 3,900 chars from 1 pages
+INFO: Scraping: Ving
+INFO:   ✓ 18,563 chars from 1 pages
+INFO: Scraping: Wild Birding
+INFO:   ✓ 17,127 chars from 2 pages
+INFO: Scraping: Wildlife Worldwide
+INFO:   ✓ 11,390 chars from 2 pages
+INFO: Scraping: World Insight
+INFO:   ✓ 90,985 chars from 2 pages
+INFO: Initializing analyzers...
+INFO: ✅ All analyzers initialized
+INFO: Assessing 36 ITOs...
+INFO: 
+[1/36]
+INFO: Assessing: Adventure Life
+INFO: ✅ Adventure Life: 12/12 activities, 1 audiences, Mixed
+INFO: 
+[2/36]
+INFO: Assessing: African Travel Seminars
+INFO: ✅ African Travel Seminars: 3/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[3/36]
+INFO: Assessing: Apollo
+INFO: ✅ Apollo: 3/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[4/36]
+INFO: Assessing: Birding Ecotours
+INFO: ✅ Birding Ecotours: 8/12 activities, 0 audiences, Itinerary
+INFO: 
+[5/36]
+INFO: Assessing: Corendon
+INFO: ✅ Corendon: 10/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[6/36]
+INFO: Assessing: Explore
+INFO: ✅ Explore: 12/12 activities, 0 audiences, Mixed
+INFO: 
+[7/36]
+INFO: Assessing: First Choice
+INFO: ✅ First Choice: 6/12 activities, 0 audiences, Itinerary
+INFO: 
+[8/36]
+INFO: Assessing: Fleewinter
+INFO: ✅ Fleewinter: 7/12 activities, 0 audiences, Itinerary
+INFO: 
+[9/36]
+INFO: Assessing: Hays Travel
+INFO: ✅ Hays Travel: 7/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[10/36]
+INFO: Assessing: Holiday Hypermarket
+INFO: ✅ Holiday Hypermarket: 12/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[11/36]
+INFO: Assessing: Intrepid Travel UK
+INFO: ✅ Intrepid Travel UK: 12/12 activities, 0 audiences, Itinerary
+INFO: 
+[12/36]
+INFO: Assessing: Love Holidays
+INFO: ✅ Love Holidays: 0/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[13/36]
+INFO: Assessing: Luxotour
+INFO: ✅ Luxotour: 11/12 activities, 0 audiences, Itinerary
+INFO: 
+[14/36]
+INFO: Assessing: Meier’s Weltreisen
+INFO: ✅ Meier’s Weltreisen: 6/12 activities, 0 audiences, Tailor-made
+INFO: 
+[15/36]
+INFO: Assessing: Naturetrek
+INFO: ✅ Naturetrek: 8/12 activities, 0 audiences, Mixed
+INFO: 
+[16/36]
+INFO: Assessing: Neckermann Reisen
+INFO: ✅ Neckermann Reisen: 1/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[17/36]
+INFO: Assessing: Olympic Holidays
+INFO: ✅ Olympic Holidays: 10/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[18/36]
+INFO: Assessing: On The Beach
+INFO: ✅ On The Beach: 0/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[19/36]
+INFO: Assessing: Overlanding West Africa
+INFO: ✅ Overlanding West Africa: 12/12 activities, 0 audiences, Itinerary
+INFO: 
+[20/36]
+INFO: Assessing: Overseas Adventure Travel
+INFO: ✅ Overseas Adventure Travel: 0/12 activities, 0 audiences, Itinerary
+INFO: 
+[21/36]
+INFO: Assessing: Palace Travel
+INFO: ✅ Palace Travel: 3/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[22/36]
+INFO: Assessing: Responsible Travel
+INFO: ✅ Responsible Travel: 11/12 activities, 0 audiences, Itinerary
+INFO: 
+[23/36]
+INFO: Assessing: Serenity Holidays
+INFO: ✅ Serenity Holidays: 4/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[24/36]
+INFO: Assessing: Spector Travel Boston
+INFO: ✅ Spector Travel Boston: 5/12 activities, 0 audiences, Itinerary
+INFO: 
+[25/36]
+INFO: Assessing: Spies (Globus Danmark)
+INFO: ✅ Spies (Globus Danmark): 7/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[26/36]
+INFO: Assessing: The Gambia Experience
+INFO: ✅ The Gambia Experience: 12/12 activities, 0 audiences, Mixed
+INFO: 
+[27/36]
+INFO: Assessing: Thomas Cook UK
+INFO: ✅ Thomas Cook UK: 3/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[28/36]
+INFO: Assessing: Tjareborg
+INFO: ✅ Tjareborg: 2/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[29/36]
+INFO: Assessing: TransAfrica
+INFO: ✅ TransAfrica: 12/12 activities, 0 audiences, Itinerary
+INFO: 
+[30/36]
+INFO: Assessing: TUI
+INFO: ✅ TUI: 6/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[31/36]
+INFO: Assessing: TUI (Netherlands)
+INFO: ✅ TUI (Netherlands): 4/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[32/36]
+INFO: Assessing: TUI UK
+INFO: ✅ TUI UK: 6/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[33/36]
+INFO: Assessing: Ving
+INFO: ✅ Ving: 8/12 activities, 0 audiences, Flight+Hotel
+INFO: 
+[34/36]
+INFO: Assessing: Wild Birding
+INFO: ✅ Wild Birding: 5/12 activities, 0 audiences, Mixed
+INFO: 
+[35/36]
+INFO: Assessing: Wildlife Worldwide
+INFO: ✅ Wildlife Worldwide: 8/12 activities, 0 audiences, Itinerary
+INFO: 
+[36/36]
+INFO: Assessing: World Insight
+INFO: ✅ World Insight: 8/12 activities, 0 audiences, Itinerary
+INFO: 
+✅ Completed 36/36 assessments
+================================================================================
+GOOGLE SHEETS ITO ASSESSMENT
+================================================================================
+
+📊 Step 1: Reading from Google Sheets...
+✅ Read 50 rows
+✅ Found 36 operators
+  - Adventure Life: 4 tour pages
+  - African Travel Seminars: 0 tour pages
+  - Apollo: 0 tour pages
+  - Birding Ecotours: 1 tour pages
+  - Corendon: 0 tour pages
+  ... and 31 more
+
+🌐 Step 2: Scraping content...
+
+[1/36]
+
+[2/36]
+
+[3/36]
+
+[4/36]
+
+[5/36]
+
+[6/36]
+
+[7/36]
+
+[8/36]
+
+[9/36]
+
+[10/36]
+
+[11/36]
+
+[12/36]
+
+[13/36]
+
+[14/36]
+
+[15/36]
+
+[16/36]
+
+[17/36]
+
+[18/36]
+
+[19/36]
+
+[20/36]
+
+[21/36]
+
+[22/36]
+
+[23/36]
+
+[24/36]
+
+[25/36]
+
+[26/36]
+
+[27/36]
+
+[28/36]
+
+[29/36]
+
+[30/36]
+
+[31/36]
+
+[32/36]
+
+[33/36]
+
+[34/36]
+
+[35/36]
+
+[36/36]
+
+📊 Step 3: Running assessment...
+
+💾 Step 4: Writing results to Google Sheets...
+Traceback (most recent call last):
+  File "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/scripts/run_ito_assessment.py", line 236, in <module>
+    main()
+    ~~~~^^
+  File "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/scripts/run_ito_assessment.py", line 216, in main
+    ).execute()
+      ~~~~~~~^^
+  File "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment_env/lib/python3.13/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment_env/lib/python3.13/site-packages/googleapiclient/http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1yxzgYWme1xW9uMX3jSz6t9BFI-tdV14UVmPiDjW_XCM/values/ITO%20Assessment%20Results%21A1?valueInputOption=RAW&alt=json returned "Unable to parse range: ITO Assessment Results!A1". Details: "Unable to parse range: ITO Assessment Results!A1">

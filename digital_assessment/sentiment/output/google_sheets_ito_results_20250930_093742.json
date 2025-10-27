@@ -1,0 +1,2806 @@
+[
+  {
+    "operator_name": "Adventure Life",
+    "country_region": "USA",
+    "website_url": "",
+    "gambia_page_url": "",
+    "gambia_tour_pages": [
+      "https://www.adventure-life.com/africa/cruises/18461/rivers-of-west-africa-banjul-to-banjul",
+      "https://www.adventure-life.com/africa/cruises/18460/rivers-of-west-africa-dakar-to-dakar",
+      "https://www.adventure-life.com/africa/cruises/18516/cruise-west-africa-the-slavery-coast",
+      "https://www.adventure-life.com/africa/cruises/18514/the-slavery-coast-cruise-from-senegal-to-ghana"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Mixed",
+    "itinerary_depth": {
+      "gambia_percentage": 53.333333333333336,
+      "detail_level": "Day-by-day",
+      "total_days": 15,
+      "countries_breakdown": {
+        "Gambia": 8,
+        "Senegal": 5,
+        "Guinea": 1,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [
+      "diaspora_heritage"
+    ],
+    "audience_confidence_scores": {
+      "families": 0.203,
+      "older_couples": 0.134,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.227,
+      "diaspora_heritage": 0.409,
+      "luxury_travellers": 0.208,
+      "groups": 0.0,
+      "students": 0.026
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "fr",
+      "nl"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "wassu stone circles",
+        "kunta kinteh island",
+        "james island",
+        "national museum",
+        "albert market",
+        "river gambia national park",
+        "bao bolong wetland reserve",
+        "kiang west national park"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "dry_season",
+      "birding_season",
+      "christmas_new_year"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.394750",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 69509
+  },
+  {
+    "operator_name": "African Travel Seminars",
+    "country_region": "USA",
+    "website_url": "",
+    "gambia_page_url": "https://www.africantravelseminars.com/senegal",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 50.0,
+      "detail_level": "Summary only",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 3,
+        "Senegal": 3
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.025,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.064,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": false,
+      "integration_score": 0
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.395518",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 389
+  },
+  {
+    "operator_name": "Apollo",
+    "country_region": "Sweden",
+    "website_url": "",
+    "gambia_page_url": "https://www.apollo.se/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 92.85714285714286,
+      "detail_level": "Summary only",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 26,
+        "Senegal": 2
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.025,
+      "older_couples": 0.025,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.029,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": false,
+      "integration_score": 0
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.400600",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 6055
+  },
+  {
+    "operator_name": "Birding Ecotours",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.birdingecotours.com/destination/gambia-birding-tours/",
+    "gambia_tour_pages": [
+      "https://www.birdingecotours.com/tour/birding-tour-gambia-gateway-to-africa/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 66.66666666666666,
+      "detail_level": "Day-by-day",
+      "total_days": 9,
+      "countries_breakdown": {
+        "Gambia": 6,
+        "Senegal": 1,
+        "Guinea": 1,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": true,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": true,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.127,
+      "older_couples": 0.083,
+      "backpackers": 0.082,
+      "adventure_travellers": 0.048,
+      "diaspora_heritage": 0.077,
+      "luxury_travellers": 0.038,
+      "groups": 0.0,
+      "students": 0.045
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Clear packages",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "fr"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "senegambia beach hotel"
+      ],
+      "attractions_mentioned": [
+        "tanji bird reserve"
+      ],
+      "dmc_mentioned": [
+        "gambia bird"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 3
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.414695",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 19881
+  },
+  {
+    "operator_name": "Corendon",
+    "country_region": "Netherlands",
+    "website_url": "",
+    "gambia_page_url": "https://www.corendon.nl/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 93.33333333333333,
+      "detail_level": "Multi-day overview",
+      "total_days": 30,
+      "countries_breakdown": {
+        "Gambia": 28,
+        "Senegal": 1,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": false,
+      "music": true,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.101,
+      "older_couples": 0.023,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.043,
+      "diaspora_heritage": 0.055,
+      "luxury_travellers": 0.039,
+      "groups": 0.037,
+      "students": 0.018
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "nl"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "james island",
+        "albert market",
+        "serrekunda market"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.430336",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 23038
+  },
+  {
+    "operator_name": "Explore",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.explore.co.uk/destinations/africa/the-gambia",
+    "gambia_tour_pages": [
+      "https://www.explore.co.uk/holidays/senegal-and-the-gambia"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Mixed",
+    "itinerary_depth": {
+      "gambia_percentage": 46.15384615384615,
+      "detail_level": "Day-by-day",
+      "total_days": 13,
+      "countries_breakdown": {
+        "Gambia": 6,
+        "Senegal": 6,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.191,
+      "older_couples": 0.277,
+      "backpackers": 0.172,
+      "adventure_travellers": 0.056,
+      "diaspora_heritage": 0.091,
+      "luxury_travellers": 0.0,
+      "groups": 0.16,
+      "students": 0.075
+    },
+    "booking_pathway": "Mixed",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "fr"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "senegambia beach hotel"
+      ],
+      "attractions_mentioned": [
+        "wassu stone circles",
+        "bintang bolong"
+      ],
+      "dmc_mentioned": [
+        "gambia tours"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 4
+    },
+    "seasonality_framing": [
+      "year_round",
+      "dry_season",
+      "birding_season",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.455389",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 42086
+  },
+  {
+    "operator_name": "First Choice",
+    "country_region": "UK (TUI Group)",
+    "website_url": "",
+    "gambia_page_url": "https://www.firstchoice.co.uk/holiday/location/overview/Gambia-GMB",
+    "gambia_tour_pages": [
+      "https://www.firstchoice.co.uk/holiday/deals/tailored-deals?units[]=GMB"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 75.0,
+      "detail_level": "Summary only",
+      "total_days": 4,
+      "countries_breakdown": {
+        "Gambia": 3,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": true,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.055,
+      "older_couples": 0.0,
+      "backpackers": 0.03,
+      "adventure_travellers": 0.061,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.054,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": true,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "es"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "coco ocean",
+        "kombo beach hotel",
+        "ocean bay hotel"
+      ],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "kiang west national park"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 4
+    },
+    "seasonality_framing": [
+      "winter_sun",
+      "rainy_season",
+      "christmas_new_year"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.461967",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 9715
+  },
+  {
+    "operator_name": "Fleewinter",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/",
+    "gambia_tour_pages": [
+      "https://www.fleewinter.com/the-gambia-holidays/gambia-senegal-wildlife-tour/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 62.5,
+      "detail_level": "Day-by-day",
+      "total_days": 8,
+      "countries_breakdown": {
+        "Gambia": 5,
+        "Senegal": 3
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.215,
+      "older_couples": 0.219,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.061,
+      "diaspora_heritage": 0.021,
+      "luxury_travellers": 0.116,
+      "groups": 0.0,
+      "students": 0.062
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "coco ocean",
+        "ngala lodge",
+        "mandina lodges",
+        "ocean bay hotel",
+        "leo's beach hotel"
+      ],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "makasutu",
+        "tanji bird reserve",
+        "fathala wildlife reserve"
+      ],
+      "dmc_mentioned": [
+        "gambia horse and donkey trust"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 5
+    },
+    "seasonality_framing": [
+      "winter_sun"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.471926",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 15781
+  },
+  {
+    "operator_name": "Hays Travel",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.haystravel.co.uk/destinations/africa/gambia/",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 96.42857142857143,
+      "detail_level": "Multi-day overview",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 27,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": false,
+      "culture_heritage": true,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.092,
+      "older_couples": 0.06,
+      "backpackers": 0.112,
+      "adventure_travellers": 0.055,
+      "diaspora_heritage": 0.132,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "it"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "wassu stone circles",
+        "kunta kinteh island",
+        "arch 22",
+        "national museum",
+        "gambia national museum",
+        "albert market",
+        "fort bullen"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "year_round",
+      "dry_season",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.475739",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 4937
+  },
+  {
+    "operator_name": "Holiday Hypermarket",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.holidayhypermarket.co.uk/destinations/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 96.42857142857143,
+      "detail_level": "Multi-day overview",
+      "total_days": 28,
+      "countries_breakdown": {
+        "Gambia": 27,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.224,
+      "older_couples": 0.193,
+      "backpackers": 0.103,
+      "adventure_travellers": 0.05,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.057,
+      "students": 0.037
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": true,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "fr"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "kachikally crocodile pool",
+        "bijilo forest park",
+        "bijilo forest",
+        "arch 22",
+        "albert market",
+        "kololi beach",
+        "kotu beach"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "dry_season",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.485506",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 15569
+  },
+  {
+    "operator_name": "Intrepid Travel UK",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.intrepidtravel.com/uk/gambia",
+    "gambia_tour_pages": [
+      "https://www.intrepidtravel.com/uk/senegal/senegal-gambia-adventure-161244"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 58.333333333333336,
+      "detail_level": "Day-by-day",
+      "total_days": 12,
+      "countries_breakdown": {
+        "Gambia": 7,
+        "Senegal": 5
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.187,
+      "older_couples": 0.167,
+      "backpackers": 0.117,
+      "adventure_travellers": 0.154,
+      "diaspora_heritage": 0.3,
+      "luxury_travellers": 0.089,
+      "groups": 0.107,
+      "students": 0.081
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "fr"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "kunta kinteh island",
+        "arch 22",
+        "national museum",
+        "albert market"
+      ],
+      "dmc_mentioned": [
+        "gambia tours"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 3
+    },
+    "seasonality_framing": [
+      "year_round",
+      "dry_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.499979",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 23368
+  },
+  {
+    "operator_name": "Love Holidays",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.loveholidays.com/holidays/gambia-holidays.html",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": null,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {},
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": false,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.0,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": false,
+      "integration_score": 0
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.500114",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 0
+  },
+  {
+    "operator_name": "Luxotour",
+    "country_region": "Spain",
+    "website_url": "",
+    "gambia_page_url": "https://www.luxotour.com/en/africa/gambia",
+    "gambia_tour_pages": [
+      "https://www.luxotour.com/en/africa/gambia/sindola-and-south-gambia"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 62.5,
+      "detail_level": "Day-by-day",
+      "total_days": 8,
+      "countries_breakdown": {
+        "Gambia": 5,
+        "Senegal": 1,
+        "Guinea": 1,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.143,
+      "older_couples": 0.088,
+      "backpackers": 0.06,
+      "adventure_travellers": 0.061,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.015,
+      "groups": 0.053,
+      "students": 0.007
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Clear packages",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "es",
+      "fr"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "sindola safari lodge"
+      ],
+      "attractions_mentioned": [
+        "makasutu",
+        "kiang west national park",
+        "sanyang beach"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 3
+    },
+    "seasonality_framing": [
+      "christmas_new_year"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.511846",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 16971
+  },
+  {
+    "operator_name": "Meier\u2019s Weltreisen",
+    "country_region": "Germany",
+    "website_url": "",
+    "gambia_page_url": "https://www.meiers-weltreisen.de/reiseziele/afrika/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Tailor-made",
+    "itinerary_depth": {
+      "gambia_percentage": 97.10144927536231,
+      "detail_level": "Summary only",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 67,
+        "Senegal": 2
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": false,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.025,
+      "older_couples": 0.048,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.111,
+      "luxury_travellers": 0.068,
+      "groups": 0.038,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "de"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "kachikally crocodile pool",
+        "james island",
+        "arch 22",
+        "albert market",
+        "serrekunda market",
+        "tanbi wetland complex"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.518365",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 8750
+  },
+  {
+    "operator_name": "Naturetrek",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.naturetrek.co.uk/destinations/africa/gambia",
+    "gambia_tour_pages": [
+      "https://www.naturetrek.co.uk/tours/the-gambia-in-style, https://www.naturetrek.co.uk/tours/gambia",
+      "https://www.naturetrek.co.uk/tours/the-gambia-in-style-photography-special"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Mixed",
+    "itinerary_depth": {
+      "gambia_percentage": 100.0,
+      "detail_level": "Day-by-day",
+      "total_days": 12,
+      "countries_breakdown": {
+        "Gambia": 12
+      },
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": true,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.076,
+      "older_couples": 0.257,
+      "backpackers": 0.12,
+      "adventure_travellers": 0.018,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.1,
+      "groups": 0.054,
+      "students": 0.182
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "mandina lodges",
+        "mandina river lodge"
+      ],
+      "attractions_mentioned": [
+        "makasutu"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 3
+    },
+    "seasonality_framing": [
+      "christmas_new_year"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.529881",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 17608
+  },
+  {
+    "operator_name": "Neckermann Reisen",
+    "country_region": "Germany",
+    "website_url": "",
+    "gambia_page_url": "https://neckermann.be/nl/vakanties/exotische-vakanties/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 100.0,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 9
+      },
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.0,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "nl"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "bijilo forest park",
+        "bijilo forest"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.530945",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 1282
+  },
+  {
+    "operator_name": "Olympic Holidays",
+    "country_region": "Unknown (Greek / Cyprus / UK)",
+    "website_url": "",
+    "gambia_page_url": "https://www.olympicholidays.com/destinations/the-gambia/",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 66.66666666666666,
+      "detail_level": "Multi-day overview",
+      "total_days": 3,
+      "countries_breakdown": {
+        "Gambia": 2,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.164,
+      "older_couples": 0.192,
+      "backpackers": 0.09,
+      "adventure_travellers": 0.189,
+      "diaspora_heritage": 0.056,
+      "luxury_travellers": 0.0,
+      "groups": 0.075,
+      "students": 0.074
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "it"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "senegambia beach hotel",
+        "ocean bay hotel",
+        "sunset beach hotel"
+      ],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "makasutu",
+        "bijilo forest park",
+        "bijilo forest",
+        "lamin lodge",
+        "kololi beach"
+      ],
+      "dmc_mentioned": [
+        "gambia experience",
+        "the gambia experience"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 5
+    },
+    "seasonality_framing": [
+      "winter_sun",
+      "year_round",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.536982",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 9588
+  },
+  {
+    "operator_name": "On The Beach",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.onthebeach.co.uk/destinations/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": null,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {},
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": false,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.0,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": false,
+      "integration_score": 0
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.537080",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 0
+  },
+  {
+    "operator_name": "Overlanding West Africa",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.overlandingwestafrica.com/trip-overview-availability/",
+    "gambia_tour_pages": [
+      "https://www.overlandingwestafrica.com/dakar-to-freetown/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 17.857142857142858,
+      "detail_level": "Multi-day overview",
+      "total_days": 28,
+      "countries_breakdown": {
+        "Gambia": 5,
+        "Senegal": 11,
+        "Guinea": 11,
+        "Mauritania": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.135,
+      "older_couples": 0.041,
+      "backpackers": 0.03,
+      "adventure_travellers": 0.129,
+      "diaspora_heritage": 0.111,
+      "luxury_travellers": 0.0,
+      "groups": 0.116,
+      "students": 0.037
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Clear packages",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en",
+      "fr"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "the kora"
+      ],
+      "attractions_mentioned": [
+        "kachikally crocodile pool",
+        "wassu stone circles",
+        "albert market",
+        "bintang bolong"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 3
+    },
+    "seasonality_framing": [
+      "dry_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.551543",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 23060
+  },
+  {
+    "operator_name": "Overseas Adventure Travel",
+    "country_region": "USA",
+    "website_url": "",
+    "gambia_page_url": "https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries",
+    "gambia_tour_pages": [
+      "https://www.oattravel.com/trips/small-ship-adventures/africa/west-africa-cruise/2021/itineraries"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": null,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {},
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": false,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.0,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": false,
+      "integration_score": 0
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.551646",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 0
+  },
+  {
+    "operator_name": "Palace Travel",
+    "country_region": "USA",
+    "website_url": "",
+    "gambia_page_url": "https://www.palacetravel.com/places/gambia/",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 96.0,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 24,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": true,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.0,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.187,
+      "luxury_travellers": 0.0,
+      "groups": 0.038,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "stone circles of senegambia",
+        "kunta kinteh island"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "dry_season",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.553885",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 3010
+  },
+  {
+    "operator_name": "Responsible Travel",
+    "country_region": "",
+    "website_url": "",
+    "gambia_page_url": "https://www.responsibletravel.com/holidays/gambia",
+    "gambia_tour_pages": [
+      "https://www.responsibletravel.com/holiday/33806/west-africa-river-cruise-holiday",
+      "https://www.responsibletravel.com/holiday/2774/senegal-and-gambia-river-cruise-holiday",
+      "https://www.responsibletravel.com/holiday/33807/gambia-and-senegal-river-cruise-holiday"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 62.5,
+      "detail_level": "Multi-day overview",
+      "total_days": 8,
+      "countries_breakdown": {
+        "Gambia": 5,
+        "Senegal": 3
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.164,
+      "older_couples": 0.264,
+      "backpackers": 0.142,
+      "adventure_travellers": 0.061,
+      "diaspora_heritage": 0.112,
+      "luxury_travellers": 0.031,
+      "groups": 0.024,
+      "students": 0.137
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "abuko nature reserve",
+        "wassu stone circles",
+        "tanji bird reserve",
+        "national museum",
+        "albert market",
+        "bao bolong wetland reserve",
+        "kiang west national park"
+      ],
+      "dmc_mentioned": [
+        "gambia tours"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 3
+    },
+    "seasonality_framing": [
+      "dry_season",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.571120",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 28610
+  },
+  {
+    "operator_name": "Serenity Holidays",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.serenity.co.uk/destinations/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 100.0,
+      "detail_level": "Summary only",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 9
+      },
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": false,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.097,
+      "older_couples": 0.05,
+      "backpackers": 0.089,
+      "adventure_travellers": 0.03,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.029,
+      "groups": 0.0,
+      "students": 0.018
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [
+        "gambia experience",
+        "the gambia experience"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 1
+    },
+    "seasonality_framing": [
+      "year_round"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.572961",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 2065
+  },
+  {
+    "operator_name": "Spector Travel Boston",
+    "country_region": "USA",
+    "website_url": "",
+    "gambia_page_url": "https://www.spectortravel.com/roots-culture-tours/the-gambia/",
+    "gambia_tour_pages": [
+      "https://www.spectortravel.com/roots-culture-tours/the-gambia/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 37.5,
+      "detail_level": "Summary only",
+      "total_days": 8,
+      "countries_breakdown": {
+        "Gambia": 3,
+        "Senegal": 4,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.021,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.08,
+      "diaspora_heritage": 0.185,
+      "luxury_travellers": 0.049,
+      "groups": 0.0,
+      "students": 0.006
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [
+        "gambia tours"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 1
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.577720",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 7139
+  },
+  {
+    "operator_name": "Spies (Globus Danmark)",
+    "country_region": "Denmark",
+    "website_url": "",
+    "gambia_page_url": "https://www.spies.dk/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 98.50746268656717,
+      "detail_level": "Summary only",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 66,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.08,
+      "older_couples": 0.025,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.03,
+      "diaspora_heritage": 0.043,
+      "luxury_travellers": 0.045,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "da"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "albert market",
+        "kotu beach"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.590450",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 18415
+  },
+  {
+    "operator_name": "The Gambia Experience",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.gambia.co.uk/",
+    "gambia_tour_pages": [
+      "https://www.gambia.co.uk/rivers-of-west-africa-7-night-cruise?rg=19000425&oo=false&back=true, https://www.gambia.co.uk/birdlife-of-the-gambia?rg=19000425&oo=false&back=true,"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Mixed",
+    "itinerary_depth": {
+      "gambia_percentage": 37.5,
+      "detail_level": "Day-by-day",
+      "total_days": 8,
+      "countries_breakdown": {
+        "Gambia": 3,
+        "Senegal": 3,
+        "Guinea": 1,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.169,
+      "older_couples": 0.179,
+      "backpackers": 0.022,
+      "adventure_travellers": 0.05,
+      "diaspora_heritage": 0.112,
+      "luxury_travellers": 0.118,
+      "groups": 0.0,
+      "students": 0.033
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": true,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "coco ocean",
+        "ngala lodge",
+        "mandina lodges",
+        "lemon creek",
+        "lemon creek hotel",
+        "kairaba hotel",
+        "kombo beach hotel",
+        "senegambia beach hotel",
+        "ocean bay hotel",
+        "leo's beach hotel",
+        "sunset beach hotel",
+        "bakotu hotel"
+      ],
+      "attractions_mentioned": [
+        "albert market",
+        "river gambia national park",
+        "bao bolong wetland reserve",
+        "kiang west national park",
+        "fathala wildlife reserve"
+      ],
+      "dmc_mentioned": [
+        "gambia experience",
+        "the gambia experience",
+        "gambia bird"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 5
+    },
+    "seasonality_framing": [
+      "birding_season",
+      "christmas_new_year",
+      "summer_holidays"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.600445",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 16509
+  },
+  {
+    "operator_name": "Thomas Cook UK",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.thomascook.com/holidays/gambia/package",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 100.0,
+      "detail_level": "Multi-day overview",
+      "total_days": 7,
+      "countries_breakdown": {
+        "Gambia": 7
+      },
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.067,
+      "older_couples": 0.045,
+      "backpackers": 0.074,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "kairaba hotel",
+        "senegambia beach hotel",
+        "ocean bay hotel",
+        "sunset beach hotel"
+      ],
+      "attractions_mentioned": [
+        "bao bolong wetland reserve",
+        "kiang west national park"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 4
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.602323",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 2666
+  },
+  {
+    "operator_name": "Tjareborg",
+    "country_region": "Finland",
+    "website_url": "",
+    "gambia_page_url": "https://www.tjareborg.fi/gambia",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 77.27272727272727,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 17,
+        "Senegal": 5
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": false,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.0,
+      "older_couples": 0.0,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.043,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.0,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": false,
+      "integration_score": 0
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.606128",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 5098
+  },
+  {
+    "operator_name": "TransAfrica",
+    "country_region": "West Africa",
+    "website_url": "",
+    "gambia_page_url": "https://transafrica.biz/en/travel/2025-the-african-west-coast-10-days-senegal-and-the-gambia/",
+    "gambia_tour_pages": [
+      "https://transafrica.biz/en/travel/2025-the-african-west-coast-10-days-senegal-and-the-gambia/",
+      "https://transafrica.biz/en/travel/2026-desert-savannah-and-forest-10-days-mauritania-senegal-and-gambia/",
+      "https://transafrica.biz/en/travel/2026-the-african-west-coast-14-days-senegal-the-gambia-guinea-bissau/",
+      "https://transafrica.biz/en/travel/2026-carnival-in-bissau-14-days-senegal-gambia-guinea-bissau/",
+      "https://transafrica.biz/en/travel/2026-the-african-west-coast-10-days-senegal-the-gambia/",
+      "https://transafrica.biz/en/travel/2026-bassari-and-bedik-tribes-13-days-senegal-and-gambia/",
+      "https://transafrica.biz/en/travel/2025-the-african-west-coast-14-days-senegal-gambia-guinea-bissau",
+      "https://transafrica.biz/en/travel/2025-desert-savannah-and-forest-10-days-mauritania-senegal-and-gambia/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 21.428571428571427,
+      "detail_level": "Day-by-day",
+      "total_days": 14,
+      "countries_breakdown": {
+        "Gambia": 3,
+        "Senegal": 6,
+        "Guinea": 3,
+        "Mali": 1,
+        "Mauritania": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.143,
+      "older_couples": 0.131,
+      "backpackers": 0.209,
+      "adventure_travellers": 0.207,
+      "diaspora_heritage": 0.388,
+      "luxury_travellers": 0.031,
+      "groups": 0.042,
+      "students": 0.075
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "it"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "kunta kinteh island",
+        "james island",
+        "arch 22",
+        "national museum",
+        "albert market"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "dry_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.715847",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 189454
+  },
+  {
+    "operator_name": "TUI",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.tui.co.uk/destinations/africa/gambia/holidays-gambia.html",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 96.66666666666667,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 29,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.067,
+      "older_couples": 0.0,
+      "backpackers": 0.06,
+      "adventure_travellers": 0.066,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.016,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "senegambia beach hotel"
+      ],
+      "attractions_mentioned": [
+        "river gambia national park"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.718891",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 3900
+  },
+  {
+    "operator_name": "TUI (Netherlands)",
+    "country_region": "Netherlands",
+    "website_url": "",
+    "gambia_page_url": "https://www.tui.nl/vakantie/gambia/",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 100.0,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 46
+      },
+      "has_multi_country": false
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.055,
+      "older_couples": 0.045,
+      "backpackers": 0.03,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.021,
+      "luxury_travellers": 0.029,
+      "groups": 0.007,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "ngala lodge"
+      ],
+      "attractions_mentioned": [],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 1
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.723864",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 6660
+  },
+  {
+    "operator_name": "TUI UK",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.tui.co.uk/destinations/africa/gambia/holidays-gambia.html",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 96.66666666666667,
+      "detail_level": "N/A",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 29,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": true,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.067,
+      "older_couples": 0.0,
+      "backpackers": 0.06,
+      "adventure_travellers": 0.066,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.016,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "senegambia beach hotel"
+      ],
+      "attractions_mentioned": [
+        "river gambia national park"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.726755",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 3900
+  },
+  {
+    "operator_name": "Ving",
+    "country_region": "Sweden",
+    "website_url": "",
+    "gambia_page_url": "https://www.ving.se/gambia/",
+    "gambia_tour_pages": [],
+    "visibility_navigation": "Unknown",
+    "product_type": "Flight+Hotel",
+    "itinerary_depth": {
+      "gambia_percentage": 98.38709677419355,
+      "detail_level": "Summary only",
+      "total_days": null,
+      "countries_breakdown": {
+        "Gambia": 61,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": false,
+      "adventure": false,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.08,
+      "older_couples": 0.025,
+      "backpackers": 0.0,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.043,
+      "luxury_travellers": 0.029,
+      "groups": 0.007,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "albert market"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 1
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.739968",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 18563
+  },
+  {
+    "operator_name": "Wild Birding",
+    "country_region": "International",
+    "website_url": "",
+    "gambia_page_url": "https://wildbirding.tours/tour-item/wild-gambia-birding/",
+    "gambia_tour_pages": [
+      "https://wildbirding.tours/tour-item/wild-gambia-birding/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Mixed",
+    "itinerary_depth": {
+      "gambia_percentage": 87.5,
+      "detail_level": "Day-by-day",
+      "total_days": 8,
+      "countries_breakdown": {
+        "Gambia": 7,
+        "Senegal": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": false,
+      "culture_heritage": false,
+      "festivals_events": false,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": true,
+      "music": false,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.09,
+      "older_couples": 0.093,
+      "backpackers": 0.022,
+      "adventure_travellers": 0.013,
+      "diaspora_heritage": 0.0,
+      "luxury_travellers": 0.04,
+      "groups": 0.0,
+      "students": 0.056
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Clear packages",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "abuko nature reserve"
+      ],
+      "dmc_mentioned": [
+        "gambia bird"
+      ],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "year_round",
+      "birding_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.750838",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 17127
+  },
+  {
+    "operator_name": "Wildlife Worldwide",
+    "country_region": "UK",
+    "website_url": "",
+    "gambia_page_url": "https://www.wildlifeworldwide.com/discover/gambia",
+    "gambia_tour_pages": [
+      "https://www.wildlifeworldwide.com/group-tours/west-african-birdwatch"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 66.66666666666666,
+      "detail_level": "Day-by-day",
+      "total_days": 12,
+      "countries_breakdown": {
+        "Gambia": 8,
+        "Senegal": 1,
+        "Guinea": 3
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": false,
+      "festivals_events": true,
+      "audiovisual": false,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": true,
+      "music": true,
+      "performing_visual_arts": true,
+      "heritage_sites_museums": false
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.106,
+      "older_couples": 0.136,
+      "backpackers": 0.06,
+      "adventure_travellers": 0.068,
+      "diaspora_heritage": 0.021,
+      "luxury_travellers": 0.061,
+      "groups": 0.144,
+      "students": 0.093
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "From pricing",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "en"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [
+        "senegambia beach hotel"
+      ],
+      "attractions_mentioned": [
+        "kiang west national park"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [
+      "dry_season",
+      "rainy_season"
+    ],
+    "last_scraped": "2025-09-30T09:37:42.758330",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 11390
+  },
+  {
+    "operator_name": "World Insight",
+    "country_region": "Germany",
+    "website_url": "",
+    "gambia_page_url": "https://www.world-insight.de/erlebnisreisen/senegal-und-gambia/",
+    "gambia_tour_pages": [
+      "https://www.world-insight.de/erlebnisreisen/senegal-und-gambia/"
+    ],
+    "visibility_navigation": "Unknown",
+    "product_type": "Itinerary",
+    "itinerary_depth": {
+      "gambia_percentage": 42.857142857142854,
+      "detail_level": "Multi-day overview",
+      "total_days": 21,
+      "countries_breakdown": {
+        "Gambia": 9,
+        "Senegal": 11,
+        "Mali": 1
+      },
+      "has_multi_country": true
+    },
+    "activities": {
+      "sun_beach": true,
+      "nature_wildlife": true,
+      "adventure": true,
+      "culture_heritage": true,
+      "festivals_events": true,
+      "audiovisual": true,
+      "marketing_advertising_publishing": true,
+      "crafts_artisan": false,
+      "fashion_design": false,
+      "music": false,
+      "performing_visual_arts": false,
+      "heritage_sites_museums": true
+    },
+    "target_audiences": [],
+    "audience_confidence_scores": {
+      "families": 0.101,
+      "older_couples": 0.025,
+      "backpackers": 0.03,
+      "adventure_travellers": 0.0,
+      "diaspora_heritage": 0.067,
+      "luxury_travellers": 0.015,
+      "groups": 0.0,
+      "students": 0.0
+    },
+    "booking_pathway": "Enquiry-only",
+    "price_transparency": "Unknown",
+    "media_presentation": {
+      "quality": "Unknown",
+      "has_ugc_testimonials": false,
+      "has_tripadvisor": false,
+      "image_count": 0,
+      "video_count": 0,
+      "has_destination_specific_images": false
+    },
+    "languages_available": [
+      "de"
+    ],
+    "local_integration": {
+      "hotels_mentioned": [],
+      "attractions_mentioned": [
+        "makasutu",
+        "james island",
+        "arch 22",
+        "albert market"
+      ],
+      "dmc_mentioned": [],
+      "has_local_partnerships": true,
+      "integration_score": 2
+    },
+    "seasonality_framing": [],
+    "last_scraped": "2025-09-30T09:37:42.816152",
+    "scrape_status": "Success",
+    "scrape_errors": [],
+    "raw_content_length": 90985
+  }
+]

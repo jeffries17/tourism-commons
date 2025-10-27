@@ -1,0 +1,784 @@
+[
+  {
+    "title": "Un moment rafraichissant",
+    "rating": 4,
+    "travelDate": "2018-11",
+    "publishedDate": "2019-07-03",
+    "text": "Pour passer une journée rafraichissante et au calme , je vous invite à y passer pour vous y relaxer . Très bon accueil  ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r686333315-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "748D78DD39196D37C0468CE995AC175D",
+      "name": "Patrice V",
+      "contributions": {
+        "totalContributions": 3,
+        "helpfulVotes": 0
+      },
+      "username": "patricev377",
+      "userLocation": null,
+      "avatar": {
+        "id": "452388586",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e6/ea/default-avatar-2020-54.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/patricev377"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "it",
+      "year": "2019",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Magnifique chutes",
+    "rating": 5,
+    "travelDate": "2018-07",
+    "publishedDate": "2018-08-21",
+    "text": "Nous avons fait les chûtes en aprés midi après la visite du parc de Pendjari. Aprés plusieurs heures de ballotement sur les pistes du parc et en plein soleil, l'arrivée dans cette forêt avec l'eau qui coule est un vrai plaisir. Le plus dur pour nous a été de monter à la chute principale. Les jours précédents ont été très pluvieux et le débit de l'eau est devenu important. L'accés n'est pas donné à tout le monde. On a bénéficié de l'aide de 2 guides locaux plus de notre guide/chauffeur pour pouvoir monter (l'un d'eux a pris mon fils de 8 ans dans les bras pour toute l'ascension). Le spectacle à la fin mérite la monté. Une haute cascade où l'on peu se baigner (pour nous l'eau était maron mais en temps normal l'eau est claire). L'eau n'est pas froide. Ce fut un réel plaisir.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r608791507-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "CF51B66E08C412876102EABEE5A40F15",
+      "name": "JL_Lyon",
+      "contributions": {
+        "totalContributions": 1842,
+        "helpfulVotes": 688
+      },
+      "username": "JL_Lyon",
+      "userLocation": {
+        "shortName": "Lyon",
+        "name": "Lyon, France",
+        "id": "187265"
+      },
+      "avatar": {
+        "id": "114492874",
+        "width": 1024,
+        "height": 1024,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d3/05/ca/jl-lyon.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/JL_Lyon"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2018",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Wonderful",
+    "rating": 5,
+    "travelDate": "2018-06",
+    "publishedDate": "2018-06-06",
+    "text": "I loved everything about this enchanting place. It is beautiful and it is for everybody: adventure seekers and families.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r585630258-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "C7587D5F5ED6FF67E44C556C78BFE67C",
+      "name": "Luca R",
+      "contributions": {
+        "totalContributions": 49,
+        "helpfulVotes": 21
+      },
+      "username": "J2992XGlucar",
+      "userLocation": null,
+      "avatar": {
+        "id": "452391352",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f1/b8/default-avatar-2020-22.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/J2992XGlucar"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2018",
+      "needs_translation": false
+    }
+  },
+  {
+    "title": "Prachtig",
+    "rating": 5,
+    "travelDate": "2018-05",
+    "publishedDate": "2018-05-05",
+    "text": "Kleine en gezellige watervallen! Op 30min met de taxi moto van Natitingou centrum. Inkom is 500F CFA. Zeker de moeite! ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r578148964-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "D37E8C46DC1D4678BFF17FDA110C8016",
+      "name": "Elisedh",
+      "contributions": {
+        "totalContributions": 65,
+        "helpfulVotes": 4
+      },
+      "username": "elisedh96",
+      "userLocation": {
+        "shortName": "Halle",
+        "name": "Halle, Belgium",
+        "id": "1009379"
+      },
+      "avatar": {
+        "id": "452387558",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e2/e6/default-avatar-2020-45.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/elisedh96"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "pl",
+      "year": "2018",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Rafraichissant ",
+    "rating": 4,
+    "travelDate": "2018-03",
+    "publishedDate": "2018-03-14",
+    "text": "Rafraichissant après une randonnée, l eau est bonne et il y a même une cabine pour se changer ! Un vendeur de souvenir est également présent.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r566433274-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "D23D4FB95955CA24FB568D8E043D019E",
+      "name": "izarol",
+      "contributions": {
+        "totalContributions": 41,
+        "helpfulVotes": 41
+      },
+      "username": "izarol",
+      "userLocation": null,
+      "avatar": {
+        "id": "308035972",
+        "width": 1024,
+        "height": 1024,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/5c/41/84/izarol.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/izarol"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2018",
+      "needs_translation": false
+    }
+  },
+  {
+    "title": "beauté et fraîcheur",
+    "rating": 4,
+    "travelDate": "2017-11",
+    "publishedDate": "2017-11-28",
+    "text": "Juste après la saison des pluies, les chutes sont assez impressionantes. La balade vers les chutes et de retour est très belle aussi. On peut sans danger se baigner, une merveille au plein milieu d’ un paysage de toute beauté. A ne pas rater quand on passe\nà Nati, quoique je crains en pleine saison sèche ça soit beaucoup moins intéressant..",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r543767144-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "ECAB15B5FF3A30C7204CB0FC67BA2C27",
+      "name": "c0pl0",
+      "contributions": {
+        "totalContributions": 113,
+        "helpfulVotes": 48
+      },
+      "username": "c0pl0",
+      "userLocation": {
+        "shortName": "Maldegem",
+        "name": "Maldegem, Belgium",
+        "id": "580117"
+      },
+      "avatar": {
+        "id": "291788954",
+        "width": 1113,
+        "height": 1334,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/64/58/9a/c0pl0.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/c0pl0"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2017",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "A ne pas rater pendant la saison pluvieuse",
+    "rating": 5,
+    "travelDate": "2017-09",
+    "publishedDate": "2017-09-19",
+    "text": "Ayant été très déçue pendant la saison sèche de l'eau très verte et la présence de serpents dans l'eau, je suis tombée amoureuse de cet endroit pendant la saison des pluies. Eau claire, cascade beaucoup plus impressionnante, balade aux alentours magnifique... A ne pas oublier le haut de la cascade où il est aussi possible de se poser au calme pour un picnic et un agréable massage sous les mini cascades... Un des plus beaux endroits de la région de Nati, à ne pas rater !! ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r525670436-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "E8EAB523067D41F16C78DC50ED689617",
+      "name": "Clara Y",
+      "contributions": {
+        "totalContributions": 72,
+        "helpfulVotes": 65
+      },
+      "username": "claray137",
+      "userLocation": null,
+      "avatar": {
+        "id": "452360110",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/77/ae/default-avatar-2020-2.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/claray137"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2017",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Délicieuse pause fraîcheur",
+    "rating": 5,
+    "travelDate": "2017-03",
+    "publishedDate": "2017-08-10",
+    "text": "Parfait pour une pause fraîcheur après une excursion dans l'Atakora. Joli site naturel où il est agréable de piquer une tête.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r510869265-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "02DA8FF3F97AA44034875E913A725037",
+      "name": "TounToun",
+      "contributions": {
+        "totalContributions": 4,
+        "helpfulVotes": 2
+      },
+      "username": "TounToun",
+      "userLocation": {
+        "shortName": "Paris",
+        "name": "Paris, France",
+        "id": "187147"
+      },
+      "avatar": {
+        "id": "32360989",
+        "width": 550,
+        "height": 412,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/01/ed/ca/1d/tountoun.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/TounToun"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "pl",
+      "year": "2017",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Balade agréable",
+    "rating": 3,
+    "travelDate": "2017-02",
+    "publishedDate": "2017-06-12",
+    "text": "La balade pour atteindre la chute est très jolie et bien aménagée. La nature et très belle aux alentours et la chute en soit est belle. Possibilité de se baigner mais l'eau est vraiment très verte et opaque donc pas très rassurant. Nous avons vu plusieurs serpents dans le bassin donc privilégiez peut être les pique-nique au bord de l'eau ;)",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r492468742-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "E8EAB523067D41F16C78DC50ED689617",
+      "name": "Clara Y",
+      "contributions": {
+        "totalContributions": 72,
+        "helpfulVotes": 65
+      },
+      "username": "claray137",
+      "userLocation": null,
+      "avatar": {
+        "id": "452360110",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/77/ae/default-avatar-2020-2.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/claray137"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2017",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "fresche acque",
+    "rating": 5,
+    "travelDate": "2017-04",
+    "publishedDate": "2017-05-10",
+    "text": "sosta ideale dopo aver passato la mattina nella polvere del parco pendjari...\nin mezzo ad una natura secca c'è questa piccola oasi a metà strada tra il parco e tanguietà. con pochi cfa (la moneta locale) ci sono dei ragazzi che vi guidano fino al laghetto e poi salgono in cima alla cascata per tuffarsi...\npiacevolissima...",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r483206945-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "9D2C4CE79CD524D3CD7CC68A98C9AF1E",
+      "name": "eziocavazzini",
+      "contributions": {
+        "totalContributions": 279,
+        "helpfulVotes": 81
+      },
+      "username": "eziocavazzini",
+      "userLocation": {
+        "shortName": "Segrate",
+        "name": "Segrate, Italy",
+        "id": "1081116"
+      },
+      "avatar": {
+        "id": "373149592",
+        "width": 450,
+        "height": 450,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/3d/cf/98/caption.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/eziocavazzini"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "it",
+      "year": "2017",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Great place to visit! ",
+    "rating": 5,
+    "travelDate": "2017-01",
+    "publishedDate": "2017-01-05",
+    "text": "This is great place to have a day trip in Natitingou! We went in late December and we were able to swim in the pool at the bottom! This is a highly recommended day trip! One of the most beautiful places I've seen in Benin! ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r449668205-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "50CEB540CE808102BE479FF3C99D9355",
+      "name": "Katelyn M",
+      "contributions": {
+        "totalContributions": 7,
+        "helpfulVotes": 2
+      },
+      "username": "167katelynm",
+      "userLocation": null,
+      "avatar": {
+        "id": "452391352",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f1/b8/default-avatar-2020-22.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/167katelynm"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2017",
+      "needs_translation": false
+    }
+  },
+  {
+    "title": "Site agréable",
+    "rating": 4,
+    "travelDate": "2015-12",
+    "publishedDate": "2015-12-27",
+    "text": "Sentier bien aménagé pour descendre à la chute et en remonter (avec panneaux descriptif de la flore). Très beau campement (constructions de qualité en pierres locales) mais malheureusement pas très bien géré (propreté douteuse de la literie, nourriture très très moyenne), mais espace salle de beau très bien.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r335167201-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "B0703199F3E5917F3AE4FD1D56DF8780",
+      "name": "Dominique F",
+      "contributions": {
+        "totalContributions": 13,
+        "helpfulVotes": 5
+      },
+      "username": "d_fr_namur",
+      "userLocation": {
+        "shortName": "Namur",
+        "name": "Namur, Belgium",
+        "id": "188663"
+      },
+      "avatar": {
+        "id": "165492239",
+        "width": 501,
+        "height": 547,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/dd/36/0f/d-fr-namur.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/d_fr_namur"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2015",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Une balade sympa",
+    "rating": 5,
+    "travelDate": "2012-11",
+    "publishedDate": "2013-08-09",
+    "text": "Une balade sympa en passant dans le nord du Bénin ,très agréable de pouvoir marcher dans la forêt pour accéder a cette cascade ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1841342-d4551152-r171487981-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+    "user": {
+      "userId": "A2095C2A2AF42F642536759DBC21ACD8",
+      "name": "DidierP",
+      "contributions": {
+        "totalContributions": 199,
+        "helpfulVotes": 41
+      },
+      "username": "DidierP",
+      "userLocation": {
+        "shortName": "Cotonou",
+        "name": "Cotonou, Benin",
+        "id": "297314"
+      },
+      "avatar": {
+        "id": "23035652",
+        "width": 550,
+        "height": 309,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/01/5f/7f/04/didierp.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/DidierP"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "4551152",
+      "name": "Chutes de Kota",
+      "rating": 4.5,
+      "numberOfReviews": 13,
+      "locationString": "Natitingou, Atakora Department",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "website": null,
+      "address": "Natitingou Benin",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Natitingou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 4,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2013",
+      "needs_translation": true
+    }
+  }
+]

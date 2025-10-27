@@ -1,0 +1,126 @@
+{
+  "total_operators": 3,
+  "successful": 3,
+  "failed": 0,
+  "results": [
+    {
+      "operator": "Adventure Life",
+      "success": true,
+      "analysis": {
+        "operator": "Adventure Life",
+        "sentiment_score": -0.20000000298023224,
+        "sentiment_magnitude": 1.100000023841858,
+        "creative_tourism_score": 0.0,
+        "sector_scores": {
+          "music": 0,
+          "crafts": 0,
+          "heritage": 0,
+          "fashion": 0,
+          "festivals": 0,
+          "audiovisual": 0,
+          "performing_arts": 0,
+          "publishing": 0
+        },
+        "sector_justifications": {
+          "music": "Not mentioned",
+          "crafts": "Not mentioned",
+          "heritage": "Not mentioned",
+          "fashion": "Not mentioned",
+          "festivals": "Not mentioned",
+          "audiovisual": "Not mentioned",
+          "performing_arts": "Not mentioned",
+          "publishing": "Not mentioned"
+        },
+        "primary_themes": [],
+        "best_cultural_quote": "",
+        "best_positive_quote": "",
+        "gambia_percentage_ai": 0,
+        "analyzed_at": "2025-10-06T19:46:26.973192",
+        "country": "USA",
+        "url_count": 4,
+        "word_count": 24
+      }
+    },
+    {
+      "operator": "African Travel Seminars",
+      "success": true,
+      "analysis": {
+        "operator": "African Travel Seminars",
+        "sentiment_score": 0.20000000298023224,
+        "sentiment_magnitude": 2.799999952316284,
+        "creative_tourism_score": 7.5,
+        "sector_scores": {
+          "music": 0,
+          "crafts": 0,
+          "heritage": 5,
+          "fashion": 0,
+          "festivals": 0,
+          "audiovisual": 0,
+          "performing_arts": 0,
+          "publishing": 1
+        },
+        "sector_justifications": {
+          "music": "Not mentioned",
+          "crafts": "Not mentioned",
+          "heritage": "Described (5 mentions, 5 unique terms): historical, history, museum, roots, slavery [+1 for diversity]",
+          "fashion": "Not mentioned",
+          "festivals": "Not mentioned",
+          "audiovisual": "Not mentioned",
+          "performing_arts": "Not mentioned",
+          "publishing": "Brief mention (1×): book"
+        },
+        "primary_themes": [
+          "Wildlife/Nature",
+          "Cultural Heritage",
+          "Roots/Diaspora"
+        ],
+        "best_cultural_quote": "In Senegal you must visit Goreé Island, a departure point for many Africans who were sold into slavery",
+        "best_positive_quote": "",
+        "gambia_percentage_ai": 63,
+        "analyzed_at": "2025-10-06T19:46:35.241856",
+        "country": "USA",
+        "url_count": 1,
+        "word_count": 113
+      }
+    },
+    {
+      "operator": "Apollo",
+      "success": true,
+      "analysis": {
+        "operator": "Apollo",
+        "sentiment_score": -0.20000000298023224,
+        "sentiment_magnitude": 0.20000000298023224,
+        "creative_tourism_score": 0.0,
+        "sector_scores": {
+          "music": 0,
+          "crafts": 0,
+          "heritage": 0,
+          "fashion": 0,
+          "festivals": 0,
+          "audiovisual": 0,
+          "performing_arts": 0,
+          "publishing": 0
+        },
+        "sector_justifications": {
+          "music": "Not mentioned",
+          "crafts": "Not mentioned",
+          "heritage": "Not mentioned",
+          "fashion": "Not mentioned",
+          "festivals": "Not mentioned",
+          "audiovisual": "Not mentioned",
+          "performing_arts": "Not mentioned",
+          "publishing": "Not mentioned"
+        },
+        "primary_themes": [],
+        "best_cultural_quote": "",
+        "best_positive_quote": "",
+        "gambia_percentage_ai": 0,
+        "analyzed_at": "2025-10-06T19:46:40.758263",
+        "country": "Sweden",
+        "url_count": 1,
+        "word_count": 6
+      }
+    }
+  ],
+  "completed_at": "2025-10-06T19:46:41.557110"
+}

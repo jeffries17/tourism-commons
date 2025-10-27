@@ -1,0 +1,1371 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-23T22:15:00.000000",
+    "source": "dashboard_regional_sentiment.json",
+    "total_regions": 5,
+    "total_themes": 9
+  },
+  "regional_theme_performance": {
+    "Benin": {
+      "stakeholders": 7,
+      "total_reviews": 446,
+      "themes": {
+        "cultural_heritage": {
+          "scores": [
+            0.34,
+            0.19,
+            0.2,
+            0.15,
+            0.17,
+            0.09,
+            0.18
+          ],
+          "mentions": [
+            21,
+            21,
+            70,
+            61,
+            19,
+            11,
+            6
+          ],
+          "avg_score": 0.18857142857142858,
+          "total_mentions": 209,
+          "stakeholders_with_theme": 7
+        },
+        "service_staff": {
+          "scores": [
+            0.34,
+            0.22,
+            0.23,
+            0.26,
+            0.27,
+            0.1,
+            0.19
+          ],
+          "mentions": [
+            29,
+            17,
+            58,
+            32,
+            10,
+            9,
+            10
+          ],
+          "avg_score": 0.23,
+          "total_mentions": 165,
+          "stakeholders_with_theme": 7
+        },
+        "facilities_infrastructure": {
+          "scores": [
+            0.36,
+            0.09,
+            0.19,
+            0.16,
+            0.18,
+            0.11,
+            0.26
+          ],
+          "mentions": [
+            20,
+            6,
+            37,
+            24,
+            13,
+            7,
+            10
+          ],
+          "avg_score": 0.19285714285714287,
+          "total_mentions": 117,
+          "stakeholders_with_theme": 7
+        },
+        "accessibility_transport": {
+          "scores": [
+            0.32,
+            0.17,
+            0.13,
+            0.19,
+            0.16,
+            0.18,
+            0.24
+          ],
+          "mentions": [
+            8,
+            6,
+            30,
+            21,
+            47,
+            3,
+            32
+          ],
+          "avg_score": 0.19857142857142857,
+          "total_mentions": 147,
+          "stakeholders_with_theme": 7
+        },
+        "value_money": {
+          "scores": [
+            0.31,
+            0.21,
+            0.13,
+            0.22,
+            0.19,
+            0.12,
+            0.19
+          ],
+          "mentions": [
+            23,
+            5,
+            31,
+            22,
+            58,
+            3,
+            25
+          ],
+          "avg_score": 0.1957142857142857,
+          "total_mentions": 167,
+          "stakeholders_with_theme": 7
+        },
+        "safety_security": {
+          "scores": [
+            0.15,
+            0.07,
+            0.28,
+            -0.02,
+            0.21
+          ],
+          "mentions": [
+            1,
+            8,
+            4,
+            1,
+            3
+          ],
+          "avg_score": 0.138,
+          "total_mentions": 17,
+          "stakeholders_with_theme": 5
+        },
+        "educational_value": {
+          "scores": [
+            0.34,
+            0.19,
+            0.21,
+            0.18,
+            0.17,
+            0.15,
+            0.22
+          ],
+          "mentions": [
+            40,
+            24,
+            65,
+            55,
+            24,
+            11,
+            10
+          ],
+          "avg_score": 0.20857142857142857,
+          "total_mentions": 229,
+          "stakeholders_with_theme": 7
+        },
+        "artistic_creative": {
+          "scores": [
+            0.33,
+            0.26,
+            0.18,
+            0.15,
+            0.19,
+            0.08,
+            0.18
+          ],
+          "mentions": [
+            42,
+            14,
+            57,
+            30,
+            70,
+            9,
+            16
+          ],
+          "avg_score": 0.19571428571428573,
+          "total_mentions": 238,
+          "stakeholders_with_theme": 7
+        },
+        "atmosphere_experience": {
+          "scores": [
+            0.35,
+            0.28,
+            0.28,
+            0.28,
+            0.24,
+            0.14,
+            0.29
+          ],
+          "mentions": [
+            28,
+            15,
+            50,
+            25,
+            43,
+            8,
+            23
+          ],
+          "avg_score": 0.26571428571428574,
+          "total_mentions": 192,
+          "stakeholders_with_theme": 7
+        }
+      }
+    },
+    "Cape Verde": {
+      "stakeholders": 9,
+      "total_reviews": 591,
+      "themes": {
+        "cultural_heritage": {
+          "scores": [
+            0.03,
+            0.23,
+            0.16,
+            0.27,
+            0.38,
+            0.25,
+            0.27,
+            0.22
+          ],
+          "mentions": [
+            2,
+            8,
+            5,
+            117,
+            25,
+            8,
+            8,
+            7
+          ],
+          "avg_score": 0.22625,
+          "total_mentions": 180,
+          "stakeholders_with_theme": 8
+        },
+        "service_staff": {
+          "scores": [
+            0.06,
+            0.19,
+            0.08,
+            0.27,
+            0.38,
+            0.25,
+            0.33,
+            0.16
+          ],
+          "mentions": [
+            1,
+            1,
+            3,
+            44,
+            51,
+            5,
+            21,
+            4
+          ],
+          "avg_score": 0.215,
+          "total_mentions": 130,
+          "stakeholders_with_theme": 8
+        },
+        "facilities_infrastructure": {
+          "scores": [
+            0.06,
+            0.21,
+            0.07,
+            0.24,
+            0.29,
+            0.16,
+            0.27,
+            0.24
+          ],
+          "mentions": [
+            1,
+            8,
+            6,
+            73,
+            9,
+            2,
+            8,
+            6
+          ],
+          "avg_score": 0.1925,
+          "total_mentions": 113,
+          "stakeholders_with_theme": 8
+        },
+        "accessibility_transport": {
+          "scores": [
+            0.06,
+            0.22,
+            0.08,
+            0.22,
+            0.25,
+            0.34,
+            0.16,
+            0.31,
+            0.17
+          ],
+          "mentions": [
+            1,
+            6,
+            8,
+            1,
+            103,
+            35,
+            4,
+            26,
+            5
+          ],
+          "avg_score": 0.20111111111111113,
+          "total_mentions": 189,
+          "stakeholders_with_theme": 9
+        },
+        "value_money": {
+          "scores": [
+            0.06,
+            0.19,
+            0.14,
+            0.23,
+            0.37,
+            0.19,
+            0.28,
+            0.26
+          ],
+          "mentions": [
+            1,
+            7,
+            13,
+            100,
+            49,
+            4,
+            24,
+            11
+          ],
+          "avg_score": 0.215,
+          "total_mentions": 209,
+          "stakeholders_with_theme": 8
+        },
+        "safety_security": {
+          "scores": [
+            -0.25,
+            0.23,
+            0.41,
+            0.25
+          ],
+          "mentions": [
+            1,
+            10,
+            2,
+            1
+          ],
+          "avg_score": 0.16,
+          "total_mentions": 14,
+          "stakeholders_with_theme": 4
+        },
+        "educational_value": {
+          "scores": [
+            0.06,
+            0.18,
+            0.11,
+            0.22,
+            0.26,
+            0.33,
+            0.23,
+            0.38,
+            0.29
+          ],
+          "mentions": [
+            1,
+            8,
+            20,
+            1,
+            131,
+            25,
+            11,
+            13,
+            24
+          ],
+          "avg_score": 0.2288888888888889,
+          "total_mentions": 234,
+          "stakeholders_with_theme": 9
+        },
+        "artistic_creative": {
+          "scores": [
+            0.0,
+            0.19,
+            0.13,
+            0.11,
+            0.29,
+            0.31,
+            0.2,
+            0.32,
+            0.25
+          ],
+          "mentions": [
+            1,
+            12,
+            9,
+            2,
+            115,
+            89,
+            5,
+            43,
+            22
+          ],
+          "avg_score": 0.2,
+          "total_mentions": 298,
+          "stakeholders_with_theme": 9
+        },
+        "atmosphere_experience": {
+          "scores": [
+            0.25,
+            0.15,
+            0.22,
+            0.31,
+            0.42,
+            0.3,
+            0.4,
+            0.27
+          ],
+          "mentions": [
+            7,
+            7,
+            1,
+            100,
+            84,
+            7,
+            20,
+            12
+          ],
+          "avg_score": 0.29,
+          "total_mentions": 238,
+          "stakeholders_with_theme": 8
+        }
+      }
+    },
+    "Ghana": {
+      "stakeholders": 12,
+      "total_reviews": 823,
+      "themes": {
+        "cultural_heritage": {
+          "scores": [
+            0.2,
+            0.33,
+            0.29,
+            0.35,
+            0.31,
+            0.37,
+            0.21,
+            0.15,
+            0.29,
+            0.12,
+            0.18,
+            0.34
+          ],
+          "mentions": [
+            115,
+            4,
+            80,
+            5,
+            2,
+            11,
+            74,
+            115,
+            11,
+            6,
+            47,
+            2
+          ],
+          "avg_score": 0.26166666666666666,
+          "total_mentions": 472,
+          "stakeholders_with_theme": 12
+        },
+        "service_staff": {
+          "scores": [
+            0.23,
+            0.32,
+            0.33,
+            0.19,
+            0.32,
+            0.3,
+            0.16,
+            0.19,
+            0.34,
+            0.17,
+            0.2,
+            0.48
+          ],
+          "mentions": [
+            79,
+            6,
+            49,
+            5,
+            1,
+            16,
+            46,
+            96,
+            4,
+            1,
+            44,
+            1
+          ],
+          "avg_score": 0.26916666666666667,
+          "total_mentions": 348,
+          "stakeholders_with_theme": 12
+        },
+        "facilities_infrastructure": {
+          "scores": [
+            0.15,
+            0.31,
+            0.3,
+            0.32,
+            0.31,
+            0.11,
+            0.16,
+            0.27,
+            0.1,
+            0.13
+          ],
+          "mentions": [
+            42,
+            4,
+            36,
+            9,
+            8,
+            44,
+            56,
+            17,
+            3,
+            23
+          ],
+          "avg_score": 0.216,
+          "total_mentions": 242,
+          "stakeholders_with_theme": 10
+        },
+        "accessibility_transport": {
+          "scores": [
+            0.17,
+            0.29,
+            0.26,
+            0.23,
+            0.31,
+            0.34,
+            0.12,
+            0.15,
+            0.23,
+            0.24,
+            0.16,
+            0.38
+          ],
+          "mentions": [
+            41,
+            3,
+            43,
+            7,
+            2,
+            17,
+            40,
+            56,
+            16,
+            7,
+            29,
+            3
+          ],
+          "avg_score": 0.24,
+          "total_mentions": 264,
+          "stakeholders_with_theme": 12
+        },
+        "value_money": {
+          "scores": [
+            0.18,
+            0.29,
+            0.24,
+            0.26,
+            0.32,
+            0.35,
+            0.13,
+            0.17,
+            0.28,
+            0.16,
+            0.18,
+            0.4
+          ],
+          "mentions": [
+            45,
+            4,
+            35,
+            8,
+            1,
+            10,
+            48,
+            58,
+            21,
+            10,
+            25,
+            3
+          ],
+          "avg_score": 0.24666666666666667,
+          "total_mentions": 268,
+          "stakeholders_with_theme": 12
+        },
+        "safety_security": {
+          "scores": [
+            0.07,
+            0.15,
+            0.19,
+            0.1,
+            0.09,
+            0.24,
+            0.1
+          ],
+          "mentions": [
+            5,
+            2,
+            2,
+            4,
+            9,
+            1,
+            3
+          ],
+          "avg_score": 0.13428571428571429,
+          "total_mentions": 26,
+          "stakeholders_with_theme": 7
+        },
+        "educational_value": {
+          "scores": [
+            0.2,
+            0.23,
+            0.28,
+            0.28,
+            0.31,
+            0.36,
+            0.18,
+            0.17,
+            0.28,
+            0.05,
+            0.2,
+            0.35
+          ],
+          "mentions": [
+            107,
+            2,
+            98,
+            6,
+            2,
+            29,
+            128,
+            109,
+            30,
+            5,
+            50,
+            2
+          ],
+          "avg_score": 0.24083333333333334,
+          "total_mentions": 568,
+          "stakeholders_with_theme": 12
+        },
+        "artistic_creative": {
+          "scores": [
+            0.17,
+            0.32,
+            0.31,
+            0.3,
+            0.31,
+            0.36,
+            0.16,
+            0.19,
+            0.27,
+            0.19,
+            0.19,
+            0.47
+          ],
+          "mentions": [
+            43,
+            6,
+            56,
+            19,
+            2,
+            26,
+            75,
+            46,
+            41,
+            11,
+            26,
+            3
+          ],
+          "avg_score": 0.27,
+          "total_mentions": 354,
+          "stakeholders_with_theme": 12
+        },
+        "atmosphere_experience": {
+          "scores": [
+            0.26,
+            0.3,
+            0.34,
+            0.29,
+            0.31,
+            0.37,
+            0.26,
+            0.22,
+            0.31,
+            0.3,
+            0.24,
+            0.32
+          ],
+          "mentions": [
+            83,
+            6,
+            88,
+            20,
+            2,
+            41,
+            60,
+            90,
+            31,
+            8,
+            36,
+            3
+          ],
+          "avg_score": 0.29333333333333333,
+          "total_mentions": 468,
+          "stakeholders_with_theme": 12
+        }
+      }
+    },
+    "Nigeria": {
+      "stakeholders": 10,
+      "total_reviews": 576,
+      "themes": {
+        "cultural_heritage": {
+          "scores": [
+            0.22,
+            0.2,
+            0.33,
+            0.19,
+            0.49,
+            0.3,
+            0.35,
+            0.26
+          ],
+          "mentions": [
+            30,
+            30,
+            1,
+            26,
+            21,
+            9,
+            7,
+            31
+          ],
+          "avg_score": 0.2925,
+          "total_mentions": 155,
+          "stakeholders_with_theme": 8
+        },
+        "service_staff": {
+          "scores": [
+            0.24,
+            0.23,
+            0.19,
+            0.31,
+            0.48,
+            0.15,
+            0.28,
+            0.28
+          ],
+          "mentions": [
+            5,
+            17,
+            21,
+            6,
+            76,
+            3,
+            6,
+            20
+          ],
+          "avg_score": 0.27,
+          "total_mentions": 154,
+          "stakeholders_with_theme": 8
+        },
+        "facilities_infrastructure": {
+          "scores": [
+            0.19,
+            0.2,
+            0.19,
+            0.29,
+            0.2,
+            0.36,
+            0.19,
+            0.24,
+            0.3
+          ],
+          "mentions": [
+            2,
+            26,
+            22,
+            6,
+            1,
+            10,
+            8,
+            2,
+            6
+          ],
+          "avg_score": 0.24,
+          "total_mentions": 83,
+          "stakeholders_with_theme": 9
+        },
+        "accessibility_transport": {
+          "scores": [
+            0.22,
+            0.19,
+            0.16,
+            0.24,
+            0.33,
+            0.27,
+            0.29,
+            0.28
+          ],
+          "mentions": [
+            6,
+            71,
+            16,
+            51,
+            13,
+            5,
+            7,
+            16
+          ],
+          "avg_score": 0.2475,
+          "total_mentions": 185,
+          "stakeholders_with_theme": 8
+        },
+        "value_money": {
+          "scores": [
+            0.21,
+            0.24,
+            0.18,
+            0.25,
+            0.45,
+            -0.01,
+            0.24,
+            0.31
+          ],
+          "mentions": [
+            2,
+            96,
+            23,
+            59,
+            16,
+            2,
+            12,
+            20
+          ],
+          "avg_score": 0.23374999999999999,
+          "total_mentions": 230,
+          "stakeholders_with_theme": 8
+        },
+        "safety_security": {
+          "scores": [
+            0.18,
+            0.25,
+            -0.03,
+            0.2,
+            0.49,
+            -0.01,
+            0.29,
+            0.16
+          ],
+          "mentions": [
+            2,
+            13,
+            4,
+            5,
+            6,
+            2,
+            4,
+            3
+          ],
+          "avg_score": 0.19125,
+          "total_mentions": 39,
+          "stakeholders_with_theme": 8
+        },
+        "educational_value": {
+          "scores": [
+            0.18,
+            0.17,
+            0.21,
+            0.47,
+            0.21,
+            0.27,
+            0.27
+          ],
+          "mentions": [
+            38,
+            49,
+            28,
+            87,
+            9,
+            5,
+            21
+          ],
+          "avg_score": 0.2542857142857143,
+          "total_mentions": 237,
+          "stakeholders_with_theme": 7
+        },
+        "artistic_creative": {
+          "scores": [
+            0.21,
+            0.25,
+            0.15,
+            0.24,
+            0.2,
+            0.47,
+            0.24,
+            0.27,
+            0.31
+          ],
+          "mentions": [
+            12,
+            110,
+            31,
+            99,
+            1,
+            132,
+            15,
+            22,
+            20
+          ],
+          "avg_score": 0.26,
+          "total_mentions": 442,
+          "stakeholders_with_theme": 9
+        },
+        "atmosphere_experience": {
+          "scores": [
+            0.33,
+            0.29,
+            0.18,
+            0.31,
+            0.49,
+            0.22,
+            0.31,
+            0.32
+          ],
+          "mentions": [
+            7,
+            90,
+            29,
+            69,
+            129,
+            9,
+            18,
+            26
+          ],
+          "avg_score": 0.30625,
+          "total_mentions": 377,
+          "stakeholders_with_theme": 8
+        }
+      }
+    },
+    "Senegal": {
+      "stakeholders": 7,
+      "total_reviews": 660,
+      "themes": {
+        "cultural_heritage": {
+          "scores": [
+            0.24,
+            0.25,
+            0.14,
+            0.06,
+            -0.5,
+            0.28,
+            0.22
+          ],
+          "mentions": [
+            1,
+            109,
+            100,
+            12,
+            1,
+            85,
+            10
+          ],
+          "avg_score": 0.09857142857142857,
+          "total_mentions": 318,
+          "stakeholders_with_theme": 7
+        },
+        "service_staff": {
+          "scores": [
+            0.19,
+            0.27,
+            0.17,
+            0.12,
+            0.29,
+            0.39,
+            0.2
+          ],
+          "mentions": [
+            1,
+            68,
+            50,
+            17,
+            2,
+            21,
+            12
+          ],
+          "avg_score": 0.23285714285714287,
+          "total_mentions": 171,
+          "stakeholders_with_theme": 7
+        },
+        "facilities_infrastructure": {
+          "scores": [
+            0.15,
+            0.05,
+            0.14,
+            0.2,
+            0.34
+          ],
+          "mentions": [
+            35,
+            35,
+            15,
+            19,
+            8
+          ],
+          "avg_score": 0.17600000000000002,
+          "total_mentions": 112,
+          "stakeholders_with_theme": 5
+        },
+        "accessibility_transport": {
+          "scores": [
+            0.17,
+            0.19,
+            0.1,
+            0.2,
+            0.26,
+            0.18
+          ],
+          "mentions": [
+            79,
+            36,
+            48,
+            6,
+            39,
+            27
+          ],
+          "avg_score": 0.18333333333333335,
+          "total_mentions": 235,
+          "stakeholders_with_theme": 6
+        },
+        "value_money": {
+          "scores": [
+            0.18,
+            0.13,
+            0.14,
+            0.13,
+            0.17,
+            0.28,
+            0.22
+          ],
+          "mentions": [
+            2,
+            55,
+            38,
+            48,
+            8,
+            61,
+            36
+          ],
+          "avg_score": 0.17857142857142858,
+          "total_mentions": 248,
+          "stakeholders_with_theme": 7
+        },
+        "safety_security": {
+          "scores": [
+            0.09,
+            0.0,
+            0.25,
+            0.19,
+            0.18
+          ],
+          "mentions": [
+            9,
+            1,
+            6,
+            3,
+            2
+          ],
+          "avg_score": 0.142,
+          "total_mentions": 21,
+          "stakeholders_with_theme": 5
+        },
+        "educational_value": {
+          "scores": [
+            0.2,
+            0.17,
+            0.08,
+            0.33,
+            0.36,
+            0.26
+          ],
+          "mentions": [
+            69,
+            78,
+            26,
+            1,
+            44,
+            38
+          ],
+          "avg_score": 0.23333333333333334,
+          "total_mentions": 256,
+          "stakeholders_with_theme": 6
+        },
+        "artistic_creative": {
+          "scores": [
+            0.2,
+            0.23,
+            0.2,
+            0.16,
+            0.15,
+            0.31,
+            0.24
+          ],
+          "mentions": [
+            3,
+            74,
+            43,
+            33,
+            5,
+            46,
+            89
+          ],
+          "avg_score": 0.21285714285714286,
+          "total_mentions": 293,
+          "stakeholders_with_theme": 7
+        },
+        "atmosphere_experience": {
+          "scores": [
+            0.18,
+            0.27,
+            0.23,
+            0.19,
+            0.08,
+            0.41,
+            0.27
+          ],
+          "mentions": [
+            2,
+            85,
+            54,
+            46,
+            4,
+            70,
+            56
+          ],
+          "avg_score": 0.23285714285714287,
+          "total_mentions": 317,
+          "stakeholders_with_theme": 7
+        }
+      }
+    }
+  },
+  "theme_rankings": {
+    "cultural_heritage": [
+      [
+        "Nigeria",
+        0.2925
+      ],
+      [
+        "Ghana",
+        0.26166666666666666
+      ],
+      [
+        "Cape Verde",
+        0.22625
+      ],
+      [
+        "Benin",
+        0.18857142857142858
+      ],
+      [
+        "Senegal",
+        0.09857142857142857
+      ]
+    ],
+    "service_staff": [
+      [
+        "Nigeria",
+        0.27
+      ],
+      [
+        "Ghana",
+        0.26916666666666667
+      ],
+      [
+        "Senegal",
+        0.23285714285714287
+      ],
+      [
+        "Benin",
+        0.23
+      ],
+      [
+        "Cape Verde",
+        0.215
+      ]
+    ],
+    "facilities_infrastructure": [
+      [
+        "Nigeria",
+        0.24
+      ],
+      [
+        "Ghana",
+        0.216
+      ],
+      [
+        "Benin",
+        0.19285714285714287
+      ],
+      [
+        "Cape Verde",
+        0.1925
+      ],
+      [
+        "Senegal",
+        0.17600000000000002
+      ]
+    ],
+    "accessibility_transport": [
+      [
+        "Nigeria",
+        0.2475
+      ],
+      [
+        "Ghana",
+        0.24
+      ],
+      [
+        "Cape Verde",
+        0.20111111111111113
+      ],
+      [
+        "Benin",
+        0.19857142857142857
+      ],
+      [
+        "Senegal",
+        0.18333333333333335
+      ]
+    ],
+    "value_money": [
+      [
+        "Ghana",
+        0.24666666666666667
+      ],
+      [
+        "Nigeria",
+        0.23374999999999999
+      ],
+      [
+        "Cape Verde",
+        0.215
+      ],
+      [
+        "Benin",
+        0.1957142857142857
+      ],
+      [
+        "Senegal",
+        0.17857142857142858
+      ]
+    ],
+    "safety_security": [
+      [
+        "Nigeria",
+        0.19125
+      ],
+      [
+        "Cape Verde",
+        0.16
+      ],
+      [
+        "Senegal",
+        0.142
+      ],
+      [
+        "Benin",
+        0.138
+      ],
+      [
+        "Ghana",
+        0.13428571428571429
+      ]
+    ],
+    "educational_value": [
+      [
+        "Nigeria",
+        0.2542857142857143
+      ],
+      [
+        "Ghana",
+        0.24083333333333334
+      ],
+      [
+        "Senegal",
+        0.23333333333333334
+      ],
+      [
+        "Cape Verde",
+        0.2288888888888889
+      ],
+      [
+        "Benin",
+        0.20857142857142857
+      ]
+    ],
+    "artistic_creative": [
+      [
+        "Ghana",
+        0.27
+      ],
+      [
+        "Nigeria",
+        0.26
+      ],
+      [
+        "Senegal",
+        0.21285714285714286
+      ],
+      [
+        "Cape Verde",
+        0.2
+      ],
+      [
+        "Benin",
+        0.19571428571428573
+      ]
+    ],
+    "atmosphere_experience": [
+      [
+        "Nigeria",
+        0.30625
+      ],
+      [
+        "Ghana",
+        0.29333333333333333
+      ],
+      [
+        "Cape Verde",
+        0.29
+      ],
+      [
+        "Benin",
+        0.26571428571428574
+      ],
+      [
+        "Senegal",
+        0.23285714285714287
+      ]
+    ]
+  }
+}

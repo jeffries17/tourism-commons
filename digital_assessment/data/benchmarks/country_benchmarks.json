@@ -1,0 +1,102 @@
+{
+  "Senegal": {
+    "country": "Senegal",
+    "num_entities": 40,
+    "avg_total_score": 17.02,
+    "median_total_score": 20.0,
+    "min_score": 0.0,
+    "max_score": 32.0,
+    "avg_social_media": 5.0,
+    "avg_website": 5.75,
+    "avg_visual_content": 1.43,
+    "avg_discoverability": 1.35,
+    "avg_digital_sales": 2.23,
+    "avg_platform_integration": 1.27,
+    "maturity_distribution": {
+      "Intermediate": 11,
+      "Emerging": 17,
+      "Absent/Basic": 12
+    },
+    "pct_strong_performers": 27.5
+  },
+  "Cape Verde": {
+    "country": "Cape Verde",
+    "num_entities": 40,
+    "avg_total_score": 15.93,
+    "median_total_score": 18.5,
+    "min_score": 0.0,
+    "max_score": 30.0,
+    "avg_social_media": 5.03,
+    "avg_website": 5.0,
+    "avg_visual_content": 1.23,
+    "avg_discoverability": 1.68,
+    "avg_digital_sales": 1.75,
+    "avg_platform_integration": 1.25,
+    "maturity_distribution": {
+      "Absent/Basic": 14,
+      "Intermediate": 9,
+      "Emerging": 17
+    },
+    "pct_strong_performers": 22.5
+  },
+  "Nigeria": {
+    "country": "Nigeria",
+    "num_entities": 40,
+    "avg_total_score": 22.38,
+    "median_total_score": 24.5,
+    "min_score": 0.0,
+    "max_score": 34.0,
+    "avg_social_media": 6.15,
+    "avg_website": 7.15,
+    "avg_visual_content": 2.45,
+    "avg_discoverability": 2.1,
+    "avg_digital_sales": 2.9,
+    "avg_platform_integration": 1.62,
+    "maturity_distribution": {
+      "Emerging": 14,
+      "Intermediate": 23,
+      "Absent/Basic": 3
+    },
+    "pct_strong_performers": 57.5
+  },
+  "Benin": {
+    "country": "Benin",
+    "num_entities": 40,
+    "avg_total_score": 13.07,
+    "median_total_score": 12.5,
+    "min_score": 0.0,
+    "max_score": 32.0,
+    "avg_social_media": 4.53,
+    "avg_website": 4.25,
+    "avg_visual_content": 0.97,
+    "avg_discoverability": 1.0,
+    "avg_digital_sales": 1.38,
+    "avg_platform_integration": 0.95,
+    "maturity_distribution": {
+      "Absent/Basic": 19,
+      "Intermediate": 8,
+      "Emerging": 13
+    },
+    "pct_strong_performers": 20.0
+  },
+  "Ghana": {
+    "country": "Ghana",
+    "num_entities": 39,
+    "avg_total_score": 19.21,
+    "median_total_score": 23.0,
+    "min_score": 3.0,
+    "max_score": 32.0,
+    "avg_social_media": 5.95,
+    "avg_website": 5.97,
+    "avg_visual_content": 1.59,
+    "avg_discoverability": 1.9,
+    "avg_digital_sales": 2.33,
+    "avg_platform_integration": 1.46,
+    "maturity_distribution": {
+      "Intermediate": 19,
+      "Absent/Basic": 11,
+      "Emerging": 9
+    },
+    "pct_strong_performers": 48.7
+  }
+}

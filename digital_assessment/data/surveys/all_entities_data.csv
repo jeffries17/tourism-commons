@@ -1,0 +1,200 @@
+name,country,sector,total_score,maturity_level,social_media,website,visual_content,discoverability,digital_sales,platform_integration
+Musée Théodore Monod (IFAN),Senegal,Cultural heritage sites/museums,31.0,Intermediate,7.0,9.0,2.0,6.0,5.0,2.0
+Musée des Civilisations Noires,Senegal,Cultural heritage sites/museums,32.0,Intermediate,7.0,9.0,2.0,6.0,5.0,3.0
+La Maison des Esclaves (House of Slaves),Senegal,Cultural heritage sites/museums,17.0,Emerging,2.0,6.0,1.0,4.0,2.0,2.0
+Île de Gorée (Gorée Island),Senegal,Cultural heritage sites/museums,22.0,Emerging,4.0,6.0,1.0,5.0,3.0,3.0
+Monument de la Renaissance Africaine,Senegal,Cultural heritage sites/museums,14.0,Emerging,2.0,6.0,0.0,2.0,3.0,1.0
+Village des Arts de Dakar,Senegal,Crafts and artisan products,32.0,Intermediate,9.0,9.0,3.0,6.0,2.0,3.0
+Village artisanal de Soumbédioune,Senegal,Crafts and artisan products,7.0,Absent/Basic,3.0,0.0,1.0,2.0,0.0,1.0
+Aïssa Dione Tissus,Senegal,Crafts and artisan products,18.0,Emerging,5.0,8.0,1.0,1.0,2.0,1.0
+Manufacture Sénégalaise des Arts Décoratifs (Thiès),Senegal,Crafts and artisan products,8.0,Absent/Basic,3.0,0.0,1.0,2.0,0.0,2.0
+Le Sandaga,Senegal,Crafts and artisan products,14.0,Emerging,5.0,4.0,1.0,1.0,2.0,1.0
+Festival international de Jazz de Saint-Louis,Senegal,Festivals and cultural events,25.0,Intermediate,7.0,9.0,3.0,1.0,3.0,2.0
+Dak’Art – Dakar Biennale,Senegal,Festivals and cultural events,19.0,Emerging,5.0,9.0,1.0,1.0,2.0,1.0
+Festival de Gorée,Senegal,Festivals and cultural events,11.0,Absent/Basic,5.0,2.0,1.0,1.0,1.0,1.0
+Le Fanal (Carnaval de Saint-Louis),Senegal,Festivals and cultural events,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Festival Abéné (Casamance),Senegal,Festivals and cultural events,0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+Galerie Cécile Fakhoury (Dakar),Senegal,Performing and visual arts,25.0,Intermediate,6.0,9.0,3.0,1.0,4.0,2.0
+Galerie Selebe Yoon,Senegal,Performing and visual arts,25.0,Intermediate,7.0,9.0,2.0,1.0,5.0,1.0
+RAW Material Company,Senegal,Performing and visual arts,22.0,Emerging,7.0,8.0,2.0,1.0,3.0,1.0
+Théâtre national Daniel Sorano,Senegal,Performing and visual arts,12.0,Emerging,2.0,5.0,1.0,1.0,3.0,0.0
+Ballet National du Sénégal (La Linguère),Senegal,Performing and visual arts,0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+Youssou N’Dour / Jololi Music Group,Senegal,"Music (artists, production, venues, education)",24.0,Intermediate,9.0,9.0,1.0,1.0,2.0,2.0
+Baaba Maal,Senegal,"Music (artists, production, venues, education)",6.0,Absent/Basic,5.0,0.0,1.0,0.0,0.0,0.0
+Orchestra Baobab,Senegal,"Music (artists, production, venues, education)",25.0,Intermediate,7.0,9.0,1.0,2.0,4.0,2.0
+Dakar Music Expo,Senegal,"Music (artists, production, venues, education)",6.0,Absent/Basic,6.0,0.0,0.0,0.0,0.0,0.0
+Studio Sankara / Studio 44,Senegal,"Music (artists, production, venues, education)",26.0,Intermediate,8.0,9.0,2.0,1.0,4.0,2.0
+Adama Paris (Adama Amanda Ndiaye),Senegal,Fashion & Design,26.0,Intermediate,7.0,9.0,3.0,0.0,5.0,2.0
+Dakar Fashion Week,Senegal,Fashion & Design,23.0,Emerging,7.0,9.0,3.0,1.0,1.0,2.0
+Selly Raby Kane,Senegal,Fashion & Design,26.0,Intermediate,6.0,9.0,3.0,1.0,5.0,2.0
+Oumou Sy,Senegal,Fashion & Design,22.0,Emerging,6.0,8.0,2.0,1.0,3.0,2.0
+Simone et Élise,Senegal,Fashion & Design,18.0,Emerging,6.0,6.0,2.0,0.0,3.0,1.0
+RTS – Radio Télévision Sénégalaise,Senegal,"Audiovisual (film, photography, TV, videography)",21.0,Emerging,7.0,7.0,3.0,1.0,1.0,2.0
+Seneweb,Senegal,"Audiovisual (film, photography, TV, videography)",21.0,Emerging,7.0,6.0,2.0,1.0,3.0,2.0
+Walf TV,Senegal,"Audiovisual (film, photography, TV, videography)",0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+Festival de cinéma Les Téranga,Senegal,"Audiovisual (film, photography, TV, videography)",8.0,Absent/Basic,6.0,0.0,1.0,0.0,0.0,1.0
+Association Cinéma 221,Senegal,"Audiovisual (film, photography, TV, videography)",0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+Alliance Media Senegal,Senegal,Marketing/advertising/publishing,15.0,Emerging,4.0,7.0,1.0,0.0,2.0,1.0
+Publicis Groupe Africa (Senegal branch),Senegal,Marketing/advertising/publishing,11.0,Absent/Basic,0.0,8.0,1.0,0.0,2.0,0.0
+Jeune Afrique (magazine),Senegal,Marketing/advertising/publishing,22.0,Emerging,7.0,9.0,1.0,1.0,3.0,1.0
+APS – Agence Sénégalaise de Presse,Senegal,Marketing/advertising/publishing,22.0,Emerging,6.0,8.0,3.0,1.0,3.0,1.0
+Sud Ouest Communication (Sud Quotidien),Senegal,Marketing/advertising/publishing,22.0,Emerging,7.0,9.0,1.0,1.0,3.0,1.0
+Museu Etnográfico da Praia,Cape Verde,Cultural heritage sites/museums,9.0,Absent/Basic,3.0,0.0,1.0,3.0,0.0,2.0
+Sala-Museu Amílcar Cabral,Cape Verde,Cultural heritage sites/museums,6.0,Absent/Basic,3.0,0.0,0.0,2.0,0.0,1.0
+Museu do Mar (Mindelo),Cape Verde,Cultural heritage sites/museums,26.0,Intermediate,4.0,9.0,2.0,5.0,3.0,3.0
+Museu da Tabanca (Chã de Tanque),Cape Verde,Cultural heritage sites/museums,30.0,Intermediate,5.0,9.0,2.0,6.0,4.0,4.0
+Fortaleza Real de São Filipe (Cidade Velha),Cape Verde,Cultural heritage sites/museums,24.0,Intermediate,3.0,9.0,2.0,5.0,3.0,2.0
+Djunta Mo Art (Sal),Cape Verde,Crafts and artisan products,15.0,Emerging,9.0,0.0,1.0,2.0,0.0,3.0
+Art D’Cretcheu (Mindelo),Cape Verde,Crafts and artisan products,27.0,Intermediate,7.0,6.0,2.0,5.0,4.0,3.0
+Capvertdesign+Artesanato (Mindelo),Cape Verde,Crafts and artisan products,16.0,Emerging,6.0,2.0,1.0,4.0,1.0,2.0
+"CNAD – Centro Nacional de Arte, Artesanato e Design (Mindelo)",Cape Verde,Crafts and artisan products,22.0,Emerging,6.0,9.0,3.0,1.0,2.0,1.0
+Jóias & Beleza (Praia),Cape Verde,Crafts and artisan products,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Baía das Gatas Music Festival (São Vicente),Cape Verde,Festivals and cultural events,5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+Kriol Jazz Festival (Praia),Cape Verde,Festivals and cultural events,23.0,Emerging,6.0,9.0,2.0,1.0,4.0,1.0
+Atlantic Music Expo (Praia),Cape Verde,Festivals and cultural events,24.0,Intermediate,7.0,9.0,2.0,2.0,2.0,2.0
+São João Festival (multiple islands),Cape Verde,Festivals and cultural events,13.0,Emerging,0.0,8.0,1.0,1.0,3.0,0.0
+Carnival (esp. Mindelo),Cape Verde,Festivals and cultural events,20.0,Emerging,6.0,9.0,1.0,1.0,2.0,1.0
+Centro Cultural do Mindelo,Cape Verde,Performing and visual arts,12.0,Emerging,7.0,0.0,1.0,3.0,0.0,1.0
+Conservatório Nacional das Artes,Cape Verde,Performing and visual arts,0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+MindelAct – Festival Internacional de Teatro,Cape Verde,Performing and visual arts,5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+Alternativa Galeria (Mindelo),Cape Verde,Performing and visual arts,7.0,Absent/Basic,2.0,0.0,0.0,3.0,0.0,2.0
+Visões Africanas (Sal),Cape Verde,Performing and visual arts,7.0,Absent/Basic,2.0,0.0,0.0,3.0,0.0,2.0
+Elida Almeida (artist),Cape Verde,"Music (artists, production, venues, education)",5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+Mayra Andrade (artist),Cape Verde,"Music (artists, production, venues, education)",9.0,Absent/Basic,7.0,0.0,2.0,0.0,0.0,0.0
+Palácio da Cultura Ildo Lobo (Praia),Cape Verde,"Music (artists, production, venues, education)",5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+Cesária Évora,Cape Verde,"Music (artists, production, venues, education)",18.0,Emerging,2.0,8.0,0.0,5.0,1.0,2.0
+"M_EIA – Instituto Universitário de Arte, Tecnologia e Cultura (Mindelo)",Cape Verde,"Music (artists, production, venues, education)",19.0,Emerging,4.0,9.0,2.0,1.0,2.0,1.0
+Cabo Verde Fashion Week,Cape Verde,Fashion & Design,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Vanessa Monteiro Design (Mindelo),Cape Verde,Fashion & Design,22.0,Emerging,6.0,9.0,1.0,1.0,4.0,1.0
+"CNAD – Centro Nacional de Arte, Artesanato e Design",Cape Verde,Fashion & Design,21.0,Emerging,6.0,9.0,2.0,1.0,2.0,1.0
+Capvertdesign+Artesanato (Mindelo),Cape Verde,Fashion & Design,16.0,Emerging,6.0,2.0,1.0,4.0,1.0,2.0
+Expo Moda & Cultura (São Vicente),Cape Verde,Fashion & Design,4.0,Absent/Basic,4.0,0.0,0.0,0.0,0.0,0.0
+RTC – Radiotelevisão Caboverdiana,Cape Verde,"Audiovisual (film, photography, TV, videography)",28.0,Intermediate,8.0,9.0,3.0,1.0,5.0,2.0
+Record TV Cabo Verde,Cape Verde,"Audiovisual (film, photography, TV, videography)",25.0,Intermediate,9.0,9.0,3.0,1.0,2.0,1.0
+TIVER – Televisão Independente de Cabo Verde,Cape Verde,"Audiovisual (film, photography, TV, videography)",19.0,Emerging,5.0,7.0,2.0,1.0,3.0,1.0
+RCV – Rádio de Cabo Verde,Cape Verde,"Audiovisual (film, photography, TV, videography)",26.0,Intermediate,8.0,9.0,2.0,1.0,4.0,2.0
+Rádio Cidade 91.1 FM (Praia),Cape Verde,"Audiovisual (film, photography, TV, videography)",10.0,Absent/Basic,1.0,7.0,1.0,0.0,1.0,0.0
+Expresso das Ilhas (weekly newspaper),Cape Verde,Marketing/advertising/publishing,26.0,Intermediate,8.0,9.0,2.0,1.0,5.0,1.0
+A Nação – Jornal Independente,Cape Verde,Marketing/advertising/publishing,22.0,Emerging,6.0,8.0,2.0,1.0,3.0,2.0
+Inforpress – Agência Cabo-verdiana de Notícias,Cape Verde,Marketing/advertising/publishing,23.0,Emerging,7.0,9.0,2.0,0.0,3.0,2.0
+EME – Marketing & Eventos,Cape Verde,Marketing/advertising/publishing,22.0,Emerging,6.0,9.0,2.0,1.0,3.0,1.0
+Cabo Verde Digital,Cape Verde,Marketing/advertising/publishing,20.0,Emerging,6.0,8.0,1.0,1.0,3.0,1.0
+National Commission for Museums & Monuments (NCMM),Nigeria,Cultural heritage sites/museums,21.0,Emerging,6.0,9.0,2.0,1.0,1.0,2.0
+"National Museum, Lagos",Nigeria,Cultural heritage sites/museums,15.0,Emerging,8.0,2.0,1.0,2.0,1.0,1.0
+Osun-Osogbo Sacred Grove (Osun State),Nigeria,Cultural heritage sites/museums,20.0,Emerging,3.0,6.0,1.0,5.0,3.0,2.0
+Sukur Cultural Landscape (Adamawa),Nigeria,Cultural heritage sites/museums,20.0,Emerging,2.0,8.0,2.0,4.0,2.0,2.0
+MOWAA – Museum of West African Art (Benin City),Nigeria,Cultural heritage sites/museums,16.0,Emerging,3.0,7.0,2.0,0.0,3.0,1.0
+Nike Art Foundation (Lagos/Abuja/Oshogbo),Nigeria,Crafts and artisan products,33.0,Intermediate,7.0,10.0,5.0,4.0,5.0,2.0
+Lekki Arts & Crafts Market (Lagos),Nigeria,Crafts and artisan products,26.0,Intermediate,5.0,8.0,2.0,4.0,4.0,3.0
+Abuja Arts & Craft Village,Nigeria,Crafts and artisan products,33.0,Intermediate,6.0,7.0,3.0,7.0,5.0,5.0
+Nord Collective (Abuja),Nigeria,Crafts and artisan products,15.0,Emerging,4.0,5.0,2.0,1.0,2.0,1.0
+Afrocentric Batik Designs by AB (Osogbo),Nigeria,Crafts and artisan products,13.0,Emerging,0.0,8.0,2.0,0.0,3.0,0.0
+Felabration (Lagos),Nigeria,Festivals and cultural events,25.0,Intermediate,6.0,9.0,3.0,1.0,4.0,2.0
+Calabar Carnival (Cross River),Nigeria,Festivals and cultural events,24.0,Intermediate,4.0,9.0,2.0,3.0,4.0,2.0
+Kano Durbar Festival (Kano),Nigeria,Festivals and cultural events,0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+NAFEST – National Festival of Arts & Culture,Nigeria,Festivals and cultural events,13.0,Emerging,5.0,6.0,0.0,0.0,1.0,1.0
+Carniriv – Port Harcourt Carnival (Rivers),Nigeria,Festivals and cultural events,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Terra Kulture (Lagos),Nigeria,Performing and visual arts,26.0,Intermediate,6.0,9.0,3.0,1.0,5.0,2.0
+MUSON Centre (Lagos),Nigeria,Performing and visual arts,30.0,Intermediate,9.0,9.0,3.0,4.0,2.0,3.0
+"National Theatre, Lagos",Nigeria,Performing and visual arts,34.0,Intermediate,7.0,9.0,3.0,5.0,5.0,5.0
+Terra Academy for the Arts (Lagos),Nigeria,Performing and visual arts,22.0,Emerging,7.0,9.0,3.0,1.0,1.0,1.0
+Omenka Gallery (Lagos),Nigeria,Performing and visual arts,31.0,Intermediate,6.0,6.0,3.0,8.0,4.0,4.0
+Mavin Records (Lagos),Nigeria,"Music (artists, production, venues, education)",28.0,Intermediate,10.0,9.0,3.0,1.0,4.0,1.0
+New Afrika Shrine (Lagos) – venue,Nigeria,"Music (artists, production, venues, education)",12.0,Emerging,5.0,0.0,2.0,4.0,0.0,1.0
+Wizkid (artist),Nigeria,"Music (artists, production, venues, education)",28.0,Intermediate,7.0,6.0,3.0,6.0,3.0,3.0
+Burna Boy (artist),Nigeria,"Music (artists, production, venues, education)",31.0,Intermediate,9.0,9.0,5.0,2.0,5.0,1.0
+Chocolate City (Lagos),Nigeria,"Music (artists, production, venues, education)",21.0,Emerging,7.0,6.0,2.0,1.0,4.0,1.0
+Lagos Fashion Week,Nigeria,Fashion & Design,27.0,Intermediate,9.0,9.0,3.0,1.0,3.0,2.0
+ARISE Fashion Week (Lagos),Nigeria,Fashion & Design,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Fashion Focus Africa (Style House Files),Nigeria,Fashion & Design,25.0,Intermediate,9.0,8.0,2.0,0.0,5.0,1.0
+FADAN – Fashion Designers Association of Nigeria,Nigeria,Fashion & Design,23.0,Emerging,7.0,9.0,1.0,1.0,4.0,1.0
+Orange Culture (label),Nigeria,Fashion & Design,24.0,Intermediate,7.0,8.0,1.0,1.0,6.0,1.0
+AFRIFF – Africa Int’l Film Festival (Lagos),Nigeria,"Audiovisual (film, photography, TV, videography)",27.0,Intermediate,7.0,9.0,4.0,1.0,4.0,2.0
+Soundcity TV (Lagos),Nigeria,"Audiovisual (film, photography, TV, videography)",26.0,Intermediate,9.0,9.0,3.0,1.0,3.0,1.0
+EbonyLife Media (Lagos),Nigeria,"Audiovisual (film, photography, TV, videography)",23.0,Emerging,7.0,9.0,3.0,1.0,2.0,1.0
+Silverbird Group (Lagos),Nigeria,"Audiovisual (film, photography, TV, videography)",25.0,Intermediate,6.0,9.0,3.0,1.0,4.0,2.0
+"Filmhouse Cinemas (Lekki IMAX, Lagos)",Nigeria,"Audiovisual (film, photography, TV, videography)",28.0,Intermediate,9.0,9.0,4.0,1.0,4.0,1.0
+BellaNaija (digital magazine),Nigeria,Marketing/advertising/publishing,26.0,Intermediate,8.0,8.0,5.0,1.0,3.0,1.0
+"X3M Ideas (agency, Lagos)",Nigeria,Marketing/advertising/publishing,22.0,Emerging,7.0,9.0,3.0,1.0,1.0,1.0
+Insight Redefini (Publicis Nigeria),Nigeria,Marketing/advertising/publishing,25.0,Intermediate,9.0,9.0,3.0,1.0,2.0,1.0
+The Guardian Nigeria,Nigeria,Marketing/advertising/publishing,27.0,Intermediate,6.0,6.0,3.0,7.0,2.0,3.0
+Pulse Nigeria (digital media),Nigeria,Marketing/advertising/publishing,24.0,Intermediate,8.0,9.0,3.0,1.0,2.0,1.0
+Musée Historique d’Abomey,Benin,Cultural heritage sites/museums,2.0,Absent/Basic,2.0,0.0,0.0,0.0,0.0,0.0
+Palais des Rois d’Abomey (Royal Palaces),Benin,Cultural heritage sites/museums,4.0,Absent/Basic,1.0,0.0,0.0,2.0,0.0,1.0
+Ouidah Museum of History (Portuguese Fort),Benin,Cultural heritage sites/museums,7.0,Absent/Basic,2.0,0.0,1.0,3.0,0.0,1.0
+Musée de la Fondation Zinsou (Ouidah),Benin,Cultural heritage sites/museums,32.0,Intermediate,9.0,9.0,3.0,6.0,2.0,3.0
+Musée Ethnographique de Porto-Novo,Benin,Cultural heritage sites/museums,4.0,Absent/Basic,0.0,0.0,0.0,3.0,0.0,1.0
+Cotonou Artisanal Center (Marché des Arts),Benin,Crafts and artisan products,3.0,Absent/Basic,1.0,0.0,0.0,1.0,0.0,1.0
+Centre de Promotion de l'Artisanat (CPA),Benin,Crafts and artisan products,0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+Espace Tissage Djougou (ETD),Benin,Crafts and artisan products,6.0,Absent/Basic,4.0,0.0,2.0,0.0,0.0,0.0
+CMA-Bénin – Chambre des Métiers et de l’Artisanat,Benin,Crafts and artisan products,25.0,Intermediate,7.0,9.0,2.0,1.0,4.0,2.0
+Marché Dantokpa,Benin,Crafts and artisan products,16.0,Emerging,0.0,7.0,2.0,2.0,3.0,2.0
+Vodun Days Festival (Ouidah),Benin,Festivals and cultural events,24.0,Intermediate,7.0,9.0,1.0,1.0,4.0,2.0
+Ganvié Festival (Lake Nokoué),Benin,Festivals and cultural events,20.0,Emerging,7.0,7.0,2.0,1.0,2.0,1.0
+Benin International Dance Fest (BIDAF),Benin,Festivals and cultural events,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+WeLovEya,Benin,Festivals and cultural events,24.0,Intermediate,7.0,9.0,1.0,1.0,4.0,2.0
+Festival of Masks (Porto-Novo),Benin,Festivals and cultural events,25.0,Intermediate,8.0,9.0,2.0,1.0,3.0,2.0
+Espace Culturel Le Centre (Abomey-Calavi),Benin,Performing and visual arts,27.0,Intermediate,7.0,9.0,2.0,5.0,1.0,3.0
+Musée Royal Honmé (Porto-Novo Royal Palace),Benin,Performing and visual arts,3.0,Absent/Basic,1.0,0.0,0.0,1.0,0.0,1.0
+Atelier Théâtre Burkinabé (Cotonou),Benin,Performing and visual arts,3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Institut Français du Bénin (Cotonou),Benin,Performing and visual arts,27.0,Intermediate,7.0,9.0,3.0,1.0,5.0,2.0
+Fondation Centre Songhaï,Benin,Performing and visual arts,12.0,Emerging,6.0,3.0,0.0,0.0,2.0,1.0
+Orchestre Poly-Rythmo de Cotonou,Benin,"Music (artists, production, venues, education)",15.0,Emerging,6.0,6.0,0.0,1.0,1.0,1.0
+Angélique Kidjo,Benin,"Music (artists, production, venues, education)",20.0,Emerging,6.0,8.0,1.0,1.0,3.0,1.0
+AFRICA NATION Radio/TV (Cotonou),Benin,"Music (artists, production, venues, education)",14.0,Emerging,3.0,7.0,1.0,1.0,1.0,1.0
+Conservatoire Danses Cérémonielles Royales Bénin,Benin,"Music (artists, production, venues, education)",4.0,Absent/Basic,4.0,0.0,0.0,0.0,0.0,0.0
+Benin Jazz Festival (Cotonou),Benin,"Music (artists, production, venues, education)",0.0,Absent/Basic,0.0,0.0,0.0,0.0,0.0,0.0
+Benin Fashion Week (Cotonou),Benin,Fashion & Design,8.0,Absent/Basic,7.0,0.0,1.0,0.0,0.0,0.0
+ACMB – Association des Créateurs de Mode du Bénin,Benin,Fashion & Design,6.0,Absent/Basic,5.0,0.0,1.0,0.0,0.0,0.0
+Woodin Benin,Benin,Fashion & Design,22.0,Emerging,6.0,9.0,3.0,1.0,2.0,1.0
+Nana Wax,Benin,Fashion & Design,21.0,Emerging,6.0,9.0,2.0,1.0,2.0,1.0
+Sunny Rose Fashion,Benin,Fashion & Design,5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+ORTB – Bénin Télévision & Radio (SRTB),Benin,"Audiovisual (film, photography, TV, videography)",13.0,Emerging,5.0,4.0,1.0,1.0,1.0,1.0
+Canal 3 Bénin,Benin,"Audiovisual (film, photography, TV, videography)",26.0,Intermediate,7.0,9.0,3.0,1.0,4.0,2.0
+Golfe TV,Benin,"Audiovisual (film, photography, TV, videography)",3.0,Absent/Basic,3.0,0.0,0.0,0.0,0.0,0.0
+Benin Web TV / OKTV,Benin,"Audiovisual (film, photography, TV, videography)",18.0,Emerging,4.0,8.0,2.0,1.0,2.0,1.0
+Segbeya CINÉ - BÉNIN,Benin,"Audiovisual (film, photography, TV, videography)",10.0,Absent/Basic,9.0,0.0,0.0,0.0,0.0,1.0
+La Nouvelle Tribune (Cotonou),Benin,Marketing/advertising/publishing,22.0,Emerging,7.0,9.0,1.0,1.0,3.0,1.0
+Matin Libre / Le Progrès (press),Benin,Marketing/advertising/publishing,9.0,Absent/Basic,3.0,4.0,0.0,0.0,1.0,1.0
+"Adjinankou Group (agency, Cotonou)",Benin,Marketing/advertising/publishing,21.0,Emerging,7.0,9.0,1.0,1.0,2.0,1.0
+Benin Vies Magazine,Benin,Marketing/advertising/publishing,2.0,Absent/Basic,2.0,0.0,0.0,0.0,0.0,0.0
+Banouto,Benin,Marketing/advertising/publishing,17.0,Emerging,4.0,8.0,1.0,1.0,3.0,0.0
+National Museum of Ghana (Accra),Ghana,Cultural heritage sites/museums,32.0,Intermediate,7.0,9.0,2.0,6.0,4.0,4.0
+"Osu Castle (Christiansborg, Accra)",Ghana,Cultural heritage sites/museums,6.0,Absent/Basic,2.0,0.0,0.0,2.0,0.0,2.0
+Kwame Nkrumah Mausoleum & Memorial Park (Accra),Ghana,Cultural heritage sites/museums,32.0,Intermediate,7.0,9.0,2.0,6.0,4.0,4.0
+Cape Coast Castle (Central Region),Ghana,Cultural heritage sites/museums,30.0,Intermediate,5.0,9.0,3.0,6.0,4.0,3.0
+Elmina Castle (Central Region),Ghana,Cultural heritage sites/museums,3.0,Absent/Basic,0.0,0.0,0.0,2.0,0.0,1.0
+Accra Art & Craft Market (Osu),Ghana,Crafts and artisan products,20.0,Emerging,6.0,8.0,2.0,1.0,2.0,1.0
+Baba Tree Basket Company (Bolgatanga),Ghana,Crafts and artisan products,27.0,Intermediate,7.0,8.0,5.0,1.0,4.0,2.0
+SWOPA – Sirigu Women’s Org. for Pottery & Art (Sirigu),Ghana,Crafts and artisan products,13.0,Emerging,6.0,2.0,1.0,2.0,1.0,1.0
+Global Mamas (Krobo beads & batik),Ghana,Crafts and artisan products,32.0,Intermediate,7.0,9.0,3.0,6.0,4.0,3.0
+Bonwire Kente Museum & Weaving (Ashanti),Ghana,Crafts and artisan products,4.0,Absent/Basic,1.0,0.0,0.0,2.0,0.0,1.0
+Chale Wote Street Art Festival (Accra),Ghana,Festivals and cultural events,7.0,Absent/Basic,5.0,0.0,2.0,0.0,0.0,0.0
+PANAFEST – Pan-African Festival (Cape Coast/Elmina/Accra),Ghana,Festivals and cultural events,18.0,Emerging,4.0,9.0,1.0,1.0,2.0,1.0
+Homowo Festival (Accra),Ghana,Festivals and cultural events,8.0,Absent/Basic,4.0,0.0,0.0,2.0,0.0,2.0
+AfroFuture (formerly Afrochella) (Accra),Ghana,Festivals and cultural events,26.0,Intermediate,8.0,9.0,2.0,1.0,4.0,2.0
+Ghana Music Awards (Accra),Ghana,Festivals and cultural events,23.0,Emerging,6.0,9.0,2.0,1.0,3.0,2.0
+National Theatre of Ghana (Accra),Ghana,Performing and visual arts,31.0,Intermediate,7.0,9.0,2.0,6.0,4.0,3.0
+Nubuke Foundation (Accra/Wa),Ghana,Performing and visual arts,22.0,Emerging,8.0,9.0,1.0,1.0,1.0,2.0
+Artists Alliance Gallery (Accra),Ghana,Performing and visual arts,13.0,Emerging,7.0,0.0,2.0,3.0,0.0,1.0
+Ghana Dance Ensemble (Legon),Ghana,Performing and visual arts,5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+Ghana Association of Visual Artists,Ghana,Performing and visual arts,5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+"Kuvie (producer, Accra)",Ghana,"Music (artists, production, venues, education)",5.0,Absent/Basic,5.0,0.0,0.0,0.0,0.0,0.0
+Kwesi Arthur (artist),Ghana,"Music (artists, production, venues, education)",6.0,Absent/Basic,6.0,0.0,0.0,0.0,0.0,0.0
+Sarkodie (artist),Ghana,"Music (artists, production, venues, education)",10.0,Absent/Basic,8.0,0.0,2.0,0.0,0.0,0.0
+"School of Performing Arts, Univ. of Ghana (Legon)",Ghana,"Music (artists, production, venues, education)",26.0,Intermediate,7.0,9.0,1.0,5.0,2.0,2.0
+Christie Brown (Accra),Ghana,Fashion & Design,32.0,Intermediate,9.0,9.0,3.0,4.0,5.0,2.0
+Accra Fashion Week,Ghana,Fashion & Design,25.0,Intermediate,7.0,9.0,3.0,1.0,3.0,2.0
+Larry Jay (Accra),Ghana,Fashion & Design,25.0,Intermediate,6.0,9.0,2.0,1.0,6.0,1.0
+Pistis (Accra),Ghana,Fashion & Design,26.0,Intermediate,7.0,9.0,3.0,1.0,5.0,1.0
+Studio 189 (Accra/NY),Ghana,Fashion & Design,25.0,Intermediate,6.0,9.0,2.0,1.0,6.0,1.0
+Accra Indie FilmFest (AiF),Ghana,"Audiovisual (film, photography, TV, videography)",26.0,Intermediate,7.0,9.0,3.0,1.0,4.0,2.0
+Citi FM/Citi TV (Accra),Ghana,"Audiovisual (film, photography, TV, videography)",24.0,Intermediate,8.0,9.0,2.0,1.0,3.0,1.0
+Ghana Movie Awards,Ghana,"Audiovisual (film, photography, TV, videography)",17.0,Emerging,5.0,7.0,1.0,1.0,2.0,1.0
+Joy FM/MultiMedia Group,Ghana,"Audiovisual (film, photography, TV, videography)",21.0,Emerging,5.0,9.0,2.0,1.0,3.0,1.0
+Ghana Broadcasting Corporation (GBC),Ghana,"Audiovisual (film, photography, TV, videography)",24.0,Intermediate,7.0,9.0,1.0,1.0,5.0,1.0
+Graphic Communications Group Ltd.,Ghana,Marketing/advertising/publishing,19.0,Emerging,4.0,9.0,1.0,1.0,3.0,1.0
+Ghana News Agency (GNA),Ghana,Marketing/advertising/publishing,7.0,Absent/Basic,4.0,2.0,0.0,0.0,0.0,1.0
+Modern Ghana,Ghana,Marketing/advertising/publishing,25.0,Intermediate,7.0,8.0,1.0,4.0,3.0,2.0
+Citi Newsroom,Ghana,Marketing/advertising/publishing,25.0,Intermediate,8.0,9.0,2.0,1.0,3.0,2.0
+Pulse Ghana (youth culture media),Ghana,Marketing/advertising/publishing,24.0,Intermediate,9.0,9.0,3.0,1.0,1.0,1.0

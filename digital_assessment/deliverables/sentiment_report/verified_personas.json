@@ -1,0 +1,100 @@
+{
+  "generated_at": "2025-10-23T21:21:11.616360",
+  "data_sources_verified": {
+    "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/sentiment_analysis_results.json": {
+      "total_reviews": 1316,
+      "timestamp": "2025-10-23T21:21:11.611789"
+    },
+    "/Users/alexjeffries/tourism-commons/digital_assessment/sentiment/output/regional_sentiment/regional_sentiment_analysis.json": {
+      "total_reviews": 3096,
+      "timestamp": "2025-10-23T21:21:11.614546"
+    }
+  },
+  "validation_errors": [],
+  "total_reviews_analyzed": 4412,
+  "language_distribution": {
+    "nl": 447,
+    "de": 59,
+    "en": 3830,
+    "es": 45,
+    "fr": 31
+  },
+  "personas_generated": 5,
+  "personas": {
+    "nl": {
+      "name": "Immersive Learner",
+      "region": "Dutch/Belgian",
+      "language_code": "nl",
+      "sample_size": 447,
+      "percentage": 10.1,
+      "avg_rating": 0.0,
+      "theme_preferences": {
+        "top_theme": "Requires theme analysis from actual review text",
+        "mentions": 0,
+        "note": "Theme analysis needs to be extracted from actual review content"
+      },
+      "data_source": "verified_sentiment_analysis",
+      "generated_at": "2025-10-23T21:21:11.616345"
+    },
+    "de": {
+      "name": "Experience Collector",
+      "region": "German-speaking",
+      "language_code": "de",
+      "sample_size": 59,
+      "percentage": 1.3,
+      "avg_rating": 0.0,
+      "theme_preferences": {
+        "top_theme": "Requires theme analysis from actual review text",
+        "mentions": 0,
+        "note": "Theme analysis needs to be extracted from actual review content"
+      },
+      "data_source": "verified_sentiment_analysis",
+      "generated_at": "2025-10-23T21:21:11.616350"
+    },
+    "en": {
+      "name": "Cultural Explorer",
+      "region": "English-speaking (Global)",
+      "language_code": "en",
+      "sample_size": 3830,
+      "percentage": 86.8,
+      "avg_rating": 0.0,
+      "theme_preferences": {
+        "top_theme": "Requires theme analysis from actual review text",
+        "mentions": 0,
+        "note": "Theme analysis needs to be extracted from actual review content"
+      },
+      "data_source": "verified_sentiment_analysis",
+      "generated_at": "2025-10-23T21:21:11.616353"
+    },
+    "es": {
+      "name": "Discovery Traveler",
+      "region": "Spanish-speaking",
+      "language_code": "es",
+      "sample_size": 45,
+      "percentage": 1.0,
+      "avg_rating": 0.0,
+      "theme_preferences": {
+        "top_theme": "Requires theme analysis from actual review text",
+        "mentions": 0,
+        "note": "Theme analysis needs to be extracted from actual review content"
+      },
+      "data_source": "verified_sentiment_analysis",
+      "generated_at": "2025-10-23T21:21:11.616357"
+    },
+    "fr": {
+      "name": "Heritage Seeker",
+      "region": "French-speaking",
+      "language_code": "fr",
+      "sample_size": 31,
+      "percentage": 0.7,
+      "avg_rating": 0.0,
+      "theme_preferences": {
+        "top_theme": "Requires theme analysis from actual review text",
+        "mentions": 0,
+        "note": "Theme analysis needs to be extracted from actual review content"
+      },
+      "data_source": "verified_sentiment_analysis",
+      "generated_at": "2025-10-23T21:21:11.616359"
+    }
+  }
+}

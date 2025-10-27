@@ -1,0 +1,95 @@
+[
+  {
+    "name": "Burna Boy (artist)",
+    "country": "Nigeria",
+    "sector": "Music (artists, production, venues, education)",
+    "criteria_scores": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "total_score": 9,
+    "reasoning": "\u2713 Active content (77 posts) | \u2713 Some relevant content (1 match) | \u2713 4 platforms: Instagram, YouTube, Facebook, Website | \u2713 Professional: 18,000,000 followers | \u2713 Good variety (IG: 77 posts, Web: 28 unique elements) | \u2713 14 faces in 5 images | \u2717 No BTS content identified | \u2713 Active community (18,000,000 followers) | \u2713 Consistent visual style detected | \u2713 Video: Instagram Reels, YouTube",
+    "instagram_stats": {
+      "posts": 77,
+      "followers": 18000000
+    },
+    "website_analysis_summary": {
+      "images_analyzed": 8,
+      "faces_detected": 14,
+      "unique_elements": 28
+    },
+    "has_instagram": true,
+    "has_website": true,
+    "has_youtube": true
+  },
+  {
+    "name": "Mus\u00e9e des Civilisations Noires",
+    "country": "Senegal",
+    "sector": "Cultural heritage sites/museums",
+    "criteria_scores": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "total_score": 7,
+    "reasoning": "\u2713 Active content (1,113 posts) | \u2713 Website shows sector-relevant content (4 matches) | \u2713 3 platforms: Instagram, Facebook, Website | \u2717 Limited quality indicators | \u2713 Good variety (IG: 1113 posts, Web: 44 unique elements) | \u2713 6 faces in 3 images | \u2717 No BTS content identified | \u2717 Small community (7,849 followers) | \u2713 Consistent visual style detected | \u2713 Video: Instagram Reels",
+    "instagram_stats": {
+      "posts": 1113,
+      "followers": 7849
+    },
+    "website_analysis_summary": {
+      "images_analyzed": 8,
+      "faces_detected": 6,
+      "unique_elements": 44
+    },
+    "has_instagram": true,
+    "has_website": true,
+    "has_youtube": false
+  },
+  {
+    "name": "Festival international de Jazz de Saint-Louis",
+    "country": "Senegal",
+    "sector": "Festivals and cultural events",
+    "criteria_scores": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "total_score": 7,
+    "reasoning": "\u2713 Active content (656 posts) | \u2713 Website shows sector-relevant content (5 matches) | \u2713 4 platforms: Instagram, YouTube, Facebook, Website | \u2717 Limited quality indicators | \u2713 Good variety (IG: 656 posts, Web: 46 unique elements) | \u2713 13 faces in 3 images | \u2717 No BTS content identified | \u2717 Small community (5,035 followers) | \u2713 Consistent visual style detected | \u2713 Video: Instagram Reels, YouTube",
+    "instagram_stats": {
+      "posts": 656,
+      "followers": 5035
+    },
+    "website_analysis_summary": {
+      "images_analyzed": 7,
+      "faces_detected": 13,
+      "unique_elements": 46
+    },
+    "has_instagram": true,
+    "has_website": true,
+    "has_youtube": true
+  }
+]

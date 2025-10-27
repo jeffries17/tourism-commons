@@ -1,0 +1,58 @@
+{
+  "total_reviews": 982,
+  "total_english": 535,
+  "total_dutch": 447,
+  "personas": [
+    {
+      "name": "Market Shopping Enthusiasts",
+      "sample_size": 176,
+      "percentage": 24.7,
+      "avg_rating": 3.75,
+      "significance": "High (n>100)",
+      "key_characteristics": "Shopping, markets, crafts, souvenirs",
+      "marketing_focus": "Largest revenue opportunity, improve market organization"
+    },
+    {
+      "name": "Nature Wildlife Enthusiasts",
+      "sample_size": 139,
+      "percentage": 19.5,
+      "avg_rating": 3.68,
+      "significance": "High (n>100)",
+      "key_characteristics": "Wildlife, nature, animals, outdoor experiences",
+      "marketing_focus": "Strong interest, infrastructure improvement needed"
+    },
+    {
+      "name": "Cultural Heritage Enthusiasts",
+      "sample_size": 115,
+      "percentage": 16.1,
+      "avg_rating": 4.24,
+      "significance": "High (n>100)",
+      "key_characteristics": "Culture, heritage, history, authentic experiences",
+      "marketing_focus": "Highest satisfaction model, expand offerings"
+    },
+    {
+      "name": "Educational Learning Enthusiasts",
+      "sample_size": 105,
+      "percentage": 14.7,
+      "avg_rating": 3.98,
+      "significance": "High (n>100)",
+      "key_characteristics": "Learning, education, knowledge, informative experiences",
+      "marketing_focus": "Strong performance, guide quality crucial"
+    },
+    {
+      "name": "Dutch Immersive Learner",
+      "sample_size": 447,
+      "percentage": 38.5,
+      "avg_rating": "TBD*",
+      "significance": "High (n>400)",
+      "key_characteristics": "Educational focus, cultural immersion, guide appreciation",
+      "marketing_focus": "Significant secondary market, Dutch-language content needed"
+    }
+  ],
+  "methodology": {
+    "english_segmentation": "Theme-based analysis of 713 English reviews",
+    "dutch_segmentation": "Verified sentiment analysis of 447 Dutch reviews",
+    "selection_criteria": "Top 4 English themes by sample size + Dutch persona",
+    "statistical_requirements": "All personas meet minimum sample size requirements"
+  }
+}

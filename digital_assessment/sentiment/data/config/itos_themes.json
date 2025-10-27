@@ -1,0 +1,234 @@
+{
+  "itos_specific_themes": {
+    "destination_positioning": {
+      "keywords": [
+        "destination", "place", "country", "location", "region", "area", "spot",
+        "attraction", "attractions", "sight", "sights", "sightseeing", "tourism",
+        "travel", "visit", "visiting", "explore", "exploring", "discover", "discovering",
+        "experience", "experiences", "adventure", "adventures", "journey", "journeys",
+        "trip", "trips", "vacation", "holiday", "holidays", "getaway", "escape",
+        "retreat", "resort", "resorts", "hotel", "hotels", "accommodation", "stay",
+        "staying", "lodging", "guesthouse", "guesthouses", "hostel", "hostels"
+      ],
+      "weight": 1.4,
+      "description": "How The Gambia is positioned as a destination"
+    },
+    "marketing_appeal": {
+      "keywords": [
+        "beautiful", "stunning", "amazing", "incredible", "wonderful", "fantastic",
+        "spectacular", "breathtaking", "mesmerizing", "captivating", "charming",
+        "enchanting", "magical", "unique", "special", "exclusive", "premium",
+        "luxury", "deluxe", "authentic", "genuine", "original", "traditional",
+        "cultural", "historic", "ancient", "timeless", "eternal", "everlasting",
+        "unforgettable", "memorable", "remarkable", "extraordinary", "exceptional",
+        "outstanding", "superior", "excellent", "perfect", "ideal", "dream",
+        "paradise", "heaven", "utopia", "sanctuary", "oasis", "gem", "treasure"
+      ],
+      "weight": 1.3,
+      "description": "Marketing appeal and promotional language"
+    },
+    "accessibility_ease": {
+      "keywords": [
+        "easy", "easily", "simple", "simply", "convenient", "convenience", "accessible",
+        "accessibility", "reachable", "reach", "getting", "arriving", "arrival",
+        "transport", "transportation", "flight", "flights", "airport", "airports",
+        "direct", "connection", "connections", "stopover", "stopovers", "transit",
+        "transfer", "transfers", "pickup", "pick-up", "drop-off", "shuttle",
+        "bus", "buses", "car", "cars", "taxi", "taxis", "driver", "drivers",
+        "guide", "guides", "escort", "escorts", "assistance", "help", "support",
+        "service", "services", "staff", "personnel", "team", "crew", "hosts"
+      ],
+      "weight": 1.2,
+      "description": "Ease of access and transportation"
+    },
+    "safety_security": {
+      "keywords": [
+        "safe", "safety", "secure", "security", "secure", "protected", "protection",
+        "reliable", "reliability", "trustworthy", "trust", "trusted", "dependable",
+        "stable", "stability", "peaceful", "peace", "calm", "tranquil", "serene",
+        "friendly", "friendliness", "welcoming", "welcome", "hospitable", "hospitality",
+        "kind", "kindness", "gentle", "gentleness", "warm", "warmth", "caring",
+        "concerned", "concern", "responsible", "responsibility", "professional",
+        "professionals", "experienced", "experience", "expert", "experts", "qualified",
+        "certified", "licensed", "insured", "insurance", "guaranteed", "guarantee"
+      ],
+      "weight": 1.3,
+      "description": "Safety and security aspects"
+    },
+    "value_proposition": {
+      "keywords": [
+        "value", "worth", "worthwhile", "worth", "price", "pricing", "cost", "costs",
+        "affordable", "affordability", "budget", "budget-friendly", "cheap", "inexpensive",
+        "reasonable", "reasonably", "fair", "fairly", "competitive", "competitively",
+        "deal", "deals", "offer", "offers", "package", "packages", "bundle", "bundles",
+        "discount", "discounts", "saving", "savings", "save", "saves", "money",
+        "economical", "economy", "efficient", "efficiency", "effective", "effectiveness",
+        "quality", "qualities", "standard", "standards", "level", "levels", "grade",
+        "rating", "ratings", "score", "scores", "review", "reviews", "recommendation",
+        "recommendations", "endorsement", "endorsements", "testimonial", "testimonials"
+      ],
+      "weight": 1.1,
+      "description": "Value proposition and pricing"
+    },
+    "cultural_authenticity": {
+      "keywords": [
+        "authentic", "authenticity", "genuine", "genuineness", "real", "reality",
+        "true", "truth", "original", "originally", "traditional", "traditionally",
+        "cultural", "culturally", "heritage", "heritages", "custom", "customs",
+        "tradition", "traditions", "convention", "conventions", "practice", "practices",
+        "ritual", "rituals", "ceremony", "ceremonies", "festival", "festivals",
+        "celebration", "celebrations", "local", "locals", "indigenous", "native",
+        "aboriginal", "ethnic", "ethnicity", "tribal", "tribe", "tribes", "clan",
+        "clans", "community", "communities", "people", "peoples", "population",
+        "populations", "inhabitants", "residents", "citizens", "nationals"
+      ],
+      "weight": 1.4,
+      "description": "Cultural authenticity and local experiences"
+    },
+    "natural_beauty": {
+      "keywords": [
+        "nature", "natural", "naturally", "beautiful", "beauty", "beautifully",
+        "scenic", "scenery", "landscape", "landscapes", "view", "views", "vista",
+        "vistas", "panorama", "panoramas", "outlook", "outlooks", "prospect",
+        "prospects", "scene", "scenes", "sight", "sights", "sightseeing", "wildlife",
+        "wild", "wilderness", "forest", "forests", "woodland", "woodlands",
+        "jungle", "jungles", "savanna", "savannas", "grassland", "grasslands",
+        "meadow", "meadows", "field", "fields", "plain", "plains", "valley",
+        "valleys", "hill", "hills", "mountain", "mountains", "peak", "peaks",
+        "river", "rivers", "stream", "streams", "lake", "lakes", "ocean", "oceans",
+        "sea", "seas", "beach", "beaches", "coast", "coasts", "shore", "shores",
+        "island", "islands", "peninsula", "peninsulas", "bay", "bays", "cove",
+        "coves", "creek", "creeks", "estuary", "estuaries", "delta", "deltas"
+      ],
+      "weight": 1.3,
+      "description": "Natural beauty and scenic attractions"
+    },
+    "adventure_excitement": {
+      "keywords": [
+        "adventure", "adventures", "adventurous", "exciting", "excitement", "thrilling",
+        "thrills", "exciting", "excitement", "amazing", "amazingly", "incredible",
+        "incredibly", "fantastic", "fantastically", "wonderful", "wonderfully",
+        "spectacular", "spectacularly", "breathtaking", "breathtakingly", "stunning",
+        "stunningly", "mesmerizing", "mesmerizingly", "captivating", "captivatingly",
+        "fascinating", "fascinatingly", "intriguing", "intriguingly", "interesting",
+        "interestingly", "engaging", "engagingly", "compelling", "compellingly",
+        "attractive", "attractively", "appealing", "appealingly", "enticing",
+        "enticingly", "tempting", "temptingly", "alluring", "alluringly", "charming",
+        "charmingly", "enchanting", "enchantingly", "magical", "magically", "mystical",
+        "mystically", "mysterious", "mysteriously", "secret", "secrets", "hidden",
+        "hidden", "undiscovered", "unexplored", "uncharted", "unknown", "exotic",
+        "exotically", "foreign", "foreignly", "different", "differently", "unique",
+        "uniquely", "special", "specially", "extraordinary", "extraordinarily"
+      ],
+      "weight": 1.2,
+      "description": "Adventure and excitement elements"
+    },
+    "service_quality": {
+      "keywords": [
+        "service", "services", "serving", "served", "serve", "serves", "staff",
+        "staffs", "personnel", "team", "teams", "crew", "crews", "hosts", "hosting",
+        "hosted", "host", "hosts", "guide", "guides", "guiding", "guided", "escort",
+        "escorts", "escorting", "escorted", "assistant", "assistants", "assisting",
+        "assisted", "assist", "assists", "help", "helps", "helping", "helped",
+        "support", "supports", "supporting", "supported", "care", "cares", "caring",
+        "cared", "attention", "attentions", "attentive", "attentively", "careful",
+        "carefully", "thorough", "thoroughly", "complete", "completely", "comprehensive",
+        "comprehensively", "detailed", "detailedly", "precise", "precisely", "accurate",
+        "accurately", "reliable", "reliably", "dependable", "dependably", "trustworthy",
+        "trustworthily", "professional", "professionally", "experienced", "experientially",
+        "expert", "expertly", "skilled", "skillfully", "talented", "talentedly",
+        "qualified", "qualifyingly", "certified", "certifyingly", "licensed", "licensingly"
+      ],
+      "weight": 1.3,
+      "description": "Service quality and professionalism"
+    },
+    "accommodation_facilities": {
+      "keywords": [
+        "accommodation", "accommodations", "lodging", "lodgings", "stay", "stays",
+        "staying", "stayed", "hotel", "hotels", "resort", "resorts", "lodge",
+        "lodges", "guesthouse", "guesthouses", "hostel", "hostels", "inn", "inns",
+        "bed", "beds", "room", "rooms", "suite", "suites", "apartment", "apartments",
+        "villa", "villas", "cottage", "cottages", "cabin", "cabins", "chalet",
+        "chalets", "bungalow", "bungalows", "tent", "tents", "camping", "camps",
+        "camp", "camps", "facility", "facilities", "amenity", "amenities", "feature",
+        "features", "equipment", "equipments", "furniture", "furnitures", "appliance",
+        "appliances", "utilities", "utility", "service", "services", "convenience",
+        "conveniences", "comfort", "comforts", "comfortable", "comfortably", "cozy",
+        "cozily", "warm", "warmly", "welcoming", "welcomingly", "inviting", "invitingly"
+      ],
+      "weight": 1.1,
+      "description": "Accommodation and facilities"
+    }
+  },
+  "gambia_destination_themes": {
+    "smiling_coast": {
+      "keywords": [
+        "smiling", "smile", "smiles", "smilingly", "happy", "happiness", "happily",
+        "joy", "joyful", "joyfully", "cheerful", "cheerfully", "cheer", "cheers",
+        "friendly", "friendliness", "friendlily", "welcoming", "welcome", "welcomes",
+        "warm", "warmth", "warmly", "kind", "kindness", "kindly", "gentle", "gentleness",
+        "gently", "peaceful", "peace", "peacefully", "calm", "calmness", "calmly",
+        "serene", "serenity", "serenely", "tranquil", "tranquility", "tranquilly",
+        "coast", "coasts", "coastal", "coastally", "beach", "beaches", "beachy",
+        "shore", "shores", "shoreside", "seaside", "ocean", "oceans", "oceanic",
+        "atlantic", "atlantic", "sea", "seas", "marine", "maritime", "waterfront"
+      ],
+      "weight": 1.5,
+      "description": "The Gambia's 'Smiling Coast' branding"
+    },
+    "roots_heritage": {
+      "keywords": [
+        "roots", "root", "heritage", "heritages", "ancestry", "ancestries", "ancestors",
+        "ancestral", "ancestrally", "lineage", "lineages", "descent", "descents",
+        "origin", "origins", "original", "originally", "history", "histories",
+        "historical", "historically", "historic", "historically", "tradition",
+        "traditions", "traditional", "traditionally", "culture", "cultures",
+        "cultural", "culturally", "custom", "customs", "customary", "customarily",
+        "kunta kinteh", "kunta", "kinteh", "james island", "james", "island",
+        "albreda", "juffureh", "juffure", "alex haley", "haley", "alex", "slavery",
+        "slave", "slaves", "enslaved", "enslavement", "freedom", "freedoms", "free",
+        "liberation", "liberations", "liberate", "liberates", "emancipation",
+        "emancipations", "emancipate", "emancipates", "independence", "independences",
+        "independent", "independently", "sovereignty", "sovereignties", "sovereign",
+        "sovereignly", "nation", "nations", "national", "nationally", "country",
+        "countries", "homeland", "homelands", "motherland", "motherlands", "fatherland",
+        "fatherlands", "birthplace", "birthplaces", "origin", "origins", "source",
+        "sources", "beginning", "beginnings", "start", "starts", "genesis", "geneses"
+      ],
+      "weight": 1.4,
+      "description": "Roots heritage and historical significance"
+    },
+    "biodiversity_wildlife": {
+      "keywords": [
+        "biodiversity", "biodiversities", "wildlife", "wildlifes", "wild", "wilds",
+        "nature", "natures", "natural", "naturally", "environment", "environments",
+        "environmental", "environmentally", "ecology", "ecologies", "ecological",
+        "ecologically", "ecosystem", "ecosystems", "habitat", "habitats", "habitats",
+        "species", "speciess", "animal", "animals", "mammal", "mammals", "bird",
+        "birds", "birding", "birdwatching", "birdwatcher", "birdwatchers", "reptile",
+        "reptiles", "amphibian", "amphibians", "fish", "fishes", "fishing", "fisher",
+        "fishers", "insect", "insects", "butterfly", "butterflies", "butterflies",
+        "flora", "floras", "fauna", "faunas", "plant", "plants", "tree", "trees",
+        "forest", "forests", "woodland", "woodlands", "jungle", "jungles", "savanna",
+        "savannas", "grassland", "grasslands", "wetland", "wetlands", "mangrove",
+        "mangroves", "estuary", "estuaries", "delta", "deltas", "reserve", "reserves",
+        "park", "parks", "sanctuary", "sanctuaries", "conservation", "conservations",
+        "preserve", "preserves", "protect", "protects", "protection", "protections",
+        "endangered", "endangerment", "endangerments", "threatened", "threats",
+        "threaten", "threatens", "rare", "rarity", "rarities", "unique", "uniqueness",
+        "uniquenesses", "special", "specialness", "specialnesses", "distinctive",
+        "distinctiveness", "distinctivenesses", "characteristic", "characteristics",
+        "feature", "features", "trait", "traits", "attribute", "attributes"
+      ],
+      "weight": 1.3,
+      "description": "Biodiversity and wildlife conservation"
+    }
+  },
+  "analysis_weights": {
+    "theme_match_weight": 1.0,
+    "keyword_frequency_weight": 1.2,
+    "context_relevance_weight": 1.3,
+    "gambia_specific_weight": 1.5,
+    "marketing_language_weight": 1.1
+  }
+}

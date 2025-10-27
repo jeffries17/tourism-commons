@@ -1,0 +1,762 @@
+[
+  {
+    "title": "Grande statue",
+    "rating": 3,
+    "travelDate": "2024-11",
+    "publishedDate": "2025-05-06",
+    "text": "Une statue intéressante. Très visible depuis la route, mais qui mérite un arrêt pour une photo. Je ne me donnerais pas la peine de faire un détour.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r1006209921-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "B0B761D81E08C9A592A83B302D2EF60E",
+      "name": "Camper57183893970",
+      "contributions": {
+        "totalContributions": 3,
+        "helpfulVotes": 0
+      },
+      "username": "Camper57183893970",
+      "userLocation": null,
+      "avatar": {
+        "id": "452391608",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f2/b8/default-avatar-2020-26.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/Camper57183893970"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2025",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:37.744449"
+    }
+  },
+  {
+    "title": "De beaux paysages",
+    "rating": 5,
+    "travelDate": "2025-03",
+    "publishedDate": "2025-04-03",
+    "text": "C&#39;était incroyable. L&#39;air était pur et frais. C&#39;était magnifique. Ils ont de belles plages, des restaurants et des centres touristiques emblématiques.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r1000901700-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "2F198C8A2FEE1A085AB2A5532DC0AE50",
+      "name": "sunmisola i",
+      "contributions": {
+        "totalContributions": 1,
+        "helpfulVotes": 0
+      },
+      "username": "sunmisolai",
+      "userLocation": null,
+      "avatar": {
+        "id": "452387558",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e2/e6/default-avatar-2020-45.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/sunmisolai"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2025",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:38.259416"
+    }
+  },
+  {
+    "title": "À couper le souffle",
+    "rating": 5,
+    "travelDate": "2025-01",
+    "publishedDate": "2025-01-30",
+    "text": "À couper le souffle ! L&#39;installation est gigantesque, bien plus grande que je ne l&#39;imaginais. Le savoir-faire est exceptionnel et j&#39;ai été vraiment impressionné. Avant de visiter, renseignez-vous sur cette femme fascinante : c&#39;est vraiment captivant.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r991672600-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "76090A1315110C8868987AFB02020CDA",
+      "name": "Mary Lusiba",
+      "contributions": {
+        "totalContributions": 39,
+        "helpfulVotes": 23
+      },
+      "username": "MaryLusiba",
+      "userLocation": {
+        "shortName": "Nairobi",
+        "name": "Nairobi, Kenya",
+        "id": "294207"
+      },
+      "avatar": {
+        "id": "452386603",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/df/2b/default-avatar-2020-39.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/MaryLusiba"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2025",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:38.810401"
+    }
+  },
+  {
+    "title": "Statue étonnante d&#39;Amazone",
+    "rating": 5,
+    "travelDate": "2024-02",
+    "publishedDate": "2024-09-08",
+    "text": "Cette magnifique statue, en hommage aux guerrières du Dahomey, est connue sous le nom de Statue des Amazones. Elle se trouve en plein cœur de Cotonou. Elle est entourée de grands jardins et le stationnement est facile. Nous sommes allés la voir un matin avant midi. Il n&#39;y avait pas beaucoup de monde, ce qui nous a permis de prendre de nombreuses photos. Je recommande vivement cette visite !",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r968906493-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "79C3DC97601110DAB567A0A3DEC45495",
+      "name": "Adventure40115953224",
+      "contributions": {
+        "totalContributions": 174,
+        "helpfulVotes": 0
+      },
+      "username": "Adventure40115953224",
+      "userLocation": null,
+      "avatar": {
+        "id": "452388955",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e8/5b/default-avatar-2020-61.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/Adventure40115953224"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2024",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:39.452262"
+    }
+  },
+  {
+    "title": "Une nouvelle attraction symbolique.",
+    "rating": 4,
+    "travelDate": "2024-01",
+    "publishedDate": "2024-05-07",
+    "text": "Le monument a été récemment érigé sur la place de l&#39;Indépendance, en 2022. Il s&#39;agit d&#39;un hommage symbolique aux « Amazones », qui servaient autrefois de gardes du corps de la famille royale et qui ont ensuite courageusement combattu les colons français. Leur rôle et leur importance sont entourés de nombreux mythes et légendes. Le monument occupe une place centrale sur la place et mesure environ 30 mètres de haut. Il est intéressant de noter qu&#39;il a été conçu par un artiste chinois. Il jouit d&#39;une grande reconnaissance, non seulement auprès des femmes, mais aussi auprès de la population locale.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r949929248-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "6A6AC6F34E95187D6AC6DA64BBCB71BC",
+      "name": "sd JAZZ i SŁONIE",
+      "contributions": {
+        "totalContributions": 17909,
+        "helpfulVotes": 335
+      },
+      "username": "sdjazz",
+      "userLocation": {
+        "shortName": "Skierniewice",
+        "name": "Skierniewice, Poland",
+        "id": "1638084"
+      },
+      "avatar": {
+        "id": "236180736",
+        "width": 769,
+        "height": 769,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/13/d5/00/slawomir-d.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/sdjazz"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "pl",
+      "year": "2024",
+      "needs_translation": true,
+      "original_language": "pl",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:40.315878"
+    }
+  },
+  {
+    "title": "J'adore",
+    "rating": 5,
+    "travelDate": "2024-04",
+    "publishedDate": "2024-04-27",
+    "text": "C'est une très belle statue qui reflète les amazon qui on donné de leur sang pour un pays libre \nEn mémoire des êtres disparus pour la paix",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r948459193-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "543513A758D17D409219D6CA9C552876",
+      "name": "Kevin P",
+      "contributions": {
+        "totalContributions": 3,
+        "helpfulVotes": 0
+      },
+      "username": "G5825TVkevinp",
+      "userLocation": null,
+      "avatar": {
+        "id": "452390504",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ee/68/default-avatar-2020-9.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/G5825TVkevinp"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2024",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Monumental",
+    "rating": 5,
+    "travelDate": "2023-11",
+    "publishedDate": "2023-11-30",
+    "text": "Monument très impressionnant. Plus visible de jour. Entrée gratuite. Photographe disponible pour vos photos. Continuez votre route pour rejoindre les restaurants et bars de bord de mer.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r927985774-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "97C5A74820EB2C0A30F3B7ACCEEE9791",
+      "name": "Akhil Bakshi",
+      "contributions": {
+        "totalContributions": 982,
+        "helpfulVotes": 108
+      },
+      "username": "Tarzanjungle",
+      "userLocation": {
+        "shortName": "Gurugram (Gurgaon)",
+        "name": "Gurugram (Gurgaon), India",
+        "id": "297615"
+      },
+      "avatar": {
+        "id": "109530408",
+        "width": 415,
+        "height": 642,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/87/4d/28/akhil-b.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/Tarzanjungle"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2023",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:40.861466"
+    }
+  },
+  {
+    "title": "Cela aide à comprendre l'histoire du Benin",
+    "rating": 4,
+    "travelDate": "2023-08",
+    "publishedDate": "2023-08-22",
+    "text": "Cela fait partie des endroits à ne pas rater dans la capitale du Bénin. Le soir il y a en général  une bonne ambiance.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r912256824-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "565B6B8B123B723E01B7AC4F5E0F22ED",
+      "name": "CarlosM",
+      "contributions": {
+        "totalContributions": 75,
+        "helpfulVotes": 11
+      },
+      "username": "Voyageur-insoumis",
+      "userLocation": {
+        "shortName": "Val-de-Marne",
+        "name": "Val-de-Marne, France",
+        "id": "2624158"
+      },
+      "avatar": {
+        "id": "706273914",
+        "width": 960,
+        "height": 960,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/18/e2/7a/voyageur-insoumis.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/Voyageur-insoumis"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2023",
+      "needs_translation": true
+    }
+  },
+  {
+    "title": "Incroyable guerrière amazonienne",
+    "rating": 5,
+    "travelDate": "2023-07",
+    "publishedDate": "2023-07-12",
+    "text": "Magnifique statue et représentation. Beaucoup d&#39;espace pour prendre des photos et se promener. L&#39;expérience dure moins de 20 minutes si vous planifiez votre journée. L&#39;observation de la statue dure environ une minute, mais vous aurez envie de prendre des photos et de vous émerveiller devant sa taille. Beaucoup d&#39;enfants jouent et beaucoup d&#39;habitants et de touristes apprécient le site. La visite vaut le détour. ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r902524753-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "CF85B5ABFEC5ACD5807F3293D0C30DDA",
+      "name": "Kaja",
+      "contributions": {
+        "totalContributions": 8,
+        "helpfulVotes": 8
+      },
+      "username": "princess_Krys",
+      "userLocation": {
+        "shortName": "Suffolk",
+        "name": "Suffolk, Virginia",
+        "id": "58224"
+      },
+      "avatar": {
+        "id": "452388586",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e6/ea/default-avatar-2020-54.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/princess_Krys"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2023",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:41.474853"
+    }
+  },
+  {
+    "title": "Le nouveau point fort de Cotonou !",
+    "rating": 5,
+    "travelDate": "2023-03",
+    "publishedDate": "2023-04-01",
+    "text": "Une statue incroyable et impressionnante qu&#39;il faut absolument admirer. J&#39;aime beaucoup le message qu&#39;elle véhicule : ce n&#39;est pas une statue d&#39;un président, mais de femmes influentes. Dommage qu&#39;elle ait déjà été endommagée par l&#39;eau.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r884421175-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "D879551FB407C3F61A2C701ADAA24AF2",
+      "name": "VGriet",
+      "contributions": {
+        "totalContributions": 336,
+        "helpfulVotes": 30
+      },
+      "username": "VGriet",
+      "userLocation": {
+        "shortName": "Leuven",
+        "name": "Leuven, Belgium",
+        "id": "188669"
+      },
+      "avatar": {
+        "id": "481800002",
+        "width": 450,
+        "height": 450,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b7/af/42/avatar.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/VGriet"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2023",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:42.037909"
+    }
+  },
+  {
+    "title": "Magnifique ",
+    "rating": 5,
+    "travelDate": "2023-03",
+    "publishedDate": "2023-03-05",
+    "text": "Une statue magnifique, si vous avez vu le film Woman King.. il raconte l&#39;histoire de cette femme.. vérifiez les images.. mais la voir en vrai est quelque chose d&#39;autre.. c&#39;est tellement énorme.. ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r881019965-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "EAD0A578743756BD6DF26B74A28CFDEB",
+      "name": "Mujahid A",
+      "contributions": {
+        "totalContributions": 14,
+        "helpfulVotes": 0
+      },
+      "username": "411mujahida",
+      "userLocation": null,
+      "avatar": {
+        "id": "452391908",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f3/e4/default-avatar-2020-30.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/411mujahida"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "en",
+      "year": "2023",
+      "needs_translation": false,
+      "original_language": "en",
+      "translated": true,
+      "translated_to_french": true,
+      "translation_date": "2025-10-27T12:06:42.540459"
+    }
+  },
+  {
+    "title": "Monument Amazone , Fierté Historique dédiée aux Femmes Beninoises",
+    "rating": 4,
+    "travelDate": "2022-10",
+    "publishedDate": "2022-11-02",
+    "text": "Cette très grande statue de 30m de haut en métal,  représente une Amazone en arme , avec fusil et épée,  guerrière du royaume du Dahomey ( Danxome). En effet, ces guerrières appelées \" amazone \" , ont fait la fierté du royaume du Dahomey,  qui a gouverne le Sud du Bénin dès le 18 ème siècle . Elles ont contribué à l'émancipation territoriale du royaume  , qui est devenu très puissant au 19 ème siècle.  Créés en 1708 , puis structurées en corps armé par le roi Guezo ( 1818-1858),  elles ont combattu la présence française avec les armées royales dès 1890 , jusqu'à la chute du roi Behanzin à Abomey en 1894 .\nDe ce fait , elles symbolisent le rôle important  des femmes dans l'histoire du Bénin.\nCe monument à été inauguré en 2022 , par le président Patrice  Talon , sur une vaste esplanade ,juste en face de la présidence de la République. Beaucoup de résidents viennent se promener sur cette esplanade.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297314-d25063593-r866940373-Monument_Amazone-Cotonou_Littoral_Department.html",
+    "user": {
+      "userId": "5CF735F6DC0B7B5CE056BB05AC534F34",
+      "name": "DanyEarth👍👌",
+      "contributions": {
+        "totalContributions": 33858,
+        "helpfulVotes": 104580
+      },
+      "username": "danyEarth",
+      "userLocation": {
+        "shortName": "France",
+        "name": "France",
+        "id": "187070"
+      },
+      "avatar": {
+        "id": "559006816",
+        "width": 768,
+        "height": 768,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/51/c4/60/danytwo.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/danyEarth"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "25063593",
+      "name": "Monument Amazone",
+      "rating": 4.6,
+      "numberOfReviews": 12,
+      "locationString": "Cotonou, Littoral Department",
+      "latitude": 6.349213,
+      "longitude": 2.40724,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "website": "https://www.gouv.bj/monument/monument-amazone/",
+      "address": "Place Amazone, Cotonou Benin",
+      "addressObj": {
+        "street1": "Place Amazone",
+        "street2": null,
+        "city": "Cotonou",
+        "state": null,
+        "country": "Benin",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 3,
+        "count5": 8
+      }
+    },
+    "metadata": {
+      "language_detected": "fr",
+      "year": "2022",
+      "needs_translation": true
+    }
+  }
+]

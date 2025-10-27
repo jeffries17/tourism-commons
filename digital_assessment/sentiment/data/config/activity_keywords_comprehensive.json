@@ -1,0 +1,188 @@
+{
+  "tourism_core": {
+    "sun_beach": {
+      "keywords": [
+        "beach", "beaches", "resort", "all-inclusive", "all inclusive",
+        "swimming pool", "pool", "sun lounger", "beach holiday", 
+        "relaxation", "spa", "wellness", "sunbathing", "swimming",
+        "atlantic coast", "coastal", "seaside", "oceanfront",
+        "beach bar", "beach club", "water sports", "snorkeling",
+        "sea view", "beachfront", "palm trees", "tropical beach",
+        "sand", "sandy beach", "beach resort", "beach hotel"
+      ],
+      "threshold": 2
+    },
+    "nature_wildlife": {
+      "keywords": [
+        "birding", "birdwatching", "bird watching", "bird", "birds",
+        "wildlife", "safari", "nature reserve", "abuko", "river cruise", 
+        "river safari", "chimpanzee", "chimp", "hippo", "hippopotamus", 
+        "monkey", "monkeys", "mangrove", "wetland", "eco-tourism", "ecotourism",
+        "tanji bird reserve", "bijilo forest", "makasutu culture forest",
+        "gambia river", "river boat", "wildlife photography", "nature",
+        "flora", "fauna", "biodiversity", "conservation", "eco-lodge",
+        "kiang west", "bao bolong", "river gambia national park",
+        "crocodile", "kachikally", "wildlife watching", "nature walk"
+      ],
+      "threshold": 3
+    },
+    "adventure": {
+      "keywords": [
+        "trekking", "hiking", "kayaking", "kayak", "cycling", "bike",
+        "expedition", "adventure", "quad bike", "zip line", "zipline",
+        "outdoor activities", "active", "exploration", "off the beaten path",
+        "4x4", "off-road", "camping", "bushcraft", "canoeing",
+        "mountain biking", "trail", "walking tour", "guided walk",
+        "adventure tour", "expedition", "outdoor adventure", "sport",
+        "fishing", "quad biking", "horse riding", "horseback"
+      ],
+      "threshold": 2
+    },
+    "culture_heritage": {
+      "keywords": [
+        "kunta kinteh", "kunta kinte", "james island", "roots", "heritage",
+        "wassu stone circles", "stone circles", "museum", "national museum",
+        "village tour", "village visit", "cultural tour", "traditional village",
+        "arch 22", "albert market", "slave trade", "slavery history",
+        "cultural heritage", "unesco", "world heritage", "history",
+        "traditional music", "drumming", "kora", "griot",
+        "local culture", "cultural immersion", "cultural experience",
+        "historical site", "colonial", "archaeology", "roots tourism",
+        "alex haley", "genealogy", "ancestry", "heritage site",
+        "cultural center", "traditional ceremony", "tribal"
+      ],
+      "threshold": 3
+    }
+  },
+  "creative_industries": {
+    "festivals_events": {
+      "keywords": [
+        "festival", "festivals", "cultural festival", "music festival",
+        "event", "cultural event", "celebration", "carnival",
+        "international roots festival", "roots homecoming",
+        "kanilai festival", "cultural celebration", "annual event",
+        "performance", "concert", "live music", "cultural showcase",
+        "traditional festival", "harvest festival", "ceremony",
+        "cultural gathering", "celebration event"
+      ],
+      "threshold": 1
+    },
+    "audiovisual": {
+      "keywords": [
+        "film", "filming", "movie", "cinema", "documentary",
+        "photography", "photographer", "photo tour", "photo safari",
+        "video", "videography", "television", "tv", "broadcast",
+        "media production", "film production", "photo workshop",
+        "photography tour", "camera", "cinematography",
+        "photo opportunity", "film location", "production",
+        "visual media", "digital media", "content creation"
+      ],
+      "threshold": 1
+    },
+    "marketing_advertising_publishing": {
+      "keywords": [
+        "marketing", "advertising", "branding", "promotion",
+        "publishing", "publisher", "publication", "magazine",
+        "newspaper", "media", "press", "journalism",
+        "content marketing", "social media", "digital marketing",
+        "pr", "public relations", "communications",
+        "editorial", "copywriting", "creative agency"
+      ],
+      "threshold": 1
+    },
+    "crafts_artisan": {
+      "keywords": [
+        "craft", "crafts", "artisan", "artisans", "handcraft",
+        "handmade", "handicraft", "craftsman", "craftsmanship",
+        "pottery", "weaving", "basket", "basketry", "textile",
+        "wood carving", "carving", "sculpture", "batik", "tie-dye",
+        "beadwork", "jewelry", "jewellery", "traditional craft",
+        "craft market", "craft center", "craft workshop",
+        "artisan workshop", "craft demonstration", "craft village",
+        "traditional skills", "handwoven", "calabash", "woodwork"
+      ],
+      "threshold": 2
+    },
+    "fashion_design": {
+      "keywords": [
+        "fashion", "design", "designer", "textile design",
+        "clothing", "garment", "tailoring", "tailor",
+        "traditional dress", "traditional clothing", "african fashion",
+        "fabric", "pattern", "print", "fashion show",
+        "fashion designer", "fashion house", "boutique",
+        "style", "wax print", "ankara", "fashion market",
+        "costume", "traditional attire", "fashion design"
+      ],
+      "threshold": 2
+    },
+    "music": {
+      "keywords": [
+        "music", "musician", "musical", "concert", "performance",
+        "kora", "djembe", "balafon", "sabar", "drum", "drums",
+        "drumming", "traditional music", "live music", "band",
+        "singer", "singing", "song", "composition",
+        "music venue", "music school", "music education",
+        "music production", "recording", "studio", "musician",
+        "african music", "traditional instrument", "percussion",
+        "griot", "jali", "music workshop", "drum circle"
+      ],
+      "threshold": 2
+    },
+    "performing_visual_arts": {
+      "keywords": [
+        "art", "artist", "painting", "painter", "gallery",
+        "art gallery", "exhibition", "art exhibition", "artwork",
+        "visual arts", "contemporary art", "modern art",
+        "traditional art", "art museum", "art center",
+        "dance", "dancing", "dancer", "choreography",
+        "theatre", "theater", "performance art", "performing arts",
+        "drama", "play", "stage", "acrobatics", "storytelling",
+        "puppet", "puppetry", "mural", "street art",
+        "installation", "sculpture", "drawing"
+      ],
+      "threshold": 2
+    },
+    "heritage_sites_museums": {
+      "keywords": [
+        "museum", "museums", "heritage site", "historical site",
+        "national museum", "cultural center", "cultural centre",
+        "heritage center", "interpretation center",
+        "kunta kinteh island", "james island", "wassu stone circles",
+        "stone circles of senegambia", "unesco site",
+        "world heritage site", "monument", "memorial",
+        "arch 22", "fort bullen", "fort", "colonial building",
+        "historical building", "archaeological site",
+        "heritage attraction", "cultural site", "historic site",
+        "museum collection", "exhibition center", "gallery"
+      ],
+      "threshold": 2
+    }
+  },
+  "detection_rules": {
+    "case_sensitive": false,
+    "partial_match": true,
+    "min_keyword_matches": {
+      "sun_beach": 2,
+      "nature_wildlife": 3,
+      "adventure": 2,
+      "culture_heritage": 3,
+      "festivals_events": 1,
+      "audiovisual": 1,
+      "marketing_advertising_publishing": 1,
+      "crafts_artisan": 2,
+      "fashion_design": 2,
+      "music": 2,
+      "performing_visual_arts": 2,
+      "heritage_sites_museums": 2
+    },
+    "notes": "If the number of unique keyword matches meets or exceeds the threshold, flag as 'Yes'"
+  },
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-09-30",
+    "description": "Comprehensive activity detection for ITOS assessment aligned with creative industries diagnostic framework",
+    "total_categories": 12,
+    "tourism_core_categories": 4,
+    "creative_industries_categories": 8
+  }
+}

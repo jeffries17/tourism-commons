@@ -1,0 +1,2824 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-27T14:02:51.921551",
+    "project": "benin",
+    "sector": "cultural_heritage",
+    "total_stakeholders": 30,
+    "total_reviews": 1284,
+    "overall_sentiment": 0.22755098731870158
+  },
+  "summary": {
+    "total_reviews": 1284,
+    "total_stakeholders": 30,
+    "average_sentiment": 0.22755098731870158,
+    "theme_averages": {
+      "cultural_heritage": 0.6350095884392459,
+      "service_staff": 0.5123465279362324,
+      "facilities_infrastructure": 0.5399976910818362,
+      "accessibility_transport": 0.7435936489402457,
+      "value_money": 0.49459080435290426,
+      "safety_security": 0.22453448150581543,
+      "educational_value": 0.4948463741907897,
+      "artistic_creative": 0.8688441645159258,
+      "atmosphere_experience": 0.6868252638737241
+    }
+  },
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "artisanal_center",
+      "total_reviews": 101,
+      "overall_sentiment": 0.20076472613431295,
+      "theme_scores": {
+        "cultural_heritage": 0.4098360655737705,
+        "service_staff": 0.22354694485842028,
+        "facilities_infrastructure": 0.2608047690014903,
+        "accessibility_transport": 1.0,
+        "value_money": 1.0,
+        "safety_security": 0.07451564828614009,
+        "educational_value": 0.20491803278688525,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.5774962742175856
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.4098360655737705,
+          "sentiment_score": 0.055121298840048835,
+          "mentions": 22,
+          "positive": 6,
+          "negative": 2,
+          "neutral": 12
+        },
+        "service_staff": {
+          "score": 0.22354694485842028,
+          "sentiment_score": 0.38896230605941357,
+          "mentions": 12,
+          "positive": 11,
+          "negative": 0,
+          "neutral": 0
+        },
+        "facilities_infrastructure": {
+          "score": 0.2608047690014903,
+          "sentiment_score": 0.261996891996892,
+          "mentions": 14,
+          "positive": 11,
+          "negative": 0,
+          "neutral": 2
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.13433271274180364,
+          "mentions": 62,
+          "positive": 26,
+          "negative": 6,
+          "neutral": 25
+        },
+        "value_money": {
+          "score": 1.0,
+          "sentiment_score": 0.0906214821515884,
+          "mentions": 100,
+          "positive": 36,
+          "negative": 11,
+          "neutral": 30
+        },
+        "safety_security": {
+          "score": 0.07451564828614009,
+          "sentiment_score": 0.2652777777777778,
+          "mentions": 4,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 0.20491803278688525,
+          "sentiment_score": 0.03143229166666667,
+          "mentions": 11,
+          "positive": 3,
+          "negative": 2,
+          "neutral": 3
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.21683599279198199,
+          "mentions": 187,
+          "positive": 71,
+          "negative": 9,
+          "neutral": 42
+        },
+        "atmosphere_experience": {
+          "score": 0.5774962742175856,
+          "sentiment_score": 0.3367462001599933,
+          "mentions": 31,
+          "positive": 23,
+          "negative": 1,
+          "neutral": 5
+        }
+      },
+      "language_distribution": {
+        "unknown": 101
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.162031",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 101
+        },
+        "average_rating": 3.8,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d479674-Reviews-Artisanal_Center-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "babs_dock",
+      "total_reviews": 94,
+      "overall_sentiment": 0.31867796584323754,
+      "theme_scores": {
+        "cultural_heritage": 0.17292062943109113,
+        "service_staff": 0.8300190212692374,
+        "facilities_infrastructure": 0.32854919591907317,
+        "accessibility_transport": 1.0,
+        "value_money": 0.8818952100985648,
+        "safety_security": 0.10375237765865468,
+        "educational_value": 0.1383365035448729,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 1.0
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.17292062943109113,
+          "sentiment_score": 0.39436507936507936,
+          "mentions": 10,
+          "positive": 7,
+          "negative": 0,
+          "neutral": 2
+        },
+        "service_staff": {
+          "score": 0.8300190212692374,
+          "sentiment_score": 0.34061222253529944,
+          "mentions": 48,
+          "positive": 26,
+          "negative": 2,
+          "neutral": 11
+        },
+        "facilities_infrastructure": {
+          "score": 0.32854919591907317,
+          "sentiment_score": 0.11067253824606767,
+          "mentions": 19,
+          "positive": 8,
+          "negative": 5,
+          "neutral": 4
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.19094121642246642,
+          "mentions": 137,
+          "positive": 52,
+          "negative": 15,
+          "neutral": 33
+        },
+        "value_money": {
+          "score": 0.8818952100985648,
+          "sentiment_score": 0.16692350088183422,
+          "mentions": 51,
+          "positive": 21,
+          "negative": 4,
+          "neutral": 11
+        },
+        "safety_security": {
+          "score": 0.10375237765865468,
+          "sentiment_score": 0.2534333333333333,
+          "mentions": 6,
+          "positive": 3,
+          "negative": 1,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 0.1383365035448729,
+          "sentiment_score": 0.3658482142857143,
+          "mentions": 8,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 3
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.48262218817507285,
+          "mentions": 63,
+          "positive": 42,
+          "negative": 1,
+          "neutral": 9
+        },
+        "atmosphere_experience": {
+          "score": 1.0,
+          "sentiment_score": 0.39109321853741497,
+          "mentions": 65,
+          "positive": 45,
+          "negative": 3,
+          "neutral": 8
+        }
+      },
+      "language_distribution": {
+        "unknown": 94
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.211554",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 94
+        },
+        "average_rating": 4.3,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d4947090-Reviews-Bab_s_Dock-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "cathedrale_notre_dame_de_limmaculee_conception",
+      "total_reviews": 8,
+      "overall_sentiment": 0.20696786781293824,
+      "theme_scores": {
+        "cultural_heritage": 0.3448275862068966,
+        "service_staff": 0.0,
+        "facilities_infrastructure": 1.0,
+        "accessibility_transport": 0.8620689655172414,
+        "value_money": 0.1724137931034483,
+        "safety_security": 0.0,
+        "educational_value": 0.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.1724137931034483
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.3448275862068966,
+          "sentiment_score": 0.47613636363636364,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "facilities_infrastructure": {
+          "score": 1.0,
+          "sentiment_score": 0.17993939393939393,
+          "mentions": 7,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 2
+        },
+        "accessibility_transport": {
+          "score": 0.8620689655172414,
+          "sentiment_score": 0.31205627705627703,
+          "mentions": 5,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 1
+        },
+        "value_money": {
+          "score": 0.1724137931034483,
+          "sentiment_score": 0.31666666666666665,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.26314664502164503,
+          "mentions": 11,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 3
+        },
+        "atmosphere_experience": {
+          "score": 0.1724137931034483,
+          "sentiment_score": 0.5,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 8
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.216165",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 8
+        },
+        "average_rating": 4.1,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d8130241-Reviews-Cathedrale_Notre_Dame_de_l_Immaculee_Conception-Porto_Novo_Oueme_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "chutes_de_kota",
+      "total_reviews": 13,
+      "overall_sentiment": 0.39555555555555566,
+      "theme_scores": {
+        "cultural_heritage": 0.0,
+        "service_staff": 0.3139717425431711,
+        "facilities_infrastructure": 0.9419152276295133,
+        "accessibility_transport": 1.0,
+        "value_money": 0.15698587127158556,
+        "safety_security": 0.3139717425431711,
+        "educational_value": 0.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 1.0
+      },
+      "detailed_theme_analysis": {
+        "service_staff": {
+          "score": 0.3139717425431711,
+          "sentiment_score": 0.0,
+          "mentions": 2,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "facilities_infrastructure": {
+          "score": 0.9419152276295133,
+          "sentiment_score": 0.1425,
+          "mentions": 6,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 1
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.2754012345679013,
+          "mentions": 14,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 4
+        },
+        "value_money": {
+          "score": 0.15698587127158556,
+          "sentiment_score": 0.3,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "safety_security": {
+          "score": 0.3139717425431711,
+          "sentiment_score": 0.25833333333333336,
+          "mentions": 2,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.6802314814814815,
+          "mentions": 15,
+          "positive": 12,
+          "negative": 0,
+          "neutral": 0
+        },
+        "atmosphere_experience": {
+          "score": 1.0,
+          "sentiment_score": 0.42421296296296296,
+          "mentions": 7,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 1
+        }
+      },
+      "language_distribution": {
+        "unknown": 13
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.221732",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 13
+        },
+        "average_rating": 4.5,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "da_silva_museum",
+      "total_reviews": 21,
+      "overall_sentiment": 0.2574107142857144,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.7423904974016332,
+        "facilities_infrastructure": 0.5196733481811433,
+        "accessibility_transport": 0.5196733481811433,
+        "value_money": 0.5196733481811433,
+        "safety_security": 0.0,
+        "educational_value": 1.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.8908685968819599
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.17437394957983196,
+          "mentions": 29,
+          "positive": 11,
+          "negative": 1,
+          "neutral": 5
+        },
+        "service_staff": {
+          "score": 0.7423904974016332,
+          "sentiment_score": 0.32949126984126986,
+          "mentions": 10,
+          "positive": 7,
+          "negative": 1,
+          "neutral": 2
+        },
+        "facilities_infrastructure": {
+          "score": 0.5196733481811433,
+          "sentiment_score": 0.1601521164021164,
+          "mentions": 7,
+          "positive": 3,
+          "negative": 1,
+          "neutral": 2
+        },
+        "accessibility_transport": {
+          "score": 0.5196733481811433,
+          "sentiment_score": 0.2041666666666667,
+          "mentions": 7,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 3
+        },
+        "value_money": {
+          "score": 0.5196733481811433,
+          "sentiment_score": 0.24490740740740738,
+          "mentions": 7,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.19155088702147524,
+          "mentions": 59,
+          "positive": 19,
+          "negative": 0,
+          "neutral": 15
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.16747448979591836,
+          "mentions": 14,
+          "positive": 8,
+          "negative": 1,
+          "neutral": 5
+        },
+        "atmosphere_experience": {
+          "score": 0.8908685968819599,
+          "sentiment_score": 0.23481890331890332,
+          "mentions": 12,
+          "positive": 9,
+          "negative": 1,
+          "neutral": 1
+        }
+      },
+      "language_distribution": {
+        "unknown": 21
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.236457",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 21
+        },
+        "average_rating": 3.9,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479679-Reviews-Da_Silva_Museum-Porto_Novo_Oueme_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "ethnographique_museum_of_porto_novo",
+      "total_reviews": 29,
+      "overall_sentiment": 0.18072591091992993,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 1.0,
+        "facilities_infrastructure": 0.5031446540880503,
+        "accessibility_transport": 0.5660377358490566,
+        "value_money": 0.5031446540880503,
+        "safety_security": 0.0,
+        "educational_value": 1.0,
+        "artistic_creative": 0.5660377358490566,
+        "atmosphere_experience": 1.0
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.19212225274725275,
+          "mentions": 39,
+          "positive": 15,
+          "negative": 3,
+          "neutral": 8
+        },
+        "service_staff": {
+          "score": 1.0,
+          "sentiment_score": 0.24000455684666208,
+          "mentions": 27,
+          "positive": 12,
+          "negative": 1,
+          "neutral": 6
+        },
+        "facilities_infrastructure": {
+          "score": 0.5031446540880503,
+          "sentiment_score": 0.05406249999999999,
+          "mentions": 8,
+          "positive": 1,
+          "negative": 2,
+          "neutral": 5
+        },
+        "accessibility_transport": {
+          "score": 0.5660377358490566,
+          "sentiment_score": -0.03125000000000001,
+          "mentions": 9,
+          "positive": 2,
+          "negative": 3,
+          "neutral": 3
+        },
+        "value_money": {
+          "score": 0.5031446540880503,
+          "sentiment_score": 0.27654761904761904,
+          "mentions": 8,
+          "positive": 5,
+          "negative": 1,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.1680381572792287,
+          "mentions": 70,
+          "positive": 23,
+          "negative": 5,
+          "neutral": 14
+        },
+        "artistic_creative": {
+          "score": 0.5660377358490566,
+          "sentiment_score": 0.19086681547619047,
+          "mentions": 9,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 3
+        },
+        "atmosphere_experience": {
+          "score": 1.0,
+          "sentiment_score": 0.254733893557423,
+          "mentions": 19,
+          "positive": 13,
+          "negative": 3,
+          "neutral": 1
+        }
+      },
+      "language_distribution": {
+        "unknown": 29
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.253302",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 29
+        },
+        "average_rating": 3.7,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479677-Reviews-Ethnographique_Museum_of_Porto_Novo-Porto_Novo_Oueme_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "etoile_rouge",
+      "total_reviews": 28,
+      "overall_sentiment": 0.19767308449126633,
+      "theme_scores": {
+        "cultural_heritage": 0.8695652173913044,
+        "service_staff": 0.13377926421404682,
+        "facilities_infrastructure": 0.4013377926421405,
+        "accessibility_transport": 1.0,
+        "value_money": 0.20066889632107024,
+        "safety_security": 0.20066889632107024,
+        "educational_value": 0.33444816053511706,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.6020066889632107
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.8695652173913044,
+          "sentiment_score": 0.01969444444444444,
+          "mentions": 13,
+          "positive": 4,
+          "negative": 2,
+          "neutral": 4
+        },
+        "service_staff": {
+          "score": 0.13377926421404682,
+          "sentiment_score": 0.25,
+          "mentions": 2,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 1
+        },
+        "facilities_infrastructure": {
+          "score": 0.4013377926421405,
+          "sentiment_score": 0.19611111111111115,
+          "mentions": 6,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 2
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.06689814814814815,
+          "mentions": 21,
+          "positive": 7,
+          "negative": 3,
+          "neutral": 8
+        },
+        "value_money": {
+          "score": 0.20066889632107024,
+          "sentiment_score": 0.300462962962963,
+          "mentions": 3,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 1
+        },
+        "safety_security": {
+          "score": 0.20066889632107024,
+          "sentiment_score": 0.3,
+          "mentions": 3,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 0.33444816053511706,
+          "sentiment_score": 0.42437500000000006,
+          "mentions": 5,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.3282407407407407,
+          "mentions": 21,
+          "positive": 12,
+          "negative": 0,
+          "neutral": 6
+        },
+        "atmosphere_experience": {
+          "score": 0.6020066889632107,
+          "sentiment_score": 0.35361111111111115,
+          "mentions": 9,
+          "positive": 7,
+          "negative": 1,
+          "neutral": 1
+        }
+      },
+      "language_distribution": {
+        "unknown": 28
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.265718",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 28
+        },
+        "average_rating": 3.4,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d9996367-Reviews-Etoile_Rouge-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "fidjrosse_beach",
+      "total_reviews": 73,
+      "overall_sentiment": 0.21353855570066496,
+      "theme_scores": {
+        "cultural_heritage": 0.0,
+        "service_staff": 0.1034928848641656,
+        "facilities_infrastructure": 0.9573091849935317,
+        "accessibility_transport": 1.0,
+        "value_money": 0.517464424320828,
+        "safety_security": 0.8796895213454076,
+        "educational_value": 0.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.8279430789133247
+      },
+      "detailed_theme_analysis": {
+        "service_staff": {
+          "score": 0.1034928848641656,
+          "sentiment_score": 0.07291666666666669,
+          "mentions": 4,
+          "positive": 1,
+          "negative": 1,
+          "neutral": 2
+        },
+        "facilities_infrastructure": {
+          "score": 0.9573091849935317,
+          "sentiment_score": 0.12561113110745462,
+          "mentions": 37,
+          "positive": 17,
+          "negative": 11,
+          "neutral": 6
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.11886422198172199,
+          "mentions": 59,
+          "positive": 22,
+          "negative": 8,
+          "neutral": 20
+        },
+        "value_money": {
+          "score": 0.517464424320828,
+          "sentiment_score": 0.16349759615384615,
+          "mentions": 20,
+          "positive": 10,
+          "negative": 3,
+          "neutral": 3
+        },
+        "safety_security": {
+          "score": 0.8796895213454076,
+          "sentiment_score": -0.035803938859494414,
+          "mentions": 34,
+          "positive": 6,
+          "negative": 9,
+          "neutral": 3
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.42441564237574875,
+          "mentions": 63,
+          "positive": 39,
+          "negative": 2,
+          "neutral": 6
+        },
+        "atmosphere_experience": {
+          "score": 0.8279430789133247,
+          "sentiment_score": 0.3044824226699227,
+          "mentions": 32,
+          "positive": 22,
+          "negative": 2,
+          "neutral": 2
+        }
+      },
+      "language_distribution": {
+        "unknown": 73
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.298140",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 73
+        },
+        "average_rating": 3.6,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d479676-Reviews-Fidjrosse_Beach-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "fondation_zinsou",
+      "total_reviews": 88,
+      "overall_sentiment": 0.2911016399645025,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 1.0,
+        "facilities_infrastructure": 0.4405286343612335,
+        "accessibility_transport": 0.5206247496996396,
+        "value_money": 0.9811774128954747,
+        "safety_security": 0.08009611533840609,
+        "educational_value": 1.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.841009211053264
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.22842377349490522,
+          "mentions": 54,
+          "positive": 29,
+          "negative": 2,
+          "neutral": 15
+        },
+        "service_staff": {
+          "score": 1.0,
+          "sentiment_score": 0.33281405804843306,
+          "mentions": 63,
+          "positive": 37,
+          "negative": 3,
+          "neutral": 8
+        },
+        "facilities_infrastructure": {
+          "score": 0.4405286343612335,
+          "sentiment_score": 0.31080323357413137,
+          "mentions": 22,
+          "positive": 14,
+          "negative": 1,
+          "neutral": 4
+        },
+        "accessibility_transport": {
+          "score": 0.5206247496996396,
+          "sentiment_score": 0.10648652214508993,
+          "mentions": 26,
+          "positive": 7,
+          "negative": 2,
+          "neutral": 14
+        },
+        "value_money": {
+          "score": 0.9811774128954747,
+          "sentiment_score": 0.24377535203270495,
+          "mentions": 49,
+          "positive": 23,
+          "negative": 3,
+          "neutral": 11
+        },
+        "safety_security": {
+          "score": 0.08009611533840609,
+          "sentiment_score": 0.026388888888888885,
+          "mentions": 4,
+          "positive": 1,
+          "negative": 1,
+          "neutral": 2
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.2923315365012935,
+          "mentions": 212,
+          "positive": 81,
+          "negative": 6,
+          "neutral": 28
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.2926724783050475,
+          "mentions": 155,
+          "positive": 70,
+          "negative": 5,
+          "neutral": 27
+        },
+        "atmosphere_experience": {
+          "score": 0.841009211053264,
+          "sentiment_score": 0.40337070024570026,
+          "mentions": 42,
+          "positive": 34,
+          "negative": 1,
+          "neutral": 2
+        }
+      },
+      "language_distribution": {
+        "unknown": 88
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.352060",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 88
+        },
+        "average_rating": 4.3,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d4156500-Reviews-Fondation_Zinsou-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "foret_sacree_de_kpasse",
+      "total_reviews": 10,
+      "overall_sentiment": 0.20233130411255415,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.8863819500402901,
+        "facilities_infrastructure": 0.24174053182917002,
+        "accessibility_transport": 0.6446414182111201,
+        "value_money": 0.40290088638195004,
+        "safety_security": 0.5640612409347301,
+        "educational_value": 1.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.7252215954875101
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.24952728818800246,
+          "mentions": 29,
+          "positive": 11,
+          "negative": 0,
+          "neutral": 10
+        },
+        "service_staff": {
+          "score": 0.8863819500402901,
+          "sentiment_score": 0.4634183673469388,
+          "mentions": 11,
+          "positive": 7,
+          "negative": 0,
+          "neutral": 0
+        },
+        "facilities_infrastructure": {
+          "score": 0.24174053182917002,
+          "sentiment_score": 0.14270833333333333,
+          "mentions": 3,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 2
+        },
+        "accessibility_transport": {
+          "score": 0.6446414182111201,
+          "sentiment_score": 0.22013888888888888,
+          "mentions": 8,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 3
+        },
+        "value_money": {
+          "score": 0.40290088638195004,
+          "sentiment_score": 0.125,
+          "mentions": 5,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 1
+        },
+        "safety_security": {
+          "score": 0.5640612409347301,
+          "sentiment_score": 0.15416666666666665,
+          "mentions": 7,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 3
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.3187662337662338,
+          "mentions": 17,
+          "positive": 7,
+          "negative": 0,
+          "neutral": 4
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.45802579365079366,
+          "mentions": 14,
+          "positive": 10,
+          "negative": 0,
+          "neutral": 2
+        },
+        "atmosphere_experience": {
+          "score": 0.7252215954875101,
+          "sentiment_score": 0.3687500000000001,
+          "mentions": 9,
+          "positive": 4,
+          "negative": 1,
+          "neutral": 1
+        }
+      },
+      "language_distribution": {
+        "unknown": 10
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.363640",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 10
+        },
+        "average_rating": 4.3,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d19827241-Reviews-Foret_Sacree_de_Kpasse-Ouidah_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "great_mosque_of_portonovo",
+      "total_reviews": 20,
+      "overall_sentiment": 0.23987065233616964,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.06377551020408163,
+        "facilities_infrastructure": 1.0,
+        "accessibility_transport": 0.7653061224489796,
+        "value_money": 0.25510204081632654,
+        "safety_security": 0.0,
+        "educational_value": 0.6377551020408163,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.25510204081632654
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.2164473684210526,
+          "mentions": 29,
+          "positive": 10,
+          "negative": 0,
+          "neutral": 9
+        },
+        "service_staff": {
+          "score": 0.06377551020408163,
+          "sentiment_score": 1.0,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "facilities_infrastructure": {
+          "score": 1.0,
+          "sentiment_score": 0.1391304347826087,
+          "mentions": 29,
+          "positive": 9,
+          "negative": 1,
+          "neutral": 13
+        },
+        "accessibility_transport": {
+          "score": 0.7653061224489796,
+          "sentiment_score": 0.08101851851851852,
+          "mentions": 12,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 6
+        },
+        "value_money": {
+          "score": 0.25510204081632654,
+          "sentiment_score": 0.15833333333333333,
+          "mentions": 4,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 2
+        },
+        "educational_value": {
+          "score": 0.6377551020408163,
+          "sentiment_score": 0.2779761904761905,
+          "mentions": 10,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 2
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.29877314814814815,
+          "mentions": 27,
+          "positive": 14,
+          "negative": 1,
+          "neutral": 3
+        },
+        "atmosphere_experience": {
+          "score": 0.25510204081632654,
+          "sentiment_score": 0.4875,
+          "mentions": 4,
+          "positive": 4,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 20
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.377708",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 20
+        },
+        "average_rating": 4.0,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d8397791-Reviews-Great_Mosque_of_Porto_Novo-Porto_Novo_Oueme_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "jardin_place_jean_bayol",
+      "total_reviews": 6,
+      "overall_sentiment": 0.1634920634920635,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.9174311926605504,
+        "facilities_infrastructure": 0.0,
+        "accessibility_transport": 0.9174311926605504,
+        "value_money": 0.0,
+        "safety_security": 0.0,
+        "educational_value": 0.4587155963302752,
+        "artistic_creative": 0.4587155963302752,
+        "atmosphere_experience": 0.4587155963302752
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.0888888888888889,
+          "mentions": 6,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 2
+        },
+        "service_staff": {
+          "score": 0.9174311926605504,
+          "sentiment_score": 0.0,
+          "mentions": 2,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "accessibility_transport": {
+          "score": 0.9174311926605504,
+          "sentiment_score": 0.0,
+          "mentions": 2,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 2
+        },
+        "educational_value": {
+          "score": 0.4587155963302752,
+          "sentiment_score": 0.0,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 0.4587155963302752,
+          "sentiment_score": 0.3666666666666667,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "atmosphere_experience": {
+          "score": 0.4587155963302752,
+          "sentiment_score": 0.11111111111111112,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 6
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.379688",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 6
+        },
+        "average_rating": 4.5,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479678-Reviews-Jardin_Place_Jean_Bayol-Porto_Novo_Oueme_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "la_bouche_du_roy",
+      "total_reviews": 2,
+      "overall_sentiment": 0.3041544117647059,
+      "theme_scores": {
+        "cultural_heritage": 0.0,
+        "service_staff": 0.0,
+        "facilities_infrastructure": 0.0,
+        "accessibility_transport": 0.8908685968819599,
+        "value_money": 0.4454342984409799,
+        "safety_security": 0.4454342984409799,
+        "educational_value": 0.22271714922048996,
+        "artistic_creative": 0.8908685968819599,
+        "atmosphere_experience": 1.0
+      },
+      "detailed_theme_analysis": {
+        "accessibility_transport": {
+          "score": 0.8908685968819599,
+          "sentiment_score": 0.06291666666666666,
+          "mentions": 4,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 3
+        },
+        "value_money": {
+          "score": 0.4454342984409799,
+          "sentiment_score": 0.225,
+          "mentions": 2,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 1
+        },
+        "safety_security": {
+          "score": 0.4454342984409799,
+          "sentiment_score": -0.05,
+          "mentions": 2,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 0.22271714922048996,
+          "sentiment_score": 0.33125,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "artistic_creative": {
+          "score": 0.8908685968819599,
+          "sentiment_score": 0.36874999999999997,
+          "mentions": 4,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 1
+        },
+        "atmosphere_experience": {
+          "score": 1.0,
+          "sentiment_score": 0.33999999999999997,
+          "mentions": 5,
+          "positive": 4,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 2
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.382740",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 2
+        },
+        "average_rating": 4.0,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482829-d23724658-Reviews-La_Bouche_Du_Roy-Grand_Popo_Mono_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "la_porte_du_non_retour",
+      "total_reviews": 133,
+      "overall_sentiment": 0.15731859228325662,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.7705149608321561,
+        "facilities_infrastructure": 0.5650443046102478,
+        "accessibility_transport": 0.9374598690124566,
+        "value_money": 0.5650443046102478,
+        "safety_security": 0.07705149608321561,
+        "educational_value": 1.0,
+        "artistic_creative": 0.8732502889431103,
+        "atmosphere_experience": 0.719147296776679
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.12069822373393801,
+          "mentions": 313,
+          "positive": 78,
+          "negative": 15,
+          "neutral": 96
+        },
+        "service_staff": {
+          "score": 0.7705149608321561,
+          "sentiment_score": 0.08669586072363851,
+          "mentions": 60,
+          "positive": 21,
+          "negative": 7,
+          "neutral": 26
+        },
+        "facilities_infrastructure": {
+          "score": 0.5650443046102478,
+          "sentiment_score": 0.07767626136047188,
+          "mentions": 44,
+          "positive": 16,
+          "negative": 7,
+          "neutral": 15
+        },
+        "accessibility_transport": {
+          "score": 0.9374598690124566,
+          "sentiment_score": 0.07917938542938543,
+          "mentions": 73,
+          "positive": 25,
+          "negative": 8,
+          "neutral": 32
+        },
+        "value_money": {
+          "score": 0.5650443046102478,
+          "sentiment_score": 0.12813638313638315,
+          "mentions": 44,
+          "positive": 23,
+          "negative": 6,
+          "neutral": 8
+        },
+        "safety_security": {
+          "score": 0.07705149608321561,
+          "sentiment_score": 0.15948412698412698,
+          "mentions": 6,
+          "positive": 3,
+          "negative": 1,
+          "neutral": 2
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.1148483519404572,
+          "mentions": 126,
+          "positive": 44,
+          "negative": 13,
+          "neutral": 38
+        },
+        "artistic_creative": {
+          "score": 0.8732502889431103,
+          "sentiment_score": 0.21269774356467905,
+          "mentions": 68,
+          "positive": 32,
+          "negative": 6,
+          "neutral": 24
+        },
+        "atmosphere_experience": {
+          "score": 0.719147296776679,
+          "sentiment_score": 0.2846397381553632,
+          "mentions": 56,
+          "positive": 35,
+          "negative": 3,
+          "neutral": 10
+        }
+      },
+      "language_distribution": {
+        "unknown": 133
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.458485",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 133
+        },
+        "average_rating": 4.1,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d4776402-Reviews-La_Porte_Du_Non_Retour-Ouidah_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "lac_nokoue",
+      "total_reviews": 67,
+      "overall_sentiment": 0.2271780908603337,
+      "theme_scores": {
+        "cultural_heritage": 0.3115264797507788,
+        "service_staff": 0.6088926649674313,
+        "facilities_infrastructure": 0.2548853016142736,
+        "accessibility_transport": 1.0,
+        "value_money": 0.8637779665817048,
+        "safety_security": 0.09912206173888416,
+        "educational_value": 0.3823279524214103,
+        "artistic_creative": 0.8354573775134522,
+        "atmosphere_experience": 0.7504956103086944
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.3115264797507788,
+          "sentiment_score": 0.1129838801549328,
+          "mentions": 22,
+          "positive": 6,
+          "negative": 3,
+          "neutral": 10
+        },
+        "service_staff": {
+          "score": 0.6088926649674313,
+          "sentiment_score": 0.09836302586302587,
+          "mentions": 43,
+          "positive": 12,
+          "negative": 4,
+          "neutral": 17
+        },
+        "facilities_infrastructure": {
+          "score": 0.2548853016142736,
+          "sentiment_score": 0.13595398428731761,
+          "mentions": 18,
+          "positive": 7,
+          "negative": 1,
+          "neutral": 10
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.1093307674963925,
+          "mentions": 101,
+          "positive": 25,
+          "negative": 6,
+          "neutral": 49
+        },
+        "value_money": {
+          "score": 0.8637779665817048,
+          "sentiment_score": 0.16788218317630083,
+          "mentions": 61,
+          "positive": 24,
+          "negative": 4,
+          "neutral": 23
+        },
+        "safety_security": {
+          "score": 0.09912206173888416,
+          "sentiment_score": 0.06090476190476189,
+          "mentions": 7,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 2
+        },
+        "educational_value": {
+          "score": 0.3823279524214103,
+          "sentiment_score": 0.1027404758586824,
+          "mentions": 27,
+          "positive": 8,
+          "negative": 2,
+          "neutral": 13
+        },
+        "artistic_creative": {
+          "score": 0.8354573775134522,
+          "sentiment_score": 0.34313512105178773,
+          "mentions": 59,
+          "positive": 40,
+          "negative": 5,
+          "neutral": 9
+        },
+        "atmosphere_experience": {
+          "score": 0.7504956103086944,
+          "sentiment_score": 0.3873168831168831,
+          "mentions": 53,
+          "positive": 43,
+          "negative": 1,
+          "neutral": 6
+        }
+      },
+      "language_distribution": {
+        "unknown": 67
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.513305",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 67
+        },
+        "average_rating": 4.4,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482828-d4472920-Reviews-Lac_Nokoue-Ganvie_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "marche_dantokpa",
+      "total_reviews": 64,
+      "overall_sentiment": 0.22416506754216847,
+      "theme_scores": {
+        "cultural_heritage": 0.1719056974459725,
+        "service_staff": 0.22102161100196463,
+        "facilities_infrastructure": 0.44204322200392926,
+        "accessibility_transport": 1.0,
+        "value_money": 1.0,
+        "safety_security": 0.049115913555992145,
+        "educational_value": 0.22102161100196463,
+        "artistic_creative": 0.7858546168958743,
+        "atmosphere_experience": 0.6139489194499018
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.1719056974459725,
+          "sentiment_score": 0.09537037037037037,
+          "mentions": 7,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 5
+        },
+        "service_staff": {
+          "score": 0.22102161100196463,
+          "sentiment_score": 0.21325132275132275,
+          "mentions": 9,
+          "positive": 6,
+          "negative": 0,
+          "neutral": 3
+        },
+        "facilities_infrastructure": {
+          "score": 0.44204322200392926,
+          "sentiment_score": 0.19208818342151673,
+          "mentions": 18,
+          "positive": 6,
+          "negative": 0,
+          "neutral": 9
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.1318266873144922,
+          "mentions": 54,
+          "positive": 16,
+          "negative": 5,
+          "neutral": 20
+        },
+        "value_money": {
+          "score": 1.0,
+          "sentiment_score": 0.17174353180932128,
+          "mentions": 48,
+          "positive": 20,
+          "negative": 2,
+          "neutral": 16
+        },
+        "safety_security": {
+          "score": 0.049115913555992145,
+          "sentiment_score": 0.375,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "educational_value": {
+          "score": 0.22102161100196463,
+          "sentiment_score": 0.09975925925925927,
+          "mentions": 9,
+          "positive": 4,
+          "negative": 1,
+          "neutral": 4
+        },
+        "artistic_creative": {
+          "score": 0.7858546168958743,
+          "sentiment_score": 0.33128888888888885,
+          "mentions": 32,
+          "positive": 16,
+          "negative": 1,
+          "neutral": 8
+        },
+        "atmosphere_experience": {
+          "score": 0.6139489194499018,
+          "sentiment_score": 0.2178867243867244,
+          "mentions": 25,
+          "positive": 12,
+          "negative": 2,
+          "neutral": 8
+        }
+      },
+      "language_distribution": {
+        "unknown": 64
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.544181",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 64
+        },
+        "average_rating": 4.0,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d479675-Reviews-Marche_Dantokpa-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "monument_amazone",
+      "total_reviews": 12,
+      "overall_sentiment": 0.42900246305418716,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.0,
+        "facilities_infrastructure": 0.3246753246753247,
+        "accessibility_transport": 0.8116883116883117,
+        "value_money": 0.6493506493506493,
+        "safety_security": 0.0,
+        "educational_value": 0.6493506493506493,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.6493506493506493
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.2692380952380952,
+          "mentions": 8,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 2
+        },
+        "facilities_infrastructure": {
+          "score": 0.3246753246753247,
+          "sentiment_score": 0.16666666666666669,
+          "mentions": 2,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 1
+        },
+        "accessibility_transport": {
+          "score": 0.8116883116883117,
+          "sentiment_score": 0.16476190476190475,
+          "mentions": 5,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 3
+        },
+        "value_money": {
+          "score": 0.6493506493506493,
+          "sentiment_score": 0.33749999999999997,
+          "mentions": 4,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 0.6493506493506493,
+          "sentiment_score": 0.13333333333333333,
+          "mentions": 4,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 2
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.7227272727272728,
+          "mentions": 19,
+          "positive": 10,
+          "negative": 0,
+          "neutral": 1
+        },
+        "atmosphere_experience": {
+          "score": 0.6493506493506493,
+          "sentiment_score": 0.36428571428571427,
+          "mentions": 4,
+          "positive": 3,
+          "negative": 1,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 12
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.549588",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 12
+        },
+        "average_rating": 4.6,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "musee_de_la_fondation_zinsou",
+      "total_reviews": 51,
+      "overall_sentiment": 0.3493309780497278,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 1.0,
+        "facilities_infrastructure": 1.0,
+        "accessibility_transport": 0.3997093023255814,
+        "value_money": 1.0,
+        "safety_security": 0.036337209302325583,
+        "educational_value": 1.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 1.0
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.29789316323407233,
+          "mentions": 34,
+          "positive": 24,
+          "negative": 0,
+          "neutral": 9
+        },
+        "service_staff": {
+          "score": 1.0,
+          "sentiment_score": 0.34496544882320745,
+          "mentions": 43,
+          "positive": 26,
+          "negative": 1,
+          "neutral": 2
+        },
+        "facilities_infrastructure": {
+          "score": 1.0,
+          "sentiment_score": 0.36766222222222217,
+          "mentions": 33,
+          "positive": 20,
+          "negative": 0,
+          "neutral": 5
+        },
+        "accessibility_transport": {
+          "score": 0.3997093023255814,
+          "sentiment_score": 0.21163392857142854,
+          "mentions": 11,
+          "positive": 7,
+          "negative": 2,
+          "neutral": 1
+        },
+        "value_money": {
+          "score": 1.0,
+          "sentiment_score": 0.3057091750841751,
+          "mentions": 48,
+          "positive": 28,
+          "negative": 0,
+          "neutral": 5
+        },
+        "safety_security": {
+          "score": 0.036337209302325583,
+          "sentiment_score": 0.0,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.3726824895783229,
+          "mentions": 112,
+          "positive": 60,
+          "negative": 2,
+          "neutral": 10
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.3338018285262261,
+          "mentions": 138,
+          "positive": 63,
+          "negative": 1,
+          "neutral": 19
+        },
+        "atmosphere_experience": {
+          "score": 1.0,
+          "sentiment_score": 0.45485110848747207,
+          "mentions": 30,
+          "positive": 22,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 51
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.584211",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 51
+        },
+        "average_rating": 4.5,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d5990229-Reviews-Musee_de_la_Fondation_Zinsou-Ouidah_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "musee_honme_palais_royal",
+      "total_reviews": 20,
+      "overall_sentiment": 0.09038675887021475,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.8264462809917356,
+        "facilities_infrastructure": 0.5721551176096631,
+        "accessibility_transport": 0.6993006993006993,
+        "value_money": 0.31786395422759056,
+        "safety_security": 0.3814367450731087,
+        "educational_value": 1.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.8264462809917356
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.16306547619047618,
+          "mentions": 20,
+          "positive": 8,
+          "negative": 1,
+          "neutral": 7
+        },
+        "service_staff": {
+          "score": 0.8264462809917356,
+          "sentiment_score": 0.09182844932844933,
+          "mentions": 13,
+          "positive": 5,
+          "negative": 3,
+          "neutral": 5
+        },
+        "facilities_infrastructure": {
+          "score": 0.5721551176096631,
+          "sentiment_score": 0.148984375,
+          "mentions": 9,
+          "positive": 5,
+          "negative": 1,
+          "neutral": 2
+        },
+        "accessibility_transport": {
+          "score": 0.6993006993006993,
+          "sentiment_score": -0.048518518518518516,
+          "mentions": 11,
+          "positive": 3,
+          "negative": 2,
+          "neutral": 4
+        },
+        "value_money": {
+          "score": 0.31786395422759056,
+          "sentiment_score": 0.2643333333333333,
+          "mentions": 5,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 0
+        },
+        "safety_security": {
+          "score": 0.3814367450731087,
+          "sentiment_score": 0.0,
+          "mentions": 6,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 4
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.13651360544217686,
+          "mentions": 33,
+          "positive": 13,
+          "negative": 4,
+          "neutral": 11
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.10915123456790124,
+          "mentions": 19,
+          "positive": 8,
+          "negative": 3,
+          "neutral": 7
+        },
+        "atmosphere_experience": {
+          "score": 0.8264462809917356,
+          "sentiment_score": 0.21950306637806635,
+          "mentions": 13,
+          "positive": 7,
+          "negative": 2,
+          "neutral": 2
+        }
+      },
+      "language_distribution": {
+        "unknown": 20
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.603262",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 20
+        },
+        "average_rating": 3.9,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479680-Reviews-Musee_Honme_Palais_Royal-Porto_Novo_Oueme_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "obama_beach",
+      "total_reviews": 18,
+      "overall_sentiment": 0.2557984400656814,
+      "theme_scores": {
+        "cultural_heritage": 0.0,
+        "service_staff": 0.2127659574468085,
+        "facilities_infrastructure": 0.7446808510638298,
+        "accessibility_transport": 0.9574468085106382,
+        "value_money": 1.0,
+        "safety_security": 0.6382978723404255,
+        "educational_value": 0.10638297872340426,
+        "artistic_creative": 0.5319148936170213,
+        "atmosphere_experience": 0.3191489361702127
+      },
+      "detailed_theme_analysis": {
+        "service_staff": {
+          "score": 0.2127659574468085,
+          "sentiment_score": 0.3360606060606061,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "facilities_infrastructure": {
+          "score": 0.7446808510638298,
+          "sentiment_score": 0.33574074074074073,
+          "mentions": 7,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 1
+        },
+        "accessibility_transport": {
+          "score": 0.9574468085106382,
+          "sentiment_score": 0.10479797979797979,
+          "mentions": 9,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 3
+        },
+        "value_money": {
+          "score": 1.0,
+          "sentiment_score": 0.4098367604617605,
+          "mentions": 12,
+          "positive": 7,
+          "negative": 0,
+          "neutral": 0
+        },
+        "safety_security": {
+          "score": 0.6382978723404255,
+          "sentiment_score": 0.25916666666666666,
+          "mentions": 6,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 1
+        },
+        "educational_value": {
+          "score": 0.10638297872340426,
+          "sentiment_score": 0.6333333333333333,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "artistic_creative": {
+          "score": 0.5319148936170213,
+          "sentiment_score": 0.6292777777777777,
+          "mentions": 5,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 0
+        },
+        "atmosphere_experience": {
+          "score": 0.3191489361702127,
+          "sentiment_score": 0.21605820105820106,
+          "mentions": 3,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 2
+        }
+      },
+      "language_distribution": {
+        "unknown": 18
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.613783",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 18
+        },
+        "average_rating": 3.6,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d11962943-Reviews-Obama_Beach-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "ouidah_museum_of_history",
+      "total_reviews": 78,
+      "overall_sentiment": 0.18637913993636876,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 1.0,
+        "facilities_infrastructure": 0.611427366645583,
+        "accessibility_transport": 0.6957621758380772,
+        "value_money": 0.5481762597512123,
+        "safety_security": 0.0,
+        "educational_value": 1.0,
+        "artistic_creative": 0.9276829011174362,
+        "atmosphere_experience": 0.9065991988193127
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.18226174386146096,
+          "mentions": 199,
+          "positive": 51,
+          "negative": 9,
+          "neutral": 41
+        },
+        "service_staff": {
+          "score": 1.0,
+          "sentiment_score": 0.23897089947089947,
+          "mentions": 60,
+          "positive": 28,
+          "negative": 3,
+          "neutral": 14
+        },
+        "facilities_infrastructure": {
+          "score": 0.611427366645583,
+          "sentiment_score": 0.15640925925925925,
+          "mentions": 29,
+          "positive": 13,
+          "negative": 3,
+          "neutral": 9
+        },
+        "accessibility_transport": {
+          "score": 0.6957621758380772,
+          "sentiment_score": 0.14038763485192057,
+          "mentions": 33,
+          "positive": 13,
+          "negative": 2,
+          "neutral": 13
+        },
+        "value_money": {
+          "score": 0.5481762597512123,
+          "sentiment_score": 0.15150462962962963,
+          "mentions": 26,
+          "positive": 13,
+          "negative": 3,
+          "neutral": 8
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.17756072573260073,
+          "mentions": 162,
+          "positive": 56,
+          "negative": 12,
+          "neutral": 36
+        },
+        "artistic_creative": {
+          "score": 0.9276829011174362,
+          "sentiment_score": 0.25453646541950115,
+          "mentions": 44,
+          "positive": 27,
+          "negative": 5,
+          "neutral": 8
+        },
+        "atmosphere_experience": {
+          "score": 0.9065991988193127,
+          "sentiment_score": 0.27005015432098767,
+          "mentions": 43,
+          "positive": 28,
+          "negative": 5,
+          "neutral": 3
+        }
+      },
+      "language_distribution": {
+        "unknown": 78
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.670273",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 78
+        },
+        "average_rating": 4.1,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d4947092-Reviews-Ouidah_Museum_of_History-Ouidah_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "palais_des_congres",
+      "total_reviews": 12,
+      "overall_sentiment": 0.3494528875379938,
+      "theme_scores": {
+        "cultural_heritage": 0.5199306759098787,
+        "service_staff": 0.3466204506065858,
+        "facilities_infrastructure": 1.0,
+        "accessibility_transport": 0.8665511265164645,
+        "value_money": 0.3466204506065858,
+        "safety_security": 0.5199306759098787,
+        "educational_value": 0.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.5199306759098787
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.5199306759098787,
+          "sentiment_score": 0.175,
+          "mentions": 3,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 1
+        },
+        "service_staff": {
+          "score": 0.3466204506065858,
+          "sentiment_score": 0.6393333333333333,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "facilities_infrastructure": {
+          "score": 1.0,
+          "sentiment_score": 0.3848611111111111,
+          "mentions": 9,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 1
+        },
+        "accessibility_transport": {
+          "score": 0.8665511265164645,
+          "sentiment_score": 0.185,
+          "mentions": 5,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 2
+        },
+        "value_money": {
+          "score": 0.3466204506065858,
+          "sentiment_score": 0.4816666666666667,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "safety_security": {
+          "score": 0.5199306759098787,
+          "sentiment_score": -0.03333333333333333,
+          "mentions": 3,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 3
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.39766666666666667,
+          "mentions": 6,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 2
+        },
+        "atmosphere_experience": {
+          "score": 0.5199306759098787,
+          "sentiment_score": 0.15138888888888888,
+          "mentions": 3,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 12
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.677413",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 12
+        },
+        "average_rating": 4.1,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d9996366-Reviews-Palais_des_Congres-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "palais_des_rois_dabomey",
+      "total_reviews": 103,
+      "overall_sentiment": 0.17664725111663895,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 1.0,
+        "facilities_infrastructure": 0.6243756243756244,
+        "accessibility_transport": 0.7742257742257742,
+        "value_money": 0.6993006993006993,
+        "safety_security": 0.11238761238761238,
+        "educational_value": 1.0,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 1.0
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.18614557565450424,
+          "mentions": 155,
+          "positive": 63,
+          "negative": 8,
+          "neutral": 41
+        },
+        "service_staff": {
+          "score": 1.0,
+          "sentiment_score": 0.2301447677836567,
+          "mentions": 96,
+          "positive": 48,
+          "negative": 2,
+          "neutral": 31
+        },
+        "facilities_infrastructure": {
+          "score": 0.6243756243756244,
+          "sentiment_score": 0.09564068479829349,
+          "mentions": 50,
+          "positive": 21,
+          "negative": 7,
+          "neutral": 18
+        },
+        "accessibility_transport": {
+          "score": 0.7742257742257742,
+          "sentiment_score": 0.11179160915573959,
+          "mentions": 62,
+          "positive": 19,
+          "negative": 4,
+          "neutral": 23
+        },
+        "value_money": {
+          "score": 0.6993006993006993,
+          "sentiment_score": 0.1372537437870771,
+          "mentions": 56,
+          "positive": 26,
+          "negative": 5,
+          "neutral": 19
+        },
+        "safety_security": {
+          "score": 0.11238761238761238,
+          "sentiment_score": -0.02026909722222222,
+          "mentions": 9,
+          "positive": 1,
+          "negative": 1,
+          "neutral": 6
+        },
+        "educational_value": {
+          "score": 1.0,
+          "sentiment_score": 0.19455246764015421,
+          "mentions": 201,
+          "positive": 73,
+          "negative": 11,
+          "neutral": 50
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.242842982234216,
+          "mentions": 86,
+          "positive": 46,
+          "negative": 5,
+          "neutral": 26
+        },
+        "atmosphere_experience": {
+          "score": 1.0,
+          "sentiment_score": 0.3584869116390856,
+          "mentions": 82,
+          "positive": 60,
+          "negative": 2,
+          "neutral": 7
+        }
+      },
+      "language_distribution": {
+        "unknown": 103
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.761080",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 103
+        },
+        "average_rating": 3.7,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479759-d4739459-Reviews-Palais_des_rois_d_Abomey-Abomey_Zou_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "pendjari_national_park",
+      "total_reviews": 69,
+      "overall_sentiment": 0.2402514370079911,
+      "theme_scores": {
+        "cultural_heritage": 0.11504537901060974,
+        "service_staff": 0.9459286718650134,
+        "facilities_infrastructure": 0.3323533171417615,
+        "accessibility_transport": 1.0,
+        "value_money": 0.31957049725169373,
+        "safety_security": 0.2940048574715582,
+        "educational_value": 0.19174229835101622,
+        "artistic_creative": 0.9970599514252844,
+        "atmosphere_experience": 0.6135753547232519
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.11504537901060974,
+          "sentiment_score": 0.24807291666666667,
+          "mentions": 9,
+          "positive": 6,
+          "negative": 0,
+          "neutral": 2
+        },
+        "service_staff": {
+          "score": 0.9459286718650134,
+          "sentiment_score": 0.26789164427526496,
+          "mentions": 74,
+          "positive": 37,
+          "negative": 3,
+          "neutral": 18
+        },
+        "facilities_infrastructure": {
+          "score": 0.3323533171417615,
+          "sentiment_score": 0.1256821625344353,
+          "mentions": 26,
+          "positive": 9,
+          "negative": 3,
+          "neutral": 10
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.19171273262631286,
+          "mentions": 96,
+          "positive": 42,
+          "negative": 8,
+          "neutral": 31
+        },
+        "value_money": {
+          "score": 0.31957049725169373,
+          "sentiment_score": 0.20843813131313133,
+          "mentions": 25,
+          "positive": 15,
+          "negative": 3,
+          "neutral": 4
+        },
+        "safety_security": {
+          "score": 0.2940048574715582,
+          "sentiment_score": 0.1910294117647059,
+          "mentions": 23,
+          "positive": 8,
+          "negative": 2,
+          "neutral": 7
+        },
+        "educational_value": {
+          "score": 0.19174229835101622,
+          "sentiment_score": 0.26049242424242425,
+          "mentions": 15,
+          "positive": 7,
+          "negative": 0,
+          "neutral": 4
+        },
+        "artistic_creative": {
+          "score": 0.9970599514252844,
+          "sentiment_score": 0.37774620942904524,
+          "mentions": 78,
+          "positive": 54,
+          "negative": 4,
+          "neutral": 9
+        },
+        "atmosphere_experience": {
+          "score": 0.6135753547232519,
+          "sentiment_score": 0.35971945367294206,
+          "mentions": 48,
+          "positive": 35,
+          "negative": 2,
+          "neutral": 6
+        }
+      },
+      "language_distribution": {
+        "unknown": 69
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.823085",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 69
+        },
+        "average_rating": 4.3,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g4590754-d2185917-Reviews-Pendjari_National_Park-Tanguieta_Atakora_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "place_des_martyrs",
+      "total_reviews": 13,
+      "overall_sentiment": 0.15058325602968467,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.0,
+        "facilities_infrastructure": 0.1234567901234568,
+        "accessibility_transport": 0.3703703703703704,
+        "value_money": 0.1234567901234568,
+        "safety_security": 0.1234567901234568,
+        "educational_value": 0.617283950617284,
+        "artistic_creative": 1.0,
+        "atmosphere_experience": 0.9876543209876544
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.12333333333333334,
+          "mentions": 12,
+          "positive": 3,
+          "negative": 1,
+          "neutral": 2
+        },
+        "facilities_infrastructure": {
+          "score": 0.1234567901234568,
+          "sentiment_score": 0.13,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "accessibility_transport": {
+          "score": 0.3703703703703704,
+          "sentiment_score": -0.15,
+          "mentions": 3,
+          "positive": 0,
+          "negative": 1,
+          "neutral": 2
+        },
+        "value_money": {
+          "score": 0.1234567901234568,
+          "sentiment_score": 0.016666666666666663,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "safety_security": {
+          "score": 0.1234567901234568,
+          "sentiment_score": 0.7,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        },
+        "educational_value": {
+          "score": 0.617283950617284,
+          "sentiment_score": 0.005833333333333329,
+          "mentions": 5,
+          "positive": 1,
+          "negative": 1,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 1.0,
+          "sentiment_score": 0.34285714285714286,
+          "mentions": 9,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 2
+        },
+        "atmosphere_experience": {
+          "score": 0.9876543209876544,
+          "sentiment_score": 0.28154761904761905,
+          "mentions": 8,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 2
+        }
+      },
+      "language_distribution": {
+        "unknown": 13
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.830007",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 13
+        },
+        "average_rating": 3.9,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d9996632-Reviews-Place_des_Martyrs-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "route_des_esclaves",
+      "total_reviews": 5,
+      "overall_sentiment": 0.15486813822751322,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 1.0,
+        "facilities_infrastructure": 0.87527352297593,
+        "accessibility_transport": 0.437636761487965,
+        "value_money": 0.0,
+        "safety_security": 0.0,
+        "educational_value": 0.7658643326039387,
+        "artistic_creative": 0.5470459518599562,
+        "atmosphere_experience": 0.6564551422319475
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.15694444444444444,
+          "mentions": 16,
+          "positive": 5,
+          "negative": 1,
+          "neutral": 6
+        },
+        "service_staff": {
+          "score": 1.0,
+          "sentiment_score": 0.16893353174603176,
+          "mentions": 10,
+          "positive": 4,
+          "negative": 1,
+          "neutral": 3
+        },
+        "facilities_infrastructure": {
+          "score": 0.87527352297593,
+          "sentiment_score": 0.06612103174603175,
+          "mentions": 8,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 5
+        },
+        "accessibility_transport": {
+          "score": 0.437636761487965,
+          "sentiment_score": 0.05,
+          "mentions": 4,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 3
+        },
+        "educational_value": {
+          "score": 0.7658643326039387,
+          "sentiment_score": 0.37,
+          "mentions": 7,
+          "positive": 4,
+          "negative": 0,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 0.5470459518599562,
+          "sentiment_score": 0.324,
+          "mentions": 5,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 2
+        },
+        "atmosphere_experience": {
+          "score": 0.6564551422319475,
+          "sentiment_score": 0.53,
+          "mentions": 6,
+          "positive": 4,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 5
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.837965",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 5
+        },
+        "average_rating": 4.6,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d21401704-Reviews-Route_Des_Esclaves-Ouidah_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "saint_michel_church",
+      "total_reviews": 7,
+      "overall_sentiment": 0.24751826298701302,
+      "theme_scores": {
+        "cultural_heritage": 0.4926108374384237,
+        "service_staff": 0.0,
+        "facilities_infrastructure": 1.0,
+        "accessibility_transport": 1.0,
+        "value_money": 0.0,
+        "safety_security": 0.0,
+        "educational_value": 0.0,
+        "artistic_creative": 0.9852216748768474,
+        "atmosphere_experience": 0.4926108374384237
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.4926108374384237,
+          "sentiment_score": 0.09166666666666667,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "facilities_infrastructure": {
+          "score": 1.0,
+          "sentiment_score": 0.2901536195286195,
+          "mentions": 5,
+          "positive": 4,
+          "negative": 0,
+          "neutral": 0
+        },
+        "accessibility_transport": {
+          "score": 1.0,
+          "sentiment_score": 0.21966831008497675,
+          "mentions": 9,
+          "positive": 5,
+          "negative": 0,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 0.9852216748768474,
+          "sentiment_score": 0.6331842231842232,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "atmosphere_experience": {
+          "score": 0.4926108374384237,
+          "sentiment_score": 0.26636844636844637,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 7
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.840527",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 7
+        },
+        "average_rating": 4.3,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d12268516-Reviews-Saint_Michel_church-Cotonou_Littoral_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "station_balneaire_de_grand_popo",
+      "total_reviews": 1,
+      "overall_sentiment": 0.1273141513658755,
+      "theme_scores": {
+        "cultural_heritage": 0.42613636363636365,
+        "service_staff": 0.42613636363636365,
+        "facilities_infrastructure": 0.42613636363636365,
+        "accessibility_transport": 0.2840909090909091,
+        "value_money": 0.2840909090909091,
+        "safety_security": 0.42613636363636365,
+        "educational_value": 0.0,
+        "artistic_creative": 0.8522727272727273,
+        "atmosphere_experience": 0.2840909090909091
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.42613636363636365,
+          "sentiment_score": 0.20511363636363636,
+          "mentions": 3,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "service_staff": {
+          "score": 0.42613636363636365,
+          "sentiment_score": 0.29222222222222227,
+          "mentions": 3,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 1
+        },
+        "facilities_infrastructure": {
+          "score": 0.42613636363636365,
+          "sentiment_score": -0.15000000000000002,
+          "mentions": 3,
+          "positive": 0,
+          "negative": 1,
+          "neutral": 1
+        },
+        "accessibility_transport": {
+          "score": 0.2840909090909091,
+          "sentiment_score": 0.22857142857142856,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "value_money": {
+          "score": 0.2840909090909091,
+          "sentiment_score": 0.41690476190476194,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        },
+        "safety_security": {
+          "score": 0.42613636363636365,
+          "sentiment_score": -0.11666666666666665,
+          "mentions": 3,
+          "positive": 1,
+          "negative": 1,
+          "neutral": 1
+        },
+        "artistic_creative": {
+          "score": 0.8522727272727273,
+          "sentiment_score": 0.11367544492544492,
+          "mentions": 6,
+          "positive": 3,
+          "negative": 0,
+          "neutral": 3
+        },
+        "atmosphere_experience": {
+          "score": 0.2840909090909091,
+          "sentiment_score": 0.7266666666666668,
+          "mentions": 2,
+          "positive": 2,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 1
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.845776",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 1
+        },
+        "average_rating": 4.0,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482829-d23895301-Reviews-Station_Balneaire_De_Grand_Popo-Grand_Popo_Mono_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "temple_des_pythons",
+      "total_reviews": 136,
+      "overall_sentiment": 0.17129941887944933,
+      "theme_scores": {
+        "cultural_heritage": 1.0,
+        "service_staff": 0.7972798686833157,
+        "facilities_infrastructure": 0.4924375659514597,
+        "accessibility_transport": 0.38691523039043263,
+        "value_money": 0.8676280923906671,
+        "safety_security": 0.31656700668308124,
+        "educational_value": 0.914526908195568,
+        "artistic_creative": 0.5979599015124868,
+        "atmosphere_experience": 0.914526908195568
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 1.0,
+          "sentiment_score": 0.12735916644119769,
+          "mentions": 127,
+          "positive": 43,
+          "negative": 8,
+          "neutral": 45
+        },
+        "service_staff": {
+          "score": 0.7972798686833157,
+          "sentiment_score": 0.16086218498934016,
+          "mentions": 68,
+          "positive": 27,
+          "negative": 5,
+          "neutral": 26
+        },
+        "facilities_infrastructure": {
+          "score": 0.4924375659514597,
+          "sentiment_score": 0.11755244755244756,
+          "mentions": 42,
+          "positive": 16,
+          "negative": 5,
+          "neutral": 18
+        },
+        "accessibility_transport": {
+          "score": 0.38691523039043263,
+          "sentiment_score": 0.07832471886351197,
+          "mentions": 33,
+          "positive": 10,
+          "negative": 5,
+          "neutral": 14
+        },
+        "value_money": {
+          "score": 0.8676280923906671,
+          "sentiment_score": 0.12417722734254993,
+          "mentions": 74,
+          "positive": 26,
+          "negative": 9,
+          "neutral": 27
+        },
+        "safety_security": {
+          "score": 0.31656700668308124,
+          "sentiment_score": 0.21841659451659448,
+          "mentions": 27,
+          "positive": 15,
+          "negative": 0,
+          "neutral": 10
+        },
+        "educational_value": {
+          "score": 0.914526908195568,
+          "sentiment_score": 0.19510536032594855,
+          "mentions": 78,
+          "positive": 33,
+          "negative": 4,
+          "neutral": 31
+        },
+        "artistic_creative": {
+          "score": 0.5979599015124868,
+          "sentiment_score": 0.28581367995430496,
+          "mentions": 51,
+          "positive": 30,
+          "negative": 5,
+          "neutral": 13
+        },
+        "atmosphere_experience": {
+          "score": 0.914526908195568,
+          "sentiment_score": 0.26860204513850344,
+          "mentions": 78,
+          "positive": 53,
+          "negative": 6,
+          "neutral": 13
+        }
+      },
+      "language_distribution": {
+        "unknown": 136
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.918619",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 136
+        },
+        "average_rating": 3.5,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d5018948-Reviews-Temple_des_Pythons-Ouidah_Atlantique_Department.html"
+      }
+    },
+    {
+      "stakeholder_name": "temple_zangbeto_de_cotonou",
+      "total_reviews": 2,
+      "overall_sentiment": 0.11677083333333334,
+      "theme_scores": {
+        "cultural_heritage": 0.2159827213822894,
+        "service_staff": 0.0,
+        "facilities_infrastructure": 0.2159827213822894,
+        "accessibility_transport": 0.0,
+        "value_money": 0.2159827213822894,
+        "safety_security": 1.0,
+        "educational_value": 0.0,
+        "artistic_creative": 0.2159827213822894,
+        "atmosphere_experience": 0.0
+      },
+      "detailed_theme_analysis": {
+        "cultural_heritage": {
+          "score": 0.2159827213822894,
+          "sentiment_score": 0.0,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "facilities_infrastructure": {
+          "score": 0.2159827213822894,
+          "sentiment_score": 0.0,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        },
+        "value_money": {
+          "score": 0.2159827213822894,
+          "sentiment_score": -0.10999999999999999,
+          "mentions": 1,
+          "positive": 0,
+          "negative": 1,
+          "neutral": 0
+        },
+        "safety_security": {
+          "score": 1.0,
+          "sentiment_score": 0.26,
+          "mentions": 5,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 2
+        },
+        "artistic_creative": {
+          "score": 0.2159827213822894,
+          "sentiment_score": 0.35000000000000003,
+          "mentions": 1,
+          "positive": 1,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "language_distribution": {
+        "unknown": 2
+      },
+      "metadata": {
+        "analyzed_at": "2025-10-27T14:02:51.921523",
+        "source": "tripadvisor",
+        "original_languages": {
+          "unknown": 2
+        },
+        "average_rating": 4.5,
+        "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d25102185-Reviews-Temple_Zangbeto_De_Cotonou-Cotonou_Littoral_Department.html"
+      }
+    }
+  ]
+}

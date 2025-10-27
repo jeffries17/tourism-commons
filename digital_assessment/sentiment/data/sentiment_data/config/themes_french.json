@@ -1,0 +1,120 @@
+{
+  "french_keywords": {
+    "cultural_heritage": {
+      "keywords": [
+        "patrimoine", "culture", "culturel", "histoire", "historique",
+        "authentique", "traditionnel", "tradition", "significatif", "préservation",
+        "héritage", "ancêtre", "ancestral", "origine", "coutume", "rituel",
+        "tribu", "tribal", "esclavage", "monument", "historique", "esclave",
+        "colonial", "ancien", "sacré", "spirituel", "religion", "religieux"
+      ],
+      "weight": 1.0,
+      "display_name": "Patrimoine & Valeur Culturelle"
+    },
+    "service_staff": {
+      "keywords": [
+        "personnel", "guide", "service", "amicable", "serviable",
+        "compétent", "hospitalier", "accueillant", "professionnel",
+        "courtois", "attentif", "guide touristique", "hôte", "hôtesse",
+        "informatif", "passionné", "enthousiaste", "équipe",
+        "employé", "travailleur", "réceptionniste", "manager"
+      ],
+      "weight": 1.0,
+      "display_name": "Service & Qualité du Personnel"
+    },
+    "facilities_infrastructure": {
+      "keywords": [
+        "installations", "installation", "infrastructure", "bâtiment", "maintenance",
+        "propre", "propreté", "état", "toilettes", "salles de bains", "toilette",
+        "équipements", "entretien", "réparation", "moderne", "rénover", "rénovation",
+        "détérioration", "décadence", "négligence", "sale", "immonde", "vieux",
+        "structure", "construction", "climatisation", "éclairage"
+      ],
+      "weight": 1.0,
+      "display_name": "Installations & Infrastructure"
+    },
+    "accessibility_transport": {
+      "keywords": [
+        "accès", "accessible", "transport", "transportation",
+        "emplacement", "parking", "directions", "signalisation", "panneau",
+        "ferry", "bateau", "bus", "taxi", "conduire", "conduite", "marcher", "marche",
+        "atteindre", "trouver", "trouvaille", "naviguer", "navigation",
+        "orientation", "entrée", "approche", "arriver", "arrivée",
+        "distance", "loin", "proche", "près", "éloigné", "isolé"
+      ],
+      "weight": 1.0,
+      "display_name": "Accessibilité & Transport"
+    },
+    "value_money": {
+      "keywords": [
+        "prix", "tarification", "valeur", "cher", "bon marché",
+        "ça vaut", "en vaut la peine", "argent", "coût", "frais", "charges", "admission",
+        "billet", "abordable", "trop cher", "raisonnable", "affaire",
+        "arnaque", "gaspillage", "gratuit", "don",
+        "budget", "paiement", "payé", "payer"
+      ],
+      "weight": 1.0,
+      "display_name": "Rapport Qualité-Prix"
+    },
+    "safety_security": {
+      "keywords": [
+        "sûr", "sécurité", "sécurisé", "dangereux", "danger",
+        "risque", "risqué", "criminalité", "garde", "sécurisé", "protection",
+        "protéger", "menace", "menaçant", "danger", "précaution",
+        "peu sûr", "peu sécurisé", "vol", "voler", "voleur", "vol",
+        "police", "urgence", "peur"
+      ],
+      "weight": 1.0,
+      "display_name": "Sécurité & Sécurité"
+    },
+    "educational_value": {
+      "keywords": [
+        "apprendre", "apprentissage", "éducatif", "éducation", "information",
+        "informatif", "exposition", "explication", "expliquer",
+        "connaissance", "compétent", "enseigner", "enseignement", "perspicacité", "découvrir",
+        "comprendre", "compréhension", "interprétation", "étiquette", "plaque",
+        "exposition", "musée", "galerie", "visite", "présentation",
+        "fait", "détail", "détaillé", "description"
+      ],
+      "weight": 1.0,
+      "display_name": "Valeur Éducative & Informationnelle"
+    },
+    "artistic_creative": {
+      "keywords": [
+        "art", "artistique", "créatif", "créativité", "beau", "beauté",
+        "artisanat", "artisan", "artisanat", "conception", "esthétique", "galerie",
+        "artiste", "œuvre d'art", "collection", "chef-d'œuvre", "pièce",
+        "visuel", "fait à la main", "fait main", "musique", "musical", "performance",
+        "performance", "spectacle", "affichage", "coloré", "vivant",
+        "sculpture", "peindre", "peinture", "dessiner", "dessin"
+      ],
+      "weight": 1.0,
+      "display_name": "Qualité Artistique & Créative"
+    },
+    "atmosphere_experience": {
+      "keywords": [
+        "atmosphère", "atmosphérique", "ambiance", "expérience",
+        "agréable", "plaisant", "mémorable", "vibe", "sentir", "sensation",
+        "environnement", "cadre", "humeur", "merveilleux", "fantastique",
+        "incroyable", "excellent", "grand", "bon", "bien", "charmant",
+        "ennuyeux", "terne", "décevant", "déception", "décevant",
+        "impressionnant", "époustouflant", "à couper le souffle", "paisible", "serein"
+      ],
+      "weight": 1.0,
+      "display_name": "Atmosphère & Expérience Globale"
+    }
+  },
+  "language_detection": {
+    "french_patterns": [
+      "\\b(le|la|les|un|une|des|de|du|des|à|en|sur|sous)\\b",
+      "\\b(et|ou|mais|donc|car|ni|mais|ce|cette|ces|cet)\\b",
+      "\\b(très|plus|moins|beaucoup|toujours|jamais)\\b"
+    ]
+  },
+  "translation_notes": {
+    "source": "French to English for sentiment analysis",
+    "preserve_sentiment": true,
+    "preserve_original": true
+  }
+}
+

@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Burna Boy (artist)",
+    "country": "Nigeria",
+    "sector": "Music (artists, production, venues, education)",
+    "criteria_scores": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "total_score": 3,
+    "reasoning": "\u2713 Appears to use original photos (8/8 authentic) | \u2717 Only 1/8 images show relevant content | \u2717 Limited content variety (1 type) | \u2717 Quality needs improvement (avg score: 4.5/7) | \u2713 Good variety across images (17 object types, 28 labels) | \u2713 5 images include people (14 faces detected) | \u2717 No behind-the-scenes content detected | \u2717 No clear user-generated/collaborative content | \u2717 Inconsistent visual styling | \u2717 No video content detected",
+    "images_analyzed": 8
+  },
+  {
+    "name": "Pistis (Accra)",
+    "country": "Ghana",
+    "sector": "Fashion & Design",
+    "criteria_scores": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "total_score": 6,
+    "reasoning": "\u2713 Appears to use original photos (4/5 authentic) | \u2713 5/5 images show sector-relevant content | \u2717 Limited content variety (1 type) | \u2713 Good professional quality (avg score: 6.2/7) | \u2713 Good variety across images (6 object types, 32 labels) | \u2713 5 images include people (5 faces detected) | \u2717 No behind-the-scenes content detected | \u2717 No clear user-generated/collaborative content | \u2713 Consistent visual style (warm tones dominate) | \u2717 No video content detected",
+    "images_analyzed": 5
+  },
+  {
+    "name": "Canal 3 B\u00e9nin",
+    "country": "Benin",
+    "sector": "Audiovisual (film, photography, TV, videography)",
+    "criteria_scores": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "total_score": 3,
+    "reasoning": "\u2713 Appears to use original photos (8/8 authentic) | \u2717 Only 0/8 images show relevant content | \u2717 Limited content variety (1 type) | \u2717 Quality needs improvement (avg score: 2.1/7) | \u2717 Limited variety (0 object types, 9 labels) | \u2717 No people/customers visible in images | \u2717 No behind-the-scenes content detected | \u2717 No clear user-generated/collaborative content | \u2713 Consistent visual style (light tones dominate) | \u2713 Video content present",
+    "images_analyzed": 8
+  },
+  {
+    "name": "Pal\u00e1cio da Cultura Ildo Lobo (Praia)",
+    "country": "Cape Verde",
+    "sector": "Music (artists, production, venues, education)",
+    "criteria_scores": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "total_score": 0,
+    "reasoning": "No images found on website"
+  }
+]

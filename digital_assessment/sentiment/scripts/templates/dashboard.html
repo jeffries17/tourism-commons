@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .filters {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .filter-group label {
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.9rem;
+        }
+        
+        .filter-group select, .filter-group input {
+            padding: 0.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+        
+        .filter-group select:focus, .filter-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .stakeholders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .stakeholder-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        
+        .stakeholder-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .stakeholder-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stakeholder-sector {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .scores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .score-item {
+            text-align: center;
+        }
+        
+        .score-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+        }
+        
+        .score-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #059669);
+            transition: width 0.3s ease;
+        }
+        
+        .card-footer {
+            padding: 1rem 1.5rem;
+            background: #f8fafc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .assess-btn {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .assess-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .status {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .status.complete {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status.partial {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status.pending {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+        }
+        
+        .no-results h3 {
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .stakeholders-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Assessment Dashboard</h1>
+        <p>Interactive Digital Presence Assessment Tool</p>
+    </div>
+    
+    <div class="container">
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">{{ stakeholders|length }}</div>
+                <div class="stat-label">Total Stakeholders</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ stakeholders|selectattr('total_raw', 'ge', 15)|list|length }}</div>
+                <div class="stat-label">High Performers (15+)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ stakeholders|selectattr('total_raw', 'ge', 10)|selectattr('total_raw', 'lt', 15)|list|length }}</div>
+                <div class="stat-label">Medium Performers (10-14)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ stakeholders|selectattr('total_raw', 'lt', 10)|list|length }}</div>
+                <div class="stat-label">Need Improvement (<10)</div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="sector-filter">Sector</label>
+                <select id="sector-filter">
+                    <option value="">All Sectors</option>
+                    <option value="Creative Industries">Creative Industries</option>
+                    <option value="Tour Operator">Tour Operator</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="score-filter">Score Range</label>
+                <select id="score-filter">
+                    <option value="">All Scores</option>
+                    <option value="high">High (15+)</option>
+                    <option value="medium">Medium (10-14)</option>
+                    <option value="low">Low (<10)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="Search stakeholders...">
+            </div>
+        </div>
+        
+        <div class="stakeholders-grid" id="stakeholders-grid">
+            {% for stakeholder in stakeholders %}
+            <div class="stakeholder-card" data-sector="{{ stakeholder.sector }}" data-score="{{ stakeholder.total_raw }}">
+                <div class="card-header">
+                    <div class="stakeholder-name">{{ stakeholder.name }}</div>
+                    <div class="stakeholder-sector">{{ stakeholder.sector }}</div>
+                    
+                    <div class="scores">
+                        <div class="score-item">
+                            <div class="score-label">Social Media</div>
+                            <div class="score-value">{{ stakeholder.social_media_raw }}/10</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Website</div>
+                            <div class="score-value">{{ stakeholder.website_raw }}/10</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Discoverability</div>
+                            <div class="score-value">{{ stakeholder.discoverability_raw }}/10</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {{ (stakeholder.total_raw / 60) * 100 }}%"></div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <div class="status {% if stakeholder.total_raw >= 15 %}complete{% elif stakeholder.total_raw >= 10 %}partial{% else %}pending{% endif %}">
+                        {% if stakeholder.total_raw >= 15 %}Complete{% elif stakeholder.total_raw >= 10 %}Partial{% else %}Pending{% endif %}
+                    </div>
+                    <a href="/assess/{{ stakeholder.id }}" class="assess-btn">Assess</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% if not stakeholders %}
+        <div class="no-results">
+            <h3>No stakeholders found</h3>
+            <p>Try adjusting your filters or check your Google Sheets connection.</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    <script>
+        // Filter functionality
+        const sectorFilter = document.getElementById('sector-filter');
+        const scoreFilter = document.getElementById('score-filter');
+        const searchInput = document.getElementById('search');
+        const stakeholdersGrid = document.getElementById('stakeholders-grid');
+        
+        function filterStakeholders() {
+            const sector = sectorFilter.value;
+            const score = scoreFilter.value;
+            const search = searchInput.value.toLowerCase();
+            
+            const cards = stakeholdersGrid.querySelectorAll('.stakeholder-card');
+            
+            cards.forEach(card => {
+                const cardSector = card.dataset.sector;
+                const cardScore = parseInt(card.dataset.score);
+                const cardName = card.querySelector('.stakeholder-name').textContent.toLowerCase();
+                
+                let show = true;
+                
+                if (sector && cardSector !== sector) show = false;
+                if (search && !cardName.includes(search)) show = false;
+                if (score) {
+                    if (score === 'high' && cardScore < 15) show = false;
+                    if (score === 'medium' && (cardScore < 10 || cardScore >= 15)) show = false;
+                    if (score === 'low' && cardScore >= 10) show = false;
+                }
+                
+                card.style.display = show ? 'block' : 'none';
+            });
+        }
+        
+        sectorFilter.addEventListener('change', filterStakeholders);
+        scoreFilter.addEventListener('change', filterStakeholders);
+        searchInput.addEventListener('input', filterStakeholders);
+    </script>
+</body>
+</html>

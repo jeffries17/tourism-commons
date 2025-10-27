@@ -1,0 +1,304 @@
+{
+  "supported_languages": {
+    "en": {
+      "name": "English",
+      "patterns": [
+        "\\b(the|and|or|but|in|on|at|to|for|of|with|by)\\b",
+        "\\b(is|are|was|were|be|been|being)\\b",
+        "\\b(this|that|these|those)\\b",
+        "\\b(we|you|they|he|she|it)\\b"
+      ],
+      "keywords": [
+        "the",
+        "and",
+        "or",
+        "but",
+        "in",
+        "on",
+        "at",
+        "to",
+        "for",
+        "of",
+        "with",
+        "by"
+      ],
+      "weight": 1.0
+    },
+    "fr": {
+      "name": "French",
+      "patterns": [
+        "\\b(le|la|les|un|une|des|du|de|dans|sur|avec|pour|par)\\b",
+        "\\b(est|sont|était|étaient|être|été|étant)\\b",
+        "\\b(ce|cette|ces|ceux)\\b",
+        "\\b(nous|vous|ils|elles|il|elle)\\b"
+      ],
+      "keywords": [
+        "le",
+        "la",
+        "les",
+        "un",
+        "une",
+        "des",
+        "du",
+        "de",
+        "dans",
+        "sur"
+      ],
+      "weight": 1.0
+    },
+    "de": {
+      "name": "German",
+      "patterns": [
+        "\\b(der|die|das|ein|eine|eines|mit|für|von|zu|in|auf)\\b",
+        "\\b(ist|sind|war|waren|sein|gewesen|seiend)\\b",
+        "\\b(dieser|diese|dieses|jener|jene|jenes)\\b",
+        "\\b(wir|ihr|sie|er|sie|es)\\b"
+      ],
+      "keywords": [
+        "der",
+        "die",
+        "das",
+        "ein",
+        "eine",
+        "mit",
+        "für",
+        "von",
+        "zu"
+      ],
+      "weight": 1.0
+    },
+    "es": {
+      "name": "Spanish",
+      "patterns": [
+        "\\b(el|la|los|las|un|una|de|del|en|con|por|para)\\b",
+        "\\b(es|son|era|eran|ser|sido|siendo)\\b",
+        "\\b(este|esta|estos|estas|ese|esa|esos|esas)\\b",
+        "\\b(nosotros|vosotros|ellos|ellas|él|ella)\\b"
+      ],
+      "keywords": [
+        "el",
+        "la",
+        "los",
+        "las",
+        "un",
+        "una",
+        "de",
+        "del",
+        "en",
+        "con"
+      ],
+      "weight": 1.0
+    },
+    "nl": {
+      "name": "Dutch",
+      "patterns": [
+        "\\b(de|het|een|van|op|in|met|voor|door|bij)\\b",
+        "\\b(is|zijn|was|waren|zijn|geweest|zijnde)\\b",
+        "\\b(deze|dit|die|dat)\\b",
+        "\\b(wij|jullie|zij|hij|zij|het)\\b"
+      ],
+      "keywords": [
+        "de",
+        "het",
+        "een",
+        "van",
+        "op",
+        "in",
+        "met",
+        "voor",
+        "door"
+      ],
+      "weight": 1.0
+    },
+    "it": {
+      "name": "Italian",
+      "patterns": [
+        "\\b(il|la|lo|gli|le|un|una|di|da|in|con|per)\\b",
+        "\\b(è|sono|era|erano|essere|stato|stata)\\b",
+        "\\b(questo|questa|questi|queste|quello|quella)\\b",
+        "\\b(noi|voi|loro|lui|lei)\\b"
+      ],
+      "keywords": [
+        "il",
+        "la",
+        "lo",
+        "gli",
+        "le",
+        "un",
+        "una",
+        "di",
+        "da",
+        "in"
+      ],
+      "weight": 1.0
+    },
+    "pt": {
+      "name": "Portuguese",
+      "patterns": [
+        "\\b(o|a|os|as|um|uma|de|do|da|em|com|por|para)\\b",
+        "\\b(é|são|era|eram|ser|sido|sendo)\\b",
+        "\\b(este|esta|estes|estas|esse|essa|esses|essas)\\b",
+        "\\b(nós|vocês|eles|elas|ele|ela)\\b"
+      ],
+      "keywords": [
+        "o",
+        "a",
+        "os",
+        "as",
+        "um",
+        "uma",
+        "de",
+        "do",
+        "da",
+        "em"
+      ],
+      "weight": 1.0
+    }
+  },
+  "tourism_keywords": {
+    "en": [
+      "tourism",
+      "travel",
+      "destination",
+      "holiday",
+      "vacation",
+      "trip",
+      "tour",
+      "visit",
+      "explore",
+      "discover"
+    ],
+    "fr": [
+      "tourisme",
+      "voyage",
+      "destination",
+      "vacances",
+      "voyage",
+      "visite",
+      "explorer",
+      "découvrir"
+    ],
+    "de": [
+      "tourismus",
+      "reise",
+      "ziel",
+      "urlaub",
+      "reise",
+      "besuch",
+      "erkunden",
+      "entdecken"
+    ],
+    "es": [
+      "turismo",
+      "viaje",
+      "destino",
+      "vacaciones",
+      "viaje",
+      "visita",
+      "explorar",
+      "descubrir"
+    ],
+    "nl": [
+      "toerisme",
+      "reis",
+      "bestemming",
+      "vakantie",
+      "reis",
+      "bezoek",
+      "verkennen",
+      "ontdekken"
+    ],
+    "it": [
+      "turismo",
+      "viaggio",
+      "destinazione",
+      "vacanze",
+      "viaggio",
+      "visita",
+      "esplorare",
+      "scoprire"
+    ],
+    "pt": [
+      "turismo",
+      "viagem",
+      "destino",
+      "férias",
+      "viagem",
+      "visita",
+      "explorar",
+      "descobrir"
+    ]
+  },
+  "gambia_keywords": {
+    "en": [
+      "gambia",
+      "gambian",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ],
+    "fr": [
+      "gambie",
+      "gambien",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ],
+    "de": [
+      "gambia",
+      "gambisch",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ],
+    "es": [
+      "gambia",
+      "gambiano",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ],
+    "nl": [
+      "gambia",
+      "gambiaans",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ],
+    "it": [
+      "gambia",
+      "gambiano",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ],
+    "pt": [
+      "gâmbia",
+      "gambiano",
+      "banjul",
+      "serrekunda",
+      "kololi",
+      "kotu",
+      "fajara"
+    ]
+  },
+  "analysis_weights": {
+    "pattern_match_weight": 1.0,
+    "keyword_match_weight": 1.5,
+    "tourism_keyword_weight": 2.0,
+    "gambia_keyword_weight": 2.5,
+    "confidence_threshold": 0.3
+  }
+}

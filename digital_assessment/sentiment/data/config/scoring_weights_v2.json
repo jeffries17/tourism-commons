@@ -1,0 +1,171 @@
+{
+  "methodology_version": "v2.0",
+  "last_updated": "2025-10-01",
+  "description": "Standardized 10-point system with sector-specific weighting",
+  "categories": {
+    "social_media": {
+      "max_raw_points": 10,
+      "name": "Social Media Business Presence",
+      "criteria_count": 10
+    },
+    "website": {
+      "max_raw_points": 10,
+      "name": "Website Presence & Functionality",
+      "criteria_count": 10
+    },
+    "visual_content": {
+      "max_raw_points": 10,
+      "name": "Visual Content Quality",
+      "criteria_count": 10
+    },
+    "discoverability": {
+      "max_raw_points": 10,
+      "name": "Online Discoverability & Reputation",
+      "criteria_count": 10
+    },
+    "digital_sales": {
+      "max_raw_points": 10,
+      "name": "Digital Sales/Booking Capability",
+      "criteria_count": 10
+    },
+    "platform_integration": {
+      "max_raw_points": 10,
+      "name": "Platform Integration",
+      "criteria_count": 10
+    }
+  },
+  "scoring_structure": {
+    "max_raw_total": 60,
+    "max_weighted_external": 70,
+    "max_survey": 30,
+    "max_combined": 100
+  },
+  "sector_weights": {
+    "Crafts and artisan products": {
+      "description": "Batik, woodcarving, tie-dye, jewelry - Visual products sold via social media",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Visual products sold primarily via Instagram/Facebook. Photos ARE the product showcase."
+    },
+    "Fashion & Design": {
+      "description": "Fashion, clothing, design - Visual storytelling with moderate e-commerce",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Similar to crafts but higher digital sales (online ordering more common) and website (sizing/customization info)."
+    },
+    "Performing and visual arts": {
+      "description": "Theater, dance, galleries, artists - Event promotion via social",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Social media for event promotion and showcasing work. Platform integration slightly higher (event listings)."
+    },
+    "Audiovisual (film, photography, TV, videography)": {
+      "description": "Photography, videography, film - Portfolio-driven businesses",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Visual content is CRITICAL (portfolio). Website important for detailed service info. Discoverability higher than other creative (searched by businesses)."
+    },
+    "Marketing/advertising/publishing": {
+      "description": "Marketing agencies, publishers, content creators",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Website critical (showcase work, case studies). Professional digital presence expected. Discoverability important for B2B."
+    },
+    "Festivals and cultural events": {
+      "description": "Music festivals, cultural events, event organizers",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Social media dominates (event promotion, engagement). Discoverability important (people search for events). Lower visual weight (event photos vs product photos)."
+    },
+    "Cultural heritage sites/museums": {
+      "description": "Museums, historical sites, cultural centers",
+      "social_media": 2.2,
+      "website": 1.0,
+      "visual_content": 2.0,
+      "discoverability": 0.8,
+      "digital_sales": 0.5,
+      "platform_integration": 0.5,
+      "total_multiplier": 7.0,
+      "rationale": "Discoverability critical (tourists search for attractions). Platform integration important (listed on TripAdvisor, tourism sites). Lower sales weight (mostly entry fees)."
+    },
+    "Tour Operators": {
+      "description": "Tourism operators - Discoverability & booking capability focused",
+      "social_media": 1.1,
+      "website": 1.2,
+      "visual_content": 0.8,
+      "discoverability": 2.1,
+      "digital_sales": 1.0,
+      "platform_integration": 0.8,
+      "total_multiplier": 7.0,
+      "rationale": "Tour operators depend on discoverability (tourists search online) and booking capabilities. Website serves as primary information source. Digital sales essential as tourists expect to book/pay online."
+    }
+  },
+  "default_weights": {
+    "description": "Used if sector not specified or doesn't match above",
+    "social_media": 2.2,
+    "website": 1.0,
+    "visual_content": 2.0,
+    "discoverability": 0.8,
+    "digital_sales": 0.5,
+    "platform_integration": 0.5,
+    "total_multiplier": 7.0,
+    "note": "Balanced weighting across all categories"
+  },
+  "survey_scoring": {
+    "max_points": 30,
+    "categories": {
+      "digital_comfort": {
+        "max_points": 8,
+        "description": "Self-reported comfort with digital tools"
+      },
+      "content_strategy": {
+        "max_points": 8,
+        "description": "Awareness and planning of content"
+      },
+      "platform_breadth": {
+        "max_points": 7,
+        "description": "Number of platforms actively used"
+      },
+      "investment_capacity": {
+        "max_points": 4,
+        "description": "Budget for digital marketing"
+      },
+      "challenge_severity": {
+        "max_points": 3,
+        "description": "Perceived barriers to digital adoption"
+      }
+    },
+    "optional": true,
+    "note": "Survey provides internal perspective. External score (0-70) is primary metric."
+  }
+}
