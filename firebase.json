@@ -30,15 +30,15 @@
       },
       {
         "source": "/benin-sentiment",
-        "destination": "/index.html"
+        "destination": "/gambia-itc/index.html"
       },
       {
         "source": "/gambia-itc/**",
-        "destination": "/index.html"
+        "destination": "/gambia-itc/index.html"
       },
       {
         "source": "**",
-        "destination": "/landing.html"
+        "destination": "/index.html"
       }
     ],
       "cleanUrls": true,
