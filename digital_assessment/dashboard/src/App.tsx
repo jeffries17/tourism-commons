@@ -56,7 +56,7 @@ function App() {
                       Digital Assessment & Analysis Platform
                     </p>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                      Supporting tourism development and digital capacity building across West Africa. 
+                      Supporting  and digital capacity building across West Africa. 
                       A common good initiative for tourism operators, creative industries, and cultural heritage sites.
                     </p>
                     <p className="text-base text-gray-600 max-w-2xl mx-auto">
