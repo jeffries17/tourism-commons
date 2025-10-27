@@ -39,21 +39,36 @@ function App() {
         <AuthProvider>
           <DocumentTitle />
           <Routes>
-            {/* Public route - Login */}
+            {/* Public routes */}
             <Route path="/login" element={<Login />} />
-            
-            {/* Benin Sentiment - public standalone page */}
             <Route path="/benin-sentiment" element={<BeninSentiment />} />
             
-            {/* Redirect /gambia-itc to root for backward compatibility */}
-            <Route path="/gambia-itc" element={<Navigate to="/" replace />} />
-            <Route path="/gambia-itc/*" element={<Navigate to="/" replace />} />
+            {/* Landing page at root - public */}
+            <Route path="/" element={
+              <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">Tourism Commons</h1>
+                  <p className="text-xl text-gray-600 mb-8">Digital Assessment & Analysis Platform</p>
+                  <div className="space-y-4">
+                    <a href="/gambia-itc" className="block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium">
+                      → Gambia ITC Dashboard
+                    </a>
+                    <a href="/benin-sentiment" className="block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                      → Benin Sentiment Analysis
+                    </a>
+                    <a href="/login" className="block px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+                      Login
+                    </a>
+                  </div>
+                </div>
+              </div>
+            } />
             
             {/* Protected routes - require authentication */}
             <Route element={<DashboardLayout />}>
-              {/* Home - redirects based on role */}
+              {/* Gambia ITC dashboard */}
               <Route 
-                path="/" 
+                path="/gambia-itc" 
                 element={
                   <ProtectedRoute>
                     <ParticipantRedirect>
