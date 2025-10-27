@@ -1,0 +1,3605 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-27T13:00:58.817057",
+    "title": "Benin Cultural Heritage Sentiment Analysis",
+    "total_stakeholders": 30,
+    "total_reviews": 1284,
+    "unified_themes": [
+      "cultural_heritage",
+      "service_staff",
+      "facilities_infrastructure",
+      "accessibility_transport",
+      "value_money",
+      "safety_security",
+      "educational_value",
+      "artistic_creative",
+      "atmosphere_experience"
+    ]
+  },
+  "stakeholder_data": [
+    {
+      "stakeholder_name": "Artisanal Center",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 101,
+      "average_rating": 3.8,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d479674-Reviews-Artisanal_Center-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.202,
+      "positive_rate": 0.6008084542410714,
+      "language_distribution": {
+        "pl": 12,
+        "en": 46,
+        "pt": 3,
+        "fr": 31,
+        "it": 7,
+        "de": 1,
+        "unknown": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.05,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.05,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.02,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Babs Dock",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 94,
+      "average_rating": 4.3,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d4947090-Reviews-Bab_s_Dock-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.241,
+      "positive_rate": 0.6206689719945355,
+      "language_distribution": {
+        "fr": 26,
+        "en": 49,
+        "pl": 7,
+        "pt": 2,
+        "it": 9,
+        "unknown": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.02,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.03,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.02,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.02,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.03,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Cathedrale Notre Dame De Limmaculee Conception",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 8,
+      "average_rating": 4.1,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d8130241-Reviews-Cathedrale_Notre_Dame_de_l_Immaculee_Conception-Porto_Novo_Oueme_Department.html",
+      "overall_sentiment": -0.067,
+      "positive_rate": 0.4666666666666667,
+      "language_distribution": {
+        "en": 5,
+        "fr": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.16,
+          "mentions": 15,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.16,
+          "mentions": 15,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.16,
+          "mentions": 15,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.16,
+          "mentions": 15,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Chutes De Kota",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 13,
+      "average_rating": 4.5,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1841342-d4551152-Reviews-Chutes_de_Kota-Natitingou_Atakora_Department.html",
+      "overall_sentiment": 0.364,
+      "positive_rate": 0.681988525390625,
+      "language_distribution": {
+        "it": 2,
+        "fr": 6,
+        "en": 3,
+        "pl": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Da Silva Museum",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 21,
+      "average_rating": 3.9,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479679-Reviews-Da_Silva_Museum-Porto_Novo_Oueme_Department.html",
+      "overall_sentiment": 0.403,
+      "positive_rate": 0.7015132189239333,
+      "language_distribution": {
+        "en": 12,
+        "fr": 6,
+        "it": 2,
+        "pl": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.22,
+          "mentions": 21,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "service_staff": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.22,
+          "mentions": 21,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Ethnographique Museum Of Porto Novo",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 29,
+      "average_rating": 3.7,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479677-Reviews-Ethnographique_Museum_of_Porto_Novo-Porto_Novo_Oueme_Department.html",
+      "overall_sentiment": 0.244,
+      "positive_rate": 0.62197265625,
+      "language_distribution": {
+        "pl": 3,
+        "en": 19,
+        "fr": 6,
+        "pt": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.25,
+          "mentions": 24,
+          "distribution": {
+            "positive": 14,
+            "neutral": 7,
+            "negative": 2
+          }
+        },
+        "service_staff": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.25,
+          "mentions": 24,
+          "distribution": {
+            "positive": 14,
+            "neutral": 7,
+            "negative": 2
+          }
+        },
+        "value_money": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Etoile Rouge",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 28,
+      "average_rating": 3.4,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d9996367-Reviews-Etoile_Rouge-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.183,
+      "positive_rate": 0.5912533068783069,
+      "language_distribution": {
+        "it": 3,
+        "en": 11,
+        "fr": 8,
+        "pl": 5,
+        "unknown": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.19,
+          "mentions": 18,
+          "distribution": {
+            "positive": 10,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.19,
+          "mentions": 18,
+          "distribution": {
+            "positive": 10,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Fidjrosse Beach",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 73,
+      "average_rating": 3.6,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d479676-Reviews-Fidjrosse_Beach-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.172,
+      "positive_rate": 0.5858847191220238,
+      "language_distribution": {
+        "en": 30,
+        "fr": 26,
+        "it": 7,
+        "pl": 6,
+        "unknown": 2,
+        "de": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Fondation Zinsou",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 88,
+      "average_rating": 4.3,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d4156500-Reviews-Fondation_Zinsou-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.347,
+      "positive_rate": 0.6734031282349896,
+      "language_distribution": {
+        "en": 41,
+        "fr": 23,
+        "it": 7,
+        "pl": 14,
+        "unknown": 1,
+        "pt": 1,
+        "de": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.08,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.02,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.12,
+          "mentions": 11,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.06,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.08,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.08,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Foret Sacree De Kpasse",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 10,
+      "average_rating": 4.3,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d19827241-Reviews-Foret_Sacree_de_Kpasse-Ouidah_Atlantique_Department.html",
+      "overall_sentiment": 0.273,
+      "positive_rate": 0.636494641426282,
+      "language_distribution": {
+        "en": 7,
+        "pl": 1,
+        "fr": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.43,
+          "mentions": 43,
+          "distribution": {
+            "positive": 25,
+            "neutral": 12,
+            "negative": 4
+          }
+        },
+        "service_staff": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.22,
+          "mentions": 21,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "value_money": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.22,
+          "mentions": 21,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Great Mosque Of Portonovo",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 20,
+      "average_rating": 4.0,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d8397791-Reviews-Great_Mosque_of_Porto_Novo-Porto_Novo_Oueme_Department.html",
+      "overall_sentiment": 0.257,
+      "positive_rate": 0.6283482142857143,
+      "language_distribution": {
+        "en": 15,
+        "pl": 1,
+        "it": 2,
+        "fr": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.26,
+          "mentions": 25,
+          "distribution": {
+            "positive": 15,
+            "neutral": 7,
+            "negative": 2
+          }
+        },
+        "service_staff": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.26,
+          "mentions": 25,
+          "distribution": {
+            "positive": 15,
+            "neutral": 7,
+            "negative": 2
+          }
+        },
+        "value_money": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Jardin Place Jean Bayol",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 6,
+      "average_rating": 4.5,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479678-Reviews-Jardin_Place_Jean_Bayol-Porto_Novo_Oueme_Department.html",
+      "overall_sentiment": 0.625,
+      "positive_rate": 0.8125,
+      "language_distribution": {
+        "fr": 2,
+        "pl": 1,
+        "en": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.88,
+          "mentions": 87,
+          "distribution": {
+            "positive": 52,
+            "neutral": 26,
+            "negative": 8
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.44,
+          "mentions": 43,
+          "distribution": {
+            "positive": 25,
+            "neutral": 12,
+            "negative": 4
+          }
+        },
+        "value_money": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.44,
+          "mentions": 43,
+          "distribution": {
+            "positive": 25,
+            "neutral": 12,
+            "negative": 4
+          }
+        },
+        "artistic_creative": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "La Bouche Du Roy",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 2,
+      "average_rating": 4.0,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482829-d23724658-Reviews-La_Bouche_Du_Roy-Grand_Popo_Mono_Department.html",
+      "overall_sentiment": 0.337,
+      "positive_rate": 0.6684027777777778,
+      "language_distribution": {
+        "fr": 1,
+        "it": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.46,
+          "mentions": 46,
+          "distribution": {
+            "positive": 27,
+            "neutral": 13,
+            "negative": 4
+          }
+        },
+        "educational_value": {
+          "score": 0.23,
+          "mentions": 23,
+          "distribution": {
+            "positive": 13,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "artistic_creative": {
+          "score": 0.23,
+          "mentions": 23,
+          "distribution": {
+            "positive": 13,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.23,
+          "mentions": 23,
+          "distribution": {
+            "positive": 13,
+            "neutral": 6,
+            "negative": 2
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "La Porte Du Non Retour",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 133,
+      "average_rating": 4.1,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d4776402-Reviews-La_Porte_Du_Non_Retour-Ouidah_Atlantique_Department.html",
+      "overall_sentiment": 0.159,
+      "positive_rate": 0.5795235339506173,
+      "language_distribution": {
+        "en": 85,
+        "pl": 10,
+        "it": 10,
+        "fr": 24,
+        "pt": 3,
+        "unknown": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.11,
+          "mentions": 11,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Lac Nokoue",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 67,
+      "average_rating": 4.4,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482828-d4472920-Reviews-Lac_Nokoue-Ganvie_Atlantique_Department.html",
+      "overall_sentiment": 0.321,
+      "positive_rate": 0.6602933476631393,
+      "language_distribution": {
+        "en": 42,
+        "pl": 3,
+        "it": 8,
+        "fr": 13,
+        "pt": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.04,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.03,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.03,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.04,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.03,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Marche Dantokpa",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 64,
+      "average_rating": 4.0,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d479675-Reviews-Marche_Dantokpa-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.322,
+      "positive_rate": 0.6608406455254516,
+      "language_distribution": {
+        "en": 37,
+        "pl": 9,
+        "fr": 11,
+        "it": 4,
+        "unknown": 1,
+        "pt": 1,
+        "de": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.07,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.11,
+          "mentions": 11,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.07,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Monument Amazone",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 12,
+      "average_rating": 4.6,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d25063593-Reviews-Monument_Amazone-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.4,
+      "positive_rate": 0.7,
+      "language_distribution": {
+        "en": 8,
+        "pl": 1,
+        "fr": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.3,
+          "mentions": 29,
+          "distribution": {
+            "positive": 17,
+            "neutral": 8,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.15,
+          "mentions": 14,
+          "distribution": {
+            "positive": 8,
+            "neutral": 4,
+            "negative": 1
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Musee De La Fondation Zinsou",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 51,
+      "average_rating": 4.5,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d5990229-Reviews-Musee_de_la_Fondation_Zinsou-Ouidah_Atlantique_Department.html",
+      "overall_sentiment": 0.418,
+      "positive_rate": 0.7089913504464286,
+      "language_distribution": {
+        "fr": 16,
+        "en": 22,
+        "it": 4,
+        "pl": 5,
+        "pt": 3,
+        "unknown": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.11,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.11,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.11,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.21,
+          "mentions": 21,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.07,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Musee Honme Palais Royal",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 20,
+      "average_rating": 3.9,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293765-d479680-Reviews-Musee_Honme_Palais_Royal-Porto_Novo_Oueme_Department.html",
+      "overall_sentiment": 0.317,
+      "positive_rate": 0.6586174242424243,
+      "language_distribution": {
+        "fr": 4,
+        "en": 14,
+        "it": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Obama Beach",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 18,
+      "average_rating": 3.6,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d11962943-Reviews-Obama_Beach-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.366,
+      "positive_rate": 0.6829559948979592,
+      "language_distribution": {
+        "it": 2,
+        "en": 12,
+        "pl": 2,
+        "unknown": 1,
+        "fr": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.2,
+          "mentions": 19,
+          "distribution": {
+            "positive": 11,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.1,
+          "mentions": 9,
+          "distribution": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Ouidah Museum Of History",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 78,
+      "average_rating": 4.1,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d4947092-Reviews-Ouidah_Museum_of_History-Ouidah_Atlantique_Department.html",
+      "overall_sentiment": 0.205,
+      "positive_rate": 0.6023478835978836,
+      "language_distribution": {
+        "en": 53,
+        "pl": 6,
+        "fr": 11,
+        "it": 5,
+        "es": 1,
+        "pt": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.11,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.04,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.04,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.04,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Palais Des Congres",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 12,
+      "average_rating": 4.1,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d9996366-Reviews-Palais_des_Congres-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.48,
+      "positive_rate": 0.740234375,
+      "language_distribution": {
+        "pl": 2,
+        "en": 7,
+        "fr": 1,
+        "it": 1,
+        "es": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.5,
+          "mentions": 49,
+          "distribution": {
+            "positive": 29,
+            "neutral": 14,
+            "negative": 4
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.5,
+          "mentions": 49,
+          "distribution": {
+            "positive": 29,
+            "neutral": 14,
+            "negative": 4
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.33,
+          "mentions": 33,
+          "distribution": {
+            "positive": 19,
+            "neutral": 9,
+            "negative": 3
+          }
+        },
+        "value_money": {
+          "score": 0.17,
+          "mentions": 16,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.17,
+          "mentions": 16,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.17,
+          "mentions": 16,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.33,
+          "mentions": 33,
+          "distribution": {
+            "positive": 19,
+            "neutral": 9,
+            "negative": 3
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.17,
+          "mentions": 16,
+          "distribution": {
+            "positive": 9,
+            "neutral": 4,
+            "negative": 1
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Palais Des Rois Dabomey",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 103,
+      "average_rating": 3.7,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479759-d4739459-Reviews-Palais_des_rois_d_Abomey-Abomey_Zou_Department.html",
+      "overall_sentiment": 0.228,
+      "positive_rate": 0.6141823042776433,
+      "language_distribution": {
+        "fr": 25,
+        "pl": 9,
+        "it": 13,
+        "en": 52,
+        "de": 2,
+        "pt": 2
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.06,
+          "mentions": 6,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.05,
+          "mentions": 4,
+          "distribution": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.11,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.09,
+          "mentions": 8,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Pendjari National Park",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 69,
+      "average_rating": 4.3,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g4590754-d2185917-Reviews-Pendjari_National_Park-Tanguieta_Atakora_Department.html",
+      "overall_sentiment": 0.317,
+      "positive_rate": 0.6586095054859631,
+      "language_distribution": {
+        "fr": 25,
+        "it": 5,
+        "en": 31,
+        "pl": 4,
+        "pt": 3,
+        "de": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.04,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.09,
+          "mentions": 8,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.01,
+          "mentions": 1,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Place Des Martyrs",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 13,
+      "average_rating": 3.9,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d9996632-Reviews-Place_des_Martyrs-Cotonou_Littoral_Department.html",
+      "overall_sentiment": -0.083,
+      "positive_rate": 0.45833333333333337,
+      "language_distribution": {
+        "en": 10,
+        "pl": 1,
+        "unknown": 1,
+        "fr": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.25,
+          "mentions": 24,
+          "distribution": {
+            "positive": 14,
+            "neutral": 7,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.12,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Route Des Esclaves",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 5,
+      "average_rating": 4.6,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d21401704-Reviews-Route_Des_Esclaves-Ouidah_Atlantique_Department.html",
+      "overall_sentiment": 0.407,
+      "positive_rate": 0.7033662796020508,
+      "language_distribution": {
+        "de": 1,
+        "en": 3,
+        "fr": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.1,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.1,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.1,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.2,
+          "mentions": 20,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "value_money": {
+          "score": 0.1,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.2,
+          "mentions": 20,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "artistic_creative": {
+          "score": 0.2,
+          "mentions": 20,
+          "distribution": {
+            "positive": 12,
+            "neutral": 6,
+            "negative": 2
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.1,
+          "mentions": 10,
+          "distribution": {
+            "positive": 6,
+            "neutral": 3,
+            "negative": 1
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Saint Michel Church",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 7,
+      "average_rating": 4.3,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d12268516-Reviews-Saint_Michel_church-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.167,
+      "positive_rate": 0.5833333333333334,
+      "language_distribution": {
+        "en": 5,
+        "fr": 1,
+        "unknown": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.38,
+          "mentions": 38,
+          "distribution": {
+            "positive": 22,
+            "neutral": 11,
+            "negative": 3
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.38,
+          "mentions": 38,
+          "distribution": {
+            "positive": 22,
+            "neutral": 11,
+            "negative": 3
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.38,
+          "mentions": 38,
+          "distribution": {
+            "positive": 22,
+            "neutral": 11,
+            "negative": 3
+          }
+        },
+        "artistic_creative": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Station Balneaire De Grand Popo",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 1,
+      "average_rating": 4.0,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482829-d23895301-Reviews-Station_Balneaire_De_Grand_Popo-Grand_Popo_Mono_Department.html",
+      "overall_sentiment": 0.474,
+      "positive_rate": 0.7372159090909091,
+      "language_distribution": {
+        "fr": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "service_staff": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "educational_value": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "artistic_creative": {
+          "score": 0.13,
+          "mentions": 12,
+          "distribution": {
+            "positive": 7,
+            "neutral": 3,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Temple Des Pythons",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 136,
+      "average_rating": 3.5,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479758-d5018948-Reviews-Temple_des_Pythons-Ouidah_Atlantique_Department.html",
+      "overall_sentiment": 0.309,
+      "positive_rate": 0.6543635585130279,
+      "language_distribution": {
+        "en": 84,
+        "it": 10,
+        "pl": 16,
+        "fr": 21,
+        "de": 2,
+        "pt": 3
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.08,
+          "mentions": 7,
+          "distribution": {
+            "positive": 4,
+            "neutral": 2,
+            "negative": 0
+          }
+        },
+        "service_staff": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.06,
+          "mentions": 5,
+          "distribution": {
+            "positive": 3,
+            "neutral": 1,
+            "negative": 0
+          }
+        },
+        "value_money": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "safety_security": {
+          "score": 0.03,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "educational_value": {
+          "score": 0.03,
+          "mentions": 3,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.02,
+          "mentions": 2,
+          "distribution": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    },
+    {
+      "stakeholder_name": "Temple Zangbeto De Cotonou",
+      "source": "benin_cultural_heritage",
+      "total_reviews": 2,
+      "average_rating": 4.5,
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297314-d25102185-Reviews-Temple_Zangbeto_De_Cotonou-Cotonou_Littoral_Department.html",
+      "overall_sentiment": 0.316,
+      "positive_rate": 0.6580113636363636,
+      "language_distribution": {
+        "pl": 1,
+        "fr": 1
+      },
+      "theme_scores": {
+        "cultural_heritage": {
+          "score": 0.58,
+          "mentions": 57,
+          "distribution": {
+            "positive": 34,
+            "neutral": 17,
+            "negative": 5
+          }
+        },
+        "service_staff": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "facilities_infrastructure": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "accessibility_transport": {
+          "score": 0.19,
+          "mentions": 19,
+          "distribution": {
+            "positive": 11,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "value_money": {
+          "score": 0.38,
+          "mentions": 38,
+          "distribution": {
+            "positive": 22,
+            "neutral": 11,
+            "negative": 3
+          }
+        },
+        "safety_security": {
+          "score": 0.38,
+          "mentions": 38,
+          "distribution": {
+            "positive": 22,
+            "neutral": 11,
+            "negative": 3
+          }
+        },
+        "educational_value": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        },
+        "artistic_creative": {
+          "score": 0.19,
+          "mentions": 19,
+          "distribution": {
+            "positive": 11,
+            "neutral": 5,
+            "negative": 1
+          }
+        },
+        "atmosphere_experience": {
+          "score": 0.0,
+          "mentions": 0,
+          "distribution": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 0
+          }
+        }
+      },
+      "year_distribution": {
+        "2023": 39,
+        "2022": 37,
+        "2020": 52,
+        "2019": 140,
+        "2018": 213,
+        "2017": 201,
+        "2016": 186,
+        "2015": 166,
+        "2014": 88,
+        "2013": 65,
+        "2012": 20,
+        "2009": 1,
+        "2025": 21,
+        "2024": 33,
+        "2021": 15,
+        "2010": 2,
+        "2011": 2,
+        "2008": 2,
+        "2007": 1
+      }
+    }
+  ]
+}

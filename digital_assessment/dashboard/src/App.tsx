@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AuthProvider } from './contexts/AuthContext';
 import DashboardLayout from './components/layout/DashboardLayout';
@@ -12,6 +12,7 @@ import TechnicalAudit from './pages/TechnicalAudit';
 import RegionalAnalysis from './pages/RegionalAnalysis';
 import ITOPerception from './pages/ITOPerception';
 import ReviewsSentiment from './pages/ReviewsSentiment';
+import BeninSentiment from './pages/BeninSentiment';
 import Login from './pages/Login';
 import ProtectedRoute from './components/ProtectedRoute';
 import DocumentTitle from './components/common/DocumentTitle';
@@ -39,6 +40,9 @@ function App() {
           <Routes>
             {/* Public route - Login */}
             <Route path="/login" element={<Login />} />
+            
+            {/* Benin Sentiment - public standalone page */}
+            <Route path="/benin-sentiment" element={<BeninSentiment />} />
             
             {/* Protected routes - require authentication */}
             <Route element={<DashboardLayout />}>
