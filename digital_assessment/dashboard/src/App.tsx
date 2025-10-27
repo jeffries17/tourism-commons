@@ -30,7 +30,8 @@ const queryClient = new QueryClient({
 
 function App() {
   // Use basename only in production (when deployed to Firebase)
-  const basename = import.meta.env.PROD ? '/gambia-itc' : '/';
+  // Remove basename to support multiple standalone routes
+  const basename = '/';
   
   return (
     <QueryClientProvider client={queryClient}>
