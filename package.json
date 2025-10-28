@@ -4,7 +4,7 @@
   "scripts": {
     "build": "npm run build:website && npm run build:tools",
     "build:website": "mkdir -p build && cp website/index.html build/index.html",
-    "build:tools": "cd tools/digital-assessment && npm run build && cd ../.. && cp -r tools/digital-assessment/dist/assets build/ && cp -r tools/digital-assessment/dist/gambia-itc build/ && echo '/* /index.html 200' > build/_redirects",
+    "build:tools": "cd tools/digital-assessment && npm run build && cd ../.. && cp -r tools/digital-assessment/dist/assets build/ && cp -r tools/digital-assessment/dist/gambia-itc build/ && cp tools/digital-assessment/dist/index.html build/gambia-itc/index.html && echo '/* /index.html 200' > build/_redirects",
     "dev": "cd tools/digital-assessment && npm run dev",
     "deploy": "npm run build && firebase deploy --only hosting"
   }

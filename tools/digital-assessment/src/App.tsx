@@ -40,7 +40,7 @@ function App() {
           <DocumentTitle />
           <Routes>
             {/* Public routes */}
-            <Route path="/login" element={<Login />} />
+            <Route path="/gambia-itc/login" element={<Login />} />
             <Route path="/benin-sentiment" element={<BeninSentiment />} />
             
             {/* Landing page at root - public */}
@@ -105,7 +105,7 @@ function App() {
 
                   {/* Login Link */}
                   <div className="text-center">
-                    <a href="/login" className="inline-block px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+                    <a href="/gambia-itc/login" className="inline-block px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium">
                       Login to Dashboard
                     </a>
                   </div>

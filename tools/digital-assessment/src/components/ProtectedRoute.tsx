@@ -11,7 +11,7 @@ interface ProtectedRouteProps {
 export default function ProtectedRoute({ 
   children, 
   adminOnly = false,
-  redirectTo = '/login'
+  redirectTo = '/gambia-itc/login'
 }: ProtectedRouteProps) {
   const { isAuthenticated, isAdmin, isLoading } = useAuth();
   const location = useLocation();
