@@ -6,7 +6,10 @@ import ReviewInput from './components/ReviewInput';
 import ResultsDisplay from './components/ResultsDisplay';
 import InlineReviewInput from './components/InlineReviewInput';
 import LandingPage from './components/LandingPage';
+import BatchInsights from './components/BatchInsights';
+import ComparisonView from './components/ComparisonView';
 import { saveSession, updateSession, ReviewSession } from './services/sessionService';
+import Papa from 'papaparse';
 
 function SentimentAnalysisPage() {
   const { user, isAuthenticated } = useAuth();
@@ -15,7 +18,10 @@ function SentimentAnalysisPage() {
   const [reviews, setReviews] = useState<string[]>([]);
   const [currentReviewIndex, setCurrentReviewIndex] = useState<number | null>(null);
   const [showInlineInput, setShowInlineInput] = useState(false);
-  const [viewMode, setViewMode] = useState<'single' | 'all'>('single'); // 'single' or 'all'
+  const [viewMode, setViewMode] = useState<'single' | 'all' | 'insights'>('single'); // 'single', 'all', or 'insights'
+  const [comparisonMode, setComparisonMode] = useState(false);
+  const [batch2, setBatch2] = useState<{ reviews: string[]; name: string } | null>(null);
+  const [batch1Name, setBatch1Name] = useState('Batch 1');
   const [sessionName, setSessionName] = useState('');
   const [currentSessionId, setCurrentSessionId] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -42,6 +48,43 @@ function SentimentAnalysisPage() {
       setShowInlineInput(false);
       setViewMode('single');
     }
+  };
+
+  const handleAnalyzeBatch = (reviewTexts: string[]) => {
+    setShowLanding(false);
+    // Filter out empty reviews
+    const validReviews = reviewTexts.filter(text => text.trim().length > 0);
+    
+    if (validReviews.length === 0) {
+      alert('No valid reviews found in CSV file');
+      return;
+    }
+
+    // Set all reviews at once
+    setReviews(validReviews);
+    // For batch uploads with many reviews, default to insights view
+    // For smaller batches, use 'all' view
+    if (validReviews.length > 10) {
+      setViewMode('insights');
+    } else {
+      setViewMode('all');
+    }
+    setCurrentReviewIndex(null);
+    setShowInlineInput(false);
+    
+    // Show success message
+    alert(`Successfully loaded ${validReviews.length} reviews from CSV!`);
+  };
+
+  const handleLoadBatch2 = (reviewTexts: string[]) => {
+    const validReviews = reviewTexts.filter(text => text.trim().length > 0);
+    if (validReviews.length === 0) {
+      alert('No valid reviews found in CSV file');
+      return;
+    }
+    setBatch2({ reviews: validReviews, name: 'Batch 2' });
+    setComparisonMode(true);
+    setViewMode('insights');
   };
 
   const handleAddReview = (reviewText: string) => {
@@ -134,7 +177,7 @@ function SentimentAnalysisPage() {
         {/* Show review input at top if user clicked "Get Started" */}
         {hasClickedGetStarted && currentReviewIndex === null && reviews.length === 0 && (
           <div className="mb-8">
-            <ReviewInput onAnalyze={handleAnalyze} />
+            <ReviewInput onAnalyze={handleAnalyze} onAnalyzeBatch={handleAnalyzeBatch} />
           </div>
         )}
 
@@ -208,31 +251,128 @@ function SentimentAnalysisPage() {
                     >
                       All Reviews ({reviews.length})
                     </button>
+                    {reviews.length > 5 && (
+                      <button
+                        onClick={() => {
+                          setViewMode('insights');
+                          setCurrentReviewIndex(null);
+                        }}
+                        className={`px-3 py-1 text-sm rounded transition-colors ${
+                          viewMode === 'insights'
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                      >
+                        📊 Insights
+                      </button>
+                    )}
                   </div>
+                  {!comparisonMode && (
+                    <button
+                      onClick={() => {
+                        const input = document.createElement('input');
+                        input.type = 'file';
+                        input.accept = '.csv';
+                        input.onchange = (e) => {
+                          const file = (e.target as HTMLInputElement).files?.[0];
+                          if (file) {
+                            Papa.parse(file, {
+                              header: true,
+                              skipEmptyLines: true,
+                              complete: (results: any) => {
+                                const data = results.data as Record<string, any>[];
+                                if (data.length === 0) {
+                                  alert('CSV file is empty or contains no valid data');
+                                  return;
+                                }
+                                const headers = Object.keys(data[0] || {});
+                                const reviewColumn = headers.find(h => 
+                                  ['review_text', 'review', 'text', 'content', 'comment'].includes(h.toLowerCase())
+                                ) || headers[0];
+                                const reviews = data
+                                  .map(row => String(row[reviewColumn] || '').trim())
+                                  .filter(text => text.length > 0);
+                                if (reviews.length === 0) {
+                                  alert('No review text found in CSV file');
+                                  return;
+                                }
+                                handleLoadBatch2(reviews);
+                              },
+                              error: (error: any) => {
+                                alert(`Error reading CSV file: ${error.message}`);
+                              }
+                            });
+                          }
+                        };
+                        input.click();
+                      }}
+                      className="px-3 py-1 text-sm rounded bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+                    >
+                      🔀 Compare with File
+                    </button>
+                  )}
                   {viewMode === 'single' && (
-                    <div className="flex gap-2 items-center">
+                    <div className="flex gap-2 items-center flex-wrap">
                       <span className="text-sm text-gray-600">Review:</span>
-                      {reviews.map((_, idx) => (
-                        <div key={idx} className="relative group">
-                          <button
-                            onClick={() => setCurrentReviewIndex(idx)}
-                            className={`px-3 py-1 text-sm rounded transition-colors flex items-center gap-1 ${
-                              currentReviewIndex === idx
-                                ? 'bg-blue-600 text-white'
-                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                            }`}
-                          >
-                            {idx + 1}
-                          </button>
-                          <button
-                            onClick={(e) => handleRemoveReview(idx, e)}
-                            className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-4 h-4 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center hover:bg-red-600"
-                            aria-label={`Remove review ${idx + 1}`}
-                          >
-                            ×
-                          </button>
+                      <div className="flex gap-1 items-center">
+                        <button
+                          onClick={() => setCurrentReviewIndex(Math.max(0, (currentReviewIndex || 0) - 1))}
+                          disabled={currentReviewIndex === 0}
+                          className="px-3 py-1 text-sm rounded transition-colors bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+                          aria-label="Previous review"
+                        >
+                          ←
+                        </button>
+                        <div className="flex items-center gap-1 px-2">
+                          <input
+                            type="number"
+                            min="1"
+                            max={reviews.length}
+                            value={(currentReviewIndex || 0) + 1}
+                            onChange={(e) => {
+                              const num = parseInt(e.target.value);
+                              if (num >= 1 && num <= reviews.length) {
+                                setCurrentReviewIndex(num - 1);
+                              }
+                            }}
+                            className="w-16 px-2 py-1 text-sm border border-gray-300 rounded text-center focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                          />
+                          <span className="text-sm text-gray-600">of {reviews.length}</span>
                         </div>
-                      ))}
+                        <button
+                          onClick={() => setCurrentReviewIndex(Math.min(reviews.length - 1, (currentReviewIndex || 0) + 1))}
+                          disabled={currentReviewIndex === reviews.length - 1}
+                          className="px-3 py-1 text-sm rounded transition-colors bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+                          aria-label="Next review"
+                        >
+                          →
+                        </button>
+                      </div>
+                      {reviews.length <= 20 && (
+                        <div className="flex gap-1 flex-wrap">
+                          {reviews.map((_, idx) => (
+                            <div key={idx} className="relative group">
+                              <button
+                                onClick={() => setCurrentReviewIndex(idx)}
+                                className={`px-2 py-1 text-xs rounded transition-colors ${
+                                  currentReviewIndex === idx
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                }`}
+                              >
+                                {idx + 1}
+                              </button>
+                              <button
+                                onClick={(e) => handleRemoveReview(idx, e)}
+                                className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-4 h-4 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center hover:bg-red-600"
+                                aria-label={`Remove review ${idx + 1}`}
+                              >
+                                ×
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </>
@@ -261,10 +401,12 @@ function SentimentAnalysisPage() {
             )}
 
             {/* View Mode Indicator */}
-            {reviews.length > 1 && (
+            {reviews.length > 1 && !comparisonMode && (
               <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
                 <p className="text-sm text-blue-800">
-                  {viewMode === 'all' ? (
+                  {viewMode === 'insights' ? (
+                    <>📊 Showing insights for {reviews.length} reviews</>
+                  ) : viewMode === 'all' ? (
                     <>📊 Analyzing all {reviews.length} reviews combined</>
                   ) : (
                     <>📊 Analyzing review {currentReviewIndex! + 1} of {reviews.length}</>
@@ -273,7 +415,58 @@ function SentimentAnalysisPage() {
               </div>
             )}
 
-            <ResultsDisplay review={getDisplayReview()} />
+            {/* Comparison Mode */}
+            {comparisonMode && batch2 ? (
+              <div className="mb-4">
+                <div className="mb-4 p-3 bg-purple-50 border border-purple-200 rounded-lg">
+                  <div className="flex justify-between items-center">
+                    <p className="text-sm text-purple-800">
+                      🔀 Comparing {reviews.length} reviews vs {batch2.reviews.length} reviews
+                    </p>
+                    <button
+                      onClick={() => {
+                        setComparisonMode(false);
+                        setBatch2(null);
+                        setViewMode('insights');
+                      }}
+                      className="px-3 py-1 text-sm bg-purple-600 text-white rounded hover:bg-purple-700"
+                    >
+                      Exit Comparison
+                    </button>
+                  </div>
+                </div>
+                <div className="mb-4 flex gap-2">
+                  <input
+                    type="text"
+                    value={batch1Name}
+                    onChange={(e) => setBatch1Name(e.target.value)}
+                    placeholder="Batch 1 name"
+                    className="px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                  />
+                  <input
+                    type="text"
+                    value={batch2.name}
+                    onChange={(e) => setBatch2({ ...batch2, name: e.target.value })}
+                    placeholder="Batch 2 name"
+                    className="px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                  />
+                </div>
+                <ComparisonView 
+                  batch1={{ reviews, name: batch1Name }}
+                  batch2={batch2}
+                />
+              </div>
+            ) : viewMode === 'insights' ? (
+              <BatchInsights 
+                reviews={reviews} 
+                onReviewClick={(index) => {
+                  setCurrentReviewIndex(index);
+                  setViewMode('single');
+                }}
+              />
+            ) : (
+              <ResultsDisplay review={getDisplayReview()} />
+            )}
           </div>
         ) : (
           /* Show landing page - either standalone or below review input */
