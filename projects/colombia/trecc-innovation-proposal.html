@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Responsable Vende – TRECC / Institut Français Colombia</title>
+    <style>
+        :root {
+            /* Colombian accent colors */
+            --colombia-yellow: #FCD116;
+            --colombia-blue: #003893;
+            --colombia-red: #CE1126;
+
+            /* Base colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        /* Password Screen */
+        #password-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        #password-screen.hidden {
+            display: none;
+        }
+
+        .password-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 400px;
+        }
+
+        .password-container h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .password-container input {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .password-container button {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            background: var(--colombia-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .password-container button:hover {
+            opacity: 0.9;
+        }
+
+        .password-error {
+            color: var(--colombia-red);
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Main Content */
+        #main-content {
+            display: none;
+        }
+
+        #main-content.visible {
+            display: block;
+        }
+
+        /* Top Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--bg-secondary);
+            padding: 0.25rem;
+            border-radius: 6px;
+        }
+
+        .lang-toggle button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-item:hover {
+            transform: scale(1.15);
+        }
+
+        .sidebar-dot {
+            width: 10px;
+            height: 10px;
+            min-width: 10px;
+            border-radius: 50%;
+            background: var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .sidebar-item:hover .sidebar-dot {
+            background: var(--colombia-blue);
+            transform: scale(1.4);
+        }
+
+        .sidebar-item.active .sidebar-dot {
+            background: var(--colombia-blue);
+            width: 12px;
+            height: 12px;
+            min-width: 12px;
+        }
+
+        .sidebar-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .sidebar-item:hover .sidebar-label {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .sidebar-item.active .sidebar-label {
+            color: var(--colombia-blue);
+            font-weight: 600;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            position: fixed;
+            bottom: 3rem;
+            right: 3rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 98;
+        }
+
+        .nav-btn {
+            padding: 1rem 2rem;
+            background: var(--colombia-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,56,147,0.2);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,56,147,0.3);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .nav-btn.prev {
+            background: white;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        /* Sections */
+        section {
+            height: 100vh;
+            padding: 5.5rem 2rem 9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .section-content {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero .meta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .accent-line {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg,
+                var(--colombia-yellow) 0%,
+                var(--colombia-blue) 50%,
+                var(--colombia-red) 100%);
+            margin: 0 auto 2rem;
+            border-radius: 2px;
+        }
+
+        /* Why Section */
+        .why-section {
+            background: var(--bg-secondary);
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .challenge-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0 0;
+        }
+
+        .challenge-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--colombia-blue);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .challenge-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .challenge-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .challenge-card .example {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            padding: 0.75rem 0.75rem 0.75rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 8px;
+            border-left: 3px solid var(--colombia-blue);
+            position: relative;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .challenge-card .example::before {
+            content: "→";
+            position: absolute;
+            left: 0.75rem;
+            top: 0.75rem;
+            font-size: 1rem;
+            color: var(--colombia-blue);
+            font-weight: bold;
+        }
+
+        /* Flip Cards */
+        .flip-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .flip-card {
+            perspective: 1000px;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .flip-card-front {
+            background: white;
+            border-top: 4px solid var(--colombia-red);
+        }
+
+        .flip-card-back {
+            background: linear-gradient(135deg, var(--colombia-blue), #0052cc);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card.category-alignment .flip-card-front {
+            border-top-color: var(--colombia-yellow);
+        }
+
+        .flip-card.category-data .flip-card-front {
+            border-top-color: var(--colombia-blue);
+        }
+
+        .flip-card.category-signals .flip-card-front {
+            border-top-color: var(--colombia-red);
+        }
+
+        .flip-card-front p {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .flip-card-back p {
+            font-size: 0.9rem;
+            color: white;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .flip-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        .category-legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .legend-color.alignment {
+            background: var(--colombia-yellow);
+        }
+
+        .legend-color.data {
+            background: var(--colombia-blue);
+        }
+
+        .legend-color.signals {
+            background: var(--colombia-red);
+        }
+
+        .goal-box {
+            background: linear-gradient(135deg, var(--colombia-blue), #0052cc);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 16px rgba(0,56,147,0.2);
+        }
+
+        .goal-box h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .goal-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .goal-outcomes {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .goal-outcomes span {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Approach Section */
+        .approach-section {
+            background: var(--bg-primary);
+        }
+
+        .cycle-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .cycle-step {
+            text-align: center;
+            padding: 1.75rem 1.25rem;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .cycle-step::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 36px;
+            background: var(--colombia-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .cycle-step h3 {
+            margin: 1.25rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .cycle-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .key-concepts {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .concept-tag {
+            padding: 0.65rem 1.25rem;
+            background: white;
+            border: 2px solid var(--colombia-red);
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--colombia-red);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline Section */
+        .timeline-container {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .timeline-weeks {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .week-block {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .week-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .week-number {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .week-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .week-content {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .week-block.phase0 {
+            border-top: 4px solid var(--colombia-yellow);
+        }
+
+        .week-block.module1 {
+            border-top: 4px solid var(--colombia-blue);
+        }
+
+        .week-block.prep {
+            border-top: 4px solid #888;
+        }
+
+        .week-block.module2 {
+            border-top: 4px solid var(--colombia-red);
+        }
+
+        .timeline-location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .location-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Module Details */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .module-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .module-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .module-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .module-card li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .module-card li:last-child {
+            border-bottom: none;
+        }
+
+        .module-card li::before {
+            content: "•";
+            color: var(--colombia-blue);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5rem;
+        }
+
+        .sample-questions {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .sample-questions h4 {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .sample-questions p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0.5rem 0;
+            font-style: italic;
+        }
+
+        /* Day Cards */
+        .day-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .day-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--colombia-blue);
+        }
+
+        .day-card.day1 {
+            border-top-color: var(--colombia-yellow);
+        }
+
+        .day-card.day2 {
+            border-top-color: var(--colombia-blue);
+        }
+
+        .day-card.day3 {
+            border-top-color: var(--colombia-red);
+        }
+
+        .day-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .day-card h4 {
+            font-size: 0.95rem;
+            margin: 1rem 0 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .day-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .day-card li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0.25rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .day-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--colombia-blue);
+            font-weight: bold;
+        }
+
+        /* Deliverables Grid */
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .deliverable-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 3px solid var(--colombia-blue);
+        }
+
+        .deliverable-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .deliverable-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .deliverable-card li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .deliverable-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--colombia-blue);
+            font-weight: bold;
+        }
+
+        /* Questions Section */
+        .question-blocks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .question-block {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--colombia-red);
+        }
+
+        .question-block h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .question-block p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0.5rem 0;
+        }
+
+        .question-block ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+
+        .question-block li {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0;
+            padding-left: 1rem;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .question-block li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--colombia-red);
+            font-weight: bold;
+        }
+
+        .note-box {
+            background: #fff9e6;
+            border-left: 4px solid var(--colombia-yellow);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .note-box p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .note-box strong {
+            color: var(--text-primary);
+        }
+
+        /* Final Section */
+        .final-box {
+            background: linear-gradient(135deg, var(--colombia-blue), #0052cc);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .final-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-box p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.95;
+            margin: 1rem 0;
+        }
+
+        .final-box .contact {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .final-box .contact a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 5rem 1.5rem 8rem;
+            }
+
+            .cycle-diagram {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .challenge-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .flip-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .flip-card {
+                height: 180px;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .nav-buttons {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                left: 1.5rem;
+                justify-content: space-between;
+            }
+
+            .nav-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Calendar Grid */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .calendar-month {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .month-header {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .cal-event {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--colombia-blue);
+        }
+
+        .cal-event:last-child {
+            margin-bottom: 0;
+        }
+
+        .cal-event.module1 { border-left-color: var(--colombia-blue); }
+        .cal-event.module2 { border-left-color: var(--colombia-red); }
+        .cal-event.module3 { border-left-color: var(--colombia-blue); }
+        .cal-event.conference { border-left-color: var(--colombia-yellow); }
+
+        .cal-date {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .cal-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .cal-time {
+            font-size: 0.8rem;
+            color: var(--colombia-blue);
+            font-weight: 500;
+            margin-bottom: 0.35rem;
+        }
+
+        .cal-event.conference .cal-time { color: #8a6000; }
+        .cal-event.module2 .cal-time { color: var(--colombia-red); }
+
+        .cal-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .week-block.conference {
+            border-top: 4px solid var(--colombia-yellow);
+        }
+
+        .week-block.module3 {
+            border-top: 4px solid var(--colombia-blue);
+        }
+
+        @media (max-width: 768px) {
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Password Screen -->
+    <div id="password-screen">
+        <div class="password-container">
+            <h2>Access Required</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Please enter the password to view this proposal.</p>
+            <input type="password" id="password-input" placeholder="Enter password" />
+            <button onclick="checkPassword()">Access Proposal</button>
+            <p class="password-error" id="password-error">Incorrect password. Please contact alex.jeffries@gmail.com for access.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Top Navigation -->
+        <nav>
+            <div class="nav-content">
+                <div class="nav-logo translatable" data-en="Sell What You Stand For" data-es="Lo Responsable Vende" data-fr="Le Responsable, Ça Vend">Lo Responsable Vende</div>
+                <div class="lang-toggle">
+                    <button class="active" onclick="setLanguage('en')">EN</button>
+                    <button onclick="setLanguage('es')">ES</button>
+                    <button onclick="setLanguage('fr')">FR</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="sidebar-item active" data-section="0" onclick="goToSection(0)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Overview" data-es="Resumen" data-fr="Aperçu">Overview</span>
+            </div>
+            <div class="sidebar-item" data-section="1" onclick="goToSection(1)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Challenges" data-es="Desafíos" data-fr="Défis">Challenges</span>
+            </div>
+            <div class="sidebar-item" data-section="2" onclick="goToSection(2)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Discovery" data-es="Descubrimiento" data-fr="Découverte">Discovery</span>
+            </div>
+            <div class="sidebar-item" data-section="3" onclick="goToSection(3)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Our Approach" data-es="Nuestro Enfoque" data-fr="Notre Approche">Our Approach</span>
+            </div>
+            <div class="sidebar-item" data-section="4" onclick="goToSection(4)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Architecture" data-es="Arquitectura" data-fr="Architecture">Architecture</span>
+            </div>
+            <div class="sidebar-item" data-section="5" onclick="goToSection(5)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Calendar" data-es="Calendario" data-fr="Calendrier">Calendar</span>
+            </div>
+            <div class="sidebar-item" data-section="6" onclick="goToSection(6)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Phase 0" data-es="Fase 0" data-fr="Phase 0">Phase 0</span>
+            </div>
+            <div class="sidebar-item" data-section="7" onclick="goToSection(7)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Module 1" data-es="Módulo 1" data-fr="Module 1">Module 1</span>
+            </div>
+            <div class="sidebar-item" data-section="8" onclick="goToSection(8)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Module 2" data-es="Módulo 2" data-fr="Module 2">Module 2</span>
+            </div>
+            <div class="sidebar-item" data-section="9" onclick="goToSection(9)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Module 3" data-es="Módulo 3" data-fr="Module 3">Module 3</span>
+            </div>
+            <div class="sidebar-item" data-section="10" onclick="goToSection(10)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Deliverables" data-es="Entregables" data-fr="Livrables">Deliverables</span>
+            </div>
+            <div class="sidebar-item" data-section="11" onclick="goToSection(11)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Where We Go" data-es="Hacia Dónde Vamos" data-fr="La Suite">Where We Go</span>
+            </div>
+            <div class="sidebar-item" data-section="12" onclick="goToSection(12)">
+                <div class="sidebar-dot"></div>
+                <span class="sidebar-label translatable" data-en="Next Steps" data-es="Próximos Pasos" data-fr="Prochaines Étapes">Next Steps</span>
+            </div>
+        </div>
+
+        <!-- Section 1: Hero -->
+        <section class="hero" id="home" data-section="0">
+            <div class="section-content">
+                <div class="accent-line"></div>
+                <h1 class="translatable" data-en="Sell What You Stand For" data-es="Lo Responsable Vende" data-fr="Le Responsable, Ça Vend">
+                    Lo Responsable Vende
+                </h1>
+                <p class="subtitle translatable" data-en="How to position and sell your responsible tourism products in Europe" data-es="Cómo posicionar y vender tus productos de turismo responsable en Europa" data-fr="Comment positionner et vendre vos produits de tourisme responsable en Europe">
+                    Cómo posicionar y vender tus productos de turismo responsable en Europa
+                </p>
+                <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem;" class="translatable" data-en="TRECC Program – Institut Français Colombia" data-es="Programa TRECC – Instituto Francés de Colombia" data-fr="Programme TRECC – Institut Français de Colombie">
+                    Programa TRECC – Instituto Francés de Colombia
+                </p>
+                <div class="meta">
+                    <span class="meta-item translatable" data-en="🌿 Responsible Tourism" data-es="🌿 Turismo Responsable" data-fr="🌿 Tourisme Responsable">🌿 Responsible Tourism</span>
+                    <span class="meta-item translatable" data-en="📅 April–June 2026" data-es="📅 Abril–Junio 2026" data-fr="📅 Avril–Juin 2026">📅 April–June 2026</span>
+                    <span class="meta-item translatable" data-en="🤝 Training + B2B Meetings" data-es="🤝 Formación + Reuniones B2B" data-fr="🤝 Formation + Rencontres B2B">🤝 Training + B2B Meetings</span>
+                </div>
+                <p class="subtitle translatable" data-en="Responsible tourism operators have a genuine commercial advantage in European markets — this program is about knowing how to use it" data-es="Los operadores de turismo responsable tienen una ventaja comercial real en los mercados europeos — este programa trata sobre cómo aprovecharla" data-fr="Les opérateurs de tourisme responsable ont un avantage commercial réel sur les marchés européens — ce programme leur apprend à l'exploiter" style="margin-top: 2rem; font-size: 1.1rem; font-style: italic;">
+                    Los operadores de turismo responsable tienen una ventaja comercial real en los mercados europeos — este programa trata sobre cómo aprovecharla
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Common Challenges - Interactive Flip Cards -->
+        <section class="why-section" id="challenges" data-section="1">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="Common Challenges" data-es="Desafíos Comunes" data-fr="Défis Communs">
+                    Common Challenges
+                </h2>
+                <p class="section-subtitle translatable" data-en="Small adjustments can lead to significant improvements. Click each card to explore." data-es="Pequeños ajustes pueden conducir a mejoras significativas. Haz clic en cada tarjeta para explorar." data-fr="De petits ajustements peuvent mener à des améliorations significatives. Cliquez sur chaque carte pour explorer.">
+                    Small adjustments can lead to significant improvements. Click each card to explore.
+                </p>
+
+                <div class="category-legend">
+                    <div class="legend-item">
+                        <div class="legend-color alignment"></div>
+                        <span class="translatable" data-en="Market-Product Alignment" data-es="Alineación Mercado-Producto" data-fr="Alignement Marché-Produit">Market-Product Alignment</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color data"></div>
+                        <span class="translatable" data-en="Data & Decision-Making" data-es="Datos y Toma de Decisiones" data-fr="Données et Prise de Décision">Data & Decision-Making</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color signals"></div>
+                        <span class="translatable" data-en="Interpreting Market Signals" data-es="Interpretación de Señales" data-fr="Interprétation des Signaux">Interpreting Market Signals</span>
+                    </div>
+                </div>
+
+                <div class="flip-cards-grid">
+                    <!-- Card 1: Vacation Days -->
+                    <div class="flip-card category-alignment" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="translatable" data-en="Operator with American clients wants to expand to Europe but only sells 5-day packages" data-es="Operador con clientes americanos quiere expandirse a Europa pero solo vende paquetes de 5 días" data-fr="Opérateur avec clients américains veut s'étendre en Europe mais ne vend que des forfaits de 5 jours">
+                                    Operator with American clients wants to expand to Europe but only sells 5-day packages
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="translatable" data-en="Europeans typically have 3-4 weeks vacation vs. Americans' 10 days. Offering 7-10 day packages = better market fit" data-es="Los europeos típicamente tienen 3-4 semanas de vacaciones vs. 10 días de los americanos. Ofrecer paquetes de 7-10 días = mejor ajuste de mercado" data-fr="Les Européens ont généralement 3-4 semaines de vacances vs. 10 jours pour les Américains. Offrir des forfaits de 7-10 jours = meilleur ajustement au marché">
+                                    Europeans typically have 3-4 weeks vacation vs. Americans' 10 days. Offering 7-10 day packages = better market fit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Everything for Everyone -->
+                    <div class="flip-card category-alignment" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="translatable" data-en="Website offers 'something for everyone' — cultural tours, adventure, nature, wellness — but gets no responses from agencies" data-es="Sitio web ofrece 'algo para todos' — tours culturales, aventura, naturaleza, bienestar — pero no recibe respuestas de agencias" data-fr="Site web offre 'quelque chose pour tout le monde' — circuits culturels, aventure, nature, bien-être — mais ne reçoit aucune réponse des agences">
+                                    Website offers "something for everyone" — cultural tours, adventure, nature, wellness — but gets no responses from agencies
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="translatable" data-en="Agencies need clear specialization. Focus on one niche = become the go-to expert buyers can easily position" data-es="Las agencias necesitan especialización clara. Enfocarse en un nicho = convertirse en el experto de referencia que los compradores pueden posicionar fácilmente" data-fr="Les agences ont besoin d'une spécialisation claire. Se concentrer sur une niche = devenir l'expert de référence que les acheteurs peuvent facilement positionner">
+                                    Agencies need clear specialization. Focus on one niche = become the go-to expert buyers can easily position
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Trade Fair Follow-up -->
+                    <div class="flip-card category-data" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="translatable" data-en="Met 10 tour operators at a trade fair, exchanged cards, but didn't know what to share or how to follow up, so didn't" data-es="Conoció 10 tour operadores en una feria comercial, intercambió tarjetas, pero no sabía qué compartir o cómo hacer seguimiento, así que no lo hizo" data-fr="Rencontré 10 tour-opérateurs lors d'un salon professionnel, échangé des cartes, mais ne savait pas quoi partager ou comment faire le suivi, donc ne l'a pas fait">
+                                    Met 10 tour operators at a trade fair, exchanged cards, but didn't know what to share or how to follow up, so didn't
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="translatable" data-en="Simple contact tracking system + follow-up schedule = turn business cards into actual business relationships" data-es="Sistema simple de seguimiento de contactos + calendario de seguimiento = convertir tarjetas de presentación en relaciones comerciales reales" data-fr="Système simple de suivi des contacts + calendrier de suivi = transformer les cartes de visite en vraies relations d'affaires">
+                                    Simple contact tracking system + follow-up schedule = turn business cards into actual business relationships
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Shallow Analytics -->
+                    <div class="flip-card category-data" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="translatable" data-en="Checks website traffic regularly but not what brings visitors (search terms, referral sources, which countries)" data-es="Revisa el tráfico del sitio regularmente pero no qué trae visitantes (términos de búsqueda, fuentes de referencia, qué países)" data-fr="Vérifie régulièrement le trafic du site mais pas ce qui amène les visiteurs (termes de recherche, sources de référence, quels pays)">
+                                    Checks website traffic regularly but not what brings visitors (search terms, referral sources, which countries)
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="translatable" data-en="Track keywords & sources = understand which markets are actively searching and what they're looking for" data-es="Rastrear palabras clave y fuentes = entender qué mercados están buscando activamente y qué están buscando" data-fr="Suivre les mots-clés et les sources = comprendre quels marchés recherchent activement et ce qu'ils recherchent">
+                                    Track keywords & sources = understand which markets are actively searching and what they're looking for
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Misreading "Too Expensive" -->
+                    <div class="flip-card category-signals" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="translatable" data-en="Travelers from a market say 'great experience!' but buyers from that market say 'quoted prices too high'" data-es="Los viajeros de un mercado dicen '¡gran experiencia!' pero los compradores de ese mercado dicen 'precios cotizados demasiado altos'" data-fr="Les voyageurs d'un marché disent 'excellente expérience !' mais les acheteurs de ce marché disent 'prix cotés trop élevés'">
+                                    Travelers from a market say "great experience!" but buyers from that market say "quoted prices too high"
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="translatable" data-en="Different audiences, different concerns. Buyers need clear margins & competitive positioning, not just tourist satisfaction" data-es="Diferentes audiencias, diferentes preocupaciones. Los compradores necesitan márgenes claros y posicionamiento competitivo, no solo satisfacción turística" data-fr="Publics différents, préoccupations différentes. Les acheteurs ont besoin de marges claires et d'un positionnement concurrentiel, pas seulement de la satisfaction touristique">
+                                    Different audiences, different concerns. Buyers need clear margins & competitive positioning, not just tourist satisfaction
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Feedback Black Hole -->
+                    <div class="flip-card category-signals" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="translatable" data-en="Multiple travelers mention the same concern (unclear pickup, confusing booking process) but it's never documented" data-es="Múltiples viajeros mencionan la misma preocupación (recogida poco clara, proceso de reserva confuso) pero nunca se documenta" data-fr="Plusieurs voyageurs mentionnent la même préoccupation (ramassage peu clair, processus de réservation déroutant) mais ce n'est jamais documenté">
+                                    Multiple travelers mention the same concern (unclear pickup, confusing booking process) but it's never documented
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="translatable" data-en="Systematic feedback tracking = spot recurring issues quickly, fix problems before they cost bookings" data-es="Seguimiento sistemático de retroalimentación = detectar problemas recurrentes rápidamente, arreglar problemas antes de que cuesten reservas" data-fr="Suivi systématique des retours = repérer rapidement les problèmes récurrents, résoudre les problèmes avant qu'ils ne coûtent des réservations">
+                                    Systematic feedback tracking = spot recurring issues quickly, fix problems before they cost bookings
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="flip-hint translatable" data-en="💡 Click any card to see how simple adjustments create impact" data-es="💡 Haz clic en cualquier tarjeta para ver cómo los ajustes simples crean impacto" data-fr="💡 Cliquez sur n'importe quelle carte pour voir comment de simples ajustements créent un impact">
+                    💡 Click any card to see how simple adjustments create impact
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: What This Program Delivers -->
+        <section class="why-section" id="delivers" data-section="2">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="Discovery-Led Design" data-es="Diseño Basado en Descubrimiento" data-fr="Conception Guidée par la Découverte">
+                    Discovery-Led Design
+                </h2>
+
+                <div style="background: linear-gradient(135deg, #FFC107 5%, transparent 5%); padding: 2rem; border-radius: 10px; margin: 2rem 0; background-color: #fff9e6;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-primary); font-size: 1.3rem;" class="translatable" data-en="Critical Questions We Need to Explore Together" data-es="Preguntas Críticas Que Necesitamos Explorar Juntos" data-fr="Questions Critiques à Explorer Ensemble">
+                        Critical Questions We Need to Explore Together
+                    </h3>
+
+                    <div class="challenge-cards">
+                        <div class="challenge-card">
+                            <h3>👥 <span class="translatable" data-en="Participant Readiness" data-es="Preparación de Participantes" data-fr="Préparation des Participants">Participant Readiness</span></h3>
+                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
+                                <li class="translatable" data-en="What is their current experience with technology and data?" data-es="¿Cuál es su experiencia actual con tecnología y datos?" data-fr="Quelle est leur expérience actuelle avec la technologie et les données?">What is their current experience with technology and data?</li>
+                                <li class="translatable" data-en="What software/tools are they already using?" data-es="¿Qué software/herramientas ya están usando?" data-fr="Quels logiciels/outils utilisent-ils déjà?">What software/tools are they already using?</li>
+                                <li class="translatable" data-en="What are their expectations for the training?" data-es="¿Cuáles son sus expectativas para la capacitación?" data-fr="Quelles sont leurs attentes pour la formation?">What are their expectations for the training?</li>
+                            </ul>
+                        </div>
+
+                        <div class="challenge-card">
+                            <h3>🤖 <span class="translatable" data-en="AI Scope & Purpose" data-es="Alcance y Propósito de IA" data-fr="Portée et Objectif de l'IA">AI Scope & Purpose</span></h3>
+                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
+                                <li class="translatable" data-en="Content creation vs data analysis vs decision support?" data-es="¿Creación de contenido vs análisis de datos vs apoyo a decisiones?" data-fr="Création de contenu vs analyse de données vs aide à la décision?">Content creation vs data analysis vs decision support?</li>
+                                <li class="translatable" data-en="How do we keep the human element central?" data-es="¿Cómo mantenemos el elemento humano central?" data-fr="Comment garder l'élément humain au centre?">How do we keep the human element central?</li>
+                                <li class="translatable" data-en="Start AI discussion in online module or in-person?" data-es="¿Iniciar discusión de IA en módulo online o presencial?" data-fr="Commencer la discussion IA en ligne ou en présentiel?">Start AI discussion in online module or in-person?</li>
+                            </ul>
+                        </div>
+
+                        <div class="challenge-card">
+                            <h3>📊 <span class="translatable" data-en="Data Readiness" data-es="Preparación de Datos" data-fr="Préparation des Données">Data Readiness</span></h3>
+                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
+                                <li class="translatable" data-en="What data do participants currently have access to?" data-es="¿A qué datos tienen acceso actualmente los participantes?" data-fr="À quelles données les participants ont-ils actuellement accès?">What data do participants currently have access to?</li>
+                                <li class="translatable" data-en="What data could they create? (e.g., sentiment analysis of reviews)" data-es="¿Qué datos podrían crear? (ej., análisis de sentimiento de reseñas)" data-fr="Quelles données pourraient-ils créer? (ex: analyse de sentiment des avis)">What data could they create? (e.g., sentiment analysis of reviews)</li>
+                                <li class="translatable" data-en="How can we make data collection practical and sustainable?" data-es="¿Cómo podemos hacer que la recopilación de datos sea práctica y sostenible?" data-fr="Comment rendre la collecte de données pratique et durable?">How can we make data collection practical and sustainable?</li>
+                            </ul>
+                        </div>
+
+                        <div class="challenge-card">
+                            <h3>🎓 <span class="translatable" data-en="Learning Environment" data-es="Entorno de Aprendizaje" data-fr="Environnement d'Apprentissage">Learning Environment</span></h3>
+                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
+                                <li class="translatable" data-en="How do we adapt to different experience levels?" data-es="¿Cómo nos adaptamos a diferentes niveles de experiencia?" data-fr="Comment s'adapter aux différents niveaux d'expérience?">How do we adapt to different experience levels?</li>
+                                <li class="translatable" data-en="What examples/case studies resonate with Colombian context?" data-es="¿Qué ejemplos/casos resuenan con el contexto colombiano?" data-fr="Quels exemples/cas résonnent avec le contexte colombien?">What examples/case studies resonate with Colombian context?</li>
+                                <li class="translatable" data-en="How to balance theory with hands-on practice?" data-es="¿Cómo equilibrar teoría con práctica?" data-fr="Comment équilibrer théorie et pratique?">How to balance theory with hands-on practice?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Our Approach -->
+        <section class="approach-section" id="approach" data-section="3">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="Our Approach" data-es="Nuestro Enfoque" data-fr="Notre Approche">
+                    Our Approach
+                </h2>
+                <p class="section-subtitle translatable" data-en="A complete cycle: Analyze → Structure → Test → Adjust" data-es="Un ciclo completo: Analizar → Estructurar → Probar → Ajustar" data-fr="Une approche en cycle : Analyse → Structuration → Mise à l'épreuve → Ajustement">
+                    A complete cycle: Analyze → Structure → Test → Adjust
+                </p>
+
+                <div class="cycle-diagram">
+                    <div class="cycle-step" data-number="1">
+                        <h3 class="translatable" data-en="Positioning & Digital Perception" data-es="Posicionamiento y Percepción Digital" data-fr="Positionnement & Perception Digitale">
+                            Positioning & Digital Perception
+                        </h3>
+                        <p class="translatable" data-en="Assess how operators currently appear to European buyers and where market-product gaps exist" data-es="Evaluar cómo aparecen actualmente los operadores ante los compradores europeos y dónde existen brechas mercado-producto" data-fr="Évaluer comment les opérateurs apparaissent actuellement aux acheteurs européens et où existent les écarts marché-produit">
+                            Assess how operators currently appear to European buyers and where market-product gaps exist
+                        </p>
+                    </div>
+
+                    <div class="cycle-step" data-number="2">
+                        <h3 class="translatable" data-en="Information Systems Setup" data-es="Configuración de Sistemas de Información" data-fr="Configuration des Systèmes d'Information">
+                            Information Systems Setup
+                        </h3>
+                        <p class="translatable" data-en="Introduce simple tools for tracking buyer contacts, conversations, and feedback systematically" data-es="Introducir herramientas simples para rastrear contactos, conversaciones y retroalimentación de compradores sistemáticamente" data-fr="Introduire des outils simples pour suivre systématiquement les contacts, conversations et retours des acheteurs">
+                            Introduce simple tools for tracking buyer contacts, conversations, and feedback systematically
+                        </p>
+                    </div>
+
+                    <div class="cycle-step" data-number="3">
+                        <h3 class="translatable" data-en="Real Market Testing" data-es="Prueba en Mercado Real" data-fr="Test sur le Marché Réel">
+                            Real Market Testing
+                        </h3>
+                        <p class="translatable" data-en="Virtual B2B meetings with European tour operators and agencies to validate positioning and gather direct feedback" data-es="Reuniones B2B virtuales con tour operadores y agencias europeas para validar posicionamiento y recopilar retroalimentación directa" data-fr="Rencontres B2B virtuelles avec tour-opérateurs et agences européennes pour valider le positionnement et recueillir des retours directs">
+                            Virtual B2B meetings with European tour operators and agencies to validate positioning and gather direct feedback
+                        </p>
+                    </div>
+
+                    <div class="cycle-step" data-number="4">
+                        <h3 class="translatable" data-en="Feedback Analysis & Strategy" data-es="Análisis de Retroalimentación y Estrategia" data-fr="Analyse des Retours & Stratégie">
+                            Feedback Analysis & Strategy
+                        </h3>
+                        <p class="translatable" data-en="Structured analysis of buyer responses to identify patterns and define next steps for market development" data-es="Análisis estructurado de respuestas de compradores para identificar patrones y definir próximos pasos para desarrollo de mercado" data-fr="Analyse structurée des réponses des acheteurs pour identifier des schémas et définir les prochaines étapes du développement marché">
+                            Structured analysis of buyer responses to identify patterns and define next steps for market development
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #1565C0, #0D47A1); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;" class="translatable" data-en="Why Discovery-Led Design" data-es="Por Qué Diseño Basado en Descubrimiento" data-fr="Pourquoi une Conception Guidée par la Découverte">
+                        Why Discovery-Led Design
+                    </h3>
+                    <p style="line-height: 1.8; font-size: 1rem; margin-bottom: 0;" class="translatable" data-en="Technology training fails when it's disconnected from participants' reality. Discovery ensures we build training that meets participants where they are and takes them where they need to go — not where a generic curriculum assumes they should be." data-es="La capacitación en tecnología falla cuando está desconectada de la realidad de los participantes. El descubrimiento asegura que construyamos capacitación que encuentre a los participantes donde están y los lleve donde necesitan ir — no donde un currículo genérico asume que deberían estar." data-fr="La formation technologique échoue lorsqu'elle est déconnectée de la réalité des participants. La découverte garantit que nous construisons une formation qui rencontre les participants là où ils sont et les emmène là où ils doivent aller — pas là où un curriculum générique suppose qu'ils devraient être.">
+                        Technology training fails when it's disconnected from participants' reality. Discovery ensures we build training that meets participants where they are and takes them where they need to go — not where a generic curriculum assumes they should be.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Program Architecture -->
+        <section class="approach-section" id="architecture" data-section="4">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="Program Architecture" data-es="Arquitectura del Programa" data-fr="Architecture du Programme">
+                    Program Architecture
+                </h2>
+                <p class="section-subtitle translatable" data-en="Hybrid format: online modules (April & June) + in-person training in Medellín (May)" data-es="Formato híbrido: módulos en línea (abril y junio) + capacitación presencial en Medellín (mayo)" data-fr="Format hybride : modules en ligne (avril &amp; juin) + formation en présentiel à Medellín (mai)">
+                    Hybrid format: online modules (April &amp; June) + in-person training in Medellín (May)
+                </p>
+
+                <div class="timeline-container">
+                    <div class="timeline-weeks">
+                        <div class="week-block phase0">
+                            <div class="week-number translatable" data-en="March–April" data-es="Marzo–Abril" data-fr="Mars–Avril">March–April</div>
+                            <div class="week-title translatable" data-en="📋 Phase 0" data-es="📋 Fase 0" data-fr="📋 Phase 0">📋 Phase 0</div>
+                            <div class="week-content translatable" data-en="Diagnostic questionnaire, market alignment analysis, digital reputation assessment, group formation" data-es="Cuestionario de diagnóstico, análisis de alineación de mercado, evaluación de reputación digital, formación de grupos" data-fr="Questionnaire de diagnostic, analyse d'alignement marché, évaluation réputation digitale, formation des groupes">
+                                Diagnostic questionnaire, market alignment analysis, digital reputation assessment, group formation
+                            </div>
+                        </div>
+
+                        <div class="week-block module1">
+                            <div class="week-number translatable" data-en="April 27–28" data-es="27–28 de abril" data-fr="27–28 avril">April 27–28</div>
+                            <div class="week-title translatable" data-en="💻 Module 1 (Online)" data-es="💻 Módulo 1 (En línea)" data-fr="💻 Module 1 (En ligne)">💻 Module 1 (Online)</div>
+                            <div class="week-content translatable" data-en="2 sessions (2h each, 9:00 Medellín / 16:00 Paris): Market positioning, digital reputation, introduction to information systems" data-es="2 sesiones (2h cada una, 9:00 Medellín / 16:00 París): Posicionamiento de mercado, reputación digital, introducción a sistemas de información" data-fr="2 sessions (2h chacune, 9h00 Medellín / 16h00 Paris) : Positionnement marché, réputation digitale, introduction aux systèmes d'information">
+                                2 sessions (2h each, 9:00 Medellín / 16:00 Paris): Market positioning, digital reputation, introduction to information systems
+                            </div>
+                        </div>
+
+                        <div class="week-block module2">
+                            <div class="week-number translatable" data-en="May 25–26" data-es="25–26 de mayo" data-fr="25–26 mai">May 25–26</div>
+                            <div class="week-title translatable" data-en="📍 Module 2 (In-Person)" data-es="📍 Módulo 2 (Presencial)" data-fr="📍 Module 2 (En présentiel)">📍 Module 2 (In-Person)</div>
+                            <div class="week-content translatable" data-en="2 days in Medellín: Pitch preparation & practice (Day 1), B2B meetings with international buyers + French business meetings (Day 2)" data-es="2 días en Medellín: Preparación y práctica de pitch (Día 1), reuniones B2B con compradores internacionales + reuniones con empresas francesas (Día 2)" data-fr="2 jours à Medellín : Préparation &amp; pratique du pitch (Jour 1), rencontres B2B avec acheteurs internationaux + rencontres entreprises françaises (Jour 2)">
+                                2 days in Medellín: Pitch preparation &amp; practice (Day 1), B2B meetings with international buyers + French business meetings (Day 2)
+                            </div>
+                        </div>
+
+                        <div class="week-block conference">
+                            <div class="week-number translatable" data-en="May 27–28" data-es="27–28 de mayo" data-fr="27–28 mai">May 27–28</div>
+                            <div class="week-title translatable" data-en="🏆 Conference" data-es="🏆 Conferencia" data-fr="🏆 Conférence">🏆 Conference</div>
+                            <div class="week-content translatable" data-en="Medellín: Networking and market exposure opportunity" data-es="Medellín: Oportunidad de networking y exposición al mercado" data-fr="Medellín : Opportunité de networking et d'exposition au marché">
+                                Medellín: Networking and market exposure opportunity
+                            </div>
+                        </div>
+
+                        <div class="week-block module3">
+                            <div class="week-number translatable" data-en="June 15" data-es="15 de junio" data-fr="15 juin">June 15</div>
+                            <div class="week-title translatable" data-en="💻 Module 3 (Online)" data-es="💻 Módulo 3 (En línea)" data-fr="💻 Module 3 (En ligne)">💻 Module 3 (Online)</div>
+                            <div class="week-content translatable" data-en="Follow-up session (9:00 Medellín / 16:00 Paris): Recap, personalized action plans, managing contacts & networks" data-es="Sesión de seguimiento (9:00 Medellín / 16:00 París): Resumen, planes de acción personalizados, gestión de contactos y redes" data-fr="Session de suivi (9h00 Medellín / 16h00 Paris) : Récapitulatif, plans d'action personnalisés, gestion des contacts et réseaux">
+                                Follow-up session (9:00 Medellín / 16:00 Paris): Recap, personalized action plans, managing contacts &amp; networks
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-location">
+                        <div class="location-item">
+                            <span class="location-icon">💻</span>
+                            <span class="translatable" data-en="Online: April 27–28 + June 15" data-es="En línea: 27–28 de abril + 15 de junio" data-fr="En ligne : 27–28 avril + 15 juin">Online: April 27–28 + June 15</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="location-icon">📍</span>
+                            <span class="translatable" data-en="In-Person: May 25–26 (Medellín)" data-es="Presencial: 25–26 de mayo (Medellín)" data-fr="En présentiel : 25–26 mai (Medellín)">In-Person: May 25–26 (Medellín)</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="location-icon">🏆</span>
+                            <span class="translatable" data-en="Conference: May 27–28 (Medellín)" data-es="Conferencia: 27–28 de mayo (Medellín)" data-fr="Conférence : 27–28 mai (Medellín)">Conference: May 27–28 (Medellín)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Calendar -->
+        <section class="why-section" id="calendar" data-section="5">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="📅 Program Calendar" data-es="📅 Calendario del Programa" data-fr="📅 Calendrier du Programme">
+                    📅 Program Calendar
+                </h2>
+                <p class="section-subtitle translatable" data-en="Key dates: April–June 2026" data-es="Fechas clave: Abril–Junio 2026" data-fr="Dates clés : Avril–Juin 2026">
+                    Key dates: April–June 2026
+                </p>
+
+                <div class="calendar-grid">
+                    <!-- April -->
+                    <div class="calendar-month">
+                        <div class="month-header translatable" data-en="April 2026" data-es="Abril 2026" data-fr="Avril 2026">April 2026</div>
+                        <div class="cal-event module1">
+                            <div class="cal-date translatable" data-en="Monday, April 27" data-es="Lunes, 27 de abril" data-fr="Lundi 27 avril">Monday, April 27</div>
+                            <div class="cal-title translatable" data-en="💻 Online Module 1 – Session 1" data-es="💻 Módulo 1 en línea – Sesión 1" data-fr="💻 Module 1 en ligne – Session 1">💻 Online Module 1 – Session 1</div>
+                            <div class="cal-time">9:00 Medellín · 16:00 Paris</div>
+                            <div class="cal-desc translatable" data-en="Market positioning &amp; buyer expectations" data-es="Posicionamiento de mercado y expectativas de compradores" data-fr="Positionnement marché et attentes des acheteurs">Market positioning &amp; buyer expectations</div>
+                        </div>
+                        <div class="cal-event module1">
+                            <div class="cal-date translatable" data-en="Tuesday, April 28" data-es="Martes, 28 de abril" data-fr="Mardi 28 avril">Tuesday, April 28</div>
+                            <div class="cal-title translatable" data-en="💻 Online Module 1 – Session 2" data-es="💻 Módulo 1 en línea – Sesión 2" data-fr="💻 Module 1 en ligne – Session 2">💻 Online Module 1 – Session 2</div>
+                            <div class="cal-time">9:00 Medellín · 16:00 Paris</div>
+                            <div class="cal-desc translatable" data-en="Digital systems &amp; decision-making frameworks" data-es="Sistemas digitales y marcos de toma de decisiones" data-fr="Systèmes digitaux et cadres de prise de décision">Digital systems &amp; decision-making frameworks</div>
+                        </div>
+                    </div>
+
+                    <!-- May -->
+                    <div class="calendar-month">
+                        <div class="month-header translatable" data-en="May 2026" data-es="Mayo 2026" data-fr="Mai 2026">May 2026</div>
+                        <div class="cal-event module2">
+                            <div class="cal-date translatable" data-en="Monday, May 25" data-es="Lunes, 25 de mayo" data-fr="Lundi 25 mai">Monday, May 25</div>
+                            <div class="cal-title translatable" data-en="📍 In-Person – Day 1" data-es="📍 Presencial – Día 1" data-fr="📍 En présentiel – Jour 1">📍 In-Person – Day 1</div>
+                            <div class="cal-time">Medellín</div>
+                            <div class="cal-desc translatable" data-en="Pitch preparation &amp; practice" data-es="Preparación y práctica de presentación" data-fr="Préparation et pratique du pitch">Pitch preparation &amp; practice</div>
+                        </div>
+                        <div class="cal-event module2">
+                            <div class="cal-date translatable" data-en="Tuesday, May 26" data-es="Martes, 26 de mayo" data-fr="Mardi 26 mai">Tuesday, May 26</div>
+                            <div class="cal-title translatable" data-en="📍 In-Person – Day 2" data-es="📍 Presencial – Día 2" data-fr="📍 En présentiel – Jour 2">📍 In-Person – Day 2</div>
+                            <div class="cal-time">Medellín</div>
+                            <div class="cal-desc translatable" data-en="Morning: B2B pitches with international online buyers · Afternoon: In-person meetings with French businesses + recap" data-es="Mañana: Pitches B2B con compradores internacionales en línea · Tarde: Reuniones presenciales con empresas francesas + resumen" data-fr="Matin : pitches B2B avec acheteurs internationaux en ligne · Après-midi : rencontres en présentiel avec entreprises françaises + bilan">Morning: B2B pitches with international online buyers · Afternoon: In-person meetings with French businesses + recap</div>
+                        </div>
+                        <div class="cal-event conference">
+                            <div class="cal-date translatable" data-en="May 27–28 (Wed–Thu)" data-es="27–28 de mayo (Mié–Jue)" data-fr="27–28 mai (Mer–Jeu)">May 27–28 (Wed–Thu)</div>
+                            <div class="cal-title translatable" data-en="🏆 Conference" data-es="🏆 Conferencia" data-fr="🏆 Conférence">🏆 Conference</div>
+                            <div class="cal-time">Medellín</div>
+                            <div class="cal-desc translatable" data-en="Networking and market exposure opportunity" data-es="Oportunidad de networking y exposición al mercado" data-fr="Opportunité de networking et d'exposition au marché">Networking and market exposure opportunity</div>
+                        </div>
+                    </div>
+
+                    <!-- June -->
+                    <div class="calendar-month">
+                        <div class="month-header translatable" data-en="June 2026" data-es="Junio 2026" data-fr="Juin 2026">June 2026</div>
+                        <div class="cal-event module3">
+                            <div class="cal-date translatable" data-en="Monday, June 15" data-es="Lunes, 15 de junio" data-fr="Lundi 15 juin">Monday, June 15</div>
+                            <div class="cal-title translatable" data-en="💻 Online Module 3 – Follow-Up" data-es="💻 Módulo 3 en línea – Seguimiento" data-fr="💻 Module 3 en ligne – Suivi">💻 Online Module 3 – Follow-Up</div>
+                            <div class="cal-time">9:00 Medellín · 16:00 Paris</div>
+                            <div class="cal-desc translatable" data-en="Recap, sharing personalized action plans, managing contacts &amp; networks" data-es="Resumen, compartir planes de acción personalizados, gestión de contactos y redes" data-fr="Récapitulatif, partage des plans d'action personnalisés, gestion des contacts et réseaux">Recap, sharing personalized action plans, managing contacts &amp; networks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Phase 0 Details -->
+        <section class="why-section" id="phase0" data-section="6">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="📋 Phase 0: Preparation & Diagnostic" data-es="📋 Fase 0: Preparación y Diagnóstico" data-fr="📋 Phase 0 : Préparation & Diagnostic">
+                    📋 Phase 0: Preparation & Diagnostic
+                </h2>
+                <p class="section-subtitle translatable" data-en="Understanding where operators start to adapt training content" data-es="Entender dónde comienzan los operadores para adaptar el contenido de capacitación" data-fr="Comprendre où les opérateurs commencent pour adapter le contenu de formation">
+                    Understanding where operators start to adapt training content
+                </p>
+
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3><span>🔍</span><span class="translatable" data-en="Diagnostic Process" data-es="Proceso de Diagnóstico" data-fr="Processus de Diagnostic">Diagnostic Process</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Market positioning assessment" data-es="Evaluación de posicionamiento de mercado" data-fr="Évaluation du positionnement marché">Market positioning assessment</li>
+                            <li class="translatable" data-en="Current digital presence analysis" data-es="Análisis de presencia digital actual" data-fr="Analyse de la présence digitale actuelle">Current digital presence analysis</li>
+                            <li class="translatable" data-en="Existing tools & systems inventory" data-es="Inventario de herramientas y sistemas existentes" data-fr="Inventaire des outils et systèmes existants">Existing tools & systems inventory</li>
+                            <li class="translatable" data-en="International market experience level" data-es="Nivel de experiencia en mercados internacionales" data-fr="Niveau d'expérience sur les marchés internationaux">International market experience level</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>👥</span><span class="translatable" data-en="Group Formation" data-es="Formación de Grupos" data-fr="Formation des Groupes">Group Formation</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Segment by niche and target markets" data-es="Segmentar por nicho y mercados objetivo" data-fr="Segmenter par niche et marchés cibles">Segment by niche and target markets</li>
+                            <li class="translatable" data-en="Match operators with European buyers" data-es="Emparejar operadores con compradores europeos" data-fr="Jumeler les opérateurs avec les acheteurs européens">Match operators with European buyers</li>
+                            <li class="translatable" data-en="Prepare customized B2B agendas" data-es="Preparar agendas B2B personalizadas" data-fr="Préparer des agendas B2B personnalisés">Prepare customized B2B agendas</li>
+                            <li class="translatable" data-en="Identify shared challenges by segment" data-es="Identificar desafíos compartidos por segmento" data-fr="Identifier les défis partagés par segment">Identify shared challenges by segment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sample-questions">
+                    <h4 class="translatable" data-en="Sample Diagnostic Questions:" data-es="Preguntas de Diagnóstico de Muestra:" data-fr="Exemples de Questions de Diagnostic :">Sample Diagnostic Questions:</h4>
+                    <p class="translatable" data-en="• What is your primary international target market?" data-es="• ¿Cuál es tu mercado objetivo internacional principal?" data-fr="• Quel est votre marché cible international principal ?">• What is your primary international target market?</p>
+                    <p class="translatable" data-en="• What digital tools do you currently use to manage buyer contacts?" data-es="• ¿Qué herramientas digitales usas actualmente para gestionar contactos de compradores?" data-fr="• Quels outils numériques utilisez-vous actuellement pour gérer les contacts acheteurs ?">• What digital tools do you currently use to manage buyer contacts?</p>
+                    <p class="translatable" data-en="• Have you participated in international B2B meetings before?" data-es="• ¿Has participado en reuniones B2B internacionales antes?" data-fr="• Avez-vous déjà participé à des rencontres B2B internationales ?">• Have you participated in international B2B meetings before?</p>
+                    <p class="translatable" data-en="• How do you currently track and follow up with international buyers?" data-es="• ¿Cómo rastreas y haces seguimiento actualmente con compradores internacionales?" data-fr="• Comment suivez-vous et relancez-vous actuellement les acheteurs internationaux ?">• How do you currently track and follow up with international buyers?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Module 1 Details -->
+        <section class="approach-section" id="module1" data-section="7">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="💻 Module 1: Online Training" data-es="💻 Módulo 1: Capacitación en Línea" data-fr="💻 Module 1 : Formation en Ligne">
+                    💻 Module 1: Online Training
+                </h2>
+                <p class="section-subtitle translatable" data-en="April 27–28 · 9:00 Medellín / 16:00 Paris · 2 sessions (2 hours each)" data-es="27–28 de abril · 9:00 Medellín / 16:00 París · 2 sesiones (2 horas cada una)" data-fr="27–28 avril · 9h00 Medellín / 16h00 Paris · 2 sessions (2 heures chacune)">
+                    April 27–28 · 9:00 Medellín / 16:00 Paris · 2 sessions (2 hours each)
+                </p>
+
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3><span>🌿</span><span class="translatable" data-en="Session 1 (Apr 27): Responsible Tourism & the European Market" data-es="Sesión 1 (27 abr): Turismo Responsable y el Mercado Europeo" data-fr="Session 1 (27 avr) : Tourisme Responsable & le Marché Européen">Session 1 (Apr 27): Responsible Tourism &amp; the European Market</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="What European buyers look for in responsible &amp; sustainable tourism products" data-es="Qué buscan los compradores europeos en productos de turismo responsable y sostenible" data-fr="Ce que les acheteurs européens recherchent dans les produits de tourisme responsable et durable">What European buyers look for in responsible &amp; sustainable tourism products</li>
+                            <li class="translatable" data-en="Responsible tourism market alignment self-assessment" data-es="Autoevaluación de alineación con el mercado de turismo responsable" data-fr="Auto-évaluation de l'alignement avec le marché du tourisme responsable">Responsible tourism market alignment self-assessment</li>
+                            <li class="translatable" data-en="Translating responsible practices into commercial value propositions" data-es="Traducir prácticas responsables en propuestas de valor comercial" data-fr="Transformer les pratiques responsables en propositions de valeur commerciale">Translating responsible practices into commercial value propositions</li>
+                            <li class="translatable" data-en="How the responsible tourism segment is growing and segmenting in Europe" data-es="Cómo el segmento de turismo responsable está creciendo y segmentándose en Europa" data-fr="Comment le segment du tourisme responsable croît et se segmente en Europe">How the responsible tourism segment is growing and segmenting in Europe</li>
+                            <li class="translatable" data-en="Tourism 4.0: sustainability as a market advantage" data-es="Turismo 4.0: la sostenibilidad como ventaja de mercado" data-fr="Tourisme 4.0 : la durabilité comme avantage de marché">Tourism 4.0: sustainability as a market advantage</li>
+                        </ul>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; font-style: italic;">
+                            <span class="translatable" data-en="* Content adapted based on participant experience level and market focus" data-es="* Contenido adaptado según el nivel de experiencia y el enfoque de mercado de los participantes" data-fr="* Contenu adapté selon le niveau d'expérience et l'orientation marché des participants">* Content adapted based on participant experience level and market focus</span>
+                        </p>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>🔍</span><span class="translatable" data-en="Session 2 (Apr 28): Digital Presence & Responsible Product Visibility" data-es="Sesión 2 (28 abr): Presencia Digital y Visibilidad del Producto Responsable" data-fr="Session 2 (28 avr) : Présence Numérique & Visibilité du Produit Responsable">Session 2 (Apr 28): Digital Presence &amp; Responsible Product Visibility</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="How does your responsible tourism offer appear online? Evaluation through multiple lenses:" data-es="¿Cómo aparece tu oferta de turismo responsable en línea? Evaluación a través de múltiples perspectivas:" data-fr="Comment votre offre de tourisme responsable apparaît-elle en ligne ? Évaluation selon plusieurs angles :">How does your responsible tourism offer appear online? Evaluation through multiple lenses:</li>
+                            <li class="translatable" data-en="— The buyer lens: what a European tour operator sees when they look you up" data-es="— La perspectiva del comprador: lo que ve un operador turístico europeo cuando te busca" data-fr="— L'angle acheteur : ce qu'un tour-opérateur européen voit quand il vous cherche">— The buyer lens: what a European tour operator sees when they look you up</li>
+                            <li class="translatable" data-en="— The sustainability lens: how your credentials, certifications, and impact claims read" data-es="— La perspectiva de sostenibilidad: cómo se leen tus credenciales, certificaciones y declaraciones de impacto" data-fr="— L'angle durabilité : comment vos accréditations, certifications et engagements apparaissent">— The sustainability lens: how your credentials, certifications, and impact claims read</li>
+                            <li class="translatable" data-en="— The traveler lens: reviews, storytelling, and platform presence" data-es="— La perspectiva del viajero: reseñas, narrativa y presencia en plataformas" data-fr="— L'angle voyageur : avis, storytelling et présence sur les plateformes">— The traveler lens: reviews, storytelling, and platform presence</li>
+                            <li class="translatable" data-en="— The competitive lens: how you compare within your responsible tourism niche" data-es="— La perspectiva competitiva: cómo te comparas dentro de tu nicho de turismo responsable" data-fr="— L'angle concurrentiel : comment vous vous positionnez dans votre niche de tourisme responsable">— The competitive lens: how you compare within your responsible tourism niche</li>
+                            <li class="translatable" data-en="Digital tools for responsible tourism promotion and data-driven positioning" data-es="Herramientas digitales para la promoción del turismo responsable y el posicionamiento basado en datos" data-fr="Outils numériques pour la promotion du tourisme responsable et le positionnement basé sur les données">Digital tools for responsible tourism promotion and data-driven positioning</li>
+                        </ul>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; font-style: italic;">
+                            <span class="translatable" data-en="* Participants receive a personalized digital presence snapshot ahead of the in-person module" data-es="* Los participantes reciben un resumen personalizado de su presencia digital antes del módulo presencial" data-fr="* Les participants reçoivent un bilan personnalisé de leur présence numérique avant le module en présentiel">* Participants receive a personalized digital presence snapshot ahead of the in-person module</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid var(--colombia-blue);">
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">
+                        <strong class="translatable" data-en="Deliverables:" data-es="Entregables:" data-fr="Livrables :">Deliverables:</strong>
+                        <span class="translatable" data-en=" Responsible tourism market alignment tool, personalized digital presence assessment, practical guides on buyer relationship management" data-es=" Herramienta de alineación con el mercado de turismo responsable, evaluación personalizada de presencia digital, guías prácticas sobre gestión de relaciones con compradores" data-fr=" Outil d'alignement avec le marché du tourisme responsable, évaluation personnalisée de la présence numérique, guides pratiques sur la gestion des relations acheteurs"> Responsible tourism market alignment tool, personalized digital presence assessment, practical guides on buyer relationship management</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Module 2 - Day by Day -->
+        <section class="why-section" id="module2" data-section="8">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="📍 Module 2: In-Person Training (Medellín)" data-es="📍 Módulo 2: Capacitación Presencial (Medellín)" data-fr="📍 Module 2 : Formation en Présentiel (Medellín)">
+                    📍 Module 2: In-Person Training (Medellín)
+                </h2>
+                <p class="section-subtitle translatable" data-en="May 25–26, Medellín · 2 intensive days: pitch preparation + real market testing" data-es="25–26 de mayo, Medellín · 2 días intensivos: preparación de pitch + prueba de mercado real" data-fr="25–26 mai, Medellín · 2 jours intensifs : préparation du pitch + test de marché réel">
+                    May 25–26, Medellín · 2 intensive days: pitch preparation + real market testing
+                </p>
+
+                <div class="day-cards">
+                    <div class="day-card day1">
+                        <h3 class="translatable" data-en="Day 1: Positioning & Pitch" data-es="Día 1: Posicionamiento y Presentación" data-fr="Jour 1 : Positionnement & Pitch">Day 1: Positioning & Pitch</h3>
+                        <h4 class="translatable" data-en="Focus:" data-es="Enfoque:" data-fr="Focus :">Focus:</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;" class="translatable" data-en="Preparing participants to pitch their responsible tourism product to European buyers" data-es="Preparando participantes para presentar su producto de turismo responsable a compradores europeos" data-fr="Préparer les participants à pitcher leur produit de tourisme responsable auprès des acheteurs européens">Preparing participants to pitch their responsible tourism product to European buyers</p>
+                        <ul>
+                            <li class="translatable" data-en="Responsible tourism niche workshop — who is your European buyer?" data-es="Taller de nicho de turismo responsable — ¿quién es tu comprador europeo?" data-fr="Atelier niche de tourisme responsable — qui est votre acheteur européen ?">Responsible tourism niche workshop — who is your European buyer?</li>
+                            <li class="translatable" data-en="Communicating your responsible practices as a commercial differentiator" data-es="Comunicar tus prácticas responsables como diferenciador comercial" data-fr="Communiquer vos pratiques responsables comme différenciateur commercial">Communicating your responsible practices as a commercial differentiator</li>
+                            <li class="translatable" data-en="Adapting your message for different buyer profiles" data-es="Adaptar tu mensaje para diferentes perfiles de compradores" data-fr="Adapter votre message à différents profils d'acheteurs">Adapting your message for different buyer profiles</li>
+                            <li class="translatable" data-en="2-minute pitch practice with peer feedback" data-es="Práctica de presentación de 2 minutos con retroalimentación entre pares" data-fr="Pratique de pitch de 2 minutes avec retours entre pairs">2-minute pitch practice with peer feedback</li>
+                            <li class="translatable" data-en="Materials and presentation refinement" data-es="Refinamiento de materiales y presentación" data-fr="Raffinement des matériaux et de la présentation">Materials and presentation refinement</li>
+                        </ul>
+                    </div>
+
+                    <div class="day-card day2">
+                        <h3 class="translatable" data-en="Day 2: Pitch Day" data-es="Día 2: Día de Presentaciones" data-fr="Jour 2 : Jour des Pitches">Day 2: Pitch Day</h3>
+                        <h4 class="translatable" data-en="Morning:" data-es="Mañana:" data-fr="Matin :">Morning:</h4>
+                        <ul>
+                            <li class="translatable" data-en="B2B pitch sessions with international buyers online" data-es="Sesiones de pitch B2B con compradores internacionales en línea" data-fr="Sessions de pitch B2B avec acheteurs internationaux en ligne">B2B pitch sessions with international buyers online</li>
+                            <li class="translatable" data-en="10 minutes each with structured feedback" data-es="10 minutos cada una con retroalimentación estructurada" data-fr="10 minutes chacune avec retours structurés">10 minutes each with structured feedback</li>
+                        </ul>
+                        <h4 class="translatable" data-en="Afternoon:" data-es="Tarde:" data-fr="Après-midi :">Afternoon:</h4>
+                        <ul>
+                            <li class="translatable" data-en="In-person meetings with ~10 French businesses" data-es="Reuniones presenciales con ~10 empresas francesas" data-fr="Rencontres en présentiel avec ~10 entreprises françaises">In-person meetings with ~10 French businesses</li>
+                            <li class="translatable" data-en="Afternoon recap session" data-es="Sesión de resumen de la tarde" data-fr="Session bilan de l'après-midi">Afternoon recap session</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <p><strong class="translatable" data-en="Note:" data-es="Nota:" data-fr="Note :">Note:</strong> <span class="translatable" data-en="Activities are deliberately general at this stage. More specific workshops can be developed based on participant assessment and digital maturity levels to meet operators where they are." data-es="Las actividades son deliberadamente generales en esta etapa. Se pueden desarrollar talleres más específicos basados en la evaluación de participantes y niveles de madurez digital para encontrar a los operadores donde están." data-fr="Les activités sont délibérément générales à ce stade. Des ateliers plus spécifiques peuvent être développés en fonction de l'évaluation des participants et des niveaux de maturité numérique pour rencontrer les opérateurs là où ils sont.">Activities are deliberately general at this stage. More specific workshops can be developed based on participant assessment and digital maturity levels to meet operators where they are.</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Module 3 - Online Follow-Up -->
+        <section class="approach-section" id="module3" data-section="9">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="💻 Module 3: Online Follow-Up" data-es="💻 Módulo 3: Seguimiento en Línea" data-fr="💻 Module 3 : Suivi en Ligne">
+                    💻 Module 3: Online Follow-Up
+                </h2>
+                <p class="section-subtitle translatable" data-en="June 15 · 9:00 Medellín / 16:00 Paris — Turning market feedback into relationships and product development" data-es="15 de junio · 9:00 Medellín / 16:00 París — Convirtiendo la retroalimentación del mercado en relaciones y desarrollo de producto" data-fr="15 juin · 9h00 Medellín / 16h00 Paris — Transformer les retours marché en relations et en développement produit">
+                    June 15 · 9:00 Medellín / 16:00 Paris — Turning market feedback into relationships and product development
+                </p>
+
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3><span>🔄</span><span class="translatable" data-en="Recap & What the Market Told You" data-es="Resumen y Lo Que el Mercado Te Dijo" data-fr="Bilan & Ce que le Marché Vous a Dit">Recap &amp; What the Market Told You</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Review of B2B meeting outcomes — what resonated, what didn't" data-es="Revisión de resultados de reuniones B2B — qué resonó, qué no" data-fr="Bilan des rencontres B2B — ce qui a résonné, ce qui n'a pas fonctionné">Review of B2B meeting outcomes — what resonated, what didn't</li>
+                            <li class="translatable" data-en="Reading buyer signals: interest, hesitation, and unspoken feedback" data-es="Leer las señales de los compradores: interés, dudas y retroalimentación no expresada" data-fr="Lire les signaux des acheteurs : intérêt, hésitations et retours implicites">Reading buyer signals: interest, hesitation, and unspoken feedback</li>
+                            <li class="translatable" data-en="How buyer feedback applies to your responsible tourism product" data-es="Cómo la retroalimentación de compradores aplica a tu producto de turismo responsable" data-fr="Comment les retours acheteurs s'appliquent à votre produit de tourisme responsable">How buyer feedback applies to your responsible tourism product</li>
+                            <li class="translatable" data-en="Group sharing and peer learning" data-es="Intercambio grupal y aprendizaje entre pares" data-fr="Partage en groupe et apprentissage entre pairs">Group sharing and peer learning</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>🎯</span><span class="translatable" data-en="Personalized Action Plans" data-es="Planes de Acción Personalizados" data-fr="Plans d'Action Personnalisés">Personalized Action Plans</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Sharing and presenting individual action plans" data-es="Presentación y compartir planes de acción individuales" data-fr="Présentation et partage des plans d'action individuels">Sharing and presenting individual action plans</li>
+                            <li class="translatable" data-en="Responsible tourism positioning adjustments based on buyer feedback" data-es="Ajustes de posicionamiento de turismo responsable basados en retroalimentación de compradores" data-fr="Ajustements de positionnement tourisme responsable basés sur les retours acheteurs">Responsible tourism positioning adjustments based on buyer feedback</li>
+                            <li class="translatable" data-en="Targeted follow-up strategies for specific buyers" data-es="Estrategias de seguimiento específicas para compradores concretos" data-fr="Stratégies de suivi ciblées pour les acheteurs identifiés">Targeted follow-up strategies for specific buyers</li>
+                            <li class="translatable" data-en="Next steps and 90-day roadmap" data-es="Próximos pasos y hoja de ruta de 90 días" data-fr="Prochaines étapes et feuille de route à 90 jours">Next steps and 90-day roadmap</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>📇</span><span class="translatable" data-en="Building Buyer Relationships" data-es="Construyendo Relaciones con Compradores" data-fr="Construire des Relations avec les Acheteurs">Building Buyer Relationships</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="The difference between a contact and a relationship — how to bridge it" data-es="La diferencia entre un contacto y una relación — cómo bridgear esa brecha" data-fr="La différence entre un contact et une relation — comment la franchir">The difference between a contact and a relationship — how to bridge it</li>
+                            <li class="translatable" data-en="Follow-up cadence and communication templates" data-es="Cadencia de seguimiento y plantillas de comunicación" data-fr="Cadence de suivi et modèles de communication">Follow-up cadence and communication templates</li>
+                            <li class="translatable" data-en="CRM setup and contact tracking — keeping your network active" data-es="Configuración de CRM y seguimiento de contactos — mantener tu red activa" data-fr="Configuration CRM et suivi des contacts — maintenir votre réseau actif">CRM setup and contact tracking — keeping your network active</li>
+                            <li class="translatable" data-en="Sharing product updates and responsible tourism developments with buyers" data-es="Compartir actualizaciones del producto y avances en turismo responsable con compradores" data-fr="Partager les évolutions du produit et les avancées du tourisme responsable avec les acheteurs">Sharing product updates and responsible tourism developments with buyers</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>🌱</span><span class="translatable" data-en="Product Development & Continuous Improvement" data-es="Desarrollo de Producto y Mejora Continua" data-fr="Développement Produit & Amélioration Continue">Product Development &amp; Continuous Improvement</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Using market feedback to refine and develop your responsible tourism offer" data-es="Usar la retroalimentación del mercado para refinar y desarrollar tu oferta de turismo responsable" data-fr="Utiliser les retours du marché pour affiner et développer votre offre de tourisme responsable">Using market feedback to refine and develop your responsible tourism offer</li>
+                            <li class="translatable" data-en="Identifying gaps between your current product and buyer expectations" data-es="Identificar brechas entre tu producto actual y las expectativas de los compradores" data-fr="Identifier les écarts entre votre produit actuel et les attentes des acheteurs">Identifying gaps between your current product and buyer expectations</li>
+                            <li class="translatable" data-en="Short and medium-term product development priorities" data-es="Prioridades de desarrollo de producto a corto y mediano plazo" data-fr="Priorités de développement produit à court et moyen terme">Short and medium-term product development priorities</li>
+                            <li class="translatable" data-en="Re-engaging buyers as your responsible tourism offer evolves" data-es="Volver a contactar compradores a medida que tu oferta de turismo responsable evoluciona" data-fr="Recontacter les acheteurs au fil de l'évolution de votre offre de tourisme responsable">Re-engaging buyers as your responsible tourism offer evolves</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid var(--colombia-blue);">
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">
+                        <strong class="translatable" data-en="Deliverables:" data-es="Entregables:" data-fr="Livrables :">Deliverables:</strong>
+                        <span class="translatable" data-en=" Personalized action plans, responsible tourism product development notes, CRM setup guide, follow-up templates, 90-day roadmap" data-es=" Planes de acción personalizados, notas de desarrollo de producto de turismo responsable, guía de configuración de CRM, plantillas de seguimiento, hoja de ruta de 90 días" data-fr=" Plans d'action personnalisés, notes de développement produit tourisme responsable, guide de configuration CRM, modèles de suivi, feuille de route à 90 jours"> Personalized action plans, responsible tourism product development notes, CRM setup guide, follow-up templates, 90-day roadmap</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Deliverables -->
+        <section class="approach-section" id="deliverables" data-section="10">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="📦 Program Deliverables" data-es="📦 Entregables del Programa" data-fr="📦 Livrables du Programme">
+                    📦 Program Deliverables
+                </h2>
+                <p class="section-subtitle translatable" data-en="Complete materials, reports, and individual action plans" data-es="Materiales completos, informes y planes de acción individuales" data-fr="Matériaux complets, rapports et plans d'action individuels">
+                    Complete materials, reports, and individual action plans
+                </p>
+
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h3><span>📚</span><span class="translatable" data-en="Training Materials" data-es="Materiales de Capacitación" data-fr="Matériaux de Formation">Training Materials</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="All presentation slides (Spanish)" data-es="Todas las diapositivas de presentación (español)" data-fr="Toutes les diapositives de présentation (espagnol)">All presentation slides (Spanish)</li>
+                            <li class="translatable" data-en="Diagnostic tools & templates" data-es="Herramientas de diagnóstico y plantillas" data-fr="Outils de diagnostic et modèles">Diagnostic tools & templates</li>
+                            <li class="translatable" data-en="Practical method guides" data-es="Guías de métodos prácticos" data-fr="Guides de méthodes pratiques">Practical method guides</li>
+                            <li class="translatable" data-en="CRM & tracking templates" data-es="Plantillas de CRM y seguimiento" data-fr="Modèles de CRM et suivi">CRM & tracking templates</li>
+                            <li class="translatable" data-en="Follow-up message templates" data-es="Plantillas de mensajes de seguimiento" data-fr="Modèles de messages de suivi">Follow-up message templates</li>
+                        </ul>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <h3><span>📊</span><span class="translatable" data-en="Training Report" data-es="Informe de Capacitación" data-fr="Rapport de Formation">Training Report</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Program methodology overview" data-es="Descripción general de la metodología del programa" data-fr="Aperçu de la méthodologie du programme">Program methodology overview</li>
+                            <li class="translatable" data-en="Participant profiles & calendar" data-es="Perfiles de participantes y calendario" data-fr="Profils des participants et calendrier">Participant profiles & calendar</li>
+                            <li class="translatable" data-en="B2B meeting synthesis" data-es="Síntesis de reuniones B2B" data-fr="Synthèse des rencontres B2B">B2B meeting synthesis</li>
+                            <li class="translatable" data-en="Buyer feedback analysis" data-es="Análisis de retroalimentación de compradores" data-fr="Analyse des retours acheteurs">Buyer feedback analysis</li>
+                            <li class="translatable" data-en="Strategic recommendations" data-es="Recomendaciones estratégicas" data-fr="Recommandations stratégiques">Strategic recommendations</li>
+                            <li class="translatable" data-en="Tourism 4.0 perspectives" data-es="Perspectivas de Turismo 4.0" data-fr="Perspectives Tourisme 4.0">Tourism 4.0 perspectives</li>
+                        </ul>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <h3><span>🎯</span><span class="translatable" data-en="Individual Action Plans" data-es="Planes de Acción Individuales" data-fr="Plans d'Action Individuels">Individual Action Plans</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Priority markets identified" data-es="Mercados prioritarios identificados" data-fr="Marchés prioritaires identifiés">Priority markets identified</li>
+                            <li class="translatable" data-en="Positioning adjustments needed" data-es="Ajustes de posicionamiento necesarios" data-fr="Ajustements de positionnement nécessaires">Positioning adjustments needed</li>
+                            <li class="translatable" data-en="Buyer follow-up strategy" data-es="Estrategia de seguimiento de compradores" data-fr="Stratégie de suivi des acheteurs">Buyer follow-up strategy</li>
+                            <li class="translatable" data-en="Systems to implement" data-es="Sistemas a implementar" data-fr="Systèmes à mettre en œuvre">Systems to implement</li>
+                            <li class="translatable" data-en="Post-training roadmap" data-es="Hoja de ruta posterior a la capacitación" data-fr="Feuille de route post-formation">Post-training roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Questions for Resolution -->
+        <section class="why-section" id="questions" data-section="11">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="🗺️ Where We Go From Here" data-es="🗺️ Hacia Dónde Vamos" data-fr="🗺️ La Suite du Projet">
+                    🗺️ Where We Go From Here
+                </h2>
+                <p class="section-subtitle translatable" data-en="Strategic questions to align implementation with your goals" data-es="Preguntas estratégicas para alinear la implementación con sus objetivos" data-fr="Questions stratégiques pour aligner la mise en œuvre avec vos objectifs">
+                    Strategic questions to align implementation with your goals
+                </p>
+
+                <div class="question-blocks">
+                    <div class="question-block">
+                        <h3><span>👥</span><span class="translatable" data-en="Who Participates?" data-es="¿Quién Participa?" data-fr="Qui Participe ?">Who Participates?</span></h3>
+                        <p class="translatable" data-en="20 participants — but who exactly?" data-es="20 participantes — ¿pero quién exactamente?" data-fr="20 participants — mais qui exactement ?">20 participants — but who exactly?</p>
+                        <ul>
+                            <li class="translatable" data-en="Tour operators only? Or include accommodations, DMCs, public officials?" data-es="¿Solo tour operadores? ¿O incluir alojamientos, DMCs, funcionarios públicos?" data-fr="Tour-opérateurs uniquement ? Ou inclure hébergements, DMC, fonctionnaires ?">Tour operators only? Or include accommodations, DMCs, public officials?</li>
+                            <li class="translatable" data-en="What's their current business stage? (Established vs emerging)" data-es="¿Cuál es su etapa empresarial actual? (Establecido vs emergente)" data-fr="Quelle est leur étape commerciale actuelle ? (Établi vs émergent)">What's their current business stage? (Established vs emerging)</li>
+                            <li class="translatable" data-en="Single cohort or multiple focused groups?" data-es="¿Una sola cohorte o múltiples grupos focalizados?" data-fr="Une seule cohorte ou plusieurs groupes ciblés ?">Single cohort or multiple focused groups?</li>
+                        </ul>
+                        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);" class="translatable" data-en="This shapes the entire program design and depth of impact." data-es="Esto configura todo el diseño del programa y la profundidad del impacto." data-fr="Cela façonne toute la conception du programme et la profondeur de l'impact.">This shapes the entire program design and depth of impact.</p>
+                    </div>
+
+                    <div class="question-block">
+                        <h3><span>🤝</span><span class="translatable" data-en="European Buyer Involvement" data-es="Participación de Compradores Europeos" data-fr="Implication des Acheteurs Européens">European Buyer Involvement</span></h3>
+                        <p class="translatable" data-en="How do we activate market connections?" data-es="¿Cómo activamos las conexiones de mercado?" data-fr="Comment activer les connexions de marché ?">How do we activate market connections?</p>
+                        <ul>
+                            <li class="translatable" data-en="Can we access Embassy/Institut Français buyer networks?" data-es="¿Podemos acceder a redes de compradores de Embajada/Instituto Francés?" data-fr="Accès aux réseaux d'acheteurs Ambassade/Institut Français ?">Can we access Embassy/Institut Français buyer networks?</li>
+                            <li class="translatable" data-en="Which European markets to prioritize? (France, Germany, UK, Netherlands?)" data-es="¿Qué mercados europeos priorizar? (¿Francia, Alemania, Reino Unido, Países Bajos?)" data-fr="Quels marchés européens prioriser ? (France, Allemagne, RU, Pays-Bas ?)">Which European markets to prioritize? (France, Germany, UK, Netherlands?)</li>
+                            <li class="translatable" data-en="Are there existing partnerships with tour operators we can leverage?" data-es="¿Hay asociaciones existentes con tour operadores que podamos aprovechar?" data-fr="Partenariats existants avec tour-opérateurs à exploiter ?">Are there existing partnerships with tour operators we can leverage?</li>
+                            <li class="translatable" data-en="What's the timeline for coordinating B2B meetings?" data-es="¿Cuál es el cronograma para coordinar reuniones B2B?" data-fr="Quel est le calendrier pour coordonner les rencontres B2B ?">What's the timeline for coordinating B2B meetings?</li>
+                        </ul>
+                    </div>
+
+                    <div class="question-block">
+                        <h3><span>📅</span><span class="translatable" data-en="Implementation Timeline" data-es="Cronograma de Implementación" data-fr="Calendrier de Mise en Œuvre">Implementation Timeline</span></h3>
+                        <p class="translatable" data-en="Working backwards from May 25–26, 2026 in-person training:" data-es="Trabajando hacia atrás desde la capacitación presencial del 25–26 de mayo de 2026:" data-fr="En remontant depuis la formation en présentiel du 25–26 mai 2026 :">Working backwards from May 25–26, 2026 in-person training:</p>
+                        <ul>
+                            <li class="translatable" data-en="When can we finalize participant selection?" data-es="¿Cuándo podemos finalizar la selección de participantes?" data-fr="Quand peut-on finaliser la sélection des participants ?">When can we finalize participant selection?</li>
+                            <li class="translatable" data-en="When do discovery assessments need to happen?" data-es="¿Cuándo deben realizarse las evaluaciones de descubrimiento?" data-fr="Quand les évaluations de découverte doivent-elles avoir lieu ?">When do discovery assessments need to happen?</li>
+                            <li class="translatable" data-en="How much lead time for buyer coordination and B2B setup?" data-es="¿Cuánto tiempo de anticipación para coordinación de compradores y configuración B2B?" data-fr="Combien de délai pour la coordination des acheteurs et la configuration B2B ?">How much lead time for buyer coordination and B2B setup?</li>
+                            <li class="translatable" data-en="When should online module launch?" data-es="¿Cuándo debe lanzarse el módulo en línea?" data-fr="Quand le module en ligne doit-il être lancé ?">When should online module launch?</li>
+                        </ul>
+                    </div>
+
+                    <div class="question-block">
+                        <h3><span>🎯</span><span class="translatable" data-en="Logistical Considerations" data-es="Consideraciones Logísticas" data-fr="Considérations Logistiques">Logistical Considerations</span></h3>
+                        <p class="translatable" data-en="Practical elements that shape program delivery:" data-es="Elementos prácticos que configuran la entrega del programa:" data-fr="Éléments pratiques qui façonnent la livraison du programme :">Practical elements that shape program delivery:</p>
+                        <ul>
+                            <li class="translatable" data-en="Training materials: Spanish only or multilingual?" data-es="Materiales de capacitación: ¿Solo español o multilingüe?" data-fr="Matériels de formation : espagnol uniquement ou multilingue ?">Training materials: Spanish only or multilingual?</li>
+                            <li class="translatable" data-en="Venue requirements for in-person sessions in Medellín" data-es="Requisitos de lugar para sesiones presenciales en Medellín" data-fr="Exigences de lieu pour sessions en présentiel à Medellín">Venue requirements for in-person sessions in Medellín</li>
+                            <li class="translatable" data-en="Platform for online module delivery and participant engagement" data-es="Plataforma para entrega de módulo en línea y participación" data-fr="Plateforme pour livraison du module en ligne et engagement">Platform for online module delivery and participant engagement</li>
+                            <li class="translatable" data-en="Post-training support structure and follow-up plan" data-es="Estructura de soporte post-capacitación y plan de seguimiento" data-fr="Structure de soutien post-formation et plan de suivi">Post-training support structure and follow-up plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Next Steps -->
+        <section class="approach-section" id="nextsteps" data-section="12">
+            <div class="section-content">
+                <div class="final-box">
+                    <h3 class="translatable" data-en="Next Steps" data-es="Próximos Pasos" data-fr="Prochaines Étapes">
+                        Next Steps
+                    </h3>
+                    <p class="translatable" data-en="An operational, structured approach to strengthening international market access through direct buyer connections, information systems, and data-driven decision-making." data-es="Un enfoque operativo y estructurado para fortalecer el acceso a mercados internacionales a través de conexiones directas con compradores, sistemas de información y toma de decisiones basada en datos." data-fr="Une approche opérationnelle et structurée pour renforcer l'accès aux marchés internationaux par des connexions directes avec les acheteurs, des systèmes d'information et une prise de décision basée sur les données.">
+                        An operational, structured approach to strengthening international market access through direct buyer connections, information systems, and data-driven decision-making.
+                    </p>
+
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
+                        <div style="background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold;" class="translatable" data-en="Apr–Jun" data-es="Abr–Jun" data-fr="Avr–Juin">Apr–Jun</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;" class="translatable" data-en="2026 Hybrid format" data-es="Formato híbrido 2026" data-fr="Format hybride 2026">2026 Hybrid format</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold;" class="translatable" data-en="2 days" data-es="2 días" data-fr="2 jours">2 days</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;" class="translatable" data-en="In Medellín" data-es="En Medellín" data-fr="À Medellín">In Medellín</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold;">3</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;" class="translatable" data-en="Online + In-Person modules" data-es="Módulos en línea + presenciales" data-fr="Modules en ligne + en présentiel">Online + In-Person modules</div>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <p style="margin: 0; font-size: 1rem;" class="translatable" data-en="For questions or to discuss implementation:" data-es="Para preguntas o para discutir la implementación:" data-fr="Pour des questions ou pour discuter de la mise en œuvre :">
+                            For questions or to discuss implementation:
+                        </p>
+                        <p style="margin: 0.5rem 0 0; font-size: 1.1rem; font-weight: 600;">
+                            <a href="mailto:alex.jeffries@gmail.com">alex.jeffries@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-btn prev" id="prevBtn" onclick="prevSection()">
+                <span>←</span>
+                <span class="translatable" data-en="Previous" data-es="Anterior" data-fr="Précédent">Previous</span>
+            </button>
+            <button class="nav-btn" id="nextBtn" onclick="nextSection()">
+                <span class="translatable" data-en="Next" data-es="Siguiente" data-fr="Suivant">Next</span>
+                <span>→</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Password protection
+        function checkPassword() {
+            const input = document.getElementById('password-input');
+            const error = document.getElementById('password-error');
+
+            if (input.value.toLowerCase() === 'medellin') {
+                document.getElementById('password-screen').classList.add('hidden');
+                document.getElementById('main-content').classList.add('visible');
+            } else {
+                error.style.display = 'block';
+            }
+        }
+
+        // Allow Enter key to submit password
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Language switching
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+
+            // Update html lang attribute for CSS
+            document.documentElement.setAttribute('lang', lang);
+
+            // Update active button
+            document.querySelectorAll('.lang-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update all translatable elements
+            document.querySelectorAll('.translatable').forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    el.textContent = translation;
+                }
+            });
+        }
+
+        // Section navigation
+        let currentSection = 0;
+        const sections = document.querySelectorAll('section[data-section]');
+        const totalSections = sections.length;
+
+        function goToSection(index) {
+            if (index >= 0 && index < totalSections) {
+                currentSection = index;
+                sections[index].scrollIntoView({ behavior: 'smooth' });
+                updateSidebar();
+            }
+        }
+
+        function nextSection() {
+            if (currentSection < totalSections - 1) {
+                goToSection(currentSection + 1);
+            }
+        }
+
+        function prevSection() {
+            if (currentSection > 0) {
+                goToSection(currentSection - 1);
+            }
+        }
+
+        function updateSidebar() {
+            document.querySelectorAll('.sidebar-item').forEach((item, index) => {
+                if (index === currentSection) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            updateButtons();
+        }
+
+        function updateButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            // Show/hide previous button
+            if (currentSection === 0) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+            }
+
+            // Disable next button on last section
+            if (currentSection === totalSections - 1) {
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.disabled = false;
+            }
+        }
+
+        // Update current section on scroll
+        let isScrolling;
+        window.addEventListener('scroll', function() {
+            clearTimeout(isScrolling);
+            isScrolling = setTimeout(function() {
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        currentSection = index;
+                        updateSidebar();
+                    }
+                });
+            }, 100);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                nextSection();
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSection();
+            }
+        });
+
+        // Initialize buttons on load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateButtons();
+        });
+    </script>
+</body>
+</html>
