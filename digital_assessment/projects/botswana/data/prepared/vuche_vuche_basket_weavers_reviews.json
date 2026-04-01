@@ -1,0 +1,110 @@
+[
+  {
+    "title": "A true art - Chobe baskets.",
+    "rating": 5,
+    "travelDate": "2023-11",
+    "publishedDate": "2024-03-28",
+    "text": "These baskets are unique. A true art. The women that produced them are fantastic. These women are an example for our society. They are hard working, loving mothers who take care of their family members thanks to their work an need our support and appreciation.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297318-d24186640-r944300187-Vuche_Vuche_Basket_Weavers-Kasane_Chobe_National_Park_North_West_District.html",
+    "user": {
+      "userId": "957A1DACCB50BCABC1825C773A91FA20",
+      "name": "Julia E",
+      "contributions": {
+        "totalContributions": 34
+      },
+      "username": "Emilia123456789",
+      "userLocation": {
+        "shortName": "Geneva",
+        "name": "Geneva, Switzerland",
+        "id": "188057"
+      },
+      "avatar": {
+        "id": "452390771",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ef/73/default-avatar-2020-13.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/Emilia123456789"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "24186640",
+      "name": "Vuche Vuche Basket Weavers",
+      "rating": 5,
+      "numberOfReviews": 2,
+      "locationString": "Kasane, Chobe National Park, North-West District",
+      "latitude": -17.793606,
+      "longitude": 25.158195,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297318-d24186640-Reviews-Vuche_Vuche_Basket_Weavers-Kasane_Chobe_National_Park_North_West_District.html",
+      "website": null,
+      "address": "Mabele Village, Kasane, Chobe National Park Botswana",
+      "addressObj": {
+        "street1": "Mabele Village",
+        "street2": null,
+        "city": "Kasane",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 0,
+        "count4": 0,
+        "count5": 2
+      }
+    }
+  },
+  {
+    "title": "Exceptional",
+    "rating": 5,
+    "travelDate": "2023-11",
+    "publishedDate": "2024-02-18",
+    "text": "I recently had the pleasure of visiting Vuche Vuche Basket weavers, and I must say, the experience was outstanding. The ambiance was inviting and comfortable. From the moment I walked in, I was mesmerized by their baskets on display. I was greeted warmly by the knowledgeable and friendly Vuche Vuche ladies. Their product quality was outstanding, exceeding my expectations.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g297318-d24186640-r938856527-Vuche_Vuche_Basket_Weavers-Kasane_Chobe_National_Park_North_West_District.html",
+    "user": {
+      "userId": "DF0EC9B61DB5A57EE3B2B74066A5C015",
+      "name": "Paradise01039650406",
+      "contributions": {
+        "totalContributions": 1
+      },
+      "username": "Paradise01039650406",
+      "userLocation": null,
+      "avatar": {
+        "id": "452390706",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ef/32/default-avatar-2020-12.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/Paradise01039650406"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "24186640",
+      "name": "Vuche Vuche Basket Weavers",
+      "rating": 5,
+      "numberOfReviews": 2,
+      "locationString": "Kasane, Chobe National Park, North-West District",
+      "latitude": -17.793606,
+      "longitude": 25.158195,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g297318-d24186640-Reviews-Vuche_Vuche_Basket_Weavers-Kasane_Chobe_National_Park_North_West_District.html",
+      "website": null,
+      "address": "Mabele Village, Kasane, Chobe National Park Botswana",
+      "addressObj": {
+        "street1": "Mabele Village",
+        "street2": null,
+        "city": "Kasane",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 0,
+        "count4": 0,
+        "count5": 2
+      }
+    }
+  }
+]

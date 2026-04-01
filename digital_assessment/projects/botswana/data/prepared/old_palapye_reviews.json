@@ -1,0 +1,114 @@
+[
+  {
+    "title": "A multicultural travel throughout a fascinating landscape",
+    "rating": 5,
+    "travelDate": "2022-09",
+    "publishedDate": "2022-11-06",
+    "text": "A trip to Old Palapye is definitely worth a stop f one is going up to the Okavango or wishes to spend more time in less known places of beautiful Botswana. It was not easy to find the access, but the guides signalled us to stop in the right place. The office is actually a shed and a tree, but the guide we had was both knowledgeable, kind and proud about the history of his Country. The visit takes one to the ruins of a church built by the London Society. The brick facade is still standing, and the relic of the apse at the back. The roof is gone as most of the interior. It is an eerie sensation to stand amongst the ruins of a church that is definitely \"English\" in style, but to see around the spiny vegetation and the grey rocks of the southern part of Africa. \nThe track then leads to a miracle...Because Botswana in September is dusty and dry, there are no clouds in the sky and apparently there is no surface water. The miracle is a small canyon where a creek flows and falls in a small cascade of bubbling water. The water is pure, there is nothing above, and tastes cool and fresh. It was a gift. Our guide told us stories surrounding the water and then we went back, happy to have seen this wondrous place.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1379986-d13376630-r867531078-Old_Palapye-Palapye_Central_District.html",
+    "user": {
+      "userId": "E501DFF15D32F4E333D8D407DB71DAB3",
+      "name": "Silviaf",
+      "contributions": {
+        "totalContributions": 161
+      },
+      "username": "silvia_frisia",
+      "userLocation": {
+        "shortName": "Newcastle",
+        "name": "Newcastle, Australia",
+        "id": "255325"
+      },
+      "avatar": {
+        "id": "119206449",
+        "width": 980,
+        "height": 980,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/1a/f2/31/silvia-frisia.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/silvia_frisia"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "13376630",
+      "name": "Old Palapye",
+      "rating": 4.5,
+      "numberOfReviews": 2,
+      "locationString": "Palapye, Central District",
+      "latitude": -22.56667,
+      "longitude": 27.3,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1379986-d13376630-Reviews-Old_Palapye-Palapye_Central_District.html",
+      "website": null,
+      "address": "Malaka Road, Palapye Botswana",
+      "addressObj": {
+        "street1": "Malaka Road",
+        "street2": null,
+        "city": "Palapye",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 0,
+        "count4": 1,
+        "count5": 1
+      }
+    }
+  },
+  {
+    "title": "Interesting enough",
+    "rating": 4,
+    "travelDate": "2021-04",
+    "publishedDate": "2021-04-12",
+    "text": "The ruins of the church are interesting, the others few and not so much. There is an entry fee now. The small gorge in the same enclosure, 5 km further, is very nice but not so much as the one on the north side",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1379986-d13376630-r786372280-Old_Palapye-Palapye_Central_District.html",
+    "user": {
+      "userId": "7751D490D79BC9E0E77A2E0EDC56A6E6",
+      "name": "Jurgen B",
+      "contributions": {
+        "totalContributions": 3002
+      },
+      "username": "JurgenB435",
+      "userLocation": {
+        "shortName": "Brussels",
+        "name": "Brussels, Belgium",
+        "id": "188644"
+      },
+      "avatar": {
+        "id": "129383634",
+        "width": 385,
+        "height": 385,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/b6/3c/d2/jurgen-b.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/JurgenB435"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "13376630",
+      "name": "Old Palapye",
+      "rating": 4.5,
+      "numberOfReviews": 2,
+      "locationString": "Palapye, Central District",
+      "latitude": -22.56667,
+      "longitude": 27.3,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1379986-d13376630-Reviews-Old_Palapye-Palapye_Central_District.html",
+      "website": null,
+      "address": "Malaka Road, Palapye Botswana",
+      "addressObj": {
+        "street1": "Malaka Road",
+        "street2": null,
+        "city": "Palapye",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 0,
+        "count4": 1,
+        "count5": 1
+      }
+    }
+  }
+]

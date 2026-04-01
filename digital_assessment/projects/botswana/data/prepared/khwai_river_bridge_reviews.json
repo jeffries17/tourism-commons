@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Perfect For Wildlife",
+    "rating": 5,
+    "travelDate": "2024-10",
+    "publishedDate": "2025-02-06",
+    "text": "As part if our tour we stayed for 2 nights in a tented camp and had game drives during the day which were spectacular. The drive in from Maun was long and slow on rough roads but we did see wild life on the way and the area was full of fantastic viewing.  Great place to spend with a guide as they know where to go!!!",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g472673-d1171922-r992461837-Khwai_River_Bridge-Okavango_Delta_North_West_District.html",
+    "user": {
+      "userId": "9BF8BE691C777C589D6C29CEC1A15731",
+      "name": "Maree R",
+      "contributions": {
+        "totalContributions": 1397
+      },
+      "username": "740mareer",
+      "userLocation": {
+        "shortName": "Christchurch",
+        "name": "Christchurch, New Zealand",
+        "id": "255118"
+      },
+      "avatar": {
+        "id": "349031698",
+        "width": 769,
+        "height": 769,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/cd/cd/12/maree-r.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/740mareer"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "1171922",
+      "name": "Khwai River Bridge",
+      "rating": 4.7,
+      "numberOfReviews": 46,
+      "locationString": "Okavango Delta, North-West District",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g472673-d1171922-Reviews-Khwai_River_Bridge-Okavango_Delta_North_West_District.html",
+      "website": "http://www.rhinoafrica.com/botswana/okavango-delta",
+      "address": "Botswana",
+      "addressObj": {
+        "street1": "",
+        "street2": "",
+        "city": null,
+        "state": null,
+        "country": "Botswana",
+        "postalcode": ""
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 0,
+        "count4": 13,
+        "count5": 33
+      }
+    }
+  }
+]

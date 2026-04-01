@@ -1,0 +1,312 @@
+{
+  "4 Rivers Camp  Kwando Safaris": {
+    "lat": -19.015327,
+    "lon": 23.123251,
+    "region": "Okavango"
+  },
+  "African Bush Lovers Travel  Tours Safaris": {
+    "lat": -17.795973,
+    "lon": 25.153728,
+    "region": "Chobe"
+  },
+  "African Guide Academy": {
+    "lat": -19.995262,
+    "lon": 23.418077,
+    "region": "Okavango"
+  },
+  "Baines Baobabs": {
+    "lat": -20.112202,
+    "lon": 24.769003,
+    "region": "Makgadikgadi"
+  },
+  "Boab Prison Tree": {
+    "lat": -17.803825,
+    "lon": 25.14915,
+    "region": "Chobe"
+  },
+  "Caracal Biodiversity Center": {
+    "lat": -17.809736,
+    "lon": 25.153313,
+    "region": "Chobe"
+  },
+  "Central Kalahari Game Reserve": {
+    "lat": -22.15561,
+    "lon": 22.590864,
+    "region": "Kalahari"
+  },
+  "Central Kalahari Wild Tours": {
+    "lat": -24.76234,
+    "lon": 25.7995,
+    "region": "Greater Gaborone"
+  },
+  "Chobe Crocodile Farm": {
+    "lat": -17.795942,
+    "lon": 25.231642,
+    "region": "Chobe"
+  },
+  "Chobe Marina Lodge": {
+    "lat": -17.8005,
+    "lon": 25.149471,
+    "region": "Chobe"
+  },
+  "Chobe River Boat Cruises": {
+    "lat": -17.7912,
+    "lon": 25.15668,
+    "region": "Chobe"
+  },
+  "Crocodile Pools River Safaris": {
+    "lat": -24.768675,
+    "lon": 25.847826,
+    "region": "Greater Gaborone"
+  },
+  "Desert  Delta Safaris": {
+    "lat": -19.99075,
+    "lon": 23.42295,
+    "region": "Okavango"
+  },
+  "Gifas Transport": {
+    "lat": -24.658,
+    "lon": 25.907703,
+    "region": "Greater Gaborone"
+  },
+  "Gondwana Tours  Safaris": {
+    "lat": -20.01562,
+    "lon": 23.4046,
+    "region": "Okavango"
+  },
+  "Kalahari Breeze Safaris": {
+    "lat": -19.940992,
+    "lon": 23.494192,
+    "region": "Okavango"
+  },
+  "Kalahari Tours": {
+    "lat": -17.793137,
+    "lon": 25.155746,
+    "region": "Chobe"
+  },
+  "Kgale Hill": {
+    "lat": -24.687437,
+    "lon": 25.881111,
+    "region": "Greater Gaborone"
+  },
+  "Khama Rhino Sanctuary": {
+    "lat": -22.203976,
+    "lon": 26.69048,
+    "region": "Central"
+  },
+  "Kubu Island": {
+    "lat": -20.896166,
+    "lon": 25.824165,
+    "region": "Makgadikgadi"
+  },
+  "Kuminda Farm": {
+    "lat": -20.976147,
+    "lon": 27.254805,
+    "region": "Central"
+  },
+  "Kuru Art Project": {
+    "lat": -21.51636,
+    "lon": 21.916111,
+    "region": "Kalahari"
+  },
+  "Lelobu Safaris": {
+    "lat": -19.98333,
+    "lon": 23.41667,
+    "region": "Okavango"
+  },
+  "Letaka Safaris": {
+    "lat": -19.937216,
+    "lon": 23.500292,
+    "region": "Okavango"
+  },
+  "Lilys Petting Farm": {
+    "lat": -24.76234,
+    "lon": 25.7995,
+    "region": "Greater Gaborone"
+  },
+  "Mack Air": {
+    "lat": -19.97724,
+    "lon": 23.42909,
+    "region": "Okavango"
+  },
+  "Makgadikgadi Salt Pan": {
+    "lat": -20.810825,
+    "lon": 25.534548,
+    "region": "Makgadikgadi"
+  },
+  "Manyana Rock Paintings": {
+    "lat": -24.728807,
+    "lon": 25.645073,
+    "region": "Kalahari"
+  },
+  "Matsiengs Footprints": {
+    "lat": -24.5576,
+    "lon": 25.98552,
+    "region": "Greater Gaborone"
+  },
+  "Mogonye Gorge": {
+    "lat": -24.65637,
+    "lon": 25.88678,
+    "region": "Greater Gaborone"
+  },
+  "Mokolodi Nature Reserve": {
+    "lat": -24.74461,
+    "lon": 25.83102,
+    "region": "Greater Gaborone"
+  },
+  "Moremi Wildlife Reserve": {
+    "lat": -19.590782,
+    "lon": 22.841322,
+    "region": "Okavango"
+  },
+  "Nyala Adventure Safaris": {
+    "lat": -19.98333,
+    "lon": 23.41667,
+    "region": "Okavango"
+  },
+  "Okavango Delta": {
+    "lat": -19.439013,
+    "lon": 22.806374,
+    "region": "Okavango"
+  },
+  "Okavango River": {
+    "lat": -19.909111,
+    "lon": 23.501223,
+    "region": "Okavango"
+  },
+  "Old Palapye": {
+    "lat": -22.56667,
+    "lon": 27.3,
+    "region": "Central"
+  },
+  "Pangolin Photo Safaris": {
+    "lat": -17.826868,
+    "lon": 25.12095,
+    "region": "Chobe"
+  },
+  "Pat Mobile Safari": {
+    "lat": -19.995262,
+    "lon": 23.418077,
+    "region": "Okavango"
+  },
+  "Savute Reserve": {
+    "lat": -17.82665,
+    "lon": 25.129232,
+    "region": "Chobe"
+  },
+  "Steenbok Safari": {
+    "lat": -17.80417,
+    "lon": 25.15993,
+    "region": "Chobe"
+  },
+  "Tawana Self Drive": {
+    "lat": -17.799133,
+    "lon": 25.251635,
+    "region": "Okavango"
+  },
+  "Temogo Safari": {
+    "lat": -19.993,
+    "lon": 23.42165,
+    "region": "Okavango"
+  },
+  "The Space Botswana": {
+    "lat": -19.942715,
+    "lon": 23.505424,
+    "region": "Okavango"
+  },
+  "Three Chiefs Statues": {
+    "lat": -24.644747,
+    "lon": 25.907467,
+    "region": "Greater Gaborone"
+  },
+  "Tsodilo Hills": {
+    "lat": -18.7717,
+    "lon": 21.7542,
+    "region": "Okavango"
+  },
+  "Vuche Vuche Basket Weavers": {
+    "lat": -17.793606,
+    "lon": 25.158195,
+    "region": "Chobe"
+  },
+  "Bluetree World Of Golf": {
+    "lat": -24.63,
+    "lon": 25.91,
+    "region": "Greater Gaborone"
+  },
+  "Deception Valley": {
+    "lat": -21.94,
+    "lon": 23.56,
+    "region": "Kalahari"
+  },
+  "Gaborone Game Reserve": {
+    "lat": -24.72,
+    "lon": 25.92,
+    "region": "Greater Gaborone"
+  },
+  "Helicopter Horizons": {
+    "lat": -19.98,
+    "lon": 23.42,
+    "region": "Okavango"
+  },
+  "Jwana Game Park": {
+    "lat": -24.6,
+    "lon": 24.73,
+    "region": "Kalahari"
+  },
+  "Khama Iii Memorial Museum": {
+    "lat": -22.38,
+    "lon": 26.71,
+    "region": "Central"
+  },
+  "Khutse Game Reserve": {
+    "lat": -23.4,
+    "lon": 24.95,
+    "region": "Kalahari"
+  },
+  "Khwai Concession": {
+    "lat": -19.15,
+    "lon": 23.77,
+    "region": "Okavango"
+  },
+  "Khwai River Bridge": {
+    "lat": -19.14,
+    "lon": 23.8,
+    "region": "Okavango"
+  },
+  "Moremi Game Reserve": {
+    "lat": -19.39,
+    "lon": 23.35,
+    "region": "Okavango"
+  },
+  "Moremi Gorge": {
+    "lat": -24.71,
+    "lon": 25.98,
+    "region": "Greater Gaborone"
+  },
+  "Nata Bird Sanctuary": {
+    "lat": -20.19,
+    "lon": 26.18,
+    "region": "Makgadikgadi"
+  },
+  "Planet Baobab": {
+    "lat": -20.16,
+    "lon": 25.26,
+    "region": "Makgadikgadi"
+  },
+  "Serondela Reserve": {
+    "lat": -17.88,
+    "lon": 25.16,
+    "region": "Chobe"
+  },
+  "Shangana Safaris Okavango Botswana": {
+    "lat": -19.98,
+    "lon": 23.42,
+    "region": "Okavango"
+  },
+  "Ultimate Africa Safaris": {
+    "lat": -19.98,
+    "lon": 23.42,
+    "region": "Okavango"
+  }
+}

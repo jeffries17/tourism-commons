@@ -1,0 +1,54 @@
+[
+  {
+    "title": "It’s a great place for a simple day hike",
+    "rating": 4,
+    "travelDate": "2024-03",
+    "publishedDate": "2024-10-20",
+    "text": "stunning views and peaceful hiking trails, but be prepared for a bit of off-road adventure from the gate to the gorge...perfect for nature lovers seeking a quiet escape",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g293767-d5993696-r974708721-Mogonye_Gorge-Gaborone_South_East_District.html",
+    "user": {
+      "userId": "03C2AEFEC39D6E6C8129C3510C89FF35",
+      "name": "Ok K",
+      "contributions": {
+        "totalContributions": 1
+      },
+      "username": "581okk",
+      "userLocation": null,
+      "avatar": {
+        "id": "452389949",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ec/3d/default-avatar-2020-1.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/581okk"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "5993696",
+      "name": "Mogonye Gorge",
+      "rating": 3.9,
+      "numberOfReviews": 8,
+      "locationString": "Gaborone, South-East District",
+      "latitude": -24.65637,
+      "longitude": 25.88678,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g293767-d5993696-Reviews-Mogonye_Gorge-Gaborone_South_East_District.html",
+      "website": null,
+      "address": "Gaborone Botswana",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Gaborone",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 1,
+        "count3": 1,
+        "count4": 4,
+        "count5": 2
+      }
+    }
+  }
+]

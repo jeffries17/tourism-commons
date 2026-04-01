@@ -1,0 +1,105 @@
+{
+  "project": {
+    "id": "botswana",
+    "name": "Botswana",
+    "slug": "botswana-ecotourism",
+    "basename": "/botswana",
+    "displayName": "Botswana Ecotourism & Adventure",
+    "description": "Sentiment Analysis of Botswana Ecotourism & Adventure Tourism",
+
+    "theme": {
+      "primaryColor": "#00A878",
+      "secondaryColor": "#006B4E",
+      "logo": "/botswana-logo.svg",
+      "backgroundImage": null
+    },
+
+    "sectors": [
+      "reserve",
+      "lodge",
+      "operator",
+      "activity"
+    ],
+
+    "zones": [
+      "Okavango Delta",
+      "Chobe",
+      "Moremi",
+      "Linyanti",
+      "Kwai",
+      "Selinda",
+      "Makgadikgadi",
+      "Central Kalahari",
+      "Other"
+    ],
+
+    "priceTiers": ["budget", "mid", "luxury"],
+
+    "features": {
+      "enableSentimentAnalysis": true,
+      "enableSectorComparison": true,
+      "enableZoneMapping": true,
+      "enableEcoCredibilityIndex": true,
+      "enableWildlifeEncounterIndex": true,
+      "enableSeasonalAnalysis": true,
+      "enablePriceTierAnalysis": true
+    },
+
+    "data": {
+      "sources": {
+        "sentiment": "./projects/botswana/data/sentiment_data.json"
+      },
+      "cacheTime": 3600
+    },
+
+    "routes": [
+      {
+        "path": "/",
+        "component": "Dashboard",
+        "name": "Dashboard",
+        "admin": false,
+        "participant": true
+      },
+      {
+        "path": "/sectors",
+        "component": "SectorComparison",
+        "name": "Sector Comparison",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/zones",
+        "component": "ZoneMapping",
+        "name": "Zones",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/reviews-sentiment",
+        "component": "ReviewsSentiment",
+        "name": "Reviews & Sentiment",
+        "admin": true,
+        "participant": false
+      },
+      {
+        "path": "/methodology",
+        "component": "Methodology",
+        "name": "Methodology",
+        "admin": false,
+        "participant": false
+      }
+    ],
+
+    "deployment": {
+      "hosting": "tourism-development-d620c",
+      "domain": "tourismcommons.org",
+      "baseURL": "https://tourismcommons.org/botswana"
+    },
+
+    "metadata": {
+      "created": "2026-03-19",
+      "lastUpdated": "2026-03-19",
+      "version": "1.0.0"
+    }
+  }
+}

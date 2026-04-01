@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Faded figures needing time and guide to decipher.",
+    "rating": 3,
+    "travelDate": "2023-02",
+    "publishedDate": "2023-02-15",
+    "text": "We drove 30 miles southwest of Gaborone on paved roads to the small town of Manyana following Google. The faded sign “Manyana Rock paintings 20m” was emblematic of the fenced and locked site itself. A man soon arrived and offered to call the caretaker but said the art is difficult to make out. \nWe decided to inspect the interesting 20’-30’ high stone walls from the 30’ distance and read the wikipedia research; “artworks were made by the Khoikhoi or the San people between 1100 AD and 1700 AD. The paintings are found on five cliff areas around the rocky hill. Today, the site is fenced and protected as a National Monument.”",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g12958364-d23538438-r878799509-Manyana_Rock_Paintings-Mmankgodi_Kweneng_District.html",
+    "user": {
+      "userId": "BDA4744EEBBE2E49FBECD838DBB1C01F",
+      "name": "Gene R J",
+      "contributions": {
+        "totalContributions": 12038
+      },
+      "username": "291genej",
+      "userLocation": {
+        "shortName": "Silver Spring",
+        "name": "Silver Spring, Maryland",
+        "id": "41378"
+      },
+      "avatar": {
+        "id": "198559776",
+        "width": 1024,
+        "height": 1024,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/d5/c8/20/gene-r-j.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/291genej"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "23538438",
+      "name": "Manyana Rock Paintings",
+      "rating": 3,
+      "numberOfReviews": 1,
+      "locationString": "Mmankgodi, Kweneng District",
+      "latitude": -24.728807,
+      "longitude": 25.645073,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g12958364-d23538438-Reviews-Manyana_Rock_Paintings-Mmankgodi_Kweneng_District.html",
+      "website": null,
+      "address": "Manyana Village, Mmankgodi 00000 Botswana",
+      "addressObj": {
+        "street1": "Manyana Village",
+        "street2": null,
+        "city": "Mmankgodi",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": "00000"
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 1,
+        "count4": 0,
+        "count5": 0
+      }
+    }
+  }
+]

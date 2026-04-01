@@ -1,0 +1,1383 @@
+{
+  "thresholds": {
+    "include": 0.15,
+    "review": 0.05
+  },
+  "summary": {
+    "total": 74,
+    "include": 60,
+    "review": 0,
+    "exclude": 14
+  },
+  "results": [
+    {
+      "name": "4 Rivers Camp - Kwando Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 10,
+      "avg_rating": 4.8,
+      "keyword_hits": 109,
+      "top_keywords": [
+        "guide",
+        "track",
+        "tracker",
+        "wildlife",
+        "game",
+        "animal",
+        "sighting",
+        "wild dog",
+        "night drive",
+        "game drive"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d26707973-Reviews-4_Rivers_Camp_Kwando_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "African Bush Lovers Travel & Tours Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 13,
+      "avg_rating": 5.0,
+      "keyword_hits": 119,
+      "top_keywords": [
+        "safari",
+        "guide",
+        "animal",
+        "game",
+        "moremi",
+        "bird",
+        "eco",
+        "adventure",
+        "chobe",
+        "elephant"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d12309782-Reviews-African_Bush_Lovers_Travel_Tours_Safaris-Kasane_Chobe_National_Park_North_West_D.html"
+    },
+    {
+      "name": "African Guide Academy",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 4,
+      "avg_rating": 5.0,
+      "keyword_hits": 39,
+      "top_keywords": [
+        "guide",
+        "wildlife",
+        "okavango",
+        "delta",
+        "track",
+        "on foot",
+        "eco",
+        "animal",
+        "nature guide",
+        "birdwatching"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d23329149-Reviews-African_Guide_Academy-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Baines Baobabs",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 15,
+      "avg_rating": 4.1,
+      "keyword_hits": 20,
+      "top_keywords": [
+        "eco",
+        "guide",
+        "wildlife",
+        "bush camp",
+        "sable",
+        "game",
+        "national park",
+        "responsible",
+        "zebra",
+        "jackal"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482831-d2421856-Reviews-Baines_Baobabs-Nxai_Pan_National_Park_Central_District.html"
+    },
+    {
+      "name": "Boab Prison Tree",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 5,
+      "avg_rating": 3.8,
+      "keyword_hits": 4,
+      "top_keywords": [
+        "walk"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d13951354-Reviews-Boab_Prison_Tree-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "CARACAL Biodiversity Center",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 5,
+      "avg_rating": 4.6,
+      "keyword_hits": 18,
+      "top_keywords": [
+        "animal",
+        "guide",
+        "wildlife",
+        "bird",
+        "warthog",
+        "conserve",
+        "safari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d2189822-Reviews-CARACAL_Biodiversity_Center-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Central Kalahari Game Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 3,
+      "avg_rating": 3.7,
+      "keyword_hits": 20,
+      "top_keywords": [
+        "animal",
+        "game",
+        "track",
+        "bird",
+        "national park",
+        "elephant",
+        "eco",
+        "reserve",
+        "birding",
+        "antelope"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g3532391-d27416281-Reviews-Central_Kalahari_Game_Reserve-Ghanzi_District.html"
+    },
+    {
+      "name": "Central Kalahari Wild Tours",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 3,
+      "avg_rating": 5.0,
+      "keyword_hits": 34,
+      "top_keywords": [
+        "safari",
+        "wild dog",
+        "moremi",
+        "wildlife",
+        "chobe",
+        "cheetah",
+        "guide",
+        "rhino",
+        "leopard",
+        "lion"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d34114551-Reviews-Central_Kalahari_Wild_Tours-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Chobe Crocodile Farm",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 11,
+      "avg_rating": 4.7,
+      "keyword_hits": 47,
+      "top_keywords": [
+        "crocodile",
+        "moremi",
+        "chobe",
+        "guide",
+        "eco",
+        "protect",
+        "wildlife"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d12948270-Reviews-Chobe_Crocodile_Farm-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Chobe Marina Lodge",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 27,
+      "top_keywords": [
+        "elephant",
+        "lion",
+        "safari",
+        "game",
+        "animal",
+        "chobe",
+        "national park",
+        "buffalo",
+        "impala",
+        "hippo"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d25401182-Reviews-Chobe_Marina_Lodge-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Chobe River Boat Cruises",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 21,
+      "avg_rating": 4.8,
+      "keyword_hits": 127,
+      "top_keywords": [
+        "chobe",
+        "animal",
+        "elephant",
+        "eco",
+        "hippo",
+        "buffalo",
+        "crocodile",
+        "bird",
+        "game",
+        "wildlife"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d2343595-Reviews-Chobe_River_Boat_Cruises-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Crocodile Pools River Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 8,
+      "avg_rating": 3.1,
+      "keyword_hits": 12,
+      "top_keywords": [
+        "eco",
+        "boat cruise",
+        "crocodile",
+        "wildlife",
+        "reserve",
+        "environment",
+        "walk",
+        "guide",
+        "safari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d17352556-Reviews-Crocodile_Pools_River_Safaris-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Deception Valley",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 3,
+      "avg_rating": 3.7,
+      "keyword_hits": 17,
+      "top_keywords": [
+        "animal",
+        "track",
+        "kalahari",
+        "game",
+        "eco",
+        "reserve",
+        "environment",
+        "sighting",
+        "guide",
+        "rhino"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472671-d20031027-Reviews-Deception_Valley-Central_Kalahari_Game_Reserve_Ghanzi_District.html"
+    },
+    {
+      "name": "Desert & Delta Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 7,
+      "avg_rating": 4.4,
+      "keyword_hits": 136,
+      "top_keywords": [
+        "safari",
+        "animal",
+        "delta",
+        "chobe",
+        "guide",
+        "game",
+        "okavango",
+        "national park",
+        "eco",
+        "game drive"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d27120517-Reviews-Desert_Delta_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Gaborone Game Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 4,
+      "avg_rating": 3.2,
+      "keyword_hits": 14,
+      "top_keywords": [
+        "animal",
+        "game",
+        "track",
+        "eco",
+        "wildlife",
+        "game drive",
+        "zebra",
+        "warthog",
+        "adventure",
+        "antelope"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d2513264-Reviews-Gaborone_Game_Reserve-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Gifa's Transport",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 14,
+      "avg_rating": 4.7,
+      "keyword_hits": 26,
+      "top_keywords": [
+        "eco",
+        "game",
+        "reserve",
+        "guide",
+        "game reserve",
+        "wildlife",
+        "adventure",
+        "kalahari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d10769941-Reviews-Gifa_s_Transport-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Gondwana Tours & Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 50,
+      "avg_rating": 5.0,
+      "keyword_hits": 254,
+      "top_keywords": [
+        "safari",
+        "eco",
+        "guide",
+        "okavango",
+        "delta",
+        "animal",
+        "chobe",
+        "track",
+        "wildlife",
+        "game"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d12681249-Reviews-Gondwana_Tours_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Helicopter Horizons",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 50,
+      "avg_rating": 4.9,
+      "keyword_hits": 167,
+      "top_keywords": [
+        "delta",
+        "okavango",
+        "eco",
+        "elephant",
+        "wildlife",
+        "animal",
+        "hippo",
+        "guide",
+        "safari",
+        "lion"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d4355849-Reviews-Helicopter_Horizons-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Jwana Game Park",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 5,
+      "top_keywords": [
+        "game",
+        "zebra",
+        "antelope",
+        "rhino",
+        "giraffe"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g3780520-d17708710-Reviews-Jwana_Game_Park-Jwaneng_Southern_District.html"
+    },
+    {
+      "name": "Kalahari Breeze Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 50,
+      "avg_rating": 4.7,
+      "keyword_hits": 469,
+      "top_keywords": [
+        "guide",
+        "safari",
+        "delta",
+        "animal",
+        "kalahari",
+        "okavango",
+        "eco",
+        "wildlife",
+        "mokoro",
+        "walk"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d15123474-Reviews-Kalahari_Breeze_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Kalahari Tours",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 50,
+      "avg_rating": 5.0,
+      "keyword_hits": 521,
+      "top_keywords": [
+        "guide",
+        "safari",
+        "chobe",
+        "animal",
+        "eco",
+        "lion",
+        "elephant",
+        "kalahari",
+        "game",
+        "bird"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d3814806-Reviews-Kalahari_Tours-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Kgale Hill",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 4,
+      "avg_rating": 4.0,
+      "keyword_hits": 4,
+      "top_keywords": [
+        "guide",
+        "track",
+        "walk"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5975965-Reviews-Kgale_Hill-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Khama III Memorial Museum",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 3,
+      "top_keywords": [
+        "eco",
+        "guide",
+        "rhino"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479197-d3983505-Reviews-Khama_III_Memorial_Museum-Serowe_Central_District.html"
+    },
+    {
+      "name": "Khama Rhino Sanctuary",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 21,
+      "avg_rating": 4.0,
+      "keyword_hits": 107,
+      "top_keywords": [
+        "rhino",
+        "animal",
+        "game",
+        "wildlife",
+        "bird",
+        "reserve",
+        "sighting",
+        "guide",
+        "giraffe",
+        "protect"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479197-d2296308-Reviews-Khama_Rhino_Sanctuary-Serowe_Central_District.html"
+    },
+    {
+      "name": "Khutse Game Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 6,
+      "avg_rating": 3.5,
+      "keyword_hits": 35,
+      "top_keywords": [
+        "reserve",
+        "elephant",
+        "herd",
+        "lion",
+        "walk",
+        "conservation",
+        "wildebeest",
+        "game",
+        "eco",
+        "ranger"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d7931216-Reviews-Khutse_Game_Reserve-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Khwai Concession",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 13,
+      "avg_rating": 4.8,
+      "keyword_hits": 129,
+      "top_keywords": [
+        "animal",
+        "guide",
+        "leopard",
+        "lion",
+        "safari",
+        "game",
+        "wildlife",
+        "reserve",
+        "khwai",
+        "sighting"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g316101-d14893679-Reviews-Khwai_Concession-Moremi_Game_Reserve_Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Khwai River Bridge",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 4,
+      "top_keywords": [
+        "game",
+        "wildlife",
+        "game drive",
+        "guide"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472673-d1171922-Reviews-Khwai_River_Bridge-Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Kubu Island",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 11,
+      "avg_rating": 3.5,
+      "keyword_hits": 22,
+      "top_keywords": [
+        "track",
+        "bird",
+        "wildlife",
+        "responsible",
+        "elephant",
+        "eco",
+        "animal",
+        "jackal",
+        "makgadikgadi",
+        "adventure"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472670-d479134-Reviews-Kubu_Island-Makgadikgadi_Pans_National_Park_Central_District.html"
+    },
+    {
+      "name": "Kuminda Farm",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 11,
+      "avg_rating": 4.9,
+      "keyword_hits": 13,
+      "top_keywords": [
+        "eco",
+        "walk",
+        "guide",
+        "animal",
+        "bird"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317054-d7945044-Reviews-Kuminda_Farm-Francistown_North_East_District.html"
+    },
+    {
+      "name": "Lelobu Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 21,
+      "avg_rating": 5.0,
+      "keyword_hits": 234,
+      "top_keywords": [
+        "safari",
+        "eco",
+        "delta",
+        "game",
+        "okavango",
+        "elephant",
+        "guide",
+        "hippo",
+        "animal",
+        "chobe"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d27476976-Reviews-Lelobu_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Letaka Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 50,
+      "avg_rating": 4.9,
+      "keyword_hits": 658,
+      "top_keywords": [
+        "safari",
+        "guide",
+        "animal",
+        "wildlife",
+        "game",
+        "eco",
+        "bird",
+        "leopard",
+        "lion",
+        "track"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d15275524-Reviews-Letaka_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Lily's Petting Farm",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 1,
+      "top_keywords": [
+        "animal"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d33016317-Reviews-Lily_s_Petting_Farm-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Mack Air",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 27,
+      "avg_rating": 4.8,
+      "keyword_hits": 41,
+      "top_keywords": [
+        "delta",
+        "safari",
+        "okavango",
+        "eco",
+        "moremi",
+        "khwai",
+        "savuti",
+        "game",
+        "elephant",
+        "animal"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d21291487-Reviews-Mack_Air-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Makgadikgadi Salt Pan",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 15,
+      "avg_rating": 4.7,
+      "keyword_hits": 46,
+      "top_keywords": [
+        "animal",
+        "bird",
+        "elephant",
+        "wildebeest",
+        "game",
+        "moremi",
+        "zebra",
+        "game viewing",
+        "guide",
+        "delta"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472670-d3259396-Reviews-Makgadikgadi_Salt_Pan-Makgadikgadi_Pans_National_Park_Central_District.html"
+    },
+    {
+      "name": "Manyana Rock Paintings",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 3.0,
+      "keyword_hits": 2,
+      "top_keywords": [
+        "protect",
+        "guide"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g12958364-d23538438-Reviews-Manyana_Rock_Paintings-Mmankgodi_Kweneng_District.html"
+    },
+    {
+      "name": "Matsieng's Footprints",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 1,
+      "top_keywords": [
+        "footprint"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5983764-Reviews-Matsieng_s_Footprints-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Mogonye Gorge",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 1,
+      "avg_rating": 4.0,
+      "keyword_hits": 1,
+      "top_keywords": [
+        "adventure"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5993696-Reviews-Mogonye_Gorge-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Mokolodi Nature Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 26,
+      "avg_rating": 3.7,
+      "keyword_hits": 160,
+      "top_keywords": [
+        "reserve",
+        "animal",
+        "game",
+        "game drive",
+        "rhino",
+        "giraffe",
+        "eco",
+        "impala",
+        "guide",
+        "track"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5971370-Reviews-Mokolodi_Nature_Reserve-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Moremi Game Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 16,
+      "avg_rating": 4.4,
+      "keyword_hits": 143,
+      "top_keywords": [
+        "animal",
+        "moremi",
+        "elephant",
+        "game",
+        "reserve",
+        "delta",
+        "hippo",
+        "okavango",
+        "lion",
+        "game reserve"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d16864828-Reviews-Moremi_Game_Reserve-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Moremi Gorge",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 2,
+      "avg_rating": 3.5,
+      "keyword_hits": 3,
+      "top_keywords": [
+        "walk",
+        "guide",
+        "vulture"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1379986-d1749899-Reviews-Moremi_Gorge-Palapye_Central_District.html"
+    },
+    {
+      "name": "Moremi Wildlife Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 34,
+      "avg_rating": 4.8,
+      "keyword_hits": 302,
+      "top_keywords": [
+        "animal",
+        "safari",
+        "moremi",
+        "wildlife",
+        "elephant",
+        "lion",
+        "bird",
+        "reserve",
+        "guide",
+        "game"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g316101-d553850-Reviews-Moremi_Wildlife_Reserve-Moremi_Game_Reserve_Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Nata Bird Sanctuary",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 12,
+      "avg_rating": 3.3,
+      "keyword_hits": 43,
+      "top_keywords": [
+        "bird",
+        "wildebeest",
+        "wildlife",
+        "jackal",
+        "sighting",
+        "track",
+        "zebra",
+        "makgadikgadi",
+        "antelope",
+        "guide"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g316100-d7378503-Reviews-Nata_Bird_Sanctuary-Nata_Central_District.html"
+    },
+    {
+      "name": "Nyala Adventure Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 3,
+      "avg_rating": 4.0,
+      "keyword_hits": 34,
+      "top_keywords": [
+        "safari",
+        "eco",
+        "guide",
+        "animal",
+        "game",
+        "wildlife",
+        "game drive",
+        "adventure"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d33342815-Reviews-Nyala_Adventure_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Okavango Delta",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 41,
+      "avg_rating": 4.9,
+      "keyword_hits": 275,
+      "top_keywords": [
+        "delta",
+        "okavango",
+        "safari",
+        "animal",
+        "mokoro",
+        "wildlife",
+        "elephant",
+        "game",
+        "guide",
+        "lion"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d1643251-Reviews-Okavango_Delta-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Okavango River",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 7,
+      "avg_rating": 5.0,
+      "keyword_hits": 47,
+      "top_keywords": [
+        "delta",
+        "okavango",
+        "animal",
+        "chobe",
+        "guide",
+        "wildlife",
+        "walk",
+        "mokoro",
+        "bird",
+        "untouched"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d478949-Reviews-Okavango_River-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Old Palapye",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 2,
+      "avg_rating": 4.5,
+      "keyword_hits": 5,
+      "top_keywords": [
+        "guide",
+        "okavango",
+        "track"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1379986-d13376630-Reviews-Old_Palapye-Palapye_Central_District.html"
+    },
+    {
+      "name": "Pangolin Photo Safaris",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 50,
+      "avg_rating": 4.9,
+      "keyword_hits": 491,
+      "top_keywords": [
+        "safari",
+        "wildlife",
+        "chobe",
+        "guide",
+        "bird",
+        "eco",
+        "delta",
+        "game",
+        "game drive",
+        "elephant"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d2482605-Reviews-Pangolin_Photo_Safaris-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Pat Mobile Safari",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 10,
+      "avg_rating": 5.0,
+      "keyword_hits": 106,
+      "top_keywords": [
+        "safari",
+        "bird",
+        "animal",
+        "wildlife",
+        "eco",
+        "game",
+        "guide",
+        "delta",
+        "okavango",
+        "moremi"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d26443236-Reviews-Pat_Mobile_Safari-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Planet Baobab",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 10,
+      "avg_rating": 4.0,
+      "keyword_hits": 20,
+      "top_keywords": [
+        "eco",
+        "quad bike",
+        "swimming",
+        "walk",
+        "elephant",
+        "animal",
+        "zebra",
+        "jackal",
+        "guide",
+        "bird"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g2361513-d15005104-Reviews-Planet_Baobab-Gweta_Central_District.html"
+    },
+    {
+      "name": "Savute Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 9,
+      "avg_rating": 4.9,
+      "keyword_hits": 111,
+      "top_keywords": [
+        "savuti",
+        "wildlife",
+        "game",
+        "elephant",
+        "lion",
+        "reserve",
+        "leopard",
+        "eco",
+        "impala",
+        "chobe"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472669-d478945-Reviews-Savute_Reserve-Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Serondela Reserve",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "keyword_hits": 8,
+      "top_keywords": [
+        "reserve",
+        "elephant",
+        "hippo",
+        "chobe",
+        "lion"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472669-d478934-Reviews-Serondela_Reserve-Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Shangana Safaris Okavango Botswana",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 28,
+      "avg_rating": 5.0,
+      "keyword_hits": 350,
+      "top_keywords": [
+        "safari",
+        "guide",
+        "animal",
+        "eco",
+        "moremi",
+        "elephant",
+        "game",
+        "lion",
+        "wildlife",
+        "track"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d25136489-Reviews-Shangana_Safaris_Okavango_Botswana-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Temogo Safari",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 15,
+      "avg_rating": 5.0,
+      "keyword_hits": 152,
+      "top_keywords": [
+        "guide",
+        "safari",
+        "lion",
+        "animal",
+        "game",
+        "moremi",
+        "delta",
+        "okavango",
+        "game drive",
+        "elephant"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d15849756-Reviews-Temogo_Safari-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Three Chiefs' Statues",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 14,
+      "avg_rating": 4.2,
+      "keyword_hits": 14,
+      "top_keywords": [
+        "guide",
+        "eco",
+        "walk",
+        "environment"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d3396948-Reviews-Three_Chiefs_Statues-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Tsodilo Hills",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 7,
+      "avg_rating": 4.0,
+      "keyword_hits": 20,
+      "top_keywords": [
+        "guide",
+        "eco",
+        "rhino",
+        "moremi",
+        "wildlife",
+        "adventure",
+        "sighting",
+        "kalahari",
+        "walk",
+        "safari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g480161-d311243-Reviews-Tsodilo_Hills-Shakawe_North_West_District.html"
+    },
+    {
+      "name": "Vuche Vuche Basket Weavers",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 1.0,
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "keyword_hits": 2,
+      "top_keywords": [
+        "chobe",
+        "walk"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d24186640-Reviews-Vuche_Vuche_Basket_Weavers-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "The Space Botswana",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 0.7692,
+      "total_reviews": 2,
+      "avg_rating": 4.0,
+      "keyword_hits": 1,
+      "top_keywords": [
+        "safari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d23608761-Reviews-The_Space_Botswana-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Kuru Art Project",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 0.7194,
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "keyword_hits": 1,
+      "top_keywords": [
+        "kalahari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1010148-d13121098-Reviews-Kuru_Art_Project-Ghanzi_Ghanzi_District.html"
+    },
+    {
+      "name": "Tawana Self Drive",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 0.6881,
+      "total_reviews": 4,
+      "avg_rating": 5.0,
+      "keyword_hits": 3,
+      "top_keywords": [
+        "animal",
+        "adventure",
+        "safari"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d12033436-Reviews-Tawana_Self_Drive-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Bluetree World of Golf",
+      "recommendation": "INCLUDE",
+      "eco_adventure_score": 0.2584,
+      "total_reviews": 2,
+      "avg_rating": 2.0,
+      "keyword_hits": 1,
+      "top_keywords": [
+        "eco"
+      ],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d10681443-Reviews-Bluetree_World_of_Golf-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Lion Park Resort",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.2,
+      "total_reviews": 5,
+      "avg_rating": 3.6,
+      "keyword_hits": 5,
+      "top_keywords": [
+        "lion",
+        "eco",
+        "swimming",
+        "thrill"
+      ],
+      "exclusion_signals": [
+        "water park"
+      ],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d2661286-Reviews-Lion_Park_Resort-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Riverwalk Mall",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.2,
+      "total_reviews": 4,
+      "avg_rating": 3.8,
+      "keyword_hits": 8,
+      "top_keywords": [
+        "walk",
+        "eco",
+        "sable"
+      ],
+      "exclusion_signals": [
+        "cinema"
+      ],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d13235509-Reviews-Riverwalk_Mall-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Steenbok Safari",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.2,
+      "total_reviews": 4,
+      "avg_rating": 4.5,
+      "keyword_hits": 20,
+      "top_keywords": [
+        "safari",
+        "national park",
+        "eco",
+        "chobe",
+        "guide",
+        "crocodile",
+        "hippo",
+        "big five",
+        "antelope",
+        "bird"
+      ],
+      "exclusion_signals": [
+        "shopping mall"
+      ],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d1751418-Reviews-Steenbok_Safari-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Ultimate Africa Safaris",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.2,
+      "total_reviews": 6,
+      "avg_rating": 5.0,
+      "keyword_hits": 59,
+      "top_keywords": [
+        "safari",
+        "adventure",
+        "eco",
+        "guide",
+        "game",
+        "wildlife",
+        "game drive",
+        "bush camp",
+        "khwai",
+        "animal"
+      ],
+      "exclusion_signals": [
+        "boutique"
+      ],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472673-d19738147-Reviews-Ultimate_Africa_Safaris-Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Botswanacraft",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0687,
+      "total_reviews": 11,
+      "avg_rating": 4.4,
+      "keyword_hits": 3,
+      "top_keywords": [
+        "eco",
+        "environment",
+        "eland"
+      ],
+      "exclusion_signals": [
+        "boutique"
+      ],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d3834162-Reviews-Botswanacraft-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Airport Junction",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [
+        "shopping mall"
+      ],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d14959590-Reviews-Airport_Junction-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Bahurutshe Cultural Village",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 3.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d15024511-Reviews-Bahurutshe_Cultural_Village-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Gaborone Dam",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d479156-Reviews-Gaborone_Dam-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Gantsi Craft",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1010148-d19447148-Reviews-Gantsi_Craft-Ghanzi_Ghanzi_District.html"
+    },
+    {
+      "name": "Lentswe-la-Oodi Weavers",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g15203108-d7217658-Reviews-Lentswe_la_Oodi_Weavers-Oodi_Kgatleng_District.html"
+    },
+    {
+      "name": "Motsana",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 4.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d2310518-Reviews-Motsana-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "National Assembly Building",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 1.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d9874826-Reviews-National_Assembly_Building-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "National Museum",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 3,
+      "avg_rating": 3.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d4362754-Reviews-National_Museum-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Sri Balaji Temple",
+      "recommendation": "EXCLUDE",
+      "eco_adventure_score": 0.0,
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "keyword_hits": 0,
+      "top_keywords": [],
+      "exclusion_signals": [],
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d7803339-Reviews-Sri_Balaji_Temple-Gaborone_South_East_District.html"
+    }
+  ]
+}

@@ -1,0 +1,634 @@
+{
+  "stakeholders": [
+    {
+      "name": "4 Rivers Camp - Kwando Safaris",
+      "filename": "4_rivers_camp__kwando_safaris_reviews.json",
+      "total_reviews": 10,
+      "avg_rating": 4.8,
+      "sector": "lodge",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d26707973-Reviews-4_Rivers_Camp_Kwando_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "African Bush Lovers Travel & Tours Safaris",
+      "filename": "african_bush_lovers_travel__tours_safaris_reviews.json",
+      "total_reviews": 13,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d12309782-Reviews-African_Bush_Lovers_Travel_Tours_Safaris-Kasane_Chobe_National_Park_North_West_D.html"
+    },
+    {
+      "name": "African Guide Academy",
+      "filename": "african_guide_academy_reviews.json",
+      "total_reviews": 4,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d23329149-Reviews-African_Guide_Academy-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Baines Baobabs",
+      "filename": "baines_baobabs_reviews.json",
+      "total_reviews": 15,
+      "avg_rating": 4.1,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g482831-d2421856-Reviews-Baines_Baobabs-Nxai_Pan_National_Park_Central_District.html"
+    },
+    {
+      "name": "Bluetree World of Golf",
+      "filename": "bluetree_world_of_golf_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 2.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d10681443-Reviews-Bluetree_World_of_Golf-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Boab Prison Tree",
+      "filename": "boab_prison_tree_reviews.json",
+      "total_reviews": 5,
+      "avg_rating": 3.8,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d13951354-Reviews-Boab_Prison_Tree-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "CARACAL Biodiversity Center",
+      "filename": "caracal_biodiversity_center_reviews.json",
+      "total_reviews": 5,
+      "avg_rating": 4.6,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d2189822-Reviews-CARACAL_Biodiversity_Center-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Central Kalahari Game Reserve",
+      "filename": "central_kalahari_game_reserve_reviews.json",
+      "total_reviews": 3,
+      "avg_rating": 3.7,
+      "sector": "reserve",
+      "zone": "Central Kalahari",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g3532391-d27416281-Reviews-Central_Kalahari_Game_Reserve-Ghanzi_District.html"
+    },
+    {
+      "name": "Central Kalahari Wild Tours",
+      "filename": "central_kalahari_wild_tours_reviews.json",
+      "total_reviews": 3,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Central Kalahari",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d34114551-Reviews-Central_Kalahari_Wild_Tours-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Chobe Crocodile Farm",
+      "filename": "chobe_crocodile_farm_reviews.json",
+      "total_reviews": 11,
+      "avg_rating": 4.7,
+      "sector": "operator",
+      "zone": "Chobe",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d12948270-Reviews-Chobe_Crocodile_Farm-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Chobe Marina Lodge",
+      "filename": "chobe_marina_lodge_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "sector": "lodge",
+      "zone": "Chobe",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d25401182-Reviews-Chobe_Marina_Lodge-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Chobe River Boat Cruises",
+      "filename": "chobe_river_boat_cruises_reviews.json",
+      "total_reviews": 21,
+      "avg_rating": 4.8,
+      "sector": "operator",
+      "zone": "Chobe",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d2343595-Reviews-Chobe_River_Boat_Cruises-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Crocodile Pools River Safaris",
+      "filename": "crocodile_pools_river_safaris_reviews.json",
+      "total_reviews": 8,
+      "avg_rating": 3.1,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d17352556-Reviews-Crocodile_Pools_River_Safaris-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Deception Valley",
+      "filename": "deception_valley_reviews.json",
+      "total_reviews": 3,
+      "avg_rating": 3.7,
+      "sector": "operator",
+      "zone": "Central Kalahari",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472671-d20031027-Reviews-Deception_Valley-Central_Kalahari_Game_Reserve_Ghanzi_District.html"
+    },
+    {
+      "name": "Desert & Delta Safaris",
+      "filename": "desert__delta_safaris_reviews.json",
+      "total_reviews": 7,
+      "avg_rating": 4.4,
+      "sector": "operator",
+      "zone": "Okavango Delta",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d27120517-Reviews-Desert_Delta_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Gaborone Game Reserve",
+      "filename": "gaborone_game_reserve_reviews.json",
+      "total_reviews": 4,
+      "avg_rating": 3.2,
+      "sector": "reserve",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d2513264-Reviews-Gaborone_Game_Reserve-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Gifa's Transport",
+      "filename": "gifas_transport_reviews.json",
+      "total_reviews": 14,
+      "avg_rating": 4.7,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d10769941-Reviews-Gifa_s_Transport-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Gondwana Tours & Safaris",
+      "filename": "gondwana_tours__safaris_reviews.json",
+      "total_reviews": 50,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d12681249-Reviews-Gondwana_Tours_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Helicopter Horizons",
+      "filename": "helicopter_horizons_reviews.json",
+      "total_reviews": 50,
+      "avg_rating": 4.9,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d4355849-Reviews-Helicopter_Horizons-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Jwana Game Park",
+      "filename": "jwana_game_park_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g3780520-d17708710-Reviews-Jwana_Game_Park-Jwaneng_Southern_District.html"
+    },
+    {
+      "name": "Kalahari Breeze Safaris",
+      "filename": "kalahari_breeze_safaris_reviews.json",
+      "total_reviews": 50,
+      "avg_rating": 4.7,
+      "sector": "operator",
+      "zone": "Central Kalahari",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d15123474-Reviews-Kalahari_Breeze_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Kalahari Tours",
+      "filename": "kalahari_tours_reviews.json",
+      "total_reviews": 50,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Central Kalahari",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d3814806-Reviews-Kalahari_Tours-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Kgale Hill",
+      "filename": "kgale_hill_reviews.json",
+      "total_reviews": 4,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5975965-Reviews-Kgale_Hill-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Khama III Memorial Museum",
+      "filename": "khama_iii_memorial_museum_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479197-d3983505-Reviews-Khama_III_Memorial_Museum-Serowe_Central_District.html"
+    },
+    {
+      "name": "Khama Rhino Sanctuary",
+      "filename": "khama_rhino_sanctuary_reviews.json",
+      "total_reviews": 21,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g479197-d2296308-Reviews-Khama_Rhino_Sanctuary-Serowe_Central_District.html"
+    },
+    {
+      "name": "Khutse Game Reserve",
+      "filename": "khutse_game_reserve_reviews.json",
+      "total_reviews": 6,
+      "avg_rating": 3.5,
+      "sector": "reserve",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d7931216-Reviews-Khutse_Game_Reserve-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Khwai Concession",
+      "filename": "khwai_concession_reviews.json",
+      "total_reviews": 13,
+      "avg_rating": 4.8,
+      "sector": "reserve",
+      "zone": "Kwai",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g316101-d14893679-Reviews-Khwai_Concession-Moremi_Game_Reserve_Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Khwai River Bridge",
+      "filename": "khwai_river_bridge_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Kwai",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472673-d1171922-Reviews-Khwai_River_Bridge-Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Kubu Island",
+      "filename": "kubu_island_reviews.json",
+      "total_reviews": 11,
+      "avg_rating": 3.5,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472670-d479134-Reviews-Kubu_Island-Makgadikgadi_Pans_National_Park_Central_District.html"
+    },
+    {
+      "name": "Kuminda Farm",
+      "filename": "kuminda_farm_reviews.json",
+      "total_reviews": 11,
+      "avg_rating": 4.9,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317054-d7945044-Reviews-Kuminda_Farm-Francistown_North_East_District.html"
+    },
+    {
+      "name": "Kuru Art Project",
+      "filename": "kuru_art_project_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1010148-d13121098-Reviews-Kuru_Art_Project-Ghanzi_Ghanzi_District.html"
+    },
+    {
+      "name": "Lelobu Safaris",
+      "filename": "lelobu_safaris_reviews.json",
+      "total_reviews": 21,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d27476976-Reviews-Lelobu_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Letaka Safaris",
+      "filename": "letaka_safaris_reviews.json",
+      "total_reviews": 50,
+      "avg_rating": 4.9,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d15275524-Reviews-Letaka_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Lily's Petting Farm",
+      "filename": "lilys_petting_farm_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d33016317-Reviews-Lily_s_Petting_Farm-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Mack Air",
+      "filename": "mack_air_reviews.json",
+      "total_reviews": 27,
+      "avg_rating": 4.8,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d21291487-Reviews-Mack_Air-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Makgadikgadi Salt Pan",
+      "filename": "makgadikgadi_salt_pan_reviews.json",
+      "total_reviews": 15,
+      "avg_rating": 4.7,
+      "sector": "operator",
+      "zone": "Makgadikgadi",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472670-d3259396-Reviews-Makgadikgadi_Salt_Pan-Makgadikgadi_Pans_National_Park_Central_District.html"
+    },
+    {
+      "name": "Manyana Rock Paintings",
+      "filename": "manyana_rock_paintings_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 3.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g12958364-d23538438-Reviews-Manyana_Rock_Paintings-Mmankgodi_Kweneng_District.html"
+    },
+    {
+      "name": "Matsieng's Footprints",
+      "filename": "matsiengs_footprints_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5983764-Reviews-Matsieng_s_Footprints-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Mogonye Gorge",
+      "filename": "mogonye_gorge_reviews.json",
+      "total_reviews": 1,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5993696-Reviews-Mogonye_Gorge-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Mokolodi Nature Reserve",
+      "filename": "mokolodi_nature_reserve_reviews.json",
+      "total_reviews": 26,
+      "avg_rating": 3.7,
+      "sector": "reserve",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d5971370-Reviews-Mokolodi_Nature_Reserve-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Moremi Game Reserve",
+      "filename": "moremi_game_reserve_reviews.json",
+      "total_reviews": 16,
+      "avg_rating": 4.4,
+      "sector": "reserve",
+      "zone": "Moremi",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d16864828-Reviews-Moremi_Game_Reserve-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Moremi Gorge",
+      "filename": "moremi_gorge_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 3.5,
+      "sector": "operator",
+      "zone": "Moremi",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1379986-d1749899-Reviews-Moremi_Gorge-Palapye_Central_District.html"
+    },
+    {
+      "name": "Moremi Wildlife Reserve",
+      "filename": "moremi_wildlife_reserve_reviews.json",
+      "total_reviews": 34,
+      "avg_rating": 4.8,
+      "sector": "reserve",
+      "zone": "Moremi",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g316101-d553850-Reviews-Moremi_Wildlife_Reserve-Moremi_Game_Reserve_Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Nata Bird Sanctuary",
+      "filename": "nata_bird_sanctuary_reviews.json",
+      "total_reviews": 12,
+      "avg_rating": 3.3,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g316100-d7378503-Reviews-Nata_Bird_Sanctuary-Nata_Central_District.html"
+    },
+    {
+      "name": "Nyala Adventure Safaris",
+      "filename": "nyala_adventure_safaris_reviews.json",
+      "total_reviews": 3,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d33342815-Reviews-Nyala_Adventure_Safaris-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Okavango Delta",
+      "filename": "okavango_delta_reviews.json",
+      "total_reviews": 41,
+      "avg_rating": 4.9,
+      "sector": "operator",
+      "zone": "Okavango Delta",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d1643251-Reviews-Okavango_Delta-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Okavango River",
+      "filename": "okavango_river_reviews.json",
+      "total_reviews": 7,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Okavango Delta",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d478949-Reviews-Okavango_River-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Old Palapye",
+      "filename": "old_palapye_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 4.5,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g1379986-d13376630-Reviews-Old_Palapye-Palapye_Central_District.html"
+    },
+    {
+      "name": "Pangolin Photo Safaris",
+      "filename": "pangolin_photo_safaris_reviews.json",
+      "total_reviews": 50,
+      "avg_rating": 4.9,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d2482605-Reviews-Pangolin_Photo_Safaris-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Pat Mobile Safari",
+      "filename": "pat_mobile_safari_reviews.json",
+      "total_reviews": 10,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d26443236-Reviews-Pat_Mobile_Safari-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Planet Baobab",
+      "filename": "planet_baobab_reviews.json",
+      "total_reviews": 10,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g2361513-d15005104-Reviews-Planet_Baobab-Gweta_Central_District.html"
+    },
+    {
+      "name": "Savute Reserve",
+      "filename": "savute_reserve_reviews.json",
+      "total_reviews": 9,
+      "avg_rating": 4.9,
+      "sector": "reserve",
+      "zone": "Chobe",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472669-d478945-Reviews-Savute_Reserve-Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Serondela Reserve",
+      "filename": "serondela_reserve_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "sector": "reserve",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472669-d478934-Reviews-Serondela_Reserve-Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Shangana Safaris Okavango Botswana",
+      "filename": "shangana_safaris_okavango_botswana_reviews.json",
+      "total_reviews": 28,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Okavango Delta",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d25136489-Reviews-Shangana_Safaris_Okavango_Botswana-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Steenbok Safari",
+      "filename": "steenbok_safari_reviews.json",
+      "total_reviews": 4,
+      "avg_rating": 4.5,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d1751418-Reviews-Steenbok_Safari-Kasane_Chobe_National_Park_North_West_District.html"
+    },
+    {
+      "name": "Tawana Self Drive",
+      "filename": "tawana_self_drive_reviews.json",
+      "total_reviews": 4,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d12033436-Reviews-Tawana_Self_Drive-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Temogo Safari",
+      "filename": "temogo_safari_reviews.json",
+      "total_reviews": 15,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d15849756-Reviews-Temogo_Safari-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "The Space Botswana",
+      "filename": "the_space_botswana_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g317055-d23608761-Reviews-The_Space_Botswana-Maun_Ngamiland_East_North_West_District.html"
+    },
+    {
+      "name": "Three Chiefs' Statues",
+      "filename": "three_chiefs_statues_reviews.json",
+      "total_reviews": 14,
+      "avg_rating": 4.2,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g293767-d3396948-Reviews-Three_Chiefs_Statues-Gaborone_South_East_District.html"
+    },
+    {
+      "name": "Tsodilo Hills",
+      "filename": "tsodilo_hills_reviews.json",
+      "total_reviews": 7,
+      "avg_rating": 4.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g480161-d311243-Reviews-Tsodilo_Hills-Shakawe_North_West_District.html"
+    },
+    {
+      "name": "Ultimate Africa Safaris",
+      "filename": "ultimate_africa_safaris_reviews.json",
+      "total_reviews": 6,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g472673-d19738147-Reviews-Ultimate_Africa_Safaris-Okavango_Delta_North_West_District.html"
+    },
+    {
+      "name": "Vuche Vuche Basket Weavers",
+      "filename": "vuche_vuche_basket_weavers_reviews.json",
+      "total_reviews": 2,
+      "avg_rating": 5.0,
+      "sector": "operator",
+      "zone": "Other",
+      "tier": "mid",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g297318-d24186640-Reviews-Vuche_Vuche_Basket_Weavers-Kasane_Chobe_National_Park_North_West_District.html"
+    }
+  ],
+  "total_reviews": 823,
+  "years": {
+    "2025": 295,
+    "2024": 163,
+    "2023": 146,
+    "2022": 123,
+    "2021": 63,
+    "2026": 33
+  },
+  "languages": {}
+}

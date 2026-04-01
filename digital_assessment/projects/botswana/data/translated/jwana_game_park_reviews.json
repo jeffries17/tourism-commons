@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Good game park",
+    "rating": 5,
+    "travelDate": "2025-11",
+    "publishedDate": "2025-11-11",
+    "text": "Great park. We saw rhinos, giraffes, zebras, antelopes etc. Flat and easy to navigate. I do not think the park is open to the public though.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g3780520-d17708710-r1038580395-Jwana_Game_Park-Jwaneng_Southern_District.html",
+    "user": {
+      "userId": "BC88A7878473AEB6481BA4D18F4A6D80",
+      "name": "Thandi N",
+      "contributions": {
+        "totalContributions": 4
+      },
+      "username": "573thandin",
+      "userLocation": null,
+      "avatar": {
+        "id": "452390812",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ef/9c/default-avatar-2020-14.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/573thandin"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "17708710",
+      "name": "Jwana Game Park",
+      "rating": 5,
+      "numberOfReviews": 1,
+      "locationString": "Jwaneng, Southern District",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g3780520-d17708710-Reviews-Jwana_Game_Park-Jwaneng_Southern_District.html",
+      "website": "http://www.debswana.com/Sustainability/Pages/Jwana-Game-Park.aspx",
+      "address": "Jwaneng Botswana",
+      "addressObj": {
+        "street1": null,
+        "street2": null,
+        "city": "Jwaneng",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 0,
+        "count3": 0,
+        "count4": 0,
+        "count5": 1
+      }
+    },
+    "original_title": "Good game park",
+    "original_text": "Great park. We saw rhinos, giraffes, zebras, antelopes etc. Flat and easy to navigate. I do not think the park is open to the public though.",
+    "translated_title": "Good game park",
+    "translated_text": "Great park. We saw rhinos, giraffes, zebras, antelopes etc. Flat and easy to navigate. I do not think the park is open to the public though.",
+    "original_language": "en",
+    "was_translated": false
+  }
+]

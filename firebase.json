@@ -2,6 +2,9 @@
   "functions": {
     "source": "digital_assessment/functions"
   },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
   "hosting": {
     "public": "build",
     "ignore": [
@@ -22,6 +25,14 @@
     ],
     "rewrites": [
       {
+        "source": "/botswana/**",
+        "destination": "/botswana/index.html"
+      },
+      {
+        "source": "/timorleste",
+        "destination": "/timorleste/index.html"
+      },
+      {
         "source": "/api/**",
         "function": {
           "functionId": "api",
@@ -35,6 +46,18 @@
       {
         "source": "/gambia-itc/**",
         "destination": "/gambia-itc/index.html"
+      },
+      {
+        "source": "/sentiment-analysis/**",
+        "destination": "/sentiment-analysis/index.html"
+      },
+      {
+        "source": "/cbt-monitoring/**",
+        "destination": "/cbt-monitoring/index.html"
+      },
+      {
+        "source": "/tourism-instagram-index/**",
+        "destination": "/tourism-instagram-index/index.html"
       },
       {
         "source": "**",

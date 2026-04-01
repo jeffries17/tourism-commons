@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Matsieng Footprints",
+    "rating": 5,
+    "travelDate": "2021-03",
+    "publishedDate": "2021-03-18",
+    "text": "Quite an interesting site, and totally worth the 30mins site visit. If you're around the area, and wanna get some fresh air, it's the perfect place!! ",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g293767-d5983764-r784761575-Matsieng_s_Footprints-Gaborone_South_East_District.html",
+    "user": {
+      "userId": "8F845D65BE8A0C9D86B1C0B4F6B5E6BE",
+      "name": "Rati M",
+      "contributions": {
+        "totalContributions": 2
+      },
+      "username": "828ratim",
+      "userLocation": {
+        "shortName": "Mochudi",
+        "name": "Mochudi, Botswana",
+        "id": "472674"
+      },
+      "avatar": {
+        "id": "452386603",
+        "width": 1200,
+        "height": 1200,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/df/2b/default-avatar-2020-39.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/828ratim"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "5983764",
+      "name": "Matsieng's Footprints",
+      "rating": 3.5,
+      "numberOfReviews": 25,
+      "locationString": "Gaborone, South-East District",
+      "latitude": -24.5576,
+      "longitude": 25.98552,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g293767-d5983764-Reviews-Matsieng_s_Footprints-Gaborone_South_East_District.html",
+      "website": null,
+      "address": "Off A1, Near Mochudi, Gaborone Botswana",
+      "addressObj": {
+        "street1": "Off A1, Near Mochudi",
+        "street2": null,
+        "city": "Gaborone",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": null
+      },
+      "ratingHistogram": {
+        "count1": 4,
+        "count2": 0,
+        "count3": 4,
+        "count4": 14,
+        "count5": 3
+      }
+    }
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Little interest",
+    "rating": 2,
+    "travelDate": "2023-08",
+    "publishedDate": "2023-08-15",
+    "text": "Not very interesting place...unless you want to see a nesting site and vultures in flight but mid-August little water and pay for that and for 1 hour round trip....not great!!!",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1379986-d1749899-r910524187-Moremi_Gorge-Palapye_Central_District.html",
+    "user": {
+      "userId": "2470EB9D0563B55E840C163F56DB5D2C",
+      "name": "Berryman",
+      "contributions": {
+        "totalContributions": 3
+      },
+      "username": "HIMAL36",
+      "userLocation": null,
+      "avatar": null,
+      "link": "www.tripadvisor.com/Profile/HIMAL36"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "1749899",
+      "name": "Moremi Gorge",
+      "rating": 4.5,
+      "numberOfReviews": 49,
+      "locationString": "Palapye, Central District",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1379986-d1749899-Reviews-Moremi_Gorge-Palapye_Central_District.html",
+      "website": null,
+      "address": "Palapye Botswana",
+      "addressObj": {
+        "street1": "",
+        "street2": "",
+        "city": "Palapye",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": ""
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 1,
+        "count3": 0,
+        "count4": 22,
+        "count5": 26
+      }
+    },
+    "original_title": "Little interest",
+    "original_text": "Not very interesting place...unless you want to see a nesting site and vultures in flight but mid-August little water and pay for that and for 1 hour round trip....not great!!!",
+    "translated_title": "Little interest",
+    "translated_text": "Not very interesting place...unless you want to see a nesting site and vultures in flight but mid-August little water and pay for that and for 1 hour round trip....not great!!!",
+    "original_language": "en",
+    "was_translated": false
+  },
+  {
+    "title": "Gorgeous landscape",
+    "rating": 5,
+    "travelDate": "2021-03",
+    "publishedDate": "2021-04-12",
+    "text": "This is a gorgeous, and very untypical-Botswana, walk. But not everybody can do it: you need to be a bit agile and not be too afraid of hights. Guide is included in the high entry price, and obligatory.",
+    "url": "https://www.tripadvisor.com/ShowUserReviews-g1379986-d1749899-r786372130-Moremi_Gorge-Palapye_Central_District.html",
+    "user": {
+      "userId": "7751D490D79BC9E0E77A2E0EDC56A6E6",
+      "name": "Jurgen B",
+      "contributions": {
+        "totalContributions": 3002
+      },
+      "username": "JurgenB435",
+      "userLocation": {
+        "shortName": "Brussels",
+        "name": "Brussels, Belgium",
+        "id": "188644"
+      },
+      "avatar": {
+        "id": "129383634",
+        "width": 385,
+        "height": 385,
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/b6/3c/d2/jurgen-b.jpg"
+      },
+      "link": "www.tripadvisor.com/Profile/JurgenB435"
+    },
+    "ownerResponse": null,
+    "placeInfo": {
+      "id": "1749899",
+      "name": "Moremi Gorge",
+      "rating": 4.5,
+      "numberOfReviews": 49,
+      "locationString": "Palapye, Central District",
+      "latitude": null,
+      "longitude": null,
+      "webUrl": "https://www.tripadvisor.com/Attraction_Review-g1379986-d1749899-Reviews-Moremi_Gorge-Palapye_Central_District.html",
+      "website": null,
+      "address": "Palapye Botswana",
+      "addressObj": {
+        "street1": "",
+        "street2": "",
+        "city": "Palapye",
+        "state": null,
+        "country": "Botswana",
+        "postalcode": ""
+      },
+      "ratingHistogram": {
+        "count1": 0,
+        "count2": 1,
+        "count3": 0,
+        "count4": 22,
+        "count5": 26
+      }
+    },
+    "original_title": "Gorgeous landscape",
+    "original_text": "This is a gorgeous, and very untypical-Botswana, walk. But not everybody can do it: you need to be a bit agile and not be too afraid of hights. Guide is included in the high entry price, and obligatory.",
+    "translated_title": "Gorgeous landscape",
+    "translated_text": "This is a gorgeous, and very untypical-Botswana, walk. But not everybody can do it: you need to be a bit agile and not be too afraid of hights. Guide is included in the high entry price, and obligatory.",
+    "original_language": "en",
+    "was_translated": false
+  }
+]

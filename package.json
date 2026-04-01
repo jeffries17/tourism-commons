@@ -2,9 +2,15 @@
   "name": "tourism-commons",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run build:website && npm run build:tools",
+    "build": "npm run build:website && npm run build:tools && npm run build:timorleste",
     "build:website": "mkdir -p build && cp website/index.html build/index.html",
-    "build:tools": "cd tools/digital-assessment && npm run build && cd ../.. && cp -r tools/digital-assessment/dist/assets build/ && cp -r tools/digital-assessment/dist/gambia-itc build/ && cp tools/digital-assessment/dist/index.html build/gambia-itc/index.html && echo '/* /index.html 200' > build/_redirects",
+    "build:timorleste": "mkdir -p build/timorleste && cp -r projects/timorleste/findings/* build/timorleste/",
+    "build:tools": "npm run build:digital-assessment && npm run build:sentiment-analysis && npm run build:cbt-monitoring && npm run build:instagram-index && npm run build:botswana",
+    "build:botswana": "cd digital_assessment/projects/botswana/dashboard && npm run build && cd ../../../.. && mkdir -p build/botswana && cp -r digital_assessment/projects/botswana/dashboard/dist/* build/botswana/",
+    "build:digital-assessment": "cd tools/digital-assessment && npm run build && cd ../.. && cp -r tools/digital-assessment/dist/assets build/ && cp -r tools/digital-assessment/dist/gambia-itc build/ && cp tools/digital-assessment/dist/index.html build/gambia-itc/index.html",
+    "build:sentiment-analysis": "cd tools/tourism-sentiment/frontend && npm run build && cd ../../.. && mkdir -p build/sentiment-analysis && cp -r tools/tourism-sentiment/frontend/dist/* build/sentiment-analysis/ && echo '/* /index.html 200' > build/_redirects",
+    "build:cbt-monitoring": "cd tools/cbt-monitoring && npm run build && cd ../.. && mkdir -p build/cbt-monitoring && cp -r tools/cbt-monitoring/dist/* build/cbt-monitoring/",
+    "build:instagram-index": "cd tools/tourism-instagram-index && npm run build && cd ../.. && mkdir -p build/tourism-instagram-index && cp -r tools/tourism-instagram-index/dist/* build/tourism-instagram-index/",
     "dev": "cd tools/digital-assessment && npm run dev",
     "deploy": "npm run build && firebase deploy --only hosting"
   }
