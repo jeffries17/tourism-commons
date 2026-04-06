@@ -32,73 +32,7 @@
             background: var(--bg-primary);
         }
 
-        /* Password Screen */
-        #password-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--bg-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
 
-        #password-screen.hidden {
-            display: none;
-        }
-
-        .password-container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 400px;
-        }
-
-        .password-container h2 {
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-        }
-
-        .password-container input {
-            padding: 0.75rem 1rem;
-            font-size: 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-
-        .password-container button {
-            padding: 0.75rem 2rem;
-            font-size: 1rem;
-            background: var(--colombia-blue);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .password-container button:hover {
-            opacity: 0.9;
-        }
-
-        .password-error {
-            color: var(--colombia-red);
-            margin-top: 1rem;
-            display: none;
-        }
-
-        /* Main Content */
-        #main-content {
-            display: none;
-        }
-
-        #main-content.visible {
-            display: block;
-        }
 
         /* Top Navigation */
         nav {
@@ -1050,6 +984,7 @@
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
 
         /* Calendar Grid */
@@ -1140,17 +1075,6 @@
     </style>
 </head>
 <body>
-    <!-- Password Screen -->
-    <div id="password-screen">
-        <div class="password-container">
-            <h2>Access Required</h2>
-            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Please enter the password to view this proposal.</p>
-            <input type="password" id="password-input" placeholder="Enter password" />
-            <button onclick="checkPassword()">Access Proposal</button>
-            <p class="password-error" id="password-error">Incorrect password. Please contact alex.jeffries@gmail.com for access.</p>
-        </div>
-    </div>
-
     <!-- Main Content -->
     <div id="main-content">
         <!-- Top Navigation -->
@@ -1158,8 +1082,8 @@
             <div class="nav-content">
                 <div class="nav-logo translatable" data-en="Sell What You Stand For" data-es="Lo Responsable Vende" data-fr="Le Responsable, Ça Vend">Lo Responsable Vende</div>
                 <div class="lang-toggle">
-                    <button class="active" onclick="setLanguage('en')">EN</button>
-                    <button onclick="setLanguage('es')">ES</button>
+                    <button onclick="setLanguage('en')">EN</button>
+                    <button class="active" onclick="setLanguage('es')">ES</button>
                     <button onclick="setLanguage('fr')">FR</button>
                 </div>
             </div>
@@ -1177,45 +1101,37 @@
             </div>
             <div class="sidebar-item" data-section="2" onclick="goToSection(2)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Discovery" data-es="Descubrimiento" data-fr="Découverte">Discovery</span>
+                <span class="sidebar-label translatable" data-en="Our Approach" data-es="Nuestro Enfoque" data-fr="Notre Approche">Our Approach</span>
             </div>
             <div class="sidebar-item" data-section="3" onclick="goToSection(3)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Our Approach" data-es="Nuestro Enfoque" data-fr="Notre Approche">Our Approach</span>
+                <span class="sidebar-label translatable" data-en="Architecture" data-es="Arquitectura" data-fr="Architecture">Architecture</span>
             </div>
             <div class="sidebar-item" data-section="4" onclick="goToSection(4)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Architecture" data-es="Arquitectura" data-fr="Architecture">Architecture</span>
+                <span class="sidebar-label translatable" data-en="Phase 0" data-es="Fase 0" data-fr="Phase 0">Phase 0</span>
             </div>
             <div class="sidebar-item" data-section="5" onclick="goToSection(5)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Calendar" data-es="Calendario" data-fr="Calendrier">Calendar</span>
+                <span class="sidebar-label translatable" data-en="Module 1" data-es="Módulo 1" data-fr="Module 1">Module 1</span>
             </div>
             <div class="sidebar-item" data-section="6" onclick="goToSection(6)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Phase 0" data-es="Fase 0" data-fr="Phase 0">Phase 0</span>
+                <span class="sidebar-label translatable" data-en="Module 2" data-es="Módulo 2" data-fr="Module 2">Module 2</span>
             </div>
             <div class="sidebar-item" data-section="7" onclick="goToSection(7)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Module 1" data-es="Módulo 1" data-fr="Module 1">Module 1</span>
+                <span class="sidebar-label translatable" data-en="Module 3" data-es="Módulo 3" data-fr="Module 3">Module 3</span>
             </div>
             <div class="sidebar-item" data-section="8" onclick="goToSection(8)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Module 2" data-es="Módulo 2" data-fr="Module 2">Module 2</span>
+                <span class="sidebar-label translatable" data-en="Calendar" data-es="Calendario" data-fr="Calendrier">Calendar</span>
             </div>
             <div class="sidebar-item" data-section="9" onclick="goToSection(9)">
                 <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Module 3" data-es="Módulo 3" data-fr="Module 3">Module 3</span>
-            </div>
-            <div class="sidebar-item" data-section="10" onclick="goToSection(10)">
-                <div class="sidebar-dot"></div>
                 <span class="sidebar-label translatable" data-en="Deliverables" data-es="Entregables" data-fr="Livrables">Deliverables</span>
             </div>
-            <div class="sidebar-item" data-section="11" onclick="goToSection(11)">
-                <div class="sidebar-dot"></div>
-                <span class="sidebar-label translatable" data-en="Where We Go" data-es="Hacia Dónde Vamos" data-fr="La Suite">Where We Go</span>
-            </div>
-            <div class="sidebar-item" data-section="12" onclick="goToSection(12)">
+            <div class="sidebar-item" data-section="10" onclick="goToSection(10)">
                 <div class="sidebar-dot"></div>
                 <span class="sidebar-label translatable" data-en="Next Steps" data-es="Próximos Pasos" data-fr="Prochaines Étapes">Next Steps</span>
             </div>
@@ -1271,49 +1187,49 @@
                 </div>
 
                 <div class="flip-cards-grid">
-                    <!-- Card 1: Vacation Days -->
+                    <!-- Card 1: Responsible Product Packaging -->
                     <div class="flip-card category-alignment" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <p class="translatable" data-en="Operator with American clients wants to expand to Europe but only sells 5-day packages" data-es="Operador con clientes americanos quiere expandirse a Europa pero solo vende paquetes de 5 días" data-fr="Opérateur avec clients américains veut s'étendre en Europe mais ne vend que des forfaits de 5 jours">
-                                    Operator with American clients wants to expand to Europe but only sells 5-day packages
+                                <p class="translatable" data-en="Has built a meaningful community tourism experience but hasn't packaged it as a bookable product that tour operators can list and sell" data-es="Ha desarrollado una experiencia de turismo comunitario significativa pero no la ha empaquetado como un producto reservable que los operadores puedan listar y vender" data-fr="A développé une expérience de tourisme communautaire significative mais ne l'a pas formatée comme un produit réservable que les tour-opérateurs peuvent distribuer">
+                                    Has built a meaningful community tourism experience but hasn't packaged it as a bookable product that tour operators can list and sell
                                 </p>
                             </div>
                             <div class="flip-card-back">
-                                <p class="translatable" data-en="Europeans typically have 3-4 weeks vacation vs. Americans' 10 days. Offering 7-10 day packages = better market fit" data-es="Los europeos típicamente tienen 3-4 semanas de vacaciones vs. 10 días de los americanos. Ofrecer paquetes de 7-10 días = mejor ajuste de mercado" data-fr="Les Européens ont généralement 3-4 semaines de vacances vs. 10 jours pour les Américains. Offrir des forfaits de 7-10 jours = meilleur ajustement au marché">
-                                    Europeans typically have 3-4 weeks vacation vs. Americans' 10 days. Offering 7-10 day packages = better market fit
+                                <p class="translatable" data-en="European buyers need structured itineraries with clear pricing. Formalizing your responsible tourism offer — defined inclusions, rates, and minimums — is the foundation of international distribution" data-es="Los compradores europeos necesitan itinerarios estructurados con precios claros. Formalizar tu oferta de turismo responsable — inclusiones, tarifas y mínimos definidos — es la base de la distribución internacional" data-fr="Les acheteurs européens ont besoin d'itinéraires structurés avec des prix clairs. Formaliser votre offre de tourisme responsable — inclusions, tarifs et minimums définis — est le fondement de la distribution internationale">
+                                    European buyers need structured itineraries with clear pricing. Formalizing your responsible tourism offer — defined inclusions, rates, and minimums — is the foundation of international distribution
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 2: Everything for Everyone -->
+                    <!-- Card 2: Responsible Credentials Visibility -->
                     <div class="flip-card category-alignment" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <p class="translatable" data-en="Website offers 'something for everyone' — cultural tours, adventure, nature, wellness — but gets no responses from agencies" data-es="Sitio web ofrece 'algo para todos' — tours culturales, aventura, naturaleza, bienestar — pero no recibe respuestas de agencias" data-fr="Site web offre 'quelque chose pour tout le monde' — circuits culturels, aventure, nature, bien-être — mais ne reçoit aucune réponse des agences">
-                                    Website offers "something for everyone" — cultural tours, adventure, nature, wellness — but gets no responses from agencies
+                                <p class="translatable" data-en="Has sustainability certifications and responsible practices but buries them in the 'About' page — European buyers have to search to find them" data-es="Tiene certificaciones de sostenibilidad y prácticas responsables pero las entierra en la página 'Sobre Nosotros' — los compradores europeos tienen que buscarlas" data-fr="Possède des certifications de durabilité et des pratiques responsables mais les enfouit dans la page 'À propos' — les acheteurs européens doivent chercher pour les trouver">
+                                    Has sustainability certifications and responsible practices but buries them in the 'About' page — European buyers have to search to find them
                                 </p>
                             </div>
                             <div class="flip-card-back">
-                                <p class="translatable" data-en="Agencies need clear specialization. Focus on one niche = become the go-to expert buyers can easily position" data-es="Las agencias necesitan especialización clara. Enfocarse en un nicho = convertirse en el experto de referencia que los compradores pueden posicionar fácilmente" data-fr="Les agences ont besoin d'une spécialisation claire. Se concentrer sur une niche = devenir l'expert de référence que les acheteurs peuvent facilement positionner">
-                                    Agencies need clear specialization. Focus on one niche = become the go-to expert buyers can easily position
+                                <p class="translatable" data-en="Responsible credentials are a commercial asset. Feature certifications, community partnerships, and impact practices where buyers look first — not buried in 'About Us'" data-es="Las credenciales responsables son un activo comercial. Destaca certificaciones, alianzas comunitarias y prácticas de impacto donde los compradores miran primero — no en 'Sobre Nosotros'" data-fr="Les accréditations responsables sont un atout commercial. Mettez en avant certifications, partenariats communautaires et pratiques d'impact là où les acheteurs regardent en premier">
+                                    Responsible credentials are a commercial asset. Feature certifications, community partnerships, and impact practices where buyers look first — not buried in 'About Us'
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 3: Trade Fair Follow-up -->
+                    <!-- Card 3: Communicating Responsible Practices -->
                     <div class="flip-card category-data" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <p class="translatable" data-en="Met 10 tour operators at a trade fair, exchanged cards, but didn't know what to share or how to follow up, so didn't" data-es="Conoció 10 tour operadores en una feria comercial, intercambió tarjetas, pero no sabía qué compartir o cómo hacer seguimiento, así que no lo hizo" data-fr="Rencontré 10 tour-opérateurs lors d'un salon professionnel, échangé des cartes, mais ne savait pas quoi partager ou comment faire le suivi, donc ne l'a pas fait">
-                                    Met 10 tour operators at a trade fair, exchanged cards, but didn't know what to share or how to follow up, so didn't
+                                <p class="translatable" data-en="Attended a responsible tourism fair but couldn't clearly explain what makes their product responsible — and left without concrete buyer interest" data-es="Asistió a una feria de turismo responsable pero no pudo explicar claramente qué hace responsable su producto — y se fue sin interés concreto de compradores" data-fr="A participé à un salon de tourisme responsable mais n'a pas pu expliquer clairement ce qui rend son produit responsable — et en est reparti sans intérêt concret des acheteurs">
+                                    Attended a responsible tourism fair but couldn't clearly explain what makes their product responsible — and left without concrete buyer interest
                                 </p>
                             </div>
                             <div class="flip-card-back">
-                                <p class="translatable" data-en="Simple contact tracking system + follow-up schedule = turn business cards into actual business relationships" data-es="Sistema simple de seguimiento de contactos + calendario de seguimiento = convertir tarjetas de presentación en relaciones comerciales reales" data-fr="Système simple de suivi des contacts + calendrier de suivi = transformer les cartes de visite en vraies relations d'affaires">
-                                    Simple contact tracking system + follow-up schedule = turn business cards into actual business relationships
+                                <p class="translatable" data-en="Buyers need specific, verifiable claims — not just 'we're sustainable.' Prepare 2–3 concrete practices and translate each into a buyer benefit before any market engagement" data-es="Los compradores necesitan afirmaciones específicas y verificables — no solo 'somos sostenibles'. Prepara 2–3 prácticas concretas y traduce cada una en un beneficio para el comprador" data-fr="Les acheteurs ont besoin d'affirmations spécifiques et vérifiables — pas seulement 'nous sommes durables'. Préparez 2–3 pratiques concrètes et traduisez chacune en bénéfice acheteur">
+                                    Buyers need specific, verifiable claims — not just 'we're sustainable.' Prepare 2–3 concrete practices and translate each into a buyer benefit before any market engagement
                                 </p>
                             </div>
                         </div>
@@ -1374,67 +1290,14 @@
             </div>
         </section>
 
-        <!-- Section 3: What This Program Delivers -->
-        <section class="why-section" id="delivers" data-section="2">
-            <div class="section-content">
-                <h2 class="section-title translatable" data-en="Discovery-Led Design" data-es="Diseño Basado en Descubrimiento" data-fr="Conception Guidée par la Découverte">
-                    Discovery-Led Design
-                </h2>
-
-                <div style="background: linear-gradient(135deg, #FFC107 5%, transparent 5%); padding: 2rem; border-radius: 10px; margin: 2rem 0; background-color: #fff9e6;">
-                    <h3 style="margin-bottom: 1.5rem; color: var(--text-primary); font-size: 1.3rem;" class="translatable" data-en="Critical Questions We Need to Explore Together" data-es="Preguntas Críticas Que Necesitamos Explorar Juntos" data-fr="Questions Critiques à Explorer Ensemble">
-                        Critical Questions We Need to Explore Together
-                    </h3>
-
-                    <div class="challenge-cards">
-                        <div class="challenge-card">
-                            <h3>👥 <span class="translatable" data-en="Participant Readiness" data-es="Preparación de Participantes" data-fr="Préparation des Participants">Participant Readiness</span></h3>
-                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
-                                <li class="translatable" data-en="What is their current experience with technology and data?" data-es="¿Cuál es su experiencia actual con tecnología y datos?" data-fr="Quelle est leur expérience actuelle avec la technologie et les données?">What is their current experience with technology and data?</li>
-                                <li class="translatable" data-en="What software/tools are they already using?" data-es="¿Qué software/herramientas ya están usando?" data-fr="Quels logiciels/outils utilisent-ils déjà?">What software/tools are they already using?</li>
-                                <li class="translatable" data-en="What are their expectations for the training?" data-es="¿Cuáles son sus expectativas para la capacitación?" data-fr="Quelles sont leurs attentes pour la formation?">What are their expectations for the training?</li>
-                            </ul>
-                        </div>
-
-                        <div class="challenge-card">
-                            <h3>🤖 <span class="translatable" data-en="AI Scope & Purpose" data-es="Alcance y Propósito de IA" data-fr="Portée et Objectif de l'IA">AI Scope & Purpose</span></h3>
-                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
-                                <li class="translatable" data-en="Content creation vs data analysis vs decision support?" data-es="¿Creación de contenido vs análisis de datos vs apoyo a decisiones?" data-fr="Création de contenu vs analyse de données vs aide à la décision?">Content creation vs data analysis vs decision support?</li>
-                                <li class="translatable" data-en="How do we keep the human element central?" data-es="¿Cómo mantenemos el elemento humano central?" data-fr="Comment garder l'élément humain au centre?">How do we keep the human element central?</li>
-                                <li class="translatable" data-en="Start AI discussion in online module or in-person?" data-es="¿Iniciar discusión de IA en módulo online o presencial?" data-fr="Commencer la discussion IA en ligne ou en présentiel?">Start AI discussion in online module or in-person?</li>
-                            </ul>
-                        </div>
-
-                        <div class="challenge-card">
-                            <h3>📊 <span class="translatable" data-en="Data Readiness" data-es="Preparación de Datos" data-fr="Préparation des Données">Data Readiness</span></h3>
-                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
-                                <li class="translatable" data-en="What data do participants currently have access to?" data-es="¿A qué datos tienen acceso actualmente los participantes?" data-fr="À quelles données les participants ont-ils actuellement accès?">What data do participants currently have access to?</li>
-                                <li class="translatable" data-en="What data could they create? (e.g., sentiment analysis of reviews)" data-es="¿Qué datos podrían crear? (ej., análisis de sentimiento de reseñas)" data-fr="Quelles données pourraient-ils créer? (ex: analyse de sentiment des avis)">What data could they create? (e.g., sentiment analysis of reviews)</li>
-                                <li class="translatable" data-en="How can we make data collection practical and sustainable?" data-es="¿Cómo podemos hacer que la recopilación de datos sea práctica y sostenible?" data-fr="Comment rendre la collecte de données pratique et durable?">How can we make data collection practical and sustainable?</li>
-                            </ul>
-                        </div>
-
-                        <div class="challenge-card">
-                            <h3>🎓 <span class="translatable" data-en="Learning Environment" data-es="Entorno de Aprendizaje" data-fr="Environnement d'Apprentissage">Learning Environment</span></h3>
-                            <ul style="text-align: left; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
-                                <li class="translatable" data-en="How do we adapt to different experience levels?" data-es="¿Cómo nos adaptamos a diferentes niveles de experiencia?" data-fr="Comment s'adapter aux différents niveaux d'expérience?">How do we adapt to different experience levels?</li>
-                                <li class="translatable" data-en="What examples/case studies resonate with Colombian context?" data-es="¿Qué ejemplos/casos resuenan con el contexto colombiano?" data-fr="Quels exemples/cas résonnent avec le contexte colombien?">What examples/case studies resonate with Colombian context?</li>
-                                <li class="translatable" data-en="How to balance theory with hands-on practice?" data-es="¿Cómo equilibrar teoría con práctica?" data-fr="Comment équilibrer théorie et pratique?">How to balance theory with hands-on practice?</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4: Our Approach -->
-        <section class="approach-section" id="approach" data-section="3">
+        <!-- Section 2: Our Approach -->
+        <section class="approach-section" id="approach" data-section="2">
             <div class="section-content">
                 <h2 class="section-title translatable" data-en="Our Approach" data-es="Nuestro Enfoque" data-fr="Notre Approche">
                     Our Approach
                 </h2>
-                <p class="section-subtitle translatable" data-en="A complete cycle: Analyze → Structure → Test → Adjust" data-es="Un ciclo completo: Analizar → Estructurar → Probar → Ajustar" data-fr="Une approche en cycle : Analyse → Structuration → Mise à l'épreuve → Ajustement">
-                    A complete cycle: Analyze → Structure → Test → Adjust
+                <p class="section-subtitle translatable" data-en="A practical cycle for positioning responsible tourism products: Analyze → Structure → Test → Adjust" data-es="Un ciclo práctico para posicionar productos de turismo responsable: Analizar → Estructurar → Probar → Ajustar" data-fr="Un cycle pratique pour positionner les produits de tourisme responsable : Analyser → Structurer → Tester → Ajuster">
+                    A practical cycle for positioning responsible tourism products: Analyze → Structure → Test → Adjust
                 </p>
 
                 <div class="cycle-diagram">
@@ -1476,18 +1339,18 @@
                 </div>
 
                 <div style="background: linear-gradient(135deg, #1565C0, #0D47A1); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;" class="translatable" data-en="Why Discovery-Led Design" data-es="Por Qué Diseño Basado en Descubrimiento" data-fr="Pourquoi une Conception Guidée par la Découverte">
-                        Why Discovery-Led Design
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;" class="translatable" data-en="Built Around Your Reality" data-es="Construido Alrededor de Tu Realidad" data-fr="Construit Autour de Votre Réalité">
+                        Built Around Your Reality
                     </h3>
-                    <p style="line-height: 1.8; font-size: 1rem; margin-bottom: 0;" class="translatable" data-en="Technology training fails when it's disconnected from participants' reality. Discovery ensures we build training that meets participants where they are and takes them where they need to go — not where a generic curriculum assumes they should be." data-es="La capacitación en tecnología falla cuando está desconectada de la realidad de los participantes. El descubrimiento asegura que construyamos capacitación que encuentre a los participantes donde están y los lleve donde necesitan ir — no donde un currículo genérico asume que deberían estar." data-fr="La formation technologique échoue lorsqu'elle est déconnectée de la réalité des participants. La découverte garantit que nous construisons une formation qui rencontre les participants là où ils sont et les emmène là où ils doivent aller — pas là où un curriculum générique suppose qu'ils devraient être.">
-                        Technology training fails when it's disconnected from participants' reality. Discovery ensures we build training that meets participants where they are and takes them where they need to go — not where a generic curriculum assumes they should be.
+                    <p style="line-height: 1.8; font-size: 1rem; margin-bottom: 0;" class="translatable" data-en="Training works when it's built around what participants actually need. We start with your responsible tourism products and the European market context, then adapt every session to close the gaps that matter — not the ones a generic curriculum assumes exist." data-es="La capacitación funciona cuando está construida alrededor de lo que los participantes realmente necesitan. Partimos de tus productos de turismo responsable y del contexto del mercado europeo, luego adaptamos cada sesión para cerrar las brechas que importan." data-fr="La formation fonctionne quand elle est construite autour des besoins réels des participants. Nous partons de vos produits de tourisme responsable et du contexte du marché européen, puis adaptons chaque session pour combler les écarts qui comptent.">
+                        Training works when it's built around what participants actually need. We start with your responsible tourism products and the European market context, then adapt every session to close the gaps that matter — not the ones a generic curriculum assumes exist.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Section 5: Program Architecture -->
-        <section class="approach-section" id="architecture" data-section="4">
+        <!-- Section 3: Program Architecture -->
+        <section class="approach-section" id="architecture" data-section="3">
             <div class="section-content">
                 <h2 class="section-title translatable" data-en="Program Architecture" data-es="Arquitectura del Programa" data-fr="Architecture du Programme">
                     Program Architecture
@@ -1495,6 +1358,11 @@
                 <p class="section-subtitle translatable" data-en="Hybrid format: online modules (April & June) + in-person training in Medellín (May)" data-es="Formato híbrido: módulos en línea (abril y junio) + capacitación presencial en Medellín (mayo)" data-fr="Format hybride : modules en ligne (avril &amp; juin) + formation en présentiel à Medellín (mai)">
                     Hybrid format: online modules (April &amp; June) + in-person training in Medellín (May)
                 </p>
+                <div style="background: var(--bg-secondary); border-left: 4px solid var(--colombia-yellow); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+                    <span class="translatable" data-en="The program follows a single thread: understand how you're currently perceived → craft your own story → build the channels to tell it consistently → deploy in real market conditions → refine. Each module builds directly on the last." data-es="El programa sigue un hilo conductor: entender cómo te perciben actualmente → construir tu propia historia → crear los canales para contarla de manera consistente → implementar en condiciones reales de mercado → refinar. Cada módulo se construye directamente sobre el anterior." data-fr="Le programme suit un fil conducteur unique : comprendre comment vous êtes perçu actuellement → construire votre propre histoire → créer les canaux pour la raconter de manière cohérente → la déployer en conditions réelles de marché → affiner. Chaque module s'appuie directement sur le précédent.">
+                        The program follows a single thread: understand how you're currently perceived → craft your own story → build the channels to tell it consistently → deploy in real market conditions → refine. Each module builds directly on the last.
+                    </span>
+                </div>
 
                 <div class="timeline-container">
                     <div class="timeline-weeks">
@@ -1517,13 +1385,13 @@
                         <div class="week-block module2">
                             <div class="week-number translatable" data-en="May 25–26" data-es="25–26 de mayo" data-fr="25–26 mai">May 25–26</div>
                             <div class="week-title translatable" data-en="📍 Module 2 (In-Person)" data-es="📍 Módulo 2 (Presencial)" data-fr="📍 Module 2 (En présentiel)">📍 Module 2 (In-Person)</div>
-                            <div class="week-content translatable" data-en="2 days in Medellín: Pitch preparation & practice (Day 1), B2B meetings with international buyers + French business meetings (Day 2)" data-es="2 días en Medellín: Preparación y práctica de pitch (Día 1), reuniones B2B con compradores internacionales + reuniones con empresas francesas (Día 2)" data-fr="2 jours à Medellín : Préparation &amp; pratique du pitch (Jour 1), rencontres B2B avec acheteurs internationaux + rencontres entreprises françaises (Jour 2)">
-                                2 days in Medellín: Pitch preparation &amp; practice (Day 1), B2B meetings with international buyers + French business meetings (Day 2)
+                            <div class="week-content translatable" data-en="2 days in Medellín: Pitch preparation for May 27 conference (Day 1), Contact management systems & relationship funnel strategies (Day 2)" data-es="2 días en Medellín: Preparación del pitch para la conferencia del 27 de mayo (Día 1), Sistemas de gestión de contactos y estrategias del embudo de relación (Día 2)" data-fr="2 jours à Medellín : Préparation du pitch pour la conférence du 27 mai (Jour 1), Systèmes de gestion des contacts et stratégies d'entonnoir relationnel (Jour 2)">
+                                2 days in Medellín: Pitch preparation for May 27 conference (Day 1), Contact management systems &amp; relationship funnel strategies (Day 2)
                             </div>
                         </div>
 
                         <div class="week-block conference">
-                            <div class="week-number translatable" data-en="May 27–28" data-es="27–28 de mayo" data-fr="27–28 mai">May 27–28</div>
+                            <div class="week-number translatable" data-en="May 27" data-es="27 de mayo" data-fr="27 mai">May 27</div>
                             <div class="week-title translatable" data-en="🏆 Conference" data-es="🏆 Conferencia" data-fr="🏆 Conférence">🏆 Conference</div>
                             <div class="week-content translatable" data-en="Medellín: Networking and market exposure opportunity" data-es="Medellín: Oportunidad de networking y exposición al mercado" data-fr="Medellín : Opportunité de networking et d'exposition au marché">
                                 Medellín: Networking and market exposure opportunity
@@ -1550,15 +1418,181 @@
                         </div>
                         <div class="location-item">
                             <span class="location-icon">🏆</span>
-                            <span class="translatable" data-en="Conference: May 27–28 (Medellín)" data-es="Conferencia: 27–28 de mayo (Medellín)" data-fr="Conférence : 27–28 mai (Medellín)">Conference: May 27–28 (Medellín)</span>
+                            <span class="translatable" data-en="Conference: May 27 (Medellín)" data-es="Conferencia: 27 de mayo (Medellín)" data-fr="Conférence : 27 mai (Medellín)">Conference: May 27 (Medellín)</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 5: Calendar -->
-        <section class="why-section" id="calendar" data-section="5">
+        <!-- Section 4: Phase 0 Details -->
+        <section class="why-section" id="phase0" data-section="4">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="📋 Phase 0: Preparation & Diagnostic" data-es="📋 Fase 0: Preparación y Diagnóstico" data-fr="📋 Phase 0 : Préparation & Diagnostic">
+                    📋 Phase 0: Preparation & Diagnostic
+                </h2>
+                <p class="section-subtitle translatable" data-en="Understanding where operators start to adapt training content" data-es="Entender dónde comienzan los operadores para adaptar el contenido de capacitación" data-fr="Comprendre où les opérateurs commencent pour adapter le contenu de formation">
+                    Understanding where operators start to adapt training content
+                </p>
+
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3><span>🔍</span><span class="translatable" data-en="Diagnostic Process" data-es="Proceso de Diagnóstico" data-fr="Processus de Diagnostic">Diagnostic Process</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Market positioning assessment" data-es="Evaluación de posicionamiento de mercado" data-fr="Évaluation du positionnement marché">Market positioning assessment</li>
+                            <li class="translatable" data-en="Current digital presence analysis" data-es="Análisis de presencia digital actual" data-fr="Analyse de la présence digitale actuelle">Current digital presence analysis</li>
+                            <li class="translatable" data-en="Existing tools & systems inventory" data-es="Inventario de herramientas y sistemas existentes" data-fr="Inventaire des outils et systèmes existants">Existing tools & systems inventory</li>
+                            <li class="translatable" data-en="International market experience level" data-es="Nivel de experiencia en mercados internacionales" data-fr="Niveau d'expérience sur les marchés internationaux">International market experience level</li>
+                            <li class="translatable" data-en="How participants currently develop and evaluate the responsibility of their own products" data-es="Cómo los participantes desarrollan y evalúan actualmente la responsabilidad de sus propios productos" data-fr="Comment les participants développent et évaluent actuellement la responsabilité de leurs propres produits">How participants currently develop and evaluate the responsibility of their own products</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>👥</span><span class="translatable" data-en="Group Formation" data-es="Formación de Grupos" data-fr="Formation des Groupes">Group Formation</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Segment by niche and target markets" data-es="Segmentar por nicho y mercados objetivo" data-fr="Segmenter par niche et marchés cibles">Segment by niche and target markets</li>
+                            <li class="translatable" data-en="Match operators with European buyers" data-es="Emparejar operadores con compradores europeos" data-fr="Jumeler les opérateurs avec les acheteurs européens">Match operators with European buyers</li>
+                            <li class="translatable" data-en="Prepare customized B2B agendas" data-es="Preparar agendas B2B personalizadas" data-fr="Préparer des agendas B2B personnalisés">Prepare customized B2B agendas</li>
+                            <li class="translatable" data-en="Identify shared challenges by segment" data-es="Identificar desafíos compartidos por segmento" data-fr="Identifier les défis partagés par segment">Identify shared challenges by segment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sample-questions">
+                    <h4 class="translatable" data-en="Sample Diagnostic Questions:" data-es="Preguntas de Diagnóstico de Muestra:" data-fr="Exemples de Questions de Diagnostic :">Sample Diagnostic Questions:</h4>
+                    <p class="translatable" data-en="• What is your primary international target market?" data-es="• ¿Cuál es tu mercado objetivo internacional principal?" data-fr="• Quel est votre marché cible international principal ?">• What is your primary international target market?</p>
+                    <p class="translatable" data-en="• What digital tools do you currently use to manage buyer contacts?" data-es="• ¿Qué herramientas digitales usas actualmente para gestionar contactos de compradores?" data-fr="• Quels outils numériques utilisez-vous actuellement pour gérer les contacts acheteurs ?">• What digital tools do you currently use to manage buyer contacts?</p>
+                    <p class="translatable" data-en="• Have you participated in international B2B meetings before?" data-es="• ¿Has participado en reuniones B2B internacionales antes?" data-fr="• Avez-vous déjà participé à des rencontres B2B internationales ?">• Have you participated in international B2B meetings before?</p>
+                    <p class="translatable" data-en="• How do you currently track and follow up with international buyers?" data-es="• ¿Cómo rastreas y haces seguimiento actualmente con compradores internacionales?" data-fr="• Comment suivez-vous et relancez-vous actuellement les acheteurs internationaux ?">• How do you currently track and follow up with international buyers?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Module 1 Details -->
+        <section class="approach-section" id="module1" data-section="5">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="💻 Module 1: Online Training" data-es="💻 Módulo 1: Capacitación en Línea" data-fr="💻 Module 1 : Formation en Ligne">
+                    💻 Module 1: Online Training
+                </h2>
+                <p class="section-subtitle translatable" data-en="April 27–28 · 9:00 Medellín / 16:00 Paris · 2 sessions (2 hours each)" data-es="27–28 de abril · 9:00 Medellín / 16:00 París · 2 sesiones (2 horas cada una)" data-fr="27–28 avril · 9h00 Medellín / 16h00 Paris · 2 sessions (2 heures chacune)">
+                    April 27–28 · 9:00 Medellín / 16:00 Paris · 2 sessions (2 hours each)
+                </p>
+
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3><span>🌿</span><span class="translatable" data-en="Session 1 (Apr 27): Responsible Tourism & the European Market" data-es="Sesión 1 (27 abr): Turismo Responsable y el Mercado Europeo" data-fr="Session 1 (27 avr) : Tourisme Responsable & le Marché Européen">Session 1 (Apr 27): Responsible Tourism &amp; the European Market</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="What European buyers look for in responsible, community &amp; cultural tourism products" data-es="Qué buscan los compradores europeos en productos de turismo responsable, comunitario y cultural" data-fr="Ce que les acheteurs européens recherchent dans les produits de tourisme responsable, communautaire et culturel">What European buyers look for in responsible, community &amp; cultural tourism products</li>
+                            <li class="translatable" data-en="Niche market alignment: identifying your European buyer and assessing where your offer stands" data-es="Alineación de mercado de nicho: identificar tu comprador europeo y evaluar dónde se encuentra tu oferta" data-fr="Alignement de marché de niche : identifier votre acheteur européen et évaluer où se situe votre offre">Niche market alignment: identifying your European buyer and assessing where your offer stands</li>
+                            <li class="translatable" data-en="Translating responsible practices into commercial value — Tourism 4.0 and sustainability as a market advantage" data-es="Traducir prácticas responsables en valor comercial — Turismo 4.0 y la sostenibilidad como ventaja de mercado" data-fr="Transformer les pratiques responsables en valeur commerciale — Tourisme 4.0 et la durabilité comme avantage de marché">Translating responsible practices into commercial value — Tourism 4.0 and sustainability as a market advantage</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>🔍</span><span class="translatable" data-en="Session 2 (Apr 28): Your Digital Presence — How Others Are Telling Your Story" data-es="Sesión 2 (28 abr): Tu Presencia Digital — Cómo Otros Están Contando Tu Historia" data-fr="Session 2 (28 avr) : Votre Présence Numérique — Comment les Autres Racontent Votre Histoire">Session 2 (Apr 28): Your Digital Presence — How Others Are Telling Your Story</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Your digital presence as a professional asset: what appears online about your operation — reviews, listings, search results — and who is currently shaping it" data-es="Tu presencia digital como activo profesional: lo que aparece en línea sobre tu operación — reseñas, listados, resultados de búsqueda — y quién la está moldeando actualmente" data-fr="Votre présence numérique comme actif professionnel : ce qui apparaît en ligne sur votre activité — avis, listings, résultats de recherche — et qui la façonne actuellement">Your digital presence as a professional asset: what appears online about your operation — reviews, listings, search results — and who is currently shaping it</li>
+                            <li class="translatable" data-en="Multi-lens audit: how your responsible tourism offer reads to a European buyer, through a sustainability lens, a traveler lens, and a competitive lens" data-es="Auditoría multi-perspectiva: cómo lee tu oferta de turismo responsable un comprador europeo, a través de una perspectiva de sostenibilidad, una perspectiva del viajero y una perspectiva competitiva" data-fr="Audit multi-angles : comment votre offre de tourisme responsable est lue par un acheteur européen, à travers un angle durabilité, un angle voyageur et un angle concurrentiel">Multi-lens audit: how your responsible tourism offer reads to a European buyer, through a sustainability lens, a traveler lens, and a competitive lens</li>
+                            <li class="translatable" data-en="Identifying the gap — and starting to close it: where your responsible practices are invisible online, and how to change that" data-es="Identificar la brecha — y comenzar a cerrarla: dónde tus prácticas responsables son invisibles en línea y cómo cambiar eso" data-fr="Identifier l'écart — et commencer à le combler : où vos pratiques responsables sont invisibles en ligne et comment changer cela">Identifying the gap — and starting to close it: where your responsible practices are invisible online, and how to change that</li>
+                        </ul>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; font-style: italic;">
+                            <span class="translatable" data-en="* Participants receive a personalized digital presence snapshot ahead of the in-person module" data-es="* Los participantes reciben un resumen personalizado de su presencia digital antes del módulo presencial" data-fr="* Les participants reçoivent un bilan personnalisé de leur présence numérique avant le module en présentiel">* Participants receive a personalized digital presence snapshot ahead of the in-person module</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 6: Module 2 - Day by Day -->
+        <section class="why-section" id="module2" data-section="6">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="📍 Module 2: In-Person Training (Medellín)" data-es="📍 Módulo 2: Capacitación Presencial (Medellín)" data-fr="📍 Module 2 : Formation en Présentiel (Medellín)">
+                    📍 Module 2: In-Person Training (Medellín)
+                </h2>
+                <p class="section-subtitle translatable" data-en="May 25–26, Medellín · 2 intensive days: from crafting your story to building the system to sustain it" data-es="25–26 de mayo, Medellín · 2 días intensivos: desde construir tu historia hasta crear el sistema para sostenerla" data-fr="25–26 mai, Medellín · 2 jours intensifs : de la construction de votre histoire à la mise en place du système pour la porter">
+                    May 25–26, Medellín · 2 intensive days: from crafting your story to building the system to sustain it
+                </p>
+
+                <div class="day-cards">
+                    <div class="day-card day1">
+                        <h3 class="translatable" data-en="Day 1: Crafting Your Story" data-es="Día 1: Construyendo Tu Historia" data-fr="Jour 1 : Construire Votre Histoire">Day 1: Crafting Your Story</h3>
+                        <h4 class="translatable" data-en="Focus:" data-es="Enfoque:" data-fr="Focus :">Focus:</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;" class="translatable" data-en="Taking ownership of your narrative — and preparing a compelling 10-minute in-person pitch for the May 27 conference" data-es="Tomando el control de tu narrativa — y preparando un pitch presencial convincente de 10 minutos para la conferencia del 27 de mayo" data-fr="Reprendre le contrôle de votre récit — et préparer un pitch en présentiel convaincant de 10 minutes pour la conférence du 27 mai">Taking ownership of your narrative — and preparing a compelling 10-minute in-person pitch for the May 27 conference</p>
+                        <ul>
+                            <li class="translatable" data-en="Responsible tourism niche workshop: who is your European buyer, what do they need to hear, and how does your offer compare?" data-es="Taller de nicho de turismo responsable: ¿quién es tu comprador europeo, qué necesita escuchar y cómo se compara tu oferta?" data-fr="Atelier niche de tourisme responsable : qui est votre acheteur européen, qu'a-t-il besoin d'entendre et comment se compare votre offre ?">Responsible tourism niche workshop: who is your European buyer, what do they need to hear, and how does your offer compare?</li>
+                            <li class="translatable" data-en="Turning responsible practices into commercial language — community impact, cultural depth, environmental practice as differentiators — adapted for specialist agencies, generalist TOs, and FIT operators" data-es="Convertir las prácticas responsables en lenguaje comercial — impacto comunitario, profundidad cultural, práctica ambiental como diferenciadores — adaptado para agencias especializadas, TO generalistas y operadores FIT" data-fr="Transformer les pratiques responsables en langage commercial — impact communautaire, profondeur culturelle, pratique environnementale comme différenciateurs — adapté aux agences spécialisées, TO généralistes et opérateurs FIT">Turning responsible practices into commercial language — community impact, cultural depth, environmental practice as differentiators — adapted for specialist agencies, generalist TOs, and FIT operators</li>
+                            <li class="translatable" data-en="10-minute pitch construction, practice, and materials refinement for the May 27 conference" data-es="Construcción, práctica y refinamiento del pitch de 10 minutos para la conferencia del 27 de mayo" data-fr="Construction, pratique et affinement du pitch de 10 minutes pour la conférence du 27 mai">10-minute pitch construction, practice, and materials refinement for the May 27 conference</li>
+                        </ul>
+                    </div>
+
+                    <div class="day-card day2">
+                        <h3 class="translatable" data-en="Day 2: Building Your System" data-es="Día 2: Construyendo Tu Sistema" data-fr="Jour 2 : Construire Votre Système">Day 2: Building Your System</h3>
+                        <h4 class="translatable" data-en="Morning — Contact Management:" data-es="Mañana — Gestión de Contactos:" data-fr="Matin — Gestion des Contacts :">Morning — Contact Management:</h4>
+                        <ul>
+                            <li class="translatable" data-en="CRM fundamentals: B2B vs. B2C contact logic, what to track and when — principles first, tools second" data-es="Fundamentos de CRM: lógica de contactos B2B vs. B2C, qué rastrear y cuándo — principios primero, herramientas después" data-fr="Fondamentaux CRM : logique contacts B2B vs. B2C, quoi suivre et quand — principes d'abord, outils ensuite">CRM fundamentals: B2B vs. B2C contact logic, what to track and when — principles first, tools second</li>
+                            <li class="translatable" data-en="Tool options by cost tier — Google Sheets to purpose-built free tools — and practical setup workshop" data-es="Opciones de herramientas por nivel de costo — Google Sheets hasta herramientas gratuitas especializadas — y taller de configuración práctica" data-fr="Options d'outils par niveau de coût — Google Sheets aux outils gratuits dédiés — et atelier de configuration pratique">Tool options by cost tier — Google Sheets to purpose-built free tools — and practical setup workshop</li>
+                        </ul>
+                        <h4 class="translatable" data-en="Afternoon — Relationship & Awareness Funnel:" data-es="Tarde — Embudo de Relación y Conocimiento:" data-fr="Après-midi — Entonnoir Relationnel et de Notoriété :">Afternoon — Relationship &amp; Awareness Funnel:</h4>
+                        <ul>
+                            <li class="translatable" data-en="B2B and B2C engagement strategies: different funnels, different content — and how responsible tourism gives you a natural advantage at every stage" data-es="Estrategias de engagement B2B y B2C: embudos diferentes, contenido diferente — y cómo el turismo responsable te da una ventaja natural en cada etapa" data-fr="Stratégies d'engagement B2B et B2C : entonnoirs différents, contenus différents — et comment le tourisme responsable vous donne un avantage naturel à chaque étape">B2B and B2C engagement strategies: different funnels, different content — and how responsible tourism gives you a natural advantage at every stage</li>
+                            <li class="translatable" data-en="Channels mapped to stages: social media for discovery, email for trust, direct contact for conversion" data-es="Canales mapeados por etapas: redes sociales para descubrimiento, correo electrónico para confianza, contacto directo para conversión" data-fr="Canaux mappés par étape : réseaux sociaux pour la découverte, e-mail pour la confiance, contact direct pour la conversion">Channels mapped to stages: social media for discovery, email for trust, direct contact for conversion</li>
+                            <li class="translatable" data-en="Personal exercise: map your key contacts in the funnel and define your next move with each — ready for May 27" data-es="Ejercicio personal: mapea tus contactos clave en el embudo y define tu próxima acción con cada uno — listo para el 27 de mayo" data-fr="Exercice personnel : cartographiez vos contacts clés dans l'entonnoir et définissez votre prochaine action avec chacun — prêt pour le 27 mai">Personal exercise: map your key contacts in the funnel and define your next move with each — ready for May 27</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Module 3 - Online Follow-Up -->
+        <section class="approach-section" id="module3" data-section="7">
+            <div class="section-content">
+                <h2 class="section-title translatable" data-en="💻 Module 3: Online Follow-Up" data-es="💻 Módulo 3: Seguimiento en Línea" data-fr="💻 Module 3 : Suivi en Ligne">
+                    💻 Module 3: Online Follow-Up
+                </h2>
+                <p class="section-subtitle translatable" data-en="June 15 · 9:00 Medellín / 16:00 Paris — Turning the May 27 conversations into lasting relationships and product development" data-es="15 de junio · 9:00 Medellín / 16:00 París — Convirtiendo las conversaciones del 27 de mayo en relaciones duraderas y desarrollo de producto" data-fr="15 juin · 9h00 Medellín / 16h00 Paris — Transformer les conversations du 27 mai en relations durables et en développement produit">
+                    June 15 · 9:00 Medellín / 16:00 Paris — Turning the May 27 conversations into lasting relationships and product development
+                </p>
+
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3><span>🔄</span><span class="translatable" data-en="Recap & What the May 27 Conversations Told You" data-es="Resumen y Lo Que las Conversaciones del 27 de Mayo Te Dijeron" data-fr="Bilan & Ce que les Conversations du 27 Mai Vous Ont Dit">Recap &amp; What the May 27 Conversations Told You</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Review of conference outcomes — which pitches landed, what feedback you received from French agencies" data-es="Revisión de los resultados de la conferencia — qué pitches funcionaron, qué retroalimentación recibiste de las agencias francesas" data-fr="Bilan des résultats de la conférence — quels pitches ont fonctionné, quels retours vous avez reçus des agences françaises">Review of conference outcomes — which pitches landed, what feedback you received from French agencies</li>
+                            <li class="translatable" data-en="How the conversations apply to your responsible tourism product — what to adjust, what to double down on" data-es="Cómo las conversaciones aplican a tu producto de turismo responsable — qué ajustar, en qué profundizar" data-fr="Comment les conversations s'appliquent à votre produit de tourisme responsable — quoi ajuster, sur quoi insister">How the conversations apply to your responsible tourism product — what to adjust, what to double down on</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>🎯</span><span class="translatable" data-en="Personalized Action Plans" data-es="Planes de Acción Personalizados" data-fr="Plans d'Action Personnalisés">Personalized Action Plans</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Sharing and presenting individual action plans" data-es="Presentación y compartir planes de acción individuales" data-fr="Présentation et partage des plans d'action individuels">Sharing and presenting individual action plans</li>
+                            <li class="translatable" data-en="Responsible tourism positioning adjustments and 90-day roadmap" data-es="Ajustes de posicionamiento de turismo responsable y hoja de ruta de 90 días" data-fr="Ajustements de positionnement tourisme responsable et feuille de route à 90 jours">Responsible tourism positioning adjustments and 90-day roadmap</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>📇</span><span class="translatable" data-en="Building Buyer Relationships" data-es="Construyendo Relaciones con Compradores" data-fr="Construire des Relations avec les Acheteurs">Building Buyer Relationships</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Follow-up cadence and communication templates" data-es="Cadencia de seguimiento y plantillas de comunicación" data-fr="Cadence de suivi et modèles de communication">Follow-up cadence and communication templates</li>
+                            <li class="translatable" data-en="CRM setup and contact tracking — keeping your network active" data-es="Configuración de CRM y seguimiento de contactos — mantener tu red activa" data-fr="Configuration CRM et suivi des contacts — maintenir votre réseau actif">CRM setup and contact tracking — keeping your network active</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3><span>🌱</span><span class="translatable" data-en="Product Development & Continuous Improvement" data-es="Desarrollo de Producto y Mejora Continua" data-fr="Développement Produit & Amélioration Continue">Product Development &amp; Continuous Improvement</span></h3>
+                        <ul>
+                            <li class="translatable" data-en="Using market feedback to refine and develop your responsible tourism offer" data-es="Usar la retroalimentación del mercado para refinar y desarrollar tu oferta de turismo responsable" data-fr="Utiliser les retours du marché pour affiner et développer votre offre de tourisme responsable">Using market feedback to refine and develop your responsible tourism offer</li>
+                            <li class="translatable" data-en="Short and medium-term product development priorities" data-es="Prioridades de desarrollo de producto a corto y mediano plazo" data-fr="Priorités de développement produit à court et moyen terme">Short and medium-term product development priorities</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 9: Calendar -->
+        <section class="why-section" id="calendar" data-section="8">
             <div class="section-content">
                 <h2 class="section-title translatable" data-en="📅 Program Calendar" data-es="📅 Calendario del Programa" data-fr="📅 Calendrier du Programme">
                     📅 Program Calendar
@@ -1598,13 +1632,13 @@
                             <div class="cal-date translatable" data-en="Tuesday, May 26" data-es="Martes, 26 de mayo" data-fr="Mardi 26 mai">Tuesday, May 26</div>
                             <div class="cal-title translatable" data-en="📍 In-Person – Day 2" data-es="📍 Presencial – Día 2" data-fr="📍 En présentiel – Jour 2">📍 In-Person – Day 2</div>
                             <div class="cal-time">Medellín</div>
-                            <div class="cal-desc translatable" data-en="Morning: B2B pitches with international online buyers · Afternoon: In-person meetings with French businesses + recap" data-es="Mañana: Pitches B2B con compradores internacionales en línea · Tarde: Reuniones presenciales con empresas francesas + resumen" data-fr="Matin : pitches B2B avec acheteurs internationaux en ligne · Après-midi : rencontres en présentiel avec entreprises françaises + bilan">Morning: B2B pitches with international online buyers · Afternoon: In-person meetings with French businesses + recap</div>
+                            <div class="cal-desc translatable" data-en="Morning: Contact management & CRM workshop · Afternoon: Relationship funnel strategies + final pitch polish for May 27" data-es="Mañana: Taller de gestión de contactos y CRM · Tarde: Estrategias del embudo de relación + refinamiento final del pitch para el 27 de mayo" data-fr="Matin : atelier gestion des contacts & CRM · Après-midi : stratégies d'entonnoir relationnel + polissage final du pitch pour le 27 mai">Morning: Contact management &amp; CRM workshop · Afternoon: Relationship funnel strategies + final pitch polish for May 27</div>
                         </div>
                         <div class="cal-event conference">
-                            <div class="cal-date translatable" data-en="May 27–28 (Wed–Thu)" data-es="27–28 de mayo (Mié–Jue)" data-fr="27–28 mai (Mer–Jeu)">May 27–28 (Wed–Thu)</div>
+                            <div class="cal-date translatable" data-en="Wednesday, May 27" data-es="Miércoles, 27 de mayo" data-fr="Mercredi 27 mai">Wednesday, May 27</div>
                             <div class="cal-title translatable" data-en="🏆 Conference" data-es="🏆 Conferencia" data-fr="🏆 Conférence">🏆 Conference</div>
                             <div class="cal-time">Medellín</div>
-                            <div class="cal-desc translatable" data-en="Networking and market exposure opportunity" data-es="Oportunidad de networking y exposición al mercado" data-fr="Opportunité de networking et d'exposition au marché">Networking and market exposure opportunity</div>
+                            <div class="cal-desc translatable" data-en="Networking and market exposure with French travel agencies — pitches, introductions, first partnerships" data-es="Networking y exposición al mercado con agencias de viaje francesas — pitches, presentaciones, primeras alianzas" data-fr="Networking et exposition au marché avec les agences de voyage françaises — pitches, présentations, premières collaborations">Networking and market exposure with French travel agencies — pitches, introductions, first partnerships</div>
                         </div>
                     </div>
 
@@ -1622,206 +1656,8 @@
             </div>
         </section>
 
-        <!-- Section 6: Phase 0 Details -->
-        <section class="why-section" id="phase0" data-section="6">
-            <div class="section-content">
-                <h2 class="section-title translatable" data-en="📋 Phase 0: Preparation & Diagnostic" data-es="📋 Fase 0: Preparación y Diagnóstico" data-fr="📋 Phase 0 : Préparation & Diagnostic">
-                    📋 Phase 0: Preparation & Diagnostic
-                </h2>
-                <p class="section-subtitle translatable" data-en="Understanding where operators start to adapt training content" data-es="Entender dónde comienzan los operadores para adaptar el contenido de capacitación" data-fr="Comprendre où les opérateurs commencent pour adapter le contenu de formation">
-                    Understanding where operators start to adapt training content
-                </p>
-
-                <div class="module-grid">
-                    <div class="module-card">
-                        <h3><span>🔍</span><span class="translatable" data-en="Diagnostic Process" data-es="Proceso de Diagnóstico" data-fr="Processus de Diagnostic">Diagnostic Process</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="Market positioning assessment" data-es="Evaluación de posicionamiento de mercado" data-fr="Évaluation du positionnement marché">Market positioning assessment</li>
-                            <li class="translatable" data-en="Current digital presence analysis" data-es="Análisis de presencia digital actual" data-fr="Analyse de la présence digitale actuelle">Current digital presence analysis</li>
-                            <li class="translatable" data-en="Existing tools & systems inventory" data-es="Inventario de herramientas y sistemas existentes" data-fr="Inventaire des outils et systèmes existants">Existing tools & systems inventory</li>
-                            <li class="translatable" data-en="International market experience level" data-es="Nivel de experiencia en mercados internacionales" data-fr="Niveau d'expérience sur les marchés internationaux">International market experience level</li>
-                        </ul>
-                    </div>
-
-                    <div class="module-card">
-                        <h3><span>👥</span><span class="translatable" data-en="Group Formation" data-es="Formación de Grupos" data-fr="Formation des Groupes">Group Formation</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="Segment by niche and target markets" data-es="Segmentar por nicho y mercados objetivo" data-fr="Segmenter par niche et marchés cibles">Segment by niche and target markets</li>
-                            <li class="translatable" data-en="Match operators with European buyers" data-es="Emparejar operadores con compradores europeos" data-fr="Jumeler les opérateurs avec les acheteurs européens">Match operators with European buyers</li>
-                            <li class="translatable" data-en="Prepare customized B2B agendas" data-es="Preparar agendas B2B personalizadas" data-fr="Préparer des agendas B2B personnalisés">Prepare customized B2B agendas</li>
-                            <li class="translatable" data-en="Identify shared challenges by segment" data-es="Identificar desafíos compartidos por segmento" data-fr="Identifier les défis partagés par segment">Identify shared challenges by segment</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sample-questions">
-                    <h4 class="translatable" data-en="Sample Diagnostic Questions:" data-es="Preguntas de Diagnóstico de Muestra:" data-fr="Exemples de Questions de Diagnostic :">Sample Diagnostic Questions:</h4>
-                    <p class="translatable" data-en="• What is your primary international target market?" data-es="• ¿Cuál es tu mercado objetivo internacional principal?" data-fr="• Quel est votre marché cible international principal ?">• What is your primary international target market?</p>
-                    <p class="translatable" data-en="• What digital tools do you currently use to manage buyer contacts?" data-es="• ¿Qué herramientas digitales usas actualmente para gestionar contactos de compradores?" data-fr="• Quels outils numériques utilisez-vous actuellement pour gérer les contacts acheteurs ?">• What digital tools do you currently use to manage buyer contacts?</p>
-                    <p class="translatable" data-en="• Have you participated in international B2B meetings before?" data-es="• ¿Has participado en reuniones B2B internacionales antes?" data-fr="• Avez-vous déjà participé à des rencontres B2B internationales ?">• Have you participated in international B2B meetings before?</p>
-                    <p class="translatable" data-en="• How do you currently track and follow up with international buyers?" data-es="• ¿Cómo rastreas y haces seguimiento actualmente con compradores internacionales?" data-fr="• Comment suivez-vous et relancez-vous actuellement les acheteurs internationaux ?">• How do you currently track and follow up with international buyers?</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 7: Module 1 Details -->
-        <section class="approach-section" id="module1" data-section="7">
-            <div class="section-content">
-                <h2 class="section-title translatable" data-en="💻 Module 1: Online Training" data-es="💻 Módulo 1: Capacitación en Línea" data-fr="💻 Module 1 : Formation en Ligne">
-                    💻 Module 1: Online Training
-                </h2>
-                <p class="section-subtitle translatable" data-en="April 27–28 · 9:00 Medellín / 16:00 Paris · 2 sessions (2 hours each)" data-es="27–28 de abril · 9:00 Medellín / 16:00 París · 2 sesiones (2 horas cada una)" data-fr="27–28 avril · 9h00 Medellín / 16h00 Paris · 2 sessions (2 heures chacune)">
-                    April 27–28 · 9:00 Medellín / 16:00 Paris · 2 sessions (2 hours each)
-                </p>
-
-                <div class="module-grid">
-                    <div class="module-card">
-                        <h3><span>🌿</span><span class="translatable" data-en="Session 1 (Apr 27): Responsible Tourism & the European Market" data-es="Sesión 1 (27 abr): Turismo Responsable y el Mercado Europeo" data-fr="Session 1 (27 avr) : Tourisme Responsable & le Marché Européen">Session 1 (Apr 27): Responsible Tourism &amp; the European Market</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="What European buyers look for in responsible &amp; sustainable tourism products" data-es="Qué buscan los compradores europeos en productos de turismo responsable y sostenible" data-fr="Ce que les acheteurs européens recherchent dans les produits de tourisme responsable et durable">What European buyers look for in responsible &amp; sustainable tourism products</li>
-                            <li class="translatable" data-en="Responsible tourism market alignment self-assessment" data-es="Autoevaluación de alineación con el mercado de turismo responsable" data-fr="Auto-évaluation de l'alignement avec le marché du tourisme responsable">Responsible tourism market alignment self-assessment</li>
-                            <li class="translatable" data-en="Translating responsible practices into commercial value propositions" data-es="Traducir prácticas responsables en propuestas de valor comercial" data-fr="Transformer les pratiques responsables en propositions de valeur commerciale">Translating responsible practices into commercial value propositions</li>
-                            <li class="translatable" data-en="How the responsible tourism segment is growing and segmenting in Europe" data-es="Cómo el segmento de turismo responsable está creciendo y segmentándose en Europa" data-fr="Comment le segment du tourisme responsable croît et se segmente en Europe">How the responsible tourism segment is growing and segmenting in Europe</li>
-                            <li class="translatable" data-en="Tourism 4.0: sustainability as a market advantage" data-es="Turismo 4.0: la sostenibilidad como ventaja de mercado" data-fr="Tourisme 4.0 : la durabilité comme avantage de marché">Tourism 4.0: sustainability as a market advantage</li>
-                        </ul>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; font-style: italic;">
-                            <span class="translatable" data-en="* Content adapted based on participant experience level and market focus" data-es="* Contenido adaptado según el nivel de experiencia y el enfoque de mercado de los participantes" data-fr="* Contenu adapté selon le niveau d'expérience et l'orientation marché des participants">* Content adapted based on participant experience level and market focus</span>
-                        </p>
-                    </div>
-
-                    <div class="module-card">
-                        <h3><span>🔍</span><span class="translatable" data-en="Session 2 (Apr 28): Digital Presence & Responsible Product Visibility" data-es="Sesión 2 (28 abr): Presencia Digital y Visibilidad del Producto Responsable" data-fr="Session 2 (28 avr) : Présence Numérique & Visibilité du Produit Responsable">Session 2 (Apr 28): Digital Presence &amp; Responsible Product Visibility</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="How does your responsible tourism offer appear online? Evaluation through multiple lenses:" data-es="¿Cómo aparece tu oferta de turismo responsable en línea? Evaluación a través de múltiples perspectivas:" data-fr="Comment votre offre de tourisme responsable apparaît-elle en ligne ? Évaluation selon plusieurs angles :">How does your responsible tourism offer appear online? Evaluation through multiple lenses:</li>
-                            <li class="translatable" data-en="— The buyer lens: what a European tour operator sees when they look you up" data-es="— La perspectiva del comprador: lo que ve un operador turístico europeo cuando te busca" data-fr="— L'angle acheteur : ce qu'un tour-opérateur européen voit quand il vous cherche">— The buyer lens: what a European tour operator sees when they look you up</li>
-                            <li class="translatable" data-en="— The sustainability lens: how your credentials, certifications, and impact claims read" data-es="— La perspectiva de sostenibilidad: cómo se leen tus credenciales, certificaciones y declaraciones de impacto" data-fr="— L'angle durabilité : comment vos accréditations, certifications et engagements apparaissent">— The sustainability lens: how your credentials, certifications, and impact claims read</li>
-                            <li class="translatable" data-en="— The traveler lens: reviews, storytelling, and platform presence" data-es="— La perspectiva del viajero: reseñas, narrativa y presencia en plataformas" data-fr="— L'angle voyageur : avis, storytelling et présence sur les plateformes">— The traveler lens: reviews, storytelling, and platform presence</li>
-                            <li class="translatable" data-en="— The competitive lens: how you compare within your responsible tourism niche" data-es="— La perspectiva competitiva: cómo te comparas dentro de tu nicho de turismo responsable" data-fr="— L'angle concurrentiel : comment vous vous positionnez dans votre niche de tourisme responsable">— The competitive lens: how you compare within your responsible tourism niche</li>
-                            <li class="translatable" data-en="Digital tools for responsible tourism promotion and data-driven positioning" data-es="Herramientas digitales para la promoción del turismo responsable y el posicionamiento basado en datos" data-fr="Outils numériques pour la promotion du tourisme responsable et le positionnement basé sur les données">Digital tools for responsible tourism promotion and data-driven positioning</li>
-                        </ul>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; font-style: italic;">
-                            <span class="translatable" data-en="* Participants receive a personalized digital presence snapshot ahead of the in-person module" data-es="* Los participantes reciben un resumen personalizado de su presencia digital antes del módulo presencial" data-fr="* Les participants reçoivent un bilan personnalisé de leur présence numérique avant le module en présentiel">* Participants receive a personalized digital presence snapshot ahead of the in-person module</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid var(--colombia-blue);">
-                    <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">
-                        <strong class="translatable" data-en="Deliverables:" data-es="Entregables:" data-fr="Livrables :">Deliverables:</strong>
-                        <span class="translatable" data-en=" Responsible tourism market alignment tool, personalized digital presence assessment, practical guides on buyer relationship management" data-es=" Herramienta de alineación con el mercado de turismo responsable, evaluación personalizada de presencia digital, guías prácticas sobre gestión de relaciones con compradores" data-fr=" Outil d'alignement avec le marché du tourisme responsable, évaluation personnalisée de la présence numérique, guides pratiques sur la gestion des relations acheteurs"> Responsible tourism market alignment tool, personalized digital presence assessment, practical guides on buyer relationship management</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Module 2 - Day by Day -->
-        <section class="why-section" id="module2" data-section="8">
-            <div class="section-content">
-                <h2 class="section-title translatable" data-en="📍 Module 2: In-Person Training (Medellín)" data-es="📍 Módulo 2: Capacitación Presencial (Medellín)" data-fr="📍 Module 2 : Formation en Présentiel (Medellín)">
-                    📍 Module 2: In-Person Training (Medellín)
-                </h2>
-                <p class="section-subtitle translatable" data-en="May 25–26, Medellín · 2 intensive days: pitch preparation + real market testing" data-es="25–26 de mayo, Medellín · 2 días intensivos: preparación de pitch + prueba de mercado real" data-fr="25–26 mai, Medellín · 2 jours intensifs : préparation du pitch + test de marché réel">
-                    May 25–26, Medellín · 2 intensive days: pitch preparation + real market testing
-                </p>
-
-                <div class="day-cards">
-                    <div class="day-card day1">
-                        <h3 class="translatable" data-en="Day 1: Positioning & Pitch" data-es="Día 1: Posicionamiento y Presentación" data-fr="Jour 1 : Positionnement & Pitch">Day 1: Positioning & Pitch</h3>
-                        <h4 class="translatable" data-en="Focus:" data-es="Enfoque:" data-fr="Focus :">Focus:</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;" class="translatable" data-en="Preparing participants to pitch their responsible tourism product to European buyers" data-es="Preparando participantes para presentar su producto de turismo responsable a compradores europeos" data-fr="Préparer les participants à pitcher leur produit de tourisme responsable auprès des acheteurs européens">Preparing participants to pitch their responsible tourism product to European buyers</p>
-                        <ul>
-                            <li class="translatable" data-en="Responsible tourism niche workshop — who is your European buyer?" data-es="Taller de nicho de turismo responsable — ¿quién es tu comprador europeo?" data-fr="Atelier niche de tourisme responsable — qui est votre acheteur européen ?">Responsible tourism niche workshop — who is your European buyer?</li>
-                            <li class="translatable" data-en="Communicating your responsible practices as a commercial differentiator" data-es="Comunicar tus prácticas responsables como diferenciador comercial" data-fr="Communiquer vos pratiques responsables comme différenciateur commercial">Communicating your responsible practices as a commercial differentiator</li>
-                            <li class="translatable" data-en="Adapting your message for different buyer profiles" data-es="Adaptar tu mensaje para diferentes perfiles de compradores" data-fr="Adapter votre message à différents profils d'acheteurs">Adapting your message for different buyer profiles</li>
-                            <li class="translatable" data-en="2-minute pitch practice with peer feedback" data-es="Práctica de presentación de 2 minutos con retroalimentación entre pares" data-fr="Pratique de pitch de 2 minutes avec retours entre pairs">2-minute pitch practice with peer feedback</li>
-                            <li class="translatable" data-en="Materials and presentation refinement" data-es="Refinamiento de materiales y presentación" data-fr="Raffinement des matériaux et de la présentation">Materials and presentation refinement</li>
-                        </ul>
-                    </div>
-
-                    <div class="day-card day2">
-                        <h3 class="translatable" data-en="Day 2: Pitch Day" data-es="Día 2: Día de Presentaciones" data-fr="Jour 2 : Jour des Pitches">Day 2: Pitch Day</h3>
-                        <h4 class="translatable" data-en="Morning:" data-es="Mañana:" data-fr="Matin :">Morning:</h4>
-                        <ul>
-                            <li class="translatable" data-en="B2B pitch sessions with international buyers online" data-es="Sesiones de pitch B2B con compradores internacionales en línea" data-fr="Sessions de pitch B2B avec acheteurs internationaux en ligne">B2B pitch sessions with international buyers online</li>
-                            <li class="translatable" data-en="10 minutes each with structured feedback" data-es="10 minutos cada una con retroalimentación estructurada" data-fr="10 minutes chacune avec retours structurés">10 minutes each with structured feedback</li>
-                        </ul>
-                        <h4 class="translatable" data-en="Afternoon:" data-es="Tarde:" data-fr="Après-midi :">Afternoon:</h4>
-                        <ul>
-                            <li class="translatable" data-en="In-person meetings with ~10 French businesses" data-es="Reuniones presenciales con ~10 empresas francesas" data-fr="Rencontres en présentiel avec ~10 entreprises françaises">In-person meetings with ~10 French businesses</li>
-                            <li class="translatable" data-en="Afternoon recap session" data-es="Sesión de resumen de la tarde" data-fr="Session bilan de l'après-midi">Afternoon recap session</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="note-box">
-                    <p><strong class="translatable" data-en="Note:" data-es="Nota:" data-fr="Note :">Note:</strong> <span class="translatable" data-en="Activities are deliberately general at this stage. More specific workshops can be developed based on participant assessment and digital maturity levels to meet operators where they are." data-es="Las actividades son deliberadamente generales en esta etapa. Se pueden desarrollar talleres más específicos basados en la evaluación de participantes y niveles de madurez digital para encontrar a los operadores donde están." data-fr="Les activités sont délibérément générales à ce stade. Des ateliers plus spécifiques peuvent être développés en fonction de l'évaluation des participants et des niveaux de maturité numérique pour rencontrer les opérateurs là où ils sont.">Activities are deliberately general at this stage. More specific workshops can be developed based on participant assessment and digital maturity levels to meet operators where they are.</span></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 9: Module 3 - Online Follow-Up -->
-        <section class="approach-section" id="module3" data-section="9">
-            <div class="section-content">
-                <h2 class="section-title translatable" data-en="💻 Module 3: Online Follow-Up" data-es="💻 Módulo 3: Seguimiento en Línea" data-fr="💻 Module 3 : Suivi en Ligne">
-                    💻 Module 3: Online Follow-Up
-                </h2>
-                <p class="section-subtitle translatable" data-en="June 15 · 9:00 Medellín / 16:00 Paris — Turning market feedback into relationships and product development" data-es="15 de junio · 9:00 Medellín / 16:00 París — Convirtiendo la retroalimentación del mercado en relaciones y desarrollo de producto" data-fr="15 juin · 9h00 Medellín / 16h00 Paris — Transformer les retours marché en relations et en développement produit">
-                    June 15 · 9:00 Medellín / 16:00 Paris — Turning market feedback into relationships and product development
-                </p>
-
-                <div class="module-grid">
-                    <div class="module-card">
-                        <h3><span>🔄</span><span class="translatable" data-en="Recap & What the Market Told You" data-es="Resumen y Lo Que el Mercado Te Dijo" data-fr="Bilan & Ce que le Marché Vous a Dit">Recap &amp; What the Market Told You</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="Review of B2B meeting outcomes — what resonated, what didn't" data-es="Revisión de resultados de reuniones B2B — qué resonó, qué no" data-fr="Bilan des rencontres B2B — ce qui a résonné, ce qui n'a pas fonctionné">Review of B2B meeting outcomes — what resonated, what didn't</li>
-                            <li class="translatable" data-en="Reading buyer signals: interest, hesitation, and unspoken feedback" data-es="Leer las señales de los compradores: interés, dudas y retroalimentación no expresada" data-fr="Lire les signaux des acheteurs : intérêt, hésitations et retours implicites">Reading buyer signals: interest, hesitation, and unspoken feedback</li>
-                            <li class="translatable" data-en="How buyer feedback applies to your responsible tourism product" data-es="Cómo la retroalimentación de compradores aplica a tu producto de turismo responsable" data-fr="Comment les retours acheteurs s'appliquent à votre produit de tourisme responsable">How buyer feedback applies to your responsible tourism product</li>
-                            <li class="translatable" data-en="Group sharing and peer learning" data-es="Intercambio grupal y aprendizaje entre pares" data-fr="Partage en groupe et apprentissage entre pairs">Group sharing and peer learning</li>
-                        </ul>
-                    </div>
-
-                    <div class="module-card">
-                        <h3><span>🎯</span><span class="translatable" data-en="Personalized Action Plans" data-es="Planes de Acción Personalizados" data-fr="Plans d'Action Personnalisés">Personalized Action Plans</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="Sharing and presenting individual action plans" data-es="Presentación y compartir planes de acción individuales" data-fr="Présentation et partage des plans d'action individuels">Sharing and presenting individual action plans</li>
-                            <li class="translatable" data-en="Responsible tourism positioning adjustments based on buyer feedback" data-es="Ajustes de posicionamiento de turismo responsable basados en retroalimentación de compradores" data-fr="Ajustements de positionnement tourisme responsable basés sur les retours acheteurs">Responsible tourism positioning adjustments based on buyer feedback</li>
-                            <li class="translatable" data-en="Targeted follow-up strategies for specific buyers" data-es="Estrategias de seguimiento específicas para compradores concretos" data-fr="Stratégies de suivi ciblées pour les acheteurs identifiés">Targeted follow-up strategies for specific buyers</li>
-                            <li class="translatable" data-en="Next steps and 90-day roadmap" data-es="Próximos pasos y hoja de ruta de 90 días" data-fr="Prochaines étapes et feuille de route à 90 jours">Next steps and 90-day roadmap</li>
-                        </ul>
-                    </div>
-
-                    <div class="module-card">
-                        <h3><span>📇</span><span class="translatable" data-en="Building Buyer Relationships" data-es="Construyendo Relaciones con Compradores" data-fr="Construire des Relations avec les Acheteurs">Building Buyer Relationships</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="The difference between a contact and a relationship — how to bridge it" data-es="La diferencia entre un contacto y una relación — cómo bridgear esa brecha" data-fr="La différence entre un contact et une relation — comment la franchir">The difference between a contact and a relationship — how to bridge it</li>
-                            <li class="translatable" data-en="Follow-up cadence and communication templates" data-es="Cadencia de seguimiento y plantillas de comunicación" data-fr="Cadence de suivi et modèles de communication">Follow-up cadence and communication templates</li>
-                            <li class="translatable" data-en="CRM setup and contact tracking — keeping your network active" data-es="Configuración de CRM y seguimiento de contactos — mantener tu red activa" data-fr="Configuration CRM et suivi des contacts — maintenir votre réseau actif">CRM setup and contact tracking — keeping your network active</li>
-                            <li class="translatable" data-en="Sharing product updates and responsible tourism developments with buyers" data-es="Compartir actualizaciones del producto y avances en turismo responsable con compradores" data-fr="Partager les évolutions du produit et les avancées du tourisme responsable avec les acheteurs">Sharing product updates and responsible tourism developments with buyers</li>
-                        </ul>
-                    </div>
-
-                    <div class="module-card">
-                        <h3><span>🌱</span><span class="translatable" data-en="Product Development & Continuous Improvement" data-es="Desarrollo de Producto y Mejora Continua" data-fr="Développement Produit & Amélioration Continue">Product Development &amp; Continuous Improvement</span></h3>
-                        <ul>
-                            <li class="translatable" data-en="Using market feedback to refine and develop your responsible tourism offer" data-es="Usar la retroalimentación del mercado para refinar y desarrollar tu oferta de turismo responsable" data-fr="Utiliser les retours du marché pour affiner et développer votre offre de tourisme responsable">Using market feedback to refine and develop your responsible tourism offer</li>
-                            <li class="translatable" data-en="Identifying gaps between your current product and buyer expectations" data-es="Identificar brechas entre tu producto actual y las expectativas de los compradores" data-fr="Identifier les écarts entre votre produit actuel et les attentes des acheteurs">Identifying gaps between your current product and buyer expectations</li>
-                            <li class="translatable" data-en="Short and medium-term product development priorities" data-es="Prioridades de desarrollo de producto a corto y mediano plazo" data-fr="Priorités de développement produit à court et moyen terme">Short and medium-term product development priorities</li>
-                            <li class="translatable" data-en="Re-engaging buyers as your responsible tourism offer evolves" data-es="Volver a contactar compradores a medida que tu oferta de turismo responsable evoluciona" data-fr="Recontacter les acheteurs au fil de l'évolution de votre offre de tourisme responsable">Re-engaging buyers as your responsible tourism offer evolves</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid var(--colombia-blue);">
-                    <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">
-                        <strong class="translatable" data-en="Deliverables:" data-es="Entregables:" data-fr="Livrables :">Deliverables:</strong>
-                        <span class="translatable" data-en=" Personalized action plans, responsible tourism product development notes, CRM setup guide, follow-up templates, 90-day roadmap" data-es=" Planes de acción personalizados, notas de desarrollo de producto de turismo responsable, guía de configuración de CRM, plantillas de seguimiento, hoja de ruta de 90 días" data-fr=" Plans d'action personnalisés, notes de développement produit tourisme responsable, guide de configuration CRM, modèles de suivi, feuille de route à 90 jours"> Personalized action plans, responsible tourism product development notes, CRM setup guide, follow-up templates, 90-day roadmap</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 10: Deliverables -->
-        <section class="approach-section" id="deliverables" data-section="10">
+        <!-- Section 9: Deliverables -->
+        <section class="approach-section" id="deliverables" data-section="9">
             <div class="section-content">
                 <h2 class="section-title translatable" data-en="📦 Program Deliverables" data-es="📦 Entregables del Programa" data-fr="📦 Livrables du Programme">
                     📦 Program Deliverables
@@ -1835,10 +1671,10 @@
                         <h3><span>📚</span><span class="translatable" data-en="Training Materials" data-es="Materiales de Capacitación" data-fr="Matériaux de Formation">Training Materials</span></h3>
                         <ul>
                             <li class="translatable" data-en="All presentation slides (Spanish)" data-es="Todas las diapositivas de presentación (español)" data-fr="Toutes les diapositives de présentation (espagnol)">All presentation slides (Spanish)</li>
-                            <li class="translatable" data-en="Diagnostic tools & templates" data-es="Herramientas de diagnóstico y plantillas" data-fr="Outils de diagnostic et modèles">Diagnostic tools & templates</li>
-                            <li class="translatable" data-en="Practical method guides" data-es="Guías de métodos prácticos" data-fr="Guides de méthodes pratiques">Practical method guides</li>
-                            <li class="translatable" data-en="CRM & tracking templates" data-es="Plantillas de CRM y seguimiento" data-fr="Modèles de CRM et suivi">CRM & tracking templates</li>
-                            <li class="translatable" data-en="Follow-up message templates" data-es="Plantillas de mensajes de seguimiento" data-fr="Modèles de messages de suivi">Follow-up message templates</li>
+                            <li class="translatable" data-en="Digital presence audit template" data-es="Plantilla de auditoría de presencia digital" data-fr="Modèle d'audit de présence numérique">Digital presence audit template</li>
+                            <li class="translatable" data-en="CRM setup guide + Google Sheets contact template" data-es="Guía de configuración de CRM + plantilla de contactos en Google Sheets" data-fr="Guide de configuration CRM + modèle de contacts Google Sheets">CRM setup guide + Google Sheets contact template</li>
+                            <li class="translatable" data-en="B2B & B2C relationship funnel guide with responsible tourism content strategy" data-es="Guía del embudo de relación B2B y B2C con estrategia de contenido de turismo responsable" data-fr="Guide de l'entonnoir relationnel B2B & B2C avec stratégie de contenu tourisme responsable">B2B &amp; B2C relationship funnel guide with responsible tourism content strategy</li>
+                            <li class="translatable" data-en="Follow-up message templates (post-conference, post-trip, nurture)" data-es="Plantillas de mensajes de seguimiento (post-conferencia, post-viaje, nutrición)" data-fr="Modèles de messages de suivi (post-conférence, post-séjour, maturation)">Follow-up message templates (post-conference, post-trip, nurture)</li>
                         </ul>
                     </div>
 
@@ -1868,73 +1704,15 @@
             </div>
         </section>
 
-        <!-- Section 11: Questions for Resolution -->
-        <section class="why-section" id="questions" data-section="11">
-            <div class="section-content">
-                <h2 class="section-title translatable" data-en="🗺️ Where We Go From Here" data-es="🗺️ Hacia Dónde Vamos" data-fr="🗺️ La Suite du Projet">
-                    🗺️ Where We Go From Here
-                </h2>
-                <p class="section-subtitle translatable" data-en="Strategic questions to align implementation with your goals" data-es="Preguntas estratégicas para alinear la implementación con sus objetivos" data-fr="Questions stratégiques pour aligner la mise en œuvre avec vos objectifs">
-                    Strategic questions to align implementation with your goals
-                </p>
-
-                <div class="question-blocks">
-                    <div class="question-block">
-                        <h3><span>👥</span><span class="translatable" data-en="Who Participates?" data-es="¿Quién Participa?" data-fr="Qui Participe ?">Who Participates?</span></h3>
-                        <p class="translatable" data-en="20 participants — but who exactly?" data-es="20 participantes — ¿pero quién exactamente?" data-fr="20 participants — mais qui exactement ?">20 participants — but who exactly?</p>
-                        <ul>
-                            <li class="translatable" data-en="Tour operators only? Or include accommodations, DMCs, public officials?" data-es="¿Solo tour operadores? ¿O incluir alojamientos, DMCs, funcionarios públicos?" data-fr="Tour-opérateurs uniquement ? Ou inclure hébergements, DMC, fonctionnaires ?">Tour operators only? Or include accommodations, DMCs, public officials?</li>
-                            <li class="translatable" data-en="What's their current business stage? (Established vs emerging)" data-es="¿Cuál es su etapa empresarial actual? (Establecido vs emergente)" data-fr="Quelle est leur étape commerciale actuelle ? (Établi vs émergent)">What's their current business stage? (Established vs emerging)</li>
-                            <li class="translatable" data-en="Single cohort or multiple focused groups?" data-es="¿Una sola cohorte o múltiples grupos focalizados?" data-fr="Une seule cohorte ou plusieurs groupes ciblés ?">Single cohort or multiple focused groups?</li>
-                        </ul>
-                        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);" class="translatable" data-en="This shapes the entire program design and depth of impact." data-es="Esto configura todo el diseño del programa y la profundidad del impacto." data-fr="Cela façonne toute la conception du programme et la profondeur de l'impact.">This shapes the entire program design and depth of impact.</p>
-                    </div>
-
-                    <div class="question-block">
-                        <h3><span>🤝</span><span class="translatable" data-en="European Buyer Involvement" data-es="Participación de Compradores Europeos" data-fr="Implication des Acheteurs Européens">European Buyer Involvement</span></h3>
-                        <p class="translatable" data-en="How do we activate market connections?" data-es="¿Cómo activamos las conexiones de mercado?" data-fr="Comment activer les connexions de marché ?">How do we activate market connections?</p>
-                        <ul>
-                            <li class="translatable" data-en="Can we access Embassy/Institut Français buyer networks?" data-es="¿Podemos acceder a redes de compradores de Embajada/Instituto Francés?" data-fr="Accès aux réseaux d'acheteurs Ambassade/Institut Français ?">Can we access Embassy/Institut Français buyer networks?</li>
-                            <li class="translatable" data-en="Which European markets to prioritize? (France, Germany, UK, Netherlands?)" data-es="¿Qué mercados europeos priorizar? (¿Francia, Alemania, Reino Unido, Países Bajos?)" data-fr="Quels marchés européens prioriser ? (France, Allemagne, RU, Pays-Bas ?)">Which European markets to prioritize? (France, Germany, UK, Netherlands?)</li>
-                            <li class="translatable" data-en="Are there existing partnerships with tour operators we can leverage?" data-es="¿Hay asociaciones existentes con tour operadores que podamos aprovechar?" data-fr="Partenariats existants avec tour-opérateurs à exploiter ?">Are there existing partnerships with tour operators we can leverage?</li>
-                            <li class="translatable" data-en="What's the timeline for coordinating B2B meetings?" data-es="¿Cuál es el cronograma para coordinar reuniones B2B?" data-fr="Quel est le calendrier pour coordonner les rencontres B2B ?">What's the timeline for coordinating B2B meetings?</li>
-                        </ul>
-                    </div>
-
-                    <div class="question-block">
-                        <h3><span>📅</span><span class="translatable" data-en="Implementation Timeline" data-es="Cronograma de Implementación" data-fr="Calendrier de Mise en Œuvre">Implementation Timeline</span></h3>
-                        <p class="translatable" data-en="Working backwards from May 25–26, 2026 in-person training:" data-es="Trabajando hacia atrás desde la capacitación presencial del 25–26 de mayo de 2026:" data-fr="En remontant depuis la formation en présentiel du 25–26 mai 2026 :">Working backwards from May 25–26, 2026 in-person training:</p>
-                        <ul>
-                            <li class="translatable" data-en="When can we finalize participant selection?" data-es="¿Cuándo podemos finalizar la selección de participantes?" data-fr="Quand peut-on finaliser la sélection des participants ?">When can we finalize participant selection?</li>
-                            <li class="translatable" data-en="When do discovery assessments need to happen?" data-es="¿Cuándo deben realizarse las evaluaciones de descubrimiento?" data-fr="Quand les évaluations de découverte doivent-elles avoir lieu ?">When do discovery assessments need to happen?</li>
-                            <li class="translatable" data-en="How much lead time for buyer coordination and B2B setup?" data-es="¿Cuánto tiempo de anticipación para coordinación de compradores y configuración B2B?" data-fr="Combien de délai pour la coordination des acheteurs et la configuration B2B ?">How much lead time for buyer coordination and B2B setup?</li>
-                            <li class="translatable" data-en="When should online module launch?" data-es="¿Cuándo debe lanzarse el módulo en línea?" data-fr="Quand le module en ligne doit-il être lancé ?">When should online module launch?</li>
-                        </ul>
-                    </div>
-
-                    <div class="question-block">
-                        <h3><span>🎯</span><span class="translatable" data-en="Logistical Considerations" data-es="Consideraciones Logísticas" data-fr="Considérations Logistiques">Logistical Considerations</span></h3>
-                        <p class="translatable" data-en="Practical elements that shape program delivery:" data-es="Elementos prácticos que configuran la entrega del programa:" data-fr="Éléments pratiques qui façonnent la livraison du programme :">Practical elements that shape program delivery:</p>
-                        <ul>
-                            <li class="translatable" data-en="Training materials: Spanish only or multilingual?" data-es="Materiales de capacitación: ¿Solo español o multilingüe?" data-fr="Matériels de formation : espagnol uniquement ou multilingue ?">Training materials: Spanish only or multilingual?</li>
-                            <li class="translatable" data-en="Venue requirements for in-person sessions in Medellín" data-es="Requisitos de lugar para sesiones presenciales en Medellín" data-fr="Exigences de lieu pour sessions en présentiel à Medellín">Venue requirements for in-person sessions in Medellín</li>
-                            <li class="translatable" data-en="Platform for online module delivery and participant engagement" data-es="Plataforma para entrega de módulo en línea y participación" data-fr="Plateforme pour livraison du module en ligne et engagement">Platform for online module delivery and participant engagement</li>
-                            <li class="translatable" data-en="Post-training support structure and follow-up plan" data-es="Estructura de soporte post-capacitación y plan de seguimiento" data-fr="Structure de soutien post-formation et plan de suivi">Post-training support structure and follow-up plan</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 12: Next Steps -->
-        <section class="approach-section" id="nextsteps" data-section="12">
+        <!-- Section 10: Next Steps -->
+        <section class="approach-section" id="nextsteps" data-section="10">
             <div class="section-content">
                 <div class="final-box">
                     <h3 class="translatable" data-en="Next Steps" data-es="Próximos Pasos" data-fr="Prochaines Étapes">
                         Next Steps
                     </h3>
-                    <p class="translatable" data-en="An operational, structured approach to strengthening international market access through direct buyer connections, information systems, and data-driven decision-making." data-es="Un enfoque operativo y estructurado para fortalecer el acceso a mercados internacionales a través de conexiones directas con compradores, sistemas de información y toma de decisiones basada en datos." data-fr="Une approche opérationnelle et structurée pour renforcer l'accès aux marchés internationaux par des connexions directes avec les acheteurs, des systèmes d'information et une prise de décision basée sur les données.">
-                        An operational, structured approach to strengthening international market access through direct buyer connections, information systems, and data-driven decision-making.
+                    <p class="translatable" data-en="A practical program for responsible tourism operators ready to access the European market — combining responsible product development, direct buyer connections, and data-driven decision-making to turn good practice into commercial opportunity." data-es="Un programa práctico para operadores de turismo responsable listos para acceder al mercado europeo — combinando el desarrollo de productos responsables, conexiones directas con compradores y toma de decisiones basada en datos para convertir las buenas prácticas en oportunidad comercial." data-fr="Un programme pratique pour les opérateurs de tourisme responsable prêts à accéder au marché européen — combinant développement de produits responsables, connexions directes avec les acheteurs et prise de décision basée sur les données pour transformer les bonnes pratiques en opportunité commerciale.">
+                        A practical program for responsible tourism operators ready to access the European market — combining responsible product development, direct buyer connections, and data-driven decision-making to turn good practice into commercial opportunity.
                     </p>
 
                     <div style="display: flex; gap: 1.5rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
@@ -1978,28 +1756,8 @@
     </div>
 
     <script>
-        // Password protection
-        function checkPassword() {
-            const input = document.getElementById('password-input');
-            const error = document.getElementById('password-error');
-
-            if (input.value.toLowerCase() === 'medellin') {
-                document.getElementById('password-screen').classList.add('hidden');
-                document.getElementById('main-content').classList.add('visible');
-            } else {
-                error.style.display = 'block';
-            }
-        }
-
-        // Allow Enter key to submit password
-        document.getElementById('password-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-
         // Language switching
-        let currentLang = 'en';
+        let currentLang = 'es';
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -2010,8 +1768,10 @@
             // Update active button
             document.querySelectorAll('.lang-toggle button').forEach(btn => {
                 btn.classList.remove('active');
+                if (btn.textContent.trim().toLowerCase() === lang) {
+                    btn.classList.add('active');
+                }
             });
-            event.target.classList.add('active');
 
             // Update all translatable elements
             document.querySelectorAll('.translatable').forEach(el => {
@@ -2021,6 +1781,10 @@
                 }
             });
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setLanguage('es');
+        });
 
         // Section navigation
         let currentSection = 0;
