@@ -2,9 +2,10 @@
   "name": "tourism-commons",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run build:website && npm run build:tools && npm run build:timorleste",
+    "build": "npm run build:website && npm run build:tools && npm run build:timorleste && npm run build:colombia",
     "build:website": "mkdir -p build && cp website/index.html build/index.html",
     "build:timorleste": "mkdir -p build/timorleste && cp -r projects/timorleste/findings/* build/timorleste/",
+    "build:colombia": "mkdir -p build/colombia && cp projects/colombia/trecc-innovation-proposal.html build/colombia/index.html",
     "build:tools": "npm run build:digital-assessment && npm run build:sentiment-analysis && npm run build:cbt-monitoring && npm run build:instagram-index && npm run build:botswana",
     "build:botswana": "cd digital_assessment/projects/botswana/dashboard && npm run build && cd ../../../.. && mkdir -p build/botswana && cp -r digital_assessment/projects/botswana/dashboard/dist/* build/botswana/",
     "build:digital-assessment": "cd tools/digital-assessment && npm run build && cd ../.. && cp -r tools/digital-assessment/dist/assets build/ && cp -r tools/digital-assessment/dist/gambia-itc build/ && cp tools/digital-assessment/dist/index.html build/gambia-itc/index.html",

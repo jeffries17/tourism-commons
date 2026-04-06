@@ -25,6 +25,10 @@
     ],
     "rewrites": [
       {
+        "source": "/colombia",
+        "destination": "/colombia/index.html"
+      },
+      {
         "source": "/botswana/**",
         "destination": "/botswana/index.html"
       },
