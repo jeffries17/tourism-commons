@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Responsable Vende — Día 2 · Construyendo Tu Sistema · 26 de mayo</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --green:      #3A7D44;
+            --green-light:#E8F5EA;
+            --amber:      #D49B00;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --bg-alt:     #EEF2EF;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.65; color: var(--text); background: var(--white); }
+
+        /* TOPBAR */
+        .topbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 200; padding: 0.55rem 2rem; }
+        .topbar-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.35rem; letter-spacing: -0.5px; line-height: 1; display: flex; flex-direction: column; }
+        .trecc-logo .wordmark { display: flex; align-items: baseline; }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: var(--navy); }
+        .trecc-logo .tagline { font-family: 'Arial', sans-serif; font-size: 0.55rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px; margin-top: 1px; }
+        .topbar-center { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+        .slide-section-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--navy-mid); text-align: center; }
+        .anchor-banner { font-family: 'Georgia', serif; font-style: italic; font-size: 0.7rem; color: var(--text-muted); text-align: center; max-width: 720px; line-height: 1.3; opacity: 0.85; }
+        .slide-counter { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+
+        /* NAV BUTTONS */
+        .nav-buttons { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: 0.65rem; z-index: 190; }
+        .nav-btn { padding: 0.65rem 1.35rem; background: var(--navy); color: white; border: none; border-radius: 7px; font-size: 0.875rem; font-family: 'Arial', sans-serif; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.25s; box-shadow: 0 2px 10px rgba(27,43,90,0.25); }
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(27,43,90,0.3); }
+        .nav-btn.prev { background: white; color: var(--text); border: 1.5px solid var(--border); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .nav-btn:disabled { opacity: 0.25; cursor: not-allowed; transform: none; }
+
+        /* SECTIONS */
+        section { min-height: 100vh; padding: 6rem 2rem 7rem; display: flex; align-items: center; justify-content: center; }
+        .slide-content { max-width: 900px; width: 100%; }
+        section.bg-white  { background: var(--white); }
+        section.bg-light  { background: var(--bg); }
+        section.bg-alt    { background: var(--bg-alt); }
+        section.bg-navy   { background: var(--navy); }
+
+        /* TYPOGRAPHY */
+        .slide-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.6rem; }
+        .bg-navy .slide-label, .divider-slide .slide-label, .interactive-slide .slide-label, .block-intro .slide-label { color: rgba(255,255,255,0.65); }
+        .slide-title { font-size: 2.4rem; line-height: 1.15; color: var(--navy); margin-bottom: 0.5rem; }
+        .bg-navy .slide-title, .divider-slide .slide-title, .closing-slide .slide-title { color: white; }
+        .divider-slide .slide-title { font-size: 2.6rem; }
+        .slide-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem; font-family: 'Arial', sans-serif; }
+        .bg-navy .slide-subtitle, .divider-slide .slide-subtitle { color: rgba(255,255,255,0.75); }
+        .accent-bar { height: 3px; width: 60px; background: var(--gold); border-radius: 2px; margin-bottom: 1.5rem; }
+
+        /* HERO */
+        .hero-slide { text-align: center; }
+        .hero-slide .slide-title { font-size: 3rem; }
+        .hero-slide .accent-bar { margin: 1.25rem auto 1.5rem; width: 80px; }
+        .hero-meta { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .meta-chip { display: flex; align-items: center; gap: 0.5rem; background: var(--teal-light); border: 1px solid var(--teal); color: var(--teal-dark); padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.875rem; font-family: 'Arial', sans-serif; }
+        .hero-partner-logos { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; align-items: center; }
+        .partner-text { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text-muted); text-align: center; }
+        .partner-text strong { display: block; color: var(--text); font-size: 0.95rem; }
+        .hero-anchor { font-family: 'Georgia', serif; font-style: italic; font-size: 0.95rem; color: var(--text-muted); margin-top: 1.25rem; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+
+        /* DIVIDER */
+        .divider-slide { background: linear-gradient(135deg, var(--navy) 0%, var(--teal-dark) 100%); text-align: center; }
+        .divider-number { font-family: 'Arial Black', Arial, sans-serif; font-size: 6rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; margin-bottom: -1.5rem; }
+
+        /* BLOCK INTRO */
+        .block-intro { position: relative; background-size: cover; background-position: center; text-align: center; background-color: var(--navy); }
+        .block-intro::before { content: ''; position: absolute; inset: 0; background: linear-gradient(150deg, rgba(27,43,90,0.87) 30%, rgba(45,122,106,0.70) 100%); }
+        .block-intro .slide-content { position: relative; z-index: 1; }
+        .block-intro .bi-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 9rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; position: absolute; bottom: 1rem; right: 1.5rem; }
+        .block-intro .bi-kicker { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gold); margin-bottom: 1.2rem; }
+        .block-intro .bi-rule { width: 50px; height: 2px; background: var(--gold); margin: 1.2rem auto 1.5rem; border-radius: 2px; }
+        .block-intro .bi-title { font-size: 2.6rem; line-height: 1.15; color: white; }
+        .block-intro .bi-sub { font-family: 'Arial', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.78); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+        .block-intro .photo-todo { position: absolute; top: 1rem; left: 1rem; background: rgba(245,196,0,0.95); color: var(--navy); padding: 0.3rem 0.7rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px; z-index: 2; }
+
+        /* INTERACTIVE */
+        .interactive-slide { background: linear-gradient(135deg, #2D5A27 0%, var(--teal-dark) 100%); text-align: center; }
+        .interactive-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        .interactive-question { font-size: 1.9rem; color: white; line-height: 1.3; font-style: italic; max-width: 760px; margin: 0 auto 2rem; }
+        .interactive-instruction { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-top: 0.75rem; }
+        .chat-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+        /* PROGRAM ARC */
+        .program-arc { display: flex; align-items: stretch; gap: 0.4rem; margin: 1.25rem 0; }
+        .program-module { flex: 1; background: var(--bg); border-radius: 10px; padding: 1rem 1.1rem; border: 2px solid var(--border); opacity: 0.55; }
+        .program-module.active { background: var(--teal-light); border-color: var(--teal); opacity: 1; }
+        .arc-connector { display: flex; align-items: center; color: var(--border); font-size: 1.2rem; flex: 0 0 auto; }
+        .module-badge { font-family: 'Arial', sans-serif; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 600; }
+        .program-module.active .module-badge { color: var(--teal-dark); }
+        .module-name { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.1; }
+        .module-focus { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+        .program-module.active .module-focus { color: var(--teal-dark); font-weight: 600; }
+        .module-sessions { list-style: none; padding: 0; margin: 0; }
+        .module-sessions li { font-family: 'Arial', sans-serif; font-size: 0.73rem; color: var(--text-muted); padding: 0.15rem 0 0.15rem 0.85rem; position: relative; line-height: 1.3; }
+        .module-sessions li::before { content: '·'; position: absolute; left: 0.2rem; color: var(--teal); }
+        .module-sessions li.today { color: var(--teal-dark); font-weight: 700; }
+        .module-sessions li.today::before { content: '▶'; font-size: 0.55rem; top: 0.3rem; }
+        .module-sessions li.done { color: var(--text-muted); text-decoration: line-through; opacity: 0.65; }
+        .module-sessions li.done::before { content: '✓'; color: var(--teal); }
+
+        /* CALLOUT */
+        .callout { background: var(--teal-light); color: var(--text); border-radius: 10px; padding: 1rem 1.4rem; margin: 1rem 0; }
+        .callout.callout-gold { background: var(--gold); color: var(--navy); }
+        .callout.callout-outline { background: transparent; border: 2px solid var(--teal); color: var(--text); }
+        .callout.callout-navy { background: var(--navy); color: white; }
+        .callout.callout-red { background: #FCE8E5; border-left: 4px solid var(--red); color: var(--text); }
+        .callout h3 { font-size: 0.95rem; margin-bottom: 0.35rem; font-family: 'Arial', sans-serif; font-weight: 700; }
+        .callout p { font-size: 0.9rem; line-height: 1.65; opacity: 0.95; }
+
+        /* TWO/THREE COLUMN */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.25rem; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .col-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); font-weight: 700; margin-bottom: 0.5rem; }
+        .detail-block { background: var(--bg); border-radius: 8px; padding: 1rem 1.1rem; }
+        .detail-block h4 { font-family: 'Arial', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+        .detail-block ul { list-style: none; padding: 0; }
+        .detail-block ul li { font-size: 0.85rem; color: var(--text); padding: 0.25rem 0 0.25rem 1rem; position: relative; line-height: 1.5; }
+        .detail-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.75rem; top: 0.35rem; }
+
+        /* TIMER (pausa/almuerzo) */
+        .timer-slide { text-align: center; }
+        .timer-emoji { font-size: 4rem; margin-bottom: 0.75rem; }
+        .timer-display-big { font-family: 'Arial Black', Arial, sans-serif; font-size: 4rem; font-weight: 900; color: var(--navy); line-height: 1; }
+        .timer-note { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: var(--text-muted); margin-top: 0.85rem; }
+        .timer-next { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--teal-dark); margin-top: 1.5rem; font-weight: 600; }
+
+        /* TODO PLACEHOLDER */
+        .todo-box { background: repeating-linear-gradient(45deg, #FEF7D6, #FEF7D6 10px, #FFF3B0 10px, #FFF3B0 20px); border: 2px dashed var(--gold); border-radius: 10px; padding: 1.5rem; margin: 1.25rem 0; text-align: center; min-height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .todo-label { font-family: 'Arial Black', Arial, sans-serif; font-size: 0.7rem; letter-spacing: 1.5px; color: #7A6000; text-transform: uppercase; margin-bottom: 0.6rem; padding: 0.25rem 0.7rem; background: rgba(255,255,255,0.65); border-radius: 4px; }
+        .todo-text { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: var(--text); line-height: 1.5; max-width: 600px; }
+        .todo-ref { font-family: 'Arial', sans-serif; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
+
+        /* PERSPECTIVE / BUYER TYPE CARDS */
+        .perspective-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .perspective-card { background: white; border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-top: 4px solid var(--teal); }
+        .perspective-card:nth-child(2) { border-top-color: var(--navy); }
+        .perspective-card:nth-child(3) { border-top-color: var(--gold); }
+        .perspective-icon { font-size: 1.75rem; margin-bottom: 0.5rem; display: block; }
+        .perspective-label { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 0.3rem; }
+        .perspective-card:nth-child(2) .perspective-label { color: var(--navy-mid); }
+        .perspective-card:nth-child(3) .perspective-label { color: #7A6000; }
+        .perspective-title { font-family: 'Arial', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.2; }
+        .perspective-question { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+        .perspective-card .markets { font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
+
+        /* TYPOLOGY CARDS (5 tipos de preguntas) */
+        .typology-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.7rem; margin-top: 1.25rem; }
+        .typology-card { background: var(--bg); border-radius: 10px; padding: 0.9rem 0.8rem; border-top: 3px solid var(--teal); text-align: center; }
+        .typology-card:nth-child(2) { border-top-color: var(--navy); }
+        .typology-card:nth-child(3) { border-top-color: var(--gold); }
+        .typology-card:nth-child(4) { border-top-color: var(--red); }
+        .typology-card:nth-child(5) { border-top-color: var(--green); }
+        .typology-icon { font-size: 1.5rem; margin-bottom: 0.3rem; display: block; }
+        .typology-name { font-family: 'Arial', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--navy); line-height: 1.25; }
+
+        /* TYPOLOGY ZOOM (single tipo zoom · 2-card layout) */
+        .typology-zoom { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1rem; }
+        .tz-side { background: white; border-radius: 14px; padding: 1.5rem 1.6rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+        .tz-side.question { background: var(--bg); border-left: 5px solid var(--teal); }
+        .tz-side.answer   { background: var(--gold-light); border-left: 5px solid var(--gold); }
+        .tz-side .tz-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 0.7rem; }
+        .tz-side.question .tz-label { color: var(--teal-dark); }
+        .tz-side.answer   .tz-label { color: #7A6000; }
+        .tz-quote { font-family: Georgia, serif; font-style: italic; font-size: 1.15rem; line-height: 1.45; color: var(--text); margin-bottom: 0.85rem; }
+        .tz-meaning { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+        .tz-ideas { list-style: none; padding: 0; margin: 0; }
+        .tz-ideas li { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: var(--text); padding: 0.4rem 0 0.4rem 1.4rem; position: relative; line-height: 1.5; }
+        .tz-ideas li::before { content: '✓'; position: absolute; left: 0; top: 0.4rem; color: var(--green); font-weight: 700; }
+        .tz-ideas li strong { color: var(--navy); }
+
+        /* NICHE LIST (B1 ejemplos) */
+        .niche-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; margin-top: 1rem; }
+        .niche-item { background: var(--bg); border-radius: 8px; padding: 0.6rem 0.85rem; border-left: 3px solid var(--teal); }
+        .niche-item.alt { border-left-color: var(--navy); }
+        .niche-item.warn { border-left-color: var(--amber); }
+        .niche-name { font-family: 'Arial', sans-serif; font-weight: 700; color: var(--navy); font-size: 0.82rem; margin-bottom: 0.15rem; }
+        .niche-q { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; }
+
+        /* QUESTION TYPE BLOCK (legacy) */
+        .q-block { background: white; border-radius: 12px; padding: 1.2rem 1.3rem; border-left: 5px solid var(--teal); box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-top: 1rem; }
+        .q-block.navy { border-left-color: var(--navy); }
+        .q-block.gold { border-left-color: var(--gold); }
+        .q-block.red  { border-left-color: var(--red); }
+        .q-block h4 { font-family: 'Arial', sans-serif; font-size: 1rem; color: var(--navy); margin-bottom: 0.4rem; }
+        .q-block .q-quote { font-style: italic; font-size: 0.95rem; color: var(--text); line-height: 1.6; margin-bottom: 0.6rem; }
+        .q-block .q-meaning { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+        /* FORMS DE CERRAR (6 ways, replaces 3 veredictos) */
+        .forms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; margin-top: 1rem; }
+        .forms-card { background: white; border-radius: 12px; padding: 1rem 1.05rem; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-top: 3px solid var(--teal); text-align: center; }
+        .forms-card:nth-child(2) { border-top-color: var(--navy); }
+        .forms-card:nth-child(3) { border-top-color: var(--gold); }
+        .forms-card:nth-child(4) { border-top-color: var(--red); }
+        .forms-card:nth-child(5) { border-top-color: var(--green); }
+        .forms-card:nth-child(6) { border-top-color: #7A4FB8; }
+        .forms-emoji { font-size: 2rem; line-height: 1; margin-bottom: 0.4rem; }
+        .forms-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--teal-dark); margin-bottom: 0.3rem; }
+        .forms-card:nth-child(2) .forms-label { color: var(--navy); }
+        .forms-card:nth-child(3) .forms-label { color: #7A6000; }
+        .forms-card:nth-child(4) .forms-label { color: var(--red); }
+        .forms-card:nth-child(5) .forms-label { color: var(--green); }
+        .forms-card:nth-child(6) .forms-label { color: #7A4FB8; }
+        .forms-quote { font-family: Georgia, serif; font-style: italic; font-size: 0.85rem; color: var(--text); line-height: 1.5; }
+
+        /* RULES STRIP */
+        .rules-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.85rem; margin-top: 1.5rem; }
+        .rule-card { background: var(--teal-light); border-radius: 10px; padding: 1rem 1.1rem; border: 1.5px solid var(--teal); }
+        .rule-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.6rem; color: var(--teal); line-height: 1; margin-bottom: 0.35rem; opacity: 0.55; }
+        .rule-card h4 { font-family: 'Arial', sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+        .rule-card p { font-size: 0.8rem; line-height: 1.55; color: var(--teal-dark); }
+
+        /* STEP STRIP */
+        .step-strip { display: flex; gap: 1rem; margin-top: 1.25rem; flex-wrap: wrap; }
+        .step-card { flex: 1; min-width: 220px; background: var(--bg); border-radius: 10px; padding: 1rem 1.1rem; border-top: 3px solid var(--teal); }
+        .step-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 0.7rem; letter-spacing: 1.5px; color: var(--teal-dark); text-transform: uppercase; margin-bottom: 0.4rem; }
+        .step-title { font-family: 'Arial', sans-serif; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; font-size: 0.95rem; }
+        .step-card p { font-size: 0.85rem; line-height: 1.55; color: var(--text); }
+        .step-card .step-time { font-family: 'Arial', sans-serif; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+        /* ROTATION DIAGRAM */
+        .rotation-diagram { background: var(--bg); border-radius: 12px; padding: 1.5rem; margin: 1.25rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: center; }
+        .rotation-svg { width: 100%; max-width: 280px; height: auto; margin: 0 auto; }
+        .rotation-key { font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.7; }
+        .rotation-key strong { color: var(--navy); display: block; margin-bottom: 0.3rem; }
+        .rotation-key li { padding: 0.2rem 0 0.2rem 1.1rem; position: relative; list-style: none; }
+        .rotation-key li::before { content: '→'; position: absolute; left: 0; color: var(--teal); }
+
+        /* ROTATION TRACKER (per-round counter slides) */
+        .rotation-tracker { text-align: center; color: white; }
+        .rt-mini-label { font-family: 'Arial', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2.5px; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+        .rt-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 5.5rem; color: white; line-height: 0.9; margin-bottom: 0.5rem; }
+        .rt-num .rt-of { font-size: 2.5rem; color: rgba(255,255,255,0.5); margin-left: 0.5rem; }
+        .rt-pips { display: flex; gap: 0.65rem; justify-content: center; margin: 1.5rem 0 1.75rem; }
+        .rt-pip { width: 2.6rem; height: 2.6rem; border-radius: 50%; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.55); display: flex; align-items: center; justify-content: center; font-family: 'Arial Black', sans-serif; font-size: 1rem; }
+        .rt-pip.done { background: rgba(245,196,0,0.4); color: white; }
+        .rt-pip.active { background: var(--gold); color: var(--navy); transform: scale(1.18); box-shadow: 0 4px 14px rgba(245,196,0,0.45); }
+        .rt-cue { font-family: Georgia, serif; font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.78); max-width: 540px; margin: 0 auto; line-height: 1.55; }
+        .rt-meta { display: inline-flex; gap: 1.5rem; margin-top: 1.5rem; padding: 0.6rem 1.25rem; background: rgba(255,255,255,0.08); border-radius: 24px; border: 1px solid rgba(255,255,255,0.18); }
+        .rt-meta span { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.85); }
+        .rt-meta strong { color: var(--gold); }
+
+        /* BEFORE / AFTER ASK */
+        .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .ba-card { border-radius: 12px; padding: 1.1rem 1.2rem; }
+        .ba-card.bad  { background: #FCE8E5; border-left: 5px solid var(--red); }
+        .ba-card.good { background: var(--green-light); border-left: 5px solid var(--green); }
+        .ba-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 0.4rem; }
+        .ba-card.bad  .ba-label { color: var(--red); }
+        .ba-card.good .ba-label { color: var(--green); }
+        .ba-quote { font-size: 1rem; font-style: italic; color: var(--text); line-height: 1.55; }
+
+        /* ASKS GRID (2x2 — 4 types of ask) */
+        .asks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .asks-card { background: var(--bg); border-radius: 12px; padding: 1.1rem 1.2rem; border-left: 4px solid var(--teal); }
+        .asks-card:nth-child(2) { border-left-color: var(--gold); }
+        .asks-card:nth-child(3) { border-left-color: var(--navy); }
+        .asks-card:nth-child(4) { border-left-color: var(--green); }
+        .asks-icon { font-size: 1.5rem; margin-bottom: 0.4rem; display: block; }
+        .asks-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--teal); font-weight: 700; margin-bottom: 0.3rem; }
+        .asks-card:nth-child(2) .asks-label { color: #7A6000; }
+        .asks-card:nth-child(3) .asks-label { color: var(--navy-mid); }
+        .asks-card:nth-child(4) .asks-label { color: var(--green); }
+        .asks-title { font-family: 'Arial', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; line-height: 1.3; }
+        .asks-card p { font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.55; color: var(--text); }
+
+        /* B2B/B2C TIMELINE BAR (single-side per slide) */
+        .timeline-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.45rem; margin: 1.25rem 0 0.75rem; align-items: stretch; }
+        .timeline-seg { background: var(--bg); border-radius: 8px; padding: 0.8rem 0.7rem; border-top: 3px solid var(--teal); text-align: center; min-height: 5.5rem; display: flex; flex-direction: column; justify-content: center; }
+        .timeline-seg.start { background: var(--gold-light); border-top-color: var(--gold); }
+        .timeline-seg.end   { background: var(--green-light); border-top-color: var(--green); }
+        .timeline-seg .seg-when { font-family: 'Arial Black', Arial, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--teal-dark); margin-bottom: 0.3rem; }
+        .timeline-seg.start .seg-when { color: #7A6000; }
+        .timeline-seg.end .seg-when { color: var(--green); }
+        .timeline-seg .seg-text { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text); line-height: 1.4; }
+        .cycle-stat { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--navy); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.8rem; margin: 0.5rem 0 1rem; }
+        .cycle-stat strong { color: var(--gold); }
+
+        /* COMPARE TABLE (legacy) */
+        .compare-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-family: 'Arial', sans-serif; font-size: 0.85rem; }
+        .compare-table th { text-align: left; padding: 0.7rem 1rem; background: var(--navy); color: white; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .compare-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table tr:nth-child(even) td { background: var(--bg); }
+        .compare-table .label-cell { font-weight: 700; color: var(--navy); width: 28%; }
+
+        /* SHEET EMBED PREVIEW */
+        .sheet-embed { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 1.25rem 1.4rem; margin-top: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .sheet-embed-head { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.75rem; }
+        .sheet-embed-head .sheet-icon { font-size: 1.75rem; }
+        .sheet-embed-head .sheet-title { font-family: 'Arial', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); }
+        .sheet-embed-head .sheet-source { font-family: 'Arial', sans-serif; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }
+        .sheet-cols { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.25rem; margin: 0.85rem 0; }
+        .sheet-col { background: var(--bg); border-radius: 4px; padding: 0.4rem 0.35rem; font-family: 'Arial', sans-serif; font-size: 0.65rem; text-align: center; color: var(--text); border-top: 2px solid var(--teal); }
+        .sheet-col.k { border-top-color: var(--gold); }
+        .sheet-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--teal-light); color: var(--teal-dark); border-radius: 6px; font-family: 'Arial', sans-serif; font-size: 0.78rem; text-decoration: none; border: 1px solid var(--teal); word-break: break-all; }
+
+        /* EMAIL STRUCTURE STEPS — legacy */
+        .email-steps { counter-reset: estep; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+        .email-step { background: var(--bg); border-radius: 8px; padding: 0.8rem 1rem; padding-left: 3rem; position: relative; }
+        .email-step::before { counter-increment: estep; content: counter(estep); position: absolute; left: 0.7rem; top: 0.65rem; font-family: 'Arial Black', Arial, sans-serif; background: var(--gold); color: var(--navy); width: 1.6rem; height: 1.6rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+        .email-step h5 { font-family: 'Arial', sans-serif; font-weight: 700; color: var(--navy); font-size: 0.92rem; margin-bottom: 0.15rem; }
+        .email-step p { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+        /* EMAIL IDEAS GRID (4 cards instead of ordered steps) */
+        .email-ideas { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 1rem; }
+        .email-idea { background: var(--bg); border-radius: 10px; padding: 0.95rem 1.05rem; border-top: 3px solid var(--teal); }
+        .email-idea:nth-child(2) { border-top-color: var(--navy); }
+        .email-idea:nth-child(3) { border-top-color: var(--gold); }
+        .email-idea:nth-child(4) { border-top-color: var(--green); }
+        .email-idea h5 { font-family: 'Arial', sans-serif; font-weight: 700; color: var(--navy); font-size: 0.92rem; margin-bottom: 0.3rem; }
+        .email-idea p { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text); line-height: 1.55; }
+
+        /* MISTAKE LIST */
+        .mistake-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.65rem; }
+        .mistake-item { display: flex; gap: 0.75rem; background: #FCE8E5; border-left: 4px solid var(--red); padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; }
+        .mistake-icon { color: var(--red); font-family: 'Arial Black', Arial, sans-serif; font-size: 0.95rem; flex-shrink: 0; }
+        .mistake-item p { font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.55; color: var(--text); }
+        .win-item { display: flex; gap: 0.75rem; background: var(--green-light); border-left: 4px solid var(--green); padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; }
+        .win-item .win-icon { color: var(--green); font-family: 'Arial Black', Arial, sans-serif; font-size: 0.95rem; flex-shrink: 0; }
+        .win-item p { font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.55; color: var(--text); }
+
+        /* AI WARNING */
+        .ai-warning { background: linear-gradient(135deg, #FFF7E0 0%, #FFE5C2 100%); border-radius: 14px; padding: 1.5rem 1.7rem; border: 1.5px solid var(--amber); margin-top: 1rem; }
+        .ai-warning-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem; }
+        .ai-warning-head .ai-icon { font-size: 2rem; }
+        .ai-warning-head h4 { font-family: 'Arial', sans-serif; font-size: 1.1rem; color: var(--navy); }
+        .ai-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 0.85rem; }
+        .ai-pros, .ai-cons { background: white; border-radius: 8px; padding: 0.8rem 1rem; }
+        .ai-pros h5, .ai-cons h5 { font-family: 'Arial', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.45rem; }
+        .ai-pros h5 { color: var(--teal-dark); }
+        .ai-cons h5 { color: var(--red); }
+        .ai-pros ul, .ai-cons ul { list-style: none; padding: 0; margin: 0; }
+        .ai-pros li, .ai-cons li { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text); padding: 0.2rem 0 0.2rem 1.1rem; position: relative; line-height: 1.5; }
+        .ai-pros li::before { content: '+'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+        .ai-cons li::before { content: '!'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+        /* RECAP ARC (Day 1 → Day 2 morning → Day 2 afternoon) */
+        .recap-arc { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.85rem; margin-top: 1.25rem; align-items: stretch; }
+        .recap-card { background: var(--bg); border-radius: 12px; padding: 1.15rem 1.2rem; border-top: 4px solid var(--teal); }
+        .recap-card:nth-child(2) { border-top-color: var(--navy); }
+        .recap-card.active { border-top-color: var(--gold); background: var(--gold-light); }
+        .recap-when { font-family: 'Arial', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); font-weight: 700; margin-bottom: 0.4rem; }
+        .recap-card.active .recap-when { color: #7A6000; }
+        .recap-card h4 { font-family: 'Arial', sans-serif; font-size: 1rem; color: var(--navy); margin-bottom: 0.4rem; }
+        .recap-card p { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text); line-height: 1.55; }
+
+        /* TAKEAWAY HITS (resumen 2 días) */
+        .hits-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 1.25rem; }
+        .hit-card { background: var(--bg); border-radius: 10px; padding: 1rem 1.15rem; border-left: 4px solid var(--gold); }
+        .hit-card h4 { font-family: 'Arial', sans-serif; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; font-size: 0.92rem; }
+        .hit-card p { font-size: 0.85rem; line-height: 1.55; color: var(--text); }
+        .hit-card .hit-day { font-family: 'Arial', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--teal-dark); font-weight: 700; margin-bottom: 0.3rem; }
+
+        /* CLOSING */
+        .closing-slide { background: var(--navy); text-align: center; }
+        .closing-slide .anchor-echo { font-family: 'Georgia', serif; font-style: italic; font-size: 1.15rem; color: rgba(255,255,255,0.75); margin: 1.75rem auto; max-width: 640px; line-height: 1.5; }
+        .next-box { background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.18); padding: 1rem 1.75rem; border-radius: 10px; margin: 1rem auto; max-width: 520px; }
+        .next-box .nxt-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); font-family: 'Arial', sans-serif; margin-bottom: 0.3rem; }
+        .next-box .nxt-title { font-size: 0.95rem; font-family: 'Arial', sans-serif; color: white; }
+        .next-box .nxt-time { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-family: 'Arial', sans-serif; margin-top: 0.15rem; }
+        .closing-row { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; max-width: 920px; margin: 1.5rem auto 0; }
+        .closing-row .col-left { display: flex; flex-direction: column; gap: 0.75rem; }
+        .closing-row .next-box { margin: 0; max-width: none; }
+        .closing-row .convocatoria-poster { max-height: 360px; width: auto; border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.35); display: block; }
+        .closing-row .poster-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); font-family: 'Arial', sans-serif; margin-bottom: 0.5rem; text-align: left; }
+        @media (max-width: 900px) {
+            .closing-row { grid-template-columns: 1fr; }
+            .closing-row .convocatoria-poster { max-height: 280px; margin: 0 auto; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .perspective-grid, .three-col, .rules-strip, .market-grid, .forms-grid, .recap-arc { grid-template-columns: 1fr; }
+            .typology-grid { grid-template-columns: 1fr 1fr; }
+            .two-col, .ba-grid, .package-grid, .hits-strip, .timeline-strip, .rotation-diagram, .typology-zoom, .asks-grid, .niche-list, .email-ideas, .ai-pros-cons { grid-template-columns: 1fr; }
+            .timeline-bar { grid-template-columns: 1fr 1fr; }
+            .sheet-cols { grid-template-columns: repeat(3, 1fr); }
+            .anchor-banner { display: none; }
+            .topbar-inner { grid-template-columns: auto 1fr auto; gap: 0.75rem; }
+            .slide-title { font-size: 1.85rem; }
+            .hero-slide .slide-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+    <div class="topbar-inner">
+        <div class="trecc-logo">
+            <div class="wordmark"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="tagline">Turismo Responsable, Comunitario y Cultural</div>
+        </div>
+        <div class="topbar-center">
+            <span id="slideSection" class="slide-section-label">Día 2 · Construyendo Tu Sistema</span>
+            <span class="anchor-banner">¿Puede un comprador europeo entender, confiar, y revender lo que tú haces responsablemente?</span>
+        </div>
+        <span class="slide-counter" id="slideCounter">1 / 65</span>
+    </div>
+</nav>
+
+<!-- NAV BUTTONS -->
+<div class="nav-buttons">
+    <button class="nav-btn prev" id="prevBtn" onclick="navigate(-1)" disabled>← Anterior</button>
+    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">Siguiente →</button>
+</div>
+
+
+<!-- ================================================================
+     BLOQUE 0 · APERTURA DÍA 2 (slides 1–4)
+     ================================================================ -->
+
+<!-- S0: PORTADA -->
+<section class="bg-white" id="s0" data-section="0">
+    <div class="slide-content hero-slide">
+        <div class="slide-label">Módulo 2 · Presencial · Medellín</div>
+        <h1 class="slide-title">Construyendo<br>Tu <strong>Sistema</strong></h1>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Día 2 · Martes 26 de mayo de 2026</p>
+        <p class="hero-anchor">"¿Puede un comprador europeo entender, confiar, y revender lo que tú haces responsablemente?"</p>
+        <div class="hero-meta">
+            <div class="meta-chip">📍 Medellín</div>
+            <div class="meta-chip">🕘 9:00–16:30</div>
+            <div class="meta-chip">👥 ~20 operadores · 11 nichos</div>
+            <div class="meta-chip">👤 Alex Jeffries, Formador</div>
+        </div>
+        <div class="hero-partner-logos">
+            <div class="partner-text">
+                <strong>TRECC · Institut Français Colombia · ProColombia</strong>
+                Lo Responsable Vende — Módulo 2
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S1: PROGRAM ARC (Día 1 style — 4 modules) -->
+<section class="bg-white" id="s1" data-section="1">
+    <div class="slide-content">
+        <div class="slide-label">EL RECORRIDO · ABRIL–JUNIO 2026</div>
+        <h2 class="slide-title">Dónde estamos hoy</h2>
+        <div class="accent-bar"></div>
+        <div class="program-arc">
+            <div class="program-module">
+                <div class="module-badge">💻 Online · abril</div>
+                <div class="module-name">Módulo 1</div>
+                <div class="module-focus">Nicho y presencia digital</div>
+                <ul class="module-sessions">
+                    <li class="done">Tu nicho responsable</li>
+                    <li class="done">Tu presencia digital</li>
+                    <li class="done">Primeros claims RTA</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module">
+                <div class="module-badge">📍 Ayer · 25 mayo</div>
+                <div class="module-name">Día 1 · M2</div>
+                <div class="module-focus">Vendiendo lo responsable</div>
+                <ul class="module-sessions">
+                    <li class="done">Indicadores · rondas de feedback</li>
+                    <li class="done">Tres situaciones, tres pitches</li>
+                    <li class="done">Roleplay Ronda 1</li>
+                    <li class="done">Artefacto para el 27</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module active">
+                <div class="module-badge">📍 Hoy · 26 mayo</div>
+                <div class="module-name">Día 2 · M2</div>
+                <div class="module-focus">Construyendo el sistema</div>
+                <ul class="module-sessions">
+                    <li class="today">Preguntas detalladas</li>
+                    <li class="today">Cerrar la conversación</li>
+                    <li class="today">Sistema de seguimiento</li>
+                    <li class="today">Speed-feria</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module">
+                <div class="module-badge">🎪 27 mayo + junio</div>
+                <div class="module-name">Buyer + M3</div>
+                <div class="module-focus">A prueba y ajuste</div>
+                <ul class="module-sessions">
+                    <li>Evento con compradores</li>
+                    <li>Seguimiento online</li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:1.25rem; line-height:1.6;">Ayer armamos la <strong>historia</strong>. Hoy armamos el <strong>sistema</strong> que la sostiene frente a un comprador europeo — y la captura cuando termina la conversación.</p>
+    </div>
+</section>
+
+
+<!-- S2: REFLEXIONES DEL DÍA 1 (interactive) -->
+<section class="interactive-slide" id="s2" data-section="2">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Apertura · Ronda corta</div>
+        <span class="chat-icon">🌅</span>
+        <p class="interactive-question">¿Algo que procesaron anoche?<br>¿Algún ajuste al pitch?</p>
+        <p class="interactive-instruction">Vuelta breve por la sala. Una o dos frases por persona — sin elaboración larga.</p>
+    </div>
+</section>
+
+
+<!-- S3: OBJETIVO DEL DÍA -->
+<section class="bg-navy" id="s3" data-section="3">
+    <div class="slide-content" style="text-align:center;">
+        <div class="slide-label" style="color:var(--gold);">Objetivo del Día 2</div>
+        <h2 class="slide-title" style="max-width:820px; margin:0 auto;">De pitch a<br><strong style="color:var(--gold);">conversación completa</strong></h2>
+        <div class="accent-bar" style="margin: 1.5rem auto; background: var(--gold);"></div>
+        <p style="font-family:'Arial',sans-serif; font-size:1.05rem; color:rgba(255,255,255,0.85); max-width:720px; margin: 0 auto; line-height:1.65;">Responder con confianza las preguntas detalladas · saber <strong style="color:white;">cerrar bien</strong> · no perder ningún contacto.<br><br>Sales con un sistema mínimo que vas a usar mañana.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 1 · PREGUNTAS DETALLADAS (slides 5–12 · 9:15–9:45 · 30 min)
+     ================================================================ -->
+
+<!-- S4: BLOCK-INTRO B1 -->
+<section class="block-intro" id="s4" data-section="4">
+    <div class="photo-todo">📷 TODO · Foto · Comprador europeo en conversación</div>
+    <div class="slide-content">
+        <div class="bi-num">B1</div>
+        <div class="bi-kicker">9:15–9:45 · Bloque 1 · 30 min</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Preguntas detalladas</h2>
+        <p class="bi-sub">Por qué los compradores europeos preguntan lo que preguntan — y cómo tener una respuesta lista para cada categoría.</p>
+    </div>
+</section>
+
+
+<!-- S5: ENCUADRE (merged: por qué importa + frase ancla + 5 tipos overview) -->
+<section class="bg-white" id="s5" data-section="5">
+    <div class="slide-content">
+        <div class="slide-label">Encuadre · 5 min</div>
+        <h2 class="slide-title">No es hostilidad — es <strong>debida diligencia</strong></h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">El comprador profesional necesita poder revender tu producto a su cliente final con confianza. La pregunta específica es su trabajo, no un ataque. Saberla venir <strong>quita el miedo</strong>; saber la respuesta <strong>construye confianza</strong>.</p>
+        <div class="typology-grid">
+            <div class="typology-card">
+                <span class="typology-icon">📜</span>
+                <div class="typology-name">Certificación<br>y prueba</div>
+            </div>
+            <div class="typology-card">
+                <span class="typology-icon">📊</span>
+                <div class="typology-name">Impacto</div>
+            </div>
+            <div class="typology-card">
+                <span class="typology-icon">⚙️</span>
+                <div class="typology-name">Operativa</div>
+            </div>
+            <div class="typology-card">
+                <span class="typology-icon">🎭</span>
+                <div class="typology-name">Autenticidad</div>
+            </div>
+            <div class="typology-card">
+                <span class="typology-icon">⭐</span>
+                <div class="typology-name">Diferenciación</div>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:1.25rem; text-align:center;">Casi toda pregunta detallada cae en una de estas cinco categorías. Vamos una por una — con ideas para responder.</p>
+    </div>
+</section>
+
+
+<!-- S6: TIPO 1 · CERTIFICACIÓN -->
+<section class="bg-light" id="s6" data-section="6">
+    <div class="slide-content">
+        <div class="slide-label">Tipo 1 de 5</div>
+        <h2 class="slide-title">📜 Certificación y prueba</h2>
+        <div class="accent-bar"></div>
+        <div class="typology-zoom">
+            <div class="tz-side question">
+                <div class="tz-label">Lo que te preguntan</div>
+                <p class="tz-quote">"¿Qué certificaciones tienen? ¿Pueden mostrarme datos?"</p>
+                <p class="tz-meaning"><strong>Qué busca el comprador:</strong> un atajo verificable. No tiene tiempo de evaluarte en profundidad — necesita una señal externa que su equipo de compliance acepte como válida.</p>
+            </div>
+            <div class="tz-side answer">
+                <div class="tz-label">Ideas para responder</div>
+                <ul class="tz-ideas">
+                    <li>Si <strong>tienes</strong> certificación: nómbrala + el año + dónde la pueden verificar online.</li>
+                    <li>Si <strong>no tienes</strong>: nombra los procesos y mediciones internas que sí haces.</li>
+                    <li>Decí <strong>qué certificación estás considerando</strong> y por qué — la ausencia se vuelve trayectoria.</li>
+                    <li>Ofrecé pruebas alternativas: testimonios documentados, métricas internas, reportes anuales.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S7: TIPO 2 · IMPACTO -->
+<section class="bg-white" id="s7" data-section="7">
+    <div class="slide-content">
+        <div class="slide-label">Tipo 2 de 5</div>
+        <h2 class="slide-title">📊 Impacto</h2>
+        <div class="accent-bar"></div>
+        <div class="typology-zoom">
+            <div class="tz-side question">
+                <div class="tz-label">Lo que te preguntan</div>
+                <p class="tz-quote">"¿Cómo miden el beneficio en la comunidad? ¿Qué porcentaje queda en el territorio?"</p>
+                <p class="tz-meaning"><strong>Qué busca el comprador:</strong> un número, un mecanismo o una historia concreta. No quiere principios — quiere prueba de que el impacto es real y medible.</p>
+            </div>
+            <div class="tz-side answer">
+                <div class="tz-label">Ideas para responder</div>
+                <ul class="tz-ideas">
+                    <li>Un <strong>número específico</strong> aunque sea aproximado: "X% queda en la comunidad porque…"</li>
+                    <li>Una <strong>persona con nombre</strong> que recibió el beneficio (no "varias familias").</li>
+                    <li>Una <strong>cifra anual</strong> de cuántas personas, cuántas familias, cuántos hogares.</li>
+                    <li>Si no mides todavía: di qué <strong>vas a medir este año</strong> y por qué empiezas por eso.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S8: TIPO 3 · OPERATIVA -->
+<section class="bg-light" id="s8" data-section="8">
+    <div class="slide-content">
+        <div class="slide-label">Tipo 3 de 5</div>
+        <h2 class="slide-title">⚙️ Operativa</h2>
+        <div class="accent-bar"></div>
+        <div class="typology-zoom">
+            <div class="tz-side question">
+                <div class="tz-label">Lo que te preguntan</div>
+                <p class="tz-quote">"¿Cuántos grupos europeos han llevado? ¿Qué pasa si el guía se enferma?"</p>
+                <p class="tz-meaning"><strong>Qué busca el comprador:</strong> robustez. ¿Sos un proveedor confiable o un proyecto bonito que se cae con cualquier imprevisto? Va a poner su reputación detrás de la tuya.</p>
+            </div>
+            <div class="tz-side answer">
+                <div class="tz-label">Ideas para responder</div>
+                <ul class="tz-ideas">
+                    <li>Un <strong>plan B concreto</strong>: quién es tu backup de guía y cómo se activa.</li>
+                    <li>Tus <strong>seguros, permisos y autorizaciones</strong> nombrados explícitamente.</li>
+                    <li>Capacidad real por temporada: <strong>cuántos grupos puedes manejar bien</strong>, no el máximo teórico.</li>
+                    <li>Si nunca operaste un grupo europeo: di qué <strong>grupos comparables</strong> sí operaste.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S9: TIPO 4 · AUTENTICIDAD -->
+<section class="bg-white" id="s9" data-section="9">
+    <div class="slide-content">
+        <div class="slide-label">Tipo 4 de 5</div>
+        <h2 class="slide-title">🎭 Autenticidad</h2>
+        <div class="accent-bar"></div>
+        <div class="typology-zoom">
+            <div class="tz-side question">
+                <div class="tz-label">Lo que te preguntan</div>
+                <p class="tz-quote">"¿Cómo sé que esto no es un show para turistas?"</p>
+                <p class="tz-meaning"><strong>Qué busca el comprador:</strong> protegerse de quedar como cómplice de algo extractivo. Tiene clientes que leen reseñas y publican en redes — la falsedad le explota en la cara, no en la tuya.</p>
+            </div>
+            <div class="tz-side answer">
+                <div class="tz-label">Ideas para responder</div>
+                <ul class="tz-ideas">
+                    <li>Quién <strong>diseña</strong> la actividad — la comunidad o tú.</li>
+                    <li>Cuánto del precio <strong>se queda en la mano</strong> de quien recibe al viajero.</li>
+                    <li>Una historia <strong>con nombres</strong> de una persona local que cambió su situación.</li>
+                    <li>Invitalo a <strong>verlo en persona</strong> antes del lanzamiento (FAM trip / visita corta).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S10: TIPO 5 · DIFERENCIACIÓN -->
+<section class="bg-light" id="s10" data-section="10">
+    <div class="slide-content">
+        <div class="slide-label">Tipo 5 de 5</div>
+        <h2 class="slide-title">⭐ Diferenciación</h2>
+        <div class="accent-bar"></div>
+        <div class="typology-zoom">
+            <div class="tz-side question">
+                <div class="tz-label">Lo que te preguntan</div>
+                <p class="tz-quote">"¿Qué hace única su oferta versus otros operadores colombianos?"</p>
+                <p class="tz-meaning"><strong>Qué busca el comprador:</strong> razón para elegirte a ti y no a los otros tres operadores responsables que ya conoció esta semana. "Hacemos turismo responsable" no es respuesta — es punto de partida.</p>
+            </div>
+            <div class="tz-side answer">
+                <div class="tz-label">Ideas para responder</div>
+                <ul class="tz-ideas">
+                    <li>Una <strong>actividad específica</strong> que solo tú puedes ofrecer y por qué.</li>
+                    <li>Una <strong>relación de años</strong> con una comunidad o un territorio (con fecha de inicio).</li>
+                    <li>Un <strong>ángulo cultural o ambiental</strong> que tu competencia no tiene.</li>
+                    <li>Un <strong>perfil de viajero</strong> que sabes atender mejor que nadie y por qué.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S11: EJEMPLOS POR NICHO -->
+<section class="bg-alt" id="s11" data-section="11">
+    <div class="slide-content">
+        <div class="slide-label">Ejemplos por nicho · 10 min</div>
+        <h2 class="slide-title">Cómo se ven en tu nicho</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Una pregunta detallada de muestra por nicho — para que reconozcas el tono. El listado completo viene en el paquete impreso.</p>
+        <div class="niche-list">
+            <div class="niche-item">
+                <div class="niche-name">🦜 Birdwatching</div>
+                <p class="niche-q">"¿Tienen permisos de ingreso a zonas protegidas? ¿Cuál es su impacto en las especies?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🏘️ Turismo comunitario (CBT)</div>
+                <p class="niche-q">"¿Qué porcentaje del precio recibe directamente la comunidad?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🏛️ Cultural y patrimonio</div>
+                <p class="niche-q">"¿Quién decide qué se le muestra al viajero y qué no?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🌿 Ecoturismo</div>
+                <p class="niche-q">"¿Cómo calculan y compensan la huella de carbono del tour?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🍲 Turismo gastronómico</div>
+                <p class="niche-q">"¿De dónde compran los ingredientes? ¿Cuántos productores locales se benefician?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🏞️ Naturaleza / aventura</div>
+                <p class="niche-q">"¿Qué pasa si hay una emergencia médica en zona remota?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🏖️ Sol y playa responsable</div>
+                <p class="niche-q">"¿Cómo manejan residuos en zonas costeras frágiles?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🌆 Turismo urbano</div>
+                <p class="niche-q">"¿Cómo evitan saturar los barrios y desplazar a sus residentes?"</p>
+            </div>
+            <div class="niche-item">
+                <div class="niche-name">🧘 Wellness</div>
+                <p class="niche-q">"¿Las prácticas que ofrecen son de fuente local o adaptadas de otras culturas?"</p>
+            </div>
+            <div class="niche-item warn">
+                <div class="niche-name">🌾 Agroturismo <span style="font-size:0.7rem; color:var(--amber); font-style:italic;">[pendiente CBI]</span></div>
+                <p class="niche-q">"¿La finca opera con monocultivo o sistemas regenerativos?"</p>
+            </div>
+            <div class="niche-item warn">
+                <div class="niche-name">🥾 Aventura <span style="font-size:0.7rem; color:var(--amber); font-style:italic;">[pendiente CBI]</span></div>
+                <p class="niche-q">"¿Qué entrenamiento técnico tienen los guías? ¿Certificaciones?"</p>
+            </div>
+            <div class="niche-item alt" style="grid-column: 2 / 3;">
+                <div class="niche-name" style="color: var(--navy-mid);">📚 Banco completo</div>
+                <p class="niche-q">Las preguntas detalladas por nicho viven en el paquete impreso · una página por nicho.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 2 · ROLEPLAY R2 (slides 13–24 · 9:45–11:35 · 110 min)
+     ================================================================ -->
+
+<!-- S12: BLOCK-INTRO B2 -->
+<section class="block-intro" id="s12" data-section="12">
+    <div class="photo-todo">📷 TODO · Foto · Grupos pequeños trabajando · ambiente de mesa</div>
+    <div class="slide-content">
+        <div class="bi-num">B2</div>
+        <div class="bi-kicker">9:45–11:35 · Bloque 2 · 110 min</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Roleplay Ronda 2<br>Preguntas detalladas</h2>
+        <p class="bi-sub">5 rotaciones · grupos de 5 · uno hace de comprador internacional, los otros cuatro defienden su propuesta en profundidad.</p>
+    </div>
+</section>
+
+
+<!-- S13: GRUPOS DE 5 (replaces "Mesas mixtas") -->
+<section class="bg-white" id="s13" data-section="13">
+    <div class="slide-content">
+        <div class="slide-label">Cómo trabajamos hoy</div>
+        <h2 class="slide-title">Grupos de <strong>5</strong></h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Ayer practicamos la <strong>claridad del pitch</strong> en general. Hoy vamos más a fondo: defender las ideas con detalle. Cada grupo se queda junto durante todo el bloque — la rotación es del rol, no de la mesa.</p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Composición del grupo</h4>
+                <ul>
+                    <li><strong>1 persona</strong> hace de comprador internacional (lee una tarjeta de operador real europeo)</li>
+                    <li><strong>4 personas</strong> presentan su propuesta y defienden las preguntas que vienen de la tarjeta</li>
+                    <li>Los 5 ven cómo otros responden — eso es parte del aprendizaje</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Qué rota</h4>
+                <ul>
+                    <li>La <strong>tarjeta de comprador</strong> cambia cada rotación</li>
+                    <li>El <strong>rol de comprador</strong> rota entre los 5 — al final cada uno la jugó una vez</li>
+                    <li>Cada participante <strong>pitcha 4 veces</strong> + hace de comprador 1 vez</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S14: MATERIALES — TARJETA DEL INT'L OPERATOR -->
+<section class="bg-light" id="s14" data-section="14">
+    <div class="slide-content">
+        <div class="slide-label">Material en mesa</div>
+        <h2 class="slide-title">La tarjeta de comprador</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Cada rotación introduce <strong>una empresa europea real</strong> al grupo. La tarjeta tiene en una página todo lo que necesitas para jugar el rol: qué vende, qué le importa, qué te va a preguntar.</p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Las tarjetas de hoy AM</h4>
+                <ul>
+                    <li><strong>D · Slow Trotteurs</strong> · cooperativa francesa · transparencia radical</li>
+                    <li><strong>E · Terres des Andes</strong> · coopérative SCOP · ATES · Palmes Tourisme Durable</li>
+                    <li><strong>F · Better Places</strong> · plataforma holandesa · expertos locales</li>
+                    <li><strong>G · Wild Frontiers</strong> · operador UK · viajes culturales con propósito</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Qué contiene cada tarjeta</h4>
+                <ul>
+                    <li>Frente: archetipo · qué valora · qué busca desarrollar en Colombia</li>
+                    <li>Dorso: <strong>5 preguntas que te va a hacer</strong> · qué le convencería</li>
+                    <li>Verbatim del sitio real — no inventado</li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:1rem;">El foco de hoy: <strong>defender en profundidad lo que ayer aprendiste a pitchear</strong>. Tomá notas de lo que funciona.</p>
+    </div>
+</section>
+
+
+<!-- S15: CUANDO TE TOQUE SER COMPRADOR INTERNACIONAL -->
+<section class="bg-white" id="s15" data-section="15">
+    <div class="slide-content">
+        <div class="slide-label">Tu rol como comprador internacional</div>
+        <h2 class="slide-title">Juega el personaje · no a ti mismo</h2>
+        <div class="accent-bar"></div>
+        <div class="step-strip">
+            <div class="step-card">
+                <div class="step-num">Paso 1</div>
+                <div class="step-title">Leé tu tarjeta</div>
+                <p>Tómate 2 minutos antes de que empiecen los pitches. Sabe quién eres, qué te importa, qué vendes.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">Paso 2</div>
+                <div class="step-title">Hacé las 5 preguntas del dorso</div>
+                <p>Repartilas entre los 4 pitchers. Pedí especificidad — cifras, nombres, ejemplos. Si te dan una respuesta vaga, repreguntá.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">Paso 3</div>
+                <div class="step-title">Anotá lo que te convenció</div>
+                <p>Una palabra al lado del nombre de cada pitcher: ¿qué funcionó? ¿qué fue vago? Eso alimenta la discusión grupal al final.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S16: CUANDO TE TOQUE PITCHEAR -->
+<section class="bg-light" id="s16" data-section="16">
+    <div class="slide-content">
+        <div class="slide-label">Tu rol como pitcher</div>
+        <h2 class="slide-title">Cuando te toque defender tu propuesta</h2>
+        <div class="accent-bar"></div>
+        <div class="callout callout-gold">
+            <p style="font-size:1.05rem;"><strong>No inventes datos.</strong> Si no tienes respuesta, dilo honestamente y di qué harás para tenerla la próxima vez. <strong>Esa también es una respuesta válida</strong> — y muchas veces la mejor.</p>
+        </div>
+        <div class="two-col" style="margin-top:1rem;">
+            <div class="detail-block">
+                <h4>Durante tus ~4 minutos</h4>
+                <ul>
+                    <li>Empezá con tu pitch corto (el que armaste ayer)</li>
+                    <li>El comprador te lanza 2–3 preguntas de su tarjeta</li>
+                    <li>Defiende en profundidad — usa una de las 5 categorías como guía</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Después de pitchear</h4>
+                <ul>
+                    <li>Escuchá a los otros 3 — esa es la mitad del aprendizaje</li>
+                    <li>Anotá frases que funcionaron en el grupo</li>
+                    <li>Anota lo que tú vas a usar diferente la próxima ronda</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S17: MECÁNICA — 5 ROTACIONES × ~22 MIN -->
+<section class="bg-white" id="s17" data-section="17">
+    <div class="slide-content">
+        <div class="slide-label">Mecánica · 110 min totales</div>
+        <h2 class="slide-title">Cinco rotaciones · todos pitchean 4 veces</h2>
+        <div class="accent-bar"></div>
+        <div class="step-strip">
+            <div class="step-card">
+                <div class="step-num">~16 min</div>
+                <div class="step-title">Pitching</div>
+                <p>4 pitchers × ~4 min cada uno · el comprador hace 2–3 preguntas a cada uno · el grupo escucha y toma notas.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">~5 min</div>
+                <div class="step-title">Discusión grupal</div>
+                <p>El comprador comparte qué le convenció · los pitchers comparten qué les costó · alguien anota patrones.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">~1 min</div>
+                <div class="step-title">Transición</div>
+                <p>Nueva tarjeta · nuevo comprador (la siguiente persona del grupo) · todos los demás vuelven a pitchear.</p>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;">
+            <p>Al cabo de 5 rotaciones: <strong>cada persona pitcheó 4 veces y jugó comprador 1 vez</strong>. Eso es lo que va a pasar el 27 — pero con compradores reales y sin la red del grupo.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S18: ROTACIÓN 1 DE 5 -->
+<section class="block-intro" id="s18" data-section="18">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Roleplay Ronda 2 · empieza ahora</div>
+        <div class="rt-num">1<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip active">1</div>
+            <div class="rt-pip">2</div>
+            <div class="rt-pip">3</div>
+            <div class="rt-pip">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Primer comprador en cada grupo — el más extrovertido del grupo, por ejemplo. Los otros 4 pitchean ~4 min cada uno.</p>
+        <div class="rt-meta"><span>⏱ <strong>~22 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S19: ROTACIÓN 2 DE 5 -->
+<section class="block-intro" id="s19" data-section="19">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Roleplay Ronda 2 · siguiente</div>
+        <div class="rt-num">2<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip active">2</div>
+            <div class="rt-pip">3</div>
+            <div class="rt-pip">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Nueva tarjeta de comprador · siguiente persona del grupo juega el rol. Los 4 pitchers ajustan lo que aprendieron en la Rotación 1.</p>
+        <div class="rt-meta"><span>⏱ <strong>~22 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S20: ROTACIÓN 3 DE 5 -->
+<section class="block-intro" id="s20" data-section="20">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Roleplay Ronda 2 · vamos por la mitad</div>
+        <div class="rt-num">3<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip done">2</div>
+            <div class="rt-pip active">3</div>
+            <div class="rt-pip">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Estás a la mitad. Llegado a este punto, ya viste 2 estilos distintos de comprador — la 3ra tarjeta cambia el ángulo otra vez.</p>
+        <div class="rt-meta"><span>⏱ <strong>~22 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S21: ROTACIÓN 4 DE 5 -->
+<section class="block-intro" id="s21" data-section="21">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Roleplay Ronda 2 · penúltima</div>
+        <div class="rt-num">4<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip done">2</div>
+            <div class="rt-pip done">3</div>
+            <div class="rt-pip active">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Quedan dos. Si todavía no te tocó hacer comprador, ya casi. Si ya te tocó, este es el momento de ajustar lo que aprendiste viendo a otros.</p>
+        <div class="rt-meta"><span>⏱ <strong>~22 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S22: ROTACIÓN 5 DE 5 -->
+<section class="block-intro" id="s22" data-section="22">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Roleplay Ronda 2 · última</div>
+        <div class="rt-num">5<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip done">2</div>
+            <div class="rt-pip done">3</div>
+            <div class="rt-pip done">4</div>
+            <div class="rt-pip active">5</div>
+        </div>
+        <p class="rt-cue">Última rotación. Al cerrarla, todos jugaron comprador una vez y pitchearon cuatro veces. Plenaria corta sigue.</p>
+        <div class="rt-meta"><span>⏱ <strong>~22 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S23: PLENARIA R2 -->
+<section class="interactive-slide" id="s23" data-section="23">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Plenaria post-Ronda 2 · 8 min</div>
+        <span class="chat-icon">💬</span>
+        <p class="interactive-question">¿Qué respuestas funcionaron sin tener "el dato"?<br><br>¿Qué pregunta los puso en aprieto?<br><br>¿Qué necesitan documentar antes de mañana?</p>
+        <p class="interactive-instruction">No buscamos respuestas perfectas — buscamos patrones que se llevan al 27.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     PAUSA (slide 25 · 11:35–11:50)
+     ================================================================ -->
+
+<!-- S24: PAUSA -->
+<section class="bg-light" id="s24" data-section="24">
+    <div class="slide-content timer-slide">
+        <div class="timer-emoji">☕</div>
+        <div class="timer-display-big">15 min</div>
+        <p class="timer-note">Pausa · regreso 11:50</p>
+        <p class="timer-next">Después de la pausa: cómo cerrar la conversación</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 3 · CERRAR LA CONVERSACIÓN (slides 26–33 · 11:50–12:30 · 40 min)
+     ================================================================ -->
+
+<!-- S25: BLOCK-INTRO B3 -->
+<section class="block-intro" id="s25" data-section="25">
+    <div class="photo-todo">📷 TODO · Foto · Intercambio de tarjeta / mano dándose</div>
+    <div class="slide-content">
+        <div class="bi-num">B3</div>
+        <div class="bi-kicker">11:50–12:30 · Bloque 3 · 40 min</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Cerrar la conversación</h2>
+        <p class="bi-sub">El ask específico · el intercambio concreto · cómo desconectar sin quemar el contacto.</p>
+    </div>
+</section>
+
+
+<!-- S26: EL PROBLEMA DEL CIERRE -->
+<section class="bg-white" id="s26" data-section="26">
+    <div class="slide-content">
+        <div class="slide-label">El problema · 5 min</div>
+        <h2 class="slide-title">La mayoría de las conversaciones de feria<br><strong>terminan sin que nadie pida nada</strong></h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">El operador termina hablando · el comprador asiente · ambos se van sin compromiso. Una semana después, ninguno se acuerda del otro.</p>
+        <div class="callout callout-red">
+            <p style="font-size:0.95rem;">No es que la conversación haya estado mal — es que terminó <strong>sin un siguiente paso concreto</strong>. Ese vacío se lo come la semana, los emails que llegan y las urgencias del lunes.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S27: TRES MOVIMIENTOS — OVERVIEW -->
+<section class="bg-light" id="s27" data-section="27">
+    <div class="slide-content">
+        <div class="slide-label">El marco · 5 min</div>
+        <h2 class="slide-title">Tres movimientos para cerrar bien</h2>
+        <div class="accent-bar"></div>
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <span class="perspective-icon">🎯</span>
+                <div class="perspective-label">Movimiento 1</div>
+                <div class="perspective-title">El ask específico</div>
+                <p class="perspective-question">No "¿podemos seguir hablando?" sino algo concreto, accionable, con fecha.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">📸</span>
+                <div class="perspective-label">Movimiento 2</div>
+                <div class="perspective-title">El intercambio concreto</div>
+                <p class="perspective-question">Tarjeta + foto + voz nota en WhatsApp dentro de los 5 minutos. La memoria fresca es activo.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">🚪</span>
+                <div class="perspective-label">Movimiento 3</div>
+                <div class="perspective-title">La desconexión elegante</div>
+                <p class="perspective-question">Cuando no hay encaje, terminas de modo que la relación quede abierta — sin venta hoy.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S28: MOVIMIENTO 1 — ASK ESPECÍFICO -->
+<section class="bg-white" id="s28" data-section="28">
+    <div class="slide-content">
+        <div class="slide-label">Movimiento 1</div>
+        <h2 class="slide-title">El ask específico</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Comparemos un ask genérico contra uno con tracción real:</p>
+        <div class="ba-grid">
+            <div class="ba-card bad">
+                <div class="ba-label">❌ Genérico — muere solo</div>
+                <p class="ba-quote">"¿Podemos seguir hablando?"</p>
+            </div>
+            <div class="ba-card good">
+                <div class="ba-label">✅ Específico — pide una respuesta</div>
+                <p class="ba-quote">"¿Te puedo mandar el itinerario detallado el viernes?"</p>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;">
+            <p><strong>La regla:</strong> el ask tiene <strong>verbo</strong>, <strong>objeto</strong> y <strong>fecha</strong>. Si te falta uno, no es un ask — es una intención.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S29: MOVIMIENTO 2 — INTERCAMBIO -->
+<section class="bg-light" id="s29" data-section="29">
+    <div class="slide-content">
+        <div class="slide-label">Movimiento 2</div>
+        <h2 class="slide-title">El intercambio concreto</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Lo que pasa en los <strong>5 minutos siguientes</strong> a la conversación define si el contacto sobrevive.</p>
+        <div class="step-strip">
+            <div class="step-card">
+                <div class="step-num">En el momento</div>
+                <div class="step-title">Tarjeta + foto</div>
+                <p>Recibes la tarjeta. Le sacas foto antes de guardarla — el papel se pierde, el archivo no.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">Dentro de 5 min</div>
+                <div class="step-title">Voz nota en WhatsApp</div>
+                <p>Antes de la próxima conversación, te grabas una nota: nombre · organización · de qué hablaron · próximo paso.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">Al final del día</div>
+                <div class="step-title">Volcado al Sheet</div>
+                <p>Las voz notas se convierten en filas. El sistema completo lo armamos después del almuerzo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S30: MOVIMIENTO 3 — DESCONEXIÓN ELEGANTE (rewritten) -->
+<section class="bg-white" id="s30" data-section="30">
+    <div class="slide-content">
+        <div class="slide-label">Movimiento 3</div>
+        <h2 class="slide-title">La desconexión elegante</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">No todas las conversaciones terminan en negocio — y eso está bien. Si no hay encaje hoy, puedes cerrarla de un modo que <strong>siga siendo útil para los dos</strong>. Parte del juego es construir relaciones; no todas tienen que ser ventas directas.</p>
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <span class="perspective-icon">🤝</span>
+                <div class="perspective-label">Opción 1</div>
+                <div class="perspective-title">Conectalo con alguien</div>
+                <p class="perspective-question">"Esto le va mejor a [otro operador / otra agencia] — ¿te lo presento?" Tu generosidad queda registrada.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">💡</span>
+                <div class="perspective-label">Opción 2</div>
+                <div class="perspective-title">Compartí una observación útil</div>
+                <p class="perspective-question">"Por cómo describiste a tu cliente, mira esto que vi…" — un dato, un proveedor, una tendencia. Aportas antes de irte.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">📅</span>
+                <div class="perspective-label">Opción 3</div>
+                <div class="perspective-title">Dejá la puerta abierta sin pedir nada</div>
+                <p class="perspective-question">"Hoy no calza, pero cuando armes algo en [X], avisame — me encantaría aportar." Sin ask, sin presión.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S31: EJERCICIO INDIVIDUAL — 4 TIPOS DE ASKS -->
+<section class="bg-alt" id="s31" data-section="31">
+    <div class="slide-content">
+        <div class="slide-label">Ejercicio individual · 10 min</div>
+        <h2 class="slide-title">Cuatro tipos de ask · escribe uno de cada uno</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">No es un solo ask para todos los compradores — son cuatro opciones para tener en el bolsillo. Cada uno tiene <strong>verbo + objeto + fecha</strong>.</p>
+        <div class="asks-grid">
+            <div class="asks-card">
+                <span class="asks-icon">📋</span>
+                <div class="asks-label">Tipo 1</div>
+                <div class="asks-title">Pedir una revisión</div>
+                <p>"¿Te puedo mandar el itinerario completo el viernes y me dices qué dos cosas cambiarías?"</p>
+            </div>
+            <div class="asks-card">
+                <span class="asks-icon">🤝</span>
+                <div class="asks-label">Tipo 2</div>
+                <div class="asks-title">Pedir una introducción</div>
+                <p>"¿Conocés a alguien en [mercado/nicho] a quien le pueda interesar? ¿Te puedo escribir su nombre?"</p>
+            </div>
+            <div class="asks-card">
+                <span class="asks-icon">🖥️</span>
+                <div class="asks-label">Tipo 3</div>
+                <div class="asks-title">Pedir feedback a tu sitio</div>
+                <p>"Mi página tiene una sección de impacto que estoy ajustando — ¿la miras 5 min y me dices si te quedan dudas?"</p>
+            </div>
+            <div class="asks-card">
+                <span class="asks-icon">📞</span>
+                <div class="asks-label">Tipo 4</div>
+                <div class="asks-title">Pedir un follow-up programado</div>
+                <p>"¿Te llamo el martes a las 10 hora Europa para hablar de [tema específico] 20 min?"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S32: COMPARTIR EN MESA (interactive · reworded) -->
+<section class="interactive-slide" id="s32" data-section="32">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Compartir en mesa · 10 min</div>
+        <span class="chat-icon">🗣️</span>
+        <p class="interactive-question">Piensa amplio · después concreto.<br><br>¿Qué más puedes pedir además del negocio directo?<br>¿Cuál de tus 4 asks vas a probar primero?</p>
+        <p class="interactive-instruction">Comparte los 4 con tu mesa. Marquen entre todos cuál se siente más natural para ti — y por qué.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     ALMUERZO (slide 34 · 12:30–13:30 · 60 min)
+     ================================================================ -->
+
+<!-- S33: ALMUERZO -->
+<section class="bg-light" id="s33" data-section="33">
+    <div class="slide-content timer-slide">
+        <div class="timer-emoji">🍽️</div>
+        <div class="timer-display-big">60 min</div>
+        <p class="timer-note">Almuerzo · regreso 13:30</p>
+        <p class="timer-next">Tarde: sistema de seguimiento · email post-conversación · speed-feria</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 4 · CRM MÍNIMO VIABLE (slides 35–41 · 13:30–14:00 · 30 min)
+     ================================================================ -->
+
+<!-- S34: BLOCK-INTRO B4 -->
+<section class="block-intro" id="s34" data-section="34">
+    <div class="photo-todo">📷 TODO · Foto · Mesa de trabajo / celular con sheets abierto</div>
+    <div class="slide-content">
+        <div class="bi-num">B4</div>
+        <div class="bi-kicker">13:30–14:00 · Bloque 4 · 30 min</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Sistema de seguimiento<br><span style="font-size:1.6rem; color:rgba(255,255,255,0.85);">CRM mínimo viable</span></h2>
+        <p class="bi-sub">Lo más simple que vas a usar de verdad. Si es complicado, no lo usas — y los contactos se pierden.</p>
+    </div>
+</section>
+
+
+<!-- S35: CAPTURA EN EL MOMENTO (neutralized) -->
+<section class="bg-white" id="s35" data-section="35">
+    <div class="slide-content">
+        <div class="slide-label">Captura · 5 min</div>
+        <h2 class="slide-title">Los primeros 5 minutos después de la conversación</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Pasado ese tiempo, la próxima conversación reemplaza los detalles de la anterior. Capturar rápido es lo que vuelve útil cada contacto.</p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Qué haces</h4>
+                <ul>
+                    <li>Foto a la tarjeta antes de guardarla</li>
+                    <li>Voz nota en WhatsApp · 30 segundos</li>
+                    <li>Te la mandas a ti mismo (chat con tu propio número)</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Qué contiene la nota</h4>
+                <ul>
+                    <li>Nombre + organización</li>
+                    <li>De qué hablaron (1 línea)</li>
+                    <li>Próximo paso prometido</li>
+                    <li>Fecha de ese próximo paso</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S36: LA PLANTILLA DE GOOGLE SHEETS (embed link) -->
+<section class="bg-light" id="s36" data-section="36">
+    <div class="slide-content">
+        <div class="slide-label">La plantilla · 10 min</div>
+        <h2 class="slide-title">Tu Sheet de contactos del evento</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Campos mínimos — nada más. Si tiene 25 columnas no la vas a abrir. Esta plantilla la armamos para que la dupliques en tu Drive y la uses mañana.</p>
+        <div class="sheet-embed">
+            <div class="sheet-embed-head">
+                <div class="sheet-icon">📊</div>
+                <div>
+                    <div class="sheet-title">Plantilla CRM · Contactos Buyer Event</div>
+                    <div class="sheet-source">Google Sheets · vista previa de columnas</div>
+                </div>
+            </div>
+            <div class="sheet-cols">
+                <div class="sheet-col">Contacto</div>
+                <div class="sheet-col">Organización</div>
+                <div class="sheet-col">Tipo</div>
+                <div class="sheet-col">Mercado</div>
+                <div class="sheet-col k">Qué prometí</div>
+                <div class="sheet-col k">Próxima acción</div>
+                <div class="sheet-col k">Fecha</div>
+            </div>
+            <a class="sheet-link" href="https://docs.google.com/spreadsheets/d/1mwhsR2nHdJ4gBYEWl-7XfjAOwukndjdf9sVtat-MOOY/edit?gid=1602125751#gid=1602125751" target="_blank" rel="noopener">🔗 docs.google.com/spreadsheets/d/1mwhsR2nHdJ4gBYEWl-7XfjAOwukndjdf9sVtat-MOOY</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- S37: ABRE LA PLANTILLA AHORA -->
+<section class="interactive-slide" id="s37" data-section="37">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Acción en sala · 3 min</div>
+        <span class="chat-icon">📱</span>
+        <p class="interactive-question">Abrí la plantilla ahora.<br>Duplicala en tu Drive.</p>
+        <p class="interactive-instruction">"Archivo → Hacer una copia" · guárdala en tu Drive con tu nombre. Si la dejas para "después", no la vas a duplicar. Ahora.</p>
+    </div>
+</section>
+
+
+<!-- S38: B2B con timeline -->
+<section class="bg-white" id="s38" data-section="38">
+    <div class="slide-content">
+        <div class="slide-label">B2B · venta a agencias / tour operators</div>
+        <h2 class="slide-title">El ciclo B2B</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">La venta a un comprador profesional es <strong>lenta y de confianza</strong>. La decisión rara vez es de una sola persona. Tu seguimiento pesa más que tu pitch inicial.</p>
+        <div class="cycle-stat">⏱ Ciclo típico · <strong>3–12 meses</strong></div>
+        <div class="timeline-bar">
+            <div class="timeline-seg start">
+                <div class="seg-when">Día 0</div>
+                <div class="seg-text">Contacto inicial · feria, intro, llamada</div>
+            </div>
+            <div class="timeline-seg">
+                <div class="seg-when">Semana 1–4</div>
+                <div class="seg-text">Email post-feria · materiales detallados · primera videollamada</div>
+            </div>
+            <div class="timeline-seg">
+                <div class="seg-when">Mes 2–6</div>
+                <div class="seg-text">FAM trip · negociación de precio · contrato · construcción del producto</div>
+            </div>
+            <div class="timeline-seg end">
+                <div class="seg-when">Mes 6–12</div>
+                <div class="seg-text">Primeros grupos · revisión · renovación o ampliación</div>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;"><strong>Implicación para tu CRM:</strong> registrá todas las interacciones — el contacto en el mes 7 va a leer la nota que escribiste en el mes 1.</p>
+    </div>
+</section>
+
+
+<!-- S39: B2C con timeline -->
+<section class="bg-light" id="s39" data-section="39">
+    <div class="slide-content">
+        <div class="slide-label">B2C · venta directa al viajero</div>
+        <h2 class="slide-title">El ciclo B2C</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">La venta al viajero final es <strong>corta y emocional</strong>. El decisor es la persona (a veces con su pareja). El contenido pesa más que el seguimiento — pero el seguimiento bueno cierra.</p>
+        <div class="cycle-stat">⏱ Ciclo típico · <strong>3 días – 6 semanas</strong></div>
+        <div class="timeline-bar">
+            <div class="timeline-seg start">
+                <div class="seg-when">Día 0</div>
+                <div class="seg-text">Descubrimiento · Instagram, web, recomendación, reseña</div>
+            </div>
+            <div class="timeline-seg">
+                <div class="seg-when">Día 1–5</div>
+                <div class="seg-text">Consulta inicial · WhatsApp o email · preguntas concretas</div>
+            </div>
+            <div class="timeline-seg">
+                <div class="seg-when">Día 5–20</div>
+                <div class="seg-text">Cotización · ajustes · referencias · decisión emocional</div>
+            </div>
+            <div class="timeline-seg end">
+                <div class="seg-when">Día 20–45</div>
+                <div class="seg-text">Reserva · viaje · reseña / publicación post-viaje</div>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;"><strong>Implicación para tu CRM:</strong> el viajero te encontró por algo que publicaste — registrá <em>de dónde vino</em> para saber qué contenido funciona.</p>
+    </div>
+</section>
+
+
+<!-- S40: POR TIPO DE EMPRESA (replaces "por mercado/banderas") -->
+<section class="bg-white" id="s40" data-section="40">
+    <div class="slide-content">
+        <div class="slide-label">No todos los compradores son iguales</div>
+        <h2 class="slide-title">Por tipo de empresa</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Adaptás tu seguimiento según con quién hablaste. Estas son las tres formas más comunes de comprador que vas a encontrar.</p>
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <span class="perspective-icon">🎤</span>
+                <div class="perspective-label">Tipo 1</div>
+                <div class="perspective-title">MICE · congresos y eventos</div>
+                <p class="perspective-question">Decisión por comité, plazos largos, presupuestos altos pero rigurosos. Necesita propuestas formales y referencias verificables.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">👤</span>
+                <div class="perspective-label">Tipo 2</div>
+                <div class="perspective-title">Agente individual / boutique</div>
+                <p class="perspective-question">Una o dos personas que arman viajes a medida. Relación directa, decide rápido, valora la flexibilidad y la confianza personal.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">🏢</span>
+                <div class="perspective-label">Tipo 3</div>
+                <div class="perspective-title">Tour operator de grupos</div>
+                <p class="perspective-question">Empresa que arma producto estandarizado para volumen. Necesita escala, fechas fijas, precios negociados, operación robusta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 5 · ESCRITURA POST-CONVERSACIÓN (slides 42–48 · 14:00–14:25)
+     ================================================================ -->
+
+<!-- S41: DIVIDER B5 -->
+<section class="divider-slide" id="s41" data-section="41">
+    <div class="divider-number">05</div>
+    <div class="slide-content">
+        <div class="slide-label">14:00–14:25 · 25 min</div>
+        <h2 class="slide-title">Práctica de seguimiento escrito</h2>
+        <div class="accent-bar" style="margin: 1.5rem auto; background: var(--gold);"></div>
+        <p class="slide-subtitle">Mientras la conversación está fresca — escribir y releer.</p>
+    </div>
+</section>
+
+
+<!-- S42: PLANTEAMIENTO 3H DESPUÉS -->
+<section class="bg-white" id="s42" data-section="42">
+    <div class="slide-content">
+        <div class="slide-label">Planteamiento · 3 min</div>
+        <h2 class="slide-title">3 horas después · no 3 días</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Vas a escribirle a uno de los compradores con los que practicaste esta mañana. <strong>No pasaron 3 días, pasaron 3 horas.</strong> Eso es lo que va a pasar el 27.</p>
+        <div class="callout callout-gold">
+            <p>El mensaje post-feria que llega <strong>el mismo día</strong> tiene mucha más probabilidad de respuesta que el que llega el viernes siguiente. El comprador sigue en modo "evaluación de proveedores" — el lunes ya está apagando incendios.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S43: ESTRUCTURA — 4 IDEAS (reframed as 4 cards · sin orden) -->
+<section class="bg-light" id="s43" data-section="43">
+    <div class="slide-content">
+        <div class="slide-label">Estructura · cuatro ideas</div>
+        <h2 class="slide-title">Cuatro formas de destacar</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Cualquier mensaje post-conversación gana si tiene uno o más de estos elementos. <strong>No es un orden — son ideas para mezclar.</strong></p>
+        <div class="email-ideas">
+            <div class="email-idea">
+                <h5>Agradecimiento específico</h5>
+                <p>No "gracias por la charla". Algo que sólo pudo haber salido de esa conversación — un detalle, una pregunta, un comentario suyo.</p>
+            </div>
+            <div class="email-idea">
+                <h5>Un indicador o detalle que le interesó</h5>
+                <p>Algo que él/ella mencionó o sobre lo que profundizó. Lo conecta a la conversación específica, no a un mensaje genérico.</p>
+            </div>
+            <div class="email-idea">
+                <h5>El ask concreto</h5>
+                <p>El que escribiste antes del almuerzo. Verbo + objeto + fecha. No "seguimos hablando".</p>
+            </div>
+            <div class="email-idea">
+                <h5>Siguiente paso con fecha</h5>
+                <p>"El viernes te mando…" / "La semana próxima te llamo…". Cerrá con un compromiso temporal — propio, no del otro.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S44: PASO 1 — ESCRIBIR (email o WhatsApp · 10 min) -->
+<section class="bg-white" id="s44" data-section="44">
+    <div class="slide-content">
+        <div class="slide-label">Paso 1 · 10 min · individual</div>
+        <h2 class="slide-title">Escribí el mensaje · email o WhatsApp</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Elegí <strong>un comprador</strong> de los que practicaste esta mañana y escribile como si lo fueras a mandar hoy. Email o WhatsApp — el canal que más se ajusta al estilo de ese contacto.</p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Si eliges email</h4>
+                <ul>
+                    <li>Asunto que no sea genérico</li>
+                    <li>4–8 líneas máximo</li>
+                    <li>Una sola idea principal, un solo ask</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Si eliges WhatsApp</h4>
+                <ul>
+                    <li>Texto corto · 2–4 líneas</li>
+                    <li>Un audio de 30 seg si la relación lo permite</li>
+                    <li>Mismo ask claro al final</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S45: PASO 2 — RELEÉ TU MENSAJE -->
+<section class="bg-alt" id="s45" data-section="45">
+    <div class="slide-content">
+        <div class="slide-label">Paso 2 · 10 min · individual</div>
+        <h2 class="slide-title">Releé lo que escribiste</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Vuelve al inicio del mensaje y léelo como si lo recibieras tú. Tres preguntas para ti mismo:</p>
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <span class="perspective-icon">🧠</span>
+                <div class="perspective-label">Pregunta 1</div>
+                <div class="perspective-title">¿Se acuerda de mí cuando lee esto?</div>
+                <p class="perspective-question">Hay algo concreto que solo pudo salir de nuestra conversación · si no, es un mensaje plantilla.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">🎯</span>
+                <div class="perspective-label">Pregunta 2</div>
+                <div class="perspective-title">¿El ask es claro?</div>
+                <p class="perspective-question">Hay verbo, objeto y fecha · si tuviera que responder en 30 seg, sabe qué hacer.</p>
+            </div>
+            <div class="perspective-card">
+                <span class="perspective-icon">⏱</span>
+                <div class="perspective-label">Pregunta 3</div>
+                <div class="perspective-title">¿Hay una fecha?</div>
+                <p class="perspective-question">Sin fecha, el mensaje queda flotando · agregá una concreta, aunque sea tentativa ("la semana del 9").</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S46: AI EMAILS — ADVERTENCIA -->
+<section class="bg-white" id="s46" data-section="46">
+    <div class="slide-content">
+        <div class="slide-label">Una nota sobre IA</div>
+        <h2 class="slide-title">Emails escritos con IA</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Las herramientas de IA pueden ayudarte — pero hay un riesgo. Lo que te hace memorable es lo que <strong>solo tú puedes escribir</strong>.</p>
+        <div class="ai-warning">
+            <div class="ai-warning-head">
+                <span class="ai-icon">🤖</span>
+                <h4>Úsala como asistente, no como autora</h4>
+            </div>
+            <div class="ai-pros-cons">
+                <div class="ai-pros">
+                    <h5>Para qué sí sirve</h5>
+                    <ul>
+                        <li>Traducción al inglés / francés / alemán</li>
+                        <li>Revisar gramática y tono</li>
+                        <li>Acortar un párrafo demasiado largo</li>
+                        <li>Sugerir un asunto más claro</li>
+                    </ul>
+                </div>
+                <div class="ai-cons">
+                    <h5>El riesgo</h5>
+                    <ul>
+                        <li>Borra los detalles únicos de tu conversación</li>
+                        <li>Suena igual a los otros 20 emails del comprador</li>
+                        <li>Pierde tu voz — y tu voz es parte de tu producto</li>
+                        <li>El comprador lo nota más de lo que piensas</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); margin-top:0.85rem; line-height:1.55;"><strong>Regla práctica:</strong> escríbelo tú primero en español. Si lo necesitas en otro idioma, pásalo por IA y luego reléelo para confirmar que conserva lo específico.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S47: PATRONES — ERRORES + FRASES -->
+<section class="bg-alt" id="s47" data-section="47">
+    <div class="slide-content">
+        <div class="slide-label">Síntesis del facilitador · 2 min</div>
+        <h2 class="slide-title">Errores comunes y frases que funcionan</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col">
+            <div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.78rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--red); font-weight:700; margin-bottom:0.5rem;">Errores comunes</p>
+                <div class="mistake-list">
+                    <div class="mistake-item"><span class="mistake-icon">✗</span><p>Mensaje genérico que podría ir a cualquiera</p></div>
+                    <div class="mistake-item"><span class="mistake-icon">✗</span><p>Adjuntar 4 PDFs y un brochure de 30 páginas</p></div>
+                    <div class="mistake-item"><span class="mistake-icon">✗</span><p>Pedir "una reunión" sin proponer cuándo</p></div>
+                </div>
+            </div>
+            <div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.78rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--green); font-weight:700; margin-bottom:0.5rem;">Frases que funcionan</p>
+                <div class="mistake-list">
+                    <div class="win-item"><span class="win-icon">✓</span><p>"Cuando comentaste X, me quedé pensando que…"</p></div>
+                    <div class="win-item"><span class="win-icon">✓</span><p>"Te mando un solo documento: el itinerario que charlamos"</p></div>
+                    <div class="win-item"><span class="win-icon">✓</span><p>"¿Te sirve si te llamo el martes a las 10 hora Europa?"</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     PAUSA (slide 49 · 14:25–14:40)
+     ================================================================ -->
+
+<!-- S48: PAUSA -->
+<section class="bg-light" id="s48" data-section="48">
+    <div class="slide-content timer-slide">
+        <div class="timer-emoji">☕</div>
+        <div class="timer-display-big">15 min</div>
+        <p class="timer-note">Pausa · regreso 14:40</p>
+        <p class="timer-next">Después de la pausa: speed-feria · el ensayo del 27</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 6 · SPEED-FERIA (slides 50–60 · 14:40–16:10 · 90 min)
+     ================================================================ -->
+
+<!-- S49: BLOCK-INTRO B6 -->
+<section class="block-intro" id="s49" data-section="49">
+    <div class="photo-todo">📷 TODO · Foto · Ronda rápida / ambiente de feria</div>
+    <div class="slide-content">
+        <div class="bi-num">B6</div>
+        <div class="bi-kicker">14:40–16:10 · Bloque 6 · 90 min</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Speed-feria<br>Ronda 3 · cerrar y conectar</h2>
+        <p class="bi-sub">El último ensayo en sala antes del 27. Cada conversación cierra con un movimiento — ya sea negocio, conexión o aprendizaje.</p>
+    </div>
+</section>
+
+
+<!-- S50: RECAP — DÓNDE ESTAMOS EN EL ARCO -->
+<section class="bg-white" id="s50" data-section="50">
+    <div class="slide-content">
+        <div class="slide-label">Dónde estamos · 5 min</div>
+        <h2 class="slide-title">Repasemos el arco de estos 2 días</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Cada bloque del módulo presencial agregó una capa distinta. La tarde de hoy junta todo.</p>
+        <div class="recap-arc">
+            <div class="recap-card">
+                <div class="recap-when">Día 1</div>
+                <h4>Tu historia</h4>
+                <p>Indicadores propios, pitch en tres formatos, primera ronda de roleplay enfocada en <strong>claridad</strong>.</p>
+            </div>
+            <div class="recap-card">
+                <div class="recap-when">Día 2 · mañana</div>
+                <h4>Defender lo que dices</h4>
+                <p>Las 5 categorías de preguntas, 5 rotaciones de roleplay con tarjetas de compradores reales — foco en <strong>profundidad</strong>.</p>
+            </div>
+            <div class="recap-card active">
+                <div class="recap-when">Día 2 · tarde · ahora</div>
+                <h4>Networking y cierre</h4>
+                <p>Sabés que la gente del 27 está ahí para conocer tu industria. Lo que importa es <strong>cerrar bien</strong> y <strong>construir relación</strong>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S51: FORMAS DE CERRAR (6 cards · veredictos + más opciones, suggestions) -->
+<section class="bg-light" id="s51" data-section="51">
+    <div class="slide-content">
+        <div class="slide-label">Cierre · 6 sugerencias</div>
+        <h2 class="slide-title">Seis formas de cerrar bien</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">No hay un solo "veredicto correcto". Estas son <strong>seis formas concretas</strong> de salir de una conversación con algo en la mano — elige la que mejor encaje con la persona y la energía del momento.</p>
+        <div class="forms-grid">
+            <div class="forms-card">
+                <div class="forms-emoji">🤝</div>
+                <div class="forms-label">LinkedIn</div>
+                <p class="forms-quote">"Conectemos por LinkedIn — sigamos el contacto."</p>
+            </div>
+            <div class="forms-card">
+                <div class="forms-emoji">✉️</div>
+                <div class="forms-label">Email</div>
+                <p class="forms-quote">"Mandame info por email, lo reviso con mi equipo."</p>
+            </div>
+            <div class="forms-card">
+                <div class="forms-emoji">📅</div>
+                <div class="forms-label">Meeting</div>
+                <p class="forms-quote">"Programemos una llamada las próximas dos semanas."</p>
+            </div>
+            <div class="forms-card">
+                <div class="forms-emoji">📸</div>
+                <div class="forms-label">WhatsApp · fotos</div>
+                <p class="forms-quote">"Te mando ahora mismo unas fotos e itinerario que charlamos."</p>
+            </div>
+            <div class="forms-card">
+                <div class="forms-emoji">👥</div>
+                <div class="forms-label">Introducción</div>
+                <p class="forms-quote">"Conozco a alguien que te puede servir más — ¿te lo presento?"</p>
+            </div>
+            <div class="forms-card">
+                <div class="forms-emoji">🧭</div>
+                <div class="forms-label">FAM trip</div>
+                <p class="forms-quote">"Si quieres verlo en persona, te armo una visita de 2 días."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S52: MECÁNICA — GRUPOS DE 5, 4 PITCHERS, 3+1 MIN -->
+<section class="bg-white" id="s52" data-section="52">
+    <div class="slide-content">
+        <div class="slide-label">Mecánica · 5 min</div>
+        <h2 class="slide-title">Cómo trabajamos esta tarde</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Mismos grupos de 5 que en la mañana, pero el foco cambia: <strong>menos tiempo por turno · obligación de cerrar</strong>.</p>
+        <div class="step-strip">
+            <div class="step-card">
+                <div class="step-num">El grupo</div>
+                <div class="step-title">Grupos de 5</div>
+                <p>1 persona toma el rol de la empresa (lee tarjeta) · los otros 4 pitchean por turno.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">El turno</div>
+                <div class="step-title">3 + 1 minutos</div>
+                <p>3 min de charla / conexión · campana 🔔 · 1 min para cerrar con uno de los 6 movimientos.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">La rotación</div>
+                <div class="step-title">5 rondas</div>
+                <p>Cada ronda · nueva empresa, nueva persona en el rol de comprador. Cada participante pitchea 4 veces, juega comprador 1 vez.</p>
+            </div>
+        </div>
+        <div class="callout callout-gold" style="margin-top:1rem;">
+            <p style="font-size:0.95rem;"><strong>La regla del cierre:</strong> los 4 minutos no terminan en silencio. Cada conversación cierra con uno de los 6 movimientos que vimos en la lámina anterior — aunque sea "no calza hoy, te paso a alguien que sí".</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S53: ROTACIÓN 1 DE 5 (PM) -->
+<section class="block-intro" id="s53" data-section="53">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Speed-feria · empieza ahora</div>
+        <div class="rt-num">1<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip active">1</div>
+            <div class="rt-pip">2</div>
+            <div class="rt-pip">3</div>
+            <div class="rt-pip">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Primera tarjeta. Primer comprador del grupo. Cada turno = <strong>3 min charla · 🔔 · 1 min cierre</strong>.</p>
+        <div class="rt-meta"><span>⏱ <strong>~18 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S54: ROTACIÓN 2 DE 5 (PM) -->
+<section class="block-intro" id="s54" data-section="54">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Speed-feria · siguiente</div>
+        <div class="rt-num">2<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip active">2</div>
+            <div class="rt-pip">3</div>
+            <div class="rt-pip">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Nueva tarjeta · nuevo comprador. Probá un cierre distinto al de la rotación 1.</p>
+        <div class="rt-meta"><span>⏱ <strong>~18 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S55: ROTACIÓN 3 DE 5 (PM) -->
+<section class="block-intro" id="s55" data-section="55">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Speed-feria · mitad del bloque</div>
+        <div class="rt-num">3<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip done">2</div>
+            <div class="rt-pip active">3</div>
+            <div class="rt-pip">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Tres tarjetas vistas. ¿Cuál cierre te funciona mejor según el tipo de empresa? Ajustá.</p>
+        <div class="rt-meta"><span>⏱ <strong>~18 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S56: ROTACIÓN 4 DE 5 (PM) -->
+<section class="block-intro" id="s56" data-section="56">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Speed-feria · penúltima</div>
+        <div class="rt-num">4<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip done">2</div>
+            <div class="rt-pip done">3</div>
+            <div class="rt-pip active">4</div>
+            <div class="rt-pip">5</div>
+        </div>
+        <p class="rt-cue">Penúltima tarjeta. Si todavía no te tocó jugar comprador, ya casi.</p>
+        <div class="rt-meta"><span>⏱ <strong>~18 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S57: ROTACIÓN 5 DE 5 (PM) -->
+<section class="block-intro" id="s57" data-section="57">
+    <div class="slide-content rotation-tracker">
+        <div class="rt-mini-label">Speed-feria · última</div>
+        <div class="rt-num">5<span class="rt-of">/ 5</span></div>
+        <div class="rt-pips">
+            <div class="rt-pip done">1</div>
+            <div class="rt-pip done">2</div>
+            <div class="rt-pip done">3</div>
+            <div class="rt-pip done">4</div>
+            <div class="rt-pip active">5</div>
+        </div>
+        <p class="rt-cue">Última rotación del módulo presencial. Después de esto · plenaria corta y cierre.</p>
+        <div class="rt-meta"><span>⏱ <strong>~18 min</strong></span><span>👥 1 comprador · 4 pitchers</span></div>
+    </div>
+</section>
+
+
+<!-- S58: PLENARIA FINAL — open questions -->
+<section class="interactive-slide" id="s58" data-section="58">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Plenaria post-speed-feria · 8 min</div>
+        <span class="chat-icon">🎙️</span>
+        <p class="interactive-question">¿Cómo se sintió cerrar?<br><br>¿Qué cierre les funcionó mejor?<br><br>¿Qué quieren seguir pensando antes de mañana?</p>
+        <p class="interactive-instruction">Patrones, no nombres. Una o dos frases por persona.</p>
+    </div>
+</section>
+
+
+<!-- S59: REFUERZO CRM — toma notas rápido -->
+<section class="bg-alt" id="s59" data-section="59">
+    <div class="slide-content">
+        <div class="slide-label">Antes de cerrar · 4 min</div>
+        <h2 class="slide-title">Una última cosa sobre el seguimiento</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Acabás de tener 4 conversaciones cortas en cinco rotaciones. Mañana van a ser más, en menos tiempo, con más adrenalina. <strong>Lo único que no se puede improvisar es la captura.</strong></p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>El reflejo a entrenar</h4>
+                <ul>
+                    <li>Foto a la tarjeta antes de guardarla</li>
+                    <li>30 seg de voz nota a ti mismo dentro de los 5 min</li>
+                    <li>Nombre · de qué hablamos · qué prometí · fecha</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Por qué importa hoy</h4>
+                <ul>
+                    <li>Las conversaciones se borran con la próxima</li>
+                    <li>Sin nota, no hay seguimiento — y el seguimiento es lo que cierra</li>
+                    <li>La plantilla ya la duplicaste · usala mañana mismo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;">
+            <p><strong>Compromiso del módulo:</strong> mañana, cada uno graba al menos <strong>3 voz notas</strong> en el día y las vuelca al Sheet antes de dormir. Eso es la diferencia entre tener 12 contactos y tener 12 conversaciones que llevan a algo.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     BLOQUE 7 · CIERRE (slides 61–65 · 16:10–16:30 · 20 min)
+     ================================================================ -->
+
+<!-- S60: DIVIDER CIERRE -->
+<section class="divider-slide" id="s60" data-section="60">
+    <div class="divider-number">07</div>
+    <div class="slide-content">
+        <div class="slide-label">16:10–16:30 · 20 min</div>
+        <h2 class="slide-title">Cierre del módulo presencial</h2>
+        <div class="accent-bar" style="margin: 1.5rem auto; background: var(--gold);"></div>
+        <p class="slide-subtitle">Dos días · un sistema · un evento mañana.</p>
+    </div>
+</section>
+
+
+<!-- S61: 4 HITOS -->
+<section class="bg-white" id="s61" data-section="61">
+    <div class="slide-content">
+        <div class="slide-label">Lo que construimos</div>
+        <h2 class="slide-title">Cuatro hitos · dos días</h2>
+        <div class="accent-bar"></div>
+        <div class="hits-strip">
+            <div class="hit-card">
+                <div class="hit-day">Día 1 · mañana</div>
+                <h4>Pitch en 3 formatos</h4>
+                <p>Modelo A (historia) · B (problema-solución) · C (feria). Mismo indicador, tres formas.</p>
+            </div>
+            <div class="hit-card">
+                <div class="hit-day">Día 1 · tarde</div>
+                <h4>Lectura del comprador</h4>
+                <p>Tarjetas leídas para distintos arquetipos. Ajuste de tono en vivo según quién está enfrente.</p>
+            </div>
+            <div class="hit-card">
+                <div class="hit-day">Día 2 · mañana</div>
+                <h4>Preguntas detalladas dominadas</h4>
+                <p>Las 5 categorías · respuesta honesta cuando falta el dato · profundidad sostenida.</p>
+            </div>
+            <div class="hit-card">
+                <div class="hit-day">Día 2 · tarde</div>
+                <h4>Cierre + sistema de seguimiento</h4>
+                <p>Seis formas de cerrar · captura en 5 min · plantilla de Sheet en tu Drive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S62: RONDA DE CIERRE -->
+<section class="interactive-slide" id="s62" data-section="62">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Ronda de cierre · 10 min</div>
+        <span class="chat-icon">🪶</span>
+        <p class="interactive-question">Una cosa que te llevas · aprendizaje, frase, decisión.<br><br>Una acción concreta antes del 27 · esta noche o mañana temprano.</p>
+        <p class="interactive-instruction">Dos frases por persona. Sin elaboración. Lo que digas en voz alta acá es un compromiso pequeño contigo y con la sala.</p>
+    </div>
+</section>
+
+
+<!-- S63: MÓDULO 3 — reframed (no "del 27"; recap meeting) -->
+<section class="bg-alt" id="s63" data-section="63">
+    <div class="slide-content">
+        <div class="slide-label">Módulo 3 · junio</div>
+        <h2 class="slide-title">Lo que viene después</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">El <strong>lunes 15 de junio, 4:00–6:00 p.m. (hora Colombia)</strong> nos volvemos a encontrar en línea — una sola sesión de seguimiento, no un curso. Es un espacio para revisar qué pasó después y ajustar lo que haga falta.</p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Qué vamos a hacer juntos</h4>
+                <ul>
+                    <li>Compartir <strong>qué funcionó</strong> en las conversaciones reales</li>
+                    <li>Revisar <strong>progreso</strong>: qué seguimientos respondieron, cuáles no</li>
+                    <li>Identificar <strong>aprendizajes</strong> que se repiten en el grupo</li>
+                    <li>Trazar la <strong>vía adelante</strong> para los próximos meses</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Para qué llegar listo</h4>
+                <ul>
+                    <li>Tu plantilla de Sheet completa con los contactos del evento</li>
+                    <li>Una historia concreta de seguimiento — éxito o tropiezo</li>
+                    <li>Una pregunta específica que quieres trabajar con el grupo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S64: CLOSING — NOS VEMOS EL 27 -->
+<section class="closing-slide" id="s64" data-section="64">
+    <div class="slide-content hero-slide">
+        <div class="slide-label" style="color:var(--gold);">Nos vemos el 27</div>
+        <h1 class="slide-title">Mañana ponemos<br>todo esto<br><strong style="color:var(--gold);">a prueba</strong></h1>
+        <div class="accent-bar" style="background: var(--gold); margin: 1.5rem auto;"></div>
+        <p class="anchor-echo">"¿Puede un comprador europeo entender, confiar, y revender lo que tú haces responsablemente?"</p>
+        <div class="closing-row">
+            <div class="col-left">
+                <div class="next-box">
+                    <div class="nxt-label">Próximo</div>
+                    <div class="nxt-title">Buyer Event · ProColombia + Institut Français</div>
+                    <div class="nxt-time">Miércoles 27 de mayo · Medellín</div>
+                </div>
+                <div class="next-box">
+                    <div class="nxt-label">Y después</div>
+                    <div class="nxt-title">Mujeres que inspiran · Liderazgo y turismo en acción</div>
+                    <div class="nxt-time">9 y 16 de junio · Medellín · 2 sesiones — 6 horas</div>
+                </div>
+                <div class="next-box">
+                    <div class="nxt-label">Cierre del módulo</div>
+                    <div class="nxt-title">Sesión de seguimiento en línea</div>
+                    <div class="nxt-time">Lunes 15 de junio · 4:00–6:00 p.m. (hora Colombia)</div>
+                </div>
+            </div>
+            <div>
+                <div class="poster-label">Convocatoria</div>
+                <img src="img/convocatoria-mujeres-inspiran.jpeg" alt="Convocatoria: Mujeres que inspiran — Liderazgo y turismo en acción · 9 y 16 de junio · Medellín" class="convocatoria-poster">
+            </div>
+        </div>
+        <div style="margin-top:2rem; font-family:Arial,sans-serif; font-size:0.78rem; color:rgba(255,255,255,0.25);">Lo Responsable Vende · TRECC · Institut Français Colombia · ProColombia · 2026</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('section[data-section]');
+
+    const SLIDE_SECTIONS = [
+        '',                                // 0  Portada
+        'El recorrido',                    // 1  Program arc
+        'Reflexiones del Día 1',           // 2  Interactive
+        'Objetivo del Día 2',              // 3
+        'Bloque 1 · Preguntas detalladas', // 4  Block-intro
+        'B1 · Encuadre + 5 tipos',         // 5
+        'B1 · Tipo 1 · Certificación',     // 6
+        'B1 · Tipo 2 · Impacto',           // 7
+        'B1 · Tipo 3 · Operativa',         // 8
+        'B1 · Tipo 4 · Autenticidad',      // 9
+        'B1 · Tipo 5 · Diferenciación',    // 10
+        'B1 · Ejemplos por nicho',         // 11
+        'Bloque 2 · Roleplay R2',          // 12 Block-intro
+        'B2 · Grupos de 5',                // 13
+        'B2 · La tarjeta de comprador',    // 14
+        'B2 · Rol comprador internacional',// 15
+        'B2 · Rol pitcher',                // 16
+        'B2 · Mecánica · 5 × 22 min',      // 17
+        'B2 · Rotación 1 de 5',            // 18
+        'B2 · Rotación 2 de 5',            // 19
+        'B2 · Rotación 3 de 5',            // 20
+        'B2 · Rotación 4 de 5',            // 21
+        'B2 · Rotación 5 de 5',            // 22
+        'B2 · Plenaria',                   // 23
+        'Pausa',                           // 24
+        'Bloque 3 · Cerrar',               // 25 Block-intro
+        'B3 · El problema',                // 26
+        'B3 · 3 movimientos',              // 27
+        'B3 · Ask específico',             // 28
+        'B3 · Intercambio',                // 29
+        'B3 · Desconexión elegante',       // 30
+        'B3 · 4 tipos de ask',             // 31
+        'B3 · Compartir en mesa',          // 32
+        'Almuerzo',                        // 33
+        'Bloque 4 · CRM',                  // 34 Block-intro
+        'B4 · Captura en 5 min',           // 35
+        'B4 · La plantilla',               // 36
+        'B4 · Abre la plantilla',          // 37
+        'B4 · Ciclo B2B',                  // 38
+        'B4 · Ciclo B2C',                  // 39
+        'B4 · Por tipo de empresa',        // 40
+        'Práctica escrita',                // 41 Divider
+        'Email · 3 horas después',         // 42
+        'Email · 4 ideas',                 // 43
+        'Email · Paso 1 · escribir',       // 44
+        'Email · Paso 2 · releer',         // 45
+        'Email · IA · advertencia',        // 46
+        'Email · Errores + frases',        // 47
+        'Pausa',                           // 48
+        'Bloque 6 · Speed-feria',          // 49 Block-intro
+        'B6 · Recap del arco',             // 50
+        'B6 · 6 formas de cerrar',         // 51
+        'B6 · Mecánica · 5 × 18 min',      // 52
+        'B6 · Rotación 1 de 5',            // 53
+        'B6 · Rotación 2 de 5',            // 54
+        'B6 · Rotación 3 de 5',            // 55
+        'B6 · Rotación 4 de 5',            // 56
+        'B6 · Rotación 5 de 5',            // 57
+        'B6 · Plenaria final',             // 58
+        'B6 · Refuerzo CRM',               // 59
+        'Cierre del módulo',               // 60 Divider
+        'Cierre · 4 hitos',                // 61
+        'Cierre · Ronda',                  // 62
+        'Cierre · Módulo 3',               // 63
+        'Nos vemos el 27'                  // 64
+    ];
+
+    function goToSection(n) {
+        sections[n].scrollIntoView({ behavior: 'smooth' });
+        updateUI(n);
+    }
+
+    function navigate(dir) {
+        const next = currentSection + dir;
+        if (next >= 0 && next < sections.length) goToSection(next);
+    }
+
+    function updateUI(n) {
+        currentSection = n;
+        const lbl = document.getElementById('slideSection');
+        if (lbl) lbl.textContent = SLIDE_SECTIONS[n] ? ('Día 2 · ' + SLIDE_SECTIONS[n]) : 'Día 2 · Construyendo Tu Sistema';
+        document.getElementById('prevBtn').disabled = n === 0;
+        document.getElementById('nextBtn').disabled = n === sections.length - 1;
+        document.getElementById('slideCounter').textContent = (n + 1) + ' / ' + sections.length;
+    }
+
+    const sectionList = Array.from(sections);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                const n = sectionList.indexOf(entry.target);
+                if (n >= 0) updateUI(n);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(s => observer.observe(s));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.target && e.target.isContentEditable) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); navigate(1); }
+        if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+    });
+</script>
+
+<script>
+/* Edit mode (localStorage). Activate by adding ?edit=panela to the URL.
+   Keys: E toggle, S download updated HTML, R reset edits. */
+(function () {
+    const EDIT_KEY = 'panela';
+    const params = new URLSearchParams(location.search);
+    const STORAGE_KEY = 'deck-edits::' + location.pathname;
+
+    function loadOverrides() {
+        try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+        catch (e) { return {}; }
+    }
+    function saveOverrides(map) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    }
+
+    if (params.get('edit') !== EDIT_KEY) return;
+
+    const overrides = loadOverrides();
+    Object.entries(overrides).forEach(([id, html]) => {
+        const sec = document.getElementById(id);
+        if (sec) sec.innerHTML = html;
+    });
+
+    let editMode = false;
+
+    const toolbar = document.createElement('div');
+    toolbar.id = '__edit_toolbar';
+    toolbar.style.cssText = 'position:fixed;top:10px;left:10px;display:flex;gap:6px;z-index:9999;font-family:Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:.4px;user-select:none;';
+
+    function makeBtn(label, bg, onClick) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = label;
+        b.style.cssText = 'background:' + bg + ';color:#fff;border:none;padding:7px 12px;border-radius:6px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);font:inherit;letter-spacing:inherit;';
+        b.addEventListener('click', (e) => { e.preventDefault(); onClick(); b.blur(); });
+        return b;
+    }
+
+    const badge = makeBtn('EDIT OFF · press E', '#1B2B5A', toggleEdit);
+    const saveBtn = makeBtn('💾 Guardar', '#2D7A6A', downloadCurrent);
+    const resetBtn = makeBtn('↺ Restablecer', '#8B1A1A', resetEdits);
+    toolbar.appendChild(badge);
+    toolbar.appendChild(saveBtn);
+    toolbar.appendChild(resetBtn);
+    document.body.appendChild(toolbar);
+
+    function applyEditableState() {
+        document.querySelectorAll('section[id]').forEach(sec => {
+            sec.contentEditable = editMode ? 'true' : 'false';
+            sec.style.outline = editMode ? '1px dashed rgba(245,196,0,.55)' : '';
+            sec.style.outlineOffset = editMode ? '-4px' : '';
+        });
+    }
+
+    function toggleEdit() {
+        editMode = !editMode;
+        badge.textContent = editMode
+            ? 'EDIT ON · E off · S save · R reset'
+            : 'EDIT OFF · press E';
+        badge.style.background = editMode ? '#3A7D44' : '#1B2B5A';
+        applyEditableState();
+    }
+
+    let saveTimer;
+    document.addEventListener('input', e => {
+        if (!editMode) return;
+        const sec = e.target.closest && e.target.closest('section[id]');
+        if (!sec) return;
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(() => {
+            const map = loadOverrides();
+            map[sec.id] = sec.innerHTML;
+            saveOverrides(map);
+        }, 400);
+    });
+
+    function downloadCurrent() {
+        const clone = document.documentElement.cloneNode(true);
+        const b = clone.querySelector('#__edit_toolbar');
+        if (b) b.remove();
+        clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+        clone.querySelectorAll('section[id]').forEach(el => {
+            el.style.outline = '';
+            el.style.outlineOffset = '';
+        });
+        const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+        const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        const name = (location.pathname.split('/').pop() || 'deck.html').replace(/\.html?$/, '');
+        a.download = name + '-edited.html';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    }
+
+    function resetEdits() {
+        if (!confirm('¿Borrar todas las ediciones guardadas? La página se recargará.')) return;
+        localStorage.removeItem(STORAGE_KEY);
+        location.reload();
+    }
+
+    document.addEventListener('keydown', e => {
+        if (e.target && e.target.isContentEditable) return;
+        if (e.key === 'e' || e.key === 'E') { e.preventDefault(); toggleEdit(); }
+        else if (e.key === 's' || e.key === 'S') { e.preventDefault(); downloadCurrent(); }
+        else if (e.key === 'r' || e.key === 'R') { e.preventDefault(); resetEdits(); }
+    });
+})();
+</script>
+
+</body>
+</html>
