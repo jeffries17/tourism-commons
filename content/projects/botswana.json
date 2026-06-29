@@ -1,0 +1,18 @@
+{
+  "name": "Botswana",
+  "slug": "botswana",
+  "status": "ongoing",
+  "year": 2025,
+  "client": "Private",
+  "summary": "Ecotourism market analysis and competitive positioning strategy for Botswana tourism operators.",
+  "description": "Comprehensive analysis of Botswana's ecotourism market, operator positioning, and strategic recommendations for market differentiation.",
+  "themes": ["ecotourism", "market analysis", "wildlife tourism", "sustainable tourism"],
+  "protected": true,
+  "links": [
+    {
+      "label": "Market Analysis Dashboard",
+      "href": "/botswana",
+      "protected": true
+    }
+  ]
+}

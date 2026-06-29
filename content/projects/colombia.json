@@ -1,0 +1,23 @@
+{
+  "name": "Colombia",
+  "slug": "colombia",
+  "status": "active",
+  "year": 2026,
+  "client": "TRECC / Private",
+  "summary": "Digital transformation strategy and market readiness assessment for Colombian tourism businesses across 11 specialized tourism niches.",
+  "description": "Strategic digital positioning and capacity building for Colombian tourism sector, covering specialized experience categories from cultural heritage to agritourism.",
+  "themes": ["digital transformation", "market readiness", "business development", "cultural tourism"],
+  "protected": true,
+  "links": [
+    {
+      "label": "Market Analysis Report",
+      "href": "/colombia",
+      "protected": true
+    },
+    {
+      "label": "Bootcamp Materials",
+      "href": "/projects/colombia/bootcamp",
+      "protected": true
+    }
+  ]
+}

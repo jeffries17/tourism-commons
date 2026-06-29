@@ -1,0 +1,18 @@
+{
+  "name": "Timor-Leste",
+  "slug": "timorleste",
+  "status": "completed",
+  "year": 2024,
+  "client": "ITC / UNWTO",
+  "summary": "Comprehensive tourism sector analysis and strategic development roadmap for Timor-Leste.",
+  "description": "Complete tourism sector assessment including market positioning, value chain analysis, and strategic recommendations for sustainable tourism development.",
+  "themes": ["sector analysis", "strategic planning", "market development", "sustainable tourism"],
+  "protected": true,
+  "links": [
+    {
+      "label": "Sector Analysis Report",
+      "href": "/timorleste",
+      "protected": true
+    }
+  ]
+}

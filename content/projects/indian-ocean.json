@@ -1,0 +1,23 @@
+{
+  "name": "Indian Ocean Blue Tourism",
+  "slug": "indian-ocean",
+  "status": "ongoing",
+  "year": 2025,
+  "client": "ITC / Regional Partnership",
+  "summary": "Regional tourism cluster development and blue economy integration across 6 Indian Ocean territories.",
+  "description": "Multi-country regional initiative to strengthen tourism competitiveness and sustainable blue economy practices across the Indian Ocean region.",
+  "themes": ["regional cooperation", "blue economy", "sustainability", "market development"],
+  "protected": true,
+  "links": [
+    {
+      "label": "Regional Framework",
+      "href": "/indian-ocean",
+      "protected": true
+    },
+    {
+      "label": "Territory Profiles",
+      "href": "/projects/indian-ocean/territories",
+      "protected": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Benin",
+  "slug": "benin",
+  "status": "active",
+  "year": 2026,
+  "client": "ITC / Private",
+  "summary": "Cultural tourism development and international market positioning strategy for Benin's heritage and arts sector.",
+  "description": "Strategic development of Benin's cultural tourism offering with focus on heritage sites, performing arts, and artisan products positioning.",
+  "themes": ["cultural tourism", "capacity building", "heritage sites", "market positioning"],
+  "protected": true,
+  "links": [
+    {
+      "label": "Strategic Framework",
+      "href": "/projects/benin/framework",
+      "protected": true
+    }
+  ]
+}

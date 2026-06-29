@@ -1,0 +1,28 @@
+{
+  "name": "The Gambia",
+  "slug": "gambia",
+  "status": "active",
+  "year": 2026,
+  "client": "ITC YEP",
+  "summary": "Capacity building and market positioning for Gambian tourism operators and guides, with focus on birding tourism and international market access.",
+  "description": "Working with the International Trade Centre (ITC) Young Entrepreneurs Programme to strengthen the capacity and market positioning of tourism stakeholders in The Gambia.",
+  "themes": ["birding", "capacity building", "market positioning", "guides training"],
+  "protected": true,
+  "links": [
+    {
+      "label": "BirdFair B2B Toolkit",
+      "href": "/gambia-birdfair-toolkit",
+      "protected": true
+    },
+    {
+      "label": "BirdFair Prep Deck",
+      "href": "/gambia-birdfair",
+      "protected": true
+    },
+    {
+      "label": "Institutional Workshop Materials",
+      "href": "/projects/gambia/workshop",
+      "protected": true
+    }
+  ]
+}
