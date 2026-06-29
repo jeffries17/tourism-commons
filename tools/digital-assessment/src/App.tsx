@@ -59,9 +59,6 @@ function App() {
                       Supporting  and digital capacity building across West Africa. 
                       A common good initiative for tourism operators, creative industries, and cultural heritage sites.
                     </p>
-                    <p className="text-base text-gray-600 max-w-2xl mx-auto">
-                      In partnership with the International Trade Centre (ITC)
-                    </p>
                   </div>
 
                   {/* Action Cards */}

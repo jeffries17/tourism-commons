@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencia de Plataformas Digitales</title>
+    <style>
+        :root {
+            --teal: #3E9987; --teal-dark: #2D7A6A; --teal-light: #E6F4F1;
+            --navy: #1B2B5A; --gold: #F5C400; --gold-light: #FEF7D6;
+            --red: #C8352A; --bg: #F7F8F5; --border: #DDE3DC;
+            --text: #1A1A1A; --text-muted: #5A6478;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: var(--bg); padding: 1.5rem; color: var(--text); }
+        .page { max-width: 900px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 3px 16px rgba(0,0,0,0.08); overflow: hidden; }
+
+        .header { background: var(--navy); padding: 1.1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+        .header h1 { color: white; font-size: 1rem; font-weight: 700; }
+        .header p { color: rgba(255,255,255,0.5); font-size: 0.7rem; margin-top: 0.1rem; }
+        .header-badge { background: var(--gold); color: var(--navy); padding: 0.3rem 0.85rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+
+        .intro { padding: 0.8rem 2rem; background: var(--teal-light); border-bottom: 2px solid var(--teal); font-size: 0.8rem; color: var(--teal-dark); line-height: 1.5; }
+        .intro strong { color: var(--navy); }
+
+        .platforms { padding: 1.25rem 2rem; display: flex; flex-direction: column; gap: 1.1rem; }
+
+        .platform { border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .platform-header { padding: 0.7rem 1.1rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid var(--border); }
+        .platform-logo { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex: 0 0 32px; }
+        .platform-name { font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+        .platform-type { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }
+        .platform-priority { margin-left: auto; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 3px; white-space: nowrap; }
+        .priority-high { background: #fde8e8; color: var(--red); }
+        .priority-med { background: var(--gold-light); color: #7A6000; }
+        .priority-low { background: var(--bg); color: var(--text-muted); border: 1px solid var(--border); }
+
+        .platform-body { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+        .platform-col { padding: 0.85rem 1.1rem; border-right: 1px solid var(--border); }
+        .platform-col:last-child { border-right: none; }
+        .col-title { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+        ul.check-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+        ul.check-list li { font-size: 0.78rem; color: var(--text); padding-left: 1.1rem; position: relative; line-height: 1.4; }
+        ul.check-list li::before { content: '□'; position: absolute; left: 0; color: var(--border); font-size: 0.8rem; }
+
+        ul.tip-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+        ul.tip-list li { font-size: 0.78rem; color: var(--text-muted); padding-left: 1.1rem; position: relative; line-height: 1.4; font-style: italic; }
+        ul.tip-list li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.7rem; top: 0.15rem; }
+
+        .red-flag { font-size: 0.75rem; color: var(--red); padding-left: 1rem; position: relative; line-height: 1.4; margin-top: 0.2rem; }
+        .red-flag::before { content: '✗'; position: absolute; left: 0; font-weight: 700; font-size: 0.7rem; }
+
+        .na-note { font-size: 0.78rem; color: var(--text-muted); font-style: italic; padding: 0.85rem 1.1rem; }
+
+        .footer-bar { background: var(--navy); padding: 0.55rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bar p { font-size: 0.62rem; color: rgba(255,255,255,0.4); }
+        .print-btn { padding: 0.28rem 0.8rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; font-size: 0.68rem; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; }
+
+        @media print { body { background: white; padding: 0; } .page { box-shadow: none; } .print-btn { display: none; } .platform { break-inside: avoid; } }
+        @media (max-width: 650px) {
+            body { padding: 0; } .page { border-radius: 0; } .platforms { padding: 1rem; }
+            .platform-body { grid-template-columns: 1fr; }
+            .platform-col { border-right: none; border-bottom: 1px solid var(--border); }
+            .platform-col:last-child { border-bottom: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="header">
+        <div>
+            <h1>Referencia de Plataformas Digitales — Auditoría</h1>
+            <p>Lo Responsable Vende · Recurso para la Sesión 2</p>
+        </div>
+        <div class="header-badge">Auditoría</div>
+    </div>
+
+    <div class="intro">
+        Usa esta hoja junto con la Plantilla de Auditoría. Para cada plataforma: marca lo que tienes ✓, señala lo que falta, y anota una acción concreta. <strong>Prioridad alta = lo que un comprador europeo verá primero.</strong>
+    </div>
+
+    <div class="platforms">
+
+        <!-- WEB PROPIA -->
+        <div class="platform">
+            <div class="platform-header">
+                <div class="platform-logo" style="background:#E6F0FB;">🌐</div>
+                <div>
+                    <div class="platform-name">Web propia</div>
+                    <div class="platform-type">Tu punto de entrada principal con compradores europeos</div>
+                </div>
+                <div class="platform-priority priority-high">Prioridad alta</div>
+            </div>
+            <div class="platform-body">
+                <div class="platform-col">
+                    <div class="col-title">Qué revisar</div>
+                    <ul class="check-list">
+                        <li>¿Hay versión en inglés?</li>
+                        <li>¿Existe sección B2B o "Para agencias"?</li>
+                        <li>¿El impacto responsable tiene página propia?</li>
+                        <li>¿El email de contacto es visible en portada?</li>
+                        <li>¿Los tours tienen precio o "precio disponible"?</li>
+                        <li>¿Hay testimonios de operadores europeos?</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Tips clave</div>
+                    <ul class="tip-list">
+                        <li>El comprador europeo llega a tu web antes de escribirte. Tiene que encontrar lo que necesita en 90 segundos</li>
+                        <li>Una sola página en inglés bien hecha vale más que toda la web en español</li>
+                        <li>El impacto comunitario necesita estar separado — no enterrado en "Sobre nosotros"</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Señales de problema</div>
+                    <div class="red-flag">Solo en español, sin indicación de idioma</div>
+                    <div class="red-flag">Formulario de contacto como único canal</div>
+                    <div class="red-flag">"Somos sostenibles" sin ningún dato</div>
+                    <div class="red-flag">Fotos de stock en lugar de reales</div>
+                    <div class="red-flag">Última actualización hace más de 2 años</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GOOGLE BUSINESS -->
+        <div class="platform">
+            <div class="platform-header">
+                <div class="platform-logo" style="background:#fce8e6;">🔍</div>
+                <div>
+                    <div class="platform-name">Google Business Profile</div>
+                    <div class="platform-type">Lo que aparece cuando alguien te busca en Google</div>
+                </div>
+                <div class="platform-priority priority-high">Prioridad alta</div>
+            </div>
+            <div class="platform-body">
+                <div class="platform-col">
+                    <div class="col-title">Qué revisar</div>
+                    <ul class="check-list">
+                        <li>¿Está reclamado y verificado?</li>
+                        <li>¿La categoría es "Tour operator" o similar?</li>
+                        <li>¿La descripción menciona turismo responsable?</li>
+                        <li>¿Hay al menos 5 fotos de calidad?</li>
+                        <li>¿Horario de atención correcto?</li>
+                        <li>¿Link a la web correcto?</li>
+                        <li>¿Hay reseñas? ¿Se responden?</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Tips clave</div>
+                    <ul class="tip-list">
+                        <li>Escribe la descripción en español E inglés si el panel lo permite</li>
+                        <li>Usar palabras clave: "responsible tourism Colombia", "community tourism", tu región</li>
+                        <li>Responder reseñas (incluso negativas) muestra profesionalismo</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Señales de problema</div>
+                    <div class="red-flag">Perfil no reclamado (aparece genérico)</div>
+                    <div class="red-flag">Sin fotos o fotos de baja calidad</div>
+                    <div class="red-flag">Descripción vacía o genérica</div>
+                    <div class="red-flag">Reseñas sin respuesta</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INSTAGRAM -->
+        <div class="platform">
+            <div class="platform-header">
+                <div class="platform-logo" style="background:#fce4ec;">📸</div>
+                <div>
+                    <div class="platform-name">Instagram</div>
+                    <div class="platform-type">Vitrina visual — compradores lo visitan para ver el producto en acción</div>
+                </div>
+                <div class="platform-priority priority-med">Prioridad media</div>
+            </div>
+            <div class="platform-body">
+                <div class="platform-col">
+                    <div class="col-title">Qué revisar</div>
+                    <ul class="check-list">
+                        <li>¿La bio menciona lo que haces + idioma?</li>
+                        <li>¿Hay frase o línea en inglés en la bio?</li>
+                        <li>¿Link en bio lleva a la web correcta?</li>
+                        <li>¿Las fotos reflejan el producto responsable?</li>
+                        <li>¿Aparecen personas reales (comunidad, guías)?</li>
+                        <li>¿Actividad en los últimos 3 meses?</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Tips clave</div>
+                    <ul class="tip-list">
+                        <li>El comprador no busca en Instagram — pero confirma su impresión ahí. Lo que necesita ver: autenticidad, no perfección</li>
+                        <li>Una historia de impacto comunitario bien contada (con foto real) vale más que 10 paisajes genéricos</li>
+                        <li>Los Reels de experiencias reales generan más alcance que fotos estáticas</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Señales de problema</div>
+                    <div class="red-flag">Bio completamente en español sin contexto</div>
+                    <div class="red-flag">Últimas publicaciones hace más de 6 meses</div>
+                    <div class="red-flag">Solo fotos de paisajes, sin personas ni experiencias</div>
+                    <div class="red-flag">Link en bio roto o sin actualizar</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="platform">
+            <div class="platform-header">
+                <div class="platform-logo" style="background:#e3f2fd;">💼</div>
+                <div>
+                    <div class="platform-name">LinkedIn</div>
+                    <div class="platform-type">Canal B2B por excelencia — donde los compradores europeos buscan proveedores</div>
+                </div>
+                <div class="platform-priority priority-med">Prioridad media</div>
+            </div>
+            <div class="platform-body">
+                <div class="platform-col">
+                    <div class="col-title">Qué revisar</div>
+                    <ul class="check-list">
+                        <li>¿Existe página de empresa?</li>
+                        <li>¿La descripción está en inglés?</li>
+                        <li>¿La categoría es correcta (Travel & Tourism)?</li>
+                        <li>¿Hay al menos 1 publicación en los últimos 6 meses?</li>
+                        <li>¿El perfil personal del fundador/a está conectado?</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Tips clave</div>
+                    <ul class="tip-list">
+                        <li>LinkedIn es donde los compradores B2B europeos confirman que eres un proveedor serio, no solo un Instagram bonito</li>
+                        <li>No necesitas publicar cada semana — necesitas existir y tener descripción en inglés</li>
+                        <li>Conectar con organizaciones como SIPPO, LATA, AITO es fácil y visible</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Señales de problema</div>
+                    <div class="red-flag">No existe página de empresa</div>
+                    <div class="red-flag">Descripción en español únicamente</div>
+                    <div class="red-flag">Sin actividad desde hace más de un año</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRIPADVISOR -->
+        <div class="platform">
+            <div class="platform-header">
+                <div class="platform-logo" style="background:#e8f5e9;">⭐</div>
+                <div>
+                    <div class="platform-name">TripAdvisor</div>
+                    <div class="platform-type">Referencia de reputación — viajeros europeos lo consultan antes de reservar</div>
+                </div>
+                <div class="platform-priority priority-med">Prioridad media</div>
+            </div>
+            <div class="platform-body">
+                <div class="platform-col">
+                    <div class="col-title">Qué revisar</div>
+                    <ul class="check-list">
+                        <li>¿El perfil está reclamado?</li>
+                        <li>¿La descripción está en inglés?</li>
+                        <li>¿Hay reseñas de viajeros europeos?</li>
+                        <li>¿Se responden las reseñas?</li>
+                        <li>¿Las fotos son actuales y de calidad?</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Tips clave</div>
+                    <ul class="tip-list">
+                        <li>Para compradores europeos TripAdvisor es prueba social — no canal de venta. Necesitan ver reseñas en inglés/francés/alemán</li>
+                        <li>Pide reseñas activamente a clientes europeos después de cada experiencia</li>
+                        <li>Responder en el idioma del reseñador (aunque sea con IA) es un detalle que nota el comprador europeo</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Señales de problema</div>
+                    <div class="red-flag">Perfil sin reclamar o desactualizado</div>
+                    <div class="red-flag">Solo reseñas en español</div>
+                    <div class="red-flag">Reseñas negativas sin respuesta</div>
+                    <div class="red-flag">Menos de 5 reseñas en total</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OTAs -->
+        <div class="platform">
+            <div class="platform-header">
+                <div class="platform-logo" style="background:#f3e5f5;">🌿</div>
+                <div>
+                    <div class="platform-name">OTAs especializadas en turismo responsable</div>
+                    <div class="platform-type">Ethical Travel Portal · Lokal Travel · Evaneos · kimkim · Much Better Adventures</div>
+                </div>
+                <div class="platform-priority priority-low">Horizonte 3 meses</div>
+            </div>
+            <div class="platform-body">
+                <div class="platform-col">
+                    <div class="col-title">Qué revisar</div>
+                    <ul class="check-list">
+                        <li>¿Estás en alguna de estas plataformas?</li>
+                        <li>Si sí: ¿el perfil está activo y actualizado?</li>
+                        <li>¿Tu modelo de negocio encaja con alguna?</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Qué hace cada una</div>
+                    <ul class="tip-list">
+                        <li><strong>Ethical Travel Portal:</strong> directorio B2B de operadores responsables certificados</li>
+                        <li><strong>Lokal Travel:</strong> turismo comunitario, modelo de ingresos directos a comunidades</li>
+                        <li><strong>Evaneos / kimkim:</strong> conectan viajeros FIT con agentes locales</li>
+                        <li><strong>Much Better Adventures:</strong> aventura con propósito, clientela europea activa</li>
+                    </ul>
+                </div>
+                <div class="platform-col">
+                    <div class="col-title">Por dónde empezar</div>
+                    <ul class="tip-list">
+                        <li>Antes de aplicar a cualquiera: ten la web en inglés y la ficha técnica lista</li>
+                        <li>Empieza por la que mejor encaje con tu nicho — no apliques a todas a la vez</li>
+                        <li>El proceso de aprobación puede tomar semanas — empiézalo con tiempo antes de una feria</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bar">
+        <p>Lo Responsable Vende · TRECC / Institut Français Colombia · Sesión 2 · 28 de abril de 2026</p>
+        <button class="print-btn" onclick="window.print()">🖨 Imprimir</button>
+    </div>
+
+</div>
+</body>
+</html>

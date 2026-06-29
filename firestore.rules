@@ -1,0 +1,83 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Sentiment analysis sessions
+    match /sentiment_sessions/{sessionId} {
+      // Users can read their own sessions
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      
+      // Users can create sessions with their own userId
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      
+      // Users can update their own sessions
+      allow update: if request.auth != null && request.auth.uid == resource.data.userId;
+      
+      // Users can delete their own sessions
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // CBT Monitoring - Communities collection
+    // All authenticated users can read communities
+    // Only admins can write (create/update/delete) via API endpoints
+    match /communities/{communityId} {
+      allow read: if request.auth != null;
+      // Write operations are handled via Cloud Functions API endpoints
+      // which check admin status server-side
+      allow write: if false;
+    }
+    
+    // CBT Monitoring - Responses collection (form submissions)
+    // Authenticated users can read and create responses
+    // Updates/deletes are handled via Cloud Functions API endpoints
+    match /responses/{responseId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      // Updates/deletes handled via API endpoints
+      allow update, delete: if false;
+    }
+    
+    // Users collection (for admin role checking)
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      // Write operations handled via Cloud Functions
+      allow write: if false;
+    }
+
+    // Colombia quiz results — unauthenticated create, authenticated read
+    match /quiz_results/{docId} {
+      allow create: if true;
+      allow read: if request.auth != null;
+      allow update, delete: if false;
+    }
+
+    // B2B Toolkit — guide chapter completion tracking
+    // Unauthenticated guides can create/update their own progress record.
+    // Reads open so admin view works without auth.
+    match /toolkit_progress/{guideId} {
+      allow create, update: if true;
+      allow read: if true;
+      allow delete: if false;
+    }
+
+    // Tourism Instagram Index - public read-only collections
+    match /destinations/{destinationId} {
+      // Public can read destination metadata; writes only via backend
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /tourismProfiles/{profileId} {
+      // Public can read discovered tourism profiles; writes only via backend
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /visitorSeries/{seriesId} {
+      // Public can read visitor stats; writes only via backend
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
+
+

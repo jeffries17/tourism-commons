@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Prototipo · Tarjeta D · Slow Trotteurs · Día 1 y Día 2</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; box-shadow: none; margin: 0; }
+            .card:last-child { page-break-after: avoid; }
+        }
+
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --rule: #D6D8DD;
+
+            /* Slow Trotteurs · slow · sand + tobacco + brick */
+            --slow-bg: #FFFFFF;
+            --slow-ink: #5A3F1A;
+            --slow-accent: #B85535;
+            --slow-rule: #5A3F1A;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--ink);
+            line-height: 1.5;
+            background: #ECEDEE;
+        }
+
+        .screen-only {
+            background: var(--slow-ink);
+            color: white;
+            padding: 1.25rem 2rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+        .screen-only h1 {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+
+        .card {
+            width: 210mm;
+            height: 297mm;
+            padding: 18mm 18mm;
+            background: var(--slow-bg);
+            margin: 18px auto;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10mm;
+        }
+        .card-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ink-muted);
+            margin-bottom: 6mm;
+        }
+        .card-logo {
+            font-family: Georgia, serif;
+            font-size: 2.4rem;
+            line-height: 1.05;
+            margin: 0 0 2mm 0;
+            color: var(--slow-ink);
+            letter-spacing: 0.5px;
+            font-style: italic;
+        }
+        .card-archetype {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--slow-ink);
+            font-style: italic;
+        }
+        .card-tag {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 2mm 4mm;
+            border: 1.5px solid var(--slow-ink);
+            color: var(--slow-ink);
+            text-align: center;
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        .accent-rule {
+            height: 3px;
+            background: var(--slow-accent);
+            margin: 6mm 0 8mm 0;
+            width: 30mm;
+        }
+
+        .section-h {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--slow-ink);
+            margin: 0 0 4mm 0;
+        }
+
+        .section-block {
+            margin-bottom: 8mm;
+        }
+
+        ul.facts {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: f;
+        }
+        ul.facts li {
+            counter-increment: f;
+            font-family: Georgia, serif;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            padding: 0 0 3mm 9mm;
+            position: relative;
+        }
+        ul.facts li::before {
+            content: counter(f);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.85rem;
+            width: 6mm;
+            height: 6mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--slow-accent);
+        }
+
+        ul.products {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.products li {
+            font-family: Georgia, serif;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            padding: 0 0 2mm 7mm;
+            position: relative;
+        }
+        ul.products li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3.4mm;
+            width: 3.5mm;
+            height: 3.5mm;
+            background: var(--slow-accent);
+            border-radius: 50%;
+        }
+        ul.products li strong {
+            color: var(--slow-ink);
+        }
+        ul.products li .desc {
+            color: var(--ink-muted);
+            font-size: 0.88rem;
+        }
+
+        ul.questions {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: q;
+        }
+        ul.questions li {
+            counter-increment: q;
+            font-family: Georgia, serif;
+            font-size: 1.02rem;
+            line-height: 1.5;
+            padding: 0 0 4mm 10mm;
+            position: relative;
+        }
+        ul.questions li::before {
+            content: counter(q);
+            position: absolute;
+            left: 0;
+            top: 0.5mm;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.9rem;
+            width: 7mm;
+            height: 7mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--slow-ink);
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(90, 63, 26, 0.22);
+            margin: 3mm 0 8mm 0;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 5mm;
+            border-top: 1px dashed var(--slow-rule);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.7rem;
+            color: var(--ink-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Prototipo · Tarjeta D · Slow Trotteurs · Día 1 y Día 2</h1>
+    <p>A4 vertical · una cara · en español. Identidad: operador francés cooperativo, slow travel, mobilidad lenta, 1 % a Restos du Cœur, compensación de carbono con ONG locales nombradas (Envol Vert en Colombia).</p>
+</div>
+
+
+<!-- =====================================================
+     TARJETA D · SLOW TROTTEURS · DÍA 1 · CONOCERSE
+     ===================================================== -->
+<article class="card" aria-label="Tarjeta D Slow Trotteurs - Día 1">
+
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta D · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Slow<br>Trotteurs</h2>
+            <p class="card-archetype">Operador francés · slow travel · transparencia radical</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés "slow" — estadías largas, encuentros profundos, mobilidad lenta (tren, bici, barco, caminata) por defecto.</li>
+            <li>Dono el 1 % del precio de cada viaje a Restos du Cœur en Francia, sin retener nada del aporte.</li>
+            <li>Compenso el 100 % del carbono de mis viajeros vía ONG locales nombradas — en Colombia trabajo con Envol Vert (reforestación).</li>
+            <li>Publico en mi web los nombres de mis ONG socias por país, mi metodología de cálculo (ADEME) y el nombre de la persona de mi equipo que te va a atender.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes privados a medida</strong> <span class="desc">— el corazón de mi propuesta, todos los viajes son personalizados</span></li>
+            <li><strong>Viajes "slow"</strong> <span class="desc">— estadías largas, ritmo pausado, mínimo 10–12 días</span></li>
+            <li><strong>Viajes en familia</strong> <span class="desc">— variante familiar del viaje slow</span></li>
+            <li><strong>Encuentros con productores y comunidades</strong> <span class="desc">— eje cultural o de naturaleza con tiempo real para conocer</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Contame de tu negocio. ¿Quién sos vos? ¿Qué hacés?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Cómo es el ritmo de tu propuesta? ¿Estadías cortas, largas, mixtas?</li>
+            <li>¿Qué ganan las familias, productores o comunidades locales cuando trabajan con vos?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para vos?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span>
+        <span>D</span>
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     TARJETA D · SLOW TROTTEURS · DÍA 2 · PROFUNDIZAR
+     ===================================================== -->
+<article class="card" aria-label="Tarjeta D Slow Trotteurs - Día 2">
+
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta D · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Slow<br>Trotteurs</h2>
+            <p class="card-archetype">Operador francés · slow travel · transparencia radical</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés "slow" — estadías largas, encuentros profundos, mobilidad lenta (tren, bici, barco, caminata) por defecto.</li>
+            <li>Dono el 1 % del precio de cada viaje a Restos du Cœur en Francia, sin retener nada del aporte.</li>
+            <li>Compenso el 100 % del carbono de mis viajeros vía ONG locales nombradas — en Colombia trabajo con Envol Vert (reforestación).</li>
+            <li>Publico en mi web los nombres de mis ONG socias por país, mi metodología de cálculo (ADEME) y el nombre de la persona de mi equipo que te va a atender.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes privados a medida</strong> <span class="desc">— el corazón de mi propuesta, todos los viajes son personalizados</span></li>
+            <li><strong>Viajes "slow"</strong> <span class="desc">— estadías largas, ritmo pausado, mínimo 10–12 días</span></li>
+            <li><strong>Viajes en familia</strong> <span class="desc">— variante familiar del viaje slow</span></li>
+            <li><strong>Encuentros con productores y comunidades</strong> <span class="desc">— eje cultural o de naturaleza con tiempo real para conocer</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Qué porcentaje del ingreso del viaje se queda en la zona donde operás? ¿Lo medís? ¿Lo publicás?</li>
+            <li>¿Cómo pensás la compensación del carbono o el impacto ambiental de tu propuesta? ¿Con qué metodología?</li>
+            <li>¿Trabajás con alguna ONG en Colombia? ¿Cómo es la relación?</li>
+            <li>¿Quién es la persona en tu equipo (o en terreno) que va a estar en contacto directo con mi cliente?</li>
+            <li>¿Cómo se mueve tu cliente entre lugares y cuánto tiempo se queda en cada uno?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span>
+        <span>D</span>
+    </div>
+
+</article>
+
+</body>
+</html>

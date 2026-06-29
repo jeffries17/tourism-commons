@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Prototipo · Tarjeta K · Wikinger Reisen · Día 1 y Día 2</title>
+    <style>
+        @page { size: A4 portrait; margin: 0; }
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; box-shadow: none; margin: 0; }
+            .card:last-child { page-break-after: avoid; }
+        }
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --rule: #D6D8DD;
+            /* Wikinger Reisen · DE mid-market active · white + navy + red */
+            --wik-bg: #FFFFFF;
+            --wik-ink: #1E3A5F;
+            --wik-accent: #A92027;
+            --wik-rule: #1E3A5F;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', serif; color: var(--ink); line-height: 1.5; background: #ECEDEE; }
+        .screen-only { background: var(--wik-ink); color: white; padding: 1.25rem 2rem; font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.55; }
+        .screen-only h1 { font-family: Georgia, serif; font-size: 1.3rem; margin: 0 0 0.5rem 0; color: white; }
+        .card { width: 210mm; height: 297mm; padding: 18mm 18mm; background: var(--wik-bg); margin: 18px auto; box-shadow: 0 4px 18px rgba(0,0,0,0.12); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; }
+        .card-id { font-family: 'Arial Black', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-muted); margin-bottom: 6mm; }
+        .card-logo { font-family: Georgia, serif; font-size: 2.4rem; line-height: 1.05; margin: 0 0 2mm 0; color: var(--wik-ink); letter-spacing: 0.5px; }
+        .card-archetype { font-family: 'Arial', sans-serif; font-size: 0.85rem; margin: 0; color: var(--wik-ink); font-style: italic; }
+        .card-tag { font-family: 'Arial Black', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 2mm 4mm; border: 1.5px solid var(--wik-ink); color: var(--wik-ink); text-align: center; line-height: 1.2; flex-shrink: 0; }
+        .accent-rule { height: 3px; background: var(--wik-accent); margin: 6mm 0 8mm 0; width: 30mm; }
+        .section-h { font-family: 'Arial Black', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--wik-ink); margin: 0 0 4mm 0; }
+        .section-block { margin-bottom: 8mm; }
+        ul.facts { list-style: none; margin: 0; padding: 0; counter-reset: f; }
+        ul.facts li { counter-increment: f; font-family: Georgia, serif; font-size: 0.98rem; line-height: 1.5; padding: 0 0 3mm 9mm; position: relative; }
+        ul.facts li::before { content: counter(f); position: absolute; left: 0; top: 0; font-family: 'Arial Black', sans-serif; font-size: 0.85rem; width: 6mm; height: 6mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; background: var(--wik-accent); }
+        ul.products { list-style: none; margin: 0; padding: 0; }
+        ul.products li { font-family: Georgia, serif; font-size: 0.98rem; line-height: 1.5; padding: 0 0 2mm 7mm; position: relative; }
+        ul.products li::before { content: ''; position: absolute; left: 0; top: 3.4mm; width: 3.5mm; height: 3.5mm; background: var(--wik-accent); border-radius: 50%; }
+        ul.products li strong { color: var(--wik-ink); }
+        ul.products li .desc { color: var(--ink-muted); font-size: 0.88rem; }
+        ul.questions { list-style: none; margin: 0; padding: 0; counter-reset: q; }
+        ul.questions li { counter-increment: q; font-family: Georgia, serif; font-size: 1.02rem; line-height: 1.5; padding: 0 0 4mm 10mm; position: relative; }
+        ul.questions li::before { content: counter(q); position: absolute; left: 0; top: 0.5mm; font-family: 'Arial Black', sans-serif; font-size: 0.9rem; width: 7mm; height: 7mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; background: var(--wik-ink); }
+        .divider { height: 1px; background: rgba(30, 58, 95, 0.18); margin: 3mm 0 8mm 0; }
+        .card-footer { margin-top: auto; padding-top: 5mm; border-top: 1px dashed var(--wik-rule); font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--ink-muted); display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Prototipo · Tarjeta K · Wikinger Reisen · Día 1 y Día 2</h1>
+    <p>A4 vertical · una cara · en español. Identidad: operador alemán activo desde 1969, escala media-grande, miembro del Forum Anders Reisen, foco en senderismo y viajes activos.</p>
+</div>
+
+
+<!-- TARJETA K · WIKINGER REISEN · DÍA 1 -->
+<article class="card" aria-label="Tarjeta K Wikinger Reisen - Día 1">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta K · Día 1 · Conocerse</div>
+            <h2 class="card-logo">WIKINGER<br>REISEN</h2>
+            <p class="card-archetype">Operador alemán · senderismo y viajes activos desde 1969</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador alemán activo desde 1969 — más de 55 años especializado en senderismo y viajes activos.</li>
+            <li>Tengo un equipo grande (alrededor de 1000 personas) y opero en muchos países — escala media-grande, no boutique.</li>
+            <li>Soy miembro del Forum Anders Reisen, federación alemana de operadores comprometidos con el turismo responsable.</li>
+            <li>Mi cliente alemán típico camina mucho, lleva su equipo y exige seguridad. Necesita rutas bien preparadas y guías certificados.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes activos en grupo</strong> <span class="desc">— senderismo, montaña, naturaleza, 12–25 personas</span></li>
+            <li><strong>Viajes activos individuales a medida</strong> <span class="desc">— el mismo nivel técnico, en formato privado</span></li>
+            <li><strong>Cicloturismo</strong> <span class="desc">— guiado o autoguiado, con apoyo logístico</span></li>
+            <li><strong>Wellness activo y viajes para senior</strong> <span class="desc">— combinación de actividad y descanso, ritmo adaptado</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Contame de tu negocio. ¿Quién sos vos? ¿Qué hacés?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué experiencias activas (senderismo, naturaleza, exploración) ofrecés?</li>
+            <li>¿Cómo cuidás a tus viajeros y al lugar donde caminás?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para vos?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span>
+        <span>K</span>
+    </div>
+</article>
+
+
+<!-- TARJETA K · WIKINGER REISEN · DÍA 2 -->
+<article class="card" aria-label="Tarjeta K Wikinger Reisen - Día 2">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta K · Día 2 · Profundizar</div>
+            <h2 class="card-logo">WIKINGER<br>REISEN</h2>
+            <p class="card-archetype">Operador alemán · senderismo y viajes activos desde 1969</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador alemán activo desde 1969 — más de 55 años especializado en senderismo y viajes activos.</li>
+            <li>Tengo un equipo grande (alrededor de 1000 personas) y opero en muchos países — escala media-grande, no boutique.</li>
+            <li>Soy miembro del Forum Anders Reisen, federación alemana de operadores comprometidos con el turismo responsable.</li>
+            <li>Mi cliente alemán típico camina mucho, lleva su equipo y exige seguridad. Necesita rutas bien preparadas y guías certificados.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes activos en grupo</strong> <span class="desc">— senderismo, montaña, naturaleza, 12–25 personas</span></li>
+            <li><strong>Viajes activos individuales a medida</strong> <span class="desc">— el mismo nivel técnico, en formato privado</span></li>
+            <li><strong>Cicloturismo</strong> <span class="desc">— guiado o autoguiado, con apoyo logístico</span></li>
+            <li><strong>Wellness activo y viajes para senior</strong> <span class="desc">— combinación de actividad y descanso, ritmo adaptado</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Tu equipo tiene capacidad para atender grupos de 12–25 personas con regularidad?</li>
+            <li>¿Qué tipo de seguros tenés? ¿Asistencia médica en ruta?</li>
+            <li>¿Tus guías están certificados? ¿En qué idiomas comunican?</li>
+            <li>¿Cómo está documentada tu propuesta — fichas técnicas, mapas, perfiles de dificultad?</li>
+            <li>¿Cómo respondés a una solicitud de un operador europeo — en qué idiomas y en cuánto tiempo?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span>
+        <span>K</span>
+    </div>
+</article>
+
+</body>
+</html>

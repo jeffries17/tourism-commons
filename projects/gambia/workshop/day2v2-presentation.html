@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gambia Institutional Capacity Workshop — Day 2 v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink:    #E6007E;
+  --navy:    #1A2B4A;
+  --text:    #3D3D3D;
+  --muted:   #7A7A7A;
+  --surface: #F4F4F4;
+  --accent:  #0091D4;
+  --bg:      #ffffff;
+  --bdr:     #E2E2E2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bdr); z-index: 100; padding: .8rem 2rem;
+}
+.nav-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-weight: 700; font-size: .88rem; color: var(--navy); }
+.nav-badge { background: var(--navy); color: #fff; padding: .25rem .9rem; border-radius: 20px; font-size: .71rem; font-weight: 600; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed; left: 1.4rem; top: 50%; transform: translateY(-50%);
+  z-index: 99; display: flex; flex-direction: column; gap: .42rem;
+  max-height: 90vh; overflow-y: auto; padding: .4rem 0;
+}
+.sidebar::-webkit-scrollbar { width: 0; }
+.sb-item { display: flex; align-items: center; gap: .55rem; cursor: pointer; transition: all .22s; }
+.sb-item:hover { transform: scale(1.1); }
+.sb-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--bdr); transition: all .22s; }
+.sb-item:hover  .sb-dot { background: var(--pink); transform: scale(1.4); }
+.sb-item.active .sb-dot { background: var(--pink); width: 11px; height: 11px; min-width: 11px; }
+.sb-label { font-size: .67rem; color: var(--muted); font-weight: 500; transition: all .22s; max-width: 115px; line-height: 1.3; }
+.sb-item:hover  .sb-label { color: var(--text); font-weight: 600; }
+.sb-item.active .sb-label { color: var(--pink); font-weight: 700; }
+.sb-sep { height: 1px; background: var(--bdr); margin: .1rem 0; }
+.sb-group { font-size: .55rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; padding-left: 1.2rem; font-weight: 700; }
+
+/* ── NAV BUTTONS ── */
+.nav-btns { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: .7rem; z-index: 98; }
+.nav-btn {
+  padding: .72rem 1.5rem; background: var(--pink); color: #fff;
+  border: none; border-radius: 8px; font-size: .88rem; cursor: pointer;
+  display: flex; align-items: center; gap: .4rem;
+  transition: all .22s; box-shadow: 0 2px 10px rgba(230,0,126,.22);
+  font-family: inherit; font-weight: 600;
+}
+.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(230,0,126,.32); }
+.nav-btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
+.nav-btn.prev { background: #fff; color: var(--text); border: 2px solid var(--bdr); box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.nav-btn.prev:hover { box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+
+/* ── SECTIONS ── */
+section { min-height: 100vh; padding: 5rem 2rem 7.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.wrap { max-width: 960px; width: 100%; }
+.bg-surface { background: var(--surface); }
+
+/* ── TYPOGRAPHY ── */
+.eyebrow { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--pink); margin-bottom: .75rem; }
+.h1 { font-size: 2.5rem; font-weight: 900; line-height: 1.15; color: var(--navy); margin-bottom: .7rem; }
+.h2 { font-size: 1.95rem; font-weight: 800; color: var(--navy); margin-bottom: .55rem; line-height: 1.25; }
+.lead { font-size: 1.05rem; color: var(--text); line-height: 1.65; }
+.pink-rule { height: 4px; width: 52px; background: var(--pink); border-radius: 2px; margin-bottom: 1.4rem; }
+.sub-note { font-size: 1.02rem; color: var(--muted); line-height: 1.6; max-width: 760px; }
+
+/* ── L1 COVER ── */
+.cover { position: relative; color: #fff; text-align: center; overflow: hidden; }
+.cover-bg {
+  position: absolute; inset: 0;
+  background: url('img/aboodi-vesakaran-ITBeRPfG36w-unsplash.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+.cover-bg::after { content: ''; position: absolute; inset: 0; background: rgba(26,43,74,.78); }
+.cover .wrap { position: relative; z-index: 1; }
+.cover .h1 { color: #fff; font-size: 2.8rem; }
+.cover-accent { width: 52px; height: 3px; background: var(--pink); border-radius: 2px; margin: 1.4rem auto; }
+.cover-badge {
+  display: inline-block; background: rgba(230,0,126,.22); color: var(--pink);
+  border: 1px solid rgba(230,0,126,.4); padding: .3rem 1rem; border-radius: 20px;
+  font-size: .73rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1.5rem;
+}
+.cover-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: .88rem; color: rgba(255,255,255,.6); margin-top: 1.5rem; }
+
+/* ── PHOTO SECTION ── */
+.photo-section { position: relative; color: #fff; overflow: hidden; }
+.photo-section .photo-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.photo-section .photo-overlay { position: absolute; inset: 0; background: rgba(26,43,74,.74); z-index: 1; }
+.photo-section .wrap { position: relative; z-index: 2; }
+
+/* ── QUOTE / DIVIDER ── */
+.quote-slide { background: var(--navy); text-align: center; }
+.big-quote { font-size: 1.95rem; font-weight: 800; line-height: 1.4; color: #fff; max-width: 760px; margin: 0 auto 1rem; }
+.big-quote em { color: var(--pink); font-style: normal; }
+.quote-rule { width: 48px; height: 3px; background: rgba(255,255,255,.2); border-radius: 2px; margin: 1.6rem auto; }
+.quote-sub { font-size: 1.15rem; color: rgba(255,255,255,.7); max-width: 600px; margin: 0 auto; line-height: 1.65; }
+
+/* ── QUESTION SLIDE ── */
+.q-wrap { width: 100%; }
+.q-meta { display: flex; align-items: center; gap: .85rem; margin-bottom: 1.1rem; flex-wrap: wrap; }
+.q-num {
+  width: 56px; height: 56px; border-radius: 14px;
+  background: var(--pink); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; font-weight: 900;
+  box-shadow: 0 4px 14px rgba(230,0,126,.28);
+}
+.q-meta-text { display: flex; flex-direction: column; gap: .15rem; }
+.q-meta-label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: var(--pink); }
+.q-meta-time { font-size: .82rem; color: var(--muted); font-weight: 600; }
+.q-question { font-size: 2.05rem; font-weight: 800; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; max-width: 880px; }
+.q-frame { font-size: 1rem; color: var(--text); line-height: 1.7; max-width: 780px; margin-bottom: 1.5rem; padding: .9rem 1.1rem; background: var(--surface); border-left: 3px solid var(--pink); border-radius: 0 8px 8px 0; }
+.q-frame em { color: var(--pink); font-style: normal; font-weight: 700; }
+
+/* ── SEED CHIPS ── */
+.seed-label { font-size: .64rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); margin-bottom: .7rem; }
+.seed-chips { display: flex; flex-wrap: wrap; gap: .55rem; max-width: 920px; }
+.seed-chip {
+  background: #fff; border: 1px solid var(--bdr); border-radius: 22px;
+  padding: .48rem 1rem; font-size: .85rem; color: var(--text); font-weight: 500;
+  line-height: 1.4; transition: all .18s;
+}
+.seed-chip:hover { border-color: var(--pink); color: var(--pink); }
+
+/* ── STEPS ROW (used on agenda slide) ── */
+.agenda-list { display: flex; flex-direction: column; gap: .65rem; margin: 1.1rem 0; max-width: 720px; }
+.agenda-row { display: grid; grid-template-columns: 60px 1fr 90px; gap: 1rem; align-items: center; background: #fff; border-radius: 10px; padding: .8rem 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,.06); border-left: 3px solid var(--bdr); }
+.agenda-row.highlight { border-left-color: var(--pink); }
+.agenda-num { font-size: 1.4rem; font-weight: 900; color: var(--navy); }
+.agenda-row.highlight .agenda-num { color: var(--pink); }
+.agenda-title { font-size: .98rem; font-weight: 700; color: var(--navy); }
+.agenda-sub { font-size: .82rem; color: var(--muted); margin-top: .1rem; }
+.agenda-time { font-size: .82rem; color: var(--muted); font-weight: 600; text-align: right; }
+
+/* ── PATTERN BOARD (synthesis) ── */
+.pattern-board { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.2rem; }
+.pattern-card {
+  background: #fff; border-radius: 12px; padding: 1.5rem 1.4rem;
+  border-top: 4px solid var(--bdr); box-shadow: 0 3px 12px rgba(0,0,0,.06);
+  min-height: 220px; display: flex; flex-direction: column;
+}
+.pattern-card.pc-navy   { border-top-color: var(--navy); }
+.pattern-card.pc-accent { border-top-color: var(--accent); }
+.pattern-card.pc-pink   { border-top-color: var(--pink); }
+.pattern-card h4 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: .35rem; }
+.pattern-card .pc-eyebrow { font-size: .58rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: .55rem; }
+.pattern-card p { font-size: .85rem; color: var(--muted); line-height: 1.55; }
+.pattern-card .pc-blank { flex: 1; margin-top: .8rem; border: 2px dashed var(--bdr); border-radius: 8px; min-height: 80px; display: flex; align-items: center; justify-content: center; font-size: .76rem; color: var(--muted); font-style: italic; padding: .6rem; text-align: center; }
+
+/* ── CLOSING ROUND PROMPT ── */
+.round-prompt {
+  background: #fff; border: 2px solid var(--pink); border-radius: 14px;
+  padding: 2rem 2.2rem; text-align: center; max-width: 720px; margin: 0 auto;
+  box-shadow: 0 6px 22px rgba(230,0,126,.12);
+}
+.round-prompt .rp-eyebrow { font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .18em; color: var(--pink); margin-bottom: .8rem; }
+.round-prompt .rp-text { font-size: 1.5rem; font-weight: 800; color: var(--navy); line-height: 1.35; margin-bottom: .8rem; }
+.round-prompt .rp-sub { font-size: .98rem; color: var(--muted); line-height: 1.6; }
+
+/* ── THANKS SLIDE ── */
+.thanks-wrap { text-align: center; color: #fff; position: relative; z-index: 2; }
+.thanks-wrap .h1 { color: #fff; font-size: 3rem; margin-bottom: 1rem; }
+.thanks-wrap .thanks-sub { font-size: 1.1rem; color: rgba(255,255,255,.8); max-width: 540px; margin: 0 auto 1.5rem; line-height: 1.65; }
+.thanks-meta { font-size: .9rem; color: rgba(255,255,255,.55); margin-top: 1.5rem; }
+
+/* ── RESPONSIVE ── */
+@media(max-width: 768px) {
+  .pattern-board { grid-template-columns: 1fr; }
+  .agenda-row { grid-template-columns: 40px 1fr 70px; gap: .65rem; padding: .7rem .9rem; }
+  .sidebar { display: none; }
+  .nav-btns { bottom: 1.25rem; right: 1.25rem; left: 1.25rem; justify-content: space-between; }
+  .h1 { font-size: 1.75rem; }
+  .cover .h1 { font-size: 2rem; }
+  .q-question { font-size: 1.45rem; }
+  .big-quote { font-size: 1.4rem; }
+  section { padding: 4.5rem 1.25rem 7rem; }
+}
+html { scroll-behavior: smooth; scroll-padding-top: 75px; }
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- NAV -->
+<nav>
+<div class="nav-content">
+  <div class="nav-logo">Gambia Institutional Capacity Workshop</div>
+  <div class="nav-badge">Day 2 · ITC YEP · Banjul · May 2026</div>
+</div>
+</nav>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="sb-group">Opening</div>
+  <div class="sb-item active" onclick="go(0)"><div class="sb-dot"></div><span class="sb-label">Cover</span></div>
+  <div class="sb-item" onclick="go(1)"><div class="sb-dot"></div><span class="sb-label">Welcome back</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Five questions</div>
+  <div class="sb-item" onclick="go(3)"><div class="sb-dot"></div><span class="sb-label">Q1 · Asks</span></div>
+  <div class="sb-item" onclick="go(4)"><div class="sb-dot"></div><span class="sb-label">Q2 · Data</span></div>
+  <div class="sb-item" onclick="go(5)"><div class="sb-dot"></div><span class="sb-label">Q3 · Content</span></div>
+  <div class="sb-item" onclick="go(6)"><div class="sb-dot"></div><span class="sb-label">Q4 · Helped before</span></div>
+  <div class="sb-item" onclick="go(7)"><div class="sb-dot"></div><span class="sb-label">Q5 · Going forward</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Close</div>
+  <div class="sb-item" onclick="go(8)"><div class="sb-dot"></div><span class="sb-label">The pattern</span></div>
+  <div class="sb-item" onclick="go(10)"><div class="sb-dot"></div><span class="sb-label">Take it back</span></div>
+</div>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 0 · COVER                           -->
+<!-- ═══════════════════════════════════ -->
+<section class="cover" data-s="0">
+<div class="cover-bg"></div>
+<div class="wrap">
+  <div class="cover-badge">Day 2 of 2</div>
+  <div class="cover-accent"></div>
+  <h1 class="h1">What your members ask for.<br>What you already have.</h1>
+  <p style="color:rgba(255,255,255,.7);font-size:1.05rem;max-width:520px;margin:.85rem auto 0;">Institutional Capacity Workshop · ITC EU Youth Empowerment Project</p>
+  <div class="cover-meta">
+    <span>Banjul, The Gambia</span>
+    <span>May 2026</span>
+    <span>One table · Two hours</span>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 1 · WELCOME BACK / REFRAME          -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="1">
+<div class="wrap">
+  <div class="eyebrow">Welcome back · 0:00–0:10</div>
+  <h2 class="h2">Today is one long conversation.</h2>
+  <div class="pink-rule"></div>
+  <p class="lead" style="margin-bottom:1.1rem;">Yesterday was the outside view — what the data shows about how The Gambia is being sold and seen.</p>
+  <p class="lead" style="margin-bottom:1.1rem;">Today is the inside view — <strong>what's already in your hands</strong>. The contacts, the data, the content, the things you already do to help members. None of which we can see from a slide deck.</p>
+  <p class="lead" style="color:var(--muted);">Five questions. One table. The seed prompts on each slide are there in case the room goes quiet — they're not a list to tick off.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 2 · SHAPE OF TODAY                  -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="2">
+<div class="wrap">
+  <div class="eyebrow">How we'll spend it</div>
+  <h2 class="h2">Five questions, in order.</h2>
+  <div class="pink-rule"></div>
+  <div class="agenda-list">
+    <div class="agenda-row">
+      <div class="agenda-num">1</div>
+      <div>
+        <div class="agenda-title">What your members ask you for</div>
+        <div class="agenda-sub">Spot the 3 or 4 things that come up across the table</div>
+      </div>
+      <div class="agenda-time">20 min</div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-num">2</div>
+      <div>
+        <div class="agenda-title">Data you collect — or could</div>
+        <div class="agenda-sub">What's in registers, surveys, old folders, your head</div>
+      </div>
+      <div class="agenda-time">20 min</div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-num">3</div>
+      <div>
+        <div class="agenda-title">Content you already have</div>
+        <div class="agenda-sub">Photos, stories, contacts, calendars sitting somewhere</div>
+      </div>
+      <div class="agenda-time">20 min</div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-num">4</div>
+      <div>
+        <div class="agenda-title">A time you helped a member succeed</div>
+        <div class="agenda-sub">What did you actually do? Often it was small</div>
+      </div>
+      <div class="agenda-time">20 min</div>
+    </div>
+    <div class="agenda-row highlight">
+      <div class="agenda-num">5</div>
+      <div>
+        <div class="agenda-title">One thing you'll keep going with</div>
+        <div class="agenda-sub">From this week — what you need, who to talk to, how to do it</div>
+      </div>
+      <div class="agenda-time">30 min</div>
+    </div>
+  </div>
+  <p class="sub-note" style="margin-top:1rem;">No commitment ceremony. No flipchart of your gaps. Just an inventory and a conclusion.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 3 · QUESTION 1 — ASKS               -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="3">
+<div class="wrap q-wrap">
+  <div class="q-meta">
+    <div class="q-num">1</div>
+    <div class="q-meta-text">
+      <div class="q-meta-label">Question 1</div>
+      <div class="q-meta-time">20 min · open table</div>
+    </div>
+  </div>
+  <h2 class="q-question">What do your members come to you for, most often?</h2>
+  <div class="q-frame">
+    We're not asking each of you to list yours. We're trying to spot <em>the 3 or 4 things that come up across the table</em> — the pattern.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 4 · QUESTION 2 — DATA               -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="4">
+<div class="wrap q-wrap">
+  <div class="q-meta">
+    <div class="q-num">2</div>
+    <div class="q-meta-text">
+      <div class="q-meta-label">Question 2</div>
+      <div class="q-meta-time">20 min · open table</div>
+    </div>
+  </div>
+  <h2 class="q-question">What data do you already collect — or could collect — about your members or your sector?</h2>
+  <div class="q-frame">
+    Most institutions hold <em>more data than they realise</em>. Some sits in old project folders. Some lives in your head. Some you could ask for next week if you wanted to.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 5 · QUESTION 3 — CONTENT            -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="5">
+<div class="wrap q-wrap">
+  <div class="q-meta">
+    <div class="q-num">3</div>
+    <div class="q-meta-text">
+      <div class="q-meta-label">Question 3</div>
+      <div class="q-meta-time">20 min · open table</div>
+    </div>
+  </div>
+  <h2 class="q-question">What content do you already have — sitting in folders, hard drives, WhatsApp groups, or drawers?</h2>
+  <div class="q-frame">
+    Photos from a 2022 festival. A short film no one watched again. A list of journalists from one project. <em>What's in the building?</em>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 6 · QUESTION 4 — HELPED BEFORE      -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="6">
+<div class="wrap q-wrap">
+  <div class="q-meta">
+    <div class="q-num">4</div>
+    <div class="q-meta-text">
+      <div class="q-meta-label">Question 4</div>
+      <div class="q-meta-time">20 min · open table</div>
+    </div>
+  </div>
+  <h2 class="q-question">Think of a time you helped a member succeed. What did you actually do?</h2>
+  <div class="q-frame">
+    Often the thing you did was small — an introduction, a forwarded email, a seat at a meeting. <em>Those small things are the institutional value already being delivered.</em> Naming them out loud shows the room what's already happening.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 7 · QUESTION 5 — GOING FORWARD      -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="7">
+<div class="wrap q-wrap">
+  <div class="q-meta">
+    <div class="q-num">5</div>
+    <div class="q-meta-text">
+      <div class="q-meta-label">Question 5 · the big one</div>
+      <div class="q-meta-time">30 min · round the table</div>
+    </div>
+  </div>
+  <h2 class="q-question">From this week — what's one thing you'd like to keep going?</h2>
+  <div class="q-frame">
+    Something from the SME training, from yesterday, or from this conversation. Around the table, each of you names one — and answers <em>three short questions</em>: what do you need? who do you need to talk to? how would you actually do it?
+  </div>
+  <div class="q-frame" style="background:#fff;border:1px solid var(--bdr);border-left:3px solid var(--accent);margin-top:.6rem;">
+    <strong style="color:var(--navy);">We all leave with one way forward.</strong> Not a commitment. A direction — specific enough that you'd know on Monday what to do next.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 8 · THE PATTERN (synthesis board)   -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="8">
+<div class="wrap">
+  <div class="eyebrow">What we're seeing · facilitator synthesis</div>
+  <h2 class="h2">What's on the board.</h2>
+  <div class="pink-rule"></div>
+  <p class="sub-note" style="margin-bottom:.4rem;">Across this conversation, three things have surfaced — the inventory of what this room collectively holds.</p>
+  <div class="pattern-board">
+    <div class="pattern-card pc-navy">
+      <div class="pc-eyebrow">Theme A</div>
+      <h4>Data you hold</h4>
+      <p>What members, events, visitors, or sectors you have visibility on.</p>
+      <div class="pc-blank">Facilitator captures live</div>
+    </div>
+    <div class="pattern-card pc-accent">
+      <div class="pc-eyebrow">Theme B</div>
+      <h4>Content you hold</h4>
+      <p>Photos, contacts, calendars, stories — sitting somewhere usable.</p>
+      <div class="pc-blank">Facilitator captures live</div>
+    </div>
+    <div class="pattern-card pc-pink">
+      <div class="pc-eyebrow">Theme C</div>
+      <h4>Actions you can take</h4>
+      <p>The marketing-support moves the room agreed it could realistically make.</p>
+      <div class="pc-blank">Facilitator captures live</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 9 · PULL QUOTE                      -->
+<!-- ═══════════════════════════════════ -->
+<section class="quote-slide" data-s="9">
+<div class="wrap">
+  <p class="big-quote">Marketing support from institutions isn't <em>doing</em> the marketing for your members. It's making it easier for them to be <em>found, trusted, and reached</em>.</p>
+  <div class="quote-rule"></div>
+  <p class="quote-sub">Across this table, you already hold most of what that takes. What's missing is the decision to use it that way.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 10 · ROUND THE TABLE · CLOSE        -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="10">
+<div class="wrap">
+  <div class="round-prompt">
+    <div class="rp-eyebrow">Closing · one sentence each</div>
+    <div class="rp-text">In one sentence — your one way forward.</div>
+    <div class="rp-sub">The thing from Q5 you'll actually move on. Said aloud, so the room hears it and the person you need to talk to knows you said it.</div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 11 · THANK YOU                      -->
+<!-- ═══════════════════════════════════ -->
+<section class="photo-section" data-s="11">
+<div class="photo-bg" style="background-image:url('img/the-gambia-pfivvKSHE18-unsplash.jpg');"></div>
+<div class="photo-overlay"></div>
+<div class="wrap thanks-wrap">
+  <h1 class="h1">Thank you.</h1>
+  <p class="thanks-sub">For the time, the honesty, and the work you're already doing for your members. The infrastructure The Gambia needs to connect to the world is what you build next — and you're closer to it than yesterday suggested.</p>
+  <div class="thanks-meta">ITC EU Youth Empowerment Project · Banjul · May 2026</div>
+</div>
+</section>
+
+
+<!-- NAV BUTTONS -->
+<div class="nav-btns">
+  <button class="nav-btn prev" id="prevBtn" onclick="prev()">← Previous</button>
+  <button class="nav-btn" id="nextBtn" onclick="next()">Next →</button>
+</div>
+
+</div><!-- /app -->
+<script>
+  const secs  = document.querySelectorAll('section');
+  const total = secs.length; // 12 sections (0–11)
+
+  // Sidebar item: [from, to] inclusive — slide range that keeps this item highlighted
+  const SB_ACTIVE = [
+    [0,  0],  // Cover
+    [1,  2],  // Welcome back (includes shape of today)
+    [3,  3],  // Q1 · Asks
+    [4,  4],  // Q2 · Data
+    [5,  5],  // Q3 · Content
+    [6,  6],  // Q4 · Helped before
+    [7,  7],  // Q5 · Going forward
+    [8,  9],  // The pattern (includes pull quote)
+    [10, 11], // Take it back (includes thank you)
+  ];
+
+  let cur = 0;
+
+  function go(sectionIdx) {
+    if (sectionIdx < 0 || sectionIdx >= total) return;
+    secs[sectionIdx].scrollIntoView({ behavior: 'smooth' });
+    cur = sectionIdx;
+    sync();
+  }
+  function next() { if (cur < total - 1) go(cur + 1); }
+  function prev() { if (cur > 0)         go(cur - 1); }
+
+  function sync() {
+    document.querySelectorAll('.sb-item').forEach((el, i) => {
+      if (i >= SB_ACTIVE.length) { el.classList.remove('active'); return; }
+      const [from, to] = SB_ACTIVE[i];
+      el.classList.toggle('active', cur >= from && cur <= to);
+    });
+    document.getElementById('prevBtn').style.display = cur === 0 ? 'none' : 'flex';
+    document.getElementById('nextBtn').disabled = cur === total - 1;
+  }
+
+  let t;
+  window.addEventListener('scroll', () => {
+    clearTimeout(t);
+    t = setTimeout(() => {
+      const mid = window.scrollY + window.innerHeight / 2;
+      secs.forEach((s, i) => {
+        if (mid >= s.offsetTop && mid < s.offsetTop + s.offsetHeight) { cur = i; sync(); }
+      });
+    }, 90);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft' ) { e.preventDefault(); prev(); }
+  });
+
+  document.addEventListener('DOMContentLoaded', sync);
+</script>
+</body>
+</html>

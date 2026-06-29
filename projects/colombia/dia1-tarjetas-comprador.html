@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Día 1 · Tarjetas de Comprador · Ronda 1 Claridad · Colombia bootcamp</title>
+    <style>
+        /* =====================================================
+           PRINT — A5 doble cara · imprimir a doble cara, voltear
+           por el lado largo. Cada tarjeta = 1 página frente + 1
+           página dorso (alineadas).
+           ===================================================== */
+        @page {
+            size: A5;
+            margin: 0;
+        }
+
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; }
+            .card:last-child { page-break-after: avoid; }
+        }
+
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --paper: #FFFFFF;
+            --rule: #D6D8DD;
+
+            /* VdM · sur-mesure premium · navy + gold + white */
+            --vdm-bg: #FFFFFF;
+            --vdm-ink: #14213D;
+            --vdm-accent: #C9A22E;
+            --vdm-rule: #14213D;
+
+            /* Nomade · aventura responsable · green + kraft + warm orange */
+            --nomade-bg: #F5EFE3;
+            --nomade-ink: #1F4A35;
+            --nomade-accent: #C75A1E;
+            --nomade-rule: #1F4A35;
+
+            /* Arts et Vie · cultural · bordeaux + cream + gold */
+            --arts-bg: #FBF7EE;
+            --arts-ink: #6E1A2A;
+            --arts-accent: #B8923A;
+            --arts-rule: #6E1A2A;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--ink);
+            line-height: 1.5;
+            background: #ECEDEE;
+        }
+
+        /* Screen-only intro banner */
+        .screen-only {
+            background: #14213D;
+            color: white;
+            padding: 1.25rem 2rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+        .screen-only h1 {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+        .screen-only code {
+            background: rgba(255,255,255,0.12);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+        }
+
+        /* =====================================================
+           A5 CARD CONTAINER · 148 × 210 mm
+           ===================================================== */
+        .card {
+            width: 148mm;
+            height: 210mm;
+            padding: 14mm 13mm;
+            background: var(--paper);
+            margin: 12px auto;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media print {
+            .card {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        /* =====================================================
+           PER-AGENCY COLOR ASSIGNMENTS
+           ===================================================== */
+        .card.vdm   { background: var(--vdm-bg);    color: var(--ink); }
+        .card.nomade{ background: var(--nomade-bg); color: var(--ink); }
+        .card.arts  { background: var(--arts-bg);   color: var(--ink); }
+
+        .card.vdm    .accent-text { color: var(--vdm-ink); }
+        .card.nomade .accent-text { color: var(--nomade-ink); }
+        .card.arts   .accent-text { color: var(--arts-ink); }
+
+        .card.vdm    .accent-rule { background: var(--vdm-rule); }
+        .card.nomade .accent-rule { background: var(--nomade-rule); }
+        .card.arts   .accent-rule { background: var(--arts-rule); }
+
+        .card.vdm    .accent-bg { background: var(--vdm-accent); }
+        .card.nomade .accent-bg { background: var(--nomade-accent); }
+        .card.arts   .accent-bg { background: var(--arts-accent); }
+
+        /* =====================================================
+           CARD HEADER (frente)
+           ===================================================== */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6mm;
+        }
+
+        .card-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+        }
+
+        .card-tag {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.6rem;
+            color: var(--ink-muted);
+            text-align: right;
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.7rem;
+            letter-spacing: -0.5px;
+            line-height: 1;
+            margin: 0 0 1mm 0;
+        }
+        .card.vdm    .card-logo { color: var(--vdm-ink);    font-family: Georgia, serif; font-weight: 900; letter-spacing: 1px; }
+        .card.nomade .card-logo { color: var(--nomade-ink); font-family: 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card.arts   .card-logo { color: var(--arts-ink);   font-family: Georgia, serif; font-style: italic; font-weight: 700; }
+
+        .card-archetype {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            font-style: italic;
+            margin-bottom: 4mm;
+        }
+
+        .accent-rule {
+            width: 28mm;
+            height: 2px;
+            margin: 0 0 5mm 0;
+        }
+
+        /* Cita verbatim */
+        .cita {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            border-left: 2px solid;
+            padding: 0 0 0 3mm;
+            margin: 0 0 4mm 0;
+        }
+        .card.vdm    .cita { border-color: var(--vdm-accent); }
+        .card.nomade .cita { border-color: var(--nomade-accent); }
+        .card.arts   .cita { border-color: var(--arts-accent); }
+
+        .cita-fuente {
+            display: block;
+            font-style: normal;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.62rem;
+            color: var(--ink-muted);
+            margin-top: 1.5mm;
+        }
+
+        /* Section headings */
+        .section-h {
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin: 0 0 2mm 0;
+        }
+        .card.vdm    .section-h { color: var(--vdm-ink); }
+        .card.nomade .section-h { color: var(--nomade-ink); }
+        .card.arts   .section-h { color: var(--arts-ink); }
+
+        .section-block { margin-bottom: 4mm; }
+        .section-block:last-child { margin-bottom: 0; }
+
+        ul.values, ul.tours, ul.questions, ul.convence {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.values li {
+            font-family: Georgia, serif;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            padding: 0.4mm 0 0.4mm 4mm;
+            position: relative;
+        }
+        ul.values li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            font-size: 0.55rem;
+            top: 1.5mm;
+        }
+        .card.vdm    ul.values li::before { color: var(--vdm-accent); }
+        .card.nomade ul.values li::before { color: var(--nomade-accent); }
+        .card.arts   ul.values li::before { color: var(--arts-accent); }
+
+        ul.tours li {
+            font-family: Georgia, serif;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            padding: 0 0 2.5mm 0;
+        }
+        ul.tours li strong {
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            display: block;
+            margin-bottom: 0.5mm;
+        }
+        .card.vdm    ul.tours li strong { color: var(--vdm-ink); }
+        .card.nomade ul.tours li strong { color: var(--nomade-ink); }
+        .card.arts   ul.tours li strong { color: var(--arts-ink); }
+
+        .medellin-box {
+            background: rgba(0,0,0,0.04);
+            border-left: 3px solid;
+            padding: 3mm 4mm;
+            font-family: Georgia, serif;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            margin-top: 1mm;
+        }
+        .card.vdm    .medellin-box { border-left-color: var(--vdm-accent); }
+        .card.nomade .medellin-box { border-left-color: var(--nomade-accent); }
+        .card.arts   .medellin-box { border-left-color: var(--arts-accent); }
+
+        /* =====================================================
+           DORSO
+           ===================================================== */
+        .dorso-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6mm;
+            padding-bottom: 3mm;
+            border-bottom: 1px solid;
+        }
+        .card.vdm    .dorso-header { border-bottom-color: var(--vdm-rule); }
+        .card.nomade .dorso-header { border-bottom-color: var(--nomade-rule); }
+        .card.arts   .dorso-header { border-bottom-color: var(--arts-rule); }
+
+        .dorso-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        .card.vdm    .dorso-id { color: var(--vdm-ink); }
+        .card.nomade .dorso-id { color: var(--nomade-ink); }
+        .card.arts   .dorso-id { color: var(--arts-ink); }
+
+        .dorso-meta {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink-muted);
+        }
+
+        ul.questions {
+            counter-reset: q;
+        }
+        ul.questions li {
+            counter-increment: q;
+            font-family: Georgia, serif;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            padding: 0 0 3mm 8mm;
+            position: relative;
+        }
+        ul.questions li::before {
+            content: counter(q);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.85rem;
+            width: 6mm;
+            height: 6mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .card.vdm    ul.questions li::before { background: var(--vdm-ink); }
+        .card.nomade ul.questions li::before { background: var(--nomade-ink); }
+        .card.arts   ul.questions li::before { background: var(--arts-ink); }
+
+        ul.convence li {
+            font-family: Georgia, serif;
+            font-size: 0.84rem;
+            line-height: 1.45;
+            padding: 0.5mm 0 1mm 5mm;
+            position: relative;
+        }
+        ul.convence li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            top: -0.2mm;
+        }
+        .card.vdm    ul.convence li::before { color: var(--vdm-accent); }
+        .card.nomade ul.convence li::before { color: var(--nomade-accent); }
+        .card.arts   ul.convence li::before { color: var(--arts-accent); }
+
+        .convence-box {
+            margin-top: auto;
+            padding-top: 4mm;
+            border-top: 1px dashed;
+        }
+        .card.vdm    .convence-box { border-top-color: var(--vdm-rule); }
+        .card.nomade .convence-box { border-top-color: var(--nomade-rule); }
+        .card.arts   .convence-box { border-top-color: var(--arts-rule); }
+
+        /* Logo placeholder bar */
+        .logo-placeholder {
+            font-family: 'Courier New', monospace;
+            font-size: 0.55rem;
+            color: var(--ink-muted);
+            border: 1px dashed var(--rule);
+            padding: 1.5mm 3mm;
+            display: inline-block;
+            margin-bottom: 3mm;
+        }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Día 1 · Tarjetas de Comprador · Ronda 1 · Claridad</h1>
+    <p>3 tarjetas A5 doble cara para el bootcamp Colombia · 25 mayo 2026 · Medellín. Cada tarjeta ocupa 2 páginas A5 (frente + dorso). <strong>Imprimir a doble cara, voltear por el lado largo.</strong> Recomendado en papel ≥250 g/m². Los <code>logos reales</code> se pegan o reemplazan en diseño antes de impresión.</p>
+    <p>Para Día 2 (Ronda 2 preguntas difíciles + Ronda 3 cerrar conversación) hay otro archivo separado con las tarjetas D-G más exigentes.</p>
+</div>
+
+
+<!-- =====================================================
+     TARJETA A · VOYAGEURS DU MONDE · FRENTE
+     ===================================================== -->
+<article class="card vdm" aria-label="Tarjeta A Voyageurs du Monde — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta A · Día 1 · Ronda Claridad</div>
+            <div class="logo-placeholder">[ logo VdM aquí ]</div>
+            <h2 class="card-logo">VOYAGEURS<br>DU MONDE</h2>
+            <p class="card-archetype">Sur-mesure premium · FIT · 🇫🇷</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "Nous concevons des voyages ultra-personnalisés avec un consultant dédié, conciergerie francophone et assistance 24/7."
+        <span class="cita-fuente">verbatim · voyageursdumonde.fr</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>Compensación carbono total de las emisiones del cliente (avión + tierra)</li>
+            <li>Fondation Philippe Romero · ~€2M/año a proyectos humanitarios</li>
+            <li>Reforestación a gran escala como mecanismo central</li>
+            <li>Filtro ético artesanal sobre los partners locales por destino</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Circuit a medida · 8-12 días Cartagena → Andes → Caribe</strong>Ciudades coloniales restauradas, valle de Cocora, Tayrona · hospedajes boutique restaurados · conductor-guía privado francófono.</li>
+            <li><strong>Autotour 5 regiones · cliente conduce</strong>Caribe, Andes, Pacífico, Orinoco, Amazonas a su ritmo · asistencia 24/7 si surge algo.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Una operación <strong>boutique-finca en Antioquia</strong> que combine alojamiento colonial restaurado + acceso exclusivo a una finca cafetera familiar (historia documentada) + conductor-guía francófono local + protocolo de imprevistos profesional. Para cliente que ya hizo Cartagena.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA A · VOYAGEURS DU MONDE · DORSO
+     ===================================================== -->
+<article class="card vdm" aria-label="Tarjeta A Voyageurs du Monde — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">VOYAGEURS DU MONDE · Tarjeta A</div>
+        <div class="dorso-meta">Día 1 · Ronda Claridad · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Qué tiene tu propuesta que no tenga la siguiente operación / restaurante / guía que voy a ver hoy?</li>
+            <li>¿Cuál es la historia de fondo de tu lugar o proyecto? Una historia real, no folleto.</li>
+            <li>¿Cómo manejás un imprevisto que afecte la experiencia del cliente?</li>
+            <li>¿Tu propuesta se ajusta punto por punto a un cliente específico, o es un formato fijo?</li>
+            <li>¿Quién es la persona-puente local que mi cliente va a conocer si compra esto?</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Una narrativa diferenciada en UNA frase, no una lista</li>
+            <li>Anfitriones nombrados (familia, productor, comunidad) — no "trabajamos con locales"</li>
+            <li>Protocolo de imprevistos con un ejemplo real concreto</li>
+            <li>Flexibilidad real, no la ofrecida sólo para vender</li>
+        </ul>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA B · NOMADE AVENTURE · FRENTE
+     ===================================================== -->
+<article class="card nomade" aria-label="Tarjeta B Nomade Aventure — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta B · Día 1 · Ronda Claridad</div>
+            <div class="logo-placeholder">[ logo Nomade Aventure aquí ]</div>
+            <h2 class="card-logo">NOMADE<br>AVENTURE</h2>
+            <p class="card-archetype">Aventura responsable · Groupe VdM · 🇫🇷</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "45 ans d'aventure responsable · ISO 20611 depuis 2019 · petits groupes de 4 à 15 voyageurs avec guide francophone."
+        <span class="cita-fuente">verbatim · nomade-aventure.com</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>ISO 20611 desde 2019 — norma francesa de turismo responsable</li>
+            <li>Carta de acogida de 12 puntos pública en mi web</li>
+            <li>Apoyo a ONGs locales con nombre por destino (Fondation Philippe Romero)</li>
+            <li>Datos cuantificados de impacto: # bénéficiaires, hectáreas, años</li>
+            <li>Partnerships multi-año con el mismo socio local como criterio</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Trekking guiado en pequeño grupo · 4-15 personas</strong>Cité Perdue + Cocora + Tayrona · caminata con guía francófono · partner local nombrado · alojamiento sencillo · comida con familia anfitriona.</li>
+            <li><strong>Circuit cités coloniales + canyon</strong>Bogotá-Cartagène-Mompox-Chicamocha · caminatas + Caribe + lectura cultural urbana.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Un <strong>trek responsable de 4-6 días en Páramo de Sonsón o Reserva Yarumos</strong> con partner ONG ambiental colombiano nombrado, # familias impactadas publicadas, certificación o equivalente local visible, y guía francófono local con bio.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA B · NOMADE AVENTURE · DORSO
+     ===================================================== -->
+<article class="card nomade" aria-label="Tarjeta B Nomade Aventure — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">NOMADE AVENTURE · Tarjeta B</div>
+        <div class="dorso-meta">Día 1 · Ronda Claridad · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Cuáles son tus partners locales en cada zona? Nombres concretos.</li>
+            <li>¿Cuánto se queda en la comunidad? ¿Lo medís? ¿Lo publicás?</li>
+            <li>¿Tu propuesta tiene Travelife, ISO 20611 o equivalente local?</li>
+            <li>¿Hace cuánto trabajás con el mismo partner / proveedor local?</li>
+            <li>¿Qué pasa si ese partner cambia o desaparece? ¿Cuál es tu plan?</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Nombres propios de ONG, individuos, familias</li>
+            <li>Datos cuantificados: % en comunidad, # bénéficiaires, hectáreas</li>
+            <li>Una certificación reconocida o equivalente local</li>
+            <li>2+ años de relación con el mismo socio, no rotación</li>
+        </ul>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA C · ARTS ET VIE · FRENTE
+     ===================================================== -->
+<article class="card arts" aria-label="Tarjeta C Arts et Vie — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta C · Día 1 · Ronda Claridad</div>
+            <div class="logo-placeholder">[ logo Arts et Vie aquí ]</div>
+            <h2 class="card-logo">Arts et Vie</h2>
+            <p class="card-archetype">Cultural especializado · associatif · 70 años · 🇫🇷</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "Faire de la culture un voyage · ATR depuis juillet 2024 · Travelife Partner depuis 2023."
+        <span class="cita-fuente">verbatim · artsetvie.com</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>Tres verbos como política: <strong>Mesurer · Réduire · Contribuer</strong></li>
+            <li>Reducción de emisiones ≥5 % por año · ~60 % vuelos directos</li>
+            <li>Charte d'engagements mutuels firmada con cada prestatario local</li>
+            <li>1% for the Planet · ATR Fund</li>
+            <li>Accompagnateurs universitarios como garantes pedagógicos</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Circuit cultural acompañado · 10-14 días con accompagnateur universitario</strong>Sitios patrimonio (Bogotá, Villa de Leyva, Barichara, San Agustín) · clases temáticas durante el viaje · museos · encuentros con expertos locales.</li>
+            <li><strong>Programa Paysage Culturel del Café · UNESCO</strong>Plantaciones, productores, transformación del café, historia migratoria de la región.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Un <strong>programa cultural de 7-10 días Medellín + Antioquia rural</strong> con accompagnateur universitario en historia urbana reciente (postconflicto, Comuna 13, transformación), visitas a museos + memoria reciente + finca cafetera con historia familiar documentada por antropólogo o historiador.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA C · ARTS ET VIE · DORSO
+     ===================================================== -->
+<article class="card arts" aria-label="Tarjeta C Arts et Vie — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">ARTS ET VIE · Tarjeta C</div>
+        <div class="dorso-meta">Día 1 · Ronda Claridad · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Cómo medís el impacto cultural de tu propuesta? Metodología, no anécdota.</li>
+            <li>¿Quién es la persona-experta detrás del contenido? ¿Universidad? ¿Publicaciones? ¿Años en terreno?</li>
+            <li>¿Qué carta o acuerdo firmaste con tus proveedores locales?</li>
+            <li>¿Cuál es tu reducción de emisiones anual? ¿La calculás?</li>
+            <li>¿Cómo evitás que un encuentro con una comunidad se vuelva espectáculo?</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Una metodología, no una intención</li>
+            <li>Credenciales del experto / guía / chef visibles (universidad, publicaciones, años)</li>
+            <li>Carta o contrato escrito con proveedores</li>
+            <li>Compromiso anual cuantificado (número, no adjetivo)</li>
+        </ul>
+    </div>
+</article>
+
+</body>
+</html>

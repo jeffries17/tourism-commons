@@ -155,7 +155,7 @@ export default function ReviewsSentiment() {
     ? stakeholdersWithReviews.reduce((sum, s) => sum + (s.overall_sentiment * s.total_reviews), 0) / totalReviews
     : 0;
   const avgPositiveRate = stakeholdersWithReviews.length > 0
-    ? stakeholdersWithReviews.reduce((sum, s) => sum + s.positive_rate, 0) / stakeholdersWithReviews.length
+    ? stakeholdersWithReviews.reduce((sum, s) => sum + s.positive_rate, 0) / stakeholdersWithReviews.length * 100
     : 0;
   
   // Calculate average response rate (only for stakeholders that have this data)
@@ -406,8 +406,8 @@ export default function ReviewsSentiment() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Theme Analysis View */}
-        {viewMode === 'themes' && (() => {
+        {/* Theme Analysis - Always Visible */}
+        {(() => {
           const gambianData = data.stakeholder_data.filter(s => 
             s.source && (s.source === 'creative' || s.source === 'operators') && s.total_reviews > 0
           );
@@ -416,7 +416,7 @@ export default function ReviewsSentiment() {
           );
           
           return (
-            <div>
+            <div className="mb-12">
               <div className="mb-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500 rounded-lg p-4">
                 <div className="flex items-center gap-3">
                   <div className="text-2xl">🎨</div>
@@ -518,7 +518,7 @@ export default function ReviewsSentiment() {
           <div className="bg-white rounded-lg shadow p-6">
             <div className="text-sm font-medium text-gray-500">Positive Rate</div>
             <div className="mt-2 flex items-baseline">
-              <div className="text-3xl font-bold text-blue-600">{avgPositiveRate.toFixed(0)}%</div>
+              <div className="text-3xl font-bold text-blue-600">{avgPositiveRate.toFixed(1)}%</div>
             </div>
             <div className="mt-1 text-xs text-gray-600">Reviews with positive sentiment</div>
           </div>
@@ -734,7 +734,7 @@ export default function ReviewsSentiment() {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                      {stakeholder.positive_rate.toFixed(0)}%
+                      {(stakeholder.positive_rate * 100).toFixed(1)}%
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       {stakeholder.management_response_rate !== undefined ? (

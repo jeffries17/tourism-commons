@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Mapeo de Nicho — Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal:        #3E9987;
+            --teal-dark:   #2D7A6A;
+            --teal-light:  #E6F4F1;
+            --navy:        #1B2B5A;
+            --gold:        #F5C400;
+            --gold-light:  #FEF7D6;
+            --bg:          #F7F8F5;
+            --border:      #DDE3DC;
+            --text:        #1A1A1A;
+            --text-muted:  #5A6478;
+            --white:       #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: var(--navy);
+            padding: 2rem 2.5rem 1.75rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .trecc-logo {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .trecc-logo .tr  { color: #cc3333; }
+        .trecc-logo .e   { color: #e05050; font-style: italic; }
+        .trecc-logo .cc  { color: white; }
+        .trecc-logo .tag {
+            display: block;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.5rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 0.3px;
+            margin-top: 2px;
+        }
+
+        .session-chip {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            font-weight: normal;
+            margin-bottom: 0.4rem;
+        }
+        .header h1 strong { font-weight: bold; }
+
+        .header-sub {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.55);
+        }
+
+        /* === INSTRUCTIONS BAR === */
+        .instructions {
+            background: var(--teal-light);
+            border-bottom: 2px solid var(--teal);
+            padding: 1rem 2.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .instructions .icon { font-size: 1.1rem; flex: 0 0 auto; margin-top: 1px; }
+        .instructions p {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: var(--teal-dark);
+            line-height: 1.55;
+        }
+        .instructions strong { color: var(--navy); }
+
+        /* === PARTICIPANT INFO === */
+        .participant-bar {
+            padding: 1.25rem 2.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .field-inline {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 180px;
+        }
+        .field-inline label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        .field-inline input {
+            flex: 1;
+            border: none;
+            border-bottom: 1.5px solid var(--border);
+            padding: 0.3rem 0.1rem;
+            font-family: 'Georgia', serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            background: transparent;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .field-inline input:focus { border-bottom-color: var(--teal); }
+
+        /* === QUESTIONS === */
+        .questions { padding: 0 2.5rem 2rem; }
+
+        .question-block {
+            padding: 1.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .question-block:last-child { border-bottom: none; }
+
+        .q-header {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .q-num {
+            flex: 0 0 36px;
+            height: 36px;
+            background: var(--navy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 2px;
+        }
+
+        .q-text h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 0.3rem;
+        }
+        .q-text .q-hint {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Multiple choice (Q1) */
+        .choice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 0.6rem;
+            margin-left: 3rem;
+        }
+
+        .choice-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.75rem 0.9rem;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.35;
+            background: var(--bg);
+        }
+        .choice-item:hover { border-color: var(--teal); background: var(--teal-light); }
+        .choice-item.selected { border-color: var(--teal); background: var(--teal-light); }
+        .choice-item .radio {
+            flex: 0 0 18px;
+            height: 18px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+            transition: all 0.2s;
+        }
+        .choice-item.selected .radio {
+            border-color: var(--teal);
+            background: var(--teal);
+        }
+        .choice-item.selected .radio::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+        }
+        .choice-icon { font-size: 1rem; flex: 0 0 auto; }
+
+        /* Textarea fields */
+        .textarea-wrap {
+            margin-left: 3rem;
+        }
+
+        textarea {
+            width: 100%;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            font-family: 'Georgia', serif;
+            font-size: 0.925rem;
+            color: var(--text);
+            line-height: 1.65;
+            resize: vertical;
+            outline: none;
+            background: var(--bg);
+            transition: border-color 0.2s, background 0.2s;
+            min-height: 80px;
+        }
+        textarea:focus {
+            border-color: var(--teal);
+            background: white;
+        }
+        textarea::placeholder {
+            color: #b0bac8;
+            font-style: italic;
+            font-size: 0.875rem;
+        }
+
+        .char-hint {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-top: 0.35rem;
+            text-align: right;
+        }
+
+        /* Q1 follow-up why */
+        .followup {
+            margin-left: 3rem;
+            margin-top: 0.75rem;
+        }
+        .followup label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        /* Evidence tags (Q3) */
+        .evidence-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-left: 3rem;
+            margin-bottom: 0.75rem;
+        }
+        .evidence-tag {
+            padding: 0.35rem 0.85rem;
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--bg);
+        }
+        .evidence-tag:hover { border-color: var(--teal); color: var(--teal-dark); }
+        .evidence-tag.tagged { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 700; }
+
+        /* Gap selector (Q4) */
+        .gap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            margin-left: 3rem;
+            margin-bottom: 0.75rem;
+        }
+        .gap-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 0.85rem;
+            border: 1.5px solid var(--border);
+            border-radius: 7px;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            transition: all 0.2s;
+            background: var(--bg);
+        }
+        .gap-item:hover { border-color: var(--gold); background: var(--gold-light); }
+        .gap-item.flagged { border-color: var(--gold); background: var(--gold-light); color: var(--navy); font-weight: 700; }
+        .gap-check {
+            width: 16px; height: 16px;
+            border: 1.5px solid var(--border);
+            border-radius: 3px;
+            flex: 0 0 auto;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.65rem;
+            transition: all 0.2s;
+        }
+        .gap-item.flagged .gap-check { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+        /* === BREAKOUT PROMPT === */
+        .breakout-prompt {
+            margin: 1.5rem 2.5rem 0;
+            background: linear-gradient(135deg, var(--teal-dark), var(--navy));
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+        }
+        .breakout-prompt .bp-icon { font-size: 1.4rem; flex: 0 0 auto; }
+        .breakout-prompt h4 {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .breakout-prompt p {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.55;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            margin: 1.5rem 2.5rem 2rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .footer p {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .print-btn {
+            padding: 0.55rem 1.25rem;
+            background: var(--navy);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .print-btn:hover { background: var(--teal-dark); }
+
+        /* === PRINT STYLES === */
+        @media print {
+            body { background: white; padding: 0; }
+            .page { box-shadow: none; border-radius: 0; }
+            .print-btn { display: none; }
+            textarea { background: white; border: 1px solid #ccc; min-height: 70px; }
+            .breakout-prompt { background: #1B2B5A !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .page { border-radius: 0; }
+            .header { padding: 1.5rem; }
+            .instructions { padding: 1rem 1.5rem; }
+            .participant-bar { padding: 1rem 1.5rem; }
+            .questions { padding: 0 1.5rem 2rem; }
+            .textarea-wrap, .choice-grid, .evidence-tags, .gap-grid, .followup { margin-left: 0; }
+            .footer, .breakout-prompt { margin-left: 1.5rem; margin-right: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-top">
+            <div class="trecc-logo">
+                <div><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+                <span class="tag">Turismo Responsable, Comunitario y Cultural</span>
+            </div>
+            <div class="session-chip">Sesión 1 · Bloque 3 · 27 de abril de 2026</div>
+        </div>
+        <h1>Hoja de <strong>Mapeo de Nicho</strong></h1>
+        <p class="header-sub">Lo Responsable Vende · TRECC / Institut Français Colombia</p>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div class="instructions">
+        <span class="icon">⏱</span>
+        <p><strong>12 minutos de trabajo individual.</strong> Responde con lo que ya sabes hoy — no hay respuestas correctas ni incorrectas. Esto es un diagnóstico, no una evaluación. Al terminar, compartes la Pregunta 2 en tu grupo de breakout.</p>
+    </div>
+
+    <!-- PARTICIPANT INFO -->
+    <div class="participant-bar">
+        <div class="field-inline">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+        </div>
+        <div class="field-inline">
+            <label>Operación</label>
+            <input type="text" placeholder="Nombre de tu empresa / proyecto">
+        </div>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="questions">
+
+        <!-- Q1 -->
+        <div class="question-block">
+            <div class="q-header">
+                <div class="q-num">1</div>
+                <div class="q-text">
+                    <h3>¿A qué perfil de comprador europeo le hablas principalmente?</h3>
+                    <p class="q-hint">Selecciona el perfil que mejor encaja con tu producto — o el que te gustaría desarrollar.</p>
+                </div>
+            </div>
+
+            <div class="choice-grid" id="profileChoices">
+                <div class="choice-item" onclick="selectOne(this, 'profileChoices')">
+                    <div class="radio"></div>
+                    <span class="choice-icon">🌿</span>
+                    <span>Especialista en turismo responsable<br><span style="color:var(--text-muted);font-size:0.75rem;">ATR, AITO, foros</span></span>
+                </div>
+                <div class="choice-item" onclick="selectOne(this, 'profileChoices')">
+                    <div class="radio"></div>
+                    <span class="choice-icon">🌍</span>
+                    <span>Tour operador generalista<br><span style="color:var(--text-muted);font-size:0.75rem;">Con línea responsable</span></span>
+                </div>
+                <div class="choice-item" onclick="selectOne(this, 'profileChoices')">
+                    <div class="radio"></div>
+                    <span class="choice-icon">🧭</span>
+                    <span>FIT Travel Designer<br><span style="color:var(--text-muted);font-size:0.75rem;">Itinerarios a medida</span></span>
+                </div>
+                <div class="choice-item" onclick="selectOne(this, 'profileChoices')">
+                    <div class="radio"></div>
+                    <span class="choice-icon">🤷</span>
+                    <span>Todavía no tengo claro<br><span style="color:var(--text-muted);font-size:0.75rem;">Lo estoy definiendo</span></span>
+                </div>
+            </div>
+
+            <div class="followup">
+                <label>¿Por qué ese perfil y no otro?</label>
+                <textarea rows="2" placeholder="Ej: mi producto es de bajo volumen y alto precio, mis clientes buscan experiencias fuera de catálogo…"></textarea>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-block">
+            <div class="q-header">
+                <div class="q-num" style="background:var(--teal);">2</div>
+                <div class="q-text">
+                    <h3>¿Cuál es tu propuesta de valor diferenciada en 1–2 frases?</h3>
+                    <p class="q-hint">Escríbela como si fuera el primer párrafo de un email a ese comprador europeo — no como texto para tu web para viajeros finales. Sé específico: ¿qué ofreces, para quién, y qué lo hace difícil de encontrar en otro sitio?</p>
+                </div>
+            </div>
+            <div class="textarea-wrap">
+                <textarea rows="4" id="propuesta" placeholder="Ej: Ofrecemos experiencias de turismo comunitario en el Chocó biogeográfico para agencias europeas especializadas en naturaleza. Trabajamos exclusivamente con 3 comunidades Wounaan — los beneficios son gestionados por la misma comunidad y el 80% queda en el territorio."></textarea>
+                <p class="char-hint">⭐ Esta respuesta es la que compartirás en el breakout — tómate el tiempo necesario.</p>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-block">
+            <div class="q-header">
+                <div class="q-num">3</div>
+                <div class="q-text">
+                    <h3>¿Qué evidencias tienes ya de esa propuesta?</h3>
+                    <p class="q-hint">Aunque sean informales, incompletas, o no estén publicadas todavía. Marca todo lo que aplique.</p>
+                </div>
+            </div>
+
+            <div class="evidence-tags">
+                <span class="evidence-tag" onclick="toggleTag(this)">📊 Un dato o cifra verificable</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">💬 Testimonio de viajero europeo</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">🤝 Testimonio de agencia europea</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">🏅 Certificación (nacional o internacional)</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">📸 Documentación fotográfica / video</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">📄 Contrato o acuerdo con comunidad</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">🌐 Página web o sección en inglés</span>
+                <span class="evidence-tag" onclick="toggleTag(this)">📁 Ficha técnica del producto</span>
+            </div>
+
+            <div class="textarea-wrap">
+                <textarea rows="2" placeholder="Describe la evidencia más sólida que tienes — aunque no sea perfecta todavía…"></textarea>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-block">
+            <div class="q-header">
+                <div class="q-num" style="background:var(--gold); color:var(--navy);">4</div>
+                <div class="q-text">
+                    <h3>¿Qué le falta para que un comprador europeo la entienda rápido?</h3>
+                    <p class="q-hint">Sé honesto. Esto no es una autocrítica — es un diagnóstico. Marca los gaps más relevantes y añade detalles abajo.</p>
+                </div>
+            </div>
+
+            <div class="gap-grid">
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Una cifra concreta de impacto</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Web o sección en inglés / francés</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Sección B2B separada en la web</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Testimonio de agencia europea</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Ficha técnica del producto</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Nicho más definido</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Idioma en el equipo</div>
+                <div class="gap-item" onclick="toggleGap(this)"><div class="gap-check"></div>Certificación reconocida en Europa</div>
+            </div>
+
+            <div class="textarea-wrap" style="margin-top:0.75rem;">
+                <textarea rows="2" placeholder="El gap más importante para mi caso específico es…"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BREAKOUT PROMPT -->
+    <div class="breakout-prompt">
+        <span class="bp-icon">👥</span>
+        <div>
+            <h4>Próximo paso — Breakout room · 8 minutos</h4>
+            <p>Lee tu <strong>Pregunta 2</strong> en voz alta a tu grupo, tal como la escribiste. Los demás responden: <em>"Como comprador europeo, me quedaría con la duda de…"</em> — una sola pregunta concreta por persona.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>Lo Responsable Vende · TRECC · Institut Français Colombia · Sesión 1 · 27 de abril de 2026</p>
+        <button class="print-btn" onclick="window.print()">🖨 Guardar / Imprimir</button>
+    </div>
+
+</div>
+
+<script>
+    function selectOne(el, groupId) {
+        document.querySelectorAll(`#${groupId} .choice-item`).forEach(item => {
+            item.classList.remove('selected');
+        });
+        el.classList.add('selected');
+    }
+
+    function toggleTag(el) {
+        el.classList.toggle('tagged');
+    }
+
+    function toggleGap(el) {
+        el.classList.toggle('flagged');
+        const check = el.querySelector('.gap-check');
+        check.textContent = el.classList.contains('flagged') ? '✓' : '';
+    }
+</script>
+
+</body>
+</html>

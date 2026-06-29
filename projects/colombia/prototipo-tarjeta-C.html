@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Prototipo · Tarjeta C · Arts et Vie · Día 1 y Día 2</title>
+    <style>
+        /* =====================================================
+           PRINT — A4 portrait, single-sided. Una tarjeta por hoja.
+           ===================================================== */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; box-shadow: none; margin: 0; }
+            .card:last-child { page-break-after: avoid; }
+        }
+
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --paper: #FFFFFF;
+            --rule: #D6D8DD;
+
+            /* Arts et Vie · cultural · cream + bordeaux + gold */
+            --arts-bg: #FFFFFF;
+            --arts-ink: #6E1A2A;
+            --arts-accent: #B8923A;
+            --arts-rule: #6E1A2A;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--ink);
+            line-height: 1.5;
+            background: #ECEDEE;
+        }
+
+        /* Screen-only intro banner */
+        .screen-only {
+            background: var(--arts-ink);
+            color: white;
+            padding: 1.25rem 2rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+        .screen-only h1 {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+
+        /* =====================================================
+           A4 CARD CONTAINER · 210 × 297 mm
+           ===================================================== */
+        .card {
+            width: 210mm;
+            height: 297mm;
+            padding: 18mm 18mm;
+            background: var(--arts-bg);
+            margin: 18px auto;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10mm;
+        }
+        .card-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ink-muted);
+            margin-bottom: 6mm;
+        }
+        .logo-placeholder {
+            font-family: 'Courier New', monospace;
+            font-size: 0.6rem;
+            color: var(--ink-muted);
+            border: 1px dashed var(--rule);
+            padding: 2mm 4mm;
+            display: inline-block;
+            margin-bottom: 4mm;
+            background: rgba(255,255,255,0.5);
+        }
+        .card-logo {
+            font-family: Georgia, serif;
+            font-size: 2.4rem;
+            line-height: 1.05;
+            margin: 0 0 2mm 0;
+            color: var(--arts-ink);
+            letter-spacing: 0.5px;
+            font-style: italic;
+        }
+        .card-archetype {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--arts-ink);
+            font-style: italic;
+        }
+        .card-tag {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 2mm 4mm;
+            border: 1.5px solid var(--arts-ink);
+            color: var(--arts-ink);
+            text-align: center;
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        /* ACCENT RULE */
+        .accent-rule {
+            height: 3px;
+            background: var(--arts-accent);
+            margin: 6mm 0 8mm 0;
+            width: 30mm;
+        }
+
+        /* SECTION HEADINGS */
+        .section-h {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--arts-ink);
+            margin: 0 0 4mm 0;
+        }
+
+        .section-block {
+            margin-bottom: 8mm;
+        }
+
+        /* FACTS — numbered list */
+        ul.facts {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: f;
+        }
+        ul.facts li {
+            counter-increment: f;
+            font-family: Georgia, serif;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            padding: 0 0 3mm 9mm;
+            position: relative;
+        }
+        ul.facts li::before {
+            content: counter(f);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.85rem;
+            width: 6mm;
+            height: 6mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--arts-accent);
+        }
+
+        /* PRODUCT TYPES — clean bullet list */
+        ul.products {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.products li {
+            font-family: Georgia, serif;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            padding: 0 0 2mm 7mm;
+            position: relative;
+        }
+        ul.products li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3.4mm;
+            width: 3.5mm;
+            height: 3.5mm;
+            background: var(--arts-accent);
+            border-radius: 50%;
+        }
+        ul.products li strong {
+            color: var(--arts-ink);
+        }
+        ul.products li .desc {
+            color: var(--ink-muted);
+            font-size: 0.88rem;
+        }
+
+        /* QUESTIONS — numbered list */
+        ul.questions {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: q;
+        }
+        ul.questions li {
+            counter-increment: q;
+            font-family: Georgia, serif;
+            font-size: 1.02rem;
+            line-height: 1.5;
+            padding: 0 0 4mm 10mm;
+            position: relative;
+        }
+        ul.questions li::before {
+            content: counter(q);
+            position: absolute;
+            left: 0;
+            top: 0.5mm;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.9rem;
+            width: 7mm;
+            height: 7mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--arts-ink);
+        }
+
+        /* SECTION DIVIDER */
+        .divider {
+            height: 1px;
+            background: rgba(110, 26, 42, 0.18);
+            margin: 3mm 0 8mm 0;
+        }
+
+        /* FOOTER */
+        .card-footer {
+            margin-top: auto;
+            padding-top: 5mm;
+            border-top: 1px dashed var(--arts-rule);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.7rem;
+            color: var(--ink-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Prototipo · Tarjeta C · Arts et Vie · Día 1 y Día 2</h1>
+    <p>A4 vertical · una cara · en español. Identidad: operador cultural francés, asociativo, casi 70 años, acompañantes universitarios, Travelife + ATR.</p>
+</div>
+
+
+<!-- =====================================================
+     TARJETA C · ARTS ET VIE · DÍA 1 · CONOCERSE
+     ===================================================== -->
+<article class="card" aria-label="Tarjeta C Arts et Vie - Día 1">
+
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta C · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Arts et Vie</h2>
+            <p class="card-archetype">Operador cultural francés · asociativo · casi 70 años</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con casi 70 años de historia y estructura asociativa (sin fines de lucro).</li>
+            <li>Mi promesa es "hacer de la cultura un viaje" — cada propuesta lleva un acompañante universitario que enseña en ruta.</li>
+            <li>Tengo Travelife Partner desde 2023 y formo parte de ATR (Agir pour un Tourisme Responsable) desde 2024.</li>
+            <li>Mi política tiene tres verbos — Medir, Reducir, Contribuir. Reduzco emisiones al menos 5 % cada año y soy miembro de 1 % for the Planet.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Circuitos culturales acompañados</strong> <span class="desc">— viajes en grupo con acompañante universitario</span></li>
+            <li><strong>Cruceros culturales</strong> <span class="desc">— rutas marítimas con eje patrimonial</span></li>
+            <li><strong>Estadías temáticas</strong> <span class="desc">— arte, música, historia en un solo lugar</span></li>
+            <li><strong>Viajes individuales a medida</strong> <span class="desc">— versión privada del circuito cultural</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Contame de tu negocio. ¿Quién sos vos? ¿Qué hacés?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué historia o conocimiento querés que tus viajeros se lleven después de la experiencia?</li>
+            <li>¿Cómo trabajás con la gente y la cultura local — músicos, artistas, guías, productores, comunidades?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para vos?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span>
+        <span>C</span>
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     TARJETA C · ARTS ET VIE · DÍA 2 · PROFUNDIZAR
+     ===================================================== -->
+<article class="card" aria-label="Tarjeta C Arts et Vie - Día 2">
+
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta C · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Arts et Vie</h2>
+            <p class="card-archetype">Operador cultural francés · asociativo · casi 70 años</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con casi 70 años de historia y estructura asociativa (sin fines de lucro).</li>
+            <li>Mi promesa es "hacer de la cultura un viaje" — cada propuesta lleva un acompañante universitario que enseña en ruta.</li>
+            <li>Tengo Travelife Partner desde 2023 y formo parte de ATR (Agir pour un Tourisme Responsable) desde 2024.</li>
+            <li>Mi política tiene tres verbos — Medir, Reducir, Contribuir. Reduzco emisiones al menos 5 % cada año y soy miembro de 1 % for the Planet.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Circuitos culturales acompañados</strong> <span class="desc">— viajes en grupo con acompañante universitario</span></li>
+            <li><strong>Cruceros culturales</strong> <span class="desc">— rutas marítimas con eje patrimonial</span></li>
+            <li><strong>Estadías temáticas</strong> <span class="desc">— arte, música, historia en un solo lugar</span></li>
+            <li><strong>Viajes individuales a medida</strong> <span class="desc">— versión privada del circuito cultural</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cómo medís el impacto cultural de tu propuesta?</li>
+            <li>¿Quién es la persona experta detrás del contenido? ¿Qué credenciales tiene — universidad, publicaciones, años en terreno?</li>
+            <li>¿Qué tipo de acuerdo o relación tenés con tus proveedores locales?</li>
+            <li>¿Cómo pensás el tema de tus emisiones de carbono?</li>
+            <li>¿Cómo se cuida la relación entre tus viajeros y las comunidades que visitan?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span>
+        <span>C</span>
+    </div>
+
+</article>
+
+</body>
+</html>

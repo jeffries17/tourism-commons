@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Demo — Reseñas en tu sitio · Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal: #2A7F6F; --teal-dark: #1D5C4F; --teal-light: #E8F4F1;
+            --navy: #1C2D4F; --navy-mid: #2D3F6A;
+            --gold: #C09A2F; --gold-light: #FDF8E8; --gold-dark: #7A6000;
+            --amber: #B05900; --amber-light: #FEF3E2;
+            --green: #1E7A3A; --green-light: #E6F5EC;
+            --bg: #F7F8FA; --border: #DDE0E6;
+            --text: #1C2D4F; --text-muted: #6B7280;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: #ECEEF2; color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+        /* ── FACILITATOR BAR ──────────────────────────────── */
+        .fac-bar { background: var(--navy); padding: 0.55rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+        .fac-bar p { font-size: 0.73rem; color: rgba(255,255,255,0.65); }
+        .fac-bar strong { color: #F5C95A; }
+        .fac-badge { font-size: 0.68rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); padding: 0.2rem 0.6rem; border-radius: 12px; }
+        .ann-toggle-btn { padding: 0.28rem 0.85rem; background: #F5C95A; color: var(--navy); border: none; border-radius: 4px; font-size: 0.7rem; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; }
+
+        /* ── BROWSER CHROME ──────────────────────────────── */
+        .browser-chrome { background: #d8dbe2; padding: 0.55rem 1rem 0; display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid #bcc0c8; flex-shrink: 0; }
+        .b-dots { display: flex; gap: 5px; }
+        .b-dots span { width: 11px; height: 11px; border-radius: 50%; }
+        .dot-r { background: #ff5f57; } .dot-y { background: #ffbd2e; } .dot-g { background: #28c840; }
+        .b-tab { background: white; padding: 0.42rem 1rem; border-radius: 7px 7px 0 0; font-size: 0.75rem; color: #333; border: 1px solid #bcc0c8; border-bottom: none; max-width: 240px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .b-bar { flex: 1; background: white; border-radius: 16px; padding: 0.3rem 0.9rem; font-size: 0.78rem; color: #444; display: flex; align-items: center; gap: 0.4rem; border: 1px solid #c8ccd4; }
+
+        /* ── SCENARIO BAR ────────────────────────────────── */
+        .scenario-bar { background: #f4f5f7; border-bottom: 1px solid var(--border); padding: 0.45rem 1.2rem; display: flex; align-items: center; gap: 0.65rem; flex-shrink: 0; flex-wrap: wrap; }
+        .sc-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+        .counter-pill { font-family: 'Arial Black', sans-serif; font-size: 0.7rem; font-weight: 900; background: var(--navy); color: white; padding: 0.2rem 0.65rem; border-radius: 12px; transition: background 0.3s; }
+        .counter-pill.done { background: var(--green); }
+        .reset-btn { padding: 0.25rem 0.75rem; border: 1.5px solid var(--border); border-radius: 20px; font-size: 0.7rem; font-family: Arial, sans-serif; cursor: pointer; background: white; color: var(--text-muted); margin-left: auto; }
+        .reset-btn:hover { border-color: var(--navy); color: var(--navy); }
+
+        /* ── MAIN LAYOUT ─────────────────────────────────── */
+        .main-wrap { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+
+        /* ── WEBSITE PANEL ───────────────────────────────── */
+        .site-panel { flex: 1; background: white; overflow-y: auto; border-right: 1px solid var(--border); }
+
+        /* Site nav */
+        .site-nav { background: var(--navy); padding: 0.65rem 1.5rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+        .site-logo { font-family: 'Arial Black', Arial, sans-serif; font-size: 0.9rem; color: white; display: flex; align-items: center; gap: 0.4rem; }
+        .site-logo .leaf { color: #5CC8A8; }
+        .site-links { display: flex; gap: 1.25rem; align-items: center; }
+        .site-links a { font-size: 0.74rem; color: rgba(255,255,255,0.7); text-decoration: none; }
+        .site-links .cta { background: var(--teal); color: white; padding: 0.28rem 0.8rem; border-radius: 5px; font-weight: 700; }
+
+        /* ── REVIEW SLOT ─────────────────────────────────── */
+        .review-slot { min-height: 68px; border: 2px dashed var(--border); border-radius: 10px; background: rgba(0,0,0,0.025); display: flex; align-items: center; justify-content: center; transition: all 0.35s ease; overflow: hidden; }
+        .slot-placeholder { font-size: 0.72rem; color: #BFC4CC; display: flex; align-items: center; gap: 0.4rem; }
+        .review-slot.correct { border: 1.5px solid var(--teal); background: var(--teal-light); display: block; padding: 0.75rem 1rem; animation: slotFill 0.4s cubic-bezier(.4,0,.2,1); }
+        .review-slot.incorrect { border: 1.5px solid var(--amber); background: var(--amber-light); display: block; padding: 0.75rem 1rem; animation: slotFill 0.4s cubic-bezier(.4,0,.2,1); }
+        @keyframes slotFill { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+        .placed-stars { font-size: 0.78rem; margin-bottom: 0.2rem; }
+        .review-slot.correct .placed-stars { color: var(--gold); }
+        .review-slot.incorrect .placed-stars { color: var(--amber); }
+        .placed-text { font-family: Arial, sans-serif; font-size: 0.79rem; color: var(--text); line-height: 1.55; font-style: italic; margin-bottom: 0.28rem; }
+        .placed-attr { font-family: Arial, sans-serif; font-size: 0.67rem; color: var(--text-muted); margin-bottom: 0.38rem; }
+        .placed-verdict { font-family: 'Arial Black', sans-serif; font-size: 0.65rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+        .verdict-ok { color: var(--teal-dark); }
+        .verdict-no { color: var(--amber); }
+        .move-btn { font-family: 'Arial Black', sans-serif; font-size: 0.62rem; font-weight: 900; background: white; border: 1.5px solid var(--amber); color: var(--amber); padding: 0.18rem 0.6rem; border-radius: 5px; cursor: pointer; }
+        .move-btn:hover { background: var(--amber); color: white; }
+
+        /* Annotation */
+        .slot-ann { display: none; margin-top: 0.55rem; }
+        .slot-ann.visible { display: block; }
+        .ann-bubble { background: var(--navy); color: white; padding: 0.5rem 0.85rem; border-radius: 6px; font-size: 0.74rem; line-height: 1.5; position: relative; }
+        .ann-bubble::before { content: ''; position: absolute; top: -6px; left: 14px; border: 6px solid transparent; border-bottom-color: var(--navy); border-top: none; }
+        .ann-bubble strong { color: #5CC8A8; }
+
+        /* ════════════════════════════════════════════════════
+           SECTION 1 — IMPACT PAGE
+        ════════════════════════════════════════════════════ */
+        .impact-hero {
+            background: linear-gradient(130deg, var(--teal-dark) 0%, var(--teal) 60%, #3EA88A 100%);
+            padding: 1.5rem 1.75rem 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .impact-hero::after {
+            content: '🌿';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4.5rem;
+            opacity: 0.12;
+        }
+        .impact-eyebrow { font-family: 'Arial Black', sans-serif; font-size: 0.6rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2.5px; color: rgba(255,255,255,0.65); margin-bottom: 0.35rem; }
+        .impact-h2 { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.3rem; color: white; line-height: 1.2; max-width: 420px; }
+
+        .stat-row { display: flex; gap: 0; border-bottom: 1px solid #eef0f3; }
+        .stat-chip { flex: 1; padding: 0.85rem 1.2rem; border-right: 1px solid #eef0f3; }
+        .stat-chip:last-child { border-right: none; }
+        .stat-val { font-family: 'Arial Black', sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--teal); line-height: 1; margin-bottom: 0.15rem; }
+        .stat-lbl { font-family: Arial, sans-serif; font-size: 0.7rem; color: var(--text-muted); }
+
+        .impact-body { display: flex; gap: 1.25rem; padding: 1.1rem 1.75rem; align-items: flex-start; }
+        .community-photo {
+            flex-shrink: 0;
+            width: 140px;
+            height: 100px;
+            border-radius: 8px;
+            background: linear-gradient(150deg, #2A7F6F, #1C2D4F);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+        }
+        .community-photo .ph-icon { font-size: 1.8rem; opacity: 0.65; }
+        .community-photo .ph-label { font-family: Arial, sans-serif; font-size: 0.6rem; color: rgba(255,255,255,0.55); text-align: center; line-height: 1.3; }
+        .impact-text { font-family: Arial, sans-serif; font-size: 0.8rem; color: var(--text-muted); line-height: 1.65; }
+
+        .impact-slot-wrap { padding: 0 1.75rem 1.25rem; }
+
+        /* ════════════════════════════════════════════════════
+           SECTION 2 — TOUR PRODUCT PAGE
+        ════════════════════════════════════════════════════ */
+        .tour-header {
+            background: linear-gradient(160deg, #0E1C35 0%, #1C2D4F 50%, #1D5C4F 100%);
+            padding: 1.3rem 1.75rem 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .tour-header::after {
+            content: '🦋';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4rem;
+            opacity: 0.14;
+        }
+        .tour-tag { display: inline-block; font-family: 'Arial Black', sans-serif; font-size: 0.58rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: #5CC8A8; border: 1px solid rgba(92,200,168,0.4); padding: 0.12rem 0.5rem; border-radius: 3px; margin-bottom: 0.45rem; }
+        .tour-h2 { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.15rem; color: white; line-height: 1.2; margin-bottom: 0.75rem; max-width: 380px; }
+        .tour-meta { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+        .meta-pill { font-family: Arial, sans-serif; font-size: 0.72rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); padding: 0.22rem 0.65rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); }
+
+        .tour-body { display: flex; gap: 1.25rem; padding: 1.1rem 1.75rem; align-items: flex-start; border-bottom: 1px solid #eef0f3; }
+        .tour-highlights { flex: 1; }
+        .tour-highlights h4 { font-family: 'Arial Black', sans-serif; font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .tour-highlights ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .tour-highlights li { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--text); display: flex; align-items: flex-start; gap: 0.4rem; }
+        .tour-highlights li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+        .reserve-widget { flex-shrink: 0; width: 150px; background: var(--bg); border: 1.5px solid var(--border); border-radius: 10px; padding: 0.85rem; text-align: center; }
+        .price-from { font-family: Arial, sans-serif; font-size: 0.65rem; color: var(--text-muted); margin-bottom: 0.1rem; }
+        .price-val { font-family: 'Arial Black', sans-serif; font-size: 1.4rem; color: var(--navy); line-height: 1; margin-bottom: 0.15rem; }
+        .price-unit { font-family: Arial, sans-serif; font-size: 0.65rem; color: var(--text-muted); margin-bottom: 0.65rem; }
+        .reserve-btn { width: 100%; padding: 0.5rem; background: var(--teal); color: white; border: none; border-radius: 6px; font-family: 'Arial Black', sans-serif; font-size: 0.7rem; cursor: pointer; }
+        .reserve-note { font-family: Arial, sans-serif; font-size: 0.62rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.4; }
+
+        .tour-slot-wrap { padding: 0 1.75rem 1.25rem; }
+        .tour-slot-wrap .slot-placeholder { color: #BFC4CC; }
+
+        /* ════════════════════════════════════════════════════
+           SECTION 3 — TRUST / CREDENTIALS PAGE
+        ════════════════════════════════════════════════════ */
+        .trust-header { padding: 1.1rem 1.75rem 0.4rem; border-bottom: 1px solid #eef0f3; }
+        .trust-eyebrow { font-family: 'Arial Black', sans-serif; font-size: 0.6rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.3rem; }
+        .trust-h2 { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.1rem; color: var(--navy); line-height: 1.2; margin-bottom: 0.35rem; }
+        .trust-sub { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; }
+
+        .trust-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; padding: 1rem 1.75rem; border-bottom: 1px solid #eef0f3; }
+        .trust-card { border: 1.5px solid var(--border); border-radius: 10px; padding: 0.9rem 0.85rem; background: var(--bg); }
+        .trust-icon { font-size: 1.5rem; margin-bottom: 0.45rem; }
+        .trust-card-title { font-family: 'Arial Black', sans-serif; font-size: 0.73rem; color: var(--navy); margin-bottom: 0.3rem; line-height: 1.25; }
+        .trust-card-desc { font-family: Arial, sans-serif; font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; }
+        .trust-badge { display: inline-block; font-family: 'Arial Black', sans-serif; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.8px; padding: 0.12rem 0.45rem; border-radius: 4px; margin-top: 0.4rem; }
+        .badge-teal { background: var(--teal-light); color: var(--teal-dark); }
+        .badge-gold { background: var(--gold-light); color: var(--gold-dark); }
+        .badge-navy { background: #EEF1F7; color: var(--navy); }
+
+        .trust-slot-wrap { padding: 0 1.75rem 1.25rem; }
+
+        /* ── REVIEW PANEL (right) ────────────────────────── */
+        .review-panel { width: 300px; flex-shrink: 0; background: #F4F5F7; overflow-y: auto; display: flex; flex-direction: column; }
+        .review-panel-header { background: white; border-bottom: 1px solid var(--border); padding: 0.85rem 1rem; position: sticky; top: 0; z-index: 5; }
+        .rph-title { font-family: 'Arial Black', sans-serif; font-size: 0.72rem; font-weight: 900; color: var(--navy); margin-bottom: 0.2rem; }
+        .rph-sub { font-family: Arial, sans-serif; font-size: 0.67rem; color: var(--text-muted); line-height: 1.45; }
+        .review-cards { padding: 0.75rem; display: flex; flex-direction: column; gap: 0.65rem; flex: 1; }
+
+        /* ── REVIEW CARD ─────────────────────────────────── */
+        .rev-card { background: white; border: 1.5px solid var(--border); border-radius: 10px; padding: 0.85rem; transition: opacity 0.3s; }
+        .rev-card.placed-correct { opacity: 0.38; pointer-events: none; }
+        .rev-card.choosing { border-color: var(--navy); }
+        .rev-card-label { font-family: 'Arial Black', sans-serif; font-size: 0.62rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-muted); margin-bottom: 0.25rem; }
+        .rev-stars { font-size: 0.78rem; color: var(--gold); margin-bottom: 0.32rem; }
+        .rev-text { font-family: Arial, sans-serif; font-size: 0.76rem; color: var(--text); line-height: 1.55; font-style: italic; margin-bottom: 0.38rem; }
+        .rev-attr { font-family: Arial, sans-serif; font-size: 0.67rem; color: var(--text-muted); margin-bottom: 0.55rem; }
+        .rev-btn { width: 100%; padding: 0.38rem 0; background: var(--navy); color: white; border: none; border-radius: 6px; font-family: 'Arial Black', sans-serif; font-size: 0.68rem; font-weight: 900; letter-spacing: 0.5px; cursor: pointer; transition: background 0.2s; }
+        .rev-btn:hover:not(:disabled) { background: var(--navy-mid); }
+        .choice-row { display: none; flex-direction: column; gap: 0.35rem; margin-top: 0.5rem; }
+        .choice-row.visible { display: flex; }
+        .choice-prompt { font-family: 'Arial Black', sans-serif; font-size: 0.62rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: var(--navy); margin-bottom: 0.1rem; }
+        .choice-btn { width: 100%; padding: 0.36rem 0.65rem; background: #F0F2F5; border: 1.5px solid var(--border); border-radius: 6px; font-family: Arial, sans-serif; font-size: 0.74rem; color: var(--text); cursor: pointer; text-align: left; transition: all 0.18s; }
+        .choice-btn:hover { background: var(--teal-light); border-color: var(--teal); color: var(--teal-dark); }
+        .cancel-btn { width: 100%; padding: 0.28rem 0; background: transparent; border: 1px solid var(--border); border-radius: 6px; font-family: Arial, sans-serif; font-size: 0.67rem; color: var(--text-muted); cursor: pointer; }
+        .cancel-btn:hover { background: #f0f2f5; }
+    </style>
+</head>
+<body>
+
+<!-- FACILITATOR BAR -->
+<div class="fac-bar">
+    <p><strong>📺 Demo — Reseñas en tu sitio web</strong> · Sesión 2 · Bloque 4 · Brecha 01</p>
+    <span class="fac-badge">Selva Viva Colombia — operador ficticio</span>
+    <button class="ann-toggle-btn" onclick="toggleAnnotations()" id="annBtn">Mostrar notas</button>
+</div>
+
+<!-- BROWSER CHROME -->
+<div class="browser-chrome">
+    <div class="b-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+    <div class="b-tab">Selva Viva Colombia — Ecoturismo Responsable</div>
+    <div class="b-bar"><span>🔒</span><span>selvavivacolombia.co</span></div>
+</div>
+
+<!-- SCENARIO BAR -->
+<div class="scenario-bar">
+    <span class="sc-label">Ejercicio:</span>
+    <span style="font-family:Arial,sans-serif;font-size:0.76rem;color:var(--text);">¿En qué sección del sitio encaja mejor cada reseña?</span>
+    <span class="counter-pill" id="counter">0 / 3 correctas</span>
+    <button class="reset-btn" onclick="resetAll()">↺ Reiniciar</button>
+</div>
+
+<div class="main-wrap">
+
+    <!-- ══ WEBSITE MOCK ══════════════════════════════════ -->
+    <div class="site-panel">
+
+        <nav class="site-nav">
+            <div class="site-logo"><span class="leaf">🌿</span> Selva Viva Colombia</div>
+            <div class="site-links">
+                <a href="#">Tours</a>
+                <a href="#">Impacto</a>
+                <a href="#">Nosotros</a>
+                <a href="#" class="cta">Reservar →</a>
+            </div>
+        </nav>
+
+        <!-- ─── SECTION 1: IMPACT PAGE ─────────────────── -->
+        <div class="impact-hero">
+            <div class="impact-eyebrow">Impacto comunitario</div>
+            <h2 class="impact-h2">El 40% de tu tour queda en la comunidad de Salento</h2>
+        </div>
+
+        <div class="stat-row">
+            <div class="stat-chip">
+                <div class="stat-val">40%</div>
+                <div class="stat-lbl">del gasto queda en la comunidad</div>
+            </div>
+            <div class="stat-chip">
+                <div class="stat-val">3</div>
+                <div class="stat-lbl">familias locales proveedoras</div>
+            </div>
+            <div class="stat-chip">
+                <div class="stat-val">100%</div>
+                <div class="stat-lbl">transparencia en el desglose de pago</div>
+            </div>
+        </div>
+
+        <div class="impact-body">
+            <div class="community-photo">
+                <div class="ph-icon">👨‍👩‍👧</div>
+                <div class="ph-label">Familia Quintero<br>Salento, Quindío</div>
+            </div>
+            <p class="impact-text">Trabajamos exclusivamente con tres familias locales que proveen el desayuno, el transporte y el alojamiento. Antes de salir, te presentamos a las personas detrás de tu experiencia — y podés ver exactamente a dónde va tu dinero.</p>
+        </div>
+
+        <div class="impact-slot-wrap">
+            <div class="review-slot" id="slot1">
+                <div class="slot-placeholder">⬚ &nbsp;sección 1 · Impacto — reseña por colocar</div>
+            </div>
+            <div class="slot-ann" id="ann1">
+                <div class="ann-bubble">✓ <strong>Por qué funciona:</strong> La reseña menciona exactamente lo que el claim promete — la familia, Salento, el desglose del pago. El comprador lee el claim y luego lee la validación independiente de un viajero. Eso es confianza construida.</div>
+            </div>
+        </div>
+
+        <!-- ─── SECTION 2: TOUR PRODUCT PAGE ───────────── -->
+        <div class="tour-header">
+            <div class="tour-tag">Experiencia destacada</div>
+            <h2 class="tour-h2">Caminada por la Reserva Natural del Eje Cafetero</h2>
+            <div class="tour-meta">
+                <span class="meta-pill">⏱ 6 horas</span>
+                <span class="meta-pill">👥 Máx. 8 personas</span>
+                <span class="meta-pill">🥾 Nivel moderado</span>
+                <span class="meta-pill">💵 USD 85 p.p.</span>
+            </div>
+        </div>
+
+        <div class="tour-body">
+            <div class="tour-highlights">
+                <h4>Qué incluye</h4>
+                <ul>
+                    <li>Guía biólogo local certificado</li>
+                    <li>Desayuno en casa de familia local</li>
+                    <li>Equipo de impacto mínimo incluido</li>
+                    <li>Protocolo de cero huella en sendero</li>
+                    <li>Informe de biodiversidad post-tour</li>
+                </ul>
+            </div>
+            <div class="reserve-widget">
+                <div class="price-from">Desde</div>
+                <div class="price-val">USD 85</div>
+                <div class="price-unit">por persona</div>
+                <button class="reserve-btn">Reservar →</button>
+                <div class="reserve-note">Sin pago anticipado · Cancelación gratuita 48h</div>
+            </div>
+        </div>
+
+        <div class="tour-slot-wrap">
+            <div class="review-slot" id="slot2">
+                <div class="slot-placeholder">⬚ &nbsp;sección 2 · Tour — reseña por colocar</div>
+            </div>
+            <div class="slot-ann" id="ann2">
+                <div class="ann-bubble">✓ <strong>Por qué funciona:</strong> El claim promete expertise local y cero huella. La reseña valida ambas cosas con palabras del viajero: "nombre científico", "sin dejar rastro". No es un elogio genérico — refuerza exactamente lo que la página de tour vende.</div>
+            </div>
+        </div>
+
+        <!-- ─── SECTION 3: TRUST / CREDENTIALS PAGE ────── -->
+        <div class="trust-header">
+            <div class="trust-eyebrow">Por qué elegirnos</div>
+            <h2 class="trust-h2">Transparencia completa antes de reservar</h2>
+            <p class="trust-sub">Sin sorpresas. Sin comisiones ocultas. Conocés el destino exacto de tu pago antes de confirmar.</p>
+        </div>
+
+        <div class="trust-cards">
+            <div class="trust-card">
+                <div class="trust-icon">📋</div>
+                <div class="trust-card-title">Tarifas netas visibles</div>
+                <div class="trust-card-desc">El desglose completo de tu pago — antes de confirmar, no después.</div>
+                <span class="trust-badge badge-teal">Verificable</span>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">🤝</div>
+                <div class="trust-card-title">Cadena de valor local</div>
+                <div class="trust-card-desc">Cada proveedor es de la comunidad y auditado anualmente.</div>
+                <span class="trust-badge badge-gold">RTA · Indicador 03</span>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">🌿</div>
+                <div class="trust-card-title">Información en tu idioma</div>
+                <div class="trust-card-desc">Fichas de producto en inglés y francés para intermediarios.</div>
+                <span class="trust-badge badge-navy">B2B ready</span>
+            </div>
+        </div>
+
+        <div class="trust-slot-wrap">
+            <div class="review-slot" id="slot3">
+                <div class="slot-placeholder">⬚ &nbsp;sección 3 · Por qué elegirnos — reseña por colocar</div>
+            </div>
+            <div class="slot-ann" id="ann3">
+                <div class="ann-bubble">✓ <strong>Por qué funciona:</strong> "Son honestos sobre lo que ofrecen y lo que no" valida directamente la promesa de transparencia. No es un elogio — es una confirmación del diferencial declarado, en palabras de un tercero independiente.</div>
+            </div>
+        </div>
+
+    </div><!-- /site-panel -->
+
+    <!-- ══ REVIEW PANEL ═════════════════════════════════ -->
+    <div class="review-panel">
+        <div class="review-panel-header">
+            <div class="rph-title">Tres reseñas — ¿dónde encaja cada una?</div>
+            <div class="rph-sub">Elegí una sección para cada reseña. Podés mover las incorrectas.</div>
+        </div>
+        <div class="review-cards">
+
+            <div class="rev-card" id="card1">
+                <div class="rev-card-label">Reseña A</div>
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-text">"Son honestos sobre lo que ofrecen y lo que no. Antes de pagar nos explicaron todo. En Colombia, eso es muy difícil de encontrar."</div>
+                <div class="rev-attr">— Lars H., Países Bajos · Google Reviews</div>
+                <button class="rev-btn" id="btn1" onclick="startChoosing(1)">¿En qué sección? →</button>
+                <div class="choice-row" id="choices1">
+                    <div class="choice-prompt">Elegí la sección:</div>
+                    <button class="choice-btn" onclick="placeReview(1,1)">1 · Impacto comunitario</button>
+                    <button class="choice-btn" onclick="placeReview(1,2)">2 · Tour — La experiencia</button>
+                    <button class="choice-btn" onclick="placeReview(1,3)">3 · Por qué elegirnos</button>
+                    <button class="cancel-btn" onclick="cancelChoosing(1)">Cancelar</button>
+                </div>
+            </div>
+
+            <div class="rev-card" id="card2">
+                <div class="rev-card-label">Reseña B</div>
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-text">"Antes del tour nos explicaron exactamente a qué familia íbamos y por qué parte del pago queda en Salento. Nunca había tenido ese contexto."</div>
+                <div class="rev-attr">— Sarah M., Alemania · Google Reviews</div>
+                <button class="rev-btn" id="btn2" onclick="startChoosing(2)">¿En qué sección? →</button>
+                <div class="choice-row" id="choices2">
+                    <div class="choice-prompt">Elegí la sección:</div>
+                    <button class="choice-btn" onclick="placeReview(2,1)">1 · Impacto comunitario</button>
+                    <button class="choice-btn" onclick="placeReview(2,2)">2 · Tour — La experiencia</button>
+                    <button class="choice-btn" onclick="placeReview(2,3)">3 · Por qué elegirnos</button>
+                    <button class="cancel-btn" onclick="cancelChoosing(2)">Cancelar</button>
+                </div>
+            </div>
+
+            <div class="rev-card" id="card3">
+                <div class="rev-card-label">Reseña C</div>
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-text">"El guía identificaba cada especie por nombre científico y nos enseñó a movernos sin dejar rastro. Completamente diferente a cualquier tour estándar."</div>
+                <div class="rev-attr">— Philippe G., Francia · TripAdvisor</div>
+                <button class="rev-btn" id="btn3" onclick="startChoosing(3)">¿En qué sección? →</button>
+                <div class="choice-row" id="choices3">
+                    <div class="choice-prompt">Elegí la sección:</div>
+                    <button class="choice-btn" onclick="placeReview(3,1)">1 · Impacto comunitario</button>
+                    <button class="choice-btn" onclick="placeReview(3,2)">2 · Tour — La experiencia</button>
+                    <button class="choice-btn" onclick="placeReview(3,3)">3 · Por qué elegirnos</button>
+                    <button class="cancel-btn" onclick="cancelChoosing(3)">Cancelar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- /main-wrap -->
+
+<script>
+    let annVisible = false;
+    // A (1) → slot 3 · B (2) → slot 1 · C (3) → slot 2
+    const CORRECT = { 1: 3, 2: 1, 3: 2 };
+    const REVIEWS = {
+        1: { stars: '★★★★★', text: '"Son honestos sobre lo que ofrecen y lo que no. Antes de pagar nos explicaron todo. En Colombia, eso es muy difícil de encontrar."', attr: '— Lars H., Países Bajos · Google Reviews', label: 'Reseña A' },
+        2: { stars: '★★★★★', text: '"Antes del tour nos explicaron exactamente a qué familia íbamos y por qué parte del pago queda en Salento. Nunca había tenido ese contexto."', attr: '— Sarah M., Alemania · Google Reviews', label: 'Reseña B' },
+        3: { stars: '★★★★★', text: '"El guía identificaba cada especie por nombre científico y nos enseñó a movernos sin dejar rastro. Completamente diferente a cualquier tour estándar."', attr: '— Philippe G., Francia · TripAdvisor', label: 'Reseña C' }
+    };
+    const slotContents = { 1: null, 2: null, 3: null };
+
+    function startChoosing(reviewN) {
+        [1, 2, 3].forEach(n => { if (n !== reviewN) cancelChoosing(n); });
+        document.getElementById('choices' + reviewN).classList.add('visible');
+        document.getElementById('card' + reviewN).classList.add('choosing');
+        document.getElementById('btn' + reviewN).style.display = 'none';
+    }
+
+    function cancelChoosing(reviewN) {
+        document.getElementById('choices' + reviewN).classList.remove('visible');
+        document.getElementById('card' + reviewN).classList.remove('choosing');
+        document.getElementById('btn' + reviewN).style.display = '';
+    }
+
+    function placeReview(reviewN, slotN) {
+        const isCorrect = CORRECT[reviewN] === slotN;
+        const r = REVIEWS[reviewN];
+        if (slotContents[slotN] !== null) evictFromSlot(slotN);
+        slotContents[slotN] = reviewN;
+
+        const slot = document.getElementById('slot' + slotN);
+        slot.className = 'review-slot ' + (isCorrect ? 'correct' : 'incorrect');
+        slot.innerHTML = `
+            <div class="placed-stars">${r.stars}</div>
+            <div class="placed-text">${r.text}</div>
+            <div class="placed-attr">${r.attr}</div>
+            <div class="placed-verdict">
+                ${isCorrect
+                    ? `<span class="verdict-ok">✓ Coincide con esta sección</span>`
+                    : `<span class="verdict-no">Puede haber una mejor coincidencia</span>
+                       <button class="move-btn" onclick="moveReview(${reviewN},${slotN})">Mover →</button>`}
+            </div>`;
+
+        cancelChoosing(reviewN);
+        const card = document.getElementById('card' + reviewN);
+        if (isCorrect) {
+            card.classList.add('placed-correct');
+        } else {
+            const btn = document.getElementById('btn' + reviewN);
+            btn.textContent = '↺ Cambiar sección';
+            btn.style.background = 'var(--amber)';
+        }
+        if (isCorrect && annVisible) document.getElementById('ann' + slotN).classList.add('visible');
+        slot.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        updateCounter();
+    }
+
+    function moveReview(reviewN, slotN) {
+        clearSlot(slotN);
+        slotContents[slotN] = null;
+        const btn = document.getElementById('btn' + reviewN);
+        btn.textContent = '¿En qué sección? →';
+        btn.style.background = '';
+        updateCounter();
+        startChoosing(reviewN);
+    }
+
+    function evictFromSlot(slotN) {
+        const reviewN = slotContents[slotN];
+        if (reviewN === null) return;
+        const card = document.getElementById('card' + reviewN);
+        card.classList.remove('placed-correct', 'choosing');
+        const btn = document.getElementById('btn' + reviewN);
+        btn.textContent = '¿En qué sección? →';
+        btn.style.background = '';
+        document.getElementById('choices' + reviewN).classList.remove('visible');
+        clearSlot(slotN);
+        slotContents[slotN] = null;
+        updateCounter();
+    }
+
+    function clearSlot(slotN) {
+        const labels = { 1: 'Impacto', 2: 'Tour', 3: 'Por qué elegirnos' };
+        const slot = document.getElementById('slot' + slotN);
+        slot.className = 'review-slot';
+        slot.innerHTML = `<div class="slot-placeholder">⬚ &nbsp;sección ${slotN} · ${labels[slotN]} — reseña por colocar</div>`;
+        if (annVisible) document.getElementById('ann' + slotN).classList.remove('visible');
+    }
+
+    function updateCounter() {
+        const correct = [1, 2, 3].filter(n => slotContents[n] === CORRECT[n]).length;
+        const el = document.getElementById('counter');
+        el.textContent = correct + ' / 3 correctas';
+        el.classList.toggle('done', correct === 3);
+    }
+
+    function toggleAnnotations() {
+        annVisible = !annVisible;
+        [1, 2, 3].forEach(n => {
+            const filled = slotContents[n] === CORRECT[n];
+            document.getElementById('ann' + n).classList.toggle('visible', annVisible && filled);
+        });
+        document.getElementById('annBtn').textContent = annVisible ? 'Ocultar notas' : 'Mostrar notas';
+    }
+
+    function resetAll() {
+        annVisible = false;
+        document.getElementById('annBtn').textContent = 'Mostrar notas';
+        [1, 2, 3].forEach(n => {
+            slotContents[n] = null;
+            clearSlot(n);
+            document.getElementById('card' + n).classList.remove('placed-correct', 'choosing');
+            const btn = document.getElementById('btn' + n);
+            btn.textContent = '¿En qué sección? →';
+            btn.style.background = '';
+            document.getElementById('choices' + n).classList.remove('visible');
+            document.getElementById('ann' + n).classList.remove('visible');
+        });
+        updateCounter();
+    }
+</script>
+</body>
+</html>

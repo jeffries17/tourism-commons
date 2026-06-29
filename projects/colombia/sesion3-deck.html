@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Lo Responsable Vende — Módulo 3 · Sesión de seguimiento · 17 de junio</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --green:      #3A7D44;
+            --green-light:#E8F5EA;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --bg-alt:     #EEF2EF;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.65; color: var(--text); background: var(--white); }
+
+        /* TOPBAR */
+        .topbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 200; padding: 0.75rem 2rem; }
+        .topbar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.35rem; letter-spacing: -0.5px; line-height: 1; display: flex; flex-direction: column; }
+        .trecc-logo .wordmark { display: flex; align-items: baseline; }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: var(--navy); }
+        .trecc-logo .tagline { font-family: 'Arial', sans-serif; font-size: 0.55rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px; margin-top: 1px; }
+        .slide-counter { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+        .slide-section-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-dark); flex: 1; text-align: center; }
+
+        /* NAV BUTTONS */
+        .nav-buttons { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: 0.65rem; z-index: 190; }
+        .nav-btn { padding: 0.65rem 1.35rem; background: var(--navy); color: white; border: none; border-radius: 7px; font-size: 0.875rem; font-family: 'Arial', sans-serif; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.25s; box-shadow: 0 2px 10px rgba(27,43,90,0.25); }
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(27,43,90,0.3); }
+        .nav-btn.prev { background: white; color: var(--text); border: 1.5px solid var(--border); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .nav-btn:disabled { opacity: 0.25; cursor: not-allowed; transform: none; }
+
+        /* SECTIONS */
+        section { min-height: 100vh; padding: 5.5rem 2rem 7rem; display: flex; align-items: center; justify-content: center; }
+        .slide-content { max-width: 900px; width: 100%; }
+        section.bg-white  { background: var(--white); }
+        section.bg-light  { background: var(--bg); }
+        section.bg-alt    { background: var(--bg-alt); }
+        section.bg-navy   { background: var(--navy); }
+
+        /* TYPOGRAPHY */
+        .slide-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.6rem; }
+        .block-intro .slide-label { color: rgba(255,255,255,0.65); }
+        .slide-title { font-size: 2.4rem; line-height: 1.15; color: var(--navy); margin-bottom: 0.5rem; }
+        .closing-slide .slide-title { color: white; }
+        .slide-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem; font-family: 'Arial', sans-serif; }
+        .accent-bar { height: 3px; width: 60px; background: var(--gold); border-radius: 2px; margin-bottom: 1.5rem; }
+
+        /* HERO */
+        .hero-slide { text-align: center; }
+        .hero-slide .slide-title { font-size: 3rem; }
+        .hero-slide .accent-bar { margin: 1.25rem auto 1.5rem; width: 80px; }
+        .hero-meta { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .meta-chip { display: flex; align-items: center; gap: 0.5rem; background: var(--teal-light); border: 1px solid var(--teal); color: var(--teal-dark); padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.875rem; font-family: 'Arial', sans-serif; }
+        .hero-partner-logos { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: center; flex-wrap: wrap; align-items: center; gap: 2rem; }
+        .partner-text { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text-muted); text-align: center; }
+        .partner-text strong { display: block; color: var(--text); font-size: 0.95rem; }
+
+        /* BLOCK INTRO */
+        .block-intro { position: relative; background-color: var(--navy); text-align: center; }
+        .block-intro::before { content: ''; position: absolute; inset: 0; background: linear-gradient(150deg, rgba(27,43,90,0.87) 30%, rgba(45,122,106,0.70) 100%); }
+        .block-intro .slide-content { position: relative; z-index: 1; }
+        .block-intro .bi-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 9rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; position: absolute; bottom: 1rem; right: 1.5rem; }
+        .block-intro .bi-kicker { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gold); margin-bottom: 1.2rem; }
+        .block-intro .bi-rule { width: 50px; height: 2px; background: var(--gold); margin: 1.2rem auto 1.5rem; border-radius: 2px; }
+        .block-intro .bi-title { font-size: 2.6rem; line-height: 1.15; color: white; }
+        .block-intro .bi-sub { font-family: 'Arial', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.78); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+        /* INTERACTIVE SLIDE */
+        .interactive-slide { background: linear-gradient(135deg, #2D5A27 0%, var(--teal-dark) 100%); text-align: center; }
+        .interactive-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        .interactive-question { font-size: 1.9rem; color: white; line-height: 1.3; font-style: italic; max-width: 700px; margin: 0 auto 2rem; }
+        .interactive-instruction { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-top: 0.75rem; }
+        .chat-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+        /* PROGRAM ARC */
+        .program-arc { display: flex; align-items: stretch; gap: 0.5rem; margin: 1.25rem 0; }
+        .program-module { flex: 1; background: var(--bg); border-radius: 10px; padding: 1rem 1.1rem; border: 2px solid var(--border); opacity: 0.6; }
+        .program-module.active { background: var(--teal-light); border-color: var(--teal); opacity: 1; }
+        .program-module.done { opacity: 0.78; }
+        .arc-connector { display: flex; align-items: center; color: var(--border); font-size: 1.2rem; flex: 0 0 auto; }
+        .module-badge { font-family: 'Arial', sans-serif; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 600; }
+        .program-module.active .module-badge { color: var(--teal-dark); }
+        .module-name { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.1; }
+        .module-focus { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+        .program-module.active .module-focus { color: var(--teal-dark); font-weight: 600; }
+        .module-sessions { list-style: none; padding: 0; margin: 0; }
+        .module-sessions li { font-family: 'Arial', sans-serif; font-size: 0.73rem; color: var(--text-muted); padding: 0.15rem 0 0.15rem 0.85rem; position: relative; line-height: 1.3; }
+        .module-sessions li::before { content: '·'; position: absolute; left: 0.2rem; color: var(--teal); }
+        .module-sessions li.today { color: var(--teal-dark); font-weight: 700; }
+        .module-sessions li.today::before { content: '▶'; font-size: 0.55rem; top: 0.25rem; }
+        .module-sessions li.done { color: var(--text-muted); text-decoration: line-through; opacity: 0.6; }
+
+        /* CALLOUT */
+        .callout { background: var(--teal); color: white; padding: 1.25rem 1.5rem; border-radius: 10px; margin: 1.25rem 0; }
+        .callout.callout-gold { background: var(--gold); color: var(--navy); }
+        .callout.callout-outline { background: transparent; border: 2px solid var(--teal); color: var(--text); }
+        .callout h3 { font-size: 0.95rem; margin-bottom: 0.35rem; font-family: 'Arial', sans-serif; font-weight: 700; }
+        .callout p { font-size: 0.875rem; line-height: 1.65; }
+
+        /* TWO COLUMN */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.25rem; }
+        .detail-block { background: var(--bg); border-radius: 8px; padding: 0.9rem 1rem; }
+        .detail-block h4 { font-family: 'Arial', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+        .detail-block ul { list-style: none; padding: 0; }
+        .detail-block ul li { font-size: 0.85rem; color: var(--text); padding: 0.25rem 0 0.25rem 1rem; position: relative; line-height: 1.45; }
+        .detail-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.75rem; top: 0.3rem; }
+
+        /* QUOTE BLOCK */
+        .quote-block { border-left: 4px solid var(--gold); padding: 1rem 1.4rem; background: var(--gold-light); border-radius: 0 8px 8px 0; margin: 1.25rem 0; }
+        .quote-block p { font-size: 1.05rem; font-style: italic; color: var(--text); line-height: 1.7; }
+
+        /* THREE APPROACH CARDS */
+        .approach-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .approach-card { background: white; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-top: 4px solid var(--teal); }
+        .approach-card:nth-child(2) { border-top-color: var(--navy); }
+        .approach-card:nth-child(3) { border-top-color: var(--gold); }
+        .approach-icon { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
+        .approach-num { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 0.3rem; }
+        .approach-card:nth-child(2) .approach-num { color: var(--navy-mid); }
+        .approach-card:nth-child(3) .approach-num { color: #7A6000; }
+        .approach-title { font-family: 'Arial', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.2; }
+        .approach-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+        /* ATRAVERSA */
+        .atraversa-header { background: linear-gradient(135deg, #1E3A5F 0%, #2D7A6A 100%); border-radius: 12px 12px 0 0; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+        .atraversa-logo-mock { background: white; border-radius: 8px; padding: 0.45rem 1rem; font-family: 'Arial Black', Arial, sans-serif; font-size: 1.05rem; font-weight: 900; color: var(--navy); flex-shrink: 0; }
+        .atraversa-body { background: var(--bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 12px 12px; padding: 1.25rem 1.5rem; }
+        .atraversa-features { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.75rem; }
+        .feature-chip { display: flex; align-items: flex-start; gap: 0.6rem; background: white; border-radius: 8px; padding: 0.7rem 0.85rem; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+        .feature-icon { flex: 0 0 auto; font-size: 1rem; margin-top: 1px; }
+        .feature-text { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text); line-height: 1.4; }
+        .feature-text strong { display: block; color: var(--navy); font-weight: 700; margin-bottom: 0.1rem; }
+
+        /* DEMO PLACEHOLDER */
+        .demo-placeholder { background: linear-gradient(135deg, var(--navy) 0%, var(--teal-dark) 100%); border-radius: 14px; padding: 3rem 2rem; text-align: center; margin: 1rem 0; border: 2px dashed rgba(255,255,255,0.2); }
+        .demo-placeholder .dp-label { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 1rem; }
+        .demo-placeholder .dp-title { font-size: 1.75rem; color: white; margin-bottom: 0.5rem; }
+        .demo-placeholder .dp-sub { font-family: Arial, sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+
+        /* CLAIM ANCHOR */
+        .claim-anchor-box { background: var(--navy); border-radius: 14px; padding: 2rem 2.5rem; text-align: center; margin: 1.25rem 0; position: relative; overflow: hidden; }
+        .claim-anchor-box::before { content: '"'; position: absolute; top: -1rem; left: 1rem; font-size: 8rem; color: rgba(255,255,255,0.04); font-family: Georgia, serif; line-height: 1; }
+        .claim-anchor-text { font-size: 1.5rem; color: white; line-height: 1.4; font-style: italic; position: relative; z-index: 1; }
+        .claim-anchor-note { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 1rem; position: relative; z-index: 1; }
+        .claim-indicator-row { display: flex; gap: 0.5rem; justify-content: center; margin-top: 0.85rem; flex-wrap: wrap; position: relative; z-index: 1; }
+        .claim-indicator-tag { background: rgba(245,196,0,0.18); border: 1px solid rgba(245,196,0,0.4); color: var(--gold); padding: 0.25rem 0.75rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; }
+
+        /* SOCIAL MEDIA MOCKUPS */
+        .social-mockup { border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+        /* Instagram */
+        .ig-header { background: linear-gradient(90deg, #E1306C 0%, #833AB4 60%, #405DE6 100%); padding: 0.7rem 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .ig-avatar { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.3); border: 1.5px solid white; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: white; font-weight: 700; font-family: Arial, sans-serif; flex-shrink: 0; }
+        .ig-handle { font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; color: white; }
+        .ig-image-placeholder { background: linear-gradient(160deg, #9ECFC6 0%, #6BAFA4 100%); height: 100px; display: flex; align-items: center; justify-content: center; }
+        .ig-image-placeholder p { font-family: Arial, sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.75); font-style: italic; }
+        .ig-body { background: white; padding: 0.75rem 1rem; }
+        .ig-caption { font-family: Arial, sans-serif; font-size: 0.75rem; color: #262626; line-height: 1.6; }
+        .ig-hashtags { color: #3897F0; font-family: Arial, sans-serif; font-size: 0.72rem; margin-top: 0.35rem; line-height: 1.6; }
+        .mockup-note { font-family: Arial, sans-serif; font-size: 0.65rem; color: var(--text-muted); background: var(--bg); padding: 0.45rem 0.9rem; border-top: 1px solid var(--border); font-style: italic; }
+
+        /* LinkedIn */
+        .li-header { background: #0A66C2; padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .li-logo-badge { font-family: Arial, sans-serif; font-size: 0.85rem; font-weight: 900; color: white; background: rgba(255,255,255,0.2); border-radius: 4px; padding: 0.1rem 0.4rem; }
+        .li-body { background: white; padding: 1rem 1.1rem; }
+        .li-author { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.75rem; padding-bottom: 0.65rem; border-bottom: 1px solid var(--border); }
+        .li-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--teal-light); border: 2px solid var(--teal); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--teal-dark); font-family: Arial, sans-serif; flex-shrink: 0; }
+        .li-name { font-family: Arial, sans-serif; font-size: 0.8rem; font-weight: 700; color: #191919; }
+        .li-title-line { font-family: Arial, sans-serif; font-size: 0.68rem; color: #666; }
+        .li-post-text { font-family: Arial, sans-serif; font-size: 0.78rem; color: #191919; line-height: 1.65; }
+        .li-hashtags { color: #0A66C2; font-size: 0.72rem; font-family: Arial, sans-serif; margin-top: 0.35rem; }
+
+        /* Email mockup */
+        .email-mockup { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+        .email-chrome { background: var(--navy); padding: 0.65rem 1rem; display: flex; gap: 0.4rem; align-items: center; }
+        .email-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+        .email-subject-bar { background: var(--bg-alt); padding: 0.55rem 1.1rem; font-family: Arial, sans-serif; font-size: 0.75rem; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+        .email-subject-bar strong { color: var(--text); }
+        .email-body { background: white; padding: 1.1rem; font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--text); line-height: 1.75; }
+
+        /* CHANNEL GRID */
+        .channel-grid { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.25rem; }
+        .channel-card { display: flex; align-items: flex-start; gap: 1rem; background: white; border-radius: 10px; padding: 1rem 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid var(--teal); }
+        .channel-card.li { border-left-color: #0A66C2; }
+        .channel-card.wtm { border-left-color: var(--gold); }
+        .channel-icon-badge { font-size: 1.4rem; flex: 0 0 auto; margin-top: 2px; }
+        .channel-info { flex: 1; }
+        .channel-name { font-family: 'Arial', sans-serif; font-size: 0.875rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+        .channel-desc { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+        .channel-tip { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: var(--teal-dark); margin-top: 0.3rem; font-style: italic; }
+        .channel-card.li .channel-tip { color: #0A66C2; }
+        .channel-card.wtm .channel-tip { color: #7A6000; }
+
+        /* CLOSING */
+        .closing-slide { background: var(--navy); text-align: center; }
+        .anchor-echo { font-family: 'Georgia', serif; font-style: italic; font-size: 0.95rem; color: rgba(255,255,255,0.6); max-width: 580px; margin: 1.25rem auto; line-height: 1.7; }
+        .closing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; max-width: 680px; margin-left: auto; margin-right: auto; }
+        .qr-panel { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 1.5rem; text-align: center; }
+        .qr-panel-label { font-family: Arial, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 0.75rem; }
+        .qr-box { width: 130px; height: 130px; border: 2px dashed rgba(255,255,255,0.25); border-radius: 8px; margin: 0 auto 0.75rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.04); }
+        .qr-box p { font-family: Arial, sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.35); text-align: center; line-height: 1.5; }
+        .qr-url { font-family: 'Arial', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--teal-light); }
+        .qr-desc { font-family: Arial, sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.45); margin-top: 0.25rem; }
+        .next-stack { display: flex; flex-direction: column; gap: 0.75rem; justify-content: center; }
+        .next-box { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); padding: 0.9rem 1.25rem; border-radius: 10px; text-align: left; }
+        .nxt-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); font-family: Arial, sans-serif; margin-bottom: 0.25rem; }
+        .nxt-title { font-size: 0.875rem; font-family: Arial, sans-serif; color: white; font-weight: 600; }
+        .nxt-time { font-size: 0.75rem; color: rgba(255,255,255,0.45); font-family: Arial, sans-serif; margin-top: 0.1rem; }
+
+        /* PAUSE */
+        .pause-slide { background: var(--bg); text-align: center; }
+        .pause-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+        .pause-title { font-size: 2rem; color: var(--navy); margin-bottom: 0.5rem; }
+        .pause-sub { font-family: Arial, sans-serif; font-size: 0.95rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="trecc-logo">
+            <div class="wordmark"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="tagline">Turismo Responsable · Economía Creativa · Colombia</div>
+        </div>
+        <div class="slide-section-label" id="slideSection">Módulo 3 · Sesión de seguimiento</div>
+        <div class="slide-counter" id="slideCounter">1 / 35</div>
+    </div>
+</div>
+
+<!-- NAV BUTTONS -->
+<div class="nav-buttons">
+    <button class="nav-btn prev" id="prevBtn" onclick="navigate(-1)" disabled>← Anterior</button>
+    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">Siguiente →</button>
+</div>
+
+
+<!-- ================================================================
+     S0 · PORTADA
+     ================================================================ -->
+<section class="bg-white" id="s0" data-section="0">
+    <div class="slide-content hero-slide">
+        <div class="slide-label">Módulo 3 · Sesión de seguimiento</div>
+        <h1 class="slide-title">Lo Responsable<br><strong>Vende</strong></h1>
+        <div class="accent-bar"></div>
+        <p style="font-family:Arial,sans-serif;font-size:1rem;color:var(--text-muted);max-width:520px;margin:0 auto;line-height:1.7;">
+            Tres meses. Tres módulos. Un mercado europeo que ya conoces.<br>Hoy cerramos el ciclo — y abrimos el siguiente.
+        </p>
+        <div class="hero-meta">
+            <div class="meta-chip">📅 17 de junio de 2026</div>
+            <div class="meta-chip">⏱ 9:00–11:00 · Medellín</div>
+            <div class="meta-chip">💻 En línea</div>
+        </div>
+        <div class="hero-partner-logos">
+            <div class="partner-text"><strong>TRECC</strong>Turismo Responsable</div>
+            <div style="color:var(--border);font-size:1rem;">|</div>
+            <div class="partner-text"><strong>Institut Français Colombia</strong></div>
+            <div style="color:var(--border);font-size:1rem;">|</div>
+            <div class="partner-text"><strong>ProColombia</strong></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S1 · EL RECORRIDO
+     ================================================================ -->
+<section class="bg-light" id="s1" data-section="1">
+    <div class="slide-content">
+        <div class="slide-label">El recorrido</div>
+        <h2 class="slide-title">De abril a junio</h2>
+        <div class="accent-bar"></div>
+        <div class="program-arc">
+            <div class="program-module done">
+                <div class="module-badge">Módulo 1 · Online</div>
+                <div class="module-name">Fundamentos</div>
+                <div class="module-focus">Lo responsable como argumento comercial</div>
+                <ul class="module-sessions">
+                    <li class="done">Sesión 1 · 14 abr · Diagnóstico digital</li>
+                    <li class="done">Sesión 2 · 28 abr · El comprador europeo</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module done">
+                <div class="module-badge">Módulo 2 · Presencial</div>
+                <div class="module-name">Práctica</div>
+                <div class="module-focus">Del pitch a la conversación completa</div>
+                <ul class="module-sessions">
+                    <li class="done">Día 1 · 25 may · Pitch y formatos</li>
+                    <li class="done">Día 2 · 26 may · Preguntas difíciles y cierre</li>
+                    <li class="done">Evento B2B · 27 may · Compradores reales</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module active">
+                <div class="module-badge">Módulo 3 · Online</div>
+                <div class="module-name">Seguimiento</div>
+                <div class="module-focus">Qué aprendiste · qué sigue</div>
+                <ul class="module-sessions">
+                    <li class="today">Hoy · 17 jun · Sesión de cierre</li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:1rem;">El programa fue el arranque, no el resultado · El recorrido B2B dura 6–18 meses</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S2 · APERTURA
+     ================================================================ -->
+<section class="interactive-slide" id="s2" data-section="2">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Apertura</div>
+        <span class="chat-icon">🌱</span>
+        <p class="interactive-question">"Una palabra o frase: ¿cómo te sientes respecto al mercado europeo hoy, comparado con cómo llegaste al programa en abril?"</p>
+        <p class="interactive-instruction">Todos al chat al mismo tiempo · luego compartimos dos o tres en voz</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S3 · BLOQUE 1 DIVIDER
+     ================================================================ -->
+<section class="block-intro" id="s3" data-section="3">
+    <div class="bi-num">1</div>
+    <div class="slide-content">
+        <div class="bi-kicker">Bloque 1</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Lo que pasó el 27 de mayo</h2>
+        <p class="bi-sub">Una ronda honesta — éxitos, fricciones, y contactos con potencial real</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S4 · LA RONDA DE BALANCE
+     ================================================================ -->
+<section class="bg-white" id="s4" data-section="4">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 1 · Ronda de balance</div>
+        <h2 class="slide-title">La pregunta guía</h2>
+        <div class="accent-bar"></div>
+        <div class="quote-block">
+            <p>"¿Con quién hablaste, qué funcionó, qué no, y qué contacto o conversación te pareció más prometedor?"</p>
+        </div>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Cómo funciona la ronda</h4>
+                <ul>
+                    <li>2 minutos por persona</li>
+                    <li>No es una ronda de éxitos — es una ronda honesta</li>
+                    <li>Las fricciones son igual de valiosas que los logros</li>
+                    <li>El facilitador agrupa los patrones en tiempo real</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Lo que vamos mapeando juntos</h4>
+                <ul>
+                    <li>Tipos de compradores con mejor conexión</li>
+                    <li>Fricciones comunes: idioma, formato, timing, producto</li>
+                    <li>Contactos con potencial real identificados por el grupo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S5 · FOLLOW-UP QUESTION
+     ================================================================ -->
+<section class="interactive-slide" id="s5" data-section="5">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Para cerrar el bloque</div>
+        <span class="chat-icon">✉️</span>
+        <p class="interactive-question">"¿Enviaste algún mensaje de seguimiento después del 27 de mayo?<br>¿Qué tipo — email, WhatsApp, LinkedIn?"</p>
+        <p class="interactive-instruction">Levanta la mano o escribe en el chat · sin juicio, solo para calibrar el grupo</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S5b · MÁS ALLÁ DEL 27 — REFLEXIÓN ABIERTA
+     ================================================================ -->
+<section class="bg-alt" id="s5b" data-section="5b">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 1 · Reflexión abierta</div>
+        <h2 class="slide-title">Más allá de las agencias</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Elige la pregunta que más te resuene — o responde a varias.</p>
+        <div class="approach-grid">
+            <div class="approach-card">
+                <span class="approach-icon">💡</span>
+                <div class="approach-title">Lo que no esperabas</div>
+                <p class="approach-desc">"¿Qué aprendiste sobre el mercado europeo que te sorprendió — más allá de las conversaciones con las agencias?"</p>
+            </div>
+            <div class="approach-card" style="border-top-color:var(--gold);">
+                <span class="approach-icon">🔄</span>
+                <div class="approach-title">Lo que cambió después</div>
+                <p class="approach-desc">"¿Hiciste algo diferente en las semanas siguientes — un ajuste al producto, una conversación, algo que describes de otra manera?"</p>
+            </div>
+            <div class="approach-card" style="border-top-color:var(--navy);">
+                <span class="approach-icon">🧠</span>
+                <div class="approach-title">Lo que sigue dando vueltas</div>
+                <p class="approach-desc">"¿Hubo algo del evento — una observación, un comentario, una fricción — que todavía estás procesando?"</p>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;padding:0.75rem 1.25rem;text-align:center;">
+            <p>Compartimos 3–4 respuestas en voz · el facilitador mapea los patrones</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S6 · BLOQUE 2 DIVIDER — ATRAVERSA
+     ================================================================ -->
+<section class="block-intro" id="s6" data-section="6">
+    <div class="bi-num">2</div>
+    <div class="slide-content">
+        <div class="bi-kicker">Bloque 2</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Herramientas para el seguimiento</h2>
+        <p class="bi-sub">Una alternativa gratuita — demostración en vivo</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S7 · ATRAVERSA INTRO
+     ================================================================ -->
+<section class="bg-light" id="s7" data-section="7">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 2 · Atraversa</div>
+        <h2 class="slide-title">Una herramienta gratuita para gestionar contactos B2B</h2>
+        <div class="accent-bar"></div>
+        <div class="atraversa-header">
+            <div class="atraversa-logo-mock">Atraversa</div>
+            <div>
+                <div style="font-family:Arial,sans-serif;font-size:0.85rem;font-weight:700;color:white;">CRM para relaciones B2B</div>
+                <div style="font-family:Arial,sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.75);margin-top:0.15rem;">Gratis · Visual · Diseñado para no perder ningún contacto</div>
+            </div>
+        </div>
+        <div class="atraversa-body">
+            <div class="atraversa-features">
+                <div class="feature-chip">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-text"><strong>Organiza contactos</strong>Nombre, empresa, mercado, tipo de comprador</div>
+                </div>
+                <div class="feature-chip">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-text"><strong>Rastrea el estado</strong>Activo, pendiente, sin seguimiento, no relevante</div>
+                </div>
+                <div class="feature-chip">
+                    <div class="feature-icon">📅</div>
+                    <div class="feature-text"><strong>Próximo paso</strong>Qué prometiste · cuándo lo haces</div>
+                </div>
+                <div class="feature-chip">
+                    <div class="feature-icon">💡</div>
+                    <div class="feature-text"><strong>Alternativa visual</strong>a la plantilla de Google Sheets del Módulo 2</div>
+                </div>
+            </div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.75rem;color:var(--text-muted);margin-top:0.85rem;text-align:center;">Lo más importante no es la herramienta que uses — es que tengas un sistema. Cualquiera.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S8 · ATRAVERSA DEMO VIVO
+     ================================================================ -->
+<section class="bg-alt" id="s8" data-section="8">
+    <div class="slide-content" style="text-align:center;">
+        <div class="demo-placeholder">
+            <div class="dp-label">Demo en vivo · ~10 min</div>
+            <div class="dp-title">Atraversa</div>
+            <div class="dp-sub">El facilitador comparte pantalla · flujo de contactos en tiempo real</div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--text-muted);margin-top:1.1rem;">¿Preguntas sobre la herramienta? Ahora es el momento.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S9 · BLOQUE 3 DIVIDER — AUTOEVALUACIÓN
+     ================================================================ -->
+<section class="block-intro" id="s9" data-section="9">
+    <div class="bi-num">3</div>
+    <div class="slide-content">
+        <div class="bi-kicker">Bloque 3</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">¿Cómo seguir desarrollando<br>tu producto responsable?</h2>
+        <p class="bi-sub">Tres formas de autoevaluarte — sin costo, sin consultoría externa</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S10 · TRES FORMAS DE AUTOEVALUARSE
+     ================================================================ -->
+<section class="bg-white" id="s10" data-section="10">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 3 · Autoevaluación</div>
+        <h2 class="slide-title">Tres formas de saber cómo estás</h2>
+        <div class="accent-bar"></div>
+        <div class="approach-grid">
+            <div class="approach-card">
+                <span class="approach-icon">🔖</span>
+                <div class="approach-num">Forma 1</div>
+                <div class="approach-title">Los 16 indicadores RTA</div>
+                <p class="approach-desc">Un marco compartido que ya conoces — úsalo como checklist semestral para ver tu progreso. <strong>be-rta.org</strong></p>
+            </div>
+            <div class="approach-card">
+                <span class="approach-icon">⭐</span>
+                <div class="approach-num">Forma 2</div>
+                <div class="approach-title">Tus reseñas en línea</div>
+                <p class="approach-desc">Tus últimas 10 reseñas son investigación de mercado gratuita — ya te dicen qué notan los viajeros.</p>
+            </div>
+            <div class="approach-card">
+                <span class="approach-icon">👥</span>
+                <div class="approach-num">Forma 3</div>
+                <div class="approach-title">Tu red de colegas</div>
+                <p class="approach-desc">Ver cómo tus pares comunican su trabajo también es investigación — y cuando uno cuenta bien su historia, abre el mercado para todos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S11 · RTA — be-rta.org
+     ================================================================ -->
+<section class="bg-light" id="s11" data-section="11">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 3 · Forma 1 · be-rta.org</div>
+        <h2 class="slide-title">Los indicadores RTA como herramienta viva</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Para operadores turísticos</h4>
+                <ul>
+                    <li>Los 16 indicadores como autoevaluación semestral</li>
+                    <li>Identifica cuáles ya cumples y cuáles estás trabajando</li>
+                    <li>30 minutos, dos veces al año — suficiente para ver el progreso</li>
+                    <li>El sitio te guía indicador por indicador</li>
+                    <li>Demo en vivo → <strong>be-rta.org</strong></li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Para otras empresas turísticas</h4>
+                <ul>
+                    <li>be-rta.org también tiene una vía de participación para hoteles, restaurantes y transporte</li>
+                    <li>El marco es el mismo: comunidad local, impacto económico, prácticas ambientales</li>
+                    <li>Está en desarrollo — si te interesa participar, puedes escribirles directamente desde el sitio</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;text-align:center;padding:0.85rem 1.5rem;">
+            <p style="font-family:Arial,sans-serif;font-weight:700;font-size:0.9rem;color:var(--teal-dark);">🌐 www.be-rta.org</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S12 · RESEÑAS COMO SEÑAL
+     ================================================================ -->
+<section class="bg-alt" id="s12" data-section="12">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 3 · Forma 2 · Reseñas</div>
+        <h2 class="slide-title">Tus últimas 10 reseñas ya te dicen algo</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Busca tres tipos de mención: el guía, la comunidad local, alguna práctica ambiental o responsable.</p>
+        <div class="two-col">
+            <div class="detail-block">
+                <h4>Si nadie las menciona...</h4>
+                <ul>
+                    <li>Los viajeros no están notando tus prácticas responsables — o no tienen el lenguaje para describirlas</li>
+                    <li>Señal de que hace falta comunicarlas mejor durante el tour</li>
+                    <li>No es un problema del producto — es de visibilidad</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Si sí las mencionan...</h4>
+                <ul>
+                    <li>Anota las palabras exactas que usan — ese es tu lenguaje de marketing</li>
+                    <li>Úsalas en tu descripción, en tus posts, en tus emails a compradores</li>
+                    <li>El viajero real es más creíble que cualquier claim que escribas tú</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-gold" style="margin-top:1rem;">
+            <p><strong>Acción rápida:</strong> esta semana, abre TripAdvisor o Google y copia las dos frases más específicas que un viajero haya escrito sobre tu tour. Esas dos frases van directo a tu marketing.</p>
+        </div>
+        <div class="two-col" style="margin-top:1.25rem;">
+            <div class="detail-block">
+                <h4>Cómo pedir reseñas que capturan lo que haces</h4>
+                <ul>
+                    <li>En lugar de "¿nos dejas una reseña?", pregunta algo concreto: <em>"¿Qué te pareció el trabajo de nuestro guía local?"</em></li>
+                    <li>Pide en el momento: justo después del almuerzo en la finca, después de conocer al artesano</li>
+                    <li>Dales el lenguaje: <em>"Si quieres mencionar algo sobre el impacto en la comunidad, nos encantaría que lo incluyas"</em></li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Preguntas que abren la reseña correcta</h4>
+                <ul>
+                    <li><em>"¿Qué fue lo más memorable del tour — algo que no esperabas?"</em></li>
+                    <li><em>"¿Hubo algún momento en que sentiste una conexión real con el lugar o las personas?"</em></li>
+                    <li><em>"¿Qué le dirías a un amigo que está considerando hacer este tour?"</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S13 · TU RED DE COLEGAS
+     ================================================================ -->
+<section class="bg-white" id="s13" data-section="13">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 3 · Forma 3 · Red de pares</div>
+        <h2 class="slide-title">La marea sube para todos</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Este taller no tiene que ser el único momento de conexión con tus colegas del sector.</p>
+        <div class="two-col" style="margin-top:1rem;">
+            <div class="detail-block">
+                <h4>Lo que puedes hacer esta semana</h4>
+                <ul>
+                    <li>Busca en Instagram o LinkedIn a dos colegas del grupo de hoy</li>
+                    <li>Mira cómo están comunicando sus prácticas responsables — qué lenguaje usan, qué les funciona</li>
+                    <li>Si ves algo que te inspire, díselo — un mensaje directo es suficiente</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <h4>Por qué importa la red de pares</h4>
+                <ul>
+                    <li>No siempre tendrás un taller — pero sí tendrás a tus colegas</li>
+                    <li>Cuando un operador cuenta bien su historia, abre el mercado responsable para todos los demás</li>
+                    <li>Compartir aprendizajes no es competencia — es construcción de sector</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout" style="margin-top:1rem;">
+            <p><strong>Acción concreta:</strong> antes del fin de semana, síguele las redes a al menos un colega de hoy — y cuando veas algo que funciona, díselo.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S14 · BLOQUE 4 DIVIDER — MARKETING
+     ================================================================ -->
+<section class="block-intro" id="s15" data-section="15">
+    <div class="bi-num">4</div>
+    <div class="slide-content">
+        <div class="bi-kicker">Bloque 4</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Cuenta tu historia responsable</h2>
+        <p class="bi-sub">Del indicador al contenido — tres claims, tres formatos</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S16 · LA IDEA
+     ================================================================ -->
+<section class="bg-white" id="s16" data-section="16">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Marketing responsable</div>
+        <h2 class="slide-title">Ya tienes el dato. Ahora, ¿dónde va?</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Ya trabajaste tus indicadores. Vamos a ver tres claims distintos — cadena económica, capital humano y proceso responsable — y cómo cada uno llega a Instagram, a LinkedIn y a un newsletter.</p>
+        <div class="approach-grid">
+            <div class="approach-card" style="text-align:center;">
+                <span class="approach-icon">📸</span>
+                <div class="approach-title" style="font-size:0.875rem;">Instagram</div>
+                <p class="approach-desc">Emocional · visual · primera persona · B2C</p>
+            </div>
+            <div class="approach-card" style="border-top-color:#0A66C2;text-align:center;">
+                <span class="approach-icon">💼</span>
+                <div class="approach-title" style="font-size:0.875rem;">LinkedIn</div>
+                <p class="approach-desc" style="color:#0A66C2;">Datos · credibilidad · invitación directa · B2B</p>
+            </div>
+            <div class="approach-card" style="border-top-color:var(--gold);text-align:center;">
+                <span class="approach-icon">✉️</span>
+                <div class="approach-title" style="font-size:0.875rem;">Email a compradores</div>
+                <p class="approach-desc">Personal · directo · acción específica · B2B</p>
+            </div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:1rem;">Una misma práctica responsable → tres formatos → distintas audiencias</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S17 · EL CLAIM ANCLA
+     ================================================================ -->
+<section class="bg-light" id="s17" data-section="17">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Tres claims</div>
+        <h2 class="slide-title">Tres tipos de evidencia responsable</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle" style="text-align:center;margin-bottom:1.5rem;">El mismo trabajo de indicadores RTA genera claims muy distintos. Para cada uno vemos Instagram, LinkedIn y newsletter.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+            <div class="claim-anchor-box" style="flex:1;min-width:200px;max-width:290px;padding:1.25rem 1.5rem;">
+                <div style="font-family:Arial,sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:0.5rem;">Claim A · Cadena económica</div>
+                <div class="claim-anchor-text" style="font-size:0.95rem;">"El 85% de nuestros proveedores son locales de la región"</div>
+                <div class="claim-indicator-row">
+                    <span class="claim-indicator-tag">Indicadores 3 · 11</span>
+                </div>
+            </div>
+            <div class="claim-anchor-box" style="flex:1;min-width:200px;max-width:290px;padding:1.25rem 1.5rem;">
+                <div style="font-family:Arial,sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:0.5rem;">Claim B · Capital humano</div>
+                <div class="claim-anchor-text" style="font-size:0.95rem;">"El 100% de nuestros guías son nativos de las zonas que guiamos"</div>
+                <div class="claim-indicator-row">
+                    <span class="claim-indicator-tag">Indicadores 4 · 7</span>
+                </div>
+            </div>
+            <div class="claim-anchor-box" style="flex:1;min-width:200px;max-width:290px;padding:1.25rem 1.5rem;">
+                <div style="font-family:Arial,sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:0.5rem;">Claim C · Proceso responsable</div>
+                <div class="claim-anchor-text" style="font-size:0.95rem;">"Completamos nuestra primera autoevaluación RTA — 7 áreas documentadas"</div>
+                <div class="claim-indicator-row">
+                    <span class="claim-indicator-tag">Autoevaluación RTA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S18 · INSTAGRAM · EJEMPLO REAL 1
+     ================================================================ -->
+<section class="bg-alt" id="s18" data-section="18">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Instagram · Ejemplo real 1</div>
+        <h2 class="slide-title">Imagen de acción · dato superpuesto · impacto local</h2>
+        <div class="accent-bar"></div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+            <img src="ig-posts/arpontrekking.png" alt="@arpontrekking" style="width:100%;height:auto;display:block;">
+        </div>
+        <div class="mockup-note">@arpontrekking · foto de acción + dato superpuesto ("Impacto local positivo") + acciones específicas en el cuerpo · estructura: gancho visual → dato → filosofía en tres líneas</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S19 · INSTAGRAM · EJEMPLO REAL 2
+     ================================================================ -->
+<section class="bg-alt" id="s19" data-section="19">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Instagram · Ejemplo real 2</div>
+        <h2 class="slide-title">Apertura con pregunta · conocimiento de largo plazo</h2>
+        <div class="accent-bar"></div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+            <img src="ig-posts/macuaticos.png" alt="@macuaticos" style="width:100%;height:auto;display:block;">
+        </div>
+        <div class="mockup-note">@macuaticos · apertura con "¿Para qué?" — la pregunta crea tensión antes del dato · 15 años monitoreando ballenas: la duración ES el claim de capital humano</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S20 · INSTAGRAM · EJEMPLO REAL 3
+     ================================================================ -->
+<section class="bg-alt" id="s20" data-section="20">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Instagram · Ejemplo real 3</div>
+        <h2 class="slide-title">Hito de proceso · capacitación interna como historia pública</h2>
+        <div class="accent-bar"></div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+            <img src="ig-posts/infoturchubut.png" alt="@infoturchubut" style="width:100%;height:auto;display:block;">
+        </div>
+        <div class="mockup-note">@infoturchubut · "Chubut realizó una jornada de actualización para guías" — trabajo interno convertido en historia pública · el proceso de mejora ES el contenido</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S21 · LINKEDIN · EJEMPLO REAL 1
+     ================================================================ -->
+<section class="bg-white" id="s21" data-section="21">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · LinkedIn · Ejemplo real 1</div>
+        <h2 class="slide-title">Evidencia de campo · el territorio como contenido continuo</h2>
+        <div class="accent-bar"></div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+            <img src="li-posts/LI_Ecohostal_post.png" alt="Aitawa Ecohostal" style="width:100%;height:auto;display:block;">
+        </div>
+        <div class="mockup-note">Aitawa Ecohostal (Los Llanos Orientales) · avistamiento de ocelote como evidencia de campo · el campo ES el contenido — no hace falta anunciar que son responsables, lo demuestran</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S22 · LINKEDIN · EJEMPLO REAL 2
+     ================================================================ -->
+<section class="bg-white" id="s22" data-section="22">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · LinkedIn · Ejemplo real 2</div>
+        <h2 class="slide-title">Hito de programa · datos específicos · credibilidad compuesta</h2>
+        <div class="accent-bar"></div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+            <img src="li-posts/LI_Terra_post.png" alt="Terra Retreats" style="width:100%;height:auto;display:block;">
+        </div>
+        <div class="mockup-note">Terra Retreats · hito de programa + bullets de impacto específico (demografía, economía, naturalización) + crédito a colaboradores · estructura: milestone → datos → programa → invitación</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S23 · CÓMO PODRÍA VERSE · CLAIM A · INSTAGRAM
+     ================================================================ -->
+<section class="bg-light" id="s23" data-section="23">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim A · Instagram</div>
+        <h2 class="slide-title">Cadena económica · tono emocional · B2C</h2>
+        <div class="accent-bar"></div>
+        <div class="claim-anchor-box" style="margin-bottom:1rem;padding:0.85rem 1.5rem;">
+            <div style="font-family:Arial,sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:0.35rem;">Claim A · Cadena económica</div>
+            <div class="claim-anchor-text" style="font-size:1rem;">"El 85% de nuestros proveedores son locales de la región"</div>
+        </div>
+        <div class="social-mockup">
+            <div class="ig-header">
+                <div class="ig-avatar">TE</div>
+                <div class="ig-handle">@tu_empresa_colombia</div>
+            </div>
+            <div class="ig-image-placeholder">
+                <p>foto: guía local en ruta / artesano / comunidad en acción</p>
+            </div>
+            <div class="ig-body">
+                <div class="ig-caption">
+                    Detrás de cada tour hay una red de personas que conocen el territorio de adentro hacia afuera. 🌿<br><br>
+                    El 85% de nuestros proveedores son locales — el guía que sabe dónde canta el ave endémica, la señora que prepara el almuerzo en la finca, el artesano cuyo producto le da sentido al recorrido.<br><br>
+                    Viajar responsablemente no es solo elegir destinos sostenibles. Es elegir a quién llevas contigo.
+                </div>
+                <div class="ig-hashtags">#TurismoResponsable #Colombia #ViajeroConsciente #ResponsibleTravel #NaturalezaColombia</div>
+            </div>
+            <div class="mockup-note">Mismo patrón que @arpontrekking · gancho emocional → dato concreto → filosofía · imagen: la cadena en acción</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S24 · CÓMO PODRÍA VERSE · CLAIM A · LINKEDIN
+     ================================================================ -->
+<section class="bg-white" id="s24" data-section="24">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim A · LinkedIn</div>
+        <h2 class="slide-title">Dato en primer plano · marco de credibilidad · B2B</h2>
+        <div class="accent-bar"></div>
+        <div class="social-mockup">
+            <div class="li-header">
+                <div class="li-logo-badge">in</div>
+                <span style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.7);margin-left:0.25rem;">LinkedIn</span>
+            </div>
+            <div class="li-body">
+                <div class="li-author">
+                    <div class="li-avatar">TE</div>
+                    <div>
+                        <div class="li-name">Tu Empresa Colombia</div>
+                        <div class="li-title-line">Responsible Tourism Operator · Medellín, Colombia</div>
+                    </div>
+                </div>
+                <div class="li-post-text">
+                    El 85% de nuestros proveedores son empresas locales dentro de la región.<br><br>
+                    No es una promesa de marketing — es un número que medimos desde 2024.<br><br>
+                    Después de participar en el programa Lo Responsable Vende (CBI / Institut Français Colombia), tenemos el marco para comunicarlo con claridad a compradores europeos: qué indicadores cumplimos, cómo los verificamos, y qué significa para el viajero final.<br><br>
+                    Si eres un operador inbound buscando socios en Colombia con prácticas documentadas, me interesa hablar contigo.
+                </div>
+                <div class="li-hashtags">#ResponsibleTourism #Colombia #SustainableTourism #B2B #Inbound</div>
+            </div>
+            <div class="mockup-note">Dato primero · marco de credibilidad · call to action directo · sin emojis · sin exclamaciones</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S25 · CÓMO PODRÍA VERSE · CLAIM A · NEWSLETTER
+     ================================================================ -->
+<section class="bg-light" id="s25" data-section="25">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim A · Newsletter</div>
+        <h2 class="slide-title">Newsletter trimestral o seguimiento directo</h2>
+        <div class="accent-bar"></div>
+        <div class="email-mockup">
+            <div class="email-chrome">
+                <div class="email-dot"></div>
+                <div class="email-dot"></div>
+                <div class="email-dot"></div>
+            </div>
+            <div class="email-subject-bar">
+                <strong>Asunto:</strong> Actualización · junio 2026 — una cosa que documentamos este semestre
+            </div>
+            <div class="email-body">
+                Hola [nombre],<br><br>
+                Una cosa que documentamos este semestre: el 85% de los servicios en nuestros tours los proveen empresas y personas de la región. Siempre fue así — lo nuevo es que ahora lo medimos.<br><br>
+                Si quieres incluir este dato en los materiales que usas con tus clientes, con gusto te mando una ficha técnica. Solo responde este email.
+            </div>
+            <div class="mockup-note">Brevedad total · un solo dato · una sola acción · sin adjuntos no solicitados · no parece newsletter masivo</div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.78rem;color:var(--text-muted);margin-top:0.85rem;text-align:center;">El email a un comprador no es un newsletter — es una conversación que continúas.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S26 · CÓMO PODRÍA VERSE · CLAIM B · INSTAGRAM
+     ================================================================ -->
+<section class="bg-light" id="s26" data-section="26">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim B · Instagram</div>
+        <h2 class="slide-title">Capital humano · apertura con pregunta · B2C</h2>
+        <div class="accent-bar"></div>
+        <div class="claim-anchor-box" style="margin-bottom:1rem;padding:0.85rem 1.5rem;">
+            <div style="font-family:Arial,sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:0.35rem;">Claim B · Capital humano</div>
+            <div class="claim-anchor-text" style="font-size:1rem;">"El 100% de nuestros guías son nativos de las zonas que guiamos"</div>
+        </div>
+        <div class="social-mockup">
+            <div class="ig-header">
+                <div class="ig-avatar">TE</div>
+                <div class="ig-handle">@tu_empresa_colombia</div>
+            </div>
+            <div class="ig-image-placeholder">
+                <p>foto: retrato del guía en su territorio / acción natural en ruta</p>
+            </div>
+            <div class="ig-body">
+                <div class="ig-caption">
+                    ¿Para qué llevar siempre guías nativos del territorio, si hay guías formados en otras ciudades que podrían hacer el trabajo? 🪶<br><br>
+                    Porque 20 años caminando estas montañas antes de guiar no se replican en un aula. El nombre local de una planta medicinal, el sendero que evita la erosión, la historia del lugar antes de que llegara el turismo — ese conocimiento vive en las personas del lugar.<br><br>
+                    El 100% de nuestros guías nacieron donde guían. Eso no es una política — es nuestra estrategia de calidad.
+                </div>
+                <div class="ig-hashtags">#GuíasLocales #TurismoResponsable #Colombia #KnowBeforeYouGo #ResponsibleTravel</div>
+            </div>
+            <div class="mockup-note">Mismo patrón que @macuaticos · "¿Para qué?" como gancho antes del dato · imagen: el guía real en el territorio</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S27 · CÓMO PODRÍA VERSE · CLAIM B · LINKEDIN
+     ================================================================ -->
+<section class="bg-white" id="s27" data-section="27">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim B · LinkedIn</div>
+        <h2 class="slide-title">Argumento de calidad · no de diversidad · B2B</h2>
+        <div class="accent-bar"></div>
+        <div class="social-mockup">
+            <div class="li-header">
+                <div class="li-logo-badge">in</div>
+                <span style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.7);margin-left:0.25rem;">LinkedIn</span>
+            </div>
+            <div class="li-body">
+                <div class="li-author">
+                    <div class="li-avatar">TE</div>
+                    <div>
+                        <div class="li-name">Tu Empresa Colombia</div>
+                        <div class="li-title-line">Responsible Tourism Operator · Medellín, Colombia</div>
+                    </div>
+                </div>
+                <div class="li-post-text">
+                    Los compradores europeos preguntan: "¿cuántos años de experiencia tiene su guía?"<br><br>
+                    Nuestra respuesta: toda una vida. El 100% de nuestros guías nacieron en el territorio que trabajan.<br><br>
+                    No es una política de diversidad — es nuestra estrategia de calidad. El conocimiento del territorio no se aprende en un aula, se hereda.<br><br>
+                    Si buscas socios en Colombia con guías que sean parte del lugar — no visitantes del lugar — con gusto hablamos.
+                </div>
+                <div class="li-hashtags">#ResponsibleTourism #Colombia #LocalGuides #SustainableTourism #Inbound</div>
+            </div>
+            <div class="mockup-note">Mismo patrón que Aitawa Ecohostal · pregunta del comprador como apertura · dato como respuesta directa · invitación sin exclamaciones</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S28 · CÓMO PODRÍA VERSE · CLAIM B · NEWSLETTER
+     ================================================================ -->
+<section class="bg-light" id="s28" data-section="28">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim B · Newsletter</div>
+        <h2 class="slide-title">Un perfil real · construir relación entre temporadas · B2B</h2>
+        <div class="accent-bar"></div>
+        <div class="email-mockup">
+            <div class="email-chrome">
+                <div class="email-dot"></div>
+                <div class="email-dot"></div>
+                <div class="email-dot"></div>
+            </div>
+            <div class="email-subject-bar">
+                <strong>Asunto:</strong> Actualización · sept 2026 — la persona detrás de tu próximo tour
+            </div>
+            <div class="email-body">
+                Hola [nombre],<br><br>
+                En cada boletín trimestral compartimos algo concreto de cómo operamos. Este trimestre: quién guía.<br><br>
+                [Nombre del guía] lleva [X] años guiando en [zona]. Nació allí. Conoce las rutas de ornitología de la región mejor que nadie — porque las caminó antes de que fueran rutas de ornitología.<br><br>
+                Todos nuestros guías son del territorio. Si quieres compartir este perfil con tu cliente antes del viaje, te mando una ficha de una página.
+            </div>
+            <div class="mockup-note">Newsletter ≠ brochure · un solo personaje real · la ficha de guía es una herramienta concreta para el comprador europeo</div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.78rem;color:var(--text-muted);margin-top:0.85rem;text-align:center;">El boletín trimestral no vende — construye la relación entre sesiones de compra.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S29 · CÓMO PODRÍA VERSE · CLAIM C · INSTAGRAM
+     ================================================================ -->
+<section class="bg-light" id="s29" data-section="29">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim C · Instagram</div>
+        <h2 class="slide-title">Proceso responsable · tono reflexivo · B2C</h2>
+        <div class="accent-bar"></div>
+        <div class="claim-anchor-box" style="margin-bottom:1rem;padding:0.85rem 1.5rem;">
+            <div style="font-family:Arial,sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:0.35rem;">Claim C · Proceso responsable</div>
+            <div class="claim-anchor-text" style="font-size:1rem;">"Completamos nuestra primera autoevaluación RTA — 7 áreas documentadas"</div>
+        </div>
+        <div class="social-mockup">
+            <div class="ig-header">
+                <div class="ig-avatar">TE</div>
+                <div class="ig-handle">@tu_empresa_colombia</div>
+            </div>
+            <div class="ig-image-placeholder">
+                <p>foto: el equipo en el taller / materiales de trabajo visibles / behind the scenes</p>
+            </div>
+            <div class="ig-body">
+                <div class="ig-caption">
+                    Completamos nuestra primera autoevaluación RTA — y encontramos 7 áreas donde ya operamos de forma responsable sin saberlo llamar así. 🌿<br><br>
+                    Seis meses de trabajo. Cadena de proveedores, guías locales, manejo de residuos, impacto en comunidades...<br><br>
+                    Antes no teníamos vocabulario para lo que ya hacíamos. Ahora sí.<br><br>
+                    be-rta.org · la herramienta es pública · cualquier operador puede autoevaluarse
+                </div>
+                <div class="ig-hashtags">#TurismoResponsable #RTA #Colombia #ViajeroConsciente #ResponsibleTourism</div>
+            </div>
+            <div class="mockup-note">Mismo patrón que @infoturchubut · hito de proceso como historia pública · "antes no teníamos vocabulario" es más honesto que "somos responsables"</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S30 · CÓMO PODRÍA VERSE · CLAIM C · LINKEDIN
+     ================================================================ -->
+<section class="bg-white" id="s30" data-section="30">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim C · LinkedIn</div>
+        <h2 class="slide-title">Datos concretos · programa como credibilidad · B2B</h2>
+        <div class="accent-bar"></div>
+        <div class="social-mockup">
+            <div class="li-header">
+                <div class="li-logo-badge">in</div>
+                <span style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.7);margin-left:0.25rem;">LinkedIn</span>
+            </div>
+            <div class="li-body">
+                <div class="li-author">
+                    <div class="li-avatar">TE</div>
+                    <div>
+                        <div class="li-name">Tu Empresa Colombia</div>
+                        <div class="li-title-line">Responsible Tourism Operator · Medellín, Colombia</div>
+                    </div>
+                </div>
+                <div class="li-post-text">
+                    Completamos nuestra primera autoevaluación RTA.<br><br>
+                    Lo que documentamos:<br>
+                    → Cadena de proveedores: 85% empresas y guías locales de la región<br>
+                    → Guías: 100% nativos del territorio<br>
+                    → Manejo de residuos: protocolo activo desde 2024<br>
+                    → Comunidades: beneficio económico directo a [X] familias por temporada<br><br>
+                    Participamos en el programa Lo Responsable Vende (CBI / Institut Français Colombia). Nos dio el marco para pasar de intenciones a indicadores medibles.<br><br>
+                    Si eres operador inbound europeo y quieres una copia de nuestra autoevaluación, con gusto te la comparto.
+                </div>
+                <div class="li-hashtags">#ResponsibleTourism #RTA #Colombia #SustainableTourism #B2B</div>
+            </div>
+            <div class="mockup-note">Mismo patrón que Terra Retreats · datos en bullets → programa como marco → invitación directa · credibilidad compuesta</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S31 · CÓMO PODRÍA VERSE · CLAIM C · NEWSLETTER
+     ================================================================ -->
+<section class="bg-light" id="s31" data-section="31">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Cómo podría verse · Claim C · Newsletter</div>
+        <h2 class="slide-title">Actualización de hito · razón para volver a escribir · B2B</h2>
+        <div class="accent-bar"></div>
+        <div class="email-mockup">
+            <div class="email-chrome">
+                <div class="email-dot"></div>
+                <div class="email-dot"></div>
+                <div class="email-dot"></div>
+            </div>
+            <div class="email-subject-bar">
+                <strong>Asunto:</strong> Actualización · jun 2026 — nuestra primera autoevaluación responsable
+            </div>
+            <div class="email-body">
+                Hola [nombre],<br><br>
+                Una novedad concreta: completamos nuestra primera autoevaluación RTA y documentamos indicadores en 7 áreas — cadena de proveedores, guías, residuos, impacto comunitario y más.<br><br>
+                En el boletín de septiembre incluiremos los resultados completos. Si quieres una vista previa — en especial los indicadores de cadena de proveedores y guías locales — solo responde este email.
+            </div>
+            <div class="mockup-note">Un hito específico · anticipa el reporte completo · cada envío avanza la relación, no la reinicia</div>
+        </div>
+        <p style="font-family:Arial,sans-serif;font-size:0.78rem;color:var(--text-muted);margin-top:0.85rem;text-align:center;">El comprador siente el progreso trimestre a trimestre — eso construye confianza antes de la compra.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S32 · DÓNDE PONER ENERGÍA — CANALES
+     ================================================================ -->
+<section class="bg-alt" id="s32" data-section="32">
+    <div class="slide-content">
+        <div class="slide-label">Bloque 4 · Canales B2B</div>
+        <h2 class="slide-title">¿Dónde poner energía de aquí en adelante?</h2>
+        <div class="accent-bar"></div>
+        <div class="channel-grid">
+            <div class="channel-card">
+                <div class="channel-icon-badge">💼</div>
+                <div class="channel-info">
+                    <div class="channel-name">LinkedIn — el canal B2B principal</div>
+                    <div class="channel-desc">Sigue a los contactos del 27 de mayo. Comenta en sus posts. Cuando publiques, etiquétalos si es relevante. No solo transmitas — conversa.</div>
+                    <div class="channel-tip">Un post al mes sobre un hito concreto es mejor que silencio durante meses y un burst de actividad.</div>
+                </div>
+            </div>
+            <div class="channel-card li">
+                <div class="channel-icon-badge">✉️</div>
+                <div class="channel-info">
+                    <div class="channel-name">Email — la relación directa con compradores</div>
+                    <div class="channel-desc">Un newsletter trimestral a los contactos del evento: un dato, una historia, una nota práctica (disponibilidad, nueva ruta, certificación).</div>
+                    <div class="channel-tip">Trimestral es suficiente para no desaparecer sin saturar. Mensual solo si tienes novedades reales.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S33 · BLOQUE 5 DIVIDER — MESA REDONDA
+     ================================================================ -->
+<section class="block-intro" id="s33" data-section="33">
+    <div class="bi-num">5</div>
+    <div class="slide-content">
+        <div class="bi-kicker">Bloque 5</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Mesa redonda</h2>
+        <p class="bi-sub">Una acción · Un mes · En voz alta</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S34 · LA PREGUNTA DE LA MESA REDONDA
+     ================================================================ -->
+<section class="interactive-slide" id="s34" data-section="34">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">Mesa redonda</div>
+        <span class="chat-icon">🪶</span>
+        <p class="interactive-question">"Dado lo que viste hoy — los indicadores que has trabajado, el evento del 27, lo que aprendiste en el programa — ¿cuál es una acción concreta que estás trabajando en el próximo mes?"</p>
+        <p class="interactive-instruction">Dos frases por persona · Lo que dices en voz alta acá es un compromiso pequeño contigo y con el grupo</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     S24 · CIERRE + FORMULARIO + QR
+     ================================================================ -->
+<section class="closing-slide" id="s35" data-section="35">
+    <div class="slide-content hero-slide">
+        <div class="slide-label" style="color:var(--gold);">Cierre del programa</div>
+        <h1 class="slide-title">Gracias por el camino</h1>
+        <div class="accent-bar" style="background:var(--gold);margin:1.5rem auto;"></div>
+        <p class="anchor-echo">El programa fue el arranque, no el resultado. El mercado europeo es un proceso de 6 a 18 meses — y ya tienen tres meses de ventaja.</p>
+
+        <div style="background:var(--gold);border-radius:14px;padding:1.35rem 2.5rem;max-width:600px;margin:1.5rem auto;">
+            <div style="font-family:Arial,sans-serif;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(27,43,90,0.55);margin-bottom:0.4rem;">Paso final · obligatorio</div>
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.15rem;font-weight:900;color:var(--navy);margin-bottom:0.4rem;line-height:1.25;">Completa el formulario de cierre para recibir tu certificado de participación</div>
+            <div style="font-family:Arial,sans-serif;font-size:0.85rem;color:rgba(27,43,90,0.65);">El enlace está en el chat y en el grupo de WhatsApp</div>
+        </div>
+
+        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.1rem;max-width:640px;margin-left:auto;margin-right:auto;">
+            <div class="next-box" style="flex:1;min-width:160px;text-align:left;">
+                <div class="nxt-label">Sigue conectado</div>
+                <div class="nxt-title">Grupo WhatsApp del programa</div>
+                <div class="nxt-time">Para avances, preguntas y recursos</div>
+            </div>
+            <div class="next-box" style="flex:1;min-width:160px;text-align:left;">
+                <div class="nxt-label">Herramienta</div>
+                <div class="nxt-title">be-rta.org</div>
+                <div class="nxt-time">Autoevaluación · primer check dic. 2026</div>
+            </div>
+        </div>
+        <div style="margin-top:2rem;font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.2);">Lo Responsable Vende · TRECC · Institut Français Colombia · ProColombia · CBI · 2026</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('section[data-section]');
+
+    const SLIDE_SECTIONS = [
+        '',                               // 0  Portada
+        'El recorrido',                   // 1
+        'Apertura',                       // 2
+        'Bloque 1 · 27 de mayo',          // 3
+        'B1 · Ronda de balance',          // 4
+        'B1 · ¿Enviaste seguimiento?',    // 5
+        'B1 · Más allá del 27',           // 6
+        'Bloque 2 · Atraversa',           // 7
+        'B2 · Atraversa intro',           // 8
+        'B2 · Demo en vivo',              // 9
+        'Bloque 3 · Autoevaluación',      // 10
+        'B3 · Tres formas',               // 11
+        'B3 · be-rta.org',                // 12
+        'B3 · Reseñas como señal',        // 13
+        'B3 · La marea sube para todos',  // 14
+        'Bloque 4 · Marketing',           // 15
+        'B4 · La idea',                   // 16
+        'B4 · Tres claims',               // 17
+        'B4 · IG · Ejemplo 1',            // 18
+        'B4 · IG · Ejemplo 2',            // 19
+        'B4 · IG · Ejemplo 3',            // 20
+        'B4 · LI · Ejemplo 1',            // 21
+        'B4 · LI · Ejemplo 2',            // 22
+        'B4 · Claim A · IG',              // 23
+        'B4 · Claim A · LinkedIn',        // 24
+        'B4 · Claim A · Newsletter',      // 25
+        'B4 · Claim B · IG',              // 26
+        'B4 · Claim B · LinkedIn',        // 27
+        'B4 · Claim B · Newsletter',      // 28
+        'B4 · Claim C · IG',              // 29
+        'B4 · Claim C · LinkedIn',        // 30
+        'B4 · Claim C · Newsletter',      // 31
+        'B4 · Canales',                   // 32
+        'Bloque 5 · Mesa redonda',        // 33
+        'Mesa redonda',                   // 34
+        'Cierre'                          // 35
+    ];
+
+    function goToSection(n) {
+        sections[n].scrollIntoView({ behavior: 'smooth' });
+        updateUI(n);
+    }
+
+    function navigate(dir) {
+        const next = currentSection + dir;
+        if (next >= 0 && next < sections.length) goToSection(next);
+    }
+
+    function updateUI(n) {
+        currentSection = n;
+        const lbl = document.getElementById('slideSection');
+        if (lbl) lbl.textContent = SLIDE_SECTIONS[n] ? ('Módulo 3 · ' + SLIDE_SECTIONS[n]) : 'Módulo 3 · Sesión de seguimiento';
+        document.getElementById('prevBtn').disabled = n === 0;
+        document.getElementById('nextBtn').disabled = n === sections.length - 1;
+        document.getElementById('slideCounter').textContent = (n + 1) + ' / ' + sections.length;
+    }
+
+    const sectionList = Array.from(sections);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                const n = sectionList.indexOf(entry.target);
+                if (n >= 0) updateUI(n);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(s => observer.observe(s));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.target && e.target.isContentEditable) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); navigate(1); }
+        if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+    });
+</script>
+
+<script>
+/* Edit mode — activate with ?edit=panela */
+(function () {
+    const EDIT_KEY = 'panela';
+    const params = new URLSearchParams(location.search);
+    const STORAGE_KEY = 'deck-edits::' + location.pathname;
+
+    function loadOverrides() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { return {}; } }
+    function saveOverrides(map) { localStorage.setItem(STORAGE_KEY, JSON.stringify(map)); }
+
+    if (params.get('edit') !== EDIT_KEY) return;
+
+    const overrides = loadOverrides();
+    Object.entries(overrides).forEach(([id, html]) => { const sec = document.getElementById(id); if (sec) sec.innerHTML = html; });
+
+    let editMode = false;
+    const toolbar = document.createElement('div');
+    toolbar.style.cssText = 'position:fixed;top:10px;left:10px;display:flex;gap:6px;z-index:9999;font-family:Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:.4px;user-select:none;';
+
+    function makeBtn(label, bg, onClick) {
+        const b = document.createElement('button');
+        b.textContent = label;
+        b.style.cssText = 'background:'+bg+';color:#fff;border:none;padding:7px 12px;border-radius:6px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);font:inherit;';
+        b.addEventListener('click', e => { e.preventDefault(); onClick(); b.blur(); });
+        return b;
+    }
+
+    const badge = makeBtn('EDIT OFF · press E','#1B2B5A', toggleEdit);
+    const saveBtn = makeBtn('💾 Guardar','#2D7A6A', downloadCurrent);
+    const resetBtn = makeBtn('↺ Restablecer','#8B1A1A', resetEdits);
+    toolbar.appendChild(badge); toolbar.appendChild(saveBtn); toolbar.appendChild(resetBtn);
+    document.body.appendChild(toolbar);
+
+    function applyEditableState() {
+        document.querySelectorAll('section[id]').forEach(sec => {
+            sec.contentEditable = editMode ? 'true' : 'false';
+            sec.style.outline = editMode ? '1px dashed rgba(245,196,0,.55)' : '';
+            sec.style.outlineOffset = editMode ? '-4px' : '';
+        });
+    }
+
+    function toggleEdit() {
+        editMode = !editMode;
+        badge.textContent = editMode ? 'EDIT ON · E off · S save · R reset' : 'EDIT OFF · press E';
+        badge.style.background = editMode ? '#3A7D44' : '#1B2B5A';
+        applyEditableState();
+    }
+
+    let saveTimer;
+    document.addEventListener('input', e => {
+        if (!editMode) return;
+        const sec = e.target.closest && e.target.closest('section[id]');
+        if (!sec) return;
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(() => { const map = loadOverrides(); map[sec.id] = sec.innerHTML; saveOverrides(map); }, 400);
+    });
+
+    function downloadCurrent() {
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelector('#__edit_toolbar') && clone.querySelector('#__edit_toolbar').remove();
+        clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+        clone.querySelectorAll('section[id]').forEach(el => { el.style.outline = ''; el.style.outlineOffset = ''; });
+        const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+        const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = (location.pathname.split('/').pop() || 'deck.html').replace(/\.html?$/, '') + '-edited.html';
+        document.body.appendChild(a); a.click(); a.remove();
+    }
+
+    function resetEdits() {
+        if (!confirm('¿Borrar todas las ediciones guardadas? La página se recargará.')) return;
+        localStorage.removeItem(STORAGE_KEY);
+        location.reload();
+    }
+
+    document.addEventListener('keydown', e => {
+        if (e.target && e.target.isContentEditable) return;
+        if (e.key === 'e' || e.key === 'E') { e.preventDefault(); toggleEdit(); }
+        else if (e.key === 's' || e.key === 'S') { e.preventDefault(); downloadCurrent(); }
+        else if (e.key === 'r' || e.key === 'R') { e.preventDefault(); resetEdits(); }
+    });
+})();
+</script>
+
+</body>
+</html>

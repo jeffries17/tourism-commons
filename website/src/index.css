@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal-700: #0f766e;
+  --color-teal-800: #0d5d56;
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #1e293b;
+}

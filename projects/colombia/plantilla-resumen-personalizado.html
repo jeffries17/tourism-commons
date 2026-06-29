@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumen de Presencia Digital — Lo Responsable Vende</title>
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-light: #e6f7f6;
+    --navy: #1e3a5f;
+    --navy-light: #eef2f7;
+    --gold: #d4a017;
+    --gold-light: #fdf6e3;
+    --red: #c0392b;
+    --red-light: #fdecea;
+    --green: #27ae60;
+    --green-light: #e9f7ef;
+    --amber: #e67e22;
+    --amber-light: #fef3e2;
+    --gray: #6b7280;
+    --gray-light: #f3f4f6;
+    --text: #1f2937;
+    --border: #e5e7eb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f0f4f8;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── SCREEN WRAPPER ── */
+  .page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+
+  /* ── TOOLBAR ── */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+  }
+  .toolbar-title { font-size: 13px; opacity: 0.8; }
+  .toolbar-actions { display: flex; gap: 10px; }
+  .toolbar-btn {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+  }
+  .toolbar-btn:hover { background: rgba(255,255,255,0.28); }
+  .toolbar-btn.primary { background: var(--teal); }
+  .toolbar-btn.primary:hover { background: #0b7c71; }
+
+  /* ── DOCUMENT ── */
+  .doc {
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .doc-header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2a4a72 100%);
+    color: #fff;
+    padding: 28px 32px 24px;
+  }
+  .header-badge {
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .doc-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .doc-header p {
+    font-size: 13px;
+    opacity: 0.75;
+  }
+  .header-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .meta-field label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.65;
+    margin-bottom: 4px;
+  }
+  .meta-field input {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 13px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .meta-field input::placeholder { color: rgba(255,255,255,0.4); }
+  .meta-field input:focus { border-color: var(--teal); }
+
+  /* ── SCORE BAR ── */
+  .score-bar {
+    background: var(--navy-light);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    white-space: nowrap;
+  }
+  .score-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .score-pill {
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    opacity: 0.45;
+  }
+  .score-pill.active { opacity: 1; border-color: currentColor; }
+  .score-pill.nivel-1 { background: var(--red-light); color: var(--red); }
+  .score-pill.nivel-2 { background: var(--amber-light); color: var(--amber); }
+  .score-pill.nivel-3 { background: var(--gold-light); color: var(--gold); }
+  .score-pill.nivel-4 { background: var(--green-light); color: var(--green); }
+  .score-desc {
+    flex: 1;
+    font-size: 12px;
+    color: var(--gray);
+    font-style: italic;
+  }
+
+  /* ── BODY ── */
+  .doc-body { padding: 28px 32px; display: flex; flex-direction: column; gap: 28px; }
+
+  /* ── SECTION ── */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .num {
+    background: var(--navy);
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  /* ── RESUMEN EJECUTIVO ── */
+  .resumen-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .resumen-box {
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .resumen-box.green { background: var(--green-light); border-left: 4px solid var(--green); }
+  .resumen-box.red { background: var(--red-light); border-left: 4px solid var(--red); }
+  .resumen-box h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 8px;
+  }
+  .resumen-box.green h4 { color: var(--green); }
+  .resumen-box.red h4 { color: var(--red); }
+  .strength-list, .gap-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .strength-list li, .gap-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .strength-list li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .gap-list li::before { content: "✗"; color: var(--red); font-weight: 700; flex-shrink: 0; }
+  .editable-item {
+    border: none;
+    border-bottom: 1px dashed var(--border);
+    background: transparent;
+    font-size: 13px;
+    color: var(--text);
+    width: 100%;
+    padding: 2px 0;
+    outline: none;
+    font-family: inherit;
+  }
+  .editable-item:focus { border-bottom-color: var(--teal); }
+  .editable-item::placeholder { color: #bbb; font-style: italic; }
+
+  /* ── PLATFORM TABLE ── */
+  .platform-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .platform-table th {
+    background: var(--navy);
+    color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .platform-table th:last-child { text-align: center; }
+  .platform-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .platform-table tr:nth-child(even) td { background: var(--gray-light); }
+  .platform-table tr:hover td { background: var(--teal-light); }
+  .platform-name {
+    font-weight: 600;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+  .platform-priority {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 6px;
+  }
+  .prio-alta { background: var(--red-light); color: var(--red); }
+  .prio-media { background: var(--amber-light); color: var(--amber); }
+  .prio-ok { background: var(--green-light); color: var(--green); }
+
+  .status-dots-cell { text-align: center; white-space: nowrap; }
+  .dot-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    opacity: 0.3;
+    transition: all 0.2s;
+  }
+  .dot-btn.active { opacity: 1; }
+  .dot-btn.ok { background: var(--green-light); border-color: var(--green); }
+  .dot-btn.ok.active { background: var(--green); color: #fff; }
+  .dot-btn.warn { background: var(--amber-light); border-color: var(--amber); }
+  .dot-btn.warn.active { background: var(--amber); color: #fff; }
+  .dot-btn.crit { background: var(--red-light); border-color: var(--red); }
+  .dot-btn.crit.active { background: var(--red); color: #fff; }
+
+  .platform-obs {
+    width: 100%;
+    min-height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-family: inherit;
+    resize: vertical;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .platform-obs:focus { border-color: var(--teal); }
+  .platform-obs::placeholder { color: #bbb; font-style: italic; }
+
+  /* ── QUICK WINS TABLE ── */
+  .wins-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .wins-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+  .wins-col.semana h4 { background: var(--teal-light); color: var(--teal); }
+  .wins-col.mes h4 { background: var(--gold-light); color: var(--gold); }
+  .wins-col.trimestre h4 { background: var(--navy-light); color: var(--navy); }
+  .wins-items { display: flex; flex-direction: column; gap: 6px; }
+  .wins-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .wins-item input[type="checkbox"] {
+    margin-top: 2px;
+    accent-color: var(--teal);
+    flex-shrink: 0;
+  }
+  .wins-item-text {
+    flex: 1;
+    border: none;
+    border-bottom: 1px dashed var(--border);
+    background: transparent;
+    font-size: 12px;
+    color: var(--text);
+    padding: 1px 0;
+    outline: none;
+    font-family: inherit;
+  }
+  .wins-item-text:focus { border-bottom-color: var(--teal); }
+  .wins-item-text::placeholder { color: #ccc; font-style: italic; }
+
+  /* ── MENSAJE PERSONALIZADO ── */
+  .mensaje-box {
+    background: var(--gold-light);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .mensaje-box h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .mensaje-textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid rgba(212,160,23,0.4);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    background: #fff;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+    line-height: 1.6;
+  }
+  .mensaje-textarea:focus { border-color: var(--gold); }
+  .mensaje-textarea::placeholder { color: #bbb; font-style: italic; }
+
+  /* ── NICHO BOX ── */
+  .nicho-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .nicho-field { display: flex; flex-direction: column; gap: 4px; }
+  .nicho-field label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--gray);
+  }
+  .nicho-field input, .nicho-field textarea {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--text);
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s;
+  }
+  .nicho-field input:focus, .nicho-field textarea:focus { border-color: var(--teal); }
+  .nicho-field input::placeholder, .nicho-field textarea::placeholder { color: #bbb; font-style: italic; }
+
+  /* ── PRÓXIMA SESIÓN ── */
+  .next-box {
+    background: linear-gradient(135deg, var(--navy) 0%, #2a4a72 100%);
+    color: #fff;
+    border-radius: 8px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .next-icon { font-size: 28px; flex-shrink: 0; }
+  .next-text h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .next-text p { font-size: 12px; opacity: 0.75; }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    background: var(--gray-light);
+    border-top: 1px solid var(--border);
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--gray);
+  }
+  .footer-logo {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 12px;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .toolbar { display: none; }
+    .doc { box-shadow: none; border-radius: 0; }
+    .doc-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .score-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-title .num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .platform-table th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .next-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .dot-btn.active { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .wins-col h4 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    input, textarea { border-color: #ccc !important; }
+    .page-wrapper { padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <div class="toolbar">
+    <span class="toolbar-title">📋 Plantilla de Facilitador · Lo Responsable Vende · TRECC / Institut Français Colombia</span>
+    <div class="toolbar-actions">
+      <button class="toolbar-btn" onclick="resetAll()">↺ Limpiar</button>
+      <button class="toolbar-btn primary" onclick="window.print()">🖨 Imprimir / PDF</button>
+    </div>
+  </div>
+
+  <div class="doc">
+
+    <!-- HEADER -->
+    <div class="doc-header">
+      <div class="header-badge">Resumen personalizado · Presencia digital</div>
+      <h1>Lo Responsable Vende</h1>
+      <p>Evaluación de presencia digital · Completar antes del 20 de mayo de 2026</p>
+      <div class="header-meta">
+        <div class="meta-field">
+          <label>Nombre del operador</label>
+          <input type="text" id="nombre-operador" placeholder="Ej. Selva Viva Colombia" />
+        </div>
+        <div class="meta-field">
+          <label>Facilitador/a</label>
+          <input type="text" id="nombre-facilitador" placeholder="Tu nombre" />
+        </div>
+        <div class="meta-field">
+          <label>Fecha de revisión</label>
+          <input type="date" id="fecha-revision" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SCORE BAR -->
+    <div class="score-bar">
+      <span class="score-label">Nivel de presencia:</span>
+      <div class="score-pills">
+        <button class="score-pill nivel-1" onclick="setNivel(1)" id="pill-1">🔴 Nivel 1 — Invisible</button>
+        <button class="score-pill nivel-2" onclick="setNivel(2)" id="pill-2">🟡 Nivel 2 — Existe pero no convence</button>
+        <button class="score-pill nivel-3" onclick="setNivel(3)" id="pill-3">🟠 Nivel 3 — En construcción</button>
+        <button class="score-pill nivel-4" onclick="setNivel(4)" id="pill-4">🟢 Nivel 4 — Listo para B2B</button>
+      </div>
+      <span class="score-desc" id="nivel-desc">Selecciona el nivel general de este operador</span>
+    </div>
+
+    <div class="doc-body">
+
+      <!-- 1. RESUMEN EJECUTIVO -->
+      <div>
+        <div class="section-title"><span class="num">1</span> Resumen ejecutivo</div>
+        <div class="resumen-grid">
+          <div class="resumen-box green">
+            <h4>🌟 Puntos fuertes (top 3)</h4>
+            <ul class="strength-list">
+              <li><input type="text" class="editable-item" placeholder="Ej. Google Business con reseñas activas y en inglés" /></li>
+              <li><input type="text" class="editable-item" placeholder="Ej. Instagram con contenido visual de calidad" /></li>
+              <li><input type="text" class="editable-item" placeholder="Ej. Testimonio verificable de agencia europea" /></li>
+            </ul>
+          </div>
+          <div class="resumen-box red">
+            <h4>⚠ Brechas prioritarias (top 3)</h4>
+            <ul class="gap-list">
+              <li><input type="text" class="editable-item" placeholder="Ej. Web solo en español, sin versión en inglés" /></li>
+              <li><input type="text" class="editable-item" placeholder="Ej. No aparece en búsqueda 'responsible tour Colombia'" /></li>
+              <li><input type="text" class="editable-item" placeholder="Ej. Ninguna mención de impacto comunitario verificable" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. EVALUACIÓN POR PLATAFORMA -->
+      <div>
+        <div class="section-title"><span class="num">2</span> Evaluación por plataforma</div>
+        <table class="platform-table">
+          <thead>
+            <tr>
+              <th style="width:20%">Plataforma</th>
+              <th style="width:38%">Observaciones del facilitador</th>
+              <th style="width:30%">Acción concreta recomendada</th>
+              <th style="width:12%">Estado</th>
+            </tr>
+          </thead>
+          <tbody id="platform-tbody">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3. PERFIL DE NICHO -->
+      <div>
+        <div class="section-title"><span class="num">3</span> Perfil de nicho del operador</div>
+        <div class="nicho-grid">
+          <div class="nicho-field">
+            <label>Tipo de comprador europeo más afín</label>
+            <input type="text" placeholder="Ej. Especialista RT — pequeño TO francés o alemán" />
+          </div>
+          <div class="nicho-field">
+            <label>Propuesta de valor única (1 frase)</label>
+            <input type="text" placeholder="Ej. Ecoturismo comunitario en Amazonía con certificación RTA" />
+          </div>
+          <div class="nicho-field" style="grid-column: 1 / -1;">
+            <label>Evidencias de impacto que ya tiene (para usar en materiales B2B)</label>
+            <textarea rows="2" placeholder="Ej. Trabaja con 3 familias de comunidad Murui; 70% de ingresos van directamente a la comunidad; certificado por..."></textarea>
+          </div>
+          <div class="nicho-field">
+            <label>Datos que aún necesita confirmar / documentar</label>
+            <textarea rows="2" placeholder="Ej. Número exacto de participantes por grupo; % beneficio comunitario; nombre del acuerdo comunitario..."></textarea>
+          </div>
+          <div class="nicho-field">
+            <label>Canales europeos donde debería aparecer</label>
+            <textarea rows="2" placeholder="Ej. ATTA, Travelife partners directory, REITE red española, fair travel Germany..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. PLAN DE ACCIÓN -->
+      <div>
+        <div class="section-title"><span class="num">4</span> Plan de acción personalizado</div>
+        <div class="wins-grid">
+          <div class="wins-col semana">
+            <h4>Esta semana (&lt;2h)</h4>
+            <div class="wins-items" id="wins-semana">
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Acción rápida 1..." />
+              </div>
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Acción rápida 2..." />
+              </div>
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Acción rápida 3..." />
+              </div>
+            </div>
+          </div>
+          <div class="wins-col mes">
+            <h4>Este mes (4–8h)</h4>
+            <div class="wins-items" id="wins-mes">
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Mejora prioritaria 1..." />
+              </div>
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Mejora prioritaria 2..." />
+              </div>
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Mejora prioritaria 3..." />
+              </div>
+            </div>
+          </div>
+          <div class="wins-col trimestre">
+            <h4>3 meses (estratégico)</h4>
+            <div class="wins-items" id="wins-trimestre">
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Objetivo estratégico 1..." />
+              </div>
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Objetivo estratégico 2..." />
+              </div>
+              <div class="wins-item">
+                <input type="checkbox" />
+                <input type="text" class="wins-item-text" placeholder="Objetivo estratégico 3..." />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. MENSAJE PERSONAL -->
+      <div>
+        <div class="section-title"><span class="num">5</span> Mensaje del facilitador</div>
+        <div class="mensaje-box">
+          <h4>✍ Nota personal para este operador</h4>
+          <textarea class="mensaje-textarea" placeholder="Escribe aquí un mensaje personalizado para este operador: qué lo hace especial, qué potencial ves en su propuesta, qué deberían priorizar antes de la conferencia del 27 de mayo...
+
+Ejemplo: 'Tu historia con la comunidad es exactamente lo que buscan los compradores europeos. El problema ahora es que no se ve en tu web ni en tu Google Business. Si resuelves eso antes de la conferencia, tienes un producto muy competitivo.'"></textarea>
+        </div>
+      </div>
+
+      <!-- PRÓXIMA SESIÓN -->
+      <div class="next-box">
+        <div class="next-icon">📅</div>
+        <div class="next-text">
+          <h4>Próximo paso: Sesión presencial — 25 y 26 de mayo de 2026</h4>
+          <p>Los participantes llegarán habiendo revisado este resumen. Día 1: estrategia B2B y pitch. Día 2: documentación de impacto y RTA. Conferencia B2B: 27 de mayo.</p>
+        </div>
+      </div>
+
+    </div><!-- /.doc-body -->
+
+    <div class="doc-footer">
+      <span class="footer-logo">Lo Responsable Vende</span>
+      <span>TRECC / Institut Français Colombia · 2026 · Documento interno del facilitador</span>
+      <span id="footer-operador"></span>
+    </div>
+
+  </div><!-- /.doc -->
+</div><!-- /.page-wrapper -->
+
+<script>
+  // ── PLATFORM DATA ──
+  const platforms = [
+    { name: 'Web propia', prio: 'alta' },
+    { name: 'Google Business', prio: 'alta' },
+    { name: 'Instagram', prio: 'media' },
+    { name: 'LinkedIn', prio: 'media' },
+    { name: 'TripAdvisor / OTAs', prio: 'media' },
+    { name: 'Directorio RT europeo', prio: 'ok' },
+  ];
+
+  const prioLabels = {
+    alta: '<span class="platform-priority prio-alta">alta</span>',
+    media: '<span class="platform-priority prio-media">media</span>',
+    ok: '<span class="platform-priority prio-ok">horizonte</span>',
+  };
+
+  const statusDescriptions = {
+    ok: 'Bien',
+    warn: 'En proceso',
+    crit: 'Brecha crítica',
+  };
+
+  function buildPlatformTable() {
+    const tbody = document.getElementById('platform-tbody');
+    platforms.forEach((p, i) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>
+          <span class="platform-name">${p.name}</span>
+          ${prioLabels[p.prio]}
+        </td>
+        <td>
+          <textarea class="platform-obs" rows="2" placeholder="Describe lo que observaste en esta plataforma..."></textarea>
+        </td>
+        <td>
+          <textarea class="platform-obs" rows="2" placeholder="Qué acción concreta recomendarías..."></textarea>
+        </td>
+        <td class="status-dots-cell">
+          <button class="dot-btn ok" title="Bien" onclick="pickDot(this, ${i}, 'ok')">✓</button>
+          <button class="dot-btn warn" title="En proceso" onclick="pickDot(this, ${i}, 'warn')">~</button>
+          <button class="dot-btn crit" title="Brecha crítica" onclick="pickDot(this, ${i}, 'crit')">✗</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function pickDot(btn, rowIdx, type) {
+    const row = document.getElementById('platform-tbody').rows[rowIdx];
+    row.querySelectorAll('.dot-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // ── NIVEL ──
+  const nivelDescs = {
+    1: 'Este operador prácticamente no existe online para un comprador europeo.',
+    2: 'Hay presencia pero no comunica valor responsable ni opera en inglés.',
+    3: 'Está en transición — buenos elementos pero incompleto o inconsistente.',
+    4: 'Listo para aparecer en catálogos de agencias responsables europeas.',
+  };
+
+  function setNivel(n) {
+    document.querySelectorAll('.score-pill').forEach(p => p.classList.remove('active'));
+    document.getElementById('pill-' + n).classList.add('active');
+    document.getElementById('nivel-desc').textContent = nivelDescs[n];
+  }
+
+  // ── FOOTER SYNC ──
+  document.getElementById('nombre-operador').addEventListener('input', function() {
+    document.getElementById('footer-operador').textContent = this.value ? '→ ' + this.value : '';
+  });
+
+  // ── RESET ──
+  function resetAll() {
+    if (!confirm('¿Limpiar todos los campos? Esta acción no se puede deshacer.')) return;
+    document.querySelectorAll('input[type="text"], input[type="date"], textarea').forEach(el => el.value = '');
+    document.querySelectorAll('.score-pill').forEach(p => p.classList.remove('active'));
+    document.getElementById('nivel-desc').textContent = 'Selecciona el nivel general de este operador';
+    document.querySelectorAll('.dot-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.getElementById('footer-operador').textContent = '';
+  }
+
+  // ── INIT ──
+  buildPlatformTable();
+</script>
+</body>
+</html>

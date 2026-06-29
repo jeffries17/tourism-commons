@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Wins — Presencia Digital</title>
+    <style>
+        :root {
+            --teal: #3E9987; --teal-dark: #2D7A6A; --teal-light: #E6F4F1;
+            --navy: #1B2B5A; --gold: #F5C400; --gold-light: #FEF7D6;
+            --green: #2D7A3A; --green-light: #E6F4E8;
+            --amber: #B8620A; --amber-light: #FEF3E2;
+            --blue: #1A5FA8; --blue-light: #E6F0FB;
+            --red: #C8352A;
+            --bg: #F7F8F5; --border: #DDE3DC;
+            --text: #1A1A1A; --text-muted: #5A6478;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: var(--bg); padding: 1.5rem; color: var(--text); }
+
+        .page { max-width: 820px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 3px 16px rgba(0,0,0,0.08); overflow: hidden; }
+
+        .header { background: var(--navy); padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; }
+        .header h1 { color: white; font-size: 1.1rem; font-weight: 700; }
+        .header p { color: rgba(255,255,255,0.5); font-size: 0.72rem; margin-top: 0.15rem; }
+        .header-badge { background: var(--gold); color: var(--navy); padding: 0.3rem 0.85rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+
+        .intro { padding: 1rem 2rem; background: var(--teal-light); border-bottom: 2px solid var(--teal); font-size: 0.82rem; color: var(--teal-dark); line-height: 1.5; }
+        .intro strong { color: var(--navy); }
+
+        .tiers { padding: 1.5rem 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+        .tier { border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
+        .tier-header { padding: 0.75rem 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+        .tier-1 .tier-header { background: var(--green-light); border-bottom: 2px solid var(--green); }
+        .tier-2 .tier-header { background: var(--amber-light); border-bottom: 2px solid var(--amber); }
+        .tier-3 .tier-header { background: var(--blue-light); border-bottom: 2px solid var(--blue); }
+
+        .tier-badge {
+            padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+        }
+        .tier-1 .tier-badge { background: var(--green); color: white; }
+        .tier-2 .tier-badge { background: var(--amber); color: white; }
+        .tier-3 .tier-badge { background: var(--blue); color: white; }
+
+        .tier-title { font-size: 0.9rem; font-weight: 700; }
+        .tier-1 .tier-title { color: var(--green); }
+        .tier-2 .tier-title { color: var(--amber); }
+        .tier-3 .tier-title { color: var(--blue); }
+
+        .tier-time { font-size: 0.75rem; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
+
+        .tier-items { padding: 0.5rem 0; }
+        .win-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.6rem 1.25rem; border-bottom: 1px solid var(--bg); transition: background 0.15s; cursor: pointer; }
+        .win-item:last-child { border-bottom: none; }
+        .win-item:hover { background: var(--bg); }
+        .win-item.done { opacity: 0.5; }
+        .win-item.done .win-text { text-decoration: line-through; }
+
+        .win-check { flex: 0 0 20px; height: 20px; border: 2px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; margin-top: 1px; transition: all 0.15s; }
+        .win-item.done .win-check { background: var(--teal); border-color: var(--teal); color: white; }
+
+        .win-content { flex: 1; }
+        .win-text { font-size: 0.875rem; color: var(--text); line-height: 1.4; font-weight: 600; }
+        .win-detail { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; line-height: 1.45; }
+        .win-tag { display: inline-block; font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 3px; margin-left: 0.35rem; vertical-align: middle; }
+        .tag-web { background: #e8f0fe; color: #1A5FA8; }
+        .tag-google { background: #fce8e6; color: #c5221f; }
+        .tag-ig { background: #fce4ec; color: #880e4f; }
+        .tag-linkedin { background: #e3f2fd; color: #0d47a1; }
+        .tag-trip { background: #e8f5e9; color: #2E7D32; }
+        .tag-all { background: #f3e5f5; color: #6A1B9A; }
+
+        .progress-bar { padding: 0.75rem 1.25rem; background: var(--bg); border-top: 1px solid var(--border); display: flex; align-items: center; gap: 0.75rem; }
+        .progress-label { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
+        .progress-track { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--teal); border-radius: 3px; transition: width 0.3s; }
+        .progress-count { font-size: 0.72rem; font-weight: 700; color: var(--teal-dark); white-space: nowrap; }
+
+        .note-box { margin: 0 2rem 1.5rem; background: var(--gold-light); border: 1.5px solid var(--gold); border-radius: 8px; padding: 0.85rem 1.1rem; }
+        .note-box h4 { font-size: 0.78rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .note-box p { font-size: 0.8rem; color: var(--text); line-height: 1.55; }
+
+        .footer-bar { background: var(--navy); padding: 0.6rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bar p { font-size: 0.65rem; color: rgba(255,255,255,0.4); }
+        .print-btn { padding: 0.3rem 0.85rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; font-size: 0.7rem; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; }
+        .print-btn:hover { background: rgba(255,255,255,0.2); color: white; }
+
+        @media print { body { background: white; padding: 0; } .page { box-shadow: none; } .print-btn { display: none; } .win-item { break-inside: avoid; } }
+        @media (max-width: 600px) { body { padding: 0; } .page { border-radius: 0; } .tiers { padding: 1rem; } }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="header">
+        <div>
+            <h1>Quick Wins — Presencia Digital</h1>
+            <p>Lo Responsable Vende · Recurso post Sesión 2</p>
+        </div>
+        <div class="header-badge">Para llevar a casa</div>
+    </div>
+
+    <div class="intro">
+        Después de la auditoría de hoy, tienes un mapa claro de qué falta. Aquí están las acciones ordenadas por esfuerzo — <strong>empieza por el Nivel 1 esta semana</strong>. Marca cada ítem al completarlo.
+    </div>
+
+    <div class="tiers">
+
+        <!-- NIVEL 1 -->
+        <div class="tier tier-1">
+            <div class="tier-header">
+                <div class="tier-badge">Nivel 1</div>
+                <div class="tier-title">Esta semana — menos de 1 hora en total</div>
+                <div class="tier-time">⏱ &lt; 1h</div>
+            </div>
+            <div class="tier-items" id="tier1">
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Actualizar la descripción de Google Business Profile<span class="win-tag tag-google">Google</span></div>
+                        <div class="win-detail">Añadir palabras clave en inglés, mencionar turismo responsable y qué comunidades o territorios trabajas. 15 minutos.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Añadir una frase en inglés a tu bio de Instagram<span class="win-tag tag-ig">Instagram</span></div>
+                        <div class="win-detail">Una sola frase: lo que haces, dónde, y para quién. Ej: "Community-based tourism in the Colombian Amazon · B2B welcome".</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Verificar que el email de contacto funciona y responde en 24h<span class="win-tag tag-all">Todos</span></div>
+                        <div class="win-detail">Envíate un email de prueba desde otra cuenta. ¿Llega? ¿Responderías en 24h? Un comprador europeo sí espera eso.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Googlear tu operación y anotar qué aparece<span class="win-tag tag-all">Todos</span></div>
+                        <div class="win-detail">Busca: tu nombre + "Colombia tourism" + "responsible travel". ¿Apareces? ¿Qué ven? Esto es lo que ve el comprador europeo antes del primer email.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Añadir horario y categoría correcta en Google Business<span class="win-tag tag-google">Google</span></div>
+                        <div class="win-detail">Categoría: "Tour operator" o "Eco-lodge". Horario de atención real. Foto de portada actualizada.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="progress-label">Completados</span>
+                <div class="progress-track"><div class="progress-fill" id="p1" style="width:0%"></div></div>
+                <span class="progress-count" id="c1">0 / 5</span>
+            </div>
+        </div>
+
+        <!-- NIVEL 2 -->
+        <div class="tier tier-2">
+            <div class="tier-header">
+                <div class="tier-badge">Nivel 2</div>
+                <div class="tier-title">Este mes — bloques de 1–2 horas</div>
+                <div class="tier-time">⏱ 6–10h total</div>
+            </div>
+            <div class="tier-items" id="tier2">
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Crear una sección B2B en tu web<span class="win-tag tag-web">Web</span></div>
+                        <div class="win-detail">Una página o sección separada dirigida a agencias y operadores europeos. Incluye: qué ofreces para grupos/itinerarios, precios netos disponibles bajo solicitud, cómo contactar.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Traducir la página principal o la descripción de tu tour principal al inglés<span class="win-tag tag-web">Web</span></div>
+                        <div class="win-detail">No hace falta traducir todo. Una página en inglés con: qué haces, impacto, cómo contactar. Puedes usar IA para el borrador y revisarlo tú.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Crear o activar el perfil de LinkedIn de tu operación<span class="win-tag tag-linkedin">LinkedIn</span></div>
+                        <div class="win-detail">Descripción en inglés, link a web, categoría "Tour Operator" o "Travel & Tourism". No necesitas publicar cada semana — solo tener presencia visible.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Escribir y publicar una ficha técnica de tu tour principal (1 página, inglés)<span class="win-tag tag-all">Todos</span></div>
+                        <div class="win-detail">PDF con: descripción, duración, tamaño del grupo, precio neto, impacto comunitario, cómo reservar. Este es el documento que envías cuando un comprador europeo te pide más información.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Subir fotos profesionales actualizadas a Google Business y TripAdvisor<span class="win-tag tag-google">Google</span><span class="win-tag tag-trip">TripAdvisor</span></div>
+                        <div class="win-detail">Mínimo 5 fotos de calidad: personas reales (con permiso), el territorio, la experiencia en acción. Nada de fotos de stock.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Pedir 2–3 reseñas a clientes europeos pasados<span class="win-tag tag-trip">TripAdvisor</span><span class="win-tag tag-google">Google</span></div>
+                        <div class="win-detail">Un email corto: "Fue un placer trabajar contigo. Si tienes un minuto, una reseña en Google/TripAdvisor nos ayuda mucho." Ponles el link directo.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="progress-label">Completados</span>
+                <div class="progress-track"><div class="progress-fill" id="p2" style="width:0%"></div></div>
+                <span class="progress-count" id="c2">0 / 6</span>
+            </div>
+        </div>
+
+        <!-- NIVEL 3 -->
+        <div class="tier tier-3">
+            <div class="tier-header">
+                <div class="tier-badge">Nivel 3</div>
+                <div class="tier-title">En 3 meses — proyectos de fondo</div>
+                <div class="tier-time">⏱ proyecto</div>
+            </div>
+            <div class="tier-items" id="tier3">
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Sección de sostenibilidad con datos reales en la web<span class="win-tag tag-web">Web</span></div>
+                        <div class="win-detail">No "somos sostenibles" — sino: qué prácticas tienes, qué impacto generan con cifras, cómo lo puedes demostrar. Esta es la página que el comprador europeo va a buscar.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Testimonios visibles de operadores europeos (no solo de viajeros finales)<span class="win-tag tag-web">Web</span></div>
+                        <div class="win-detail">Un párrafo de una agencia europea que haya trabajado contigo vale más que 50 reseñas de turistas. Pídelos activamente después de cada colaboración.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Perfil en al menos una plataforma OTA especializada en turismo responsable<span class="win-tag tag-all">Plataformas</span></div>
+                        <div class="win-detail">Ethical Travel Portal, Lokal Travel, Evaneos, kimkim — dependiendo de tu perfil. Requiere tiempo de setup pero son canales donde el comprador ya está buscando.</div>
+                    </div>
+                </div>
+                <div class="win-item" onclick="toggleWin(this)">
+                    <div class="win-check"></div>
+                    <div class="win-content">
+                        <div class="win-text">Trabajar hacia una certificación reconocida en Europa<span class="win-tag tag-all">Todos</span></div>
+                        <div class="win-detail">Travelife, TourCert, o Rainforest Alliance son reconocidas. No es obligatorio para acceder al mercado, pero reduce la fricción con compradores que necesitan justificarlo ante sus clientes.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="progress-label">Completados</span>
+                <div class="progress-track"><div class="progress-fill" id="p3" style="width:0%"></div></div>
+                <span class="progress-count" id="c3">0 / 4</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="note-box">
+        <h4>⭐ La regla de oro</h4>
+        <p>No tienes que hacer todo. Haz <strong>los Nivel 1 esta semana</strong> — todos. Son menos de una hora en total y marcan una diferencia visible inmediata. Los Nivel 2 son el trabajo real del mes. Los Nivel 3 son el horizonte al que apuntas.</p>
+    </div>
+
+    <div class="footer-bar">
+        <p>Lo Responsable Vende · TRECC / Institut Français Colombia · Sesión 2 · 28 de abril de 2026</p>
+        <button class="print-btn" onclick="window.print()">🖨 Imprimir</button>
+    </div>
+
+</div>
+
+<script>
+    const totals = { tier1: 5, tier2: 6, tier3: 4 };
+
+    function toggleWin(el) {
+        el.classList.toggle('done');
+        const check = el.querySelector('.win-check');
+        check.textContent = el.classList.contains('done') ? '✓' : '';
+        updateProgress();
+    }
+
+    function updateProgress() {
+        ['tier1','tier2','tier3'].forEach((id, i) => {
+            const items = document.querySelectorAll(`#${id} .win-item`);
+            const done = document.querySelectorAll(`#${id} .win-item.done`).length;
+            const total = items.length;
+            const n = i + 1;
+            document.getElementById(`p${n}`).style.width = (done/total*100) + '%';
+            document.getElementById(`c${n}`).textContent = done + ' / ' + total;
+        });
+    }
+</script>
+</body>
+</html>

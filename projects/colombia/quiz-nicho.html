@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Nicho Responsable · Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --bg-alt:     #EEF2EF;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+        .quiz-header {
+            background: var(--navy);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        .trecc-logo {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: white; }
+        .quiz-title-header {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.55);
+            text-align: right;
+            line-height: 1.3;
+        }
+        .quiz-title-header strong { color: rgba(255,255,255,0.85); display: block; font-size: 0.82rem; }
+
+        /* MAIN WRAPPER */
+        .quiz-wrap {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 2rem 1.25rem 4rem;
+        }
+        .quiz-inner {
+            width: 100%;
+            max-width: 620px;
+        }
+
+        /* PROGRESS */
+        .progress-wrap { margin-bottom: 1.5rem; }
+        .progress-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .progress-meta strong { color: var(--teal-dark); }
+        .progress-track {
+            background: var(--border);
+            border-radius: 4px;
+            height: 5px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: var(--teal);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.35s ease;
+        }
+
+        /* QUESTION CARD */
+        .question-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.75rem 1.5rem 1.5rem;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            margin-bottom: 1.25rem;
+        }
+        .q-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--teal);
+            margin-bottom: 0.6rem;
+        }
+        .q-text {
+            font-size: 1.25rem;
+            line-height: 1.35;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+        }
+        .q-instruction {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        /* OPTIONS */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .option-btn {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.85rem 1rem;
+            border-radius: 9px;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            cursor: pointer;
+            transition: all 0.18s;
+            text-align: left;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.875rem;
+            color: var(--text);
+            line-height: 1.45;
+        }
+        .option-btn:hover { border-color: var(--teal); background: var(--teal-light); }
+        .option-btn.selected {
+            border-color: var(--teal);
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            font-weight: 700;
+        }
+        .option-btn.selected .opt-indicator { background: var(--teal); border-color: var(--teal); color: white; }
+        .opt-indicator {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 900;
+            color: transparent;
+            transition: all 0.18s;
+            margin-top: 1px;
+        }
+
+        /* NAV */
+        .quiz-nav {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: space-between;
+        }
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .nav-btn.prev-btn {
+            background: white;
+            color: var(--text);
+            border: 1.5px solid var(--border);
+        }
+        .nav-btn.prev-btn:hover { border-color: var(--text-muted); }
+        .nav-btn.next-btn {
+            background: var(--navy);
+            color: white;
+            flex: 1;
+            box-shadow: 0 2px 10px rgba(27,43,90,0.2);
+        }
+        .nav-btn.next-btn:hover { background: var(--navy-mid); transform: translateY(-1px); }
+        .nav-btn.next-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+
+        /* NICHE GRID */
+        .niche-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin: 1.25rem 0 1rem;
+        }
+        .niche-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.45rem 0.85rem;
+            border-radius: 999px;
+            border: 2px solid var(--border);
+            background: white;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.82rem;
+            color: var(--text);
+            transition: all 0.18s;
+            user-select: none;
+            line-height: 1.3;
+        }
+        .niche-pill:hover { border-color: var(--teal); background: var(--teal-light); }
+        .niche-pill.primary {
+            border-color: var(--gold);
+            background: var(--gold-light);
+            color: #5A4400;
+            font-weight: 700;
+        }
+        .niche-pill.secondary {
+            border-color: var(--teal);
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            font-weight: 700;
+        }
+        .pill-badge {
+            font-size: 0.58rem;
+            font-weight: 900;
+            padding: 0.08rem 0.38rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            flex-shrink: 0;
+        }
+        .niche-pill.primary .pill-badge { background: var(--gold); color: #5A4400; }
+        .niche-pill.secondary .pill-badge { background: var(--teal); color: white; }
+
+        .niche-status {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            min-height: 1.2em;
+        }
+        .niche-status .sel-primary { color: #7A6000; font-weight: 700; }
+        .niche-status .sel-secondary { color: var(--teal-dark); font-weight: 700; }
+
+        /* RESULTS */
+        #results {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .result-header { text-align: center; margin-bottom: 1.5rem; }
+        .result-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--teal-light);
+            border: 1px solid var(--teal);
+            color: var(--teal-dark);
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .result-header h2 {
+            font-size: 1.75rem;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+        .result-header p {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            margin-bottom: 1rem;
+        }
+        .result-section-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .niche-primary {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        .niche-emoji-big { font-size: 2.5rem; flex-shrink: 0; }
+        .niche-name-primary { font-size: 1.55rem; color: var(--navy); line-height: 1.2; }
+        .niche-modifier-tag {
+            display: inline-block;
+            background: var(--teal);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.2rem 0.65rem;
+            border-radius: 4px;
+            margin-top: 0.35rem;
+        }
+        .niche-secondary {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+        }
+        .niche-emoji-sm { font-size: 1.4rem; flex-shrink: 0; }
+        .niche-name-secondary {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        .niche-name-secondary strong { color: var(--text); display: block; font-size: 0.92rem; }
+
+        .modifier-card {
+            background: var(--navy);
+            border-radius: 10px;
+            padding: 1.1rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .modifier-name {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+        .modifier-phrase { font-size: 1.15rem; color: white; line-height: 1.3; margin-bottom: 0.35rem; }
+        .modifier-desc { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+        .combined-phrase-box {
+            background: var(--gold-light);
+            border: 1.5px solid var(--gold);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .combined-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #7A6000;
+            margin-bottom: 0.4rem;
+        }
+        .combined-text { font-size: 1.2rem; color: var(--navy); line-height: 1.35; }
+
+        .cbi-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--teal);
+            color: white;
+            padding: 0.85rem 1.25rem;
+            border-radius: 9px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: all 0.2s;
+        }
+        .cbi-btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
+        .cbi-btn span { font-size: 0.75rem; font-weight: 400; opacity: 0.85; }
+        .cbi-btn-es {
+            background: white;
+            color: var(--teal-dark);
+            border: 1.5px solid var(--teal);
+        }
+        .cbi-btn-es:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+        .workshop-prompt {
+            background: var(--bg);
+            border-left: 4px solid var(--teal);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .workshop-prompt-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--teal);
+            margin-bottom: 0.35rem;
+        }
+        .workshop-prompt p { font-style: italic; font-size: 0.92rem; color: var(--text); line-height: 1.6; }
+
+        .doc-level {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+        .doc-level strong { color: var(--navy); }
+
+        .retake-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1.5px solid var(--border);
+            background: white;
+            color: var(--text-muted);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.18s;
+        }
+        .retake-btn:hover { border-color: var(--teal); color: var(--teal-dark); }
+
+        .field-label {
+            display: block;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+        .text-input {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 9px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text);
+            background: var(--bg);
+            outline: none;
+            transition: border-color 0.18s;
+        }
+        .text-input:focus { border-color: var(--teal); background: white; }
+
+        .copy-btn {
+            background: white;
+            border: 1.5px solid var(--teal);
+            color: var(--teal-dark);
+            padding: 0.5rem 0.85rem;
+            border-radius: 7px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.18s;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        .copy-btn:hover { background: var(--teal-light); }
+
+        @media (max-width: 480px) {
+            .quiz-wrap { padding: 1.25rem 1rem 3rem; }
+            .q-text { font-size: 1.1rem; }
+            .question-card { padding: 1.25rem 1rem; }
+            .option-btn { font-size: 0.82rem; padding: 0.75rem 0.85rem; }
+            .result-header h2 { font-size: 1.45rem; }
+            .niche-name-primary { font-size: 1.25rem; }
+            .niche-emoji-big { font-size: 2rem; }
+            .result-card { padding: 1.1rem; }
+            .modifier-phrase { font-size: 1rem; }
+            .niche-pill { font-size: 0.78rem; padding: 0.4rem 0.7rem; }
+            .nav-btn { padding: 0.7rem 1rem; font-size: 0.82rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="quiz-header">
+    <div class="trecc-logo"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+    <div class="quiz-title-header">
+        <strong>Quiz de Nicho Responsable</strong>
+        Lo Responsable Vende · Módulo 1
+    </div>
+</header>
+
+<div class="quiz-wrap">
+    <div class="quiz-inner">
+
+        <div class="progress-wrap" id="progressWrap">
+            <div class="progress-meta">
+                <span id="progressLabel">Paso <strong>1</strong> de 3</span>
+                <span id="progressPhase"></span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+        </div>
+
+        <div id="questionArea"></div>
+
+        <div class="quiz-nav" id="quizNav"></div>
+
+        <div id="results"></div>
+
+    </div>
+</div>
+
+<script>
+async function saveResult(data) {
+    try {
+        const fields = {};
+        for (const [k, v] of Object.entries(data)) {
+            if (v === null || v === undefined) continue;
+            if (typeof v === 'number') fields[k] = { integerValue: v };
+            else if (typeof v === 'object') fields[k] = { stringValue: JSON.stringify(v) };
+            else fields[k] = { stringValue: String(v) };
+        }
+        await fetch(
+            'https://firestore.googleapis.com/v1/projects/tourism-development-d620c/databases/(default)/documents/quiz_results?key=AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4',
+            { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ fields }) }
+        );
+    } catch (_) { /* silent */ }
+}
+
+// ─── DATA ────────────────────────────────────────────────────────────────────
+
+const NICHES = {
+    ADV: { name: 'Adventure Tourism',          es: 'Turismo de Aventura',             emoji: '🏔️', cbi: 'adventure-tourism' },
+    ACC: { name: 'Accessible Tourism',         es: 'Turismo Accesible',               emoji: '♿', cbi: 'accessible-tourism' },
+    AGR: { name: 'Agritourism',                es: 'Agroturismo',                     emoji: '🌾', cbi: 'agritourism' },
+    BRD: { name: 'Birdwatching Tourism',       es: 'Avistamiento de Aves',            emoji: '🐦', cbi: 'bird-watching' },
+    CBT: { name: 'Community-Based Tourism',    es: 'Turismo Comunitario',             emoji: '🤝', cbi: 'community-based-tourism' },
+    CUL: { name: 'Cultural Tourism',           es: 'Turismo Cultural',                emoji: '🎭', cbi: 'cultural-tourism' },
+    CYC: { name: 'Cycling Tourism',            es: 'Cicloturismo',                    emoji: '🚴', cbi: 'cycling-tourism' },
+    DIV: { name: 'Dive Tourism',               es: 'Turismo de Buceo',                emoji: '🤿', cbi: 'dive-tourism' },
+    ECO: { name: 'Ecotourism',                 es: 'Ecoturismo',                      emoji: '🌿', cbi: 'ecotourism' },
+    FSH: { name: 'Fishing Tourism',            es: 'Turismo de Pesca',                emoji: '🎣', cbi: 'fishing-tourism' },
+    FOD: { name: 'Food Tourism',               es: 'Turismo Gastronómico',            emoji: '🍽️', cbi: 'food-tourism' },
+    GAP: { name: 'Gap Year Tourism',           es: 'Turismo de Año Sabático',         emoji: '🎒', cbi: 'gap-year-tourism' },
+    HON: { name: 'Honeymoon Tourism',          es: 'Turismo de Luna de Miel',         emoji: '💍', cbi: 'honeymoon-tourism' },
+    LUX: { name: 'Luxury Tourism',             es: 'Turismo de Lujo',                 emoji: '✨', cbi: 'luxury-tourism-0' },
+    NAT: { name: 'Nature Tourism',             es: 'Turismo de Naturaleza',           emoji: '🌳', cbi: 'nature-tourism' },
+    REL: { name: 'Religious Tourism',          es: 'Turismo Religioso',               emoji: '🕌', cbi: 'religious-tourism-0' },
+    SPT: { name: 'Sport Tourism',              es: 'Turismo Deportivo',               emoji: '⛷️', cbi: 'sport-tourism' },
+    SUN: { name: 'Sun and Beach Tourism',      es: 'Turismo de Sol y Playa',          emoji: '🏖️', cbi: 'sun-beach-tourism-0' },
+    URB: { name: 'Urban Experiences',          es: 'Experiencias Urbanas',            emoji: '🏙️', cbi: 'urban-experiences' },
+    VOL: { name: 'Volunteer & Educational',    es: 'Turismo de Voluntariado',         emoji: '🎓', cbi: 'volunteer-and-educational-tourism' },
+    WLK: { name: 'Walking Tourism',            es: 'Senderismo y Caminatas',          emoji: '🥾', cbi: 'walking-tourism' },
+    WAT: { name: 'Water Sports Tourism',       es: 'Deportes Acuáticos',              emoji: '🌊', cbi: 'water-sports-tourism' },
+    WEL: { name: 'Wellness Tourism',           es: 'Turismo de Bienestar',            emoji: '🧘', cbi: 'wellness-tourism' },
+    WLD: { name: 'Wildlife Tourism',           es: 'Fauna Silvestre',                 emoji: '🦁', cbi: 'wildlife' },
+};
+
+const MODIFIERS = {
+    COM_LED:  { name: 'Community-Led',         es: 'de Base Comunitaria',             desc: 'La comunidad local diseña, guía o co-gestiona la experiencia' },
+    LOC_ROOT: { name: 'Locally-Rooted',        es: 'con Arraigo Local',               desc: 'La economía local recibe la mayoría del gasto generado' },
+    CONS_FOC: { name: 'Conservation-Focused',  es: 'con Enfoque de Conservación',     desc: 'La experiencia protege o regenera el entorno natural' },
+    CULT_IMM: { name: 'Culturally Immersive',  es: 'de Inmersión Cultural',           desc: 'El patrimonio cultural es el núcleo del producto' },
+    HIGH_IMP: { name: 'High-Impact',           es: 'Transformador',                   desc: 'El viajero sale transformado, no solo satisfecho' },
+    COM_OWN:  { name: 'Community-Owned',       es: 'Gestionado por la Comunidad',     desc: 'La operación es propiedad parcial o total de la comunidad' },
+};
+
+const WORKSHOP_PROMPTS = {
+    COM_LED:  '¿Cómo describes en una frase el papel de la comunidad en tu experiencia — en palabras que un comprador europeo entienda?',
+    LOC_ROOT: '¿Qué porcentaje del gasto de tus viajeros se queda en la economía local — y cómo lo sabes?',
+    CONS_FOC: '¿Qué acción concreta tomas para proteger el entorno que hace posible tu experiencia?',
+    CULT_IMM: '¿Qué elemento cultural o de patrimonio hace que tu experiencia sea irreproducible en otro lugar?',
+    HIGH_IMP: '¿Cómo describes la transformación que vive tu viajero — en una frase concreta, no en adjetivos?',
+    COM_OWN:  '¿Cómo participan las personas de la comunidad en la propiedad o gestión de la operación — y cómo se documenta?',
+};
+
+const DOC_MESSAGES = [
+    'Estás en el <strong>Nivel 1</strong> del espectro de responsabilidad — el punto de partida. La tarea puente RTA te ayudará a mapear exactamente qué tienes.',
+    'Estás en el <strong>Nivel 2</strong> — tus prácticas existen y están escritas. El siguiente paso es hacerlas visibles para compradores europeos.',
+    'Estás en el <strong>Nivel 3</strong> — tienes certificación colombiana. Comunícala explícitamente en tus materiales B2B internacionales.',
+    'Estás en el <strong>Nivel 4</strong> — certificación internacional. Eso ya abre puertas en Europa. Asegúrate de que sea visible en tu web y perfil B2B.',
+];
+
+// 4 responsibility questions — niche derivation is done via direct selection
+const QUESTIONS = [
+    {
+        id: 'q_type', label: 'Tu operación',
+        text: '¿Qué tipo de empresa tienes?',
+        type: 'single',
+        options: [
+            { label: 'Operador de tours / guía local',              ms: {} },
+            { label: 'Hotel, lodge o alojamiento',                  ms: {} },
+            { label: 'Restaurante / experiencia gastronómica',      ms: { LOC_ROOT: 1 } },
+            { label: 'Agencia receptiva / DMC',                     ms: {} },
+            { label: 'Otro',                                        ms: {} },
+        ]
+    },
+    {
+        id: 'q_community', label: 'Las comunidades',
+        text: '¿Qué papel juegan las comunidades locales en tu producto?',
+        type: 'single',
+        options: [
+            { label: 'Son guías, personal o proveedores clave',             ms: { LOC_ROOT: 2, COM_LED: 1 } },
+            { label: 'Co-diseñan o co-gestionan la experiencia',            ms: { COM_LED: 3 } },
+            { label: 'La comunidad ES el producto — turismo comunitario',   ms: { COM_OWN: 3, COM_LED: 2 } },
+            { label: 'No es un elemento central actualmente',               ms: {} },
+        ]
+    },
+    {
+        id: 'q_strength', label: 'Tu fortaleza responsable',
+        text: '¿Cuál es tu fortaleza responsable más clara?',
+        type: 'single',
+        options: [
+            { label: 'Protegemos el entorno natural — bajo impacto, conservación',     ms: { CONS_FOC: 4 } },
+            { label: 'Nuestra economía se queda local — proveedores y empleo locales', ms: { LOC_ROOT: 4 } },
+            { label: 'Preservamos e interpretamos el patrimonio cultural',              ms: { CULT_IMM: 4 } },
+            { label: 'La experiencia transforma al viajero — más que satisfacción',    ms: { HIGH_IMP: 4 } },
+            { label: 'Todavía lo estoy definiendo',                                    ms: {} },
+        ]
+    },
+    {
+        id: 'q_docs', label: 'Documentación',
+        text: '¿Cómo están documentadas tus prácticas responsables?',
+        type: 'single',
+        options: [
+            { label: 'Las tengo pero no están escritas formalmente',                                    docLevel: 0, ms: {} },
+            { label: 'Algunas están documentadas — procedimientos, políticas internas',                 docLevel: 1, ms: {} },
+            { label: 'Tengo certificación colombiana (MinCIT u otra entidad)',                           docLevel: 2, ms: {} },
+            { label: 'Tengo o estoy en proceso de certificación internacional (TourCert, Travelife…)',  docLevel: 3, ms: {} },
+        ]
+    },
+];
+
+// ─── STATE ───────────────────────────────────────────────────────────────────
+
+let phase = 'intro'; // 'intro' | 'niches' | 'questions' | 'results'
+let primaryNiche   = null; // niche key string e.g. 'ADV'
+let secondaryNiche = null;
+let qStep = 0;
+let userData = { name: '', email: '' };
+const answers = {};
+
+// ─── HELPERS ─────────────────────────────────────────────────────────────────
+
+function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function setProgress(pct, label, phase) {
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').innerHTML = label;
+    document.getElementById('progressPhase').textContent = phase;
+}
+
+// ─── INTRO ───────────────────────────────────────────────────────────────────
+
+function renderIntro() {
+    phase = 'intro';
+    document.getElementById('progressWrap').style.display = 'none';
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('questionArea').style.display = 'block';
+    document.getElementById('questionArea').innerHTML = `
+        <div class="question-card">
+            <div class="q-label">Antes de comenzar</div>
+            <div class="q-text" style="font-size:1.35rem; margin-bottom:0.4rem;">Cuéntanos sobre tu operación</div>
+            <p class="q-instruction" style="margin-bottom:1.5rem;">Usamos esto para cruzar los resultados con el grupo después de la sesión.</p>
+            <label class="field-label" for="inputName">Nombre de tu operación</label>
+            <input type="text" id="inputName" class="text-input" placeholder="Ej. Exploraciones Antioquia" autocomplete="organization" value="${esc(userData.name)}">
+            <label class="field-label" for="inputEmail" style="margin-top:1rem;">Tu correo electrónico</label>
+            <input type="email" id="inputEmail" class="text-input" placeholder="correo@tuoperacion.com" autocomplete="email" value="${esc(userData.email)}">
+            <div id="introError" style="color:var(--red); font-family:Arial,sans-serif; font-size:0.8rem; margin-top:0.6rem; display:none;">Por favor ingresa el nombre de tu operación.</div>
+        </div>`;
+    const nav = document.getElementById('quizNav');
+    nav.style.display = 'flex';
+    nav.innerHTML = `<button class="nav-btn next-btn" style="width:100%" onclick="startNiches()">Comenzar →</button>`;
+}
+
+function startNiches() {
+    userData.name  = document.getElementById('inputName').value.trim();
+    userData.email = document.getElementById('inputEmail').value.trim();
+    if (!userData.name) {
+        document.getElementById('introError').style.display = 'block';
+        document.getElementById('inputName').focus();
+        return;
+    }
+    renderNiches();
+}
+
+// ─── NICHE GRID ──────────────────────────────────────────────────────────────
+
+function renderNiches() {
+    phase = 'niches';
+    document.getElementById('progressWrap').style.display = 'block';
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('questionArea').style.display = 'block';
+    setProgress(20, 'Paso <strong>1</strong> de 3', 'Tu nicho');
+
+    document.getElementById('questionArea').innerHTML = `
+        <div class="question-card">
+            <div class="q-label">Paso 1 · Tu nicho</div>
+            <div class="q-text">¿En qué nicho operas?</div>
+            <div class="q-instruction">Selecciona tu nicho <strong>principal</strong> primero — luego el secundario si aplica (máx. 2).</div>
+            <div class="niche-grid" id="nicheGrid"></div>
+            <div class="niche-status" id="nicheStatus">Ninguno seleccionado todavía</div>
+        </div>`;
+
+    renderNichePills();
+    updateNicheNav();
+}
+
+function renderNichePills() {
+    const grid = document.getElementById('nicheGrid');
+    grid.innerHTML = Object.entries(NICHES).map(([key, n]) => {
+        const isPrimary   = key === primaryNiche;
+        const isSecondary = key === secondaryNiche;
+        const cls = isPrimary ? ' primary' : isSecondary ? ' secondary' : '';
+        const badge = isPrimary
+            ? `<span class="pill-badge">Principal</span>`
+            : isSecondary
+            ? `<span class="pill-badge">Secundario</span>`
+            : '';
+        return `<button class="niche-pill${cls}" onclick="selectNiche('${key}')">${n.emoji} ${n.es}${badge}</button>`;
+    }).join('');
+
+    const status = document.getElementById('nicheStatus');
+    if (!primaryNiche) {
+        status.innerHTML = 'Ninguno seleccionado todavía';
+    } else {
+        const p = NICHES[primaryNiche];
+        const s = secondaryNiche ? NICHES[secondaryNiche] : null;
+        status.innerHTML = `<span class="sel-primary">${p.emoji} ${p.es}</span>${s ? ` · <span class="sel-secondary">${s.emoji} ${s.es}</span>` : ''}`;
+    }
+}
+
+function selectNiche(key) {
+    if (key === primaryNiche) {
+        // Deselect primary; promote secondary if any
+        primaryNiche = secondaryNiche;
+        secondaryNiche = null;
+    } else if (key === secondaryNiche) {
+        secondaryNiche = null;
+    } else if (!primaryNiche) {
+        primaryNiche = key;
+    } else if (!secondaryNiche) {
+        secondaryNiche = key;
+    } else {
+        // Both slots full — replace secondary
+        secondaryNiche = key;
+    }
+    renderNichePills();
+    updateNicheNav();
+}
+
+function updateNicheNav() {
+    const nav = document.getElementById('quizNav');
+    nav.style.display = 'flex';
+    const disabled = !primaryNiche ? 'disabled' : '';
+    nav.innerHTML = `<button class="nav-btn next-btn" ${disabled} onclick="startQuestions()">Siguiente — Ángulo responsable →</button>`;
+}
+
+// ─── QUESTIONS ───────────────────────────────────────────────────────────────
+
+function startQuestions() {
+    if (!primaryNiche) return;
+    phase = 'questions';
+    qStep = 0;
+    renderQuestion();
+}
+
+function renderQuestion() {
+    const q = QUESTIONS[qStep];
+    const total = QUESTIONS.length;
+    const pct = 20 + ((qStep + 1) / total) * 80;
+    setProgress(pct, `Pregunta <strong>${qStep + 1}</strong> de ${total}`, q.label);
+
+    const selected = answers[q.id] ?? null;
+    const optionsHTML = q.options.map((opt, i) => {
+        const isSel = selected === i;
+        return `<button class="option-btn${isSel ? ' selected' : ''}" onclick="selectOption(${i})">
+            <span class="opt-indicator">${isSel ? '✓' : ''}</span>
+            <span>${opt.label}</span>
+        </button>`;
+    }).join('');
+
+    document.getElementById('questionArea').innerHTML = `
+        <div class="question-card">
+            <div class="q-label">Pregunta ${qStep + 1} — ${q.label}</div>
+            <div class="q-text">${q.text}</div>
+            <div class="options-list">${optionsHTML}</div>
+        </div>`;
+
+    const nav = document.getElementById('quizNav');
+    nav.style.display = 'flex';
+    const isLast = qStep === total - 1;
+    const canNext = answers[q.id] !== undefined && answers[q.id] !== null;
+    nav.innerHTML = `
+        <button class="nav-btn prev-btn" onclick="goBack()" style="${qStep === 0 ? 'display:none' : ''}">← Anterior</button>
+        <button class="nav-btn next-btn" ${canNext ? '' : 'disabled'} onclick="goNext()">${isLast ? 'Ver mi resultado →' : 'Siguiente →'}</button>`;
+}
+
+function selectOption(i) {
+    answers[QUESTIONS[qStep].id] = i;
+    renderQuestion();
+}
+
+function goNext() {
+    const q = QUESTIONS[qStep];
+    if (answers[q.id] === null || answers[q.id] === undefined) return;
+    if (qStep < QUESTIONS.length - 1) { qStep++; renderQuestion(); }
+    else { showResults(); }
+}
+
+function goBack() {
+    if (qStep > 0) { qStep--; renderQuestion(); }
+    else { renderNiches(); }
+}
+
+// ─── SCORING ─────────────────────────────────────────────────────────────────
+
+function computeModifier() {
+    const modScores = {};
+    Object.keys(MODIFIERS).forEach(k => modScores[k] = 0);
+
+    QUESTIONS.forEach(q => {
+        const sel = answers[q.id];
+        if (sel === null || sel === undefined) return;
+        const opt = q.options[sel];
+        if (!opt) return;
+        Object.entries(opt.ms || {}).forEach(([k, v]) => { modScores[k] = (modScores[k] || 0) + v; });
+    });
+
+    const sorted = Object.entries(modScores).sort(([,a],[,b]) => b - a);
+    return sorted[0] && sorted[0][1] > 0 ? sorted[0][0] : 'HIGH_IMP';
+}
+
+function getDocLevel() {
+    const sel = answers['q_docs'];
+    if (sel === null || sel === undefined) return 0;
+    return QUESTIONS.find(q => q.id === 'q_docs').options[sel].docLevel ?? 0;
+}
+
+// ─── RESULTS ─────────────────────────────────────────────────────────────────
+
+function showResults() {
+    document.getElementById('progressWrap').style.display = 'none';
+    document.getElementById('questionArea').style.display = 'none';
+    document.getElementById('quizNav').style.display = 'none';
+
+    const modifier  = computeModifier();
+    const docLevel  = getDocLevel();
+    const pNiche    = NICHES[primaryNiche];
+    const sNiche    = secondaryNiche ? NICHES[secondaryNiche] : null;
+    const mod       = MODIFIERS[modifier];
+    const cbiUrl    = `https://www.cbi.eu/market-information/tourism/${pNiche.cbi}`;
+    const combined  = `${pNiche.es} ${mod.es}`;
+    const prompt    = WORKSHOP_PROMPTS[modifier];
+
+    try {
+        localStorage.setItem('lrv_nicho_primary', primaryNiche);
+        localStorage.setItem('lrv_nicho_primary_es', pNiche.es);
+    } catch(e) {}
+
+    saveResult({
+        name: userData.name,
+        email: userData.email,
+        nicheMain: primaryNiche,
+        nicheMainEs: pNiche.es,
+        nicheMainName: pNiche.name,
+        nicheSecondary: secondaryNiche,
+        nicheSecondaryEs: sNiche?.es ?? null,
+        modifier,
+        modifierEs: mod.es,
+        positioningPhrase: combined,
+        cbiUrl,
+        docLevel,
+        quizVersion: 'v2',
+        rawAnswers: { ...answers }
+    });
+
+    const resultsEl = document.getElementById('results');
+    resultsEl.style.display = 'block';
+    resultsEl.innerHTML = `
+        <div style="background:var(--teal-light); border:1.5px solid var(--teal); border-radius:10px; padding:0.85rem 1.1rem; margin-bottom:1.25rem; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
+            <div>
+                <div style="font-family:Arial,sans-serif; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark); margin-bottom:0.15rem;">Resultado de</div>
+                <div style="font-family:Arial,sans-serif; font-size:0.92rem; font-weight:700; color:var(--navy);">${esc(userData.name)}</div>
+                ${userData.email ? `<div style="font-family:Arial,sans-serif; font-size:0.78rem; color:var(--text-muted);">${esc(userData.email)}</div>` : ''}
+            </div>
+            <button class="copy-btn" id="copyBtn" onclick="copyResult()">📋 Copiar</button>
+        </div>
+
+        <div class="result-header">
+            <div class="result-tag">✦ Tu perfil de nicho responsable</div>
+            <h2>Aquí está<br>tu punto de partida</h2>
+            <p>Úsalo como base para la Hoja de Mapeo de Nicho</p>
+        </div>
+
+        <div class="result-card">
+            <div class="result-section-label">Nicho principal</div>
+            <div class="niche-primary">
+                <span class="niche-emoji-big">${pNiche.emoji}</span>
+                <div>
+                    <div class="niche-name-primary">${pNiche.es}</div>
+                    <span class="niche-modifier-tag">${mod.es}</span>
+                </div>
+            </div>
+            ${sNiche ? `
+            <div class="result-section-label" style="margin-bottom:0.35rem;">Nicho secundario</div>
+            <div class="niche-secondary">
+                <span class="niche-emoji-sm">${sNiche.emoji}</span>
+                <div class="niche-name-secondary">
+                    <strong>${sNiche.es}</strong>
+                    ${sNiche.name}
+                </div>
+            </div>` : ''}
+        </div>
+
+        <div class="modifier-card">
+            <div class="modifier-name">Tu modificador responsable · ${mod.name}</div>
+            <div class="modifier-phrase">${mod.es}</div>
+            <div class="modifier-desc">${mod.desc}</div>
+        </div>
+
+        <div class="combined-phrase-box">
+            <div class="combined-label">Tu combinación de posicionamiento</div>
+            <div class="combined-text">${pNiche.emoji} <strong>${combined}</strong></div>
+        </div>
+
+        <a class="cbi-btn" href="${cbiUrl}" target="_blank" rel="noopener">
+            🔗 Lee la guía CBI para tu nicho
+            <span>→ ${pNiche.name} · cbi.eu</span>
+        </a>
+        <a class="cbi-btn cbi-btn-es" href="https://www-cbi-eu.translate.goog/market-information/tourism/${pNiche.cbi}?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp" target="_blank" rel="noopener">
+            🌐 Ver en español
+            <span>→ vía Google Translate</span>
+        </a>
+
+        <div class="workshop-prompt">
+            <div class="workshop-prompt-label">Pregunta para llevar al taller</div>
+            <p>"${prompt}"</p>
+        </div>
+
+        <div class="doc-level">${DOC_MESSAGES[docLevel]}</div>
+
+        <button class="retake-btn" onclick="retake()">Responder de nuevo</button>
+    `;
+}
+
+function retake() {
+    primaryNiche = null;
+    secondaryNiche = null;
+    qStep = 0;
+    Object.keys(answers).forEach(k => delete answers[k]);
+    document.getElementById('results').style.display = 'none';
+    renderIntro();
+}
+
+function copyResult() {
+    const modifier = computeModifier();
+    const docLevel = getDocLevel();
+    const pNiche   = NICHES[primaryNiche];
+    const sNiche   = secondaryNiche ? NICHES[secondaryNiche] : null;
+    const mod      = MODIFIERS[modifier];
+    const cbiUrl   = `https://www.cbi.eu/market-information/tourism/${pNiche.cbi}`;
+    const lines = [
+        'Quiz de Nicho Responsable — Lo Responsable Vende',
+        `Operación: ${userData.name}`,
+        userData.email ? `Email: ${userData.email}` : null,
+        '',
+        `Nicho principal: ${pNiche.emoji} ${pNiche.es} (${pNiche.name})`,
+        sNiche ? `Nicho secundario: ${sNiche.emoji} ${sNiche.es}` : null,
+        `Modificador responsable: ${mod.es} (${mod.name})`,
+        `Frase de posicionamiento: ${pNiche.es} ${mod.es}`,
+        '',
+        `CBI market potential: ${cbiUrl}`,
+    ].filter(l => l !== null).join('\n');
+
+    const btn = document.getElementById('copyBtn');
+    navigator.clipboard.writeText(lines).then(() => {
+        btn.textContent = '✓ Copiado';
+        setTimeout(() => { btn.textContent = '📋 Copiar'; }, 2200);
+    }).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = lines;
+        Object.assign(ta.style, { position:'fixed', opacity:'0' });
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = '✓ Copiado';
+        setTimeout(() => { btn.textContent = '📋 Copiar'; }, 2200);
+    });
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+renderIntro();
+</script>
+</body>
+</html>

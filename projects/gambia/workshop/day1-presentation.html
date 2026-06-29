@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gambia Institutional Capacity Workshop — Day 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink:    #E6007E;
+  --navy:    #1A2B4A;
+  --text:    #3D3D3D;
+  --muted:   #7A7A7A;
+  --surface: #F4F4F4;
+  --accent:  #0091D4;
+  --bg:      #ffffff;
+  --bdr:     #E2E2E2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bdr); z-index: 100; padding: .8rem 2rem;
+}
+.nav-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-weight: 700; font-size: .88rem; color: var(--navy); }
+.nav-badge { background: var(--navy); color: #fff; padding: .25rem .9rem; border-radius: 20px; font-size: .71rem; font-weight: 600; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed; left: 1.4rem; top: 50%; transform: translateY(-50%);
+  z-index: 99; display: flex; flex-direction: column; gap: .42rem;
+  max-height: 90vh; overflow-y: auto; padding: .4rem 0;
+}
+.sidebar::-webkit-scrollbar { width: 0; }
+.sb-item { display: flex; align-items: center; gap: .55rem; cursor: pointer; transition: all .22s; }
+.sb-item:hover { transform: scale(1.1); }
+.sb-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--bdr); transition: all .22s; }
+.sb-item:hover  .sb-dot { background: var(--pink); transform: scale(1.4); }
+.sb-item.active .sb-dot { background: var(--pink); width: 11px; height: 11px; min-width: 11px; }
+.sb-label { font-size: .67rem; color: var(--muted); font-weight: 500; transition: all .22s; max-width: 115px; line-height: 1.3; }
+.sb-item:hover  .sb-label { color: var(--text); font-weight: 600; }
+.sb-item.active .sb-label { color: var(--pink); font-weight: 700; }
+.sb-sep { height: 1px; background: var(--bdr); margin: .1rem 0; }
+.sb-group { font-size: .55rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; padding-left: 1.2rem; font-weight: 700; }
+
+/* ── NAV BUTTONS ── */
+.nav-btns { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: .7rem; z-index: 98; }
+.nav-btn {
+  padding: .72rem 1.5rem; background: var(--pink); color: #fff;
+  border: none; border-radius: 8px; font-size: .88rem; cursor: pointer;
+  display: flex; align-items: center; gap: .4rem;
+  transition: all .22s; box-shadow: 0 2px 10px rgba(230,0,126,.22);
+  font-family: inherit; font-weight: 600;
+}
+.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(230,0,126,.32); }
+.nav-btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
+.nav-btn.prev { background: #fff; color: var(--text); border: 2px solid var(--bdr); box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.nav-btn.prev:hover { box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+
+/* ── SECTIONS ── */
+section { height: 100vh; padding: 5rem 2rem 7.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.wrap { max-width: 960px; width: 100%; }
+.bg-surface { background: var(--surface); }
+
+/* ── TYPOGRAPHY ── */
+.eyebrow { font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--pink); margin-bottom: .75rem; }
+.h1 { font-size: 2.5rem; font-weight: 900; line-height: 1.15; color: var(--navy); margin-bottom: .7rem; }
+.h2 { font-size: 1.75rem; font-weight: 800; color: var(--navy); margin-bottom: .45rem; }
+.lead { font-size: 1.05rem; color: var(--text); line-height: 1.65; }
+.pink-rule { height: 4px; width: 52px; background: var(--pink); border-radius: 2px; margin-bottom: 1.4rem; }
+
+/* ── L1 COVER ── */
+.cover { position: relative; color: #fff; text-align: center; overflow: hidden; }
+.cover-bg {
+  position: absolute; inset: 0;
+  background: url('img/the-gambia-01HHckNy4CQ-unsplash.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+.cover-bg::after { content: ''; position: absolute; inset: 0; background: rgba(26,43,74,.82); }
+.cover .wrap { position: relative; z-index: 1; }
+.cover .h1 { color: #fff; font-size: 2.8rem; }
+.cover-accent { width: 52px; height: 3px; background: var(--pink); border-radius: 2px; margin: 1.4rem auto; }
+.cover-badge {
+  display: inline-block; background: rgba(230,0,126,.22); color: var(--pink);
+  border: 1px solid rgba(230,0,126,.4); padding: .3rem 1rem; border-radius: 20px;
+  font-size: .73rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1.5rem;
+}
+.cover-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: .88rem; color: rgba(255,255,255,.5); margin-top: 1.5rem; }
+.cover-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: 2rem; }
+.cover-chip { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); border-radius: 8px; padding: .4rem .9rem; font-size: .78rem; color: rgba(255,255,255,.68); }
+
+/* ── L2 DIVIDER ── */
+.divider { background: var(--navy); text-align: center; color: #fff; position: relative; overflow: hidden; }
+.divider .eyebrow { color: var(--pink); margin-bottom: 1rem; }
+.divider .h1 { color: #fff; font-size: 2.5rem; max-width: 680px; margin: 0 auto .75rem; }
+.divider .sub-text { font-size: 1.1rem; color: rgba(255,255,255,.6); max-width: 540px; margin: 0 auto; line-height: 1.65; }
+.divider-deco { font-size: 9rem; font-weight: 900; color: rgba(255,255,255,.04); position: absolute; right: 8%; top: 50%; transform: translateY(-50%); line-height: 1; pointer-events: none; }
+
+/* ── PHOTO SECTION (full-bleed with overlay) ── */
+.photo-section { position: relative; color: #fff; overflow: hidden; }
+.photo-section .photo-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.photo-section .photo-overlay { position: absolute; inset: 0; background: rgba(26,43,74,.72); z-index: 1; }
+.photo-section .wrap { position: relative; z-index: 2; }
+
+/* ── L3 CONTENT + IMAGE ── */
+.content-img { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.text-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .85rem; margin: .85rem 0; }
+.text-col ul li { font-size: 1rem; color: var(--text); line-height: 1.6; padding-left: 1.2rem; position: relative; }
+.text-col ul li::before { content: '—'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+.photo-real { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.15); }
+.photo-real img { width: 100%; height: 320px; object-fit: cover; display: block; }
+
+/* ── L6 CARDS ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin: .75rem 0; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: .9rem; margin: .85rem 0; }
+.card { background: #fff; border-radius: 10px; padding: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,.07); border-top: 4px solid var(--bdr); }
+.card.card-pink  { border-top-color: var(--pink); }
+.card.card-navy  { border-top-color: var(--navy); }
+.card.card-accent { border-top-color: var(--accent); }
+.card h4 { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
+.card p  { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+.card-label { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+
+/* ── L7 BIG STAT ── */
+.stat-number { font-size: 5.5rem; font-weight: 900; line-height: 1; color: var(--pink); margin-bottom: .35rem; }
+.stat-label { font-size: 1.25rem; font-weight: 700; color: var(--navy); margin-bottom: .9rem; }
+.stat-sub { font-size: 1rem; color: var(--muted); line-height: 1.55; }
+
+/* ── L7 QUOTE ── */
+.quote-slide { background: var(--navy); text-align: center; }
+.big-quote { font-size: 1.95rem; font-weight: 800; line-height: 1.35; color: #fff; max-width: 700px; margin: 0 auto 1rem; }
+.big-quote em { color: var(--pink); font-style: normal; }
+.quote-rule { width: 48px; height: 3px; background: rgba(255,255,255,.2); border-radius: 2px; margin: 1.4rem auto; }
+.quote-sub { font-size: 1.4rem; font-weight: 800; color: var(--pink); margin-top: .5rem; }
+
+/* ── L8 CASE STUDY ── */
+.case-study-card { background: var(--navy); color: #fff; border-radius: 12px; padding: 1.5rem 2rem; border-left: 6px solid var(--pink); }
+.cs-eyebrow { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: var(--pink); margin-bottom: .45rem; }
+.cs-title { font-size: 1.1rem; font-weight: 700; margin-bottom: .45rem; }
+.cs-body { font-size: .95rem; opacity: .85; line-height: 1.6; }
+.cs-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
+.cs-tag { background: rgba(230,0,126,.2); color: var(--pink); border: 1px solid rgba(230,0,126,.32); padding: .22rem .7rem; border-radius: 14px; font-size: .78rem; font-weight: 700; }
+
+/* ── L9 EXERCISE ── */
+.exercise-card { background: #fff; border-radius: 12px; border: 2px solid var(--pink); overflow: hidden; }
+.exercise-header { background: var(--pink); color: #fff; padding: .7rem 1.4rem; display: flex; align-items: center; gap: .75rem; }
+.exercise-icon { font-size: 1.15rem; }
+.exercise-header h3 { font-size: .95rem; font-weight: 700; }
+.exercise-time { font-size: .76rem; opacity: .85; margin-left: auto; white-space: nowrap; }
+.exercise-body { padding: 1.3rem 1.5rem; }
+.exercise-scenario { background: var(--surface); border-radius: 8px; padding: .9rem 1.1rem; font-size: .95rem; font-style: italic; color: var(--text); margin-bottom: 1rem; line-height: 1.6; }
+.exercise-steps { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .7rem; }
+.exercise-steps li { display: flex; gap: .85rem; align-items: flex-start; font-size: .95rem; color: var(--text); line-height: 1.55; }
+.step-num { min-width: 24px; height: 24px; border-radius: 50%; background: var(--navy); color: #fff; font-size: .72rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: .1rem; }
+.exercise-alt { margin-top: .9rem; padding: .65rem .9rem; background: var(--surface); border-radius: 7px; font-size: .84rem; color: var(--muted); line-height: 1.55; border-left: 3px solid var(--muted); }
+
+/* ── L10 3-STEP ── */
+.steps-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 1.25rem 0; position: relative; }
+.steps-row::before { content: ''; position: absolute; top: 42px; left: 14%; right: 14%; height: 2px; background: var(--bdr); z-index: 0; }
+.step-item { text-align: center; padding: 1.2rem .75rem .8rem; background: var(--surface); border-radius: 10px; position: relative; z-index: 1; margin: 0 .3rem; }
+.step-num-lg { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; font-size: .85rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto .7rem; }
+.step-item.step-pink .step-num-lg { background: var(--pink); }
+.step-item h4 { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
+.step-item p { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+
+/* ── NOTE BOXES ── */
+.note-box { background: var(--surface); border-left: 3px solid var(--bdr); border-radius: 7px; padding: .8rem 1.1rem; font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.note-box.nb-pink { border-left-color: var(--pink); background: #FFF0F7; color: var(--text); }
+
+/* ── MARKET CHART ── */
+.market-chart { display: flex; flex-direction: column; gap: .7rem; margin: 1.1rem 0; }
+.market-row { display: flex; align-items: center; gap: .9rem; }
+.market-label { font-size: .88rem; font-weight: 600; color: var(--text); min-width: 175px; line-height: 1.4; }
+.market-label small { font-size: .78rem; color: var(--muted); font-weight: 400; display: block; margin-top: .1rem; }
+.market-bar-wrap { flex: 1; display: flex; align-items: center; gap: .6rem; }
+.market-bar { height: 34px; border-radius: 5px; background: var(--navy); display: flex; align-items: center; padding: 0 .65rem; font-size: .8rem; font-weight: 700; color: #fff; min-width: 40px; }
+.mb-pink   { background: var(--pink); }
+.mb-accent { background: var(--accent); }
+.mb-muted  { background: #B8B8B8; }
+.market-rating { font-size: .82rem; color: var(--muted); font-weight: 600; white-space: nowrap; }
+.market-rating.top { color: var(--pink); font-weight: 700; }
+
+/* ── STAT COMPARE ── */
+.stat-compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; text-align: center; max-width: 680px; margin: 0 auto; }
+.stat-cmp-n { font-size: 4.5rem; font-weight: 900; line-height: 1; }
+.stat-cmp-l { font-size: .92rem; color: var(--muted); margin-top: .35rem; line-height: 1.45; }
+.stat-cmp-vs { font-size: 1.5rem; font-weight: 900; color: var(--muted); opacity: .35; }
+
+/* ── SECTOR CHART ── */
+.sector-chart { display: flex; flex-direction: column; gap: .6rem; margin: .9rem 0; }
+.sc-row { display: flex; align-items: center; gap: .8rem; }
+.sc-label { min-width: 200px; }
+.sc-name { font-size: .88rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+.sc-assn { font-size: .74rem; color: var(--muted); }
+.sc-track { flex: 1; background: #E8E8E8; border-radius: 5px; height: 34px; overflow: hidden; }
+.sc-fill { height: 100%; border-radius: 5px; background: var(--navy); display: flex; align-items: center; padding: 0 .6rem; font-size: .78rem; font-weight: 700; color: #fff; }
+.scf-lead { background: var(--navy); }
+.scf-mid  { background: #546E8F; }
+.scf-low  { background: var(--pink); }
+
+/* ── NOTES 2-COL ── */
+.notes-2col { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin-top: .85rem; }
+
+/* ── BROWSER MOCKUP ── */
+.browser-mock {
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  border: 1px solid var(--bdr);
+  background: #fff;
+}
+.browser-bar {
+  background: #F0F0F0; border-bottom: 1px solid var(--bdr);
+  padding: .55rem .85rem; display: flex; align-items: center; gap: .75rem;
+}
+.browser-dots { display: flex; gap: .35rem; }
+.browser-dots span { width: 10px; height: 10px; border-radius: 50%; background: #D8D8D8; display: block; }
+.browser-dots span:nth-child(1) { background: #FF5F57; }
+.browser-dots span:nth-child(2) { background: #FEBC2E; }
+.browser-dots span:nth-child(3) { background: #28C840; }
+.browser-url { background: #fff; border: 1px solid var(--bdr); border-radius: 5px; padding: .22rem .65rem; font-size: .72rem; color: var(--muted); flex: 1; max-width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.browser-content { padding: .85rem 1rem; }
+.mock-review { border-bottom: 1px solid var(--bdr); padding: .55rem 0; }
+.mock-review:last-child { border-bottom: none; }
+.mock-stars { color: #F5A623; font-size: .8rem; letter-spacing: .05em; }
+.mock-review-title { font-size: .79rem; font-weight: 700; color: var(--text); margin: .1rem 0; }
+.mock-review-body  { font-size: .73rem; color: var(--muted); line-height: 1.45; }
+.mock-review-meta  { font-size: .67rem; color: var(--muted); margin-top: .15rem; }
+.mock-search-result { padding: .5rem 0; border-bottom: 1px solid var(--bdr); }
+.mock-search-result:last-child { border-bottom: none; }
+.mock-url   { font-size: .71rem; color: #1a73e8; margin-bottom: .08rem; }
+.mock-stitle { font-size: .84rem; font-weight: 700; color: #1a73e8; margin-bottom: .12rem; }
+.mock-sdesc { font-size: .74rem; color: var(--muted); line-height: 1.45; }
+.mock-section-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: .55rem; padding-bottom: .3rem; border-bottom: 2px solid var(--bdr); }
+
+/* ── CATEGORY TILES ── */
+.cat-tiles { display: flex; gap: .85rem; margin: 1rem 0; }
+.cat-tile { flex: 1; border-radius: 10px; padding: 1.1rem 1.25rem; text-align: center; }
+.cat-tile h4 { font-size: .95rem; font-weight: 800; margin-bottom: .3rem; }
+.cat-tile p  { font-size: .82rem; line-height: 1.45; }
+.ct-navy  { background: var(--navy); color: #fff; }
+.ct-navy p { color: rgba(255,255,255,.7); }
+.ct-pink  { background: var(--pink); color: #fff; }
+.ct-pink p { color: rgba(255,255,255,.8); }
+.ct-accent { background: var(--accent); color: #fff; }
+.ct-accent p { color: rgba(255,255,255,.8); }
+
+/* ── SHARE-BACK BOARD ── */
+.board-cols { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin: 1rem 0; }
+.board-col { background: #fff; border-radius: 10px; border-top: 4px solid var(--bdr); padding: 1rem 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.board-col.bc-green  { border-top-color: #22A860; }
+.board-col.bc-amber  { border-top-color: #F5A623; }
+.board-col.bc-red    { border-top-color: var(--pink); }
+.bc-label { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .4rem; }
+.bc-green .bc-label  { color: #22A860; }
+.bc-amber .bc-label  { color: #F5A623; }
+.bc-red   .bc-label  { color: var(--pink); }
+.bc-desc { font-size: .88rem; color: var(--muted); line-height: 1.5; }
+
+/* ── BEFORE / AFTER ── */
+.before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: .75rem 0; }
+.ba-side { border-radius: 10px; padding: 1.25rem 1.4rem; }
+.ba-before { background: var(--surface); border: 1px solid var(--bdr); }
+.ba-after  { background: #FFF0F7; border: 1px solid rgba(230,0,126,.22); }
+.ba-label { font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .65rem; }
+.ba-before .ba-label { color: var(--muted); }
+.ba-after  .ba-label { color: var(--pink); }
+.ba-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .55rem; }
+.ba-list li { font-size: .9rem; line-height: 1.55; padding-left: 1.25rem; position: relative; }
+.ba-before .ba-list li::before { content: '✗'; position: absolute; left: 0; color: var(--muted); }
+.ba-after  .ba-list li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+
+/* ── KPI TABLE ── */
+.kpi-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.kpi-table th { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: .65rem 1rem; border-bottom: 2px solid var(--bdr); text-align: left; background: var(--surface); }
+.kpi-table td { font-size: .92rem; padding: .65rem 1rem; border-bottom: 1px solid var(--bdr); color: var(--text); }
+.kpi-table tr:last-child td { border-bottom: none; }
+.kpi-col-target { color: var(--pink) !important; font-weight: 700; }
+
+/* ── BRIEFING MOCK ── */
+.briefing-mock { background: #fff; border: 1px solid var(--bdr); border-radius: 10px; padding: 1.15rem 1.3rem; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.briefing-header { border-bottom: 3px solid var(--pink); padding-bottom: .6rem; margin-bottom: .85rem; }
+.briefing-to { font-size: .72rem; color: var(--muted); margin-bottom: .18rem; }
+.briefing-subject { font-size: .9rem; font-weight: 700; color: var(--navy); line-height: 1.35; }
+.briefing-section { margin-bottom: .7rem; }
+.briefing-section:last-child { margin-bottom: 0; }
+.briefing-section-label { font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--pink); margin-bottom: .3rem; }
+.briefing-text { font-size: .85rem; color: var(--text); line-height: 1.55; }
+
+/* ── TIER TABLE ── */
+.tier-table { display: flex; flex-direction: column; gap: .6rem; margin: .9rem 0; }
+.tier-row { display: grid; grid-template-columns: 160px 1fr; gap: .85rem; align-items: start; background: #fff; border-radius: 10px; padding: .9rem 1.1rem; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.tier-label { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; line-height: 1.4; }
+.tier-content { font-size: .9rem; color: var(--text); line-height: 1.6; }
+
+/* ── RESPONSIVE ── */
+@media(max-width: 768px) {
+  .before-after, .tier-row { grid-template-columns: 1fr; }
+  .content-img, .grid-4 { grid-template-columns: 1fr 1fr; }
+  .grid-2, .notes-2col { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; gap: .5rem; }
+  .steps-row::before { display: none; }
+  .stat-compare { grid-template-columns: 1fr; gap: .5rem; }
+  .sidebar { display: none; }
+  .nav-btns { bottom: 1.25rem; right: 1.25rem; left: 1.25rem; justify-content: space-between; }
+  .h1 { font-size: 1.75rem; }
+  .cover .h1 { font-size: 2rem; }
+  section { padding: 4.5rem 1.25rem 7rem; }
+  .sc-label { min-width: 110px; }
+  .market-label { min-width: 120px; }
+  .photo-real img { height: 200px; }
+  .cat-tiles { flex-direction: column; }
+  .board-cols { grid-template-columns: 1fr; }
+}
+html { scroll-behavior: smooth; scroll-padding-top: 75px; }
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- NAV -->
+<nav>
+<div class="nav-content">
+  <div class="nav-logo">Gambia Institutional Capacity Workshop</div>
+  <div class="nav-badge">Day 1 · ITC YEP · Banjul · May 2026</div>
+</div>
+</nav>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="sb-group">Opening</div>
+  <div class="sb-item active" onclick="go(0)"><div class="sb-dot"></div><span class="sb-label">Cover</span></div>
+  <div class="sb-item" onclick="go(4)"><div class="sb-dot"></div><span class="sb-label">Map the room</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Evidence</div>
+  <div class="sb-item" onclick="go(9)"><div class="sb-dot"></div><span class="sb-label">95 / 91 / 9</span></div>
+  <div class="sb-item" onclick="go(16)"><div class="sb-dot"></div><span class="sb-label">61% absent</span></div>
+  <div class="sb-item" onclick="go(20)"><div class="sb-dot"></div><span class="sb-label">Find your sector</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Four Things</div>
+  <div class="sb-item" onclick="go(25)"><div class="sb-dot"></div><span class="sb-label">Thing 1: Monitor</span></div>
+  <div class="sb-item" onclick="go(30)"><div class="sb-dot"></div><span class="sb-label">Thing 2: Findable</span></div>
+  <div class="sb-item" onclick="go(36)"><div class="sb-dot"></div><span class="sb-label">Thing 3: Open a door</span></div>
+  <div class="sb-item" onclick="go(41)"><div class="sb-dot"></div><span class="sb-label">Thing 4: Briefing</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Day 1 Close</div>
+  <div class="sb-item" onclick="go(47)"><div class="sb-dot"></div><span class="sb-label">Journalist test</span></div>
+  <div class="sb-item" onclick="go(48)"><div class="sb-dot"></div><span class="sb-label">Commitments</span></div>
+</div>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 0 · COVER                           -->
+<!-- ═══════════════════════════════════ -->
+<section class="cover" data-s="0">
+<div class="cover-bg"></div>
+<div class="wrap">
+  <div class="cover-badge">Day 1 of 2</div>
+  <div class="cover-accent"></div>
+  <h1 class="h1">Enabling Tourism Marketing<br>&amp; SME Competitiveness</h1>
+  <p style="color:rgba(255,255,255,.65);font-size:1.05rem;max-width:480px;margin:.65rem auto 0;">Institutional Capacity Workshop · ITC EU Youth Empowerment Project</p>
+  <div class="cover-meta">
+    <span>Banjul, The Gambia</span>
+    <span>May 2026</span>
+    <span>13 institutions · 2 days</span>
+  </div>
+  <div class="cover-chips">
+    <div class="cover-chip">Ministry of Tourism</div>
+    <div class="cover-chip">Gambia Tourism Board</div>
+    <div class="cover-chip">NCAC</div>
+    <div class="cover-chip">Hospitality Institute</div>
+    <div class="cover-chip">Music Union</div>
+    <div class="cover-chip">Photographers Assn</div>
+    <div class="cover-chip">Visual Arts Assn</div>
+    <div class="cover-chip">Craft Market Federation</div>
+    <div class="cover-chip">Bird Watchers Assn</div>
+    <div class="cover-chip">Tour Guide Assn</div>
+    <div class="cover-chip">Chef Assn</div>
+    <div class="cover-chip">Collecting Society</div>
+    <div class="cover-chip">Tourist Security Guard Assn</div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 1 · WHY WE'RE HERE                 -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="1">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Opening · 8:30–9:00</div>
+      <h2 class="h2">Why we're here together</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>This week, SMEs worked on their own digital presence. Today you're here to work on something <strong>only institutions can do</strong>: read the landscape and create conditions for members to succeed.</li>
+        <li>The question is not "how do we promote The Gambia?" It is: <strong>"how do we make it easier for others to promote it well?"</strong></li>
+      </ul>
+    </div>
+    <div class="photo-real">
+      <img src="img/the-gambia-pI_W6zfOXvQ-unsplash.jpg" alt="Banjul arch landmark" style="height:360px;">
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 2 · OPENING INTRODUCTIONS          -->
+<!-- ═══════════════════════════════════ -->
+<section class="photo-section" data-s="2">
+<div class="photo-bg" style="background-image:url('img/ben-tatlow-G4DjX7LDeBs-unsplash.jpg');"></div>
+<div class="photo-overlay" style="background:rgba(26,43,74,.70);"></div>
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow" style="color:rgba(230,0,126,.9);">Before the data — a question for each of you</div>
+  <p style="font-size:2.1rem;font-weight:800;color:#fff;line-height:1.35;max-width:680px;margin:.75rem auto 1.5rem;">Name, institution, one sentence: how do you see your connection to promoting The Gambia?</p>
+  <p style="font-size:1rem;color:rgba(255,255,255,.55);max-width:480px;margin:0 auto;line-height:1.65;">No right answer. Some of you will see it immediately. Some may wonder. That's exactly why all three tiers are in this room together.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 3 · ARC OF THE TWO DAYS            -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="3">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">The arc</div>
+  <h2 class="h2">Two days. One clear direction.</h2>
+  <div class="pink-rule" style="margin:1rem auto 1.75rem;"></div>
+  <div class="steps-row">
+    <div class="step-item">
+      <div class="step-num-lg">1</div>
+      <h4>Thursday morning</h4>
+      <p>What the data shows — inside and outside The Gambia. Every sector sees its numbers.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num-lg">2</div>
+      <h4>Thursday afternoon</h4>
+      <p>Four things you can do — for free, this month, without a new project or new budget.</p>
+    </div>
+    <div class="step-item step-pink">
+      <div class="step-num-lg">3</div>
+      <h4>Friday</h4>
+      <p>How you know it's working — and what you commit to together before you leave the room.</p>
+    </div>
+  </div>
+  <p style="font-size:.85rem;color:var(--muted);margin-top:1.5rem;font-style:italic;">Thursday 8:30–16:00 · Friday 8:30–13:00 · 13 institutions · 3 tiers of the ecosystem</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 4 · MAP THE ROOM                   -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="4">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">✏️</span>
+      <h3>Opening activity — Map the room</h3>
+      <span class="exercise-time">15 min</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario">Write on a card: <strong>your institution name + one word for your mandate.</strong> Hand it to the facilitator. The map goes on the wall and stays there for both days.</div>
+      <ol class="exercise-steps" style="margin-bottom:1.25rem;">
+        <li><span class="step-num">1</span><span>Write your institution + one word for your mandate (3 min).</span></li>
+        <li><span class="step-num">2</span><span>Hand your card to the facilitator to place on the board.</span></li>
+        <li><span class="step-num">3</span><span>The map stays visible. Refer back to it whenever coordination comes up.</span></li>
+      </ol>
+      <div class="cat-tiles">
+        <div class="cat-tile ct-navy">
+          <h4>Government &amp; Regulatory</h4>
+          <p>Policy, oversight, national standards</p>
+        </div>
+        <div class="cat-tile ct-pink">
+          <h4>Creative Industry Associations</h4>
+          <p>Sector representation, creative producers</p>
+        </div>
+        <div class="cat-tile ct-accent">
+          <h4>Tourism Operations Associations</h4>
+          <p>Service delivery, visitor experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 5 · BLOCK 1 DIVIDER                -->
+<!-- ═══════════════════════════════════ -->
+<section class="divider" data-s="5">
+<div class="divider-deco">B1</div>
+<div class="wrap">
+  <div class="eyebrow">Block 1 · 9:00–10:30 · 90 min</div>
+  <h1 class="h1">The Evidence</h1>
+  <p class="sub-text">What did we find — and how did we find it?<br>Every sector sees its data before we talk about what to do.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 6 · THREE WORDS — CURRENT          -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="6">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">✏️</span>
+      <h3>Activity — Three words · Part 1</h3>
+      <span class="exercise-time">3 min · individual · before the data</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario" style="font-size:1.1rem;font-style:normal;font-weight:600;">Write three words you believe international visitors currently use to describe The Gambia as a destination.</div>
+      <p style="font-size:.95rem;color:var(--muted);margin:.75rem 0 1rem;line-height:1.6;">Write on a card. Keep the card — don't share yet.<br>The facilitator will collect a few examples on the board.</p>
+      <div class="note-box nb-pink" style="font-size:.92rem;">
+        Do this now, <strong>before seeing any data.</strong> Your instinct is what matters here.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 7 · THREE WORDS — WISH             -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="7">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">✏️</span>
+      <h3>Activity — Three words · Part 2</h3>
+      <span class="exercise-time">2 min · individual</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario" style="font-size:1.1rem;font-style:normal;font-weight:600;">Now a second question: write three words you <em style="font-style:italic;">wish</em> international visitors used.</div>
+      <p style="font-size:.95rem;color:var(--muted);margin:.75rem 0 1rem;line-height:1.6;">Write on a second card. Keep both cards.<br>The facilitator will note these in a second column on the board — next to your first list.</p>
+      <div class="note-box nb-pink" style="font-size:.92rem;">
+        <strong>Do not compare or discuss yet.</strong> We return to both lists at the end of this block — after you've seen the data.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 8 · TWO REPORTS / ONE STORY        -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="8">
+<div class="wrap">
+  <div style="text-align:center;margin-bottom:1rem;">
+    <div class="eyebrow">The methodology</div>
+    <h2 class="h2">We looked in two directions</h2>
+    <p style="font-size:1rem;color:var(--muted);max-width:540px;margin:.5rem auto 0;line-height:1.6;">Two reports. One story. The gap between what exists and what the world sees — that is the institutional opportunity.</p>
+  </div>
+  <div style="text-align:center;">
+    <svg viewBox="0 0 580 260" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;">
+      <circle cx="215" cy="130" r="112" fill="rgba(26,43,74,.06)" stroke="#1A2B4A" stroke-width="2.5"/>
+      <circle cx="365" cy="130" r="112" fill="rgba(0,145,212,.06)" stroke="#0091D4" stroke-width="2.5"/>
+      <text x="148" y="78" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#1A2B4A">D1</text>
+      <text x="148" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" fill="#1A2B4A" font-weight="600">We looked inside</text>
+      <text x="148" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#7A7A7A">61 stakeholders</text>
+      <text x="148" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#7A7A7A">7 creative sectors</text>
+      <text x="432" y="78" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#0091D4">D2</text>
+      <text x="432" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" fill="#0091D4" font-weight="600">We looked outside</text>
+      <text x="432" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#7A7A7A">239 operator pages</text>
+      <text x="432" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#7A7A7A">5,682 visitor reviews</text>
+      <text x="290" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="13.5" font-weight="800" fill="#E6007E">The gap</text>
+      <text x="290" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#3D3D3D">= your</text>
+      <text x="290" y="153" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#3D3D3D">opportunity</text>
+      <text x="148" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#7A7A7A" font-style="italic">Supply side</text>
+      <text x="432" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#7A7A7A" font-style="italic">Demand side</text>
+    </svg>
+  </div>
+  <!-- Full report titles -->
+  <div style="display:flex;justify-content:space-around;max-width:480px;margin:.5rem auto 0;">
+    <div style="text-align:left;max-width:190px;">
+      <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--navy);margin-bottom:.25rem;">Deliverable 1</div>
+      <p style="font-size:.82rem;font-weight:700;color:var(--navy);line-height:1.35;">Creative Industries Digital Baseline Assessment</p>
+    </div>
+    <div style="text-align:right;max-width:190px;">
+      <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);margin-bottom:.25rem;">Deliverable 2</div>
+      <p style="font-size:.82rem;font-weight:700;color:var(--accent);line-height:1.35;">Regional Benchmarking &amp; Market Positioning Analysis</p>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:.9rem;color:var(--muted);max-width:540px;margin:.9rem auto 0;line-height:1.6;">"Both reports used publicly available sources. No proprietary data. What they required was a systematic approach. <strong style="color:var(--text);">You can do this yourselves.</strong>"</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 9 · 95 / 91 / 9                    -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="9">
+<div class="wrap">
+  <div class="content-img" style="gap:3rem;">
+    <div>
+      <div class="eyebrow">D2 — What the world sees · §3.2</div>
+      <h2 class="h2" style="margin-bottom:1.25rem;">What operators<br>show the world</h2>
+      <div class="three-stats" style="flex-direction:column;gap:1.1rem;align-items:flex-start;margin:0;display:flex;">
+        <div>
+          <div style="font-size:5rem;font-weight:900;line-height:1;color:var(--navy);">95%</div>
+          <div style="font-size:.95rem;font-weight:600;margin-top:.25rem;color:var(--muted);">Beach &amp; resort content</div>
+        </div>
+        <div>
+          <div style="font-size:5rem;font-weight:900;line-height:1;color:var(--navy);">91%</div>
+          <div style="font-size:.95rem;font-weight:600;margin-top:.25rem;color:var(--muted);">Wildlife &amp; nature content</div>
+        </div>
+        <div>
+          <div style="font-size:5rem;font-weight:900;line-height:1;color:var(--pink);">9%</div>
+          <div style="font-size:.95rem;font-weight:600;margin-top:.25rem;color:var(--pink);">Creative &amp; cultural content</div>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--muted);margin-top:1rem;line-height:1.55;">Share of 239 international operator pages analysed</p>
+    </div>
+    <div>
+      <div class="photo-real">
+        <img src="img/the-gambia-bloHpsZyi90-unsplash.jpg" alt="Gambia beach resort — what operators show" style="height:400px;">
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.55rem;font-style:italic;">This is what 95% of operator pages show when they market The Gambia.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 10 · BUT LOOK AT SENEGAL            -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="10">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">D2 — Regional comparison · §3.2</div>
+  <h2 class="h2" style="margin-bottom:.5rem;">The Gambia is not alone — but it is behind</h2>
+  <p style="font-size:1rem;color:var(--muted);max-width:520px;margin:.25rem auto 1.75rem;line-height:1.6;">Share of operator pages that include creative &amp; cultural content, by destination</p>
+  <div style="max-width:560px;margin:0 auto;">
+    <div class="market-chart">
+      <div class="market-row">
+        <div class="market-label" style="min-width:160px;">Senegal</div>
+        <div class="market-bar-wrap">
+          <div class="market-bar" style="width:26%;background:var(--navy);">26%</div>
+        </div>
+      </div>
+      <div class="market-row">
+        <div class="market-label" style="min-width:160px;">Ghana</div>
+        <div class="market-bar-wrap">
+          <div class="market-bar" style="width:21%;background:var(--navy);">21%</div>
+        </div>
+      </div>
+      <div class="market-row">
+        <div class="market-label" style="min-width:160px;">Cape Verde</div>
+        <div class="market-bar-wrap">
+          <div class="market-bar" style="width:18%;background:#546E8F;">18%</div>
+        </div>
+      </div>
+      <div class="market-row">
+        <div class="market-label" style="min-width:160px;">Benin</div>
+        <div class="market-bar-wrap">
+          <div class="market-bar" style="width:14%;background:#546E8F;">14%</div>
+        </div>
+      </div>
+      <div class="market-row">
+        <div class="market-label" style="min-width:160px;font-weight:800;color:var(--navy);">The Gambia</div>
+        <div class="market-bar-wrap">
+          <div class="market-bar mb-pink" style="width:9%;">9%</div>
+          <span class="market-rating top">lowest in region</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="max-width:520px;margin:1.25rem auto 0;">
+    The product exists. The creative industries exist. They are simply <strong>absent from the channel through which international buyers discover The Gambia.</strong>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 11 · CREATIVE TOURISM SCORE        -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="11">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">D2 — Creative Tourism Score · Table 10</div>
+      <h2 class="h2">The Gambia scores <span style="color:var(--pink);">16.9</span> out of 100</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1.1rem;">The regional mean is <strong>30.9</strong>. Senegal+Gambia packages score <strong>33.9</strong> — more than double pure Gambia tours.</p>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.6;margin-bottom:1rem;">What the score measures →</p>
+      <div style="display:flex;flex-direction:column;gap:.5rem;">
+        <div class="note-box" style="font-size:.9rem;padding:.65rem .9rem;">Creative content <strong>mentioned</strong> on operator pages</div>
+        <div class="note-box" style="font-size:.9rem;padding:.65rem .9rem;">Whether it's <strong>prominently featured</strong> or a passing mention</div>
+        <div class="note-box" style="font-size:.9rem;padding:.65rem .9rem;">Whether specific <strong>products are named</strong> and bookable</div>
+        <div class="note-box nb-pink" style="font-size:.9rem;padding:.65rem .9rem;"><strong>Benchmarked</strong> against 5 other West African destinations</div>
+      </div>
+    </div>
+    <div>
+      <div class="photo-real">
+        <img src="img/the-gambia-ikDsTxHn9-g-unsplash.jpg" alt="Gambian crafts and baskets" style="height:360px;">
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.55rem;font-style:italic;">Gambian crafts exist. The score measures whether international buyers can find them.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 12 · REGIONAL POSITIONING          -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="12">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">D2 — Creative Tourism Score comparison</div>
+  <h2 class="h2" style="margin-bottom:1.75rem;">The regional gap — and a quick win</h2>
+  <div class="stat-compare" style="max-width:740px;">
+    <div>
+      <div class="stat-cmp-n" style="color:var(--pink);">16.9</div>
+      <div class="stat-cmp-l">The Gambia<br><small style="font-size:.78rem;color:var(--muted);">pure Gambia tours</small></div>
+    </div>
+    <div class="stat-cmp-vs">vs</div>
+    <div>
+      <div class="stat-cmp-n" style="color:var(--navy);">33.9</div>
+      <div class="stat-cmp-l">Senegal+Gambia packages<br><small style="font-size:.78rem;color:var(--muted);">same product, regional frame</small></div>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="max-width:560px;margin:1.75rem auto 0;font-size:.95rem;">
+    Regional framing already doubles the creative tourism score — <strong>without changing the product.</strong><br>
+    The Gambia's creative offer is valued when visitors can see it.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 13 · SOURCE MARKETS                -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="13">
+<div class="wrap">
+  <div class="eyebrow">D2 — Visitor origins and satisfaction · §4.4</div>
+  <h2 class="h2" style="margin-bottom:1.25rem;">Who is coming — and what they think</h2>
+  <div class="market-chart">
+    <div class="market-row">
+      <div class="market-label">UK &amp; Anglophone<small>45% of all reviews</small></div>
+      <div class="market-bar-wrap">
+        <div class="market-bar" style="width:45%;">45%</div>
+        <span class="market-rating">avg 4.32 / 5</span>
+      </div>
+    </div>
+    <div class="market-row">
+      <div class="market-label">Dutch &amp; Belgian<small>34% of reviews</small></div>
+      <div class="market-bar-wrap">
+        <div class="market-bar mb-pink" style="width:34%;">34%</div>
+        <span class="market-rating top">avg 4.56 / 5 — most satisfied</span>
+      </div>
+    </div>
+    <div class="market-row">
+      <div class="market-label">Francophone<small>15% of reviews</small></div>
+      <div class="market-bar-wrap">
+        <div class="market-bar mb-accent" style="width:15%;">15%</div>
+        <span class="market-rating">avg 4.06 / 5</span>
+      </div>
+    </div>
+    <div class="market-row">
+      <div class="market-label">German / Swiss<small>wildlife-focused</small></div>
+      <div class="market-bar-wrap"><div class="market-bar mb-muted" style="width:8%;min-width:44px;">3%</div></div>
+    </div>
+    <div class="market-row">
+      <div class="market-label">Southern European<small>artistic quality</small></div>
+      <div class="market-bar-wrap"><div class="market-bar mb-muted" style="width:8%;min-width:44px;">3%</div></div>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="margin-top:1rem;font-size:.92rem;">
+    <strong>Dutch/Belgian visitors are the most satisfied (4.56/5)</strong> — already a third of all reviews. The Francophone segment is far below geographic expectation. Main barrier: near-total absence of French-language content.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 14 · LIKED BUT NOT LOOKED FOR      -->
+<!-- ═══════════════════════════════════ -->
+<section class="quote-slide" data-s="14">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow" style="color:rgba(255,255,255,.4);">D2 Executive Summary</div>
+  <div class="big-quote">
+    "The Gambia possesses authentic creative assets and generates positive visitor sentiment relative to the region, yet remains <em>digitally invisible</em> in the global cultural-tourism marketplace."
+  </div>
+  <div class="quote-rule"></div>
+  <div class="quote-sub">Liked but not looked for.</div>
+  <p style="font-size:.88rem;color:rgba(255,255,255,.38);margin-top:1.1rem;font-style:italic;">D2 · Regional Benchmarking &amp; Market Positioning Analysis · Oct 2025</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 15 · SAFETY #1                     -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="15">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">D2 · §4.2 · Visitor sentiment</div>
+      <h2 class="h2">The Gambia ranks <span style="color:var(--pink);">#1</span><br>regionally on safety</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1rem;">Safety &amp; Security is The Gambia's strongest sentiment theme relative to all regional peers. A genuine competitive advantage that is almost never foregrounded in marketing.</p>
+      <div class="note-box nb-pink">
+        <strong>For the Tourist Security Guard Association:</strong><br>
+        Your members contribute directly to The Gambia's top competitive advantage in the region. That advantage appears in the data. It is not being used.
+      </div>
+    </div>
+    <div>
+      <div class="photo-real">
+        <img src="img/the-gambia-nyiObDOp_ns-unsplash.jpg" alt="Kayaking guide with visitors in Gambian mangroves" style="height:380px;">
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.55rem;font-style:italic;">Tour operators score +0.32 sentiment — The Gambia's best digital ambassadors.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 16 · 61% ABSENT OR BASIC           -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="16">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">D1 — Creative Industries Digital Baseline · Executive Summary</div>
+  <h2 class="h2" style="margin-bottom:1.5rem;">Inside The Gambia: the supply-side picture</h2>
+  <div class="stat-number">61%</div>
+  <div class="stat-label">of creative industry stakeholders are Absent or Basic</div>
+  <p class="stat-sub" style="max-width:480px;margin:.6rem auto 2rem;">Minimal or no digital footprint · 7 sectors · 61 stakeholders assessed</p>
+  <div style="display:flex;justify-content:center;gap:4rem;flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <div style="font-size:2.8rem;font-weight:900;color:var(--navy);">64%</div>
+      <div style="font-size:.9rem;color:var(--muted);margin-top:.2rem;line-height:1.5;">post less than<br>once a month</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-size:2.8rem;font-weight:900;color:var(--navy);">16%</div>
+      <div style="font-size:.9rem;color:var(--muted);margin-top:.2rem;line-height:1.5;">have digital booking<br>or payment</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 17 · YOUR SECTOR IN THE DATA       -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="17">
+<div class="wrap">
+  <div class="eyebrow">D1 — Sector digital maturity scores</div>
+  <h2 class="h2" style="margin-bottom:.35rem;">Your sector in the data</h2>
+  <p style="font-size:.9rem;color:var(--muted);margin-bottom:1.1rem;line-height:1.5;">Not an evaluation of what you have done — the starting point we have to work from. <span style="color:var(--pink);font-weight:700;">Pink = most ground to cover.</span></p>
+  <div class="sector-chart">
+    <div class="sc-row">
+      <div class="sc-label">
+        <div class="sc-name">Audiovisual / Photography</div>
+        <div class="sc-assn">Photographers Association</div>
+      </div>
+      <div class="sc-track"><div class="sc-fill scf-lead" style="width:41%;">41% Intermediate+</div></div>
+    </div>
+    <div class="sc-row">
+      <div class="sc-label">
+        <div class="sc-name">Performing &amp; Visual Arts</div>
+        <div class="sc-assn">Music Union · Visual Arts Assn</div>
+      </div>
+      <div class="sc-track"><div class="sc-fill scf-mid" style="width:20%;">~20%</div></div>
+    </div>
+    <div class="sc-row">
+      <div class="sc-label">
+        <div class="sc-name">Festivals &amp; Cultural Events</div>
+        <div class="sc-assn">—</div>
+      </div>
+      <div class="sc-track" style="background:#E8E8E8;">
+        <div style="height:100%;display:flex;align-items:center;padding:0 .6rem;font-size:.78rem;color:var(--muted);font-style:italic;">Polarised — some strong, most weak</div>
+      </div>
+    </div>
+    <div class="sc-row">
+      <div class="sc-label">
+        <div class="sc-name">Cultural Heritage Sites</div>
+        <div class="sc-assn">NCAC</div>
+      </div>
+      <div class="sc-track"><div class="sc-fill scf-low" style="width:11%;">11%</div></div>
+    </div>
+    <div class="sc-row">
+      <div class="sc-label">
+        <div class="sc-name">Crafts &amp; Artisan Products</div>
+        <div class="sc-assn">Craft Market Federation</div>
+      </div>
+      <div class="sc-track"><div class="sc-fill scf-low" style="width:10%;">10%</div></div>
+    </div>
+  </div>
+  <div class="notes-2col">
+    <div class="note-box nb-pink" style="font-size:.88rem;">
+      <strong>Bird Watchers Association:</strong> 91% of operator pages feature wildlife already — the most-sold narrative. Are your members findable when an operator searches?
+    </div>
+    <div class="note-box" style="font-size:.88rem;">
+      <strong>Tourist Security Guard Assn:</strong> The Gambia ranks #1 regionally on safety. Your members' work is the foundation of that advantage.
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 18 · LOCAL LEADERS                 -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="18">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">D1 — Sector leaders</div>
+      <h2 class="h2">Local leaders<br>already exist</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1rem;">D1 identified a cohort demonstrating local models of success — but isolated from others in their sector.</p>
+      <div class="case-study-card">
+        <div class="cs-eyebrow">Named in D1</div>
+        <div class="cs-title">Five organisations that prove the model works</div>
+        <div class="cs-tags">
+          <span class="cs-tag">QTV Gambia</span>
+          <span class="cs-tag">Sawallo Couture</span>
+          <span class="cs-tag">Janjanbureh Kankurang Festival</span>
+          <span class="cs-tag">Janeya Tours</span>
+          <span class="cs-tag">My Gambia</span>
+        </div>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted);margin-top:.85rem;line-height:1.55;">The task is not to create something from scratch. It is to <strong style="color:var(--text);">connect what already works to those who haven't found it yet.</strong></p>
+    </div>
+    <div>
+      <div class="photo-real">
+        <img src="img/the-gambia-01HHckNy4CQ-unsplash.jpg" alt="Gambian cultural performers" style="height:400px;">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 19 · TOOLS ARE FREE                -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="19">
+<div class="wrap">
+  <div class="eyebrow">How D1 and D2 were produced</div>
+  <h2 class="h2">The tools that produced this are <span style="color:var(--pink);">free</span></h2>
+  <p style="font-size:1rem;color:var(--muted);margin:.35rem 0 1.25rem;max-width:600px;line-height:1.6;">No proprietary data required — publicly accessible sources, a systematic approach, and clear questions. <strong style="color:var(--text);">Questions you now know how to ask.</strong></p>
+  <div class="grid-2" style="gap:1.1rem;">
+    <!-- TripAdvisor mockup -->
+    <div>
+      <p style="font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Tool 1 — TripAdvisor destination page</p>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">tripadvisor.com › The Gambia Tourism</div>
+        </div>
+        <div class="browser-content">
+          <div class="mock-section-label">Most recent reviews — The Gambia</div>
+          <div class="mock-review">
+            <div class="mock-stars">★★★★★</div>
+            <div class="mock-review-title">"Friendly people, incredible birds, safe everywhere"</div>
+            <div class="mock-review-body">Never felt unsafe for a single moment. Guide took us to spots not in any guidebook...</div>
+            <div class="mock-review-meta">NL · Solo traveller · Jan 2026</div>
+          </div>
+          <div class="mock-review">
+            <div class="mock-stars">★★★★☆</div>
+            <div class="mock-review-title">"Beautiful but hard to find local crafts"</div>
+            <div class="mock-review-body">Loved the market but couldn't find a single online listing for the weavers I met...</div>
+            <div class="mock-review-meta">UK · Couple · Feb 2026</div>
+          </div>
+          <div class="mock-review">
+            <div class="mock-stars">★★★★★</div>
+            <div class="mock-review-title">"The music scene is underrated"</div>
+            <div class="mock-review-body">We stumbled on a live performance — no advance way to know it was happening...</div>
+            <div class="mock-review-meta">BE · Family · Dec 2025</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.73rem;color:var(--pink);font-weight:600;margin-top:.45rem;">← What visitors actually experience and miss</p>
+    </div>
+    <!-- Google search mockup -->
+    <div>
+      <p style="font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Tool 2 — Google search (as a tourist)</p>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">google.com › "craft market gambia"</div>
+        </div>
+        <div class="browser-content">
+          <div class="mock-section-label">Search results</div>
+          <div class="mock-search-result">
+            <div class="mock-url">visitthegambia.gm › things-to-do</div>
+            <div class="mock-stitle">Things to Do — Visit The Gambia</div>
+            <div class="mock-sdesc">Beaches, wildlife, and cultural experiences await...</div>
+          </div>
+          <div class="mock-search-result">
+            <div class="mock-url">tripadvisor.com › Attractions</div>
+            <div class="mock-stitle">Craft Markets in Gambia — TripAdvisor</div>
+            <div class="mock-sdesc">3 results · Albert Market · Craft Market · Serrekunda Market</div>
+          </div>
+          <div class="mock-search-result" style="opacity:.4;">
+            <div class="mock-url">—</div>
+            <div class="mock-stitle" style="color:var(--muted);">No individual artisan or federation website found</div>
+            <div class="mock-sdesc">Craft Market Federation: not in results</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.73rem;color:var(--pink);font-weight:600;margin-top:.45rem;">← What a buyer or journalist finds — and doesn't</p>
+    </div>
+  </div>
+  <p style="font-size:.9rem;color:var(--muted);margin-top:1rem;text-align:center;font-style:italic;">In the next block — you set up your own Google Alert before we break for lunch.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 20 · FIND YOUR SECTOR — SEARCH     -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="20">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">🔍</span>
+      <h3>Activity — Find your sector · Part 1</h3>
+      <span class="exercise-time">5 min · individual · closes Block 1</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario" style="font-size:1.05rem;">Open your phone or laptop. Search as a tourist would. Does your sector — or your organisation — come up?</div>
+      <ol class="exercise-steps">
+        <li><span class="step-num">1</span><span>Search <strong>"[your sector] + Gambia"</strong> — for example: "craft market Gambia," "live music Banjul," "tour guide Gambia," "birdwatching Gambia."</span></li>
+        <li><span class="step-num">2</span><span>Does your organisation appear? Do your members appear? Note what you find — and what's missing.</span></li>
+      </ol>
+      <div class="note-box nb-pink" style="margin-top:1rem;font-size:.95rem;text-align:center;">
+        <strong>5 minutes. Start now.</strong>
+      </div>
+      <div class="exercise-alt">
+        <strong>↔ If internet is unreliable:</strong> Use the pre-printed screenshots on your table — one visible result, one partial, one absent. Annotate what you notice.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 21 · FIND YOUR SECTOR — REVEAL     -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="21">
+<div class="wrap">
+  <div class="eyebrow">Activity — Find your sector · Part 2</div>
+  <h2 class="h2" style="margin-bottom:1.1rem;">What did you find?</h2>
+  <div class="board-cols">
+    <div class="board-col bc-green">
+      <div class="bc-label">Present &amp; findable</div>
+      <div class="bc-desc">Your organisation or members appear clearly in search results — name, contact, what they offer.</div>
+    </div>
+    <div class="board-col bc-amber">
+      <div class="bc-label">Visible but not bookable</div>
+      <div class="bc-desc">Something comes up — a mention, a review — but no way to contact or book directly.</div>
+    </div>
+    <div class="board-col bc-red">
+      <div class="bc-label">Effectively invisible</div>
+      <div class="bc-desc">Nothing appears, or what appears isn't your sector at all.</div>
+    </div>
+  </div>
+  <div class="exercise-card" style="margin-top:1.1rem;border-color:var(--navy);">
+    <div class="exercise-header" style="background:var(--navy);">
+      <span class="exercise-icon">💬</span>
+      <h3>Pairs (8 min) → Share-back (7 min)</h3>
+    </div>
+    <div class="exercise-body" style="padding:1rem 1.4rem;">
+      <p style="font-size:.95rem;color:var(--text);margin-bottom:.75rem;">Compare what you found with the person next to you. Then 3–4 people share one finding with the room. Facilitator places it in a column on the board.</p>
+      <div class="note-box nb-pink" style="font-size:.92rem;">
+        <strong>Look at your three-words lists.</strong> The gap between column 1 and column 2 — how does what you just found connect to that gap?
+      </div>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:.85rem;font-style:italic;">Break 10:30–10:45 · Block 2 begins at 10:45</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 22 · BLOCK 2 DIVIDER               -->
+<!-- ═══════════════════════════════════ -->
+<section class="divider" data-s="22">
+<div class="divider-deco">B2</div>
+<div class="wrap">
+  <div class="eyebrow">Block 2 · 10:45–12:15 · 90 min</div>
+  <h1 class="h1">Four things you can do</h1>
+  <p class="sub-text">The evidence shows the gap. These four things help close it — for free, this month, without a new project or new budget.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 23 · NOT THE MARKETER              -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="23">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Block 2 — Framing</div>
+      <h2 class="h2">Not the marketer.<br>The enabler.</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>Institutions are not The Gambia's marketers — they are the enablers of marketing done by hundreds of SMEs, operators, and creative enterprises.</li>
+        <li>The question is not <em>"how do we promote The Gambia?"</em> — it is: <strong>"how do we make it easier for others to promote it well?"</strong></li>
+      </ul>
+    </div>
+    <div class="photo-real">
+      <img src="img/dan-roizer-GygPFmXGD1o-unsplash.jpg" alt="Aerial view of Gambian mangroves and river system" style="height:400px;">
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 24 · FOUR THINGS OVERVIEW          -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="24">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">Block 2 — Overview</div>
+  <h2 class="h2" style="margin-bottom:1.5rem;">Four things institutions can do<br>that individual SMEs cannot</h2>
+  <div class="grid-4">
+    <div class="card card-pink">
+      <div class="card-label" style="color:var(--pink);">Today · Thing 1</div>
+      <h4 style="margin-top:.4rem;">Monitor</h4>
+      <p>Read the landscape systematically. Know what visitors are saying and operators are showing — before your members ask.</p>
+    </div>
+    <div class="card card-navy">
+      <div class="card-label" style="color:var(--navy);">Today · Thing 2</div>
+      <h4>Make findable</h4>
+      <p>Aggregate your sector so operators and tourists can find your members — one authoritative, maintained place.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Afternoon · Thing 3</div>
+      <h4>Open a door</h4>
+      <p>Broker access SMEs can't reach alone — operators, journalists, trade fairs, national platforms.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Afternoon · Thing 4</div>
+      <h4>Share intelligence</h4>
+      <p>Translate monitoring findings into one page, four times a year, and distribute to members.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 25 · THING 1 — MONITOR INTRO       -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="25">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Thing 1 — Monitor</div>
+      <h2 class="h2">Read the landscape <span style="color:var(--pink);">before</span><br>your members ask</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>Individual businesses can monitor their own profile. Only associations and oversight bodies can read the whole sector landscape.</li>
+        <li>Monitoring gives you: early warning, evidence for advocacy, and material to brief your members.</li>
+      </ul>
+      <div class="note-box nb-pink" style="margin-top:.9rem;font-size:.9rem;">
+        This is a UK operator's Gambia travel guide. Their sidebar shows what they've decided matters: <strong>river cruise and birdwatching.</strong> No crafts. No music. No festivals. No artisans.
+      </div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">responsibletravel.com › holidays/gambia/travel-guide</div>
+        </div>
+        <img src="img/responsible_travel_gambia_guide.png" alt="Responsible Travel Gambia guide — creative tourism absent" style="width:100%;display:block;max-height:310px;object-fit:cover;object-position:top;">
+      </div>
+      <p style="font-size:.73rem;color:var(--pink);font-weight:600;margin-top:.45rem;">← One of the largest ethical UK operators. Creative industries: invisible.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 26 · FOUR FREE TOOLS               -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="26">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">Thing 1 — Monitor · Tools</div>
+  <h2 class="h2" style="margin-bottom:1.5rem;">Four free tools. Starting Monday.</h2>
+  <div class="grid-4">
+    <div class="card card-pink">
+      <div style="font-size:1.6rem;margin-bottom:.5rem;">🔔</div>
+      <h4>Google Alerts</h4>
+      <p>Set for "Gambia tourism" + your sector. New content delivered to your inbox. Free, no expertise required.</p>
+    </div>
+    <div class="card card-navy">
+      <div style="font-size:1.6rem;margin-bottom:.5rem;">⭐</div>
+      <h4>TripAdvisor</h4>
+      <p>Monthly scan: 20 most recent destination reviews. What themes recur? What's missing? What needs a response?</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.6rem;margin-bottom:.5rem;">🔍</div>
+      <h4>Operator spot-check</h4>
+      <p>Quarterly: 5–10 operator websites. How is The Gambia described? Is your sector present or absent?</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.6rem;margin-bottom:.5rem;">📈</div>
+      <h4>Google Trends</h4>
+      <p>Track search interest in "The Gambia" vs "Senegal" over time. Are you gaining or losing ground?</p>
+    </div>
+  </div>
+  <p style="font-size:.9rem;color:var(--muted);margin-top:1.25rem;font-style:italic;">Time required: 2 hours per month · No login, no budget, no technical skills</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 27 · GOOGLE TRENDS — LIVE VIEW     -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="27">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Thing 1 — Monitor · Google Trends</div>
+      <h2 class="h2">Five years of search interest.<br>Gambia vs Senegal.</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>Go to <strong>trends.google.com</strong> — search "The Gambia tourism". Select: Worldwide, 5 years. Compare with "Senegal tourism".</li>
+        <li>Takes 90 seconds to generate. Updates automatically. No login, no cost.</li>
+        <li>The trend line matters more than the absolute number — are you gaining ground, <span style="color:var(--pink);">holding steady, or falling behind?</span></li>
+      </ul>
+      <div class="note-box" style="margin-top:.9rem;font-size:.9rem;">Check this once a quarter. Changes in the trend are early signals of shifting international interest — often before they appear in booking or review data.</div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">trends.google.com · "The Gambia tourism" vs "Senegal tourism" · 5 years · Worldwide</div>
+        </div>
+        <img src="img/gambia_senegal_googletrends.png" alt="Google Trends 5-year comparison: The Gambia tourism vs Senegal tourism showing relative search interest" style="width:100%;display:block;max-height:280px;object-fit:cover;object-position:top;">
+      </div>
+      <p style="font-size:.73rem;color:var(--muted);margin-top:.45rem;font-style:italic;">Publicly available, updated daily. The seasonal peaks reveal when source markets are planning — useful for timing campaigns and member briefings.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 28 · GOOGLE SEARCH CONSOLE         -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="28">
+<div class="wrap">
+  <div class="eyebrow">Thing 1 — Monitor · For institutions with websites</div>
+  <h2 class="h2" style="margin-bottom:1.1rem;">Google Search Console:<br>visitor intent made visible</h2>
+  <div class="grid-2" style="align-items:start;">
+    <div>
+      <p style="font-size:.9rem;color:var(--text);line-height:1.65;margin-bottom:.85rem;">For institutions with websites — GT Board (visitthegambia.com) especially — Google Search Console shows exactly what people searched <em>before</em> arriving. Free once verified. Data flows automatically, no expertise needed.</p>
+      <div style="display:flex;flex-direction:column;gap:.55rem;margin-bottom:.9rem;">
+        <div style="display:flex;gap:.65rem;align-items:flex-start;">
+          <div style="width:8px;height:8px;min-width:8px;border-radius:50%;background:var(--navy);margin-top:.38rem;"></div>
+          <div style="font-size:.88rem;color:var(--text);line-height:1.55;"><strong>Search queries</strong> — what visitors typed before finding you. Intent, not just behaviour.</div>
+        </div>
+        <div style="display:flex;gap:.65rem;align-items:flex-start;">
+          <div style="width:8px;height:8px;min-width:8px;border-radius:50%;background:var(--accent);margin-top:.38rem;"></div>
+          <div style="font-size:.88rem;color:var(--text);line-height:1.55;"><strong>Source countries</strong> — where traffic comes from. Confirms or challenges D2's source market picture.</div>
+        </div>
+        <div style="display:flex;gap:.65rem;align-items:flex-start;">
+          <div style="width:8px;height:8px;min-width:8px;border-radius:50%;background:var(--muted);margin-top:.38rem;"></div>
+          <div style="font-size:.88rem;color:var(--text);line-height:1.55;"><strong>Top pages</strong> — which content performs and what to update or create.</div>
+        </div>
+      </div>
+      <div class="note-box" style="font-size:.86rem;">
+        <strong>Setup:</strong> search.google.com/search-console · Verify site ownership · One-time, ~20 min. Even institutions without a website today should know what this could give them — and why the national portal matters more than it's currently being used.
+      </div>
+    </div>
+    <div>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;font-family:'Inter',sans-serif;">
+        <div style="background:#f8f9fa;border-bottom:1px solid #e0e0e0;padding:.5rem .85rem;display:flex;align-items:center;gap:.5rem;">
+          <div style="width:14px;height:14px;background:#4285f4;border-radius:2px;flex-shrink:0;"></div>
+          <span style="font-size:.72rem;font-weight:700;color:#202124;">Search Console</span>
+          <span style="font-size:.7rem;color:#80868b;margin-left:.25rem;">visitthegambia.com · Last 3 months</span>
+        </div>
+        <div style="padding:.55rem .85rem .3rem;">
+          <div style="font-size:.68rem;font-weight:700;color:#80868b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem;">Top search queries by clicks</div>
+          <table style="width:100%;border-collapse:collapse;font-size:.74rem;">
+            <thead>
+              <tr style="border-bottom:1px solid #e8eaed;">
+                <th style="text-align:left;padding:.28rem .35rem .28rem 0;color:#80868b;font-weight:600;">Query</th>
+                <th style="text-align:right;padding:.28rem .35rem;color:#80868b;font-weight:600;">Clicks</th>
+                <th style="text-align:right;padding:.28rem 0 .28rem .35rem;color:#80868b;font-weight:600;">Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #f1f3f4;">
+                <td style="padding:.3rem .35rem .3rem 0;color:#202124;">gambia holiday</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:#1a73e8;font-weight:600;">341</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#202124;">3.2</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f1f3f4;">
+                <td style="padding:.3rem .35rem .3rem 0;color:#202124;">gambia birdwatching</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:#1a73e8;font-weight:600;">187</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#202124;">2.8</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f1f3f4;">
+                <td style="padding:.3rem .35rem .3rem 0;color:#202124;">gambia beach resort</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:#1a73e8;font-weight:600;">104</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#202124;">7.4</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f1f3f4;">
+                <td style="padding:.3rem .35rem .3rem 0;color:#202124;">gambia tours</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:#1a73e8;font-weight:600;">89</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#202124;">5.1</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f1f3f4;background:rgba(230,0,126,.05);">
+                <td style="padding:.3rem .35rem .3rem 0;color:var(--pink);font-weight:600;">gambia music festival</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:var(--pink);font-weight:600;">6</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#80868b;">16.4</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f1f3f4;background:rgba(230,0,126,.05);">
+                <td style="padding:.3rem .35rem .3rem 0;color:var(--pink);font-weight:600;">gambia craft market</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:var(--pink);font-weight:600;">2</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#80868b;">23.1</td>
+              </tr>
+              <tr style="background:rgba(230,0,126,.05);">
+                <td style="padding:.3rem .35rem .3rem 0;color:var(--pink);font-weight:600;">gambia artisan</td>
+                <td style="text-align:right;padding:.3rem .35rem;color:var(--pink);font-weight:600;">0</td>
+                <td style="text-align:right;padding:.3rem 0 .3rem .35rem;color:#80868b;">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:.4rem .85rem .5rem;border-top:1px solid #f1f3f4;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:.3rem;font-size:.67rem;color:#80868b;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#1a73e8;flex-shrink:0;"></div>Nature / beach: top results
+          </div>
+          <div style="display:flex;align-items:center;gap:.3rem;font-size:.67rem;color:var(--pink);font-weight:600;">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--pink);flex-shrink:0;"></div>Creative sectors: nearly invisible
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.68rem;color:var(--muted);margin-top:.35rem;font-style:italic;">Illustrative data — real GSC shows this structure for your actual site, updated daily</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 29 · GOOGLE ALERT LIVE ACTIVITY    -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="29">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">🔔</span>
+      <h3>Live activity — Set up your Google Alert now</h3>
+      <span class="exercise-time">10 min</span>
+    </div>
+    <div class="exercise-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start;">
+        <div>
+          <ol class="exercise-steps" style="margin-bottom:.85rem;">
+            <li><span class="step-num">1</span><span>Open <strong>google.com/alerts</strong> on your phone or laptop.</span></li>
+            <li><span class="step-num">2</span><span>Type: <strong>"Gambia tourism"</strong> → click Create Alert.</span></li>
+            <li><span class="step-num">3</span><span>Type: <strong>"[your sector] Gambia"</strong> — e.g. "craft market Gambia," "Gambia birdwatching," "Gambia music" → Create Alert.</span></li>
+            <li><span class="step-num">4</span><span>Set frequency to <strong>Once a week.</strong> Confirm your email.</span></li>
+          </ol>
+          <div class="note-box nb-pink" style="font-size:.9rem;">You will receive your first results this week — without doing anything else.</div>
+          <div class="exercise-alt" style="margin-top:.65rem;">
+            <strong>↔ If internet is unavailable:</strong> Write the two alerts you would set. Do it when you return to your office.
+          </div>
+        </div>
+        <div>
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">google.com/alerts</div>
+            </div>
+            <img src="img/google_alert_visit_gambia.png" alt="Google Alerts setup page showing visit gambia alert preview" style="width:100%;display:block;max-height:290px;object-fit:cover;object-position:top;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 28 · TRIPADVISOR SCAN DEMO         -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="30">
+<div class="wrap">
+  <div class="eyebrow">Thing 1 — Monitor · TripAdvisor scan</div>
+  <h2 class="h2" style="margin-bottom:.9rem;">What TripAdvisor surfaces for The Gambia</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">tripadvisor.com › Essential Gambia · Things to do</div>
+        </div>
+        <img src="img/tripadvisor_gambia_top9.png" alt="TripAdvisor Essential Gambia top 9 things to do" style="width:100%;display:block;max-height:340px;object-fit:cover;object-position:top;">
+      </div>
+    </div>
+    <div>
+      <p style="font-size:.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">The top 9 things to do in The Gambia, according to TripAdvisor:</p>
+      <div style="display:flex;flex-direction:column;gap:.5rem;">
+        <div class="note-box" style="font-size:.9rem;padding:.6rem .85rem;">🌿 <strong>4 × Nature / Wildlife</strong> — River Park, Bijilo Forest, Crocodile Pool, Reptiles Farm</div>
+        <div class="note-box" style="font-size:.9rem;padding:.6rem .85rem;">🏖 <strong>2 × Beach / Coastal</strong> — Kotu Beach, Tanji Fishing Village</div>
+        <div class="note-box" style="font-size:.9rem;padding:.6rem .85rem;">🏛 <strong>2 × Heritage / History</strong> — Fort James Island, Jufureh</div>
+        <div class="note-box nb-pink" style="font-size:.9rem;padding:.6rem .85rem;">🛍 <strong>1 × Market</strong> — Albert Market. <strong>No music. No artisans. No festivals. No performing arts.</strong></div>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted);margin-top:.9rem;line-height:1.6;">A 20-minute monthly scan tells you what's visible — and what your sector needs to do to appear here.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 29 · KPI TRACKING FRAMEWORK        -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="31">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">Thing 1 — Monitor · Tracking</div>
+  <h2 class="h2" style="margin-bottom:.4rem;">Track four numbers. That's your dashboard.</h2>
+  <p style="font-size:.95rem;color:var(--muted);max-width:540px;margin:.35rem auto 1.5rem;line-height:1.6;">These indicators come directly from D2 Table 20. Ready-made — you don't need to design your own framework.</p>
+  <div style="max-width:620px;margin:0 auto;">
+    <table class="kpi-table">
+      <thead>
+        <tr>
+          <th>Indicator</th>
+          <th>Baseline 2025</th>
+          <th class="kpi-col-target">Target 2026</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ITO creative tourism visibility</td>
+          <td>52%</td>
+          <td class="kpi-col-target">60%</td>
+        </tr>
+        <tr>
+          <td>Average visitor sentiment score</td>
+          <td>+0.24</td>
+          <td class="kpi-col-target">+0.30</td>
+        </tr>
+        <tr>
+          <td>Verified TripAdvisor reviews</td>
+          <td>current baseline</td>
+          <td class="kpi-col-target">+25%</td>
+        </tr>
+        <tr>
+          <td>Average review rating</td>
+          <td>4.06 / 5</td>
+          <td class="kpi-col-target">4.20 / 5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.88rem;color:var(--muted);margin-top:1.25rem;line-height:1.6;">One shared spreadsheet. Updated quarterly. These numbers tell you whether the four things are working.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 30 · THING 2 — AGGREGATION GAP     -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="32">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Thing 2 — Make your sector findable</div>
+      <h2 class="h2">Creative tourism is item&nbsp;8.<br>With no way to book it.</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1rem;">A travel blogger loved The Gambia. She lists creative tourism as reason #8 of 12 to visit. She describes vibrant dance, music, handicrafts.</p>
+      <ul>
+        <li>No specific artisan is named.</li>
+        <li>No booking link exists.</li>
+        <li>No one reading this can find the people she experienced.</li>
+      </ul>
+      <div class="note-box nb-pink" style="margin-top:.9rem;font-size:.9rem;">
+        Individual SMEs can create a page. <strong>You can create a directory</strong> — one place, maintained, with names, photos, and WhatsApp contacts.
+      </div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">zaratravels.com · "12 Reasons to Visit The Gambia" · #8</div>
+        </div>
+        <img src="img/visit_gambia_blog_part2.png" alt="Travel blog item 8: Gambian art, culture and heritage — no booking links" style="width:100%;display:block;max-height:290px;object-fit:cover;object-position:top;">
+      </div>
+      <p style="font-size:.73rem;color:var(--pink);font-weight:600;margin-top:.45rem;">← Reason #8 of 12. Loved. Memorable. Not findable. Not bookable.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 31 · BEFORE / AFTER — DIRECTORY    -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="33">
+<div class="wrap">
+  <div style="text-align:center;margin-bottom:1.1rem;">
+    <div class="eyebrow">Thing 2 — From scattered to searchable</div>
+    <h2 class="h2">One place. One responsible person.</h2>
+  </div>
+  <div class="before-after">
+    <div class="ba-side ba-before">
+      <div class="ba-label">Now — scattered</div>
+      <ul class="ba-list">
+        <li>Individual profiles, inconsistent or absent</li>
+        <li>Operators can't find producers to add to tours</li>
+        <li>Tourists read about crafts, can't find who makes them</li>
+        <li>No one knows what's available, where, or at what price</li>
+      </ul>
+    </div>
+    <div class="ba-side ba-after">
+      <div class="ba-label">What's needed</div>
+      <ul class="ba-list">
+        <li>Member names, photos, what they offer</li>
+        <li>WhatsApp contact or direct booking link</li>
+        <li>Updated at least twice a year</li>
+        <li>Can be a Google Sheet, TripAdvisor listing, or WhatsApp Business catalogue — no web developer needed</li>
+      </ul>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:center;margin-top:1rem;">
+    <div class="browser-mock">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">WhatsApp Business · Catalogue</div>
+      </div>
+      <img src="img/whatsapp_catalog.png" alt="WhatsApp Business catalogue — showcase products and services" style="width:100%;display:block;height:120px;object-fit:contain;background:#111;padding:.4rem;">
+    </div>
+    <p style="font-size:.9rem;color:var(--muted);line-height:1.65;">A WhatsApp Business catalogue is free, takes an hour to set up, and reaches buyers directly on the platform your members already use every day.</p>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 32 · WHAT EACH ASSOCIATION CAN OWN -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="34">
+<div class="wrap">
+  <div class="eyebrow">Thing 2 — Make findable · By institution</div>
+  <h2 class="h2" style="margin-bottom:1.25rem;">Every institution can own one place</h2>
+  <div class="grid-2">
+    <div class="card card-navy">
+      <div class="card-label" style="color:var(--navy);">GT Board</div>
+      <h4 style="margin-top:.35rem;">VisitTheGambia.com</h4>
+      <p>A functional creative industries section: bookable experiences, sector contacts, events calendar. One maintained page changes what operators find.</p>
+    </div>
+    <div class="card card-pink">
+      <div class="card-label" style="color:var(--pink);">Craft Market Federation</div>
+      <h4 style="margin-top:.35rem;">Member directory</h4>
+      <p>Names, photos, specialisms, WhatsApp. A tourist reads about "vibrant craft markets" — this is where they find who to contact.</p>
+    </div>
+    <div class="card card-accent">
+      <div class="card-label" style="color:var(--accent);">Tour Guide Association</div>
+      <h4 style="margin-top:.35rem;">Verified guide list</h4>
+      <p>Name, languages, specialisms, direct contact. Operators already search for guides — make sure yours are findable before competitors are.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">All associations</div>
+      <h4 style="margin-top:.35rem;">A sector calendar</h4>
+      <p>Events, festivals, market dates — even as a public Google Sheet. Shared quarterly. Journalists and operators use these to plan itineraries.</p>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="margin-top:.85rem;font-size:.92rem;">
+    The key word is <strong>maintained</strong> — one person, one hour per month. A directory that is 18 months out of date is worse than no directory.
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 33 · VISITTHEGAMBIA.COM            -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="35">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Thing 2 — Platform governance</div>
+      <h2 class="h2">The national portal:<br>what's there, what's not</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>VisitTheGambia.com is the first destination resource most operators check. The homepage currently leads with: <strong>"Explore Eco Friendly Environments."</strong></li>
+        <li>A functional creative industries section — with bookable products and sector contacts — is one of the highest-leverage additions GT Board can make at zero cost.</li>
+        <li><em>D1: Platform governance identified as a systemic gap — platforms exist but are not maintained or linked to each other.</em></li>
+      </ul>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">visitthegambia.com</div>
+        </div>
+        <img src="img/visit_the_gambia_homepage.png" alt="VisitTheGambia.com homepage — eco framing, no creative industries section visible" style="width:100%;display:block;max-height:290px;object-fit:cover;object-position:top;">
+      </div>
+      <p style="font-size:.73rem;color:var(--muted);margin-top:.45rem;font-style:italic;">"Explore Eco Friendly Environments." The national portal. Creative industries: not on this page.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 34 · IS YOUR MEMBER FINDABLE?      -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="36">
+<div class="wrap">
+  <div class="eyebrow">Thing 2 — Make findable · Activity</div>
+  <h2 class="h2" style="margin-bottom:1rem;">Is your member this findable?</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">google.com › gorilla neighbour guest house</div>
+        </div>
+        <img src="img/google_business_gorilla_neighbour.png" alt="Google Business Profile showing reviews, photos, contact options" style="width:100%;display:block;max-height:270px;object-fit:cover;object-position:top;">
+      </div>
+      <p style="font-size:.73rem;color:var(--muted);margin-top:.45rem;font-style:italic;">A Google Business Profile: name, photos, reviews, website, directions, direct call. Free. 30 minutes to create.</p>
+    </div>
+    <div class="exercise-card" style="border-color:var(--navy);">
+      <div class="exercise-header" style="background:var(--navy);">
+        <span class="exercise-icon">✏️</span>
+        <h3>Activity — Gap identification</h3>
+        <span class="exercise-time">10 min</span>
+      </div>
+      <div class="exercise-body" style="padding:1rem 1.3rem;">
+        <p style="font-size:.95rem;color:var(--text);margin-bottom:.85rem;line-height:1.6;">Is there currently one place where someone searching for your sector or members would find accurate, current information?</p>
+        <div style="display:flex;flex-direction:column;gap:.5rem;">
+          <div class="note-box" style="font-size:.9rem;padding:.55rem .85rem;"><strong style="color:#22A860;">YES</strong> — Who maintains it? When was it last updated?</div>
+          <div class="note-box" style="font-size:.9rem;padding:.55rem .85rem;"><strong style="color:#F5A623;">PARTIALLY</strong> — What's missing? What would complete it?</div>
+          <div class="note-box nb-pink" style="font-size:.9rem;padding:.55rem .85rem;"><strong>NO</strong> — What would it take? Who would maintain it?</div>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:.75rem;font-style:italic;">Show of hands. Facilitator notes the pattern.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 35 · BLOCK 3 DIVIDER               -->
+<!-- ═══════════════════════════════════ -->
+<section class="divider" data-s="37">
+<div class="divider-deco">B3</div>
+<div class="wrap">
+  <div class="eyebrow">Block 3 · 13:15–14:45 · 90 min</div>
+  <h1 class="h1">Things 3 + 4</h1>
+  <p class="sub-text">Things 1 and 2 are about reading and organising.<br>Things 3 and 4 are about using what you know.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 36 · BRIDGE — TRAINING ≠ ACCESS    -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="38">
+<div class="wrap">
+  <div style="text-align:center;margin-bottom:1.25rem;">
+    <div class="eyebrow">Block 3 · Things 3 + 4</div>
+    <h2 class="h2">Training builds skills.<br>Skills alone don't open doors.</h2>
+    <div class="pink-rule" style="margin:1rem auto .25rem;"></div>
+    <p style="font-size:.95rem;color:var(--muted);max-width:560px;margin:.55rem auto 0;line-height:1.65;">The gap between 'can do' and 'does' is where institutions matter most. Three things SMEs consistently need that skill-building cannot deliver on its own:</p>
+  </div>
+  <div class="cat-tiles">
+    <div class="cat-tile ct-navy">
+      <h4>Visibility</h4>
+      <p>Being findable by the right audiences — international operators, travel journalists, and platforms they can't reach alone.</p>
+    </div>
+    <div class="cat-tile ct-pink">
+      <h4>Credibility</h4>
+      <p>Being trusted by buyers and booking platforms. A trained SME still needs institutional endorsement to be taken seriously at scale.</p>
+    </div>
+    <div class="cat-tile ct-accent">
+      <h4>Connectivity</h4>
+      <p>Being linked to the distribution channels where international travelers actually make decisions — operator itineraries, OTAs, trade fairs.</p>
+    </div>
+  </div>
+  <p style="font-size:.85rem;color:var(--muted);margin-top:.9rem;text-align:center;font-style:italic;line-height:1.6;">D2 §5: Each of the five visitor personas has specific needs — multilingual content, booking functionality, structured itinerary inclusion — that SMEs struggle to meet alone. Institutional aggregation makes a systemic difference.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 37 · THE DOOR ONLY YOU CAN OPEN    -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="39">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Thing 3 — Open a door</div>
+      <h2 class="h2">The door <span style="color:var(--pink);">only you</span><br>can open</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1rem;">Individual SMEs — even successful ones — cannot introduce themselves to international operators, invite travel journalists, or join a trade fair delegation alone.</p>
+      <ul>
+        <li><strong>Access to buyers</strong> — tour operators, OTAs, trade fair delegations</li>
+        <li><strong>Access to audiences</strong> — travel journalists, bloggers, content creators</li>
+        <li><strong>Access to platforms</strong> — TripAdvisor partnerships, OTA listings, national portals</li>
+      </ul>
+    </div>
+    <div class="photo-real">
+      <img src="img/the-gambia-9VbmW5bEbp0-unsplash.jpg" alt="Gambian river and pirogue — calm, waiting" style="height:400px;">
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 38 · CASE STUDY — CLOSING THE GAP  -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="40">
+<div class="wrap">
+  <div class="eyebrow">Thing 3 — The evidence</div>
+  <h2 class="h2" style="margin-bottom:1rem;">What closing the gap actually requires</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start;">
+    <div>
+      <div class="case-study-card">
+        <div class="cs-eyebrow">D2, §3.4 — What the data recommends</div>
+        <div class="cs-title">"To close the gap, Gambia's strategy should prioritise curated storytelling partnerships with operators already active in the region, develop bookable creative-industry products, and provide ready-to-use bilingual marketing materials that translate community-based creativity into itineraries recognisable to global buyers."</div>
+        <div class="cs-tags">
+          <span class="cs-tag">Operator partnerships</span>
+          <span class="cs-tag">Bookable products</span>
+          <span class="cs-tag">Bilingual content</span>
+        </div>
+      </div>
+      <p class="note-box nb-pink" style="margin-top:.75rem;font-size:.88rem;">None of this can be done by individual SMEs. All of it is within institutional mandate.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:.65rem;">
+      <div class="eyebrow" style="margin-bottom:.1rem;">Three concrete institutional actions</div>
+      <div class="card card-pink">
+        <h4>1 FAM trip per year</h4>
+        <p>Invite one international operator for a creative industries familiarisation visit. One trip can directly influence dozens of itineraries.</p>
+      </div>
+      <div class="card card-navy">
+        <h4>One sector brief per creative sector</h4>
+        <p>Two pages, written for operators. Ready-to-use content for their own marketing — removes the friction that keeps creative sectors absent from itineraries.</p>
+      </div>
+      <div class="card">
+        <h4>Two direct introductions</h4>
+        <p>Broker two specific operator–SME introductions from participants in this training week. Low effort, immediate signal value.</p>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:.65rem;margin-top:.85rem;flex-wrap:wrap;">
+    <div class="note-box" style="flex:1;min-width:140px;font-size:.82rem;"><strong>Cape Verde</strong> — consistent editorial tone + language access → strong international identity without major infrastructure investment. D2 §2.</div>
+    <div class="note-box" style="flex:1;min-width:140px;font-size:.82rem;"><strong>Senegal</strong> — strong institutional presence at flagship level; private sector remains patchy. Institutional action alone ≠ sector-wide reach. D2 §2.</div>
+    <div class="note-box" style="flex:1;min-width:140px;font-size:.82rem;"><strong>Ghana</strong> — diaspora as distribution channel. Community reaches international markets without advertising spend. D2 §2.2.</div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 39 · WHAT EACH TIER CAN DO         -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="41">
+<div class="wrap">
+  <div class="eyebrow">Thing 3 — What each tier can do</div>
+  <h2 class="h2" style="margin-bottom:1.25rem;">You don't need to open every door.<br>Identify one. Make it a habit.</h2>
+  <div class="tier-table">
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--navy);">GT Board<br>Ministry of Tourism</div>
+      <div class="tier-content">Operator FAM trips focused on creative industries · Trade fair delegations (WTM, FITUR) · OTA destination partnerships · Press trips for travel journalists · <strong>Commission a shared visual content library</strong> — professional photos of artisans, festivals, and heritage sites for SME and operator use (D2 Table 18: high impact, low effort)</div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--pink);">NCAC<br>Hospitality Institute</div>
+      <div class="tier-content">Creative sector introductions to tour operators · Journalist hosting for specific creative industries · <strong>One shared sector events calendar — distributed by all 9 associations to their members</strong> · Platform partnerships for heritage sites and festivals</div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--accent);">All associations</div>
+      <div class="tier-content">Recommend members directly to operators seeking creative products · Peer referrals between sectors · <strong>Distribute GT Board quarterly briefings through your existing WhatsApp or meeting channel</strong> — your distribution network is the mechanism, not a new one to build</div>
+    </div>
+  </div>
+  <p style="font-size:.88rem;color:var(--muted);margin-top:.85rem;font-style:italic;">The most durable support structures are those simple enough to maintain with existing staff and resources — not those requiring specialist skills or dedicated budget.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 40 · ACTIVITY — OPEN A DOOR        -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="42">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">🚪</span>
+      <h3>Activity — What door can your institution open?</h3>
+      <span class="exercise-time">15 min</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario">One thing your institution could realistically do in the next six months to better support SME visibility or market access — <strong>without additional budget.</strong></div>
+      <ol class="exercise-steps">
+        <li><span class="step-num">1</span><span><strong>Individual (5 min):</strong> Write it down. Be specific — not "connect with operators" but "invite [type of operator] for a one-day creative industries fam visit in [month]" or "distribute GT Board quarterly brief to our members via WhatsApp."</span></li>
+        <li><span class="step-num">2</span><span><strong>Pairs (5 min):</strong> Share with someone from a different tier or sector. Is it realistic? What would it actually take?</span></li>
+        <li><span class="step-num">3</span><span><strong>Facilitator reads back 4–5 responses</strong> and groups on the board by type.</span></li>
+      </ol>
+      <div class="grid-4" style="margin-top:.85rem;">
+        <div class="card card-pink"><h4>Operator / buyer access</h4><p>FAM trips, trade fair delegations, OTA introductions</p></div>
+        <div class="card card-navy"><h4>Press &amp; media</h4><p>Journalist visits, blogger hosting, content creator invites</p></div>
+        <div class="card"><h4>Platform / portal</h4><p>Listing support, directory creation, VisitTheGambia updates</p></div>
+        <div class="card"><h4>Content support</h4><p>Shared photo library, bilingual materials, sector briefs for operators</p></div>
+      </div>
+      <div class="exercise-alt">↔ <strong>Alternate:</strong> If time is short, ask the question verbally — facilitator captures and groups responses on the board directly.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 39 · THING 4 — BRIEFING INTRO      -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="43">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Thing 4 — Share a briefing</div>
+      <h2 class="h2">Intelligence your members<br>don't know to ask for</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1rem;">SMEs know their own businesses. They don't know how The Gambia is being sold internationally, what operators are saying, or what trends are emerging in source markets.</p>
+      <p style="font-size:.95rem;color:var(--text);line-height:1.65;margin-bottom:.75rem;">You do — because you've been monitoring (Thing 1).</p>
+      <div class="note-box nb-pink" style="font-size:.9rem;">
+        Translating monitoring findings into one page, four times a year, is one of the highest-value things you can do for your members. <strong>Time required: 2 hours per quarter.</strong>
+      </div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">zaratravels.com · "Is The Gambia Worth Visiting?" · Jan 2026</div>
+        </div>
+        <img src="img/visit_gambia_blog_part1.png" alt="Travel blog about The Gambia — an intelligence opportunity for member briefing" style="width:100%;display:block;max-height:265px;object-fit:cover;object-position:top;">
+      </div>
+      <p style="font-size:.73rem;color:var(--pink);font-weight:600;margin-top:.45rem;">← This blogger wrote about The Gambia in Jan 2026. Did your members know? Could they have been featured?</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 40 · WHAT A GOOD BRIEFING LOOKS    -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="44">
+<div class="wrap">
+  <div style="text-align:center;margin-bottom:1.1rem;">
+    <div class="eyebrow">Thing 4 — The briefing format</div>
+    <h2 class="h2">One page. Three sections. Quarterly.</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:.6rem;">
+      <div class="card card-pink">
+        <div class="card-label" style="color:var(--pink);">Section 1 — What we saw</div>
+        <p style="margin-top:.35rem;font-size:.9rem;color:var(--text);">Key findings from monitoring — 2–3 bullet points. What's new, what's changed, what's still missing.</p>
+      </div>
+      <div class="card card-navy">
+        <div class="card-label" style="color:var(--navy);">Section 2 — What it means for you</div>
+        <p style="margin-top:.35rem;font-size:.9rem;color:var(--text);">Practical implications for members. Not analysis — direct guidance relevant to their businesses.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Section 3 — One thing to do</div>
+        <p style="margin-top:.35rem;font-size:.9rem;color:var(--text);">A concrete action members can take this month. Specific and checkable.</p>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin-top:.15rem;font-style:italic;">Tone: peers sharing intelligence, not management reporting down. Format: whatever your members actually read — WhatsApp, email, meeting agenda.</p>
+    </div>
+    <div>
+      <div class="briefing-mock">
+        <div class="briefing-header">
+          <div class="briefing-to">To: Music Union members</div>
+          <div class="briefing-subject">Quarterly market update · Q1 2026 · What we're seeing</div>
+        </div>
+        <div class="briefing-section">
+          <div class="briefing-section-label">What we saw</div>
+          <div class="briefing-text">Two UK operators added Gambia festival listings this quarter. Neither named a specific musician or band. TripAdvisor: 3 reviews mentioned live music, all positive, none with booking info.</div>
+        </div>
+        <div class="briefing-section">
+          <div class="briefing-section-label">What it means for you</div>
+          <div class="briefing-text">Operators want to feature live music — but they can't find bookable acts. If you're not on a directory, you won't be added to their itineraries.</div>
+        </div>
+        <div class="briefing-section">
+          <div class="briefing-section-label">One thing to do</div>
+          <div class="briefing-text">Send your name, what you perform, and a WhatsApp number to [contact] by [date]. We'll add you to the Music Union directory this month.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 41 · FROM MONITORING TO BRIEFING   -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="45">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">Thing 4 — The routine</div>
+  <h2 class="h2" style="margin-bottom:1.75rem;">From monitoring to briefing in three steps</h2>
+  <div class="steps-row">
+    <div class="step-item">
+      <div class="step-num-lg">1</div>
+      <h4>Check 3–4 sources</h4>
+      <p>Google Alert digest, 20 TripAdvisor reviews, 5 operator pages. What's new, changing, or worth acting on?</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num-lg">2</div>
+      <h4>Note 2–3 findings</h4>
+      <p>What did you see that your members don't know? What trend is emerging? What gap is still there?</p>
+    </div>
+    <div class="step-item step-pink">
+      <div class="step-num-lg">3</div>
+      <h4>Write one paragraph. Share.</h4>
+      <p>One paragraph per finding. Send by WhatsApp, email, or raise at your next sector meeting. Done.</p>
+    </div>
+  </div>
+  <p style="font-size:.88rem;color:var(--muted);margin-top:1.5rem;font-style:italic;">2 hours per quarter. The value is in the consistency — not the comprehensiveness.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 42 · MULTIPLIER MAPPING ACTIVITY   -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="46">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">✏️</span>
+      <h3>Activity — Your multiplier</h3>
+      <span class="exercise-time">20 min</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario">Every association in this room is a distribution channel. This maps who can reach how many people — and what content would actually travel through those channels.</div>
+      <p style="font-size:.95rem;color:var(--text);margin-bottom:1rem;line-height:1.6;">On the sheet provided, complete three questions:</p>
+      <ol class="exercise-steps">
+        <li><span class="step-num">1</span><span>How many members does your institution or association represent? ___</span></li>
+        <li><span class="step-num">2</span><span>One channel you currently use to reach them: <strong>WhatsApp / meetings / email / newsletter / none</strong></span></li>
+        <li><span class="step-num">3</span><span>One thing GT Board or NCAC could give you that you would <strong>immediately distribute</strong> to your members: ___</span></li>
+      </ol>
+      <div class="note-box nb-pink" style="margin-top:.85rem;font-size:.9rem;">
+        Groups of 3 share, then post sheets on the wall. <strong>Facilitator reads back what associations said they would distribute.</strong> These are the real coordination opportunities — surfaced by the room itself, not prescribed from above.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 43 · THE MULTIPLIER LOGIC          -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="47">
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow">Thing 4 — The multiplier logic</div>
+  <h2 class="h2" style="margin-bottom:.4rem;">One briefing. Nine channels. Hundreds of businesses.</h2>
+  <p style="font-size:.95rem;color:var(--muted);max-width:520px;margin:.3rem auto 1.25rem;line-height:1.6;">GT Board produces one quarterly brief. Nine associations each distribute to their members. One document reaches the whole ecosystem — with 2 hours of work.</p>
+  <svg viewBox="0 0 560 310" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;">
+    <!-- Spokes -->
+    <line x1="280" y1="155" x2="130" y2="55"  stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="280" y2="32"  stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="430" y2="55"  stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="500" y2="155" stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="430" y2="255" stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="280" y2="280" stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="130" y2="255" stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="60"  y2="155" stroke="#E2E2E2" stroke-width="1.5"/>
+    <line x1="280" y1="155" x2="165" y2="92"  stroke="#E2E2E2" stroke-width="1.5"/>
+    <!-- Hub -->
+    <circle cx="280" cy="155" r="42" fill="#1A2B4A"/>
+    <text x="280" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="800" fill="#fff">GT Board</text>
+    <text x="280" y="164" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="rgba(255,255,255,.65)">quarterly brief</text>
+    <!-- Creative industry nodes (pink) -->
+    <circle cx="130" cy="55"  r="24" fill="#E6007E"/>
+    <text x="130" y="52"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Music</text>
+    <text x="130" y="63"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Union</text>
+    <circle cx="280" cy="32"  r="24" fill="#E6007E"/>
+    <text x="280" y="29"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Photographers</text>
+    <text x="280" y="40"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Association</text>
+    <circle cx="430" cy="55"  r="24" fill="#E6007E"/>
+    <text x="430" y="52"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Visual</text>
+    <text x="430" y="63"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Arts</text>
+    <circle cx="500" cy="155" r="24" fill="#E6007E"/>
+    <text x="500" y="152"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Craft</text>
+    <text x="500" y="163"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Market</text>
+    <circle cx="165" cy="92"  r="24" fill="#E6007E"/>
+    <text x="165" y="89"  text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" fill="#fff">Collecting</text>
+    <text x="165" y="100" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.85)">Society</text>
+    <!-- Tourism operations nodes (navy mid) -->
+    <circle cx="430" cy="255" r="24" fill="#546E8F"/>
+    <text x="430" y="252"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Bird</text>
+    <text x="430" y="263"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Watchers</text>
+    <circle cx="280" cy="280" r="24" fill="#546E8F"/>
+    <text x="280" y="277"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Tour</text>
+    <text x="280" y="288"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Guides</text>
+    <circle cx="130" cy="255" r="24" fill="#546E8F"/>
+    <text x="130" y="252"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff">Chef</text>
+    <text x="130" y="263"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.85)">Association</text>
+    <circle cx="60"  cy="155" r="24" fill="#546E8F"/>
+    <text x="60"  y="152"  text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" fill="#fff">Security</text>
+    <text x="60"  y="163"  text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.85)">Guards</text>
+    <!-- Legend -->
+    <circle cx="170" cy="298" r="6" fill="#E6007E"/>
+    <text x="180" y="302" font-family="Inter,sans-serif" font-size="9" fill="#7A7A7A">Creative industry associations</text>
+    <circle cx="320" cy="298" r="6" fill="#546E8F"/>
+    <text x="330" y="302" font-family="Inter,sans-serif" font-size="9" fill="#7A7A7A">Tourism operations associations</text>
+  </svg>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 44 · DAY 1 CLOSE DIVIDER           -->
+<!-- ═══════════════════════════════════ -->
+<section class="photo-section" data-s="48">
+<div class="photo-bg" style="background-image:url('img/robert-bye-h3DjeKw08ds-unsplash.jpg');"></div>
+<div class="photo-overlay" style="background:rgba(26,43,74,.72);"></div>
+<div class="wrap" style="text-align:center;">
+  <div class="eyebrow" style="color:rgba(230,0,126,.9);">Day 1 Close · 15:00–16:00 · 60 min</div>
+  <h1 class="h1" style="color:#fff;font-size:2.8rem;">From evidence<br>to commitment</h1>
+  <p style="font-size:1.1rem;color:rgba(255,255,255,.6);max-width:460px;margin:.75rem auto 0;line-height:1.65;">Not three months. Not six months.<br>One thing you will do in the next 30 days.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 45 · JOURNALIST TEST               -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="49">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">📰</span>
+      <h3>Activity — The journalist test</h3>
+      <span class="exercise-time">25 min · Day 1 close</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario">"A journalist from a Dutch travel magazine is writing a piece on cultural tourism in The Gambia. They search online for contacts, experiences, and bookable products. <strong>Would they find your organisation? Would they find your members?</strong>"</div>
+      <ol class="exercise-steps">
+        <li><span class="step-num">1</span><span><strong>Individual (8 min):</strong> Write — what the journalist would find about your sector; what they would miss; one thing that, if it existed, would change the result.</span></li>
+        <li><span class="step-num">2</span><span><strong>Pairs (8 min):</strong> Compare. Does your partner agree with your assessment?</span></li>
+        <li><span class="step-num">3</span><span><strong>Group (8 min):</strong> 4–5 share. Facilitator captures on board: Currently findable · Visible but not bookable · Effectively invisible.</span></li>
+      </ol>
+      <div class="note-box nb-pink" style="margin-top:.85rem;font-size:.9rem;">
+        <strong>Why Dutch?</strong> Dutch/Belgian visitors are The Gambia's most satisfied source market — 4.56/5, 34% of all reviews (D2 §4.4). If we can't be found by the market that already loves us most, we're leaving the easiest win on the table.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 46 · 30-DAY COMMITMENTS            -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="50">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">📌</span>
+      <h3>Activity — One thing in 30 days</h3>
+      <span class="exercise-time">20 min</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario" style="font-style:normal;font-size:1.05rem;font-weight:600;">Not three months. Not six months. <span style="color:var(--pink);">One thing you will do in the next 30 days.</span></div>
+      <p style="font-size:.95rem;color:var(--muted);margin:.65rem 0 1rem;line-height:1.6;">Specific and checkable — not "improve our digital presence" but "set up a Google Alert for our sector by [date]." Within your current mandate and budget.</p>
+      <div class="board-cols">
+        <div class="board-col bc-green">
+          <div class="bc-label">Monitor</div>
+          <div class="bc-desc">Set up an alert · Do a TripAdvisor scan · Check one operator page and note what's present</div>
+        </div>
+        <div class="board-col bc-amber">
+          <div class="bc-label">Make findable</div>
+          <div class="bc-desc">Start a member directory · Update VisitTheGambia · Create a WhatsApp catalogue</div>
+        </div>
+        <div class="board-col bc-red">
+          <div class="bc-label">Open a door</div>
+          <div class="bc-desc">Make one introduction · Host a journalist · Add a member to a delegation or press trip</div>
+        </div>
+      </div>
+      <div class="note-box" style="margin-top:.85rem;font-size:.9rem;">
+        Write on a card. Post on the board. Facilitator groups by theme. <strong>Where multiple institutions commit to the same thing — that's Friday's coordination opportunity.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 47 · SEE YOU TOMORROW              -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="51">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">End of Day 1</div>
+      <h2 class="h2">See you tomorrow</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1.25rem;">Today was about what each of you can do individually. Friday shifts focus.</p>
+      <ul>
+        <li>Friday morning: <strong>how do you know it's working?</strong> — the tracking and KPI conversation.</li>
+        <li>Friday afternoon: <strong>what do we commit to doing together</strong> — the coordination agreement you leave with.</li>
+      </ul>
+      <div class="note-box nb-pink" style="margin-top:1rem;font-size:.92rem;">
+        <strong>Optional overnight:</strong> Do the "find your sector" search one more time tonight. Note one result you'd like to change. Bring it tomorrow.
+      </div>
+    </div>
+    <div class="photo-real">
+      <img src="img/wim-van-t-einde-ELHzK-UFabY-unsplash.jpg" alt="Gambia beach at dusk — end of day" style="height:400px;">
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- NAV BUTTONS -->
+<div class="nav-btns">
+  <button class="nav-btn prev" id="prevBtn" onclick="prev()">← Back</button>
+  <button class="nav-btn" id="nextBtn" onclick="next()">Next →</button>
+</div>
+
+</div><!-- /app -->
+<script>
+  const secs  = document.querySelectorAll('section');
+  const total = secs.length; // 52 sections (0–51)
+
+  // Sidebar item: [from, to] inclusive — slide range that keeps this item highlighted
+  const SB_ACTIVE = [
+    [0,  0],  // Cover
+    [1,  4],  // Map the room (includes why we're here + arc)
+    [5, 15],  // 95 / 91 / 9 (covers all Block 1 D2 findings)
+    [16, 21], // 61% absent (covers D1 findings + find sector)
+    [22, 31], // Thing 1: Monitor (includes Block 2 intro, four things, Google Trends, GSC)
+    [32, 37], // Thing 2: Findable
+    [38, 42], // Thing 3: Open a door (bridge + door + case study + tier + activity)
+    [43, 47], // Thing 4: Briefing
+    [48, 49], // Journalist test (includes close divider)
+    [50, 51], // Commitments
+  ];
+
+  let cur = 0;
+
+  function go(sectionIdx) {
+    if (sectionIdx < 0 || sectionIdx >= total) return;
+    secs[sectionIdx].scrollIntoView({ behavior: 'smooth' });
+    cur = sectionIdx;
+    sync();
+  }
+  function next() { if (cur < total - 1) go(cur + 1); }
+  function prev() { if (cur > 0)         go(cur - 1); }
+
+  function sync() {
+    document.querySelectorAll('.sb-item').forEach((el, i) => {
+      if (i >= SB_ACTIVE.length) { el.classList.remove('active'); return; }
+      const [from, to] = SB_ACTIVE[i];
+      el.classList.toggle('active', cur >= from && cur <= to);
+    });
+    document.getElementById('prevBtn').style.display = cur === 0 ? 'none' : 'flex';
+    document.getElementById('nextBtn').disabled = cur === total - 1;
+  }
+
+  let t;
+  window.addEventListener('scroll', () => {
+    clearTimeout(t);
+    t = setTimeout(() => {
+      const mid = window.scrollY + window.innerHeight / 2;
+      secs.forEach((s, i) => {
+        if (mid >= s.offsetTop && mid < s.offsetTop + s.offsetHeight) { cur = i; sync(); }
+      });
+    }, 90);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft' ) { e.preventDefault(); prev(); }
+  });
+
+  document.addEventListener('DOMContentLoaded', sync);
+</script>
+</body>
+</html>

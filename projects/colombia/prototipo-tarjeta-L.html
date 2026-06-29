@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Prototipo · Tarjeta L · Lokal Travel · Día 1 y Día 2</title>
+    <style>
+        @page { size: A4 portrait; margin: 0; }
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; box-shadow: none; margin: 0; }
+            .card:last-child { page-break-after: avoid; }
+        }
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --rule: #D6D8DD;
+            /* Lokal Travel · US community tourism platform · pale cream + deep terra + jungle green */
+            --lokal-bg: #FFFFFF;
+            --lokal-ink: #5C3322;
+            --lokal-accent: #3F7A4D;
+            --lokal-rule: #5C3322;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', serif; color: var(--ink); line-height: 1.5; background: #ECEDEE; }
+        .screen-only { background: var(--lokal-ink); color: white; padding: 1.25rem 2rem; font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.55; }
+        .screen-only h1 { font-family: Georgia, serif; font-size: 1.3rem; margin: 0 0 0.5rem 0; color: white; }
+        .card { width: 210mm; height: 297mm; padding: 18mm 18mm; background: var(--lokal-bg); margin: 18px auto; box-shadow: 0 4px 18px rgba(0,0,0,0.12); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; }
+        .card-id { font-family: 'Arial Black', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-muted); margin-bottom: 6mm; }
+        .card-logo { font-family: Georgia, serif; font-size: 2.4rem; line-height: 1.05; margin: 0 0 2mm 0; color: var(--lokal-ink); letter-spacing: 0.5px; }
+        .card-archetype { font-family: 'Arial', sans-serif; font-size: 0.85rem; margin: 0; color: var(--lokal-ink); font-style: italic; }
+        .card-tag { font-family: 'Arial Black', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 2mm 4mm; border: 1.5px solid var(--lokal-ink); color: var(--lokal-ink); text-align: center; line-height: 1.2; flex-shrink: 0; }
+        .accent-rule { height: 3px; background: var(--lokal-accent); margin: 6mm 0 8mm 0; width: 30mm; }
+        .section-h { font-family: 'Arial Black', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--lokal-ink); margin: 0 0 4mm 0; }
+        .section-block { margin-bottom: 8mm; }
+        ul.facts { list-style: none; margin: 0; padding: 0; counter-reset: f; }
+        ul.facts li { counter-increment: f; font-family: Georgia, serif; font-size: 0.98rem; line-height: 1.5; padding: 0 0 3mm 9mm; position: relative; }
+        ul.facts li::before { content: counter(f); position: absolute; left: 0; top: 0; font-family: 'Arial Black', sans-serif; font-size: 0.85rem; width: 6mm; height: 6mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; background: var(--lokal-accent); }
+        ul.products { list-style: none; margin: 0; padding: 0; }
+        ul.products li { font-family: Georgia, serif; font-size: 0.98rem; line-height: 1.5; padding: 0 0 2mm 7mm; position: relative; }
+        ul.products li::before { content: ''; position: absolute; left: 0; top: 3.4mm; width: 3.5mm; height: 3.5mm; background: var(--lokal-accent); border-radius: 50%; }
+        ul.products li strong { color: var(--lokal-ink); }
+        ul.products li .desc { color: var(--ink-muted); font-size: 0.88rem; }
+        ul.questions { list-style: none; margin: 0; padding: 0; counter-reset: q; }
+        ul.questions li { counter-increment: q; font-family: Georgia, serif; font-size: 1.02rem; line-height: 1.5; padding: 0 0 4mm 10mm; position: relative; }
+        ul.questions li::before { content: counter(q); position: absolute; left: 0; top: 0.5mm; font-family: 'Arial Black', sans-serif; font-size: 0.9rem; width: 7mm; height: 7mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; background: var(--lokal-ink); }
+        .divider { height: 1px; background: rgba(92, 51, 34, 0.22); margin: 3mm 0 8mm 0; }
+        .card-footer { margin-top: auto; padding-top: 5mm; border-top: 1px dashed var(--lokal-rule); font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--ink-muted); display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Prototipo · Tarjeta L · Lokal Travel · Día 1 y Día 2</h1>
+    <p>A4 vertical · una cara · en español. Identidad: plataforma estadounidense curada para turismo comunitario, foco en propiedad y liderazgo local de las comunidades.</p>
+</div>
+
+
+<!-- TARJETA L · LOKAL TRAVEL · DÍA 1 -->
+<article class="card" aria-label="Tarjeta L Lokal Travel - Día 1">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta L · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Lokal<br>Travel</h2>
+            <p class="card-archetype">Plataforma estadounidense · curaduría de turismo comunitario</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma estadounidense de curaduría — conecto viajeros con experiencias de turismo comunitario en todo el mundo.</li>
+            <li>No soy operador. Soy curadora y marketplace — solo entran experiencias lideradas por las comunidades locales mismas.</li>
+            <li>Mi criterio es propiedad y liderazgo local — la comunidad decide, organiza y se beneficia directamente, sin intermediarios.</li>
+            <li>Mis viajeros son norteamericanos y europeos que buscan turismo con impacto directo y verificable en comunidades.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Curaduría comunitaria</strong> <span class="desc">— solo entran experiencias lideradas por comunidades locales</span></li>
+            <li><strong>Visibilidad</strong> <span class="desc">— exposición a viajeros conscientes en EE.UU., Canadá y Europa</span></li>
+            <li><strong>Apoyo en marketing</strong> <span class="desc">— ayuda para que la comunidad cuente su historia</span></li>
+            <li><strong>Pagos directos</strong> <span class="desc">— la comunidad recibe el ingreso sin pasar por terceros</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Contame de tu negocio. ¿Quién sos vos? ¿Qué hacés?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Quién toma las decisiones en tu propuesta — vos, tu equipo, la comunidad?</li>
+            <li>¿Cómo se beneficia la comunidad de tu trabajo? Contame concretamente.</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para vos?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span>
+        <span>L</span>
+    </div>
+</article>
+
+
+<!-- TARJETA L · LOKAL TRAVEL · DÍA 2 -->
+<article class="card" aria-label="Tarjeta L Lokal Travel - Día 2">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta L · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Lokal<br>Travel</h2>
+            <p class="card-archetype">Plataforma estadounidense · curaduría de turismo comunitario</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma estadounidense de curaduría — conecto viajeros con experiencias de turismo comunitario en todo el mundo.</li>
+            <li>No soy operador. Soy curadora y marketplace — solo entran experiencias lideradas por las comunidades locales mismas.</li>
+            <li>Mi criterio es propiedad y liderazgo local — la comunidad decide, organiza y se beneficia directamente, sin intermediarios.</li>
+            <li>Mis viajeros son norteamericanos y europeos que buscan turismo con impacto directo y verificable en comunidades.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Curaduría comunitaria</strong> <span class="desc">— solo entran experiencias lideradas por comunidades locales</span></li>
+            <li><strong>Visibilidad</strong> <span class="desc">— exposición a viajeros conscientes en EE.UU., Canadá y Europa</span></li>
+            <li><strong>Apoyo en marketing</strong> <span class="desc">— ayuda para que la comunidad cuente su historia</span></li>
+            <li><strong>Pagos directos</strong> <span class="desc">— la comunidad recibe el ingreso sin pasar por terceros</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Quién es el dueño legal de tu negocio — la comunidad, vos, o una mezcla?</li>
+            <li>¿Cómo se distribuye el ingreso de cada viaje? Porcentajes, destinos.</li>
+            <li>¿La comunidad participa en las decisiones operativas? ¿Cómo?</li>
+            <li>Si la comunidad quiere cambiar algo de la propuesta, ¿cómo se decide? ¿Tienen voz real?</li>
+            <li>¿Qué tipo de acuerdo o relación tenés con la comunidad?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span>
+        <span>L</span>
+    </div>
+</article>
+
+</body>
+</html>

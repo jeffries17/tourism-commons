@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Día 2 · Tarjetas de Comprador · Rondas 2 y 3 · Colombia bootcamp</title>
+    <style>
+        /* =====================================================
+           PRINT — A5 doble cara · imprimir a doble cara, voltear
+           por el lado largo. Cada tarjeta = 1 página frente + 1
+           página dorso (alineadas).
+           ===================================================== */
+        @page {
+            size: A5;
+            margin: 0;
+        }
+
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; }
+            .card:last-child { page-break-after: avoid; }
+        }
+
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --paper: #FFFFFF;
+            --rule: #D6D8DD;
+
+            /* D · Slow Trotteurs · arena + tabaco + ladrillo */
+            --slow-bg: #F2E9D6;
+            --slow-ink: #5A3F1A;
+            --slow-accent: #B85535;
+            --slow-rule: #5A3F1A;
+
+            /* E · Terres des Andes · tan + terracota Andes + salvia */
+            --terres-bg: #E8DFD0;
+            --terres-ink: #8C3A1E;
+            --terres-accent: #5C7A4B;
+            --terres-rule: #8C3A1E;
+
+            /* F · Better Places · blanco + teal + verde hoja */
+            --better-bg: #FFFFFF;
+            --better-ink: #0E3F4F;
+            --better-accent: #3A9B58;
+            --better-rule: #0E3F4F;
+
+            /* G · Wild Frontiers · marfil + tinta negra + bronce antiguo */
+            --wild-bg: #F5F0E6;
+            --wild-ink: #1A1A1A;
+            --wild-accent: #8B6E2F;
+            --wild-rule: #1A1A1A;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--ink);
+            line-height: 1.5;
+            background: #ECEDEE;
+        }
+
+        /* Screen-only intro banner */
+        .screen-only {
+            background: #14213D;
+            color: white;
+            padding: 1.25rem 2rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+        .screen-only h1 {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+        .screen-only code {
+            background: rgba(255,255,255,0.12);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+        }
+        .screen-only .ronda-tag {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            border-radius: 3px;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 0.4rem;
+        }
+        .screen-only .ronda-tag.r2 { background: #C75A1E; color: white; }
+        .screen-only .ronda-tag.r3 { background: #3A9B58; color: white; }
+
+        /* =====================================================
+           A5 CARD CONTAINER · 148 × 210 mm
+           ===================================================== */
+        .card {
+            width: 148mm;
+            height: 210mm;
+            padding: 14mm 13mm;
+            background: var(--paper);
+            margin: 12px auto;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media print {
+            .card {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        /* =====================================================
+           PER-AGENCY COLOR ASSIGNMENTS
+           ===================================================== */
+        .card.slow   { background: var(--slow-bg);   color: var(--ink); }
+        .card.terres { background: var(--terres-bg); color: var(--ink); }
+        .card.better { background: var(--better-bg); color: var(--ink); }
+        .card.wild   { background: var(--wild-bg);   color: var(--ink); }
+
+        .card.slow   .accent-text { color: var(--slow-ink); }
+        .card.terres .accent-text { color: var(--terres-ink); }
+        .card.better .accent-text { color: var(--better-ink); }
+        .card.wild   .accent-text { color: var(--wild-ink); }
+
+        .card.slow   .accent-rule { background: var(--slow-rule); }
+        .card.terres .accent-rule { background: var(--terres-rule); }
+        .card.better .accent-rule { background: var(--better-rule); }
+        .card.wild   .accent-rule { background: var(--wild-rule); }
+
+        .card.slow   .accent-bg { background: var(--slow-accent); }
+        .card.terres .accent-bg { background: var(--terres-accent); }
+        .card.better .accent-bg { background: var(--better-accent); }
+        .card.wild   .accent-bg { background: var(--wild-accent); }
+
+        /* =====================================================
+           CARD HEADER (frente)
+           ===================================================== */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6mm;
+        }
+
+        .card-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+        }
+
+        .card-tag {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.6rem;
+            color: var(--ink-muted);
+            text-align: right;
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.7rem;
+            letter-spacing: -0.5px;
+            line-height: 1;
+            margin: 0 0 1mm 0;
+        }
+        .card.slow   .card-logo { color: var(--slow-ink);   font-family: Georgia, serif; font-style: italic; font-weight: 700; letter-spacing: 0.3px; }
+        .card.terres .card-logo { color: var(--terres-ink); font-family: Georgia, serif; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; font-size: 1.45rem; }
+        .card.better .card-logo { color: var(--better-ink); font-family: 'Arial Black', sans-serif; font-weight: 900; letter-spacing: -0.8px; text-transform: lowercase; }
+        .card.wild   .card-logo { color: var(--wild-ink);   font-family: Georgia, serif; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; font-size: 1.4rem; }
+
+        .card-archetype {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            font-style: italic;
+            margin-bottom: 4mm;
+        }
+
+        .accent-rule {
+            width: 28mm;
+            height: 2px;
+            margin: 0 0 5mm 0;
+        }
+
+        /* Cita verbatim */
+        .cita {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            border-left: 2px solid;
+            padding: 0 0 0 3mm;
+            margin: 0 0 4mm 0;
+        }
+        .card.slow   .cita { border-color: var(--slow-accent); }
+        .card.terres .cita { border-color: var(--terres-accent); }
+        .card.better .cita { border-color: var(--better-accent); }
+        .card.wild   .cita { border-color: var(--wild-accent); }
+
+        .cita-fuente {
+            display: block;
+            font-style: normal;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.62rem;
+            color: var(--ink-muted);
+            margin-top: 1.5mm;
+        }
+
+        /* Section headings */
+        .section-h {
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin: 0 0 2mm 0;
+        }
+        .card.slow   .section-h { color: var(--slow-ink); }
+        .card.terres .section-h { color: var(--terres-ink); }
+        .card.better .section-h { color: var(--better-ink); }
+        .card.wild   .section-h { color: var(--wild-ink); }
+
+        .section-block { margin-bottom: 4mm; }
+        .section-block:last-child { margin-bottom: 0; }
+
+        ul.values, ul.tours, ul.questions, ul.convence {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.values li {
+            font-family: Georgia, serif;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            padding: 0.4mm 0 0.4mm 4mm;
+            position: relative;
+        }
+        ul.values li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            font-size: 0.55rem;
+            top: 1.5mm;
+        }
+        .card.slow   ul.values li::before { color: var(--slow-accent); }
+        .card.terres ul.values li::before { color: var(--terres-accent); }
+        .card.better ul.values li::before { color: var(--better-accent); }
+        .card.wild   ul.values li::before { color: var(--wild-accent); }
+
+        ul.tours li {
+            font-family: Georgia, serif;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            padding: 0 0 2.5mm 0;
+        }
+        ul.tours li strong {
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            display: block;
+            margin-bottom: 0.5mm;
+        }
+        .card.slow   ul.tours li strong { color: var(--slow-ink); }
+        .card.terres ul.tours li strong { color: var(--terres-ink); }
+        .card.better ul.tours li strong { color: var(--better-ink); }
+        .card.wild   ul.tours li strong { color: var(--wild-ink); }
+
+        .medellin-box {
+            background: rgba(0,0,0,0.04);
+            border-left: 3px solid;
+            padding: 3mm 4mm;
+            font-family: Georgia, serif;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            margin-top: 1mm;
+        }
+        .card.slow   .medellin-box { border-left-color: var(--slow-accent); }
+        .card.terres .medellin-box { border-left-color: var(--terres-accent); }
+        .card.better .medellin-box { border-left-color: var(--better-accent); }
+        .card.wild   .medellin-box { border-left-color: var(--wild-accent); }
+
+        /* =====================================================
+           DORSO
+           ===================================================== */
+        .dorso-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6mm;
+            padding-bottom: 3mm;
+            border-bottom: 1px solid;
+        }
+        .card.slow   .dorso-header { border-bottom-color: var(--slow-rule); }
+        .card.terres .dorso-header { border-bottom-color: var(--terres-rule); }
+        .card.better .dorso-header { border-bottom-color: var(--better-rule); }
+        .card.wild   .dorso-header { border-bottom-color: var(--wild-rule); }
+
+        .dorso-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        .card.slow   .dorso-id { color: var(--slow-ink); }
+        .card.terres .dorso-id { color: var(--terres-ink); }
+        .card.better .dorso-id { color: var(--better-ink); }
+        .card.wild   .dorso-id { color: var(--wild-ink); }
+
+        .dorso-meta {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink-muted);
+        }
+
+        ul.questions {
+            counter-reset: q;
+        }
+        ul.questions li {
+            counter-increment: q;
+            font-family: Georgia, serif;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            padding: 0 0 3mm 8mm;
+            position: relative;
+        }
+        ul.questions li::before {
+            content: counter(q);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.85rem;
+            width: 6mm;
+            height: 6mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .card.slow   ul.questions li::before { background: var(--slow-ink); }
+        .card.terres ul.questions li::before { background: var(--terres-ink); }
+        .card.better ul.questions li::before { background: var(--better-ink); }
+        .card.wild   ul.questions li::before { background: var(--wild-ink); }
+
+        ul.convence li {
+            font-family: Georgia, serif;
+            font-size: 0.84rem;
+            line-height: 1.45;
+            padding: 0.5mm 0 1mm 5mm;
+            position: relative;
+        }
+        ul.convence li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            top: -0.2mm;
+        }
+        .card.slow   ul.convence li::before { color: var(--slow-accent); }
+        .card.terres ul.convence li::before { color: var(--terres-accent); }
+        .card.better ul.convence li::before { color: var(--better-accent); }
+        .card.wild   ul.convence li::before { color: var(--wild-accent); }
+
+        .convence-box {
+            margin-top: auto;
+            padding-top: 4mm;
+            border-top: 1px dashed;
+        }
+        .card.slow   .convence-box { border-top-color: var(--slow-rule); }
+        .card.terres .convence-box { border-top-color: var(--terres-rule); }
+        .card.better .convence-box { border-top-color: var(--better-rule); }
+        .card.wild   .convence-box { border-top-color: var(--wild-rule); }
+
+        /* Logo placeholder bar */
+        .logo-placeholder {
+            font-family: 'Courier New', monospace;
+            font-size: 0.55rem;
+            color: var(--ink-muted);
+            border: 1px dashed var(--rule);
+            padding: 1.5mm 3mm;
+            display: inline-block;
+            margin-bottom: 3mm;
+        }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Día 2 · Tarjetas de Comprador · Rondas 2 y 3</h1>
+    <p>4 tarjetas A5 doble cara para el bootcamp Colombia · 26 mayo 2026 · Medellín. Cada tarjeta ocupa 2 páginas A5 (frente + dorso). <strong>Imprimir a doble cara, voltear por el lado largo.</strong> Recomendado en papel ≥250 g/m². Los <code>logos reales</code> se pegan o reemplazan en diseño antes de impresión.</p>
+    <p><span class="ronda-tag r2">Ronda 2</span> <strong>Preguntas difíciles · 9:45–11:15</strong> — Tarjetas D (Slow Trotteurs) + E (Terres des Andes). Preguntas que piden evidencia documentada — cifras, contratos, % cuantificados, ONG nombradas.</p>
+    <p><span class="ronda-tag r3">Ronda 3</span> <strong>Speed-feria · 14:45–16:15</strong> — Tarjetas F (Better Places) + G (Wild Frontiers). El comprador busca cerrar, no seguir hablando: la conversación termina con 🤝 LinkedIn · ✉️ Email · 📅 Meeting.</p>
+    <p>Continuidad de Día 1: las tarjetas A-B-C (claridad del pitch) viven en <code>dia1-tarjetas-comprador.html</code>. Master de contenido para las 7 tarjetas: <code>dia1-tarjetas-comprador.md</code>.</p>
+</div>
+
+
+<!-- =====================================================
+     TARJETA D · SLOW TROTTEURS · FRENTE
+     ===================================================== -->
+<article class="card slow" aria-label="Tarjeta D Slow Trotteurs — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta D · Día 2 · Ronda 2 · Preguntas Difíciles</div>
+            <div class="logo-placeholder">[ logo Slow Trotteurs aquí ]</div>
+            <h2 class="card-logo">Slow Trotteurs</h2>
+            <p class="card-archetype">Cooperativa · slow · transparencia radical · 🇫🇷</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "1 % du prix de votre voyage aux Restos du Cœur · sans frais de gestion · compensation carbone à Envol Vert en Colombie."
+        <span class="cita-fuente">verbatim · slow-trotteurs.fr</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>1 % del precio del viaje → Restos du Cœur (Francia)</li>
+            <li>Compensación carbono 100 %, sin frais de gestion, vía ONG locales (Envol Vert en Colombia)</li>
+            <li>9 ONG partners por país, todas nombradas en mi web</li>
+            <li>Metodología ADEME pública para cálculo carbono</li>
+            <li>Mobilité douce (tren, barco, bici, caminata) por defecto</li>
+            <li>Persona de contacto nombrada y accesible (Claire Sciscione)</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Circuit privé Norte Colombia · 12-15 días</strong>Cartagène-Villa de Leyva con chauffeur-guide francófono · hospedajes de charme y écolodges · mobilité douce entre zonas (barco, bici, caminata).</li>
+            <li><strong>Circuit privé Sur Colombia · 14-18 días</strong>Medellín → Cali → Côte Pacifique → región del café · estadías largas en cada parada · encuentros con productores.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Un <strong>circuit slow Medellín-Jardín-Jericó-Guatapé de 8-10 días</strong> con hospedajes-finca + traslados en bici donde sea posible + cocina con productores locales + cálculo carbono público + 1 % reverso a una ONG colombiana visible.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA D · SLOW TROTTEURS · DORSO
+     ===================================================== -->
+<article class="card slow" aria-label="Tarjeta D Slow Trotteurs — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">SLOW TROTTEURS · Tarjeta D</div>
+        <div class="dorso-meta">Día 2 · Ronda 2 · Preguntas Difíciles · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Qué % de tu ingreso se queda en la zona? ¿Cómo lo calculás? ¿Lo publicás?</li>
+            <li>¿Cómo compensás carbono o impacto ambiental? ¿Con qué metodología?</li>
+            <li>¿Tenés un partner ONG en Colombia? Nombre. ¿Cómo trabajan juntos?</li>
+            <li>¿Cuál es tu persona-puente con nombre que mi cliente puede contactar?</li>
+            <li>¿Tu propuesta favorece permanencias largas y mobilidad lenta, o rotación rápida?</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Un número específico, no "varios" — "donamos X a Y desde Z"</li>
+            <li>Una metodología que cualquiera pueda repetir (ADEME u otra)</li>
+            <li>Persona con nombre, cargo y forma de contacto</li>
+            <li>Un socio comunitario o ONG en Colombia identificado</li>
+        </ul>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA E · TERRES DES ANDES · FRENTE
+     ===================================================== -->
+<article class="card terres" aria-label="Tarjeta E Terres des Andes — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta E · Día 2 · Ronda 2 · Preguntas Difíciles</div>
+            <div class="logo-placeholder">[ logo Terres des Andes / Les Nouvelles Terres aquí ]</div>
+            <h2 class="card-logo">TERRES<br>DES ANDES</h2>
+            <p class="card-archetype">Coopérative SCOP · ATES · Palmes Tourisme Durable 2017 · 🇫🇷</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "Voyage équitable et solidaire · co-construction des voyages avec représentants locaux · juste rémunération des guides."
+        <span class="cita-fuente">verbatim · terresdesandes.org</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>Estructura cooperativa SCOP (Société Coopérative et Participative)</li>
+            <li>Label ATES (Tourisme Équitable et Solidaire)</li>
+            <li>Co-construction de los programas con representantes locales en cada destino</li>
+            <li>Juste rémunération de los guías locales como criterio de aceptación</li>
+            <li>Inmersión chez l'habitant como formato preferido</li>
+            <li>Guías locales francófonos nombrados con bio en mi web (ej. Cathy en Colombia)</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Inmersión 15-21 días "à la rencontre des habitants"</strong>Pequeños grupos · alojamiento chez l'habitant · encuentros con productores de café en sus fincas · visita a sitios precolombinos con guía local nombrado.</li>
+            <li><strong>Circuit cultural y naturaleza Medellín-San Agustín</strong>Combinando lectura cultural urbana + sitio arqueológico + producción local.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Una <strong>inmersión chez l'habitant de 6-8 días en pueblos antioqueños (Jardín, Jericó, Concepción)</strong> con familias cafeteras anfitrionas remuneradas con tarifa publicada, guía local francófona nombrada con bio, co-decisión del recorrido con las familias, acuerdo escrito.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA E · TERRES DES ANDES · DORSO
+     ===================================================== -->
+<article class="card terres" aria-label="Tarjeta E Terres des Andes — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">TERRES DES ANDES · Tarjeta E</div>
+        <div class="dorso-meta">Día 2 · Ronda 2 · Preguntas Difíciles · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Cómo se decide qué se ofrece en tu propuesta? ¿Solo vos o con quien participa?</li>
+            <li>¿Qué % del precio le va a la familia / guía / productor local? ¿Lo publicás?</li>
+            <li>¿Estás afiliado a algún sello de turismo équitable, ATES o equivalente local?</li>
+            <li>¿Cómo se distribuyen los beneficios a las familias anfitrionas?</li>
+            <li>¿Tenés un acuerdo escrito con tus familias / guías / proveedores locales?</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Una estructura cooperativa o de co-construcción concreta</li>
+            <li>Reparto del precio transparente con número, no adjetivo</li>
+            <li>Acuerdos escritos con familias / proveedores</li>
+            <li>Sellos o equivalentes locales que respaldan el trabajo</li>
+        </ul>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA F · BETTER PLACES · FRENTE
+     ===================================================== -->
+<article class="card better" aria-label="Tarjeta F Better Places — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta F · Día 2 · Ronda 3 · Speed-Feria</div>
+            <div class="logo-placeholder">[ logo Better Places aquí ]</div>
+            <h2 class="card-logo">better places</h2>
+            <p class="card-archetype">RT pioneer holandés · ANVR/SGR · 100 % tailor-made · 🇳🇱</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "Plan your entire trip in consultation with specialists in Colombia who make your trip completely customized — your trip is always unique."
+        <span class="cita-fuente">verbatim · betterplaces.nl · "Diseñá tu viaje en consulta directa con un especialista en Colombia"</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>Local expert vivo en el destino (Sigrid + Koen en Colombia)</li>
+            <li>Contacto directo cliente ↔ experto local — sin intermediarios</li>
+            <li>100 % tailor-made — formato fijo no se vende</li>
+            <li>Foco en nature + local population como pilares oficiales</li>
+            <li>Honestidad sobre lo que NO podemos hacer como cualidad de marca</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Tailor-made 18-21 días "Highlights of Colombia"</strong>Diseñado en consulta directa entre cliente y local expert · ajustado punto por punto al perfil del viajero.</li>
+            <li><strong>Active family travel Colombia</strong>Variante para familias con niños activos · outdoor + ritmo flexible · contacto WhatsApp directo con el organizador.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Un <strong>paquete tailor-made de 4-6 días Medellín + Comuna 13 + región del café</strong> para familias holandesas/alemanas que ya hicieron Cartagena en otro viaje · guía local francófono o inglés · contacto WhatsApp directo con el organizador · hospedaje familiar no-cadena.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA F · BETTER PLACES · DORSO
+     ===================================================== -->
+<article class="card better" aria-label="Tarjeta F Better Places — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">BETTER PLACES · Tarjeta F</div>
+        <div class="dorso-meta">Día 2 · Ronda 3 · Speed-Feria · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Sos vos quien organiza la experiencia o lo subcontratás a otro?</li>
+            <li>¿Qué hospedajes / lugares no-cadena tenés en cada zona?</li>
+            <li>¿Cómo me asegurás que mi cliente tendrá contacto real con lo local?</li>
+            <li>¿Cómo manejás imprevistos? ¿Tu cliente puede contactarte directamente?</li>
+            <li>¿Qué cosa NO podés hacer / NO ofrecés? Quiero conocer tus límites.</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Vos sos el organizador (no intermediario)</li>
+            <li>Hospedajes / lugares no-cadena con historia propia</li>
+            <li>Acceso directo y rápido para imprevistos (un número, no un formulario)</li>
+            <li>Honestidad sobre lo que NO podés hacer (es un plus, no un minus)</li>
+        </ul>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA G · WILD FRONTIERS · FRENTE
+     ===================================================== -->
+<article class="card wild" aria-label="Tarjeta G Wild Frontiers — frente">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta G · Día 2 · Ronda 3 · Speed-Feria</div>
+            <div class="logo-placeholder">[ logo Wild Frontiers aquí ]</div>
+            <h2 class="card-logo">WILD<br>FRONTIERS</h2>
+            <p class="card-archetype">Cultural premium UK · award-winning · tailor-made + small group · 🇬🇧</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <p class="cita">
+        "Specialists in tailor-made and group Colombia tours — off-the-beaten-path with cultural depth."
+        <span class="cita-fuente">verbatim · wildfrontierstravel.com · "Especialistas en viajes a medida y grupos pequeños, fuera de los senderos turísticos"</span>
+    </p>
+
+    <div class="section-block">
+        <p class="section-h">Lo que valoro en turismo responsable</p>
+        <ul class="values">
+            <li>Profundidad cultural sobre lo turístico-marca</li>
+            <li>Acceso a guías-historiadores / antropólogos en lugar de guías genéricos</li>
+            <li>Grupos pequeños con justificación cultural, no solo logística</li>
+            <li>Off-the-beaten-path con razón, no por ser distinto</li>
+            <li>Tailor-made + small group como dos modos paralelos coexistentes</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que opero hoy en Colombia</p>
+        <ul class="tours">
+            <li><strong>Group small (máx ~12) de 9-14 días incluyendo Lost City Trek</strong>Caminata exigente a Ciudad Perdida + cabecera cultural en Bogotá-Cartagena con guías especializados.</li>
+            <li><strong>Tailor-made cultural depth</strong>La Candelaria walking tour, Museo del Oro, Rosario Archipelago · accesos a guías historiadores con bio publicada.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que busco desarrollar cerca de Medellín</p>
+        <div class="medellin-box">
+            Un <strong>programa de 7-10 días Medellín postconflicto + Antioquia rural</strong> con antropólogo local que cuente la transformación urbana reciente (Comuna 13, Plaza Botero, museo de la memoria) + visita a familia cafetera con historia documentada · grupo máximo 10 personas con razón cultural.
+        </div>
+    </div>
+</article>
+
+
+<!-- =====================================================
+     TARJETA G · WILD FRONTIERS · DORSO
+     ===================================================== -->
+<article class="card wild" aria-label="Tarjeta G Wild Frontiers — dorso">
+    <div class="dorso-header">
+        <div class="dorso-id">WILD FRONTIERS · Tarjeta G</div>
+        <div class="dorso-meta">Día 2 · Ronda 3 · Speed-Feria · Dorso</div>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré</p>
+        <ul class="questions">
+            <li>¿Cuál es la historia profunda detrás de tu lugar / propuesta? No el folleto, la historia real.</li>
+            <li>¿Quién es la persona-experta que diseñó el contenido? ¿Qué credenciales tiene?</li>
+            <li>¿Cómo limitás el tamaño de tu propuesta? ¿Cuál es tu razón cultural para ese límite?</li>
+            <li>¿Qué parte de tu propuesta mi cliente no va a ver en otra operación similar?</li>
+            <li>¿Qué tenés para un cliente que ya hizo 3 países latinoamericanos?</li>
+        </ul>
+    </div>
+
+    <div class="convence-box">
+        <p class="section-h">Qué me convencería</p>
+        <ul class="convence">
+            <li>Una historia profunda con personajes, fechas, conflictos reales</li>
+            <li>Acceso a guías historiadores o antropólogos con bio visible</li>
+            <li>Límites de grupo con razón cultural justificada (no solo logística)</li>
+            <li>Algo verdaderamente off-the-beaten-path con justificación</li>
+        </ul>
+    </div>
+</article>
+
+</body>
+</html>

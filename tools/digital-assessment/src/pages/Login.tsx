@@ -46,7 +46,7 @@ export default function Login() {
               The Gambia
             </p>
             <p className="text-sm text-gray-600 max-w-lg mx-auto">
-              Assessing digital capacity and opportunities for creative industries and tourism operators in partnership with the International Trade Centre (ITC)
+              Assessing digital capacity and opportunities for creative industries and tourism operators across tourism and creative sectors.
             </p>
           </div>
 

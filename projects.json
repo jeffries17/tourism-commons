@@ -1,0 +1,20 @@
+{
+  "tools": [
+    { "id": "gambia-itc",              "type": "react",       "src": "tools/digital-assessment" },
+    { "id": "sentiment-analysis",      "type": "react",       "src": "tools/sentiment" },
+    { "id": "cbt-monitoring",          "type": "react",       "src": "tools/cbt-monitoring" },
+    { "id": "tourism-instagram-index", "type": "react",       "src": "tools/instagram-index" }
+  ],
+  "projects": [
+    { "id": "botswana",    "type": "react",       "src": "projects/botswana/dashboard" },
+    { "id": "colombia",           "type": "static-file", "src": "projects/colombia/trecc-innovation-proposal.html", "dest": "colombia/index.html" },
+    { "id": "colombia-sesion1",   "type": "static-file", "src": "projects/colombia/sesion1-deck.html",            "dest": "colombia/sesion1-deck.html" },
+    { "id": "colombia-sesion2",   "type": "static-file", "src": "projects/colombia/sesion2-deck.html",            "dest": "colombia/sesion2-deck.html" },
+    { "id": "colombia-dia1",      "type": "static-file", "src": "projects/colombia/dia1-deck.html",               "dest": "colombia/dia1-deck.html" },
+    { "id": "colombia-dia2",      "type": "static-file", "src": "projects/colombia/dia2-deck.html",               "dest": "colombia/dia2-deck.html" },
+    { "id": "colombia-quiz",      "type": "static-file", "src": "projects/colombia/quiz-nicho.html",              "dest": "colombia/quiz-nicho.html" },
+    { "id": "colombia-img",       "type": "static-dir",  "src": "projects/colombia/img",                         "dest": "colombia/img" },
+    { "id": "timorleste",  "type": "static-dir",  "src": "projects/timorleste/findings",  "dest": "timorleste" },
+    { "id": "indian-ocean","type": "static-dir",  "src": "projects/indian-ocean",          "dest": "indian-ocean" }
+  ]
+}

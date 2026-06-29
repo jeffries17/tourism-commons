@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicadores RTA — Tarjeta de Referencia</title>
+    <style>
+        :root {
+            --teal: #3E9987; --teal-dark: #2D7A6A; --teal-light: #E6F4F1;
+            --navy: #1B2B5A; --gold: #F5C400; --gold-light: #FEF7D6;
+            --green: #1E7E34; --green-light: #e8f5e9;
+            --amber: #B8620A; --amber-light: #FEF3E2;
+            --bg: #F7F8F5; --border: #DDE3DC;
+            --text: #1A1A1A; --text-muted: #5A6478;
+            /* Theme colors per pillar */
+            --p1: #2D7A6A; --p1-light: #E6F4F1;
+            --p2: #1B2B5A; --p2-light: #E8ECFB;
+            --p3: #7A4A00; --p3-light: #FEF3E2;
+            --p4: #2D5A1E; --p4-light: #E8F5E9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: var(--bg); padding: 1.5rem; color: var(--text); }
+        .page { max-width: 900px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 3px 16px rgba(0,0,0,0.08); overflow: hidden; }
+
+        /* HEADER */
+        .header { background: var(--navy); padding: 1.1rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.6rem; }
+        .header-left h1 { color: white; font-size: 1rem; font-weight: 700; }
+        .header-left p { color: rgba(255,255,255,0.5); font-size: 0.7rem; margin-top: 0.15rem; }
+        .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+        .rta-badge { background: var(--teal); color: white; padding: 0.3rem 0.85rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
+        .session-badge { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.68rem; }
+
+        /* INTRO */
+        .intro { padding: 0.8rem 2rem; background: var(--teal-light); border-bottom: 2px solid var(--teal); font-size: 0.8rem; color: var(--teal-dark); line-height: 1.5; display: flex; gap: 0.6rem; }
+        .intro strong { color: var(--navy); }
+
+        /* SELF-ASSESSMENT KEY */
+        .key-bar { padding: 0.65rem 2rem; background: var(--bg); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .key-label { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .key-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; }
+        .key-dot { width: 12px; height: 12px; border-radius: 50%; flex: 0 0 12px; }
+        .dot-have { background: var(--green); }
+        .dot-dev { background: var(--gold); }
+        .dot-na { background: var(--border); }
+
+        /* PILLARS GRID */
+        .pillars { padding: 1.25rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+        .pillar { border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
+        .pillar-header { padding: 0.7rem 1rem; display: flex; align-items: center; gap: 0.6rem; }
+        .p1 .pillar-header { background: var(--p1); }
+        .p2 .pillar-header { background: var(--p2); }
+        .p3 .pillar-header { background: var(--p3); }
+        .p4 .pillar-header { background: var(--p4); }
+
+        .pillar-num { font-size: 1.1rem; font-weight: 900; color: rgba(255,255,255,0.3); font-family: 'Arial Black', Arial, sans-serif; flex: 0 0 auto; }
+        .pillar-title { color: white; font-size: 0.82rem; font-weight: 700; line-height: 1.3; flex: 1; }
+
+        .indicators { padding: 0.25rem 0; }
+        .indicator { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.55rem 1rem; border-bottom: 1px solid var(--bg); transition: background 0.15s; cursor: pointer; }
+        .indicator:last-child { border-bottom: none; }
+        .indicator:hover { background: var(--bg); }
+
+        .ind-num { font-size: 0.65rem; font-weight: 700; color: var(--text-muted); flex: 0 0 22px; padding-top: 2px; }
+        .ind-text { flex: 1; font-size: 0.8rem; color: var(--text); line-height: 1.4; }
+        .ind-status { display: flex; gap: 0.2rem; flex: 0 0 auto; }
+        .status-dot {
+            width: 20px; height: 20px; border-radius: 50%;
+            border: 1.5px solid var(--border);
+            cursor: pointer; transition: all 0.15s;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.6rem; color: white; font-weight: 700;
+        }
+        .status-dot:hover { transform: scale(1.15); }
+        .status-dot.have { background: var(--green); border-color: var(--green); }
+        .status-dot.developing { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+        .status-dot.na { background: var(--border); border-color: #bbb; }
+
+        /* SUMMARY BAR */
+        .summary { padding: 1rem 2rem; background: var(--navy); margin: 0 2rem 0; border-radius: 8px; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+        .summary-item { text-align: center; }
+        .summary-item .s-num { font-size: 1.6rem; font-weight: 900; color: white; line-height: 1; font-family: 'Arial Black', Arial, sans-serif; }
+        .summary-item .s-label { font-size: 0.65rem; color: rgba(255,255,255,0.55); margin-top: 0.2rem; }
+        .summary-item.green .s-num { color: #81c784; }
+        .summary-item.amber .s-num { color: var(--gold); }
+        .summary-item.grey .s-num { color: rgba(255,255,255,0.3); }
+        .summary-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.15); }
+        .summary-note { flex: 1; min-width: 200px; font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+        /* STRENGTHS FOR BUYERS */
+        .strengths { padding: 1.25rem 2rem; }
+        .strengths-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--teal-dark); margin-bottom: 0.85rem; }
+        .strength-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .strength-card { background: var(--bg); border-radius: 7px; padding: 0.85rem 1rem; border-left: 3px solid var(--teal); }
+        .strength-card .sc-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 0.3rem; }
+        .strength-card input { width: 100%; border: none; border-bottom: 1px solid var(--border); background: transparent; padding: 0.25rem 0; font-size: 0.82rem; color: var(--text); outline: none; font-family: Arial, sans-serif; }
+        .strength-card .buyer-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.5rem; }
+        .buyer-tag { padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.65rem; font-weight: 700; border: 1px solid var(--border); cursor: pointer; transition: all 0.15s; background: white; color: var(--text-muted); }
+        .buyer-tag.active { background: var(--teal); border-color: var(--teal); color: white; }
+
+        /* FOOTER */
+        .footer-bar { background: var(--navy); padding: 0.55rem 2rem; display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; }
+        .footer-bar p { font-size: 0.62rem; color: rgba(255,255,255,0.4); }
+        .print-btn { padding: 0.28rem 0.8rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; font-size: 0.68rem; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; }
+
+        @media print { body { background: white; padding: 0; } .page { box-shadow: none; } .print-btn { display: none; } .pillar { break-inside: avoid; } }
+        @media (max-width: 650px) { body { padding: 0; } .page { border-radius: 0; } .pillars { grid-template-columns: 1fr; padding: 1rem; } .strengths { padding: 1rem; } .strength-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="header">
+        <div class="header-left">
+            <h1>Indicadores RTA — Auto-evaluación</h1>
+            <p>Responsible Travel Accreditation · be-rta.org · Lo Responsable Vende · Día 2 presencial</p>
+        </div>
+        <div class="header-right">
+            <div class="rta-badge">16 indicadores · 4 pilares</div>
+            <div class="session-badge">Módulo 2 · Día 2 · 26 de mayo</div>
+        </div>
+    </div>
+
+    <div class="intro">
+        <span>📋</span>
+        <span>Para cada indicador: marca <strong>Verde (✓)</strong> si ya lo tienes establecido, <strong>Naranja (→)</strong> si está en desarrollo, <strong>Gris (–)</strong> si no aplica a tu modelo. Al terminar, identifica tus 3 indicadores más fuertes — son la base de tu narrativa comercial.</span>
+    </div>
+
+    <div class="key-bar">
+        <span class="key-label">Clave:</span>
+        <div class="key-item"><div class="key-dot dot-have"></div> Ya lo tengo</div>
+        <div class="key-item"><div class="key-dot dot-dev"></div> Lo estoy desarrollando</div>
+        <div class="key-item"><div class="key-dot dot-na"></div> No aplica a mi modelo</div>
+    </div>
+
+    <div class="pillars">
+
+        <!-- PILAR 1 -->
+        <div class="pillar p1">
+            <div class="pillar-header">
+                <span class="pillar-num">1</span>
+                <div class="pillar-title">Involucramiento de comunidades locales</div>
+            </div>
+            <div class="indicators">
+                <div class="indicator">
+                    <span class="ind-num">1.1</span>
+                    <span class="ind-text">Las comunidades locales participan en la planificación y toma de decisiones del producto turístico</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)" title="Ya lo tengo">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)" title="En desarrollo">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)" title="No aplica">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">1.2</span>
+                    <span class="ind-text">Hay mecanismos formales de consulta y consentimiento con las comunidades</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">1.3</span>
+                    <span class="ind-text">Los miembros de la comunidad ocupan roles de liderazgo o gestión en la operación</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">1.4</span>
+                    <span class="ind-text">Existe una política de empleo local que prioriza a personas del territorio</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PILAR 2 -->
+        <div class="pillar p2">
+            <div class="pillar-header">
+                <span class="pillar-num">2</span>
+                <div class="pillar-title">Satisfacción de residentes y visitantes</div>
+            </div>
+            <div class="indicators">
+                <div class="indicator">
+                    <span class="ind-num">2.1</span>
+                    <span class="ind-text">Se mide regularmente la satisfacción de los visitantes con el producto</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">2.2</span>
+                    <span class="ind-text">Se mide o consulta regularmente la percepción de los residentes locales sobre el turismo</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">2.3</span>
+                    <span class="ind-text">Existen mecanismos de queja y sugerencia para visitantes y comunidad</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">2.4</span>
+                    <span class="ind-text">Los visitantes reciben información previa sobre normas de comportamiento responsable</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PILAR 3 -->
+        <div class="pillar p3">
+            <div class="pillar-header">
+                <span class="pillar-num">3</span>
+                <div class="pillar-title">Huella económica local y medios de vida</div>
+            </div>
+            <div class="indicators">
+                <div class="indicator">
+                    <span class="ind-num">3.1</span>
+                    <span class="ind-text">Se puede cuantificar qué porcentaje de los ingresos permanece en el territorio local</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">3.2</span>
+                    <span class="ind-text">Se compran bienes y servicios (alimentos, artesanías, transporte) a proveedores locales</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">3.3</span>
+                    <span class="ind-text">Los empleos locales ofrecen condiciones laborales dignas y salarios justos</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">3.4</span>
+                    <span class="ind-text">Se invierte parte de los ingresos en proyectos comunitarios (educación, salud, infraestructura)</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PILAR 4 -->
+        <div class="pillar p4">
+            <div class="pillar-header">
+                <span class="pillar-num">4</span>
+                <div class="pillar-title">Preservación cultural y ambiental</div>
+            </div>
+            <div class="indicators">
+                <div class="indicator">
+                    <span class="ind-num">4.1</span>
+                    <span class="ind-text">El producto turístico activamente protege o promueve elementos del patrimonio cultural local</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">4.2</span>
+                    <span class="ind-text">Existe un límite de visitantes o capacidad de carga para proteger el entorno natural/cultural</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">4.3</span>
+                    <span class="ind-text">Se reducen activamente los residuos, el consumo de energía y el impacto ambiental de la operación</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="ind-num">4.4</span>
+                    <span class="ind-text">Se participa en o apoya activamente proyectos de conservación del entorno natural</span>
+                    <div class="ind-status">
+                        <div class="status-dot" onclick="cycleStatus(this)">✓</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">→</div>
+                        <div class="status-dot" onclick="cycleStatus(this)">–</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SUMMARY -->
+    <div style="padding: 0 2rem;">
+        <div class="summary" id="summaryBar">
+            <div class="summary-item green"><div class="s-num" id="countHave">–</div><div class="s-label">Ya lo tengo</div></div>
+            <div class="summary-divider"></div>
+            <div class="summary-item amber"><div class="s-num" id="countDev">–</div><div class="s-label">En desarrollo</div></div>
+            <div class="summary-divider"></div>
+            <div class="summary-item grey"><div class="s-num" id="countNA">–</div><div class="s-label">No aplica</div></div>
+            <div class="summary-divider"></div>
+            <div class="summary-note">Los indicadores en verde son tus <strong style="color:white;">activos comerciales</strong>. Los en naranja son tus <strong style="color:var(--gold);">oportunidades de mejora</strong>. Ambos tienen valor narrativo ante compradores europeos.</div>
+        </div>
+    </div>
+
+    <!-- MIS 3 MÁS FUERTES -->
+    <div class="strengths">
+        <div class="strengths-title">⭐ Mis 3 indicadores más fuertes — y cómo comunicarlos</div>
+        <div class="strength-grid">
+            <div class="strength-card">
+                <div class="sc-label">Indicador más fuerte #1</div>
+                <input type="text" placeholder="Ej: 3.1 — El 70% de los ingresos permanece en el territorio">
+                <div class="sc-label" style="margin-top:0.6rem;">Cómo lo comunicaría a cada comprador:</div>
+                <div class="buyer-tags">
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🌿 Especialista</span>
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🌍 Generalista</span>
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🧭 FIT</span>
+                </div>
+            </div>
+            <div class="strength-card">
+                <div class="sc-label">Indicador más fuerte #2</div>
+                <input type="text" placeholder="Ej: 1.1 — La comunidad participa en la toma de decisiones del tour">
+                <div class="sc-label" style="margin-top:0.6rem;">Cómo lo comunicaría a cada comprador:</div>
+                <div class="buyer-tags">
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🌿 Especialista</span>
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🌍 Generalista</span>
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🧭 FIT</span>
+                </div>
+            </div>
+            <div class="strength-card">
+                <div class="sc-label">Indicador más fuerte #3</div>
+                <input type="text" placeholder="Ej: 4.1 — El tour protege activamente el patrimonio cultural Wayuu">
+                <div class="sc-label" style="margin-top:0.6rem;">Cómo lo comunicaría a cada comprador:</div>
+                <div class="buyer-tags">
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🌿 Especialista</span>
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🌍 Generalista</span>
+                    <span class="buyer-tag" onclick="this.classList.toggle('active')">🧭 FIT</span>
+                </div>
+            </div>
+            <div class="strength-card" style="border-left-color:var(--amber);">
+                <div class="sc-label">Indicador que más quiero desarrollar</div>
+                <input type="text" placeholder="Ej: 3.1 — Necesito poder cuantificar el % de ingresos locales">
+                <div class="sc-label" style="margin-top:0.6rem;">Mi próximo paso concreto:</div>
+                <input type="text" placeholder="Ej: Hacer el cálculo con mi contador antes del 20 de mayo" style="margin-top:0.3rem;">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <p>Lo Responsable Vende · TRECC / Institut Français Colombia · Módulo 2 · Día 2 · 26 de mayo de 2026 · Basado en el marco RTA (be-rta.org)</p>
+        <button class="print-btn" onclick="window.print()">🖨 Imprimir</button>
+    </div>
+
+</div>
+
+<script>
+    // Cycle status dots: none → have → developing → na → none
+    function cycleStatus(dot) {
+        const row = dot.parentElement;
+        const dots = row.querySelectorAll('.status-dot');
+        const idx = Array.from(dots).indexOf(dot);
+        // Toggle: if already selected, deselect; else select
+        const wasSelected = dot.classList.contains('have') || dot.classList.contains('developing') || dot.classList.contains('na');
+        // Clear all in row
+        dots[0].classList.remove('have');
+        dots[1].classList.remove('developing');
+        dots[2].classList.remove('na');
+        if (!wasSelected) {
+            if (idx === 0) dot.classList.add('have');
+            if (idx === 1) dot.classList.add('developing');
+            if (idx === 2) dot.classList.add('na');
+        }
+        updateSummary();
+    }
+
+    function updateSummary() {
+        const have = document.querySelectorAll('.status-dot.have').length;
+        const dev = document.querySelectorAll('.status-dot.developing').length;
+        const na = document.querySelectorAll('.status-dot.na').length;
+        document.getElementById('countHave').textContent = have;
+        document.getElementById('countDev').textContent = dev;
+        document.getElementById('countNA').textContent = na;
+    }
+</script>
+</body>
+</html>

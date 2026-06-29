@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Constructor de Claims RTA · Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal: #2A7F6F; --teal-dark: #1D5C4F; --teal-light: #E8F4F1;
+            --navy: #1C2D4F; --navy-mid: #2D3F6A;
+            --gold: #C09A2F; --gold-light: #FDF8E8; --gold-dark: #7A6000;
+            --green: #3A7D44; --green-light: #E8F5EA;
+            --bg: #F7F8FA; --border: #DDE0E6;
+            --text: #1C2D4F; --text-muted: #6B7280;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Arial', sans-serif; background: white; color: var(--text); }
+
+        .topbar { background: var(--navy); padding: 0.65rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+        .topbar-logo { font-family: 'Arial Black', sans-serif; font-size: 0.8rem; color: white; letter-spacing: 0.5px; }
+        .topbar-sub { font-family: 'Arial', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+        .tool-hero { margin-bottom: 1.75rem; }
+        .tool-kicker { font-family: 'Arial Black', sans-serif; font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.5rem; }
+        .tool-hero h1 { font-family: 'Arial Black', sans-serif; font-size: 2rem; color: var(--navy); line-height: 1.15; margin-bottom: 0.5rem; }
+        .tool-hero p { font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+        /* STEP INDICATOR */
+        .steps { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.75rem; flex-wrap: wrap; }
+        .step-dot { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Arial Black', sans-serif; font-size: 0.68rem; font-weight: 900; flex-shrink: 0; }
+        .step-dot.active  { background: var(--teal); color: white; }
+        .step-dot.done    { background: var(--teal-light); color: var(--teal-dark); }
+        .step-dot.pending { background: var(--bg); color: var(--text-muted); border: 1.5px solid var(--border); }
+        .step-lbl { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: var(--text-muted); }
+        .step-sep { width: 20px; height: 1px; background: var(--border); flex-shrink: 0; }
+
+        /* BIZ FILTER */
+        .biz-filter { display: flex; gap: 0.45rem; margin-bottom: 1.25rem; flex-wrap: wrap; align-items: center; }
+        .biz-filter-lbl { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: var(--text-muted); margin-right: 0.25rem; }
+        .biz-btn { font-family: 'Arial', sans-serif; font-size: 0.78rem; padding: 0.28rem 0.75rem; border-radius: 20px; border: 1.5px solid var(--border); background: white; cursor: pointer; transition: all 0.18s; }
+        .biz-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+        /* CATEGORY SECTIONS */
+        .cat-section { margin-bottom: 1.4rem; }
+        .cat-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+        .cat-icon { font-size: 1.05rem; }
+        .cat-name { font-family: 'Arial Black', sans-serif; font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; }
+        .cat-name.c-teal  { color: var(--teal-dark); }
+        .cat-name.c-gold  { color: var(--gold-dark); }
+        .cat-name.c-navy  { color: var(--navy); }
+        .cat-name.c-green { color: var(--green); }
+
+        .ind-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+        .ind-card { border: 1.5px solid var(--border); border-radius: 10px; padding: 0.8rem 0.9rem 0.7rem; cursor: pointer; transition: all 0.18s; background: white; position: relative; }
+        .ind-card:hover { border-color: var(--teal); background: var(--teal-light); }
+        .ind-card.selected { border-color: var(--teal) !important; background: var(--teal-light) !important; }
+        .ind-card.relevant:not(.selected) { border-color: var(--border); }
+        .ind-card.relevant:not(.selected) .ind-num::after { content: ' · para ti'; color: var(--teal); font-style: italic; }
+        .ind-num { font-family: 'Arial Black', sans-serif; font-size: 0.62rem; font-weight: 900; color: var(--text-muted); margin-bottom: 0.2rem; }
+        .ind-title { font-family: 'Arial Black', sans-serif; font-size: 0.8rem; color: var(--navy); margin-bottom: 0.2rem; line-height: 1.3; }
+        .ind-quote { font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--text-muted); line-height: 1.45; font-style: italic; }
+        .ind-biz { display: flex; gap: 0.2rem; margin-top: 0.35rem; flex-wrap: wrap; }
+        .ind-biz span { font-size: 0.62rem; color: var(--text-muted); }
+        .ind-check { position: absolute; top: 0.55rem; right: 0.65rem; width: 17px; height: 17px; border-radius: 50%; background: var(--teal); color: white; display: none; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 900; }
+        .ind-card.selected .ind-check { display: flex; }
+
+        /* STEP 2 — CLAIM FORMS */
+        .claim-form-wrap { display: none; }
+        .form-intro { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem; }
+        .claim-block { border: 1.5px solid var(--border); border-radius: 12px; margin-bottom: 1.1rem; overflow: hidden; background: white; }
+        .claim-block-header { padding: 0.85rem 1.1rem 0.7rem; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.7rem; }
+        .claim-block-num { font-family: 'Arial Black', sans-serif; font-size: 1.2rem; font-weight: 900; min-width: 28px; line-height: 1; }
+        .claim-block-num.c-teal  { color: var(--teal); }
+        .claim-block-num.c-gold  { color: var(--gold); }
+        .claim-block-num.c-navy  { color: var(--navy); }
+        .claim-block-num.c-green { color: var(--green); }
+        .claim-block-title { font-family: 'Arial Black', sans-serif; font-size: 0.85rem; color: var(--navy); line-height: 1.3; }
+        .claim-block-cat { font-family: 'Arial', sans-serif; font-size: 0.68rem; color: var(--text-muted); margin-top: 0.1rem; }
+        .claim-pitch { margin: 0.75rem 1.1rem 0; padding: 0.55rem 0.85rem; background: var(--teal-light); border-left: 3px solid var(--teal); border-radius: 0 6px 6px 0; font-family: 'Arial', sans-serif; font-size: 0.76rem; color: var(--teal-dark); line-height: 1.5; font-style: italic; }
+        .claim-pitch-label { font-size: 0.62rem; font-style: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.2rem; opacity: 0.7; }
+        .claim-fields { padding: 0.85rem 1.1rem 1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+        .claim-field label { display: block; font-family: 'Arial', sans-serif; font-size: 0.63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--teal-dark); margin-bottom: 0.28rem; }
+        .claim-field textarea { width: 100%; border: 1.5px solid var(--border); border-radius: 7px; padding: 0.55rem 0.7rem; font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text); line-height: 1.5; resize: vertical; min-height: 52px; background: var(--bg); transition: border-color 0.18s; }
+        .claim-field textarea:focus { outline: none; border-color: var(--teal); background: white; }
+        .claim-field textarea::placeholder { color: #aab0bb; font-style: italic; font-size: 0.76rem; }
+
+        /* STEP 3 — RESULTS */
+        .results-wrap { display: none; }
+        .results-header { margin-bottom: 1.5rem; }
+        .results-title { font-family: 'Arial Black', sans-serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 0.3rem; }
+        .results-sub { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); }
+        .res-cat-label { font-family: 'Arial Black', sans-serif; font-size: 0.62rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.65rem; }
+        .res-cat-label.c-teal  { color: var(--teal-dark); }
+        .res-cat-label.c-gold  { color: var(--gold-dark); }
+        .res-cat-label.c-navy  { color: var(--navy); }
+        .res-cat-label.c-green { color: var(--green); }
+        .res-cat-block { margin-bottom: 1.5rem; }
+        .res-ind { background: var(--bg); border-radius: 8px; padding: 0.85rem 1rem; margin-bottom: 0.5rem; }
+        .res-ind-title { font-family: 'Arial Black', sans-serif; font-size: 0.8rem; color: var(--navy); margin-bottom: 0.55rem; }
+        .res-row { display: grid; grid-template-columns: 150px 1fr; gap: 0.4rem 0.75rem; margin-bottom: 0.3rem; align-items: baseline; }
+        .res-row-lbl { font-family: 'Arial', sans-serif; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); }
+        .res-row-val { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text); line-height: 1.5; }
+        .res-row-val.empty { color: var(--text-muted); font-style: italic; }
+
+        /* BUTTONS */
+        .btn-row { display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap; margin-top: 1.5rem; }
+        .btn-p { display: inline-flex; align-items: center; gap: 0.35rem; font-family: 'Arial Black', sans-serif; font-size: 0.76rem; font-weight: 900; background: var(--navy); color: white; border: none; padding: 0.6rem 1.3rem; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+        .btn-p:hover { background: var(--teal-dark); }
+        .btn-p:disabled { opacity: 0.38; cursor: not-allowed; }
+        .btn-s { display: inline-flex; align-items: center; gap: 0.35rem; font-family: 'Arial', sans-serif; font-size: 0.76rem; font-weight: 700; background: white; color: var(--text); border: 1.5px solid var(--border); padding: 0.55rem 1.1rem; border-radius: 8px; cursor: pointer; transition: all 0.18s; }
+        .btn-s:hover { border-color: var(--teal); color: var(--teal-dark); }
+        .sel-count { font-family: 'Arial', sans-serif; font-size: 0.76rem; color: var(--text-muted); }
+
+        .tool-footer { text-align: center; font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--text-muted); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+
+        @media (max-width: 600px) {
+            .ind-grid { grid-template-columns: 1fr; }
+            .res-row { grid-template-columns: 1fr; }
+            .res-row-lbl { margin-top: 0.35rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="topbar-logo">Lo Responsable Vende</div>
+    <div class="topbar-sub">Constructor de Claims RTA · Módulo 1 · Sesión 2</div>
+</nav>
+
+<div class="container">
+
+    <div class="tool-hero">
+        <div class="tool-kicker">Herramienta · Bloque 2</div>
+        <h1>¿Qué podés decir —<br>y demostrar?</h1>
+        <p>Seleccioná los indicadores RTA que ya aplicás o que querés desarrollar. Para cada uno, reflexioná sobre cómo lo comunicás hoy, qué podrías decir con más especificidad, y qué necesitarías para llegar ahí. Esto alimenta directamente tu plan de acción para el módulo presencial de mayo.</p>
+    </div>
+
+    <!-- ── INTRO ─────────────────────────────────────────────── -->
+    <div id="introEl">
+        <div style="border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:1.5rem;background:white;">
+            <div style="margin-bottom:1rem;">
+                <label style="display:block;font-family:'Arial',sans-serif;font-size:0.63rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--teal-dark);margin-bottom:0.3rem;">Nombre de tu operación</label>
+                <input type="text" id="introName" autocomplete="organization" placeholder="Ej. Exploraciones Antioquia"
+                    style="width:100%;border:1.5px solid var(--border);border-radius:7px;padding:0.55rem 0.7rem;font-family:'Arial',sans-serif;font-size:0.88rem;color:var(--text);background:var(--bg);outline:none;transition:border-color 0.18s;"
+                    onfocus="this.style.borderColor='var(--teal)';this.style.background='white'"
+                    onblur="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
+            </div>
+            <div>
+                <label style="display:block;font-family:'Arial',sans-serif;font-size:0.63rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--teal-dark);margin-bottom:0.3rem;">Tu correo electrónico</label>
+                <input type="email" id="introEmail" autocomplete="email" placeholder="correo@tuoperacion.com"
+                    style="width:100%;border:1.5px solid var(--border);border-radius:7px;padding:0.55rem 0.7rem;font-family:'Arial',sans-serif;font-size:0.88rem;color:var(--text);background:var(--bg);outline:none;transition:border-color 0.18s;"
+                    onfocus="this.style.borderColor='var(--teal)';this.style.background='white'"
+                    onblur="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
+            </div>
+            <div id="introError" style="display:none;font-family:'Arial',sans-serif;font-size:0.78rem;color:#C8352A;margin-top:0.6rem;"></div>
+        </div>
+        <button class="btn-p" onclick="startTool()">Comenzar →</button>
+    </div>
+
+    <div class="steps" id="stepsEl" style="display:none;">
+        <div class="step-dot active" id="dot1">1</div>
+        <div class="step-lbl">Elegir indicadores</div>
+        <div class="step-sep"></div>
+        <div class="step-dot pending" id="dot2">2</div>
+        <div class="step-lbl">Construir claims</div>
+        <div class="step-sep"></div>
+        <div class="step-dot pending" id="dot3">3</div>
+        <div class="step-lbl">Tu resumen</div>
+    </div>
+
+    <!-- ── STEP 1 ─────────────────────────────────────────────── -->
+    <div id="step1El" style="display:none;">
+        <div class="biz-filter">
+            <span class="biz-filter-lbl">Tu tipo de negocio:</span>
+            <button class="biz-btn active" onclick="setBiz('all',this)">Todos</button>
+            <button class="biz-btn" onclick="setBiz('tour',this)">🧭 Operador / guía</button>
+            <button class="biz-btn" onclick="setBiz('lodge',this)">🏨 Alojamiento</button>
+            <button class="biz-btn" onclick="setBiz('food',this)">🍽️ Restaurante</button>
+        </div>
+        <div id="indicatorGrid"></div>
+        <div class="btn-row">
+            <button class="btn-p" id="toStep2Btn" onclick="goToStep2()" disabled>Construir mis claims →</button>
+            <span class="sel-count" id="selCount">Ningún indicador seleccionado</span>
+        </div>
+    </div>
+
+    <!-- ── STEP 2 ─────────────────────────────────────────────── -->
+    <div id="step2El" class="claim-form-wrap">
+        <p class="form-intro">Para cada indicador que seleccionaste, reflexioná sobre las tres preguntas. No hay respuestas incorrectas — el objetivo es ser honesto sobre dónde estás y adónde querés llegar.</p>
+        <div id="claimForms"></div>
+        <div class="btn-row">
+            <button class="btn-p" onclick="goToStep3()">Ver mi resumen →</button>
+            <button class="btn-s" onclick="goToStep1()">← Cambiar selección</button>
+        </div>
+    </div>
+
+    <!-- ── STEP 3 ─────────────────────────────────────────────── -->
+    <div id="step3El" class="results-wrap">
+        <div class="results-header">
+            <div class="results-title">Tu inventario de claims</div>
+            <div class="results-sub">Guardalo — lo usamos como base en el módulo presencial de mayo.</div>
+            <div id="saveStatus" style="font-family:'Arial',sans-serif;font-size:0.75rem;color:var(--teal-dark);margin-top:0.5rem;display:none;">✓ Guardado correctamente</div>
+        </div>
+        <div id="resultsContent"></div>
+        <div class="btn-row">
+            <button class="btn-p" onclick="copyResults()">📋 Copiar texto</button>
+            <button class="btn-s" onclick="goToStep2()">← Editar claims</button>
+            <button class="btn-s" onclick="resetTool()">Empezar de nuevo</button>
+        </div>
+    </div>
+
+    <div class="tool-footer">Lo Responsable Vende · TRECC · Institut Français Colombia · 2026</div>
+</div>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────────────────
+
+const CATS = [
+    { id: 1, name: 'Involucramiento de la Comunidad Local', icon: '🤝', color: 'c-teal' },
+    { id: 2, name: 'Satisfacción de Residentes y Visitantes', icon: '⭐', color: 'c-gold' },
+    { id: 3, name: 'Huella Económica Local', icon: '💰', color: 'c-navy' },
+    { id: 4, name: 'Preservación Cultural y Ambiental', icon: '🌿', color: 'c-green' },
+];
+
+const INDICATORS = [
+    { num:'01', cat:1, title:'Diseño del recorrido',
+      quote:'"Las comunidades ayudan a dar forma a la experiencia — no solo la reciben"',
+      pitch:'"No diseñamos tours sobre comunidades — las comunidades diseñan tours con nosotros."',
+      biz:['tour','lodge'] },
+    { num:'02', cat:1, title:'Toma de decisiones',
+      quote:'"Las comunidades tienen voz real sobre accesos, límites de visitas y distribución de beneficios"',
+      pitch:'"Nuestras comunidades deciden qué se muestra, cuántas personas entran y qué queda privado."',
+      biz:['tour'] },
+    { num:'03', cat:1, title:'Beneficios a la población',
+      quote:'"La comunidad en su conjunto — no solo unos pocos — se beneficia del gasto turístico"',
+      pitch:'"Podemos decirte exactamente qué % del gasto de tu cliente se queda en el territorio."',
+      biz:['tour','lodge','food'] },
+    { num:'04', cat:1, title:'Apoyo a proyectos sociales',
+      quote:'"El operador contribuye a causas locales más allá del turismo mismo"',
+      pitch:'"Parte de cada reserva financia [proyecto concreto]. Algo que tu cliente puede ver, sentir y contar."',
+      biz:['tour','lodge'] },
+    { num:'05', cat:2, title:'Satisfacción del visitante',
+      quote:'"El recorrido cumple o supera genuinamente las expectativas del viajero"',
+      pitch:'"Más del 85% nos califican 5/5. Tenemos los datos y las reseñas para demostrarlo."',
+      biz:['tour','lodge','food'] },
+    { num:'06', cat:2, title:'Nivel de perturbación',
+      quote:'"El turismo no perturba a los residentes ni a los ecosistemas"',
+      pitch:'"El límite de visitas es parte del producto — diseñado para no alterar la vida de quien vive aquí."',
+      biz:['tour'] },
+    { num:'07', cat:2, title:'Accesibilidad',
+      quote:'"El producto está diseñado para incluir una amplia variedad de visitantes"',
+      pitch:'"El turismo accesible es un mercado europeo grande y poco cubierto. Una ventana real de diferenciación."',
+      biz:['lodge','tour'] },
+    { num:'08', cat:2, title:'Estacionalidad',
+      quote:'"Los visitantes se distribuyen a lo largo del año — no solo en temporada alta"',
+      pitch:'"Operamos 11 meses del año — menos presión de precios, viajeros más comprometidos, relación más estable."',
+      biz:['tour','lodge','food'] },
+    { num:'09', cat:3, title:'Condiciones laborales',
+      quote:'"Los trabajadores locales reciben salarios justos, condiciones seguras y buen trato"',
+      pitch:'"Nuestros guías tienen contrato, seguro y formación continua — eso se nota en la calidad y en las reseñas."',
+      biz:['tour','lodge'] },
+    { num:'10', cat:3, title:'Medios de vida locales',
+      quote:'"El turismo mejora los medios de vida de la comunidad de manera medible y a largo plazo"',
+      pitch:'"Podemos nombrarte tres familias del territorio cuyo ingreso principal vino de nuestra operación este año."',
+      biz:['tour','lodge'] },
+    { num:'11', cat:3, title:'Proveedores locales',
+      quote:'"Empresas locales proveen el alojamiento, la comida y el transporte — no cadenas externas"',
+      pitch:'"No usamos cadenas. El comprador europeo necesita documentar exactamente esto para su catálogo."',
+      biz:['tour','lodge'] },
+    { num:'12', cat:3, title:'Desarrollo económico sostenible',
+      quote:'"El turismo contribuye a la salud económica del destino a largo plazo"',
+      pitch:'"No solo traemos turistas — co-financiamos mejoras que hacen el destino más atractivo a largo plazo."',
+      biz:['tour','lodge'] },
+    { num:'13', cat:4, title:'Conciencia ambiental',
+      quote:'"Los visitantes se van mejor informados sobre la ecología local que cuando llegaron"',
+      pitch:'"Nuestros guías son naturalistas formados — el viajero llega curioso y se va experto. Eso genera las reseñas más largas."',
+      biz:['tour'] },
+    { num:'14', cat:4, title:'Acciones ambientales',
+      quote:'"Se toman medidas concretas y medibles para reducir el impacto ecológico de la operación"',
+      pitch:'"Cinco acciones medibles este año para reducir impacto. El comprador europeo cada vez más lo pide por escrito."',
+      biz:['tour','lodge','food'] },
+    { num:'15', cat:4, title:'Conciencia cultural',
+      quote:'"Los visitantes desarrollan respeto genuino por la cultura local a través de la experiencia"',
+      pitch:'"El patrimonio cultural no es decorado — es el core del producto. El viajero que lo vive no lo olvida."',
+      biz:['tour','food'] },
+    { num:'16', cat:4, title:'Calidad de la experiencia',
+      quote:'"La sostenibilidad y la calidad se refuerzan mutuamente — no son categorías opuestas"',
+      pitch:'"Los mejores especialistas europeos buscan exactamente esto: que lo responsable sea también lo más memorable."',
+      biz:['tour','lodge','food'] },
+];
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+
+let selected = new Set();
+let bizFilter = 'all';
+const claims = {};
+const userData = { name: '', email: '' };
+
+function startTool() {
+    const name  = document.getElementById('introName').value.trim();
+    const email = document.getElementById('introEmail').value.trim();
+    const errEl = document.getElementById('introError');
+    if (!name) {
+        errEl.textContent = 'Por favor ingresa el nombre de tu operación.';
+        errEl.style.display = 'block';
+        document.getElementById('introName').focus();
+        return;
+    }
+    if (!email || !email.includes('@')) {
+        errEl.textContent = 'Por favor ingresa tu correo electrónico.';
+        errEl.style.display = 'block';
+        document.getElementById('introEmail').focus();
+        return;
+    }
+    userData.name  = name;
+    userData.email = email;
+    errEl.style.display = 'none';
+    show('introEl', false);
+    document.getElementById('stepsEl').style.display = 'flex';
+    show('step1El', true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── STEP 1 ────────────────────────────────────────────────────────────────────
+
+function renderGrid() {
+    const el = document.getElementById('indicatorGrid');
+    el.innerHTML = '';
+    CATS.forEach(cat => {
+        const inCat = INDICATORS.filter(i => i.cat === cat.id);
+        const sec = document.createElement('div');
+        sec.className = 'cat-section';
+        sec.innerHTML = `<div class="cat-header"><span class="cat-icon">${cat.icon}</span><span class="cat-name ${cat.color}">${cat.name}</span></div><div class="ind-grid" id="catGrid${cat.id}"></div>`;
+        el.appendChild(sec);
+        const grid = sec.querySelector(`#catGrid${cat.id}`);
+        inCat.forEach(ind => {
+            const isRelevant = bizFilter !== 'all' && ind.biz.includes(bizFilter);
+            const isSelected = selected.has(ind.num);
+            const card = document.createElement('div');
+            card.className = 'ind-card' + (isSelected ? ' selected' : '') + (isRelevant ? ' relevant' : '');
+            card.onclick = () => toggleInd(ind.num);
+            card.innerHTML = `
+                <div class="ind-check">✓</div>
+                <div class="ind-num">${ind.num}</div>
+                <div class="ind-title">${ind.title}</div>
+                <div class="ind-quote">${ind.quote}</div>
+                <div class="ind-biz">${ind.biz.map(b => `<span>${b==='tour'?'🧭':b==='lodge'?'🏨':'🍽️'}</span>`).join('')}</div>
+            `;
+            grid.appendChild(card);
+        });
+    });
+}
+
+function toggleInd(num) {
+    if (selected.has(num)) selected.delete(num);
+    else selected.add(num);
+    renderGrid();
+    updateCount();
+}
+
+function setBiz(type, btn) {
+    bizFilter = type;
+    document.querySelectorAll('.biz-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid();
+}
+
+function updateCount() {
+    const n = selected.size;
+    document.getElementById('selCount').textContent =
+        n === 0 ? 'Ningún indicador seleccionado'
+        : n === 1 ? '1 indicador seleccionado'
+        : `${n} indicadores seleccionados`;
+    document.getElementById('toStep2Btn').disabled = n === 0;
+}
+
+// ── STEP 2 ────────────────────────────────────────────────────────────────────
+
+function goToStep2() {
+    // Save any existing textarea values
+    saveFormValues();
+
+    const ordered = INDICATORS.filter(i => selected.has(i.num));
+    const formsEl = document.getElementById('claimForms');
+    formsEl.innerHTML = '';
+
+    ordered.forEach(ind => {
+        const cat = CATS.find(c => c.id === ind.cat);
+        const saved = claims[ind.num] || {};
+        const block = document.createElement('div');
+        block.className = 'claim-block';
+        block.innerHTML = `
+            <div class="claim-block-header">
+                <div class="claim-block-num ${cat.color}">${ind.num}</div>
+                <div>
+                    <div class="claim-block-title">${ind.title}</div>
+                    <div class="claim-block-cat">${cat.icon} ${cat.name}</div>
+                </div>
+            </div>
+            <div class="claim-pitch">
+                <span class="claim-pitch-label">Inspiración · así podría sonar para un comprador europeo</span>
+                ${ind.pitch}
+            </div>
+            <div class="claim-fields">
+                <div class="claim-field">
+                    <label>¿Cómo lo comunicás hoy?</label>
+                    <textarea data-num="${ind.num}" data-field="current"
+                        placeholder="Ej. Lo mencionamos de pasada en la descripción del tour, pero sin cifras concretas..."
+                        rows="2">${saved.current||''}</textarea>
+                </div>
+                <div class="claim-field">
+                    <label>¿Qué podrías decir con más especificidad?</label>
+                    <textarea data-num="${ind.num}" data-field="improved"
+                        placeholder="Ej. Trabajamos con 3 familias de la comunidad X — reciben el 35% del ingreso directo de cada tour..."
+                        rows="2">${saved.improved||''}</textarea>
+                </div>
+                <div class="claim-field">
+                    <label>¿Qué necesitarías implementar o documentar?</label>
+                    <textarea data-num="${ind.num}" data-field="action"
+                        placeholder="Ej. Documentar el acuerdo con la comunidad, conseguir el % exacto, conseguir una foto del proceso..."
+                        rows="2">${saved.action||''}</textarea>
+                </div>
+            </div>
+        `;
+        formsEl.appendChild(block);
+    });
+
+    show('step1El', false);
+    show('step2El', true);
+    setDots(2);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function saveFormValues() {
+    document.querySelectorAll('.claim-field textarea').forEach(ta => {
+        const num = ta.getAttribute('data-num');
+        const field = ta.getAttribute('data-field');
+        if (!claims[num]) claims[num] = {};
+        claims[num][field] = ta.value.trim();
+    });
+}
+
+// ── STEP 3 ────────────────────────────────────────────────────────────────────
+
+function goToStep3() {
+    saveFormValues();
+    const ordered = INDICATORS.filter(i => selected.has(i.num));
+    const el = document.getElementById('resultsContent');
+    el.innerHTML = '';
+
+    CATS.forEach(cat => {
+        const inCat = ordered.filter(i => i.cat === cat.id);
+        if (inCat.length === 0) return;
+        const block = document.createElement('div');
+        block.className = 'res-cat-block';
+        block.innerHTML = `<div class="res-cat-label ${cat.color}">${cat.icon} ${cat.name}</div>`;
+        inCat.forEach(ind => {
+            const c = claims[ind.num] || {};
+            const row = document.createElement('div');
+            row.className = 'res-ind';
+            row.innerHTML = `
+                <div class="res-ind-title">${ind.num} · ${ind.title}</div>
+                <div class="res-row">
+                    <div class="res-row-lbl">Hoy</div>
+                    <div class="res-row-val ${!c.current?'empty':''}">${c.current||'—'}</div>
+                </div>
+                <div class="res-row">
+                    <div class="res-row-lbl">Con más especificidad</div>
+                    <div class="res-row-val ${!c.improved?'empty':''}">${c.improved||'—'}</div>
+                </div>
+                <div class="res-row">
+                    <div class="res-row-lbl">Para llegar ahí</div>
+                    <div class="res-row-val ${!c.action?'empty':''}">${c.action||'—'}</div>
+                </div>
+            `;
+            block.appendChild(row);
+        });
+        el.appendChild(block);
+    });
+
+    show('step2El', false);
+    show('step3El', true);
+    setDots(3);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const payload = {
+        tool: 'claims_rta',
+        timestamp: new Date().toISOString(),
+        name: userData.name,
+        email: userData.email,
+        indicadores: JSON.stringify([...selected]),
+    };
+    [...selected].forEach(num => {
+        const c = claims[num] || {};
+        payload['claim_' + num + '_hoy']      = c.current  || '';
+        payload['claim_' + num + '_mejorado'] = c.improved || '';
+        payload['claim_' + num + '_accion']   = c.action   || '';
+    });
+    saveToFirestore('claims_results', payload).then(() => {
+        const el = document.getElementById('saveStatus');
+        if (el) el.style.display = 'block';
+    }).catch(() => {});
+}
+
+// ── COPY ─────────────────────────────────────────────────────────────────────
+
+function copyResults() {
+    const ordered = INDICATORS.filter(i => selected.has(i.num));
+    let txt = 'INVENTARIO DE CLAIMS RTA — Lo Responsable Vende\n';
+    txt += '='.repeat(50) + '\n\n';
+    CATS.forEach(cat => {
+        const inCat = ordered.filter(i => i.cat === cat.id);
+        if (inCat.length === 0) return;
+        txt += `${cat.icon} ${cat.name.toUpperCase()}\n${'─'.repeat(40)}\n\n`;
+        inCat.forEach(ind => {
+            const c = claims[ind.num] || {};
+            txt += `[${ind.num}] ${ind.title}\n`;
+            txt += `Hoy: ${c.current||'—'}\n`;
+            txt += `Con más especificidad: ${c.improved||'—'}\n`;
+            txt += `Para llegar ahí: ${c.action||'—'}\n\n`;
+        });
+    });
+    navigator.clipboard.writeText(txt).then(() => {
+        const btn = document.querySelector('.btn-p');
+        const orig = btn.textContent;
+        btn.textContent = '✓ Copiado';
+        setTimeout(() => { btn.textContent = orig; }, 2000);
+    });
+}
+
+// ── NAV HELPERS ───────────────────────────────────────────────────────────────
+
+function goToStep1() {
+    saveFormValues();
+    show('step2El', false);
+    show('step1El', true);
+    setDots(1);
+    renderGrid();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetTool() {
+    selected.clear();
+    Object.keys(claims).forEach(k => delete claims[k]);
+    userData.name = '';
+    userData.email = '';
+    bizFilter = 'all';
+    show('step2El', false);
+    show('step3El', false);
+    show('step1El', false);
+    document.getElementById('stepsEl').style.display = 'none';
+    show('introEl', true);
+    document.getElementById('introName').value = '';
+    document.getElementById('introEmail').value = '';
+    document.getElementById('introError').style.display = 'none';
+    document.querySelectorAll('.biz-btn').forEach((b,i) => b.classList.toggle('active', i===0));
+    renderGrid();
+    updateCount();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function show(id, visible) {
+    const el = document.getElementById(id);
+    el.style.display = visible ? 'block' : 'none';
+}
+
+function setDots(step) {
+    [1,2,3].forEach(n => {
+        const dot = document.getElementById(`dot${n}`);
+        dot.className = 'step-dot ' + (n < step ? 'done' : n === step ? 'active' : 'pending');
+    });
+}
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+
+renderGrid();
+updateCount();
+
+async function saveToFirestore(collection, data) {
+    const fields = {};
+    for (const [k, v] of Object.entries(data)) {
+        if (v === null || v === undefined) continue;
+        if (typeof v === 'number') fields[k] = { integerValue: v };
+        else if (typeof v === 'object') fields[k] = { stringValue: JSON.stringify(v) };
+        else fields[k] = { stringValue: String(v) };
+    }
+    return fetch(
+        'https://firestore.googleapis.com/v1/projects/tourism-development-d620c/databases/(default)/documents/' + collection + '?key=AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4',
+        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ fields }) }
+    );
+}
+</script>
+</body>
+</html>

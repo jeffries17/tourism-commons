@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Análisis de Reseñas · Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --green:      #3A7D44;
+            --green-light:#e8f5ea;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --bg-alt:     #EEF2EF;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.65; color: var(--text); background: var(--bg); min-height: 100vh; }
+
+        /* HEADER */
+        .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .topbar-inner { max-width: 820px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.2rem; letter-spacing: -0.5px; line-height: 1; display: flex; flex-direction: column; }
+        .trecc-logo .wordmark { display: flex; align-items: baseline; }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: var(--navy); }
+        .trecc-logo .tagline { font-family: 'Arial', sans-serif; font-size: 0.5rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px; margin-top: 1px; }
+        .tool-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-dark); }
+
+        /* LAYOUT */
+        .container { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+        /* HERO */
+        .tool-hero { text-align: center; margin-bottom: 2.5rem; }
+        .tool-hero h1 { font-size: 2.2rem; color: var(--navy); line-height: 1.15; margin-bottom: 0.5rem; }
+        .tool-hero p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--text-muted); max-width: 540px; margin: 0 auto; line-height: 1.65; }
+        .accent-bar { height: 3px; width: 60px; background: var(--gold); border-radius: 2px; margin: 1rem auto 0; }
+
+        /* CARDS */
+        .card { background: white; border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .card-label { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.5rem; }
+        .card-title { font-size: 1.2rem; color: var(--navy); margin-bottom: 0.25rem; }
+        .card-desc { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+
+        /* NICHE SELECTOR */
+        .niche-select-wrap { position: relative; }
+        .niche-select { width: 100%; padding: 0.75rem 2.5rem 0.75rem 1rem; font-family: 'Arial', sans-serif; font-size: 0.92rem; color: var(--text); background: white; border: 2px solid var(--border); border-radius: 8px; appearance: none; cursor: pointer; transition: border-color 0.2s; }
+        .niche-select:focus { outline: none; border-color: var(--teal); }
+        .niche-select-arrow { position: absolute; right: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; font-size: 0.8rem; }
+        .niche-preview { margin-top: 0.75rem; padding: 0.65rem 1rem; background: var(--teal-light); border-radius: 8px; border-left: 3px solid var(--teal); display: none; }
+        .niche-preview.visible { display: flex; align-items: center; gap: 0.65rem; }
+        .niche-preview .np-emoji { font-size: 1.5rem; }
+        .niche-preview .np-text { font-family: 'Arial', sans-serif; }
+        .niche-preview .np-name { font-size: 0.88rem; font-weight: 700; color: var(--teal-dark); }
+        .niche-preview .np-cbi { font-size: 0.72rem; color: var(--teal); }
+        .niche-custom-wrap { margin-top: 0.85rem; display: none; }
+        .niche-custom-wrap.visible { display: block; }
+        .niche-custom-input { width: 100%; padding: 0.65rem 1rem; font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--text); background: white; border: 2px solid var(--border); border-radius: 8px; transition: border-color 0.2s; }
+        .niche-custom-input:focus { outline: none; border-color: var(--teal); }
+        .niche-custom-input::placeholder { color: var(--text-muted); font-style: italic; }
+
+        /* REVIEWS */
+        .reviews-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .review-row { display: flex; gap: 0.65rem; align-items: flex-start; }
+        .review-num { flex: 0 0 24px; height: 24px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.72rem; margin-top: 0.6rem; }
+        .review-textarea { flex: 1; padding: 0.65rem 0.85rem; font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text); background: white; border: 1.5px solid var(--border); border-radius: 8px; resize: vertical; min-height: 64px; line-height: 1.55; transition: border-color 0.2s; }
+        .review-textarea:focus { outline: none; border-color: var(--teal); }
+        .review-textarea::placeholder { color: var(--text-muted); font-style: italic; font-size: 0.8rem; }
+        .review-remove { flex: 0 0 auto; width: 24px; height: 24px; background: none; border: 1.5px solid var(--border); border-radius: 50%; color: var(--text-muted); font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-top: 0.6rem; transition: all 0.15s; line-height: 1; }
+        .review-remove:hover { background: #fef2f2; border-color: var(--red); color: var(--red); }
+        .add-review-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); background: var(--teal-light); border: 1.5px dashed var(--teal); border-radius: 7px; padding: 0.5rem 1rem; cursor: pointer; margin-top: 0.5rem; transition: all 0.2s; }
+        .add-review-btn:hover { background: white; border-style: solid; }
+        .review-count-hint { font-family: 'Arial', sans-serif; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+        /* ANALYZE BUTTON */
+        .analyze-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 1rem 2rem; background: var(--navy); color: white; border: none; border-radius: 10px; font-family: 'Arial Black', Arial, sans-serif; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.25s; box-shadow: 0 3px 12px rgba(27,43,90,0.25); margin-bottom: 1.25rem; letter-spacing: 0.2px; }
+        .analyze-btn:hover:not(:disabled) { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(27,43,90,0.3); }
+        .analyze-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+        .analyze-btn .btn-spinner { display: none; width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
+        .analyze-btn.loading .btn-spinner { display: block; }
+        .analyze-btn.loading .btn-text { opacity: 0.7; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* RESULTS */
+        #results { display: none; }
+        #results.visible { display: block; }
+        .results-header { background: linear-gradient(135deg, var(--navy) 0%, var(--teal-dark) 100%); border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; }
+        .results-kicker { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6); margin-bottom: 0.6rem; }
+        .results-title { font-size: 1.75rem; color: white; margin-bottom: 0.25rem; line-height: 1.2; }
+        .results-niche { font-family: 'Arial', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.75); }
+        .results-meta { display: flex; gap: 0.65rem; flex-wrap: wrap; margin-top: 1.1rem; }
+        .results-chip { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 20px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: white; }
+
+        /* THEME BARS */
+        .theme-section { margin-bottom: 1.25rem; }
+        .theme-section-title { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 0.85rem; }
+        .theme-bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.55rem; }
+        .theme-bar-label { font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 600; min-width: 190px; }
+        .theme-bar-track { flex: 1; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
+        .theme-bar-fill { height: 100%; border-radius: 5px; transition: width 1s ease 0.3s; width: 0; }
+        .theme-bar-fill.c-teal { background: var(--teal); }
+        .theme-bar-fill.c-navy { background: var(--navy); }
+        .theme-bar-fill.c-gold { background: var(--gold); }
+        .theme-bar-fill.c-green { background: var(--green); }
+        .theme-bar-fill.c-orange { background: #D97706; }
+        .theme-bar-count { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: var(--text-muted); min-width: 40px; text-align: right; }
+        .theme-bar-zero .theme-bar-label { color: var(--text-muted); }
+        .theme-bar-zero .theme-bar-count { color: var(--border); }
+
+        /* ALIGNMENT SECTION HEADERS */
+        .align-section-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.75rem; }
+        .align-section-sub { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.2rem; }
+        .align-badge { flex-shrink: 0; font-family: 'Arial Black', sans-serif; font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.3rem 0.7rem; border-radius: 20px; white-space: nowrap; }
+        .align-badge.high { background: var(--teal-light); color: var(--teal-dark); }
+        .align-badge.mid  { background: var(--gold-light); color: #7A6000; }
+        .align-badge.low  { background: #fef2f2; color: var(--red); }
+        .align-badge.none { background: var(--bg); color: var(--text-muted); }
+
+        /* NICHE KEYWORD CHIPS */
+        .keyword-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .kw-chip { font-family: 'Arial', sans-serif; font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 20px; }
+        .kw-chip.present { background: var(--teal-light); color: var(--teal-dark); border: 1.5px solid var(--teal); }
+        .kw-chip.absent  { background: var(--bg); color: var(--text-muted); border: 1.5px dashed var(--border); }
+
+        /* ABSENT SECTION */
+        .absent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .absent-item { display: flex; align-items: flex-start; gap: 0.5rem; font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text-muted); padding: 0.5rem 0.65rem; background: var(--bg); border-radius: 6px; flex-direction: column; }
+        .absent-item-row { display: flex; align-items: center; gap: 0.5rem; }
+        .absent-item .absent-x { color: #D97706; font-weight: 700; flex-shrink: 0; }
+        .absent-item.present { color: var(--teal-dark); background: var(--teal-light); }
+        .absent-item.present .absent-x { color: var(--teal); }
+        .absent-hints { font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--text-muted); padding-left: 1rem; margin-top: 0.1rem; font-style: italic; }
+
+        /* GAP BOX */
+        .gap-box { border-left: 4px solid var(--gold); padding: 1rem 1.25rem; background: var(--gold-light); border-radius: 0 10px 10px 0; margin-bottom: 1.25rem; }
+        .gap-box p { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text); line-height: 1.7; }
+
+        /* SUGGESTIONS */
+        .suggestions-list { display: flex; flex-direction: column; gap: 0.65rem; }
+        .suggestion-item { display: flex; gap: 0.85rem; align-items: flex-start; background: var(--bg); border-radius: 8px; padding: 0.85rem 1rem; }
+        .suggestion-num { flex: 0 0 24px; height: 24px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.72rem; margin-top: 1px; }
+        .suggestion-text { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text); line-height: 1.55; }
+
+        /* WORD CLOUD */
+        .word-cloud { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; align-items: baseline; margin-top: 0.7rem; padding: 0.75rem 0.85rem; background: white; border-radius: 8px; border: 1px solid var(--border); }
+        .wc-word { font-family: 'Arial Black', sans-serif; font-weight: 900; line-height: 1.2; }
+
+        /* RESET */
+        .reset-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); background: white; border: 1.5px solid var(--border); border-radius: 7px; padding: 0.5rem 1.1rem; cursor: pointer; transition: all 0.2s; margin-top: 1.5rem; }
+        .reset-btn:hover { border-color: var(--teal); color: var(--teal-dark); }
+
+        /* AI FEEDBACK */
+        .ai-card { background: var(--gold-light); border: 1.5px solid var(--gold); border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 1.25rem; }
+        .ai-card-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .ai-kicker { font-family: 'Arial', sans-serif; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #7A6000; margin-bottom: 0.3rem; }
+        .ai-title { font-size: 1.05rem; color: var(--navy); }
+        .ai-btn { font-family: 'Arial Black', sans-serif; font-size: 0.72rem; font-weight: 900; background: var(--navy); color: white; border: none; padding: 0.55rem 1.1rem; border-radius: 7px; cursor: pointer; transition: background 0.2s; white-space: nowrap; flex-shrink: 0; }
+        .ai-btn:hover:not(:disabled) { background: var(--teal-dark); }
+        .ai-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+        .ai-result { font-family: 'Georgia', serif; font-size: 0.88rem; color: var(--text); line-height: 1.8; padding-top: 0.85rem; border-top: 1px solid rgba(192,154,47,0.35); margin-top: 0.5rem; }
+        .ai-tips-label { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #7A6000; margin-top: 1rem; margin-bottom: 0.35rem; }
+        .ai-tips { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+        .ai-tips li { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text); line-height: 1.55; }
+        .ai-trial-note { font-family: 'Arial', sans-serif; font-size: 0.68rem; color: #9A7400; margin-top: 0.65rem; font-style: italic; }
+        .ai-spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: middle; margin-right: 0.35rem; }
+
+        /* FOOTER */
+        .tool-footer { text-align: center; font-family: 'Arial', sans-serif; font-size: 0.72rem; color: var(--text-muted); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 4rem; }
+            .tool-hero h1 { font-size: 1.7rem; }
+            .absent-grid { grid-template-columns: 1fr; }
+            .theme-bar-label { min-width: 140px; font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="topbar-inner">
+        <div class="trecc-logo">
+            <div class="wordmark"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="tagline">Turismo Responsable, Comunitario y Cultural</div>
+        </div>
+        <div class="tool-label">Sesión 2 · Herramienta de análisis</div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="tool-hero">
+        <h1>¿Qué dicen tus<br>reseñas de ti?</h1>
+        <p>Pega entre 3 y 10 reseñas reales de tu operación. El análisis identifica qué temas emergen — y qué tan alineadas están con el nicho que declaraste ayer.</p>
+        <div class="accent-bar"></div>
+    </div>
+
+    <!-- INTRO -->
+    <div id="introEl">
+        <div class="card">
+            <div class="card-label">Antes de comenzar</div>
+            <div class="card-title" style="margin-bottom:0.75rem;">Tu información</div>
+            <div style="margin-bottom:1rem;">
+                <label style="display:block;font-family:'Arial',sans-serif;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:0.35rem;">Nombre de tu operación</label>
+                <input type="text" id="introName" autocomplete="organization" placeholder="Ej. Exploraciones Antioquia"
+                    style="width:100%;padding:0.65rem 1rem;font-family:'Arial',sans-serif;font-size:0.88rem;color:var(--text);background:var(--bg);border:2px solid var(--border);border-radius:8px;outline:none;transition:border-color 0.2s;"
+                    onfocus="this.style.borderColor='var(--teal)';this.style.background='white'"
+                    onblur="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
+            </div>
+            <div>
+                <label style="display:block;font-family:'Arial',sans-serif;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:0.35rem;">Tu correo electrónico</label>
+                <input type="email" id="introEmail" autocomplete="email" placeholder="correo@tuoperacion.com"
+                    style="width:100%;padding:0.65rem 1rem;font-family:'Arial',sans-serif;font-size:0.88rem;color:var(--text);background:var(--bg);border:2px solid var(--border);border-radius:8px;outline:none;transition:border-color 0.2s;"
+                    onfocus="this.style.borderColor='var(--teal)';this.style.background='white'"
+                    onblur="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
+            </div>
+            <div id="introError" style="display:none;font-family:'Arial',sans-serif;font-size:0.78rem;color:var(--red);margin-top:0.6rem;"></div>
+        </div>
+        <button class="analyze-btn" onclick="startTool()" style="margin-top:0.5rem;">Comenzar →</button>
+    </div>
+
+    <!-- FORM -->
+    <div id="formSection" style="display:none;">
+
+        <!-- STEP 1: NICHO -->
+        <div class="card">
+            <div class="card-label">Paso 1 de 2</div>
+            <div class="card-title">Tu nicho responsable</div>
+            <div class="card-desc">Selecciona el nicho que identificaste en el quiz — o escríbelo si es diferente.</div>
+
+            <div class="niche-select-wrap">
+                <select class="niche-select" id="nicheSelect" onchange="onNicheChange()">
+                    <option value="">— Selecciona tu nicho —</option>
+                    <option value="ADV">🏔️  Turismo de Aventura</option>
+                    <option value="ACC">♿  Turismo Accesible</option>
+                    <option value="AGR">🌾  Agroturismo</option>
+                    <option value="BRD">🐦  Avistamiento de Aves</option>
+                    <option value="CBT">🤝  Turismo Comunitario</option>
+                    <option value="CUL">🎭  Turismo Cultural</option>
+                    <option value="CYC">🚴  Cicloturismo</option>
+                    <option value="DIV">🤿  Turismo de Buceo</option>
+                    <option value="ECO">🌿  Ecoturismo</option>
+                    <option value="FSH">🎣  Turismo de Pesca</option>
+                    <option value="FOD">🍽️  Turismo Gastronómico</option>
+                    <option value="GAP">🎒  Turismo de Año Sabático</option>
+                    <option value="HON">💍  Turismo de Luna de Miel</option>
+                    <option value="LUX">✨  Turismo de Lujo</option>
+                    <option value="NAT">🌳  Turismo de Naturaleza</option>
+                    <option value="REL">🕌  Turismo Religioso</option>
+                    <option value="SPT">⛷️  Turismo Deportivo</option>
+                    <option value="SUN">🏖️  Turismo de Sol y Playa</option>
+                    <option value="URB">🏙️  Experiencias Urbanas</option>
+                    <option value="VOL">🎓  Turismo de Voluntariado</option>
+                    <option value="WLK">🥾  Senderismo y Caminatas</option>
+                    <option value="WAT">🌊  Deportes Acuáticos</option>
+                    <option value="WEL">🧘  Turismo de Bienestar</option>
+                    <option value="WLD">🦁  Fauna Silvestre</option>
+                    <option value="CUSTOM">✏️  Mi nicho es diferente…</option>
+                </select>
+                <span class="niche-select-arrow">▾</span>
+            </div>
+
+            <div class="niche-preview" id="nichePreview">
+                <span class="np-emoji" id="npEmoji"></span>
+                <div class="np-text">
+                    <div class="np-name" id="npName"></div>
+                    <div class="np-cbi" id="npCbi"></div>
+                </div>
+            </div>
+
+            <div class="niche-custom-wrap" id="nicheCustomWrap">
+                <input class="niche-custom-input" type="text" id="nicheCustomInput"
+                    placeholder="Describe tu nicho: ej. turismo de café comunitario, lodge de selva, gastronomía indígena…">
+            </div>
+            <div id="nicheSourceBadge" style="display:none;font-family:'Arial',sans-serif;font-size:0.72rem;color:var(--teal-dark);margin-top:0.65rem;padding:0.35rem 0.75rem;background:var(--teal-light);border-radius:6px;border-left:3px solid var(--teal);"></div>
+        </div>
+
+        <!-- STEP 2: REVIEWS -->
+        <div class="card">
+            <div class="card-label">Paso 2 de 2</div>
+            <div class="card-title">Tus reseñas</div>
+            <div class="card-desc">Copia las reseñas de TripAdvisor, Google, Viator — tal como las escribieron tus viajeros. No las edites.</div>
+
+            <div class="reviews-list" id="reviewsList"></div>
+
+            <button class="add-review-btn" id="addReviewBtn" onclick="addReview()">
+                + Agregar reseña
+            </button>
+            <div class="review-count-hint" id="reviewCountHint">3 reseñas · mínimo 3, máximo 10</div>
+        </div>
+
+        <button class="analyze-btn" id="analyzeBtn" onclick="runAnalysis()">
+            <div class="btn-spinner"></div>
+            <span class="btn-text">Analizar mis reseñas →</span>
+        </button>
+
+    </div><!-- /formSection -->
+
+    <!-- RESULTS -->
+    <div id="results">
+
+        <div class="results-header">
+            <div class="results-kicker">✦ Análisis de reseñas</div>
+            <div class="results-title" id="rTitle">Lo que emerge de tus reseñas</div>
+            <div class="results-niche" id="rNiche"></div>
+            <div class="results-meta" id="rMeta"></div>
+        </div>
+
+        <!-- THEME BARS -->
+        <div class="card">
+            <div class="theme-section-title">¿Qué mencionan tus viajeros?</div>
+            <div class="align-section-sub" style="margin-bottom:0.75rem">Porcentaje de reseñas que mencionan cada tema — una reseña cuenta una sola vez, independientemente de la frecuencia.</div>
+            <div id="themeBarsContainer"></div>
+        </div>
+
+        <!-- NICHE ALIGNMENT -->
+        <div class="card" id="nicheAlignCard">
+            <div class="align-section-header">
+                <div>
+                    <div class="theme-section-title" style="margin-bottom:0.1rem">Alineación con tu nicho</div>
+                    <div class="align-section-sub" id="nicheAlignSub"></div>
+                </div>
+                <div class="align-badge" id="nicheAlignBadge"></div>
+            </div>
+            <div class="keyword-chips" id="nicheKeywordChips"></div>
+        </div>
+
+        <!-- RESPONSIBLE ALIGNMENT -->
+        <div class="card">
+            <div class="align-section-header">
+                <div>
+                    <div class="theme-section-title" style="margin-bottom:0.1rem">Vocabulario de turismo responsable</div>
+                    <div class="align-section-sub" id="respAlignSub"></div>
+                </div>
+                <div class="align-badge" id="respAlignBadge"></div>
+            </div>
+            <div class="absent-grid" id="absentGrid"></div>
+        </div>
+
+        <!-- GAP -->
+        <div class="gap-box">
+            <p id="gapText"></p>
+        </div>
+
+        <!-- SUGGESTIONS -->
+        <div class="card">
+            <div class="theme-section-title">3 acciones concretas</div>
+            <div class="suggestions-list" id="suggestionsList"></div>
+        </div>
+
+        <!-- AI FEEDBACK -->
+        <div class="ai-card" id="aiFeedbackCard" style="display:none;">
+            <div class="ai-card-header">
+                <div>
+                    <div class="ai-kicker">✦ En prueba · Recomendaciones automáticas</div>
+                    <div class="ai-title">¿Qué dicen tus reseñas sobre tu posicionamiento?</div>
+                    <div style="font-family:'Arial',sans-serif;font-size:0.78rem;color:var(--text-muted);margin-top:0.3rem;line-height:1.5;">Genera recomendaciones a partir de las reseñas que ingresaste, analizando qué comunican bien y qué oportunidades hay para mejorar.</div>
+                </div>
+                <button class="ai-btn" id="aiFeedbackBtn" onclick="getAiFeedback()">Generar recomendaciones →</button>
+            </div>
+            <div id="aiFeedbackResult" style="display:none;"></div>
+            <div class="ai-trial-note">🧪 Función en prueba — comparte si fue útil o si cambiarías algo</div>
+        </div>
+
+        <button class="reset-btn" onclick="resetTool()">← Analizar otras reseñas</button>
+
+    </div><!-- /results -->
+
+    <div class="tool-footer">
+        Lo Responsable Vende · TRECC · Institut Français Colombia · 2026
+    </div>
+
+</div><!-- /container -->
+
+<script>
+
+// ── NICHE DATA ──────────────────────────────────────────────────────────────
+
+const NICHES = {
+    ADV: { es: 'Turismo de Aventura',           emoji: '🏔️', cbi: 'adventure-tourism',
+           vocab: ['aventura','adventure','adrenalina','riesgo','desafío','challenge','extreme','escalada','rafting','parapente','emocionante','exciting','thrilling','rapel','rappel','zipline','canopy','cascada','waterfall','cañón','canyon'] },
+    ACC: { es: 'Turismo Accesible',             emoji: '♿', cbi: 'accessible-tourism',
+           vocab: ['accesible','accessible','inclusivo','inclusive','adaptado','movilidad','wheelchair','discapacidad','rampa','ramp','silla','ayuda','assistance','facilidad','adapted','especial'] },
+    AGR: { es: 'Agroturismo',                   emoji: '🌾', cbi: 'agritourism',
+           vocab: ['finca','farm','cultivo','harvest','cosecha','campo','rural','agricultor','farmer','huerta','ganadería','café','cacao','chocolate','orgánico','organic','sembrar','tierra','soil','panela','plátano'] },
+    BRD: { es: 'Avistamiento de Aves',          emoji: '🐦', cbi: 'bird-watching',
+           vocab: ['pájaro','bird','especie','species','eBird','binocular','ornitología','endémico','endemic','avifauna','canto','song','tucán','toucan','colibrí','hummingbird','guacamaya','macaw','loro','parrot','águila','eagle','telescopio','checklist','lifer'] },
+    CBT: { es: 'Turismo Comunitario',           emoji: '🤝', cbi: 'community-based-tourism',
+           vocab: ['comunidad','community','local','familia','family','artesano','artisan','pueblo','village','indígena','indigenous','tradición','tradition','tejido','weaving','cerámica','taller','workshop','cooperativa','ancestral','ritual','celebración'] },
+    CUL: { es: 'Turismo Cultural',              emoji: '🎭', cbi: 'cultural-tourism',
+           vocab: ['cultura','culture','historia','history','patrimonio','heritage','museo','museum','arte','art','tradición','arquitectura','colonial','festival','danza','dance','música','music','monumento','artesanía','folclore','legado','galería'] },
+    CYC: { es: 'Cicloturismo',                  emoji: '🚴', cbi: 'cycling-tourism',
+           vocab: ['bici','bicycle','cycling','ciclismo','ruta','trail','km','kilómetro','pedaleo','rueda','cuesta','pendiente','gravel','mtb','casco','helmet','grupo','cascada','descenso','downhill'] },
+    DIV: { es: 'Turismo de Buceo',              emoji: '🤿', cbi: 'dive-tourism',
+           vocab: ['buceo','diving','coral','reef','arrecife','submarino','underwater','snorkel','peces','fish','ocean','tiburón','shark','tortuga','turtle','mantarraya','pulpo','octopus','profundidad','depth','visibilidad','visibility','inmersión','padi'] },
+    ECO: { es: 'Ecoturismo',                    emoji: '🌿', cbi: 'ecotourism',
+           vocab: ['ecosistema','ecosystem','biodiversidad','biodiversity','bosque','forest','conservación','conservation','flora','fauna','parque nacional','sendero','selva','jungle','páramo','manglar','mangrove','reserva','reserve','mariposa','butterfly','rana','frog','tropical'] },
+    FSH: { es: 'Turismo de Pesca',              emoji: '🎣', cbi: 'fishing-tourism',
+           vocab: ['pesca','fishing','río','river','lago','lake','trucha','salmón','anzuelo','bote','captura','catch','carnada','bait','caña','rod','liberé','release','dorado','bagre','mojarra'] },
+    FOD: { es: 'Turismo Gastronómico',          emoji: '🍽️', cbi: 'food-tourism',
+           vocab: ['comida','food','gastronomía','gastronomy','cocina','cuisine','chef','receta','sabor','flavour','mercado','market','restaurante','degustación','tasting','ingrediente','ingredient','fresco','fresh','tradicional','taller','plato','maridaje'] },
+    GAP: { es: 'Turismo de Año Sabático',       emoji: '🎒', cbi: 'gap-year-tourism',
+           vocab: ['voluntario','volunteer','aprendizaje','learning','idioma','language','inmersión','immersion','cultural exchange','experiencia','mundo','world','proyecto','project','reto','challenge','global'] },
+    HON: { es: 'Turismo de Luna de Miel',       emoji: '💍', cbi: 'honeymoon-tourism',
+           vocab: ['romántico','romantic','pareja','couple','honeymoon','boda','wedding','íntimo','intimate','privado','private','especial','sorpresa','surprise','perfecto','memorable','atardecer','sunset','velas','candles'] },
+    LUX: { es: 'Turismo de Lujo',              emoji: '✨', cbi: 'luxury-tourism-0',
+           vocab: ['lujo','luxury','exclusivo','exclusive','premium','vip','boutique','personalizado','bespoke','suite','servicio','service','detalles','details','atención','attention','diseño','design','impecable','immaculate'] },
+    NAT: { es: 'Turismo de Naturaleza',         emoji: '🌳', cbi: 'nature-tourism',
+           vocab: ['naturaleza','nature','paisaje','landscape','bosque','forest','montaña','mountain','río','sendero','trail','flora','fauna','páramo','laguna','lagoon','cascada','waterfall','amanecer','dawn','atardecer','sunset','niebla','fog','silencio'] },
+    REL: { es: 'Turismo Religioso',             emoji: '🕌', cbi: 'religious-tourism-0',
+           vocab: ['iglesia','church','catedral','cathedral','peregrinación','pilgrimage','sagrado','sacred','religioso','religious','fe','faith','capilla','chapel','misa','mass','oración','prayer','espiritual','spiritual','santa','santo','virgen'] },
+    SPT: { es: 'Turismo Deportivo',             emoji: '⛷️', cbi: 'sport-tourism',
+           vocab: ['deporte','sport','competencia','competition','equipo','team','estadio','stadium','maratón','marathon','triatlón','carrera','race','entrenamiento','training','fitness','campeonato','torneo','tournament'] },
+    SUN: { es: 'Turismo de Sol y Playa',        emoji: '🏖️', cbi: 'sun-beach-tourism-0',
+           vocab: ['playa','beach','sol','sun','mar','sea','costa','coast','arena','sand','piscina','pool','resort','snorkel','palmeras','palms','horizonte','horizon','tropical','calor','relajar','relax'] },
+    URB: { es: 'Experiencias Urbanas',          emoji: '🏙️', cbi: 'urban-experiences',
+           vocab: ['ciudad','city','barrio','neighborhood','arte urbano','graffiti','mercado','street food','arquitectura','café','tour urbano','mural','historia','history','cocktail','bar','plaza','gastronomía','local'] },
+    VOL: { es: 'Turismo de Voluntariado',       emoji: '🎓', cbi: 'volunteer-and-educational-tourism',
+           vocab: ['voluntario','volunteer','enseñanza','teaching','proyecto','project','impacto','impact','comunidad','community','aprendizaje','niños','children','escuela','school','medioambiente','environment','construir','sembrar','plant'] },
+    WLK: { es: 'Senderismo y Caminatas',        emoji: '🥾', cbi: 'walking-tourism',
+           vocab: ['senderismo','hiking','caminata','trail','km','sendero','camino','trekking','montaña','summit','cumbre','vista','view','refugio','hut','barro','mud','paso','pass','páramo','nevado','glaciar'] },
+    WAT: { es: 'Deportes Acuáticos',            emoji: '🌊', cbi: 'water-sports-tourism',
+           vocab: ['surf','kayak','rafting','ola','wave','río','river','mar','sea','agua','water','tabla','board','adrenalina','espuma','foam','remada','paddle','corriente','current','rápidos','rapids'] },
+    WEL: { es: 'Turismo de Bienestar',          emoji: '🧘', cbi: 'wellness-tourism',
+           vocab: ['bienestar','wellness','spa','yoga','meditación','meditation','relajación','relax','masaje','massage','retiro','retreat','mindfulness','respiración','breathing','detox','sanación','healing','desconectar','disconnect','mente','mind','alma','soul'] },
+    WLD: { es: 'Fauna Silvestre',               emoji: '🦁', cbi: 'wildlife',
+           vocab: ['fauna','wildlife','animal','safari','mamífero','mammal','jaguar','mono','reptil','observación','spotted','vimos','avistamos','fotografiamos','sighting','puma','tapir','danta','caimán','cocodrilo','manatí','capibara','venado','serpiente','snake','tortuga','turtle','delfín','dolphin','especie','species','huellas','tracks','nido','nest'] },
+};
+
+const RESPONSIBLE_CORE = [
+    'sostenible','sustainable','responsable','responsible','impacto','impact',
+    'ambiental','environmental','certificado','certified','comunidad','community',
+    'local','conservación','conservation','justo','fair','ético','ethical',
+    'regenerativo','regenerative','bajo impacto','low impact','carbono','carbon',
+];
+
+const THEMES = [
+    { key: 'guia',     label: 'Guía / expertise humano',     color: 'c-teal',
+      kw: ['guía','guide','experto','expert','conocimiento','knowledge','knowledgeable','instructor','profesional','professional','experiencia','experience'] },
+    { key: 'paisaje',  label: 'Paisaje / entorno natural',   color: 'c-navy',
+      kw: ['paisaje','landscape','naturaleza','nature','hermoso','beautiful','impresionante','stunning','increíble','incredible','vista','view','scenic','scenery','montaña','mountain','bosque','forest','río','river'] },
+    { key: 'comunidad',label: 'Comunidad / conexión local',  color: 'c-green',
+      kw: ['comunidad','community','local','familia','family','artesano','artisan','pueblo','village','indígena','indigenous','auténtico','authentic','tradición','tradition','anfitrión','host'] },
+    { key: 'logistica',label: 'Organización / logística',    color: 'c-gold',
+      kw: ['organiz','logística','logistics','puntual','punctual','transport','cómodo','comfortable','profesional','professional','eficiente','efficient','coordinación','detail'] },
+    { key: 'gastro',   label: 'Gastronomía / cocina',        color: 'c-orange',
+      kw: ['comida','food','cocina','cuisine','café','coffee','desayuno','breakfast','cena','dinner','sabor','flavour','taste','gastronomy','comer','eat','delicioso','delicious'] },
+];
+
+// ── CONFIG ───────────────────────────────────────────────────────────────────
+
+
+// ── STATE ───────────────────────────────────────────────────────────────────
+
+let reviewCount = 0;
+let lastAnalysisData = null;
+let lastReviews = [];
+const userData = { name: '', email: '' };
+
+function startTool() {
+    const name  = document.getElementById('introName').value.trim();
+    const email = document.getElementById('introEmail').value.trim();
+    const errEl = document.getElementById('introError');
+    if (!name) {
+        errEl.textContent = 'Por favor ingresa el nombre de tu operación.';
+        errEl.style.display = 'block';
+        document.getElementById('introName').focus();
+        return;
+    }
+    if (!email || !email.includes('@')) {
+        errEl.textContent = 'Por favor ingresa tu correo electrónico.';
+        errEl.style.display = 'block';
+        document.getElementById('introEmail').focus();
+        return;
+    }
+    userData.name  = name;
+    userData.email = email;
+    errEl.style.display = 'none';
+    document.getElementById('introEl').style.display = 'none';
+    document.getElementById('formSection').style.display = 'block';
+    loadNicheFromFirestore(email);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedNiche = localStorage.getItem('lrv_nicho_primary');
+    if (savedNiche && NICHES[savedNiche]) {
+        document.getElementById('nicheSelect').value = savedNiche;
+        onNicheChange();
+        showNicheSource('quiz');
+    }
+    addReview(); addReview(); addReview();
+});
+
+function showNicheSource(source) {
+    const badge = document.getElementById('nicheSourceBadge');
+    if (!badge) return;
+    badge.textContent = source === 'quiz'
+        ? '✓ Nicho cargado desde tu quiz de la Sesión 1'
+        : '✓ Nicho recuperado desde tu perfil guardado';
+    badge.style.display = 'block';
+}
+
+async function loadNicheFromFirestore(email) {
+    try {
+        const resp = await fetch(
+            'https://firestore.googleapis.com/v1/projects/tourism-development-d620c/databases/(default)/documents:runQuery?key=AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4',
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    structuredQuery: {
+                        from: [{ collectionId: 'quiz_results' }],
+                        where: { fieldFilter: { field: { fieldPath: 'email' }, op: 'EQUAL', value: { stringValue: email } } },
+                        limit: 1
+                    }
+                })
+            }
+        );
+        const rows = await resp.json();
+        if (!Array.isArray(rows)) return;
+        const doc = rows.find(r => r.document)?.document;
+        if (!doc) return;
+        const nicheMain = doc.fields?.nicheMain?.stringValue;
+        if (nicheMain && NICHES[nicheMain]) {
+            const select = document.getElementById('nicheSelect');
+            if (!select.value) {
+                select.value = nicheMain;
+                onNicheChange();
+                showNicheSource('firestore');
+            }
+        }
+    } catch(e) {}
+}
+
+// ── NICHE UI ─────────────────────────────────────────────────────────────────
+
+function onNicheChange() {
+    const key = document.getElementById('nicheSelect').value;
+    const preview = document.getElementById('nichePreview');
+    const customWrap = document.getElementById('nicheCustomWrap');
+
+    if (key === 'CUSTOM') {
+        preview.classList.remove('visible');
+        customWrap.classList.add('visible');
+        return;
+    }
+    customWrap.classList.remove('visible');
+    if (!key || !NICHES[key]) { preview.classList.remove('visible'); return; }
+    const n = NICHES[key];
+    document.getElementById('npEmoji').textContent = n.emoji;
+    document.getElementById('npName').textContent = n.es;
+    document.getElementById('npCbi').textContent = 'cbi.eu › market-information › tourism › ' + n.cbi;
+    preview.classList.add('visible');
+}
+
+// ── REVIEWS UI ───────────────────────────────────────────────────────────────
+
+const PLACEHOLDERS = [
+    'Pega aquí la primera reseña tal como la escribió el viajero…',
+    'Segunda reseña — de TripAdvisor, Google o Viator…',
+    'Tercera reseña — sin editar, con las palabras exactas del viajero…',
+    'Cuarta reseña…',
+    'Quinta reseña…',
+    'Sexta reseña…',
+    'Séptima reseña…',
+    'Octava reseña…',
+    'Novena reseña…',
+    'Décima reseña…',
+];
+
+function addReview() {
+    if (reviewCount >= 10) return;
+    reviewCount++;
+    const list = document.getElementById('reviewsList');
+    const row = document.createElement('div');
+    row.className = 'review-row';
+    row.id = `reviewRow${reviewCount}`;
+    row.innerHTML = `
+        <div class="review-num">${reviewCount}</div>
+        <textarea class="review-textarea" id="review${reviewCount}"
+            placeholder="${PLACEHOLDERS[reviewCount - 1] || 'Reseña ' + reviewCount + '…'}"
+            rows="3"></textarea>
+        ${reviewCount > 3 ? `<button class="review-remove" title="Eliminar" onclick="removeReview(${reviewCount})">×</button>` : '<div style="width:24px;"></div>'}
+    `;
+    list.appendChild(row);
+    updateReviewHint();
+    if (reviewCount >= 10) document.getElementById('addReviewBtn').style.display = 'none';
+}
+
+function removeReview(n) {
+    const row = document.getElementById(`reviewRow${n}`);
+    if (row) row.remove();
+    updateReviewHint();
+    document.getElementById('addReviewBtn').style.display = 'inline-flex';
+}
+
+function updateReviewHint() {
+    const filled = getReviews().length;
+    const total = document.querySelectorAll('.review-textarea').length;
+    document.getElementById('reviewCountHint').textContent =
+        total + ' ' + (total === 1 ? 'reseña' : 'reseñas') +
+        (filled < 3 ? ' · necesitas al menos 3 para analizar' : ' · listas para analizar');
+}
+
+function getReviews() {
+    return Array.from(document.querySelectorAll('.review-textarea'))
+        .map(t => t.value.trim())
+        .filter(v => v.length > 10);
+}
+
+// ── ANALYSIS ENGINE ──────────────────────────────────────────────────────────
+
+function countMentions(reviews, keywords) {
+    return reviews.filter(rev => {
+        const r = rev.toLowerCase();
+        return keywords.some(kw => r.includes(kw.toLowerCase()));
+    }).length;
+}
+
+function collectMatchedWords(reviews, allKw) {
+    // Build color lookup: word → CSS var based on which theme it belongs to
+    const colorMap = {};
+    const themeColors = { 'c-teal': 'var(--teal)', 'c-navy': 'var(--navy)', 'c-green': 'var(--green)', 'c-gold': 'var(--gold-dark,#9a7a00)', 'c-orange': 'var(--orange,#c05800)' };
+    THEMES.forEach(t => { t.kw.forEach(k => { if (!colorMap[k]) colorMap[k] = themeColors[t.color]; }); });
+    RESPONSIBLE_CORE.forEach(k => { if (!colorMap[k]) colorMap[k] = 'var(--teal-dark)'; });
+    allKw.forEach(k => { if (!colorMap[k]) colorMap[k] = 'var(--navy)'; });
+
+    const freq = {};
+    const combined = reviews.join(' ').toLowerCase();
+    // Check each keyword (phrase or word) against combined text and count occurrences
+    allKw.forEach(kw => {
+        const k = kw.toLowerCase();
+        let count = 0, pos = 0;
+        while ((pos = combined.indexOf(k, pos)) !== -1) { count++; pos += k.length; }
+        if (count > 0) freq[kw] = { count, color: colorMap[kw] || 'var(--teal)' };
+    });
+    return freq;
+}
+
+function analyzeReviews(reviews, nicheKey, customNiche) {
+    const n = reviews.length;
+
+    // 1. Theme counts
+    const themes = THEMES.map(t => {
+        const count = countMentions(reviews, t.kw);
+        return { ...t, count, pct: Math.round((count / n) * 100) };
+    }).sort((a, b) => b.count - a.count);
+
+    // 2. Responsible vocabulary check
+    const responsibleTerms = [...RESPONSIBLE_CORE];
+    const nicheVocab = (nicheKey && NICHES[nicheKey]) ? NICHES[nicheKey].vocab : [];
+    const allVocab = [...new Set([...responsibleTerms, ...nicheVocab])];
+
+    // Check which responsible terms appear at all
+    const vocabPresence = [
+        { term: 'Comunidad / conexión local',        kw: ['comunidad','community','local','pueblo','village','familia','family','anfitrión','host','gente','people','bienvenida','welcome'] },
+        { term: 'Prácticas responsables',            kw: ['responsable','responsible','sostenible','sustainable','impacto','impact','conservación','conservation','cuidado','respeto','respect','proteger','protect'] },
+        { term: 'Proveedores / productores locales', kw: ['productor','producer','proveedor','supplier','finca','farm','artesano','artisan','cocinero','chef','dueño','owner','cooperativa','cooperative'] },
+        { term: 'Huella ambiental / entorno',        kw: ['ambiental','environmental','ecosistema','ecosystem','residuo','waste','reciclaje','carbono','carbon','limpio','clean','wildlife','fauna','flora','naturaleza','nature'] },
+        { term: 'Autenticidad / experiencia genuina', kw: ['auténtico','authentic','genuino','genuine','real','aprendí','learned','conciencia','awareness','educativo','educational','transformador','meaningful'] },
+    ];
+    vocabPresence.forEach(v => {
+        v.present = countMentions(reviews, v.kw) > 0;
+    });
+
+    const responsibleCount = vocabPresence.filter(v => v.present).length;
+
+    // 3. Niche keyword-by-keyword presence
+    const nicheVocabPresence = nicheVocab.map(kw => ({
+        kw,
+        present: reviews.some(r => r.toLowerCase().includes(kw.toLowerCase()))
+    }));
+    const nichePresent = nicheVocabPresence.filter(v => v.present).length;
+    const nicheTotal = nicheVocabPresence.length;
+    const nicheAlignRate = nicheTotal > 0 ? nichePresent / nicheTotal : null;
+    let nicheAlignClass = 'none';
+    if (nicheAlignRate !== null) {
+        if (nicheAlignRate >= 0.4) nicheAlignClass = 'high';
+        else if (nicheAlignRate >= 0.15) nicheAlignClass = 'mid';
+        else nicheAlignClass = 'low';
+    }
+
+    // 4. Responsible alignment score
+    const respRate = responsibleCount / vocabPresence.length;
+    let alignment, alignClass;
+    if (respRate >= 0.5) { alignment = 'Alineación alta'; alignClass = 'high'; }
+    else if (respRate >= 0.25) { alignment = 'Alineación media'; alignClass = 'mid'; }
+    else { alignment = 'Alineación baja'; alignClass = 'low'; }
+
+    // 5. Dominant theme
+    const top = themes[0];
+    const nicheLabel = nicheKey === 'CUSTOM' ? customNiche : (NICHES[nicheKey]?.es || '');
+
+    // 6. Gap text
+    const absentVocab = vocabPresence.filter(v => !v.present).map(v => v.term);
+    let gapText = '';
+    if (alignClass === 'low') {
+        gapText = `El nicho declarado es <strong>${nicheLabel || 'turismo responsable'}</strong>. Lo que dominan las reseñas: <strong>${top.label.toLowerCase()}</strong>. El vocabulario de responsabilidad aparece en ${responsibleCount} de ${vocabPresence.length} categorías clave — lo que indica que la propuesta diferencial no está llegando al viajero en el momento de la experiencia, y por lo tanto no llega tampoco al comprador europeo que lee esas reseñas.`;
+    } else if (alignClass === 'mid') {
+        gapText = `Hay presencia parcial del vocabulario responsable (${responsibleCount} de ${vocabPresence.length} categorías). El diferencial aparece, pero no con la fuerza suficiente para que sea el mensaje dominante. ${absentVocab.length > 0 ? 'Lo que falta reforzar: ' + absentVocab.slice(0, 2).join(', ').toLowerCase() + '.' : ''}`;
+    } else {
+        gapText = `Tu posicionamiento responsable está llegando bien a tus viajeros. El vocabulario clave aparece en ${responsibleCount} de ${vocabPresence.length} categorías. El siguiente paso es asegurar que ese mensaje también sea visible en inglés y en las plataformas correctas para el comprador europeo.`;
+    }
+
+    // 7. Word cloud — all matched keywords across themes + responsible + niche
+    const allCloudKw = [...new Set([
+        ...THEMES.flatMap(t => t.kw),
+        ...RESPONSIBLE_CORE,
+        ...nicheVocab
+    ])];
+    const matchedWords = collectMatchedWords(reviews, allCloudKw);
+
+    // 8. Suggestions
+    const suggestions = buildSuggestions(themes, vocabPresence, nicheKey, nicheLabel, alignClass, matchedWords);
+
+    return { themes, vocabPresence, responsibleCount, alignment, alignClass,
+             nicheVocabPresence, nichePresent, nicheTotal, nicheAlignClass,
+             gapText, suggestions, matchedWords, n, nicheLabel };
+}
+
+function buildWordCloudHTML(matchedWords) {
+    const entries = Object.entries(matchedWords).sort((a, b) => b[1].count - a[1].count).slice(0, 22);
+    if (entries.length === 0) return '';
+    const maxCount = entries[0][1].count;
+    const spans = entries.map(([kw, {count, color}]) => {
+        const size = 0.8 + (count / maxCount) * 0.85;
+        return `<span class="wc-word" style="font-size:${size.toFixed(2)}rem; color:${color}; opacity:${(0.55 + (count / maxCount) * 0.45).toFixed(2)}">${kw}</span>`;
+    });
+    return `<div class="word-cloud">${spans.join('')}</div>`;
+}
+
+function buildSuggestions(themes, vocabPresence, nicheKey, nicheLabel, alignClass, matchedWords) {
+    const suggs = [];
+    const topTheme = themes[0];
+
+    // S1: Responsible claims in descriptions (not "respuesta"/reply)
+    if (!vocabPresence.find(v => v.term.includes('Prácticas')).present) {
+        suggs.push(`Añade una frase responsable específica y verificable a la descripción de tu actividad o empresa — algo que ningún otro operador puede decir igual. Una cifra, un nombre, una práctica documentada.`);
+    } else {
+        suggs.push(`Tu vocabulario responsable aparece, pero probablemente de forma indirecta. Introdúcelo explícitamente durante la experiencia — una historia breve, una presentación formal de la comunidad o el productor con quien trabajas.`);
+    }
+
+    // S2: Community — softer on language mandate
+    if (!vocabPresence.find(v => v.term.includes('Comunidad')).present) {
+        suggs.push(`Si tu nicho incluye turismo comunitario, el nombre de la comunidad, la familia o el artesano debería aparecer en la experiencia — y por ende en las reseñas. Presenta a las personas por nombre. Los viajeros recuerdan lo que es específico.`);
+    } else {
+        suggs.push(`La conexión comunitaria ya aparece en tus reseñas. Considera hacerla más visible en tu plataforma B2B — añade: cuántas familias participan, cuánto del ingreso queda en la comunidad, qué rol tienen en el diseño del tour.`);
+    }
+
+    // S3: Word cloud — the vocabulary your travelers already validated
+    const platform = nicheKey === 'BRD' ? 'eBird / ATTA' : nicheKey === 'WEL' ? 'Healing Hotels' : 'TripAdvisor / Viator';
+    const cloudHTML = buildWordCloudHTML(matchedWords);
+    suggs.push(`Estas son las palabras que ya aparecen en tus reseñas. Considera usarlas en el título de tu página y en tu descripción de ${platform} — es el vocabulario que tus viajeros ya validaron.${cloudHTML}`);
+
+    return suggs.slice(0, 3);
+}
+
+// ── RENDER RESULTS ───────────────────────────────────────────────────────────
+
+function renderResults(data) {
+    // Header
+    document.getElementById('rTitle').textContent = `Lo que emergen de ${data.n} reseña${data.n > 1 ? 's' : ''}`;
+    document.getElementById('rNiche').textContent = data.nicheLabel ? 'Nicho declarado: ' + data.nicheLabel : '';
+    document.getElementById('rMeta').innerHTML =
+        `<span class="results-chip">${data.n} reseña${data.n > 1 ? 's' : ''} analizadas</span>` +
+        (data.nicheLabel ? `<span class="results-chip">Nicho: ${data.nicheLabel}</span>` : '');
+
+    // Theme bars
+    const barsEl = document.getElementById('themeBarsContainer');
+    barsEl.innerHTML = '';
+    data.themes.forEach(t => {
+        const isZero = t.count === 0;
+        const row = document.createElement('div');
+        row.className = 'theme-bar-row' + (isZero ? ' theme-bar-zero' : '');
+        row.innerHTML = `
+            <div class="theme-bar-label">${t.label}</div>
+            <div class="theme-bar-track">
+                <div class="theme-bar-fill ${t.color}" style="width:0" data-pct="${t.pct}%"></div>
+            </div>
+            <div class="theme-bar-count">${t.count > 0 ? t.count + '/' + data.n : '—'}</div>
+        `;
+        barsEl.appendChild(row);
+    });
+
+    // — Niche alignment section —
+    const nicheCard = document.getElementById('nicheAlignCard');
+    const chipsEl = document.getElementById('nicheKeywordChips');
+    const nicheBadge = document.getElementById('nicheAlignBadge');
+    const nicheSub = document.getElementById('nicheAlignSub');
+    if (data.nicheTotal === 0) {
+        nicheCard.style.display = 'none';
+    } else {
+        nicheCard.style.display = '';
+        nicheBadge.className = 'align-badge ' + data.nicheAlignClass;
+        nicheBadge.textContent =
+            data.nicheAlignClass === 'high' ? 'Alta' :
+            data.nicheAlignClass === 'mid'  ? 'Media' : 'Baja';
+        const absentNiche = data.nicheVocabPresence.filter(v => !v.present).map(v => v.kw);
+        nicheSub.textContent =
+            data.nicheAlignClass === 'high'
+                ? `El vocabulario de tu nicho aparece bien en las reseñas (${data.nichePresent} de ${data.nicheTotal} palabras clave).`
+                : data.nicheAlignClass === 'mid'
+                ? `Algunas palabras de tu nicho aparecen (${data.nichePresent} de ${data.nicheTotal}). Lo que aún no menciona el viajero: ${absentNiche.slice(0,4).join(', ')}.`
+                : `Tus viajeros casi no usan el vocabulario de tu nicho (${data.nichePresent} de ${data.nicheTotal}). El comprador europeo busca exactamente esas palabras.`;
+        chipsEl.innerHTML = data.nicheVocabPresence
+            .sort((a, b) => b.present - a.present)
+            .map(v => `<span class="kw-chip ${v.present ? 'present' : 'absent'}">${v.kw}</span>`)
+            .join('');
+    }
+
+    // — Responsible vocab section —
+    const absentEl = document.getElementById('absentGrid');
+    absentEl.innerHTML = '';
+    data.vocabPresence.forEach(v => {
+        const div = document.createElement('div');
+        div.className = 'absent-item' + (v.present ? ' present' : '');
+        const hints = !v.present ? `<div class="absent-hints">${v.kw.slice(0, 4).join(' · ')}</div>` : '';
+        div.innerHTML = `<div class="absent-item-row"><span class="absent-x">${v.present ? '✓' : '✗'}</span> <span>${v.term}</span></div>${hints}`;
+        absentEl.appendChild(div);
+    });
+    const respBadge = document.getElementById('respAlignBadge');
+    respBadge.className = 'align-badge ' + data.alignClass;
+    respBadge.textContent = data.alignClass === 'high' ? 'Alta' : data.alignClass === 'mid' ? 'Media' : 'Baja';
+    const absentRespNames = data.vocabPresence.filter(v => !v.present).map(v => v.term.split('/')[0].trim().toLowerCase());
+    document.getElementById('respAlignSub').textContent =
+        data.alignClass === 'high'
+            ? `${data.responsibleCount} de 5 categorías presentes — tu propuesta responsable llega bien a los viajeros.`
+            : data.alignClass === 'mid'
+            ? `${data.responsibleCount} de 5 categorías presentes. Lo que falta reforzar: ${absentRespNames.join(', ')}.`
+            : `${data.responsibleCount} de 5 categorías presentes. Lo que no aparece: ${absentRespNames.join(', ')}.`;
+
+    // Gap
+    document.getElementById('gapText').innerHTML = data.gapText;
+
+    // Suggestions
+    const suggEl = document.getElementById('suggestionsList');
+    suggEl.innerHTML = '';
+    data.suggestions.forEach((s, i) => {
+        const div = document.createElement('div');
+        div.className = 'suggestion-item';
+        div.innerHTML = `<div class="suggestion-num">${i + 1}</div><div class="suggestion-text">${s}</div>`;
+        suggEl.appendChild(div);
+    });
+
+    // Show results, hide form
+    document.getElementById('formSection').style.display = 'none';
+    const resultsEl = document.getElementById('results');
+    resultsEl.style.display = 'block';
+    resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Animate bars after a tick
+    setTimeout(() => {
+        document.querySelectorAll('.theme-bar-fill').forEach(el => {
+            el.style.width = el.getAttribute('data-pct');
+        });
+    }, 100);
+}
+
+// ── RUN ──────────────────────────────────────────────────────────────────────
+
+function runAnalysis() {
+    const nicheKey = document.getElementById('nicheSelect').value;
+    const customNiche = document.getElementById('nicheCustomInput').value.trim();
+    const reviews = getReviews();
+
+    if (!nicheKey) { alert('Por favor selecciona tu nicho antes de analizar.'); return; }
+    if (reviews.length < 3) { alert('Necesitas al menos 3 reseñas para el análisis.'); return; }
+
+    const btn = document.getElementById('analyzeBtn');
+    btn.classList.add('loading');
+    btn.disabled = true;
+
+    // Brief artificial delay for UX
+    setTimeout(() => {
+        const data = analyzeReviews(reviews, nicheKey, customNiche);
+        lastAnalysisData = data;
+        lastReviews = reviews;
+        renderResults(data);
+        btn.classList.remove('loading');
+        btn.disabled = false;
+
+        // Show/hide AI card based on whether key is configured
+        const aiCard = document.getElementById('aiFeedbackCard');
+        if (aiCard) aiCard.style.display = 'block';
+
+        saveToFirestore('resenas_results', {
+            tool: 'analisis_resenas',
+            timestamp: new Date().toISOString(),
+            name: userData.name,
+            email: userData.email,
+            nicho: nicheKey,
+            nicheLabel: data.nicheLabel || '',
+            reviewCount: data.n,
+            alignClass: data.alignClass,
+            nicheAlignClass: data.nicheAlignClass,
+            responsibleCount: data.responsibleCount,
+            topTheme: data.themes[0]?.key || '',
+            reviews: JSON.stringify(reviews),
+        }).then(() => {
+            const meta = document.getElementById('rMeta');
+            if (meta) meta.innerHTML += '<span class="results-chip">✓ Guardado</span>';
+        }).catch(() => {});
+    }, 1200);
+}
+
+function resetTool() {
+    document.getElementById('formSection').style.display = 'block';
+    document.getElementById('results').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function getAiFeedback() {
+    if (!lastAnalysisData) return;
+
+    const btn = document.getElementById('aiFeedbackBtn');
+    const resultEl = document.getElementById('aiFeedbackResult');
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="ai-spinner"></span>Analizando reseñas…';
+    resultEl.style.display = 'none';
+
+    const d = lastAnalysisData;
+    const presentVocab  = d.vocabPresence.filter(v =>  v.present).map(v => v.term).join(', ') || 'ninguno';
+    const absentVocab   = d.vocabPresence.filter(v => !v.present).map(v => v.term).join(', ') || 'ninguno';
+    const topThemes     = d.themes.filter(t => t.count > 0).slice(0, 3).map(t => `${t.label} (${t.count} de ${d.n})`).join(', ') || 'no hay temas claros';
+
+    try {
+        const response = await fetch('/api/ai/review-feedback', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nicheLabel:     d.nicheLabel || 'turismo responsable',
+                nicho:          d.nicho,
+                n:              d.n,
+                topThemes,
+                presentVocab,
+                absentVocab,
+                alignClass:     d.alignClass,
+                nicheAlignClass: d.nicheAlignClass,
+            })
+        });
+
+        if (!response.ok) throw new Error('API ' + response.status);
+
+        const json = await response.json();
+        const tipsHtml = (json.tips && json.tips.length)
+            ? `<ul class="ai-tips">${json.tips.map(t => `<li>${t}</li>`).join('')}</ul>`
+            : '';
+        resultEl.innerHTML = `
+            <div class="ai-result">${json.summary}</div>
+            ${tipsHtml ? `<div class="ai-tips-label">Para conseguir mejores reseñas futuras:</div>${tipsHtml}` : ''}
+        `;
+        resultEl.style.display = 'block';
+        btn.innerHTML = '↺ Regenerar';
+        btn.disabled = false;
+
+    } catch(e) {
+        resultEl.innerHTML = '<div class="ai-result" style="color:var(--red);font-family:Arial,sans-serif;font-size:0.8rem;">No se pudieron generar recomendaciones. Intenta de nuevo.</div>';
+        resultEl.style.display = 'block';
+        btn.innerHTML = 'Reintentar';
+        btn.disabled = false;
+    }
+}
+
+async function saveToFirestore(collection, data) {
+    const fields = {};
+    for (const [k, v] of Object.entries(data)) {
+        if (v === null || v === undefined) continue;
+        if (typeof v === 'number') fields[k] = { integerValue: v };
+        else if (typeof v === 'object') fields[k] = { stringValue: JSON.stringify(v) };
+        else fields[k] = { stringValue: String(v) };
+    }
+    return fetch(
+        'https://firestore.googleapis.com/v1/projects/tourism-development-d620c/databases/(default)/documents/' + collection + '?key=AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4',
+        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ fields }) }
+    );
+}
+
+</script>
+</body>
+</html>

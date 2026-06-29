@@ -1,6 +1,6 @@
 {
   "functions": {
-    "source": "digital_assessment/functions"
+    "source": "functions"
   },
   "firestore": {
     "rules": "firestore.rules"
@@ -25,18 +25,6 @@
     ],
     "rewrites": [
       {
-        "source": "/colombia",
-        "destination": "/colombia/index.html"
-      },
-      {
-        "source": "/botswana/**",
-        "destination": "/botswana/index.html"
-      },
-      {
-        "source": "/timorleste",
-        "destination": "/timorleste/index.html"
-      },
-      {
         "source": "/api/**",
         "function": {
           "functionId": "api",
@@ -44,8 +32,8 @@
         }
       },
       {
-        "source": "/benin-sentiment",
-        "destination": "/gambia-itc/index.html"
+        "source": "/botswana/**",
+        "destination": "/botswana/index.html"
       },
       {
         "source": "/gambia-itc/**",
@@ -64,11 +52,39 @@
         "destination": "/tourism-instagram-index/index.html"
       },
       {
+        "source": "/colombia",
+        "destination": "/colombia/index.html"
+      },
+      {
+        "source": "/irest-sorbonne",
+        "destination": "/irest-sorbonne/index.html"
+      },
+      {
+        "source": "/timorleste",
+        "destination": "/timorleste/index.html"
+      },
+      {
+        "source": "/indian-ocean",
+        "destination": "/indian-ocean/index.html"
+      },
+      {
+        "source": "/gambia-birdfair",
+        "destination": "/gambia-birdfair/index.html"
+      },
+      {
+        "source": "/gambia-birdfair-toolkit",
+        "destination": "/gambia-birdfair-toolkit/index.html"
+      },
+      {
+        "source": "/gambia-birdfair-toolkit/admin",
+        "destination": "/gambia-birdfair-toolkit/admin.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
     ],
-      "cleanUrls": true,
-      "trailingSlash": false
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }

@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Readiness Toolkit · BWA Gambia</title>
+<style>
+:root {
+  --teal:#3E9987; --teal-dark:#2D7A6A; --teal-light:#E6F4F1;
+  --navy:#1B2B5A; --navy-mid:#2E4080;
+  --gold:#F5C400; --gold-light:#FEF7D6; --amber:#D49B00;
+  --red:#C8352A;
+  --white:#FFFFFF; --bg:#F7F8F5; --bg-alt:#EEF2EF;
+  --text:#1A1A1A; --text-muted:#5A6478; --border:#DDE3DC;
+  --sw:260px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Georgia','Times New Roman',serif;line-height:1.72;color:var(--text);background:var(--bg);}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(27,43,90,.78);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem;}
+.modal-box{background:#fff;border-radius:12px;padding:2.5rem;max-width:460px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);}
+.modal-brand{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:1.05rem;color:var(--navy);letter-spacing:-.4px;}
+.modal-brand span{color:var(--teal);}
+.modal-box h2{font-size:1.4rem;color:var(--navy);margin:.7rem 0 .4rem;}
+.modal-box p{font-size:.88rem;color:var(--text-muted);margin-bottom:1.4rem;}
+.modal-box label{display:block;font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.35rem;}
+.modal-box input[type=text]{width:100%;padding:.72rem 1rem;border:1.5px solid var(--border);border-radius:7px;font-size:1rem;font-family:'Georgia',serif;color:var(--text);outline:none;transition:border-color .2s;}
+.modal-box input[type=text]:focus{border-color:var(--teal);}
+.modal-btn{margin-top:1.1rem;width:100%;padding:.82rem;background:var(--teal);color:#fff;border:none;border-radius:7px;font-size:.95rem;font-family:Arial,sans-serif;font-weight:700;cursor:pointer;transition:background .2s;}
+.modal-btn:hover{background:var(--teal-dark);}
+
+/* HEADER */
+.site-header{position:fixed;top:0;left:0;right:0;height:54px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:200;display:flex;align-items:center;padding:0 1.25rem;gap:.9rem;}
+.hdr-brand{display:flex;flex-direction:column;line-height:1;min-width:fit-content;}
+.hdr-wordmark{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:1rem;color:var(--navy);letter-spacing:-.4px;}
+.hdr-sub{font-family:Arial,sans-serif;font-size:.48rem;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);margin-top:2px;}
+.hdr-sep{width:1px;height:26px;background:var(--border);}
+.hdr-title{font-family:'Georgia',serif;font-size:.78rem;color:var(--text-muted);font-style:italic;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hdr-right{display:flex;align-items:center;gap:.75rem;margin-left:auto;}
+.hdr-prog{display:flex;align-items:center;gap:.45rem;}
+.prog-label{font-family:Arial,sans-serif;font-size:.68rem;color:var(--text-muted);white-space:nowrap;}
+.prog-dots{display:flex;gap:3px;}
+.prog-dot{width:9px;height:9px;border-radius:50%;background:var(--border);transition:background .3s;}
+.prog-dot.done{background:var(--teal);}
+.hdr-name{font-family:Arial,sans-serif;font-size:.75rem;font-weight:600;color:var(--navy);background:var(--teal-light);padding:.22rem .6rem;border-radius:20px;white-space:nowrap;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--navy);font-size:1.2rem;}
+
+/* LAYOUT */
+.layout{display:flex;margin-top:54px;min-height:calc(100vh - 54px);}
+
+/* SIDEBAR */
+.sidebar{width:var(--sw);background:#fff;border-right:1px solid var(--border);position:fixed;top:54px;left:0;bottom:0;overflow-y:auto;padding:.75rem 0;z-index:100;transition:transform .28s;}
+.sb-section-lbl{font-family:Arial,sans-serif;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);padding:.5rem 1.2rem .2rem;}
+.sb-link{display:flex;align-items:center;gap:.55rem;padding:.48rem 1.2rem;font-family:Arial,sans-serif;font-size:.78rem;color:var(--text-muted);cursor:pointer;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.sb-link:hover{background:var(--bg);color:var(--navy);}
+.sb-link.active{color:var(--teal-dark);background:var(--teal-light);border-left-color:var(--teal);font-weight:600;}
+.ch-num{width:19px;height:19px;border-radius:50%;background:var(--bg-alt);font-size:.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--text-muted);font-family:Arial,sans-serif;}
+.sb-link.done .ch-num{background:var(--teal);color:#fff;}
+.ch-tick{font-size:.65rem;color:var(--teal);margin-left:auto;opacity:0;transition:opacity .2s;}
+.sb-link.done .ch-tick{opacity:1;}
+
+/* MAIN */
+.main{margin-left:var(--sw);flex:1;}
+.chapter{display:none;max-width:760px;margin:0 auto;padding:2.75rem 2rem 5rem;}
+.chapter.active{display:block;}
+
+/* TYPOGRAPHY */
+.ch-eyebrow{font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--teal-dark);margin-bottom:.35rem;}
+.ch-title{font-family:'Georgia',serif;font-size:2rem;color:var(--navy);line-height:1.2;margin-bottom:.5rem;}
+.ch-opener{font-style:italic;color:var(--text-muted);font-size:.93rem;border-left:3px solid var(--gold);padding:.45rem .95rem;margin-bottom:2rem;background:var(--gold-light);border-radius:0 6px 6px 0;}
+.ch-divider{border:none;border-top:1px solid var(--border);margin:1.75rem 0;}
+.sec-title{font-family:'Georgia',serif;font-size:1.3rem;color:var(--navy);margin:1.75rem 0 .55rem;}
+.sec-sub{font-family:Arial,sans-serif;font-size:.88rem;font-weight:700;color:var(--navy-mid);margin:1.2rem 0 .35rem;}
+p{margin-bottom:.8rem;font-size:.93rem;}
+p:last-child{margin-bottom:0;}
+ul,ol{margin:.45rem 0 .8rem 1.35rem;}
+li{margin-bottom:.28rem;font-size:.93rem;}
+strong{color:var(--navy);}
+
+/* CALLOUT BOXES */
+.tip-box{background:var(--teal-light);border:1px solid rgba(62,153,135,.22);border-radius:8px;padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-lbl{font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--teal-dark);margin-bottom:.3rem;}
+.tip-box p{font-size:.88rem;margin:0;font-style:italic;}
+.key-msg{background:var(--navy);border-radius:8px;padding:1rem 1.2rem;margin:1.2rem 0;}
+.km-lbl{font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:.3rem;}
+.key-msg p{color:#fff;font-size:.9rem;margin:0;font-weight:600;}
+.ex-box{background:var(--gold-light);border:1px solid rgba(245,196,0,.3);border-radius:8px;padding:1rem 1.2rem;margin:1.2rem 0;}
+.ex-lbl{font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:.3rem;}
+.ex-box .ex-head{font-family:Arial,sans-serif;font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:.35rem;}
+.ex-box p{font-size:.88rem;}
+.pitch-block{background:#fff;border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:.85rem 1.1rem;margin:.65rem 0;}
+.pitch-block .pitch-for{font-family:Arial,sans-serif;font-size:.72rem;font-weight:700;color:var(--teal-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.3rem;}
+.pitch-block p{font-size:.88rem;font-style:italic;margin:0;}
+
+/* MISTAKES */
+.avoid-item{display:flex;align-items:flex-start;gap:.5rem;padding:.35rem 0;font-size:.9rem;}
+.avoid-x{color:var(--red);font-size:1rem;flex-shrink:0;line-height:1.5;}
+
+/* SEASONAL TABLE */
+.season-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.86rem;}
+.season-table th{background:var(--navy);color:#fff;padding:.55rem .8rem;text-align:left;font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;}
+.season-table td{padding:.5rem .8rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.4;}
+.season-table tr:nth-child(even) td{background:var(--bg);}
+
+/* PARTNER CARDS */
+.partner-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.85rem;margin:1.2rem 0;}
+.partner-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem;}
+.partner-card h3{font-family:Arial,sans-serif;font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:.35rem;}
+.partner-card p{font-size:.82rem;color:var(--text-muted);margin:0;}
+
+/* INTRO STRUCTURE */
+.intro-steps{background:var(--navy);border-radius:10px;padding:1.1rem 1.4rem;margin:1.1rem 0;}
+.intro-step{display:flex;gap:.75rem;align-items:flex-start;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.intro-step:last-child{border-bottom:none;}
+.intro-num{font-family:'Arial Black',Arial,sans-serif;font-size:1.3rem;color:var(--gold);line-height:1;flex-shrink:0;width:24px;}
+.intro-step-txt{color:#fff;font-size:.9rem;}
+.intro-step-txt strong{color:var(--gold);}
+
+/* BYMO */
+.bymo{background:var(--bg-alt);border-radius:10px;padding:1.4rem 1.65rem;margin-top:2.5rem;}
+.bymo-eyebrow{font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--teal-dark);margin-bottom:.85rem;}
+.bymo h3{font-family:'Georgia',serif;font-size:.98rem;color:var(--navy);margin:1rem 0 .3rem;}
+.bymo p{font-size:.88rem;}
+
+/* TRY THIS inputs */
+.try-label{display:block;font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;color:var(--navy-mid);margin-bottom:.35rem;}
+.try-hint{font-family:Arial,sans-serif;font-size:.72rem;color:var(--text-muted);font-style:italic;margin-bottom:.4rem;}
+textarea.try-area{width:100%;min-height:110px;padding:.7rem .85rem;border:1.5px solid var(--border);border-radius:7px;font-size:.9rem;font-family:'Georgia',serif;color:var(--text);resize:vertical;outline:none;background:#fff;line-height:1.6;transition:border-color .2s;margin-bottom:.6rem;}
+textarea.try-area:focus{border-color:var(--teal);}
+textarea.try-area::placeholder{color:var(--text-muted);font-style:italic;}
+input.try-input{width:100%;padding:.6rem .85rem;border:1.5px solid var(--border);border-radius:7px;font-size:.9rem;font-family:'Georgia',serif;color:var(--text);outline:none;background:#fff;transition:border-color .2s;margin-bottom:.45rem;display:block;}
+input.try-input:focus{border-color:var(--teal);}
+
+/* CHECKLIST */
+.checklist{margin-top:1rem;}
+.cl-title{font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.55rem;}
+.cl-item{display:flex;align-items:flex-start;gap:.6rem;padding:.35rem 0;cursor:pointer;}
+.cl-item input[type=checkbox]{appearance:none;-webkit-appearance:none;width:18px;height:18px;border:2px solid var(--teal);border-radius:4px;flex-shrink:0;margin-top:2px;cursor:pointer;transition:all .15s;position:relative;}
+.cl-item input[type=checkbox]:checked{background:var(--teal);}
+.cl-item input[type=checkbox]:checked::after{content:'✓';position:absolute;top:-1px;left:2px;color:#fff;font-size:12px;font-weight:bold;}
+.cl-item span{font-size:.88rem;line-height:1.4;}
+.cl-item.checked span{color:var(--text-muted);text-decoration:line-through;}
+.ch-done-banner{display:none;align-items:center;gap:.65rem;background:var(--teal);color:#fff;border-radius:8px;padding:.75rem 1.1rem;margin-top:1rem;font-family:Arial,sans-serif;font-size:.85rem;font-weight:600;}
+.ch-done-banner.show{display:flex;}
+
+/* TOOLS */
+.tool-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem 1.6rem;margin:1rem 0;}
+.tool-card h3{font-family:'Georgia',serif;font-size:1.1rem;color:var(--navy);margin-bottom:.2rem;}
+.tool-card .tool-desc{font-family:Arial,sans-serif;font-size:.78rem;color:var(--text-muted);margin-bottom:1.1rem;}
+.form-row{margin-bottom:.9rem;}
+.form-row label{display:block;font-family:Arial,sans-serif;font-size:.72rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.3px;margin-bottom:.3rem;}
+.form-row input[type=text],.form-row textarea{width:100%;padding:.6rem .85rem;border:1.5px solid var(--border);border-radius:6px;font-size:.9rem;font-family:'Georgia',serif;color:var(--text);outline:none;background:#fff;transition:border-color .2s;}
+.form-row input[type=text]:focus,.form-row textarea:focus{border-color:var(--teal);}
+.form-row textarea{resize:vertical;min-height:75px;line-height:1.5;}
+.form-checks{display:flex;flex-direction:column;gap:.3rem;margin-top:.3rem;}
+.form-check{display:flex;align-items:center;gap:.5rem;font-size:.88rem;cursor:pointer;}
+.form-check input[type=checkbox]{appearance:none;-webkit-appearance:none;width:15px;height:15px;border:1.5px solid var(--border);border-radius:3px;cursor:pointer;position:relative;flex-shrink:0;}
+.form-check input[type=checkbox]:checked{background:var(--teal);border-color:var(--teal);}
+.form-check input[type=checkbox]:checked::after{content:'✓';position:absolute;top:-2px;left:1px;color:#fff;font-size:10px;font-weight:bold;}
+.email-preview{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.25rem;font-family:'Georgia',serif;font-size:.88rem;line-height:1.7;white-space:pre-wrap;color:var(--text);}
+
+/* FAIR CHECKLIST */
+.fair-section-head{font-family:Arial,sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);border-bottom:1px solid var(--border);padding-bottom:.35rem;margin:1.25rem 0 .6rem;}
+.fair-item{display:flex;align-items:center;gap:.55rem;padding:.28rem 0;cursor:pointer;font-size:.9rem;}
+.fair-item input[type=checkbox]{appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1.5px solid var(--border);border-radius:3px;cursor:pointer;position:relative;flex-shrink:0;transition:all .15s;}
+.fair-item input[type=checkbox]:checked{background:var(--teal);border-color:var(--teal);}
+.fair-item input[type=checkbox]:checked::after{content:'✓';position:absolute;top:-2px;left:1px;color:#fff;font-size:10px;font-weight:bold;}
+.fair-item.checked span{color:var(--text-muted);text-decoration:line-through;}
+.fair-progress{font-family:Arial,sans-serif;font-size:.78rem;color:var(--text-muted);margin-top:.5rem;}
+
+/* SAVE NOTICE */
+.save-notice{font-family:Arial,sans-serif;font-size:.7rem;color:var(--text-muted);text-align:center;padding:.4rem;font-style:italic;}
+
+/* BUYER DIRECTORY */
+.filter-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.filter-tab{padding:.38rem .85rem;border:1.5px solid var(--border);border-radius:20px;font-family:Arial,sans-serif;font-size:.75rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all .15s;background:#fff;}
+.filter-tab:hover{border-color:var(--teal);color:var(--teal-dark);}
+.filter-tab.active{background:var(--teal);color:#fff;border-color:var(--teal);}
+.filter-tab .tab-count{font-size:.65rem;opacity:.8;margin-left:.3rem;}
+.buyer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.buyer-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:1.1rem 1.15rem;transition:border-color .2s;position:relative;}
+.buyer-card.starred{border-color:var(--teal);background:var(--teal-light);}
+.buyer-card-head{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.55rem;}
+.buyer-name{font-family:Arial,sans-serif;font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.3;flex:1;}
+.buyer-country{font-family:Arial,sans-serif;font-size:.7rem;color:var(--text-muted);margin-top:.1rem;}
+.star-btn{background:none;border:none;cursor:pointer;font-size:1.3rem;line-height:1;flex-shrink:0;padding:0;transition:transform .15s;color:#ccc;}
+.star-btn:hover{transform:scale(1.2);}
+.buyer-card.starred .star-btn{color:var(--gold);}
+.seg-badge{display:inline-block;font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:.12rem .45rem;border-radius:4px;margin-bottom:.5rem;}
+.seg-existing{background:#dcf5f0;color:var(--teal-dark);}
+.seg-international{background:#e8eaf6;color:var(--navy-mid);}
+.seg-regional{background:var(--gold-light);color:var(--amber);}
+.buyer-summary{font-size:.82rem;color:var(--text-muted);line-height:1.5;margin-bottom:.6rem;}
+.buyer-goal-lbl{font-family:Arial,sans-serif;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--teal-dark);margin-bottom:.2rem;}
+.buyer-goal{font-size:.8rem;color:var(--text);line-height:1.45;font-style:italic;background:var(--teal-light);border-radius:5px;padding:.35rem .5rem;margin-bottom:.6rem;}
+.buyer-card.starred .buyer-goal{background:rgba(62,153,135,.12);}
+.buyer-foot{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.buyer-web{font-family:Arial,sans-serif;font-size:.72rem;color:var(--teal-dark);text-decoration:none;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.buyer-web:hover{text-decoration:underline;}
+.note-toggle{font-family:Arial,sans-serif;font-size:.7rem;font-weight:700;color:var(--navy-mid);cursor:pointer;border:none;background:none;padding:0;text-decoration:underline;white-space:nowrap;}
+.buyer-note{margin-top:.55rem;display:none;}
+.buyer-note.open{display:block;}
+.buyer-note textarea{width:100%;min-height:70px;padding:.5rem .65rem;border:1.5px solid var(--border);border-radius:6px;font-size:.82rem;font-family:'Georgia',serif;resize:vertical;outline:none;background:#fff;line-height:1.5;}
+.buyer-note textarea:focus{border-color:var(--teal);}
+.buyer-note textarea::placeholder{font-style:italic;color:var(--text-muted);}
+.priority-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:2px;}
+.priority-High{background:var(--teal);}
+.priority-Medium{background:var(--amber);}
+.priority-Low{background:#ccc;}
+@media(max-width:700px){.buyer-grid{grid-template-columns:1fr;}}
+
+/* MEETING PLAN */
+.plan-empty{text-align:center;padding:3rem 1rem;color:var(--text-muted);font-size:.9rem;}
+.plan-company{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.9rem 1.1rem;margin:.65rem 0;}
+.plan-company-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.3rem;}
+.plan-company-name{font-family:Arial,sans-serif;font-size:.9rem;font-weight:700;color:var(--navy);}
+.plan-company-meta{font-family:Arial,sans-serif;font-size:.72rem;color:var(--text-muted);}
+.plan-company-goal{font-size:.82rem;color:var(--text-muted);margin:.25rem 0;font-style:italic;}
+.plan-note-disp{font-size:.85rem;background:var(--gold-light);border-radius:5px;padding:.3rem .6rem;margin-top:.3rem;}
+.plan-note-lbl{font-family:Arial,sans-serif;font-size:.62rem;font-weight:700;text-transform:uppercase;color:var(--amber);margin-bottom:.1rem;}
+.copy-btn{display:flex;align-items:center;gap:.5rem;padding:.75rem 1.3rem;background:var(--teal);color:#fff;border:none;border-radius:8px;font-size:.88rem;font-family:Arial,sans-serif;font-weight:700;cursor:pointer;transition:background .2s;margin-top:1.25rem;}
+.copy-btn:hover{background:var(--teal-dark);}
+.copy-area{width:100%;min-height:200px;padding:.8rem;border:1.5px solid var(--border);border-radius:8px;font-size:.82rem;font-family:Arial,sans-serif;resize:vertical;margin-top:.75rem;display:none;}
+.copy-area.show{display:block;}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  :root{--sw:0px;}
+  .sidebar{transform:translateX(-260px);width:260px;}
+  .sidebar.open{transform:translateX(0);}
+  .main{margin-left:0;}
+  .hamburger{display:flex;}
+  .chapter{padding:1.75rem 1.1rem 4rem;}
+  .partner-grid{grid-template-columns:1fr;}
+  .ch-title{font-size:1.55rem;}
+  .hdr-title{display:none;}
+  /* Header: hide progress dots on small screens, keep name badge */
+  .hdr-prog{display:none;}
+  /* Larger touch targets for filter tabs and buyer card controls */
+  .filter-tab{padding:.65rem 1rem;font-size:.82rem;}
+  .note-toggle{padding:.45rem .5rem;font-size:.78rem;}
+  .star-btn{font-size:1.6rem;padding:.2rem;}
+  /* Buyer card note textarea larger on phone */
+  .buyer-note textarea{min-height:90px;font-size:.88rem;}
+  /* Checklist items: slightly more vertical room for tap */
+  .cl-item{padding:.5rem 0;}
+  .fair-item{padding:.45rem 0;}
+  /* Copy button full width */
+  .copy-btn{width:100%;justify-content:center;}
+}
+</style>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getFirestore, doc, setDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+const _app = initializeApp({
+  apiKey: "AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4",
+  authDomain: "tourism-development-d620c.firebaseapp.com",
+  projectId: "tourism-development-d620c",
+  storageBucket: "tourism-development-d620c.firebasestorage.app",
+  messagingSenderId: "371342128529",
+  appId: "1:371342128529:web:85a53abe8896ed40839630"
+});
+const _db = getFirestore(_app);
+window._syncProgress = async function() {
+  const name = localStorage.getItem('bwa_name');
+  if (!name) return;
+  const docId = encodeURIComponent(name.trim().toLowerCase());
+  const progress = {};
+  ['ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8'].forEach(id => {
+    const n = {ch1:3,ch2:4,ch3:5,ch4:4,ch5:4,ch6:4,ch7:5,ch8:4}[id];
+    const checked = document.querySelectorAll(`#${id} .checklist input[type=checkbox]:checked`).length;
+    progress[id] = (checked === n);
+  });
+  const raw = localStorage.getItem('bwa_toolkit');
+  const saved = raw ? JSON.parse(raw) : {};
+  try {
+    await setDoc(doc(_db, 'toolkit_progress', docId), {
+      name: name.trim(),
+      ...progress,
+      shortlist: saved.shortlist || [],
+      meetingNotes: saved.buyerNotes || {},
+      lastUpdated: serverTimestamp()
+    }, { merge: true });
+  } catch(e) { /* offline — localStorage still saves */ }
+};
+</script>
+</head>
+<body>
+
+<!-- NAME MODAL -->
+<div class="modal-overlay" id="nameModal">
+  <div class="modal-box">
+    <div class="modal-brand">BWA <span>Gambia</span></div>
+    <h2>B2B Readiness Toolkit</h2>
+    <p>Preparing Gambian Birdwatching Guides for International Trade Engagement. Enter your name to begin — your progress and notes will be saved automatically.</p>
+    <label for="guideName">Your name</label>
+    <input type="text" id="guideName" placeholder="e.g. Lamin Sidibeh" autocomplete="name">
+    <button class="modal-btn" onclick="startToolkit()">Begin the Toolkit →</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+<header class="site-header">
+  <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">☰</button>
+  <div class="hdr-brand">
+    <div class="hdr-wordmark">BWA Gambia</div>
+    <div class="hdr-sub">Bird Watchers' Association</div>
+  </div>
+  <div class="hdr-sep"></div>
+  <div class="hdr-title">B2B Readiness Toolkit</div>
+  <div class="hdr-right">
+    <div class="hdr-prog">
+      <span class="prog-label" id="progLabel">0 of 8 done</span>
+      <div class="prog-dots" id="progDots"></div>
+    </div>
+    <div class="hdr-name" id="hdrName" onclick="changeName()" title="Change name" style="cursor:pointer;"></div>
+  </div>
+</header>
+
+<div id="sideOverlay" onclick="closeSidebar()" style="display:none;position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.3);"></div>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+  <div class="sb-section-lbl">Chapters</div>
+  <div class="sb-link active" onclick="showChapter('ch1',this)"><span class="ch-num">1</span>Welcome to the Toolkit<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch2',this)"><span class="ch-num">2</span>Understanding Your Future Partners<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch3',this)"><span class="ch-num">3</span>Telling the Gambian Birding Story<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch4',this)"><span class="ch-num">4</span>Presenting Yourself Professionally<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch5',this)"><span class="ch-num">5</span>Presenting Your Birding Experiences<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch6',this)"><span class="ch-num">6</span>Conducting Successful B2B Meetings<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch7',this)"><span class="ch-num">7</span>Preparing Your Marketing Materials<span class="ch-tick">✓</span></div>
+  <div class="sb-link" onclick="showChapter('ch8',this)"><span class="ch-num">8</span>Following Up After the Fair<span class="ch-tick">✓</span></div>
+  <div class="sb-section-lbl" style="margin-top:.5rem;">Practical Tools</div>
+  <div class="sb-link" onclick="showChapter('tools',this)"><span class="ch-num" style="font-size:.55rem;font-family:Arial,sans-serif;">KIT</span>Templates &amp; Checklists<span class="ch-tick"></span></div>
+  <div class="sb-section-lbl" style="margin-top:.5rem;">Buyer Mapping</div>
+  <div class="sb-link" onclick="showChapter('buyers',this)"><span class="ch-num" style="font-size:.55rem;font-family:Arial,sans-serif;">DIR</span>Buyer Directory<span class="ch-tick"></span></div>
+  <div class="sb-link" onclick="showChapter('myplan',this)"><span class="ch-num" style="font-size:.55rem;font-family:Arial,sans-serif;">★</span>My Meeting Plan<span class="ch-tick"></span></div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CH1 ===== -->
+<section class="chapter active" id="ch1">
+  <div class="ch-eyebrow">Chapter 1</div>
+  <h1 class="ch-title">Welcome to the Toolkit</h1>
+  <div class="ch-opener">You are already an experienced bird guide. The purpose of this toolkit is not to teach you how to guide — it is to help you communicate your expertise to an international audience.</div>
+
+  <h2 class="sec-title">Why This Toolkit?</h2>
+  <p>The Bird Watchers' Association, The Gambia has earned a strong reputation through the knowledge, professionalism and hospitality of its licensed bird guides. International trade events such as Global Birdfair provide an opportunity to share that expertise with specialist tour operators, bird clubs, travel media and conservation organisations from around the world.</p>
+  <p>Guiding visitors and meeting international buyers are different skills, but they are built on the same foundation: knowledge, trust and good communication. This toolkit has been developed to help participants present their experience confidently, communicate effectively and build long-term professional relationships.</p>
+  <p>Although prepared for Global Birdfair 2026, the guidance is intended to remain useful for future trade fairs, online meetings, familiarisation visits and conversations with international tourism partners.</p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">What Does Success Look Like?</h2>
+  <p>A successful trade fair is not measured by how many brochures you hand out or business cards you collect. Instead, success comes from starting conversations that continue after the event.</p>
+  <p>One good meeting may lead to:</p>
+  <ul>
+    <li>a follow-up online meeting;</li>
+    <li>a request for an itinerary or quotation;</li>
+    <li>inclusion in a future tour programme;</li>
+    <li>or the beginning of a long-term partnership.</li>
+  </ul>
+  <p><strong>Focus on building trust rather than trying to secure immediate business.</strong></p>
+
+  <div class="key-msg">
+    <div class="km-lbl">Key Message</div>
+    <p>International buyers are looking for knowledgeable local partners they can trust — not perfect sales presentations.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+
+    <h3>Remember</h3>
+    <p>Your knowledge and experience are your greatest strengths. This toolkit will help you present them with confidence.</p>
+
+    <h3>Try This</h3>
+    <p class="try-hint">Introduce yourself in 30 seconds without mentioning a single bird species. Explain who you are, your experience as a guide, and what makes birdwatching in The Gambia special.</p>
+    <label class="try-label" for="ch1_try">Write your 30-second introduction here:</label>
+    <textarea class="try-area" id="ch1_try" placeholder="Hello, my name is … I have been guiding birdwatchers for … years …" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch1_0"><input type="checkbox" onchange="onCheck(this,'ch1')"><span>I understand the purpose of this toolkit.</span></label>
+      <label class="cl-item" id="li_ch1_1"><input type="checkbox" onchange="onCheck(this,'ch1')"><span>I know what I hope to achieve from a B2B meeting.</span></label>
+      <label class="cl-item" id="li_ch1_2"><input type="checkbox" onchange="onCheck(this,'ch1')"><span>I am ready to represent both my own guiding experience and the Bird Watchers' Association.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch1">✓ Chapter 1 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH2 ===== -->
+<section class="chapter" id="ch2">
+  <div class="ch-eyebrow">Chapter 2</div>
+  <h1 class="ch-title">Understanding Your Future Partners</h1>
+
+  <p>Recognising who you are speaking with will help you ask better questions, share more relevant information and have more productive conversations.</p>
+  <p>As part of this project, a wide range of specialist birdwatching tour operators, wildlife travel companies, conservation organisations and industry partners were reviewed to identify potential opportunities for the Bird Watchers' Association.</p>
+
+  <hr class="ch-divider">
+  <div class="partner-grid">
+    <div class="partner-card">
+      <h3>Already selling The Gambia</h3>
+      <p>Naturetrek, Birdfinders, Heatherlea, Rockjumper, Oriole Birding, Limosa, Wildlife Worldwide. Focus on how you can <em>add value</em> to what they already offer.</p>
+    </div>
+    <div class="partner-card">
+      <h3>Exploring new destinations</h3>
+      <p>Birds Wildlife &amp; Nature Tours, Birder.Travel, 2by2 Holidays. Your objective is to introduce the destination and explore whether it complements what they already offer.</p>
+    </div>
+    <div class="partner-card">
+      <h3>Regional &amp; conservation partners</h3>
+      <p>African Bird Club, Fauna &amp; Flora. These meetings focus on conservation, guide development and shared projects — not tour prices.</p>
+    </div>
+  </div>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Asking Better Questions</h2>
+  <p>Instead of immediately describing your services, consider opening with questions such as:</p>
+  <ul>
+    <li>"What types of birdwatching tours do your clients enjoy most?"</li>
+    <li>"Are you looking to expand into new destinations?"</li>
+    <li>"What qualities do you value in a local guiding partner?"</li>
+    <li>"What challenges have you experienced when operating birdwatching tours?"</li>
+    <li>"How can we best support your programmes in The Gambia?"</li>
+  </ul>
+  <p>Listening carefully often provides more valuable information than delivering a long presentation.</p>
+
+  <div class="tip-box">
+    <div class="tip-lbl">Guide's Tip</div>
+    <p>When meeting an existing Gambia operator, avoid spending the entire meeting explaining the destination. Instead, ask what they are looking for and how you can help improve their programmes.</p>
+  </div>
+
+  <div class="ex-box">
+    <div class="ex-lbl">Example</div>
+    <div class="ex-head">Meeting with Naturetrek</div>
+    <p>Rather than explaining why The Gambia is a good birdwatching destination, ask how demand has changed in recent years and what opportunities they see for new itineraries or specialist departures. This shifts the conversation from promotion to partnership.</p>
+    <div class="ex-head" style="margin-top:.75rem;">Meeting with African Bird Club</div>
+    <p>Focus on conservation, guide development and opportunities to promote Gambian birdwatching through shared projects and member engagement, rather than discussing tour prices or logistics.</p>
+  </div>
+
+  <div class="key-msg">
+    <div class="km-lbl">Key Message</div>
+    <p>The best B2B conversations begin with understanding your partner's needs before explaining your own services.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Remember</h3>
+    <p>Different organisations attend trade events for different reasons. The more you understand their objectives, the easier it becomes to identify opportunities for collaboration.</p>
+
+    <h3>Try This</h3>
+    <p class="try-hint">Choose three organisations you hope to meet and identify one question you would like to ask each during your meeting.</p>
+    <label class="try-label">Organisation 1</label>
+    <input class="try-input" id="ch2_org1" placeholder="Organisation name" oninput="saveAll()">
+    <textarea class="try-area" id="ch2_q1" placeholder="Question you plan to ask…" style="min-height:70px;" oninput="saveAll()"></textarea>
+    <label class="try-label">Organisation 2</label>
+    <input class="try-input" id="ch2_org2" placeholder="Organisation name" oninput="saveAll()">
+    <textarea class="try-area" id="ch2_q2" placeholder="Question you plan to ask…" style="min-height:70px;" oninput="saveAll()"></textarea>
+    <label class="try-label">Organisation 3</label>
+    <input class="try-input" id="ch2_org3" placeholder="Organisation name" oninput="saveAll()">
+    <textarea class="try-area" id="ch2_q3" placeholder="Question you plan to ask…" style="min-height:70px;" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch2_0"><input type="checkbox" onchange="onCheck(this,'ch2')"><span>I can recognise the different types of organisations attending international trade events.</span></label>
+      <label class="cl-item" id="li_ch2_1"><input type="checkbox" onchange="onCheck(this,'ch2')"><span>I understand that each meeting may have a different objective.</span></label>
+      <label class="cl-item" id="li_ch2_2"><input type="checkbox" onchange="onCheck(this,'ch2')"><span>I am prepared to ask questions before presenting my own services.</span></label>
+      <label class="cl-item" id="li_ch2_3"><input type="checkbox" onchange="onCheck(this,'ch2')"><span>I am focused on building long-term partnerships rather than making an immediate sale.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch2">✓ Chapter 2 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH3 ===== -->
+<section class="chapter" id="ch3">
+  <div class="ch-eyebrow">Chapter 3</div>
+  <h1 class="ch-title">Telling the Gambian Birding Story</h1>
+
+  <h2 class="sec-title">The Story in One Page</h2>
+  <p>The Gambian birding story is not mainly about remoteness or rarity. It is a story about <strong>concentration, accessibility, and confidence.</strong> The country is small — about <strong>11,300 km²</strong>, roughly <strong>320 km</strong> long and only <strong>50 km</strong> wide at its broadest — yet it combines Atlantic coast, estuary, mangroves, lagoons, mudflats, gallery forest, semi-evergreen forest, rice fields, savanna woodland, and the River Gambia corridor in a very compact area.</p>
+  <p>English is the official language, the country has an established tourism base, and it is around <strong>six hours from major European gateways</strong>. That matters in B2B conversations: clients can arrive for a short winter-sun break and still experience serious birding, or add upriver nights for more specialist targets.</p>
+
+  <div class="key-msg">
+    <div class="km-lbl">Core Message</div>
+    <p>The Gambia offers a high-density West African birding experience in a destination that is compact, English-speaking, and straightforward to operate.</p>
+  </div>
+
+  <h2 class="sec-title">What Birders Come For</h2>
+  <p>The African Bird Club cites approximately <strong>580 recorded species</strong>; broader checklists such as Avibase list <strong>629 species</strong>. The destination is <strong>not primarily sold as an endemic-bird destination</strong>. Rather, it is sold as an <strong>accessible concentration of West African and biome-restricted birds</strong>, mixed with strong numbers of wintering Palearctic migrants.</p>
+  <p>Key birds partners mention: <strong>Blue-bellied Roller, Ahanta Francolin, Western Bluebill, Green Turaco, Bearded Barbet, White-fronted Black-chat, Egyptian Plover, African Finfoot.</strong></p>
+
+  <div class="tip-box">
+    <div class="tip-lbl">Guide's Tip</div>
+    <p>Do not lead with the species total alone. Lead with what that total means: "a very bird-rich country where clients can experience coast, mangroves, forest, wetlands, and savanna in one trip without difficult logistics."</p>
+  </div>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Habitats &amp; Signature Sites</h2>
+  <p><strong>Coastal lagoons, mudflats &amp; offshore islands.</strong> Tanji/Bijol, Niumi, and the Tanbi-Bund Road area. The Bijol Islands are the only known seabird breeding site in The Gambia and can hold more than 20,000 waterbirds.</p>
+  <p><strong>Mangroves, tidal creeks &amp; estuarine wetlands.</strong> Tanbi and Bao Bolong — the country's most diverse inland wetland, with regular concentrations of 20,000+ waterbirds between August and December.</p>
+  <p><strong>Forest and woodland.</strong> Abuko Nature Reserve — probably the most intensively birdwatched forest in West Africa, with 270+ species recorded. Pirang and Kiang West add forest fragments and open savanna specialties including Blue-bellied Roller.</p>
+  <p><strong>Upriver and riverine extensions.</strong> Tendaba, Georgetown/Janjangbureh, and river sites for Egyptian Plover and African Finfoot. This is the country's strongest card for specialist and photography-focused departures.</p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">When to Go</h2>
+  <table class="season-table">
+    <tr><th>Months</th><th>Birding highlights</th></tr>
+    <tr><td><strong>Oct–Nov</strong></td><td>Post-wet-season greenery; weavers and bishops still in breeding plumage; first migrants arriving. Excellent photography.</td></tr>
+    <tr><td><strong>Dec–Feb</strong></td><td>Core dry season. Migrants fully present. Easiest logistics and strongest mainstream visitor comfort.</td></tr>
+    <tr><td><strong>Mar–Apr</strong></td><td>Hotter and drier; grasses reduced, better visibility in some habitats; good upriver access continues.</td></tr>
+    <tr><td><strong>May–Sep</strong></td><td>Rain builds and peaks. More challenging for standard tours, though locally interesting for breeding activity and lush habitats.</td></tr>
+  </table>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Adapting Your Pitch by Partner Type</h2>
+  <p><strong>Specialist birding operators:</strong> emphasize species density, habitat variety in short transfers, reliable local guiding, and the option to combine a simple coastal base with upriver specialities.</p>
+  <p><strong>General wildlife operators:</strong> emphasize winter-sun accessibility, English, short flying time, birds plus primates/wetlands/river experiences, and the possibility of photography-friendly departures.</p>
+  <p><strong>Bird clubs:</strong> emphasize safety, ease, flat terrain, manageable group logistics, and the fact that a mixed-ability group can still see a very rewarding range of African birds in a week.</p>
+  <p><strong>Conservation partners:</strong> emphasize wetlands, mangroves, Ramsar and KBA importance, the link between birdwatching and livelihoods for licensed local guides, and opportunities for training, monitoring and community outreach.</p>
+
+  <div class="pitch-block">
+    <div class="pitch-for">For a specialist birding operator</div>
+    <p>"The Gambia is one of the easiest ways to introduce clients to West African birding. In a compact, English-speaking destination you can cover coastal wetlands, mangroves, forest, savanna, and upriver sites, with around 580-plus regularly cited species and a strong mix of West African specialities and Palearctic migrants. For shorter departures, the coast works well; for specialist groups, upriver extensions add birds like Egyptian Plover and African Finfoot."</p>
+  </div>
+  <div class="pitch-block">
+    <div class="pitch-for">For a general wildlife operator</div>
+    <p>"The Gambia works very well as a soft-adventure nature destination: six hours from Europe, established tourism infrastructure, English widely used, and excellent winter climate. Birding can be combined with river trips, mangroves, forest lodges, primates, and culture, which makes it attractive even for clients who are not full-time birders."</p>
+  </div>
+  <div class="pitch-block">
+    <div class="pitch-for">For a bird club or society</div>
+    <p>"The Gambia is ideal for clubs because it offers a real African birding experience without difficult travel. Many sites are accessible from the coast, walking is usually light to moderate, and members of different experience levels can enjoy colourful, visible birds, waterbirds, raptors, and photographers' species in a relatively short programme."</p>
+  </div>
+  <div class="pitch-block">
+    <div class="pitch-for">For a conservation partner</div>
+    <p>"The Gambia's story is not only tourism. Its mangroves, estuaries, coastal islands, and inland wetlands are internationally important for waterbirds and migrants, with several Ramsar and KBA sites already identified. Local bird guiding can be part of conservation delivery through training, visitor education, monitoring, and community-based stewardship."</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Try This</h3>
+    <p class="try-hint">Practice two versions of your destination story — adapt the language for each audience.</p>
+    <label class="try-label" for="ch3_30">Your 30-second version (for a specialist birding operator)</label>
+    <textarea class="try-area" id="ch3_30" placeholder="The Gambia is …" oninput="saveAll()"></textarea>
+    <label class="try-label" for="ch3_45">Your 45-second version (for a general wildlife operator who may not know much about birding in West Africa)</label>
+    <textarea class="try-area" id="ch3_45" placeholder="The Gambia works well as …" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch3_0"><input type="checkbox" onchange="onCheck(this,'ch3')"><span>I can explain why The Gambia is different from larger, more complicated African birding destinations.</span></label>
+      <label class="cl-item" id="li_ch3_1"><input type="checkbox" onchange="onCheck(this,'ch3')"><span>I can describe the country by habitat, not only by species.</span></label>
+      <label class="cl-item" id="li_ch3_2"><input type="checkbox" onchange="onCheck(this,'ch3')"><span>I know the main operating seasons and how they affect the birding story.</span></label>
+      <label class="cl-item" id="li_ch3_3"><input type="checkbox" onchange="onCheck(this,'ch3')"><span>I can adapt my pitch for specialist operators, wildlife operators, bird clubs, and conservation partners.</span></label>
+      <label class="cl-item" id="li_ch3_4"><input type="checkbox" onchange="onCheck(this,'ch3')"><span>I can explain how local guide expertise improves the visitor experience.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch3">✓ Chapter 3 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH4 ===== -->
+<section class="chapter" id="ch4">
+  <div class="ch-eyebrow">Chapter 4</div>
+  <h1 class="ch-title">Presenting Yourself Professionally</h1>
+  <div class="ch-opener">"International buyers are meeting dozens of operators over two or three days. They may only remember a handful. A clear introduction, confident communication, and genuine enthusiasm often leave a stronger impression than a long sales pitch."</div>
+
+  <h2 class="sec-title">Why First Impressions Matter</h2>
+  <p>The first minute of a meeting often shapes everything that follows. Buyers are quietly asking themselves:</p>
+  <ul>
+    <li>Is this guide professional?</li>
+    <li>Do they understand international visitors?</li>
+    <li>Can I trust them with my clients?</li>
+    <li>Are they easy to communicate with?</li>
+    <li>Do they genuinely know their destination?</li>
+  </ul>
+  <p>You do not need to sound like a salesperson. The goal is to sound knowledgeable, organised and enthusiastic.</p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Your 30-Second Introduction</h2>
+  <p>At Birdfair you will often have only 30 seconds before someone decides whether to continue the conversation. Aim to answer four questions:</p>
+  <div class="intro-steps">
+    <div class="intro-step"><div class="intro-num">1</div><div class="intro-step-txt"><strong>Who are you?</strong> Your name and background.</div></div>
+    <div class="intro-step"><div class="intro-num">2</div><div class="intro-step-txt"><strong>Who do you work with?</strong> The BWA or your own company.</div></div>
+    <div class="intro-step"><div class="intro-num">3</div><div class="intro-step-txt"><strong>What do you offer?</strong> Your guiding services and destination.</div></div>
+    <div class="intro-step"><div class="intro-num">4</div><div class="intro-step-txt"><strong>Why is it interesting?</strong> One compelling reason to keep talking.</div></div>
+  </div>
+
+  <div class="ex-box">
+    <div class="ex-lbl">Example</div>
+    <p>"Hello, I'm Pa from the Bird Watchers' Association, The Gambia. We represent licensed bird guides across the country and organise tailor-made birdwatching experiences for international visitors. The Gambia is one of Africa's easiest birding destinations, with over 550 bird species in a compact country, and we work closely with overseas tour operators to create memorable birding holidays."</p>
+  </div>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Explaining the Bird Watchers' Association</h2>
+  <p>Many buyers will never have heard of the Association. Do not assume they understand how it works. A simple explanation:</p>
+  <div class="pitch-block" style="border-left-color:var(--navy);">
+    <p>"The Bird Watchers' Association is the professional organisation representing licensed bird guides in The Gambia. We promote professional guiding standards, support conservation, and help connect international visitors and tour operators with experienced local guides across the country."</p>
+  </div>
+  <p>You might also explain that guides are licensed, members work throughout the country, and enquiries can be directed through the Association.</p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Explaining Your Own Experience</h2>
+  <p>Avoid simply saying "I've been guiding for many years." Instead, be specific. You might mention:</p>
+  <ul>
+    <li>years guiding and favourite locations;</li>
+    <li>specialist birds or habitats you know best;</li>
+    <li>photography experience;</li>
+    <li>languages spoken;</li>
+    <li>conservation activities;</li>
+    <li>experience with international visitors and which nationalities.</li>
+  </ul>
+
+  <div class="ex-box">
+    <div class="ex-lbl">Example</div>
+    <p>"I've specialised in bird guiding for more than fifteen years. Much of my work is with visitors from the UK, Germany and the Netherlands, and I particularly enjoy helping photographers and keen birders find species such as Egyptian Plover, Abyssinian Ground Hornbill and White-backed Night Heron."</p>
+  </div>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Professional Communication Tips</h2>
+  <ul>
+    <li>Listen more than you speak.</li>
+    <li>Answer questions directly.</li>
+    <li>Speak slowly and clearly.</li>
+    <li>If you do not know an answer, say you will find out.</li>
+    <li>Avoid exaggerating species sightings or guarantees.</li>
+    <li>Smile and show genuine enthusiasm.</li>
+    <li>Be curious about the buyer's business as well as talking about your own.</li>
+  </ul>
+
+  <h2 class="sec-title">Common Mistakes to Avoid</h2>
+  <div class="avoid-item"><span class="avoid-x">✗</span><span>Speaking for ten minutes without asking a question.</span></div>
+  <div class="avoid-item"><span class="avoid-x">✗</span><span>Listing every bird species you know.</span></div>
+  <div class="avoid-item"><span class="avoid-x">✗</span><span>Beginning immediately with prices.</span></div>
+  <div class="avoid-item"><span class="avoid-x">✗</span><span>Criticising other guides or operators.</span></div>
+  <div class="avoid-item"><span class="avoid-x">✗</span><span>Using complicated tourism jargon.</span></div>
+  <div class="avoid-item"><span class="avoid-x">✗</span><span>Trying to memorise a script word-for-word.</span></div>
+
+  <div class="key-msg">
+    <div class="km-lbl">Remember</div>
+    <p>International buyers are looking for reliable long-term partners, not perfect presentations. Be yourself. Be professional. Be enthusiastic. Be prepared.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Practice Exercise</h3>
+    <p class="try-hint">Write your own personal 30-second introduction. Use the four-question structure above. Try saying it aloud and time yourself — can you say it comfortably in under 30 seconds?</p>
+    <label class="try-label" for="ch4_intro">Your 30-second introduction</label>
+    <textarea class="try-area" id="ch4_intro" placeholder="Hello, I'm … from …" style="min-height:130px;" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch4_0"><input type="checkbox" onchange="onCheck(this,'ch4')"><span>I have a clear, confident 30-second introduction ready.</span></label>
+      <label class="cl-item" id="li_ch4_1"><input type="checkbox" onchange="onCheck(this,'ch4')"><span>I can explain the Bird Watchers' Association clearly to someone who has never heard of it.</span></label>
+      <label class="cl-item" id="li_ch4_2"><input type="checkbox" onchange="onCheck(this,'ch4')"><span>I can describe my own experience in specific, memorable terms.</span></label>
+      <label class="cl-item" id="li_ch4_3"><input type="checkbox" onchange="onCheck(this,'ch4')"><span>I know the common mistakes to avoid in a first meeting.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch4">✓ Chapter 4 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH5 ===== -->
+<section class="chapter" id="ch5">
+  <div class="ch-eyebrow">Chapter 5</div>
+  <h1 class="ch-title">Presenting Your Birding Experiences</h1>
+  <div class="ch-opener">"International buyers are not simply looking for itineraries — they are looking for experiences that will appeal to their clients and fit within their existing programmes."</div>
+
+  <h2 class="sec-title">Describing Your Tours</h2>
+  <p>When describing your tours, avoid listing activities one after another. Instead, help buyers understand the overall experience and who it is designed for. A strong birdwatching product should answer six simple questions:</p>
+  <ol>
+    <li>What is the experience?</li>
+    <li>Who is it designed for?</li>
+    <li>How long does it last?</li>
+    <li>What makes it unique?</li>
+    <li>What is included?</li>
+    <li>Why should a visitor choose it?</li>
+  </ol>
+  <p>Remember that buyers are thinking about their own clients. The easier it is for them to imagine the experience, the easier it becomes to include it in their programmes.</p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Matching Experiences to Different Travellers</h2>
+  <p><strong>Half-day and full-day excursions</strong> are ideal for visitors with limited time or those adding birdwatching to a wider holiday.</p>
+  <p><strong>Multi-day birding tours</strong> allow visitors to experience a greater variety of habitats and target species while exploring different regions of The Gambia.</p>
+  <p><strong>Photography tours</strong> often move at a slower pace, placing greater emphasis on lighting, positioning and time spent observing individual species.</p>
+  <p><strong>Tailor-made itineraries</strong> allow you to adapt the experience around a visitor's interests, travel dates, pace and birding goals. Flexibility is often one of the Association's greatest strengths.</p>
+
+  <div class="tip-box">
+    <div class="tip-lbl">Guide's Tip</div>
+    <p>Rather than saying "We offer half-day and full-day tours," explain who each experience is designed for and why a visitor might choose it.</p>
+  </div>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Talking About Prices</h2>
+  <p>Price is important, but it should rarely be the first topic of conversation. Instead of simply quoting a price, explain what the visitor receives:</p>
+  <ul>
+    <li>professional guiding;</li>
+    <li>transport;</li>
+    <li>park or reserve entrance fees (where applicable);</li>
+    <li>meals or refreshments;</li>
+    <li>drinking water;</li>
+    <li>accommodation (for multi-day tours);</li>
+    <li>flexibility to adapt the itinerary.</li>
+  </ul>
+  <p>Being clear about what is included helps buyers compare experiences fairly and reduces misunderstandings later.</p>
+
+  <div class="key-msg">
+    <div class="km-lbl">Key Message</div>
+    <p>Present experiences, not just itineraries. Help buyers understand who each tour is for and why it will appeal to their clients.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Try This</h3>
+    <p class="try-hint">Choose one of your birdwatching tours and explain it in one minute. Focus on the experience rather than simply describing the route or listing bird species. Answer the six questions above.</p>
+    <label class="try-label" for="ch5_tour">Describe your tour experience here:</label>
+    <textarea class="try-area" id="ch5_tour" placeholder="This tour is designed for … It lasts … What makes it special is …" style="min-height:140px;" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch5_0"><input type="checkbox" onchange="onCheck(this,'ch5')"><span>I can clearly explain my main birdwatching experiences.</span></label>
+      <label class="cl-item" id="li_ch5_1"><input type="checkbox" onchange="onCheck(this,'ch5')"><span>I know which visitors each experience is best suited to.</span></label>
+      <label class="cl-item" id="li_ch5_2"><input type="checkbox" onchange="onCheck(this,'ch5')"><span>I can explain what is included in my prices.</span></label>
+      <label class="cl-item" id="li_ch5_3"><input type="checkbox" onchange="onCheck(this,'ch5')"><span>I can describe how itineraries can be adapted to suit different clients.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch5">✓ Chapter 5 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH6 ===== -->
+<section class="chapter" id="ch6">
+  <div class="ch-eyebrow">Chapter 6</div>
+  <h1 class="ch-title">Conducting Successful B2B Meetings</h1>
+  <div class="ch-opener">"A successful B2B meeting is not a presentation — it is the beginning of a professional relationship."</div>
+
+  <h2 class="sec-title">Before the Meeting</h2>
+  <p>Good meetings begin before you sit down. Take a few minutes to review the organisation's website and understand the types of tours they offer, the destinations they specialise in, and the clients they serve.</p>
+  <p>Before the meeting, make sure you have:</p>
+  <ul>
+    <li>business cards;</li>
+    <li>a notebook and pen;</li>
+    <li>your itinerary or product sheets;</li>
+    <li>pricing information (if requested); and</li>
+    <li>a phone or tablet with your website available if needed.</li>
+  </ul>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Turning a Meeting into a Conversation</h2>
+  <p>Many first-time exhibitors believe they need to spend the entire meeting talking about themselves. In reality, the most successful meetings are balanced conversations.</p>
+  <p>Start by introducing yourself, then learn about the other organisation. Questions such as:</p>
+  <ul>
+    <li>"What type of birdwatching tours do you specialise in?"</li>
+    <li>"Do you already operate in West Africa?"</li>
+    <li>"What do your clients enjoy most?"</li>
+    <li>"What are you looking for in a local partner?"</li>
+  </ul>
+
+  <div class="tip-box">
+    <div class="tip-lbl">Guide's Tip</div>
+    <p>Aim to listen as much as you speak. Buyers are often more interested in discussing their own programmes than listening to a long presentation.</p>
+  </div>
+
+  <h2 class="sec-title">Answering Questions with Confidence</h2>
+  <p>You should be prepared to answer questions about your guiding experience, birdwatching seasons, accommodation and transport, itinerary options, pricing and inclusions, group sizes, and how tours can be customised.</p>
+  <p>If you do not know an answer, it is perfectly acceptable to say that you will confirm the information after the meeting. Honest, accurate answers build greater confidence than guessing.</p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Finishing the Meeting Well</h2>
+  <p>Always leave a meeting with a clear understanding of the next step. Before saying goodbye:</p>
+  <ul>
+    <li>summarise the main points discussed;</li>
+    <li>agree on any follow-up actions;</li>
+    <li>exchange business cards or contact details; and</li>
+    <li>thank your partner for their time.</li>
+  </ul>
+  <p>As soon as the meeting finishes, make a few notes while the conversation is still fresh. Record who you met, what interested them, and what information you promised to send.</p>
+
+  <div class="key-msg">
+    <div class="km-lbl">Key Message</div>
+    <p>The goal of a B2B meeting is not to secure an immediate booking — it is to begin a professional relationship built on trust.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Try This</h3>
+    <p class="try-hint">Ask a colleague to role-play a buyer meeting. Spend five minutes asking questions before presenting your own products. Afterwards, discuss what you learned about their business. Record your reflections below.</p>
+    <label class="try-label" for="ch6_roleplay">Your role-play reflections:</label>
+    <textarea class="try-area" id="ch6_roleplay" placeholder="What questions worked well? What did you learn? What would you do differently?" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch6_0"><input type="checkbox" onchange="onCheck(this,'ch6')"><span>I have researched the organisations I plan to meet before the fair.</span></label>
+      <label class="cl-item" id="li_ch6_1"><input type="checkbox" onchange="onCheck(this,'ch6')"><span>I am prepared to ask thoughtful questions and listen carefully.</span></label>
+      <label class="cl-item" id="li_ch6_2"><input type="checkbox" onchange="onCheck(this,'ch6')"><span>I can answer common questions about my guiding and products.</span></label>
+      <label class="cl-item" id="li_ch6_3"><input type="checkbox" onchange="onCheck(this,'ch6')"><span>I know exactly how I will follow up after each meeting.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch6">✓ Chapter 6 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH7 ===== -->
+<section class="chapter" id="ch7">
+  <div class="ch-eyebrow">Chapter 7</div>
+  <h1 class="ch-title">Preparing Your Marketing Materials</h1>
+  <div class="ch-opener">"Your marketing materials should support the conversation — not replace it."</div>
+
+  <h2 class="sec-title">Keep It Simple</h2>
+  <p>International buyers do not expect you to arrive with a suitcase full of brochures. Instead, they want clear, accurate information that is easy to review after the meeting. Focus on quality rather than quantity. A small collection of well-prepared materials is often more effective than dozens of different documents.</p>
+
+  <h2 class="sec-title">Your Essential Toolkit</h2>
+  <p>Before attending a trade fair, make sure you have:</p>
+  <ul>
+    <li>Business cards with current contact details.</li>
+    <li>A QR code linking to your website or digital profile.</li>
+    <li>A professional website or online profile.</li>
+    <li>Recent TripAdvisor reviews or other trusted testimonials.</li>
+    <li>High-quality bird and guiding photographs.</li>
+    <li>Sample itineraries.</li>
+    <li>A simple price sheet or pricing guide.</li>
+    <li>WhatsApp and email ready for follow-up communication.</li>
+  </ul>
+
+  <div class="tip-box">
+    <div class="tip-lbl">Guide's Tip</div>
+    <p>Before you travel, ask a colleague to review your website and marketing materials. Fresh eyes often spot broken links, outdated information or missing details.</p>
+  </div>
+
+  <h2 class="sec-title">Digital First</h2>
+  <p>Many buyers prefer digital materials that they can save and share with colleagues after the event. Where possible, provide downloadable itineraries, PDF brochures, links to your website, photo galleries, and social media or TripAdvisor pages. A QR code is often the quickest way to share these resources during a meeting.</p>
+
+  <div class="key-msg">
+    <div class="km-lbl">Key Message</div>
+    <p>Good marketing materials support your conversation — they do not replace it.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Try This</h3>
+    <p class="try-hint">Ask someone unfamiliar with your business to review your website and one itinerary. Can they quickly understand what you offer and how to contact you? Note any changes you need to make.</p>
+    <label class="try-label" for="ch7_review">Changes or improvements to make:</label>
+    <textarea class="try-area" id="ch7_review" placeholder="Website needs updating … itinerary missing prices …" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch7_0"><input type="checkbox" onchange="onCheck(this,'ch7')"><span>My contact details are current on all materials.</span></label>
+      <label class="cl-item" id="li_ch7_1"><input type="checkbox" onchange="onCheck(this,'ch7')"><span>My website is working correctly.</span></label>
+      <label class="cl-item" id="li_ch7_2"><input type="checkbox" onchange="onCheck(this,'ch7')"><span>My itineraries are up to date.</span></label>
+      <label class="cl-item" id="li_ch7_3"><input type="checkbox" onchange="onCheck(this,'ch7')"><span>I have a QR code ready to share.</span></label>
+      <label class="cl-item" id="li_ch7_4"><input type="checkbox" onchange="onCheck(this,'ch7')"><span>My TripAdvisor and online profiles reflect my current services.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch7">✓ Chapter 7 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== CH8 ===== -->
+<section class="chapter" id="ch8">
+  <div class="ch-eyebrow">Chapter 8</div>
+  <h1 class="ch-title">Following Up After the Fair</h1>
+  <div class="ch-opener">"The meeting starts the relationship. The follow-up helps it grow."</div>
+
+  <h2 class="sec-title">Why Follow-Up Matters</h2>
+  <p>Most partnerships are not created during a trade fair — they develop afterwards. International buyers often meet dozens of organisations over a few days. A thoughtful follow-up helps them remember your conversation and demonstrates that you are organised, reliable and interested in working together.</p>
+  <p><strong>Aim to send your first follow-up email within one week of returning home.</strong></p>
+
+  <hr class="ch-divider">
+  <h2 class="sec-title">Writing an Effective Follow-Up</h2>
+  <p>A good follow-up email should be short and personal. Thank the person for their time, remind them where you met, and include any information you promised to send, such as an itinerary, price guide or website link. Where appropriate, invite them to continue the conversation with an online meeting.</p>
+
+  <div class="tip-box">
+    <div class="tip-lbl">Guide's Tip</div>
+    <p>Personalise every message. Mention something you discussed during the meeting so the recipient immediately remembers your conversation.</p>
+  </div>
+
+  <h2 class="sec-title">Staying Connected</h2>
+  <p>Not every contact will be ready to work together immediately. Stay in touch by connecting on LinkedIn where appropriate, sharing occasional updates or new itineraries, sending relevant news from The Gambia, and responding promptly to future enquiries. Professional relationships often develop over months or even years.</p>
+
+  <div class="key-msg">
+    <div class="km-lbl">Key Message</div>
+    <p>Consistent, professional follow-up builds stronger partnerships than a single successful meeting.</p>
+  </div>
+
+  <div class="bymo">
+    <div class="bymo-eyebrow">Before You Move On</div>
+    <h3>Try This</h3>
+    <p class="try-hint">Draft a follow-up email to someone you met at a trade fair. Keep it to five short paragraphs or fewer and include one clear next step.</p>
+    <label class="try-label" for="ch8_email">Your follow-up email draft:</label>
+    <textarea class="try-area" id="ch8_email" placeholder="Subject: Great to meet you at Birdfair&#10;&#10;Dear [Name],&#10;&#10;Thank you for taking the time to meet with me…" style="min-height:160px;" oninput="saveAll()"></textarea>
+
+    <div class="checklist">
+      <div class="cl-title">Checklist</div>
+      <label class="cl-item" id="li_ch8_0"><input type="checkbox" onchange="onCheck(this,'ch8')"><span>I recorded notes after each meeting.</span></label>
+      <label class="cl-item" id="li_ch8_1"><input type="checkbox" onchange="onCheck(this,'ch8')"><span>I know what information I promised to send.</span></label>
+      <label class="cl-item" id="li_ch8_2"><input type="checkbox" onchange="onCheck(this,'ch8')"><span>I will follow up within one week.</span></label>
+      <label class="cl-item" id="li_ch8_3"><input type="checkbox" onchange="onCheck(this,'ch8')"><span>I have organised my new contacts for future communication.</span></label>
+    </div>
+    <div class="ch-done-banner" id="done_ch8">✓ Chapter 8 complete — well done!</div>
+  </div>
+</section>
+
+<!-- ===== TOOLS ===== -->
+<section class="chapter" id="tools">
+  <div class="ch-eyebrow">Practical Tools &amp; Templates</div>
+  <h1 class="ch-title">Templates &amp; Checklists</h1>
+  <p>These resources are designed to help you prepare before the event, organise your meetings, and follow up afterwards. Adapt them to suit your own style and the organisations you meet. Your entries are saved automatically.</p>
+
+  <!-- TOOL 2: MEETING NOTES -->
+  <div class="tool-card">
+    <h3>Tool 1 · B2B Meeting Notes</h3>
+    <div class="tool-desc">Complete one form for each organisation you meet. Your notes are saved in this browser.</div>
+    <div class="form-row">
+      <label>Organisation</label>
+      <input type="text" id="t_org" placeholder="e.g. Naturetrek" oninput="saveAll()">
+    </div>
+    <div class="form-row">
+      <label>Contact Name</label>
+      <input type="text" id="t_contact" placeholder="e.g. Jane Smith" oninput="saveAll()">
+    </div>
+    <div class="form-row">
+      <label>Date</label>
+      <input type="text" id="t_date" placeholder="e.g. 18 July 2026" oninput="saveAll()">
+    </div>
+    <div class="form-row">
+      <label>What do they currently sell?</label>
+      <textarea id="t_sells" placeholder="Types of tours, destinations, client profile…" oninput="saveAll()"></textarea>
+    </div>
+    <div class="form-row">
+      <label>What interested them most?</label>
+      <textarea id="t_interest" placeholder="What got their attention during the conversation…" oninput="saveAll()"></textarea>
+    </div>
+    <div class="form-row">
+      <label>Information requested</label>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" id="t_req_itin" onchange="saveAll()"> Itinerary</label>
+        <label class="form-check"><input type="checkbox" id="t_req_price" onchange="saveAll()"> Price sheet</label>
+        <label class="form-check"><input type="checkbox" id="t_req_web" onchange="saveAll()"> Website</label>
+        <label class="form-check"><input type="checkbox" id="t_req_photos" onchange="saveAll()"> Photos</label>
+        <label class="form-check"><input type="checkbox" id="t_req_other" onchange="saveAll()"> Other</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <label>Next agreed action</label>
+      <input type="text" id="t_action" placeholder="e.g. Send 7-day itinerary by email" oninput="saveAll()">
+    </div>
+    <div class="form-row">
+      <label>Follow-up date</label>
+      <input type="text" id="t_followdate" placeholder="e.g. within one week of returning" oninput="saveAll()">
+    </div>
+    <div class="save-notice">Your notes are saved automatically in this browser.</div>
+  </div>
+
+  <!-- TOOL 3: FOLLOW-UP EMAIL -->
+  <div class="tool-card" style="margin-top:1.5rem;">
+    <h3>Tool 2 · Follow-Up Email Template</h3>
+    <div class="tool-desc">Fill in the fields below to personalise your follow-up. Copy and paste into your email client when ready.</div>
+    <div class="form-row">
+      <label>Recipient name</label>
+      <input type="text" id="em_name" placeholder="e.g. Jane" oninput="updateEmail()">
+    </div>
+    <div class="form-row">
+      <label>Something personal from your conversation</label>
+      <input type="text" id="em_personal" placeholder="e.g. the discussion about upriver extensions" oninput="updateEmail()">
+    </div>
+    <div class="form-row">
+      <label>Information you are attaching</label>
+      <input type="text" id="em_attach" placeholder="e.g. our sample 7-day itinerary and price guide" oninput="updateEmail()">
+    </div>
+    <div class="form-row">
+      <label>Preview</label>
+      <div class="email-preview" id="emailPreview"></div>
+    </div>
+  </div>
+
+  <!-- TOOL 4: TRADE FAIR CHECKLIST -->
+  <div class="tool-card" style="margin-top:1.5rem;">
+    <h3>Tool 3 · Trade Fair Checklist</h3>
+    <div class="tool-desc">Track your preparation across three phases. Tick each item as you complete it.</div>
+
+    <div class="fair-section-head">Before You Travel</div>
+    <label class="fair-item" id="fli_0"><input type="checkbox" onchange="onFairCheck(this,0)"><span>Business cards packed</span></label>
+    <label class="fair-item" id="fli_1"><input type="checkbox" onchange="onFairCheck(this,1)"><span>Website reviewed and working</span></label>
+    <label class="fair-item" id="fli_2"><input type="checkbox" onchange="onFairCheck(this,2)"><span>QR code tested</span></label>
+    <label class="fair-item" id="fli_3"><input type="checkbox" onchange="onFairCheck(this,3)"><span>Itineraries updated</span></label>
+    <label class="fair-item" id="fli_4"><input type="checkbox" onchange="onFairCheck(this,4)"><span>Price sheet prepared</span></label>
+    <label class="fair-item" id="fli_5"><input type="checkbox" onchange="onFairCheck(this,5)"><span>TripAdvisor profile checked</span></label>
+    <label class="fair-item" id="fli_6"><input type="checkbox" onchange="onFairCheck(this,6)"><span>Professional photographs available</span></label>
+    <label class="fair-item" id="fli_7"><input type="checkbox" onchange="onFairCheck(this,7)"><span>WhatsApp and email working</span></label>
+    <label class="fair-item" id="fli_8"><input type="checkbox" onchange="onFairCheck(this,8)"><span>Meetings researched</span></label>
+    <label class="fair-item" id="fli_9"><input type="checkbox" onchange="onFairCheck(this,9)"><span>30-second introduction practised</span></label>
+
+    <div class="fair-section-head">During the Fair</div>
+    <label class="fair-item" id="fli_10"><input type="checkbox" onchange="onFairCheck(this,10)"><span>Arrive early</span></label>
+    <label class="fair-item" id="fli_11"><input type="checkbox" onchange="onFairCheck(this,11)"><span>Ask questions first before presenting</span></label>
+    <label class="fair-item" id="fli_12"><input type="checkbox" onchange="onFairCheck(this,12)"><span>Take notes after every meeting</span></label>
+    <label class="fair-item" id="fli_13"><input type="checkbox" onchange="onFairCheck(this,13)"><span>Record agreed next steps</span></label>
+    <label class="fair-item" id="fli_14"><input type="checkbox" onchange="onFairCheck(this,14)"><span>Exchange business cards or contact details</span></label>
+    <label class="fair-item" id="fli_15"><input type="checkbox" onchange="onFairCheck(this,15)"><span>Thank each contact</span></label>
+
+    <div class="fair-section-head">After Returning Home</div>
+    <label class="fair-item" id="fli_16"><input type="checkbox" onchange="onFairCheck(this,16)"><span>Send follow-up emails within one week</span></label>
+    <label class="fair-item" id="fli_17"><input type="checkbox" onchange="onFairCheck(this,17)"><span>Connect on LinkedIn where appropriate</span></label>
+    <label class="fair-item" id="fli_18"><input type="checkbox" onchange="onFairCheck(this,18)"><span>Record new contacts</span></label>
+    <label class="fair-item" id="fli_19"><input type="checkbox" onchange="onFairCheck(this,19)"><span>Schedule follow-up reminders</span></label>
+    <label class="fair-item" id="fli_20"><input type="checkbox" onchange="onFairCheck(this,20)"><span>Share any additional information requested</span></label>
+
+    <div class="fair-progress" id="fairProgress">0 of 21 items complete</div>
+  </div>
+</section>
+
+<!-- ===== BUYER DIRECTORY ===== -->
+<section class="chapter" id="buyers">
+  <div class="ch-eyebrow">Buyer Mapping</div>
+  <h1 class="ch-title">Buyer Directory</h1>
+  <p style="margin-bottom:1.25rem;font-size:.9rem;color:var(--text-muted);">48 organisations attending Global Birdfair 2026 that are relevant to the Bird Watchers' Association. Star the ones you want to meet — they'll appear in your Meeting Plan. Add a note after your conversation.</p>
+
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="filterBuyers('all',this)">All <span class="tab-count">(48)</span></button>
+    <button class="filter-tab" onclick="filterBuyers('Existing Gambia Seller',this)">Already sell Gambia <span class="tab-count">(9)</span></button>
+    <button class="filter-tab" onclick="filterBuyers('International Birding & Nature Operator',this)">International Operators <span class="tab-count">(34)</span></button>
+    <button class="filter-tab" onclick="filterBuyers('West Africa & Strategic Partner',this)">Strategic Partners <span class="tab-count">(5)</span></button>
+  </div>
+
+  <div class="buyer-grid" id="buyerGrid"></div>
+</section>
+
+<!-- ===== MY MEETING PLAN ===== -->
+<section class="chapter" id="myplan">
+  <div class="ch-eyebrow">My Meeting Plan</div>
+  <h1 class="ch-title">My Meeting Plan</h1>
+  <p style="margin-bottom:1.25rem;font-size:.9rem;color:var(--text-muted);">Your starred companies, with your notes. Tap "Copy to share" to generate a plain-text summary you can paste into WhatsApp or email to yourself.</p>
+  <div id="planList"></div>
+  <button class="copy-btn" onclick="generatePlan()">📋 Copy my plan to share</button>
+  <textarea class="copy-area" id="planText" readonly onclick="this.select()"></textarea>
+  <div class="save-notice" id="planCopied" style="display:none;color:var(--teal-dark);font-style:normal;font-weight:600;">✓ Copied to clipboard</div>
+</section>
+
+</main>
+</div><!-- /layout -->
+</div><!-- /app -->
+
+<script>
+// ---- BUYER DATA ----
+const BUYERS = [{"name":"Birdfinders","country":"UK","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.birdfinders.co.uk/tours/gambia.html","summary":"UK specialist birding tour operator (c. 200 tours/year worldwide) targeting committed birders. Runs a confirmed 15-day Gambia tour featuring Egyptian Plover, Martial Eagle, African Finfoot and Marakissa-based forest birding, with…","goal":"Confirm 2026/27 departure dates, scout new sites to refresh the itinerary, and explore adding an upcountry/community-tourism extension."},{"name":"Heatherlea Birdwatching Ltd","country":"UK (Scotland)","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.heatherlea.co.uk/","summary":"35-year-old Scottish ATOL-licensed birding holiday operator (Cairngorms-based, own hotel). Africa programme covers Kenya, Botswana, Morocco and The Gambia — an 11-day Gambia holiday across three centres covering mangrove swamp, tidal…","goal":"Maintain current product, brief them on new ground operator options, and explore upcountry/Senegal extensions."},{"name":"Limosa Holidays","country":"UK","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.limosaholidays.co.uk/","summary":"One of the UK's longest-established specialist bird tour operators (Surrey-based), running a worldwide birding programme. Confirmed Gambia seller; leaders have guided in The Gambia for many years. Now part of the same company as Wildwings.","goal":"Reconfirm current Gambia leader, scout potential new sites/lodges, and align on 2026/27 departures."},{"name":"Naturetrek","country":"UK","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.naturetrek.co.uk/destinations/africa/gambia","summary":"The UK's largest wildlife and birding holiday operator (AITO member, c. 700+ tours/year). Confirmed active Gambia seller with multiple distinct products: an 11/12-day River Gambia birding tour and a year-round monthly Gambia in Style…","goal":"Brief Naturetrek's Africa product team on new Gambian product (community lodges, upcountry circuits, new guide cohorts) and explore co-marketing for the 2026/27 season."},{"name":"Oriole Birding Limited","country":"UK (Norfolk)","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.oriolebirding.com/","summary":"Established UK birding tour operator running small-group tours throughout the UK and to others countries. Confirmed Gambia seller with distinct products — a 7-day coastal Birding the Smiling Coast tour and a four-centre Up-river & Coast…","goal":"Confirm 2026/27 departure schedule, brief on new upcountry sites/lodges."},{"name":"Rockjumper Birding Tours","country":"South Africa","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.rockjumperbirding.com/","summary":"One of the world's largest specialist birding tour operators (Pietermaritzburg, SA), running scheduled set-departure tours across all continents. They run a confirmed Gambia & Senegal combined birding tour as part of their Africa programme.","goal":"Meet their Africa product manager to review ground service quality, request next-year departure forecasts, and ensure local Gambian DMC pricing/availability is fed in for 2026/27."},{"name":"Wildlife Worldwide & The Travelling Naturalist","country":"UK","rank":"A","segment":"Existing Gambia Seller","priority":"High","website":"https://www.wildlifeworldwide.com/","summary":"Sister brands (under the Wildlife Worldwide group) covering wildlife and birding tours globally. Both run Gambia products: Wildlife Worldwide's group tours and The Travelling Naturalist's 12-day Gambia & Senegal: Superb West African…","goal":"Meet the product director to refresh ground supplier relationships, validate 2026/27 set-departures, and offer fam-trip support for new content."},{"name":"Bluetail Birding","country":"UK","rank":"A","segment":"Existing Gambia Seller","priority":"Medium","website":"https://www.bluetailbirding.com/","summary":"Dedicated bird tour operator offering scheduled small-group and custom travel worldwide with a primary specialisation in South Asia. Booking pages include a UK/Europe Gambia surcharge — indicating an active Gambia & Senegal product line…","goal":"Confirm 2026/27 Gambia departures and introduce Pa Birding Tours and BWA as local specialist ground partners for small-group and custom tour support."},{"name":"Eco Terra Adventures Limited","country":"UK","rank":"A","segment":"Existing Gambia Seller","priority":"Medium","website":"https://ecoterraadventures.com/","summary":"Family-run UK tour operator (10+ years) specialising in herpetology and wildlife-photography holidays. Confirmed 10-day reptile & amphibian holiday in The Gambia alongside trips in the Sahara, Costa Rica, Ecuador, Brazil and Sri Lanka.","goal":"Discuss existing Gambia ground supplier setup; explore birding cross-sell modules with Fatounding Colley (Birding Adventures Gambia) or Pa Ousman Jallow (Pa Birding Tours)."},{"name":"African Bird Club","country":"UK","rank":"B","segment":"West Africa & Strategic Partner","priority":"High","website":"https://www.africanbirdclub.org/","summary":"UK-registered charity founded 1994, c. 1,200 members in 70+ countries, dedicated to African bird conservation. Has disbursed £500k+ across 300+ conservation projects in 45 African countries via its Conservation Fund — including funded…","goal":"Coordinate on ABC's Gambia content (country page, project funding pipeline), invite ABC to endorse a future Gambia birding festival, and secure a member-club newsletter slot."},{"name":"Ashanti African Tours Limited","country":"Ghana / West Africa","rank":"B","segment":"West Africa & Strategic Partner","priority":"High","website":"https://ashantiafricantours.com/","summary":"Cape Coast (Ghana) based DMC and West Africa's leading specialist receiving operator for birding and nature tours across Ghana, Benin, Togo, Senegal, São Tomé & Príncipe, Liberia and Sierra Leone.","goal":"Open a regional cooperation conversation — joint multi-country itineraries (e.g. Senegal + Gambia + Ghana) and reciprocal referrals of clients between Ashanti's and Gambian ground operators."},{"name":"BirdLife International","country":"Belgium HQ (global)","rank":"B","segment":"West Africa & Strategic Partner","priority":"High","website":"https://www.birdlife.org/","summary":"The world's largest nature conservation partnership of national bird/biodiversity organisations. West Africa partners directly relevant to Gambia include WABSA (West African Bird Study Association — The Gambia), NCD (Senegal) and ODZH…","goal":"Coordinate with the BirdLife Africa team and WABSA on joint visibility (e.g. Atlantic Flyway storytelling) and explore site-IBA tourism overlays that benefit community lodges."},{"name":"Cornell Lab of Ornithology — eBird & Merlin","country":"USA","rank":"B","segment":"West Africa & Strategic Partner","priority":"High","website":"https://www.birds.cornell.edu/","summary":"World-leading ornithology research institute and operator of eBird (largest citizen-science bird-monitoring dataset globally) and Merlin Bird ID (AI-powered identification by photo/sound). Core platforms used by virtually every…","goal":"Discuss Gambia eBird hotspot maintenance, Merlin Gambia/W Africa pack accuracy, and a possible Cornell Lab–GTBoard data-quality MoU."},{"name":"Birding the Islands Ltd","country":"UK","rank":"B","segment":"West Africa & Strategic Partner","priority":"Medium","website":"https://www.birdingtheislands.com/","summary":"Specialist tour operator focused on Macaronesia — the Canary Islands, Madeira, Azores and Cape Verde. Targets the endemics and Macaronesian specialities, with pelagics and island endemics as core product.","goal":"Explore co-developing a Cape Verde + Gambia combined island/mainland W Africa itinerary."},{"name":"2by2 Holidays","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.2by2holidays.co.uk/","summary":"UK financially-protected tailor-made tour operator covering safaris and wildlife tours to Africa, India and Latin America (luxury fly-in safaris, value packages, escorted small groups, self-drive). Africa programme appears to focus on…","goal":"Pitch a Gambia birding add-on product sheet to their Africa product manager for inclusion in their tailor-made library."},{"name":"Bird's Wildlife & Nature Tours","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://birdswildlife.com/","summary":"Small-group birding and wildlife tour operator covering Costa Rica, Bhutan, Greece, Spain (Extremadura), Vietnam, Uganda and other selected destinations. Naturalist-leader led.","goal":"Introduce Gambia as a complementary African destination and offer fam-trip support."},{"name":"Birder.Travel (Sicklebill Safaris)","country":"Australia","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://birder.travel/","summary":"Small family-run birding/wildlife operator based in North Queensland with 20+ years in the Pacific region. Itineraries now cover Asia, Africa (including some rarely visited offshore islands) and the Middle East as well as Australia and the…","goal":"Probe their African coverage specifically — could they add Gambia as a regional extension?"},{"name":"Birding Direct","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.birdingdirect.com/","summary":"Marketplace-style platform connecting birding travellers with trusted local guides worldwide. Functions more as a booking aggregator than a traditional tour operator.","goal":"Pitch onboarding of GTBoard-licensed Gambian bird guides onto their platform."},{"name":"Greentours Natural History Holidays","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.greentours.co.uk/","summary":"Established 1994 by Ian Green & Fiona Dunbar; high-end natural history holidays — wildlife, flowers, butterflies and birding — across Europe, Africa, Americas, Asia, Australia and the Middle East. Africa region is in their catalogue but no…","goal":"Pitch a Gambia flora-and-fauna combined product idea."},{"name":"Partnership for International Birding (PIB)","country":"USA","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.pibird.com/","summary":"Denver-based birding tour broker scheduling 150+ tours/year with local guides globally. Africa coverage includes Gambia; tours typically have 5–8 participants and the organisation supports bird conservation.","goal":"Pitch a Gambia powered by Gambian local guides tour for inclusion in their 2027 schedule."},{"name":"Reef and Rainforest Tours Ltd","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://reefandrainforest.co.uk/","summary":"ATOL-protected UK natural history specialist since 1990 — tailor-made and small-group wildlife tours globally, including big cat safaris, primate trekking, birding, photographic and wildlife cruises. Active Africa, India and Sri Lanka…","goal":"Pitch a tailor-made Gambia birding-photography product for inclusion in their library."},{"name":"Southern Sky Adventures","country":"USA","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.southernskyadventures.com/","summary":"US-based African safari operator (founded 2002) running safaris, golf and rail journeys across Botswana, Kenya, Malawi, Mozambique, Namibia, Rwanda, South Africa, Tanzania, Uganda and Zimbabwe. No real presence in West Africa.","goal":"Pitch Gambia as a new West African addition to diversify their Africa portfolio."},{"name":"Travel The Unknown","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.traveltheunknown.com/","summary":"Founded 2008, UK operator offering small-group and tailor-made tours to off-the-beaten-track destinations. Africa portfolio covers Tanzania, South Africa, Kenya, Morocco, Egypt, Botswana, Rwanda, Madagascar and Ethiopia.","goal":"Pitch an upcountry Gambia + Senegal undiscovered West Africa small-group itinerary."},{"name":"Tropical Birding","country":"USA / global","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://tropicalbirding.com/","summary":"Major specialist international birding tour operator (Quito and Tucson hubs) running custom and set-departure tours globally, including across Africa. No clearly visible current Gambia tour but strong global birding network.","goal":"Pitch a Gambia (or Gambia + Senegal) set-departure for 2027/28, with Gambian co-leader option."},{"name":"Wildfoot Travel","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://www.wildfoottravel.com/","summary":"34+ years in luxury wildlife and expedition cruise travel. Now covers polar regions, African savannahs, Galapagos and worldwide wildlife experiences. No specific dedicated Gambia package visible.","goal":"Brief their Africa product manager on higher-end Gambia options."},{"name":"Wildwings Travel","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Medium","website":"https://wildwings.co.uk/","summary":"One of the UK's longest-established wildlife tour businesses, now under the same ownership as Limosa Holidays. Strong worldwide wildlife and expedition-cruise portfolio. No dedicated Gambia tour currently visible.","goal":"Confirm group-level commitment to Gambia and explore whether Wildwings could pair Gambia with one of its expedition cruise products (West Africa coastal voyage)."},{"name":"All4birding","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://all4birding.com/","summary":"Birding tour brand emphasising connections to local culture, community encounters and sustainable livelihoods. Portfolio includes Oaxaca (Mexico), Australia and Arctic regions. No visible Gambia or West Africa product.","goal":"Share the Gambia community-tourism story to open the door to a future scouting visit."},{"name":"Alpine Birding","country":"China","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.alpinebirding.com/","summary":"China-based operator.","goal":"Brief courtesy visit only to confirm their actual scope and contact details."},{"name":"Aqua-Firma Worldwide","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.aqua-firma.com/","summary":"UK eco-travel specialist run by marine and environmental scientists — strengths in polar voyages, marine and wildlife safaris, snorkel/dive expeditions. Covers Eastern, Central and Southern Africa but no visible West African product.","goal":"Low-effort visit only — share marine-flyway story (Tanji, Allahein) for possible niche product."},{"name":"Ark Expeditions","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.ark-expeditions.com/","summary":"Boutique UK wildlife expedition company built around conservation-led trips with NGOs and local landowners; runs photography and camera-trapping workshops. No visible West Africa programme.","goal":"Introductory meeting to share Gambia conservation-tourism credentials in case they consider a future Africa addition."},{"name":"Asian Adventures","country":"India","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.asianadventures.net/","summary":"India's largest birding and wildlife tour operator (Noida, founded 1994). Specialises in the Indian Subcontinent — India, Nepal, Bhutan and Sri Lanka.","goal":"Light peer-DMC conversation; explore Global Wildlife Fair listing for Gambian operators."},{"name":"Bellbird Tours","country":"Australia","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://bellbirdtours.com/","summary":"Founded 2013 by Peter Waanders. Specialises in Australian small-group bird tours plus selected international tours. Current Africa coverage limited.","goal":"Skip unless seen in passing — low strategic priority."},{"name":"Bespoke India Travel","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://bespokeindiatravel.co.uk/","summary":"UK tailor-made India specialist covering Rajasthan, Kerala, Goa, Tamil Nadu, Karnataka, Himalayas, NE India and other Indian regions. Pure-India focus.","goal":"Skip."},{"name":"Biotropica Expeditions","country":"Ecuador","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://biotropica-expeditions.com/","summary":"South America specialist (Amazon, Andes, Patagonia, Pantanal, Galapagos). No West Africa product.","goal":"Skip — no commercial relevance."},{"name":"Birdtour Asia Limited","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.birdtourasia.com/","summary":"Derby-based specialist of 20+ years, with very deep Asia coverage from Saudi Arabia and Socotra east to Kamchatka and Papua New Guinea. 200+ tour reports; small-group, set-departure model.","goal":"Quick courtesy only."},{"name":"Briggate Travel","country":"UK (Norfolk)","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.briggatetravel.com/","summary":"Norfolk-based bespoke adventure-luxury operator. Africa focus is safari-driven (Kenya, South Africa, Namibia, Botswana, Zimbabwe, Zambia) — vintage Land Rovers, glamping and walking safaris.","goal":"Light-touch awareness only."},{"name":"Enchanted India","country":"India","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://enchantedindia.com/","summary":"Indian tour operator founded by ornithologist Nikhil Devasar, running escorted bird tours, tiger tours and luxury India trips, with extensions into Nepal, Bhutan, Bangladesh and Sri Lanka.","goal":"Skip."},{"name":"Far South Expeditions","country":"Chile","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://farsouthexp.com/","summary":"Patagonia/Tierra del Fuego naturalist specialist since 1997, covering Chile, Peru, Argentina, Patagonia and Antarctica. Day and multi-day birding programmes.","goal":"Skip."},{"name":"Ganders Travel","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://ganderstravel.com/","summary":"Low public profile in birdwatching trade directories; appears to be a small generalist UK tour operator rather than a specialist birding op.","goal":"Quick stand visit to confirm their scope and contacts."},{"name":"Manakin Nature Tours","country":"Colombia","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.manakinnaturetours.com/","summary":"Colombian birding and wildlife photography operator with partner brand Neotropical Explorer, running 30+ tours in 12 countries across the Americas. Strong scientist-led guide team.","goal":"Skip unless useful as a peer DMC."},{"name":"Mongolia Quest LLC","country":"Mongolia","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://mongoliaquest.com/","summary":"30+ year Mongolia/Tibet/Russian-Siberia specialist — cultural heritage and active adventure (horseback, camel trekking, overland) with strong responsible/community-based positioning.","goal":"Skip."},{"name":"Nature Experience","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"(to verify at fair)","summary":"Generic-name operator; no clear public profile found in UK birding trade directories. Likely small / niche operator.","goal":"Quick stand visit to confirm scope."},{"name":"Nungunungu Expeditions","country":"Tanzania","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.nungunungu.com/","summary":"Tanzanian family-owned boutique safari company offering birding, photo safaris, trekking and cultural tours, with lead guide Abdulrahman regarded as one of Tanzania's top bird guides.","goal":"Skip unless brief peer-DMC conversation is useful."},{"name":"Quest Nature Tours","country":"Canada","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://worldwidequest.com/","summary":"Canadian operator (since 1970, Worldwide Quest brand) running small-group naturalist tours — strong Canada/Arctic core plus Antarctica, Trinidad, Uganda, Costa Rica, Ecuador, Taiwan and India.","goal":"Pitch Gambia as an addition to their African portfolio."},{"name":"The Birdway","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"(to verify at fair)","summary":"Could not confirm public-facing tour-operator presence; possibly a new or small operator. Verification required at the fair.","goal":"Quick scoping visit only."},{"name":"Trogon Tours","country":"Latin America","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.trogontours.com/","summary":"South America birding, wildlife, photography and cacti tour specialist (30+ years). No Africa programme.","goal":"Skip."},{"name":"Warbler Tours","country":"UK / Spain / Colombia","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.warblertours.com/","summary":"Birding and bird-photography expeditions; primary destinations are Spain and Colombia. Have a West Africa expedition, but it's just islands like Canary and Madeira.","goal":"Skip unless they signal Africa interest."},{"name":"Wild Nature Quest","country":"UK","rank":"C","segment":"International Birding & Nature Operator","priority":"Low","website":"https://www.bhutanbirding.com/","summary":"Primary focus is Bhutan.","goal":"Quick scoping visit only."}];
+
+let shortlist = new Set();
+let buyerNotes = {};
+let currentFilter = 'all';
+
+function segClass(seg) {
+  if (seg === 'Existing Gambia Seller') return 'seg-existing';
+  if (seg === 'West Africa & Strategic Partner') return 'seg-regional';
+  return 'seg-international';
+}
+function segLabel(seg) {
+  if (seg === 'Existing Gambia Seller') return 'Already sells Gambia';
+  if (seg === 'West Africa & Strategic Partner') return 'Strategic partner';
+  return 'International operator';
+}
+
+function renderBuyers(filter) {
+  currentFilter = filter || currentFilter;
+  const grid = document.getElementById('buyerGrid');
+  if (!grid) return;
+  const list = currentFilter === 'all' ? BUYERS : BUYERS.filter(b => b.segment === currentFilter);
+  grid.innerHTML = list.map(b => {
+    const starred = shortlist.has(b.name);
+    const note = buyerNotes[b.name] || '';
+    const webDisplay = b.website.startsWith('http') ? b.website.replace(/^https?:\/\/(www\.)?/,'').split('/')[0] : b.website;
+    return `<div class="buyer-card${starred?' starred':''}" id="bc_${CSS.escape(b.name)}">
+      <div class="buyer-card-head">
+        <div>
+          <div class="buyer-name">${b.name}</div>
+          <div class="buyer-country">${b.country}</div>
+        </div>
+        <button class="star-btn" onclick="toggleStar('${b.name.replace(/'/g,"\\'")}',this)" title="${starred?'Remove from plan':'Add to meeting plan'}">${starred?'★':'☆'}</button>
+      </div>
+      <span class="seg-badge ${segClass(b.segment)}">${segLabel(b.segment)}</span>
+      <p class="buyer-summary">${b.summary}</p>
+      <div class="buyer-goal-lbl">What to discuss</div>
+      <div class="buyer-goal">${b.goal}</div>
+      <div class="buyer-foot">
+        ${b.website.startsWith('http') ? `<a class="buyer-web" href="${b.website}" target="_blank" rel="noopener">↗ ${webDisplay}</a>` : `<span class="buyer-web" style="color:var(--text-muted)">${b.website}</span>`}
+        <button class="note-toggle" onclick="toggleNote('${b.name.replace(/'/g,"\\'")}',this)">${note?'Edit note':'+ Note'}</button>
+      </div>
+      <div class="buyer-note${note?' open':''}" id="bn_${CSS.escape(b.name)}">
+        <textarea placeholder="Your notes about this organisation…" oninput="saveNote('${b.name.replace(/'/g,"\\'")}',this.value)">${note}</textarea>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterBuyers(seg, btn) {
+  currentFilter = seg;
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderBuyers(seg);
+}
+
+function toggleStar(name, btn) {
+  if (shortlist.has(name)) {
+    shortlist.delete(name);
+  } else {
+    shortlist.add(name);
+  }
+  const card = document.getElementById('bc_' + CSS.escape(name));
+  if (card) {
+    card.classList.toggle('starred', shortlist.has(name));
+    btn.textContent = shortlist.has(name) ? '★' : '☆';
+  }
+  saveAll();
+  if (window._syncProgress) window._syncProgress();
+}
+
+function toggleNote(name, btn) {
+  const el = document.getElementById('bn_' + CSS.escape(name));
+  if (!el) return;
+  el.classList.toggle('open');
+  btn.textContent = el.classList.contains('open') ? 'Hide note' : (buyerNotes[name] ? 'Edit note' : '+ Note');
+}
+
+function saveNote(name, val) {
+  if (val.trim()) {
+    buyerNotes[name] = val;
+  } else {
+    delete buyerNotes[name];
+  }
+  saveAll();
+  if (window._syncProgress) window._syncProgress();
+}
+
+function renderPlan() {
+  const el = document.getElementById('planList');
+  if (!el) return;
+  const starred = BUYERS.filter(b => shortlist.has(b.name));
+  if (!starred.length) {
+    el.innerHTML = '<div class="plan-empty">No companies starred yet. Go to the Buyer Directory and tap ☆ on the organisations you want to meet.</div>';
+    return;
+  }
+  el.innerHTML = starred.map((b,i) => {
+    const note = buyerNotes[b.name] || '';
+    return `<div class="plan-company">
+      <div class="plan-company-head">
+        <span style="font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;color:var(--teal-dark);width:22px;flex-shrink:0;">${i+1}.</span>
+        <div>
+          <div class="plan-company-name">${b.name}</div>
+          <div class="plan-company-meta">${b.country} · ${segLabel(b.segment)}</div>
+        </div>
+      </div>
+      <div class="plan-company-goal">${b.goal}</div>
+      ${note ? `<div class="plan-note-disp"><div class="plan-note-lbl">My note</div>${note}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function generatePlan() {
+  const name = localStorage.getItem('bwa_name') || 'Guide';
+  const starred = BUYERS.filter(b => shortlist.has(b.name));
+  if (!starred.length) {
+    alert('No companies starred yet — go to the Buyer Directory and tap ☆ on the organisations you want to meet.');
+    return;
+  }
+  const lines = [
+    `📋 MY BIRDFAIR MEETING PLAN`,
+    `Guide: ${name} · Bird Watchers' Association, The Gambia`,
+    `Global Birdfair 2026`,
+    ``,
+    `COMPANIES TO MEET (${starred.length})`,
+    `${'─'.repeat(40)}`,
+  ];
+  starred.forEach((b,i) => {
+    lines.push(`${i+1}. ${b.name} (${b.country})`);
+    lines.push(`   ${segLabel(b.segment)}`);
+    lines.push(`   Goal: ${b.goal}`);
+    const note = buyerNotes[b.name];
+    if (note) lines.push(`   My note: ${note}`);
+    if (b.website.startsWith('http')) lines.push(`   ${b.website}`);
+    lines.push('');
+  });
+  lines.push(`Generated with B2B Readiness Toolkit · BWA Gambia`);
+  const text = lines.join('\n');
+  const area = document.getElementById('planText');
+  area.value = text;
+  area.classList.add('show');
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      const notice = document.getElementById('planCopied');
+      notice.style.display = 'block';
+      setTimeout(() => notice.style.display = 'none', 3000);
+    });
+  }
+  area.focus();
+  area.select();
+}
+
+const CHAPS = ['ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8'];
+const CHAP_CHECKS = {ch1:3,ch2:4,ch3:5,ch4:4,ch5:4,ch6:4,ch7:5,ch8:4};
+const FAIR_TOTAL = 21;
+
+function startToolkit() {
+  const name = document.getElementById('guideName').value.trim();
+  if (!name) { document.getElementById('guideName').focus(); return; }
+  localStorage.setItem('bwa_name', name);
+  document.getElementById('nameModal').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('hdrName').textContent = name;
+  loadAll();
+  buildProgressDots();
+  updateProgress();
+  updateEmail();
+  if (window._syncProgress) window._syncProgress();
+}
+
+function changeName() {
+  document.getElementById('guideName').value = localStorage.getItem('bwa_name') || '';
+  document.getElementById('nameModal').style.display = 'flex';
+}
+
+function toggleSidebar() {
+  const open = document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sideOverlay').style.display = open ? 'block' : 'none';
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sideOverlay').style.display = 'none';
+}
+
+function showChapter(id, link) {
+  document.querySelectorAll('.chapter').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.sb-link').forEach(l => l.classList.remove('active'));
+  link.classList.add('active');
+  window.scrollTo(0,0);
+  if (window.innerWidth <= 700) closeSidebar();
+  if (id === 'buyers') renderBuyers();
+  if (id === 'myplan') renderPlan();
+}
+
+function onCheck(cb, chapId) {
+  const li = cb.closest('.cl-item');
+  li.classList.toggle('checked', cb.checked);
+  saveAll();
+  updateChapterDone(chapId);
+  updateProgress();
+}
+
+function updateChapterDone(chapId) {
+  const total = CHAP_CHECKS[chapId];
+  const checked = document.querySelectorAll(`#${chapId} .checklist input[type=checkbox]:checked`).length;
+  const banner = document.getElementById(`done_${chapId}`);
+  if (banner) banner.classList.toggle('show', checked === total);
+  const idx = CHAPS.indexOf(chapId);
+  if (idx >= 0) {
+    const links = document.querySelectorAll('.sb-link');
+    links[idx].classList.toggle('done', checked === total);
+  }
+  const dot = document.querySelector(`.prog-dot[data-ch="${chapId}"]`);
+  if (dot) dot.classList.toggle('done', checked === total);
+  if (checked === total && window._syncProgress) window._syncProgress();
+}
+
+function buildProgressDots() {
+  const container = document.getElementById('progDots');
+  container.innerHTML = '';
+  CHAPS.forEach(id => {
+    const d = document.createElement('div');
+    d.className = 'prog-dot';
+    d.dataset.ch = id;
+    container.appendChild(d);
+  });
+}
+
+function updateProgress() {
+  let done = 0;
+  CHAPS.forEach(id => {
+    const total = CHAP_CHECKS[id];
+    const checked = document.querySelectorAll(`#${id} .checklist input[type=checkbox]:checked`).length;
+    if (checked === total) done++;
+  });
+  document.getElementById('progLabel').textContent = `${done} of 8 done`;
+}
+
+function onFairCheck(cb, idx) {
+  const li = cb.closest('.fair-item');
+  li.classList.toggle('checked', cb.checked);
+  saveAll();
+  const checked = document.querySelectorAll('.fair-item input[type=checkbox]:checked').length;
+  document.getElementById('fairProgress').textContent = `${checked} of ${FAIR_TOTAL} items complete`;
+}
+
+function updateEmail() {
+  const name = document.getElementById('em_name').value || '[Name]';
+  const personal = document.getElementById('em_personal').value || '[something you discussed]';
+  const attach = document.getElementById('em_attach').value || '[your itinerary and details]';
+  const senderName = localStorage.getItem('bwa_name') || '[Your name]';
+  document.getElementById('emailPreview').textContent =
+`Subject: Great to meet you at Birdfair
+
+Dear ${name},
+
+Thank you for taking the time to meet with me during Birdfair. I very much enjoyed our conversation, particularly ${personal}.
+
+As promised, I have attached ${attach}, which I hope gives you a clearer picture of what we offer.
+
+If you have any questions or would like to arrange an online meeting to discuss things further, I would be delighted to continue our conversation.
+
+Thank you again, and I hope we have the opportunity to work together in the future.
+
+Kind regards,
+${senderName}
+Bird Watchers' Association, The Gambia`;
+  saveAll();
+}
+
+// ---- SAVE / LOAD ----
+const FIELDS = [
+  'ch1_try','ch2_org1','ch2_q1','ch2_org2','ch2_q2','ch2_org3','ch2_q3',
+  'ch3_30','ch3_45','ch4_intro','ch5_tour','ch6_roleplay','ch7_review','ch8_email',
+  't_org','t_contact','t_date','t_sells','t_interest','t_action','t_followdate',
+  'em_name','em_personal','em_attach'
+];
+const TOOL_CHECKS = ['t_req_itin','t_req_price','t_req_web','t_req_photos','t_req_other'];
+
+function saveAll() {
+  const data = {};
+  FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) data[id] = el.value;
+  });
+  // chapter checkboxes
+  CHAPS.forEach(chap => {
+    const n = CHAP_CHECKS[chap];
+    const vals = [];
+    for (let i = 0; i < n; i++) {
+      const el = document.querySelector(`#li_${chap}_${i} input`);
+      vals.push(el ? el.checked : false);
+    }
+    data[`checks_${chap}`] = vals;
+  });
+  // tool checkboxes
+  TOOL_CHECKS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) data[id] = el.checked;
+  });
+  // fair checklist
+  const fairVals = [];
+  for (let i = 0; i < FAIR_TOTAL; i++) {
+    const el = document.querySelector(`#fli_${i} input`);
+    fairVals.push(el ? el.checked : false);
+  }
+  data.fair = fairVals;
+  // buyer data
+  data.shortlist = [...shortlist];
+  data.buyerNotes = buyerNotes;
+  localStorage.setItem('bwa_toolkit', JSON.stringify(data));
+}
+
+function loadAll() {
+  const raw = localStorage.getItem('bwa_toolkit');
+  if (!raw) return;
+  const data = JSON.parse(raw);
+  FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && data[id] !== undefined) el.value = data[id];
+  });
+  CHAPS.forEach(chap => {
+    const vals = data[`checks_${chap}`];
+    if (!vals) return;
+    vals.forEach((v, i) => {
+      const el = document.querySelector(`#li_${chap}_${i} input`);
+      if (el) {
+        el.checked = v;
+        el.closest('.cl-item').classList.toggle('checked', v);
+      }
+    });
+    updateChapterDone(chap);
+  });
+  TOOL_CHECKS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && data[id] !== undefined) el.checked = data[id];
+  });
+  if (data.fair) {
+    data.fair.forEach((v, i) => {
+      const el = document.querySelector(`#fli_${i} input`);
+      if (el) {
+        el.checked = v;
+        el.closest('.fair-item').classList.toggle('checked', v);
+      }
+    });
+    const checked = data.fair.filter(Boolean).length;
+    document.getElementById('fairProgress').textContent = `${checked} of ${FAIR_TOTAL} items complete`;
+  }
+  // buyer data
+  if (data.shortlist) shortlist = new Set(data.shortlist);
+  if (data.buyerNotes) buyerNotes = data.buyerNotes;
+  renderBuyers();
+  updateEmail();
+}
+
+// Init
+window.addEventListener('DOMContentLoaded', () => {
+  const name = localStorage.getItem('bwa_name');
+  if (name) {
+    document.getElementById('nameModal').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    document.getElementById('hdrName').textContent = name;
+    document.getElementById('guideName').value = name;
+    buildProgressDots();
+    loadAll();
+    updateProgress();
+  }
+});
+</script>
+</body>
+</html>

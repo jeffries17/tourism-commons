@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Tarjetas de Comprador · Bootcamp Colombia · Días 1 y 2</title>
+    <style>
+        @page { size: A4 portrait; margin: 0; }
+        @media print {
+            html, body { background: white !important; margin: 0 !important; padding: 0 !important; }
+            .screen-only { display: none !important; }
+            .card {
+                page-break-after: always;
+                break-after: page;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                box-shadow: none !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
+                overflow: visible !important;
+                display: block !important;
+                padding: 10mm 15mm !important;
+            }
+            .card:last-child { page-break-after: avoid; }
+            .card-header { display: flex !important; }
+            .section-block { margin-bottom: 4mm !important; }
+            .card-footer {
+                margin-top: 4mm !important;
+                padding-top: 2.5mm !important;
+                display: flex !important;
+            }
+            ul.facts li { font-size: 0.87rem; padding-bottom: 1.8mm; line-height: 1.4; }
+            ul.products li { font-size: 0.87rem; padding-bottom: 1.2mm; line-height: 1.4; }
+            ul.questions li { font-size: 0.9rem; padding-bottom: 2mm; line-height: 1.4; }
+            ul.products li .desc { font-size: 0.82rem; }
+            .card-logo { font-size: 1.75rem; line-height: 1.05; }
+            .card-archetype { font-size: 0.78rem; }
+            .accent-rule { margin: 3mm 0 5mm 0; }
+            .divider { margin: 1mm 0 5mm 0; }
+            .section-h { margin-bottom: 2.5mm; font-size: 0.72rem; }
+            .card-id { margin-bottom: 3mm; font-size: 0.6rem; }
+            .card-tag { font-size: 0.62rem; }
+        }
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --rule: #D6D8DD;
+        }
+        .card.vdm    { --card-ink: #14213D; --card-accent: #C9A22E; }
+        .card.nomade { --card-ink: #1F4A35; --card-accent: #C75A1E; }
+        .card.arts   { --card-ink: #6E1A2A; --card-accent: #B8923A; }
+        .card.slow   { --card-ink: #5A3F1A; --card-accent: #B85535; }
+        .card.terres { --card-ink: #8C3A1E; --card-accent: #5C7A4B; }
+        .card.better { --card-ink: #0E3F4F; --card-accent: #3A9B58; }
+        .card.wild   { --card-ink: #1A1A1A; --card-accent: #8B6E2F; }
+        .card.earth  { --card-ink: #2B4A2F; --card-accent: #D4612E; }
+        .card.eva    { --card-ink: #1A2740; --card-accent: #FF6E33; }
+        .card.jla    { --card-ink: #1B2D4C; --card-accent: #A14430; }
+        .card.wik    { --card-ink: #1E3A5F; --card-accent: #A92027; }
+        .card.lokal  { --card-ink: #5C3322; --card-accent: #3F7A4D; }
+
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', serif; color: var(--ink); line-height: 1.5; background: #ECEDEE; }
+
+        .screen-only { background: #14213D; color: white; padding: 1.5rem 2rem; font-family: 'Arial', sans-serif; font-size: 0.9rem; line-height: 1.55; }
+        .screen-only h1 { font-family: Georgia, serif; font-size: 1.5rem; margin: 0 0 0.6rem 0; color: white; }
+        .screen-only p { margin: 0.4rem 0; }
+        .screen-only code { background: rgba(255,255,255,0.12); padding: 0.1rem 0.4rem; border-radius: 3px; font-family: 'Courier New', monospace; font-size: 0.8rem; }
+
+        .section-divider { background: #14213D; color: white; padding: 1rem 2rem; font-family: 'Arial Black', sans-serif; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+
+        .card { width: 210mm; height: 297mm; padding: 18mm 18mm; background: #FFFFFF; margin: 18px auto; box-shadow: 0 4px 18px rgba(0,0,0,0.12); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; }
+        .card-id { font-family: 'Arial Black', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-muted); margin-bottom: 6mm; }
+        .card-logo { font-family: Georgia, serif; font-size: 2.3rem; line-height: 1.05; margin: 0 0 2mm 0; color: var(--card-ink); letter-spacing: 0.5px; }
+        .card.arts .card-logo, .card.slow .card-logo { font-style: italic; }
+        .card.wild .card-logo, .card.wik .card-logo { letter-spacing: 1px; }
+        .card-archetype { font-family: 'Arial', sans-serif; font-size: 0.85rem; margin: 0; color: var(--card-ink); font-style: italic; }
+        .card-tag { font-family: 'Arial Black', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 2mm 4mm; border: 1.5px solid var(--card-ink); color: var(--card-ink); text-align: center; line-height: 1.2; flex-shrink: 0; }
+
+        .accent-rule { height: 3px; background: var(--card-accent); margin: 6mm 0 8mm 0; width: 30mm; }
+
+        .section-h { font-family: 'Arial Black', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--card-ink); margin: 0 0 4mm 0; }
+        .section-block { margin-bottom: 8mm; }
+
+        ul.facts { list-style: none; margin: 0; padding: 0; counter-reset: f; }
+        ul.facts li { counter-increment: f; font-family: Georgia, serif; font-size: 0.98rem; line-height: 1.5; padding: 0 0 3mm 9mm; position: relative; }
+        ul.facts li::before { content: counter(f); position: absolute; left: 0; top: 0; font-family: 'Arial Black', sans-serif; font-size: 0.85rem; width: 6mm; height: 6mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; background: var(--card-accent); }
+
+        ul.products { list-style: none; margin: 0; padding: 0; }
+        ul.products li { font-family: Georgia, serif; font-size: 0.98rem; line-height: 1.5; padding: 0 0 2mm 7mm; position: relative; }
+        ul.products li::before { content: ''; position: absolute; left: 0; top: 3.4mm; width: 3.5mm; height: 3.5mm; background: var(--card-accent); border-radius: 50%; }
+        ul.products li strong { color: var(--card-ink); }
+        ul.products li .desc { color: var(--ink-muted); font-size: 0.88rem; }
+
+        ul.questions { list-style: none; margin: 0; padding: 0; counter-reset: q; }
+        ul.questions li { counter-increment: q; font-family: Georgia, serif; font-size: 1.02rem; line-height: 1.5; padding: 0 0 4mm 10mm; position: relative; }
+        ul.questions li::before { content: counter(q); position: absolute; left: 0; top: 0.5mm; font-family: 'Arial Black', sans-serif; font-size: 0.9rem; width: 7mm; height: 7mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; background: var(--card-ink); }
+
+        .divider { height: 1px; background: color-mix(in srgb, var(--card-ink) 18%, transparent); margin: 3mm 0 8mm 0; }
+
+        .card-footer { margin-top: auto; padding-top: 5mm; border-top: 1px dashed var(--card-ink); font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--ink-muted); display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Tarjetas de Comprador · Bootcamp Colombia · Días 1 y 2</h1>
+    <p>12 compradores europeos / norteamericanos en rol · A–L · cada uno con tarjeta Día 1 (conocerse) y Día 2 (profundizar). Una cara A4 por tarjeta · 24 páginas en total.</p>
+    <p>Imprimir en A4 vertical, una cara, papel ≥120 g/m² recomendado. Las páginas <strong>1–12</strong> son las tarjetas del Día 1; las páginas <strong>13–24</strong> son las tarjetas del Día 2.</p>
+    <p>Identidad por color: cada comprador tiene su propio color de tinta y de acento — fondo blanco común para legibilidad e impresión.</p>
+</div>
+
+<div class="section-divider screen-only">Día 1 · Ronda de Claridad · Conocerse</div>
+
+
+<!-- =====================================================
+     DÍA 1
+     ===================================================== -->
+
+
+<!-- TARJETA A · VOYAGEURS DU MONDE · DÍA 1 -->
+<article class="card vdm">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta A · Día 1 · Conocerse</div>
+            <h2 class="card-logo">VOYAGEURS<br>DU MONDE</h2>
+            <p class="card-archetype">Operador francés · viajes a medida</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con más de 40 años creando viajes.</li>
+            <li>Mis viajes son 100 % personalizados, con un consultor dedicado para cada cliente.</li>
+            <li>Compenso la huella de carbono de cada cliente (avión + tierra), no solo una parte.</li>
+            <li>Creo en el turismo como herramienta de paz y derechos humanos. Apoyo a Unitaid, Human Rights Watch, la FIDH y proyectos sociales como el Refettorio Paris.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida</strong> <span class="desc">— itinerarios privados con consultor dedicado</span></li>
+            <li><strong>Viajes en familia</strong> <span class="desc">— ritmos y experiencias pensados para padres + hijos</span></li>
+            <li><strong>Viajes de lujo</strong> <span class="desc">— hospedaje y experiencias premium</span></li>
+            <li><strong>Viajes gastronómicos</strong> <span class="desc">— eje culinario y encuentros con productores</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué hace tu propuesta diferente a las otras que voy a ver hoy?</li>
+            <li>¿Cómo cuidas a la gente y el lugar donde trabajas — la cultura, la naturaleza, las comunidades?</li>
+            <li>¿Qué ganan las familias, guías o productores locales cuando trabajan contigo?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>A</span></div>
+</article>
+
+
+<!-- TARJETA B · NOMADE AVENTURE · DÍA 1 -->
+<article class="card nomade">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta B · Día 1 · Conocerse</div>
+            <h2 class="card-logo">NOMADE<br>AVENTURE</h2>
+            <p class="card-archetype">Operador francés · aventura responsable · grupos pequeños</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés de aventura responsable. Llevo más de 45 años y formo parte del Grupo Voyageurs du Monde.</li>
+            <li>Trabajo solo con grupos pequeños — entre 4 y 15 viajeros — con guía francófono local.</li>
+            <li>Tengo la certificación ISO 20611 desde 2019, la norma francesa de turismo responsable.</li>
+            <li>Publico en mi web una carta de 12 compromisos y los nombres de las ONG con las que trabajo en cada país — por ejemplo Fondation Philippe Romero, Envol Vert en Colombia, Insolites Bâtisseurs o Planète Urgence.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Trekking y caminatas guiadas</strong> <span class="desc">— rutas a pie con guía local especializado</span></li>
+            <li><strong>Aventura en grupo pequeño</strong> <span class="desc">— 4 a 15 viajeros, ritmo activo</span></li>
+            <li><strong>Aventuras en familia</strong> <span class="desc">— programas pensados para padres + hijos</span></li>
+            <li><strong>Slow travel responsable</strong> <span class="desc">— estadías más largas, foco en encuentros</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Cómo cuidas la naturaleza y el lugar donde caminas con tus viajeros?</li>
+            <li>¿Quiénes son tus socios locales — familias, guías, comunidades — y cómo trabajan juntos?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>B</span></div>
+</article>
+
+
+<!-- TARJETA C · ARTS ET VIE · DÍA 1 -->
+<article class="card arts">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta C · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Arts et Vie</h2>
+            <p class="card-archetype">Operador cultural francés · asociativo · casi 70 años</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con casi 70 años de historia y estructura asociativa (sin fines de lucro).</li>
+            <li>Mi promesa es "hacer de la cultura un viaje" — cada propuesta lleva un acompañante universitario que enseña en ruta.</li>
+            <li>Tengo Travelife Partner desde 2023 y formo parte de ATR (Agir pour un Tourisme Responsable) desde 2024.</li>
+            <li>Mi política tiene tres verbos — Medir, Reducir, Contribuir. Reduzco emisiones al menos 5 % cada año y soy miembro de 1 % for the Planet.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Circuitos culturales acompañados</strong> <span class="desc">— viajes en grupo con acompañante universitario</span></li>
+            <li><strong>Cruceros culturales</strong> <span class="desc">— rutas marítimas con eje patrimonial</span></li>
+            <li><strong>Estadías temáticas</strong> <span class="desc">— arte, música, historia en un solo lugar</span></li>
+            <li><strong>Viajes individuales a medida</strong> <span class="desc">— versión privada del circuito cultural</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué historia o conocimiento quieres que tus viajeros se lleven después de la experiencia?</li>
+            <li>¿Cómo trabajas con la gente y la cultura local — músicos, artistas, guías, productores, comunidades?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>C</span></div>
+</article>
+
+
+<!-- TARJETA D · SLOW TROTTEURS · DÍA 1 -->
+<article class="card slow">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta D · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Slow<br>Trotteurs</h2>
+            <p class="card-archetype">Operador francés · slow travel · transparencia radical</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés "slow" — estadías largas, encuentros profundos, mobilidad lenta (tren, bici, barco, caminata) por defecto.</li>
+            <li>Dono el 1 % del precio de cada viaje a Restos du Cœur en Francia, sin retener nada del aporte.</li>
+            <li>Compenso el 100 % del carbono de mis viajeros vía ONG locales nombradas — en Colombia trabajo con Envol Vert (reforestación).</li>
+            <li>Publico en mi web los nombres de mis ONG socias por país, mi metodología de cálculo (ADEME) y el nombre de la persona de mi equipo que te va a atender.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes privados a medida</strong> <span class="desc">— el corazón de mi propuesta, todos los viajes son personalizados</span></li>
+            <li><strong>Viajes "slow"</strong> <span class="desc">— estadías largas, ritmo pausado, mínimo 10–12 días</span></li>
+            <li><strong>Viajes en familia</strong> <span class="desc">— variante familiar del viaje slow</span></li>
+            <li><strong>Encuentros con productores y comunidades</strong> <span class="desc">— eje cultural o de naturaleza con tiempo real para conocer</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Cómo es el ritmo de tu propuesta? ¿Estadías cortas, largas, mixtas?</li>
+            <li>¿Qué ganan las familias, productores o comunidades locales cuando trabajan contigo?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>D</span></div>
+</article>
+
+
+<!-- TARJETA E · TERRES DES ANDES · DÍA 1 -->
+<article class="card terres">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta E · Día 1 · Conocerse</div>
+            <h2 class="card-logo">TERRES<br>DES ANDES</h2>
+            <p class="card-archetype">Operador francés cooperativo · turismo equitativo y solidario</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con estructura cooperativa (SCOP) — los empleados son socios y comparten las decisiones.</li>
+            <li>Tengo el sello ATES (Turismo Equitativo y Solidario) y gané las Palmes du Tourisme Durable en 2017.</li>
+            <li>Cada viaje se co-construye con representantes locales — guías, familias y comunidades deciden conmigo qué se ofrece. Mis guías locales tienen bio publicada en mi web (en Colombia, Cathy).</li>
+            <li>Mi formato preferido es la inmersión en casa de familia, con tarifa justa y conocida para las familias anfitrionas.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Inmersiones en casa de familia</strong> <span class="desc">— mi formato preferido, estadías de 1–2 semanas</span></li>
+            <li><strong>Circuitos en grupo pequeño</strong> <span class="desc">— co-construidos con representantes locales</span></li>
+            <li><strong>Encuentros con productores y artesanos</strong> <span class="desc">— café, artesanía, sitios precolombinos</span></li>
+            <li><strong>Viajes a medida</strong> <span class="desc">— versión privada, mismo enfoque equitativo</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Cómo se diseña tu propuesta? ¿Quién participa en esa decisión?</li>
+            <li>¿Qué ganan las familias o las personas locales que reciben a tus viajeros?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>E</span></div>
+</article>
+
+
+<!-- TARJETA F · BETTER PLACES · DÍA 1 -->
+<article class="card better">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta F · Día 1 · Conocerse</div>
+            <h2 class="card-logo">better<br>places</h2>
+            <p class="card-archetype">Operador holandés · pionero turismo responsable · 100 % a medida</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador holandés pionero en turismo responsable, miembro de ANVR y SGR (las asociaciones holandesas de viajes).</li>
+            <li>Trabajo con expertos locales que viven en el destino — en Colombia, mis colegas Sigrid y Koen organizan los viajes desde adentro.</li>
+            <li>Mis clientes hablan directamente con el experto local, sin intermediarios, desde la planificación hasta el regreso.</li>
+            <li>Mis viajes son 100 % personalizados — no vendo paquetes fijos. Y soy honesto sobre lo que no puedo hacer; eso es parte de mi marca.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes 100 % a medida</strong> <span class="desc">— diseñados con un experto local que vive en el destino</span></li>
+            <li><strong>Viajes en familia activos</strong> <span class="desc">— para padres con hijos, outdoor y ritmo flexible</span></li>
+            <li><strong>Viajes para parejas y lunas de miel</strong> <span class="desc">— con experiencias únicas y privadas</span></li>
+            <li><strong>Viajes en grupo de amigos</strong> <span class="desc">— grupo cerrado, no abierto al público</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Cómo trabajas con tus viajeros? ¿Cómo es el contacto antes, durante y después del viaje?</li>
+            <li>¿Cómo se conecta tu cliente con la gente y los lugares donde lo llevas?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>F</span></div>
+</article>
+
+
+<!-- TARJETA G · WILD FRONTIERS · DÍA 1 -->
+<article class="card wild">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta G · Día 1 · Conocerse</div>
+            <h2 class="card-logo">WILD<br>FRONTIERS</h2>
+            <p class="card-archetype">Operador británico premium · profundidad cultural · award-winning</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador británico premium con foco en viajes de profundidad cultural — premiado en mi industria.</li>
+            <li>Trabajo con guías historiadores y antropólogos, no guías genéricos. Tienen bio publicada en mi web, con credenciales y años de trabajo.</li>
+            <li>Mis grupos tienen un máximo de unas 12 personas — el límite es cultural (preservar el contenido), no solo logístico.</li>
+            <li>Ofrezco dos formatos en paralelo: viajes a medida (privados) y viajes en grupo pequeño cerrado — los dos con la misma profundidad cultural.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida</strong> <span class="desc">— privados, con eje cultural y acceso a expertos</span></li>
+            <li><strong>Viajes en grupo pequeño cerrado</strong> <span class="desc">— máximo ~12 personas, no abierto al público</span></li>
+            <li><strong>Trekking culturales</strong> <span class="desc">— por ejemplo Lost City Trek, con contenido histórico-antropológico</span></li>
+            <li><strong>Viajes "off-the-beaten-path"</strong> <span class="desc">— con justificación cultural, no por ser diferente</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Quién enseña o cuenta la historia en tu propuesta — tú, un guía local, un experto?</li>
+            <li>¿Cómo cuidas la cultura local — la historia, las comunidades, los sitios — en tu propuesta?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>G</span></div>
+</article>
+
+
+<!-- TARJETA H · EARTH CHANGERS · DÍA 1 -->
+<article class="card earth">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta H · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Earth<br>Changers</h2>
+            <p class="card-archetype">Plataforma británica · curaduría · turismo regenerativo con impacto verificable</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma británica de curaduría — selecciono y promuevo proyectos de turismo regenerativo. Mi fundadora es Vicky Smith, voz reconocida en sostenibilidad turística.</li>
+            <li>No soy un operador tradicional. Soy curadora, advocate y consultora — los proyectos en mi plataforma pasan por un proceso de verificación riguroso.</li>
+            <li>Mi criterio es impacto positivo verificable, alineado con los Objetivos de Desarrollo Sostenible (ODS) de la ONU. Pido datos, no buenas intenciones.</li>
+            <li>Mis viajeros buscan algo más que un viaje "responsable" — buscan turismo que regenere (mejore el lugar y a las personas, no solo "no dañe").</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Curaduría rigurosa</strong> <span class="desc">— solo los proyectos que cumplen mi estándar entran a la plataforma</span></li>
+            <li><strong>Promoción y visibilidad</strong> <span class="desc">— exposición a viajeros conscientes y prensa internacional</span></li>
+            <li><strong>Consultoría a operadores</strong> <span class="desc">— cómo demostrar impacto y narrar lo que ya haces</span></li>
+            <li><strong>Conexiones</strong> <span class="desc">— introducciones con compradores, medios y aliados internacionales</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué cambias en el lugar donde operas? ¿Qué está mejor por tu trabajo?</li>
+            <li>¿Cómo notas ese cambio? Aunque sea con observaciones, no con números todavía.</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>H</span></div>
+</article>
+
+
+<!-- TARJETA I · EVANEOS · DÍA 1 -->
+<article class="card eva">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta I · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Evaneos</h2>
+            <p class="card-archetype">Plataforma francesa · marketplace curado · B-Corp</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma francesa con sede en París que conecta viajeros con agencias locales seleccionadas en unos 160 países.</li>
+            <li>No soy operador — soy un marketplace curado. Solo entran agencias locales que pasan mi proceso de selección riguroso.</li>
+            <li>Soy B-Corp certificada. El viajero diseña su viaje en contacto directo con la agencia local, vía chat, sin intermediarios.</li>
+            <li>Reviso desempeño y reseñas todo el tiempo. Agencias con bajo rating quedan fuera. Los viajeros publican reseñas verificadas después de cada viaje.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Visibilidad</strong> <span class="desc">— exposición a viajeros europeos que buscan viajes a medida</span></li>
+            <li><strong>Plataforma de comunicación</strong> <span class="desc">— chat directo entre viajero y agencia, herramientas integradas</span></li>
+            <li><strong>Tráfico calificado</strong> <span class="desc">— viajeros que ya están decidiendo, no solo inspirándose</span></li>
+            <li><strong>Métricas y reseñas</strong> <span class="desc">— feedback continuo que ayuda a mejorar</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Cómo trabajas digitalmente con tus clientes — web, email, chat, redes?</li>
+            <li>¿Cómo cuidas a tus viajeros y al lugar donde operas?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>I</span></div>
+</article>
+
+
+<!-- TARJETA J · JOURNEY LATIN AMERICA · DÍA 1 -->
+<article class="card jla">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta J · Día 1 · Conocerse</div>
+            <h2 class="card-logo">JOURNEY<br>LATIN AMERICA</h2>
+            <p class="card-archetype">Operador británico · especialista exclusivo en LatAm desde 1980</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador británico especialista exclusivo en América Latina desde 1980 — más de 40 años solo en esta región.</li>
+            <li>Tengo equipo en Londres y en países latinoamericanos. Conozco las rutas en profundidad porque las he caminado.</li>
+            <li>Soy miembro de AITO (Association of Independent Tour Operators), red de operadores independientes británicos con código ético propio.</li>
+            <li>Ofrezco viajes a medida (tailor-made) y viajes en grupo pequeño — los dos formatos con guías especializados en LatAm.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida (tailor-made)</strong> <span class="desc">— privados, en cualquier país de LatAm</span></li>
+            <li><strong>Viajes en grupo pequeño</strong> <span class="desc">— itinerarios curados, salidas regulares, ~10–14 personas</span></li>
+            <li><strong>Cruceros culturales y Galápagos</strong> <span class="desc">— viajes temáticos en barco con eje natural o histórico</span></li>
+            <li><strong>Trekking, naturaleza y cultura</strong> <span class="desc">— todos los nichos LatAm, desde Patagonia hasta Caribe</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué hace única a tu propuesta en Colombia, comparada con lo que mi cliente puede encontrar en Perú, Ecuador o México?</li>
+            <li>¿Cómo cuidas a tus viajeros y al lugar donde operas?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>J</span></div>
+</article>
+
+
+<!-- TARJETA K · WIKINGER REISEN · DÍA 1 -->
+<article class="card wik">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta K · Día 1 · Conocerse</div>
+            <h2 class="card-logo">WIKINGER<br>REISEN</h2>
+            <p class="card-archetype">Operador alemán · senderismo y viajes activos desde 1969</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador alemán activo desde 1969 — más de 55 años especializado en senderismo y viajes activos.</li>
+            <li>Tengo un equipo grande (alrededor de 1000 personas) y opero en muchos países — escala media-grande, no boutique.</li>
+            <li>Soy miembro del Forum Anders Reisen, federación alemana de operadores comprometidos con el turismo responsable.</li>
+            <li>Mi cliente alemán típico camina mucho, lleva su equipo y exige seguridad. Necesita rutas bien preparadas y guías certificados.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes activos en grupo</strong> <span class="desc">— senderismo, montaña, naturaleza, 12–25 personas</span></li>
+            <li><strong>Viajes activos individuales a medida</strong> <span class="desc">— el mismo nivel técnico, en formato privado</span></li>
+            <li><strong>Cicloturismo</strong> <span class="desc">— guiado o autoguiado, con apoyo logístico</span></li>
+            <li><strong>Wellness activo y viajes para senior</strong> <span class="desc">— combinación de actividad y descanso, ritmo adaptado</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Qué experiencias activas (senderismo, naturaleza, exploración) ofreces?</li>
+            <li>¿Cómo cuidas a tus viajeros y al lugar donde caminas?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>K</span></div>
+</article>
+
+
+<!-- TARJETA L · LOKAL TRAVEL · DÍA 1 -->
+<article class="card lokal">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta L · Día 1 · Conocerse</div>
+            <h2 class="card-logo">Lokal<br>Travel</h2>
+            <p class="card-archetype">Plataforma estadounidense · curaduría de turismo comunitario</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma estadounidense de curaduría — conecto viajeros con experiencias de turismo comunitario en todo el mundo.</li>
+            <li>No soy operador. Soy curadora y marketplace — solo entran experiencias lideradas por las comunidades locales mismas.</li>
+            <li>Mi criterio es propiedad y liderazgo local — la comunidad decide, organiza y se beneficia directamente, sin intermediarios.</li>
+            <li>Mis viajeros son norteamericanos y europeos que buscan turismo con impacto directo y verificable en comunidades.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Curaduría comunitaria</strong> <span class="desc">— solo entran experiencias lideradas por comunidades locales</span></li>
+            <li><strong>Visibilidad</strong> <span class="desc">— exposición a viajeros conscientes en EE.UU., Canadá y Europa</span></li>
+            <li><strong>Apoyo en marketing</strong> <span class="desc">— ayuda para que la comunidad cuente su historia</span></li>
+            <li><strong>Pagos directos</strong> <span class="desc">— la comunidad recibe el ingreso sin pasar por terceros</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Cuéntame de tu negocio. ¿Quién eres? ¿Qué haces?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Quién toma las decisiones en tu propuesta — tú, tu equipo, la comunidad?</li>
+            <li>¿Cómo se beneficia la comunidad de tu trabajo? Cuéntame concretamente.</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para ti?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span><span>L</span></div>
+</article>
+
+
+<div class="section-divider screen-only">Día 2 · Ronda de Profundidad</div>
+
+
+<!-- =====================================================
+     DÍA 2
+     ===================================================== -->
+
+
+<!-- TARJETA A · VOYAGEURS DU MONDE · DÍA 2 -->
+<article class="card vdm">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta A · Día 2 · Profundizar</div>
+            <h2 class="card-logo">VOYAGEURS<br>DU MONDE</h2>
+            <p class="card-archetype">Operador francés · viajes a medida</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con más de 40 años creando viajes.</li>
+            <li>Mis viajes son 100 % personalizados, con un consultor dedicado para cada cliente.</li>
+            <li>Compenso la huella de carbono de cada cliente (avión + tierra), no solo una parte.</li>
+            <li>Creo en el turismo como herramienta de paz y derechos humanos. Apoyo a Unitaid, Human Rights Watch, la FIDH y proyectos sociales como el Refettorio Paris.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida</strong> <span class="desc">— itinerarios privados con consultor dedicado</span></li>
+            <li><strong>Viajes en familia</strong> <span class="desc">— ritmos y experiencias pensados para padres + hijos</span></li>
+            <li><strong>Viajes de lujo</strong> <span class="desc">— hospedaje y experiencias premium</span></li>
+            <li><strong>Viajes gastronómicos</strong> <span class="desc">— eje culinario y encuentros con productores</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Qué tiene tu propuesta que las otras que vi hoy no tengan? Una sola cosa, en una frase.</li>
+            <li>¿Cuál es la historia real detrás de tu lugar o proyecto? No el folleto, la historia.</li>
+            <li>¿Qué haces cuando un imprevisto afecta la experiencia del cliente? Dame un ejemplo concreto.</li>
+            <li>¿Tu propuesta se ajusta punto por punto al cliente, o es un formato fijo?</li>
+            <li>¿Quién es la persona local que mi cliente va a conocer si compra esto? Nombre, rol y un poco de su historia.</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>A</span></div>
+</article>
+
+
+<!-- TARJETA B · NOMADE AVENTURE · DÍA 2 -->
+<article class="card nomade">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta B · Día 2 · Profundizar</div>
+            <h2 class="card-logo">NOMADE<br>AVENTURE</h2>
+            <p class="card-archetype">Operador francés · aventura responsable · grupos pequeños</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés de aventura responsable. Llevo más de 45 años y formo parte del Grupo Voyageurs du Monde.</li>
+            <li>Trabajo solo con grupos pequeños — entre 4 y 15 viajeros — con guía francófono local.</li>
+            <li>Tengo la certificación ISO 20611 desde 2019, la norma francesa de turismo responsable.</li>
+            <li>Publico en mi web una carta de 12 compromisos y los nombres de las ONG con las que trabajo en cada país — por ejemplo Fondation Philippe Romero, Envol Vert en Colombia, Insolites Bâtisseurs o Planète Urgence.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Trekking y caminatas guiadas</strong> <span class="desc">— rutas a pie con guía local especializado</span></li>
+            <li><strong>Aventura en grupo pequeño</strong> <span class="desc">— 4 a 15 viajeros, ritmo activo</span></li>
+            <li><strong>Aventuras en familia</strong> <span class="desc">— programas pensados para padres + hijos</span></li>
+            <li><strong>Slow travel responsable</strong> <span class="desc">— estadías más largas, foco en encuentros</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cuáles son tus socios locales en cada zona?</li>
+            <li>¿Cuánto del precio se queda en la comunidad? ¿Lo mides? ¿Lo publicas?</li>
+            <li>¿Tu propuesta tiene Travelife, Rainforest Alliance, ISO 20611 o algún sello local equivalente?</li>
+            <li>¿Hace cuántos años trabajas con el mismo socio local?</li>
+            <li>Si ese socio cambia o desaparece, ¿cuál es tu plan?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>B</span></div>
+</article>
+
+
+<!-- TARJETA C · ARTS ET VIE · DÍA 2 -->
+<article class="card arts">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta C · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Arts et Vie</h2>
+            <p class="card-archetype">Operador cultural francés · asociativo · casi 70 años</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con casi 70 años de historia y estructura asociativa (sin fines de lucro).</li>
+            <li>Mi promesa es "hacer de la cultura un viaje" — cada propuesta lleva un acompañante universitario que enseña en ruta.</li>
+            <li>Tengo Travelife Partner desde 2023 y formo parte de ATR (Agir pour un Tourisme Responsable) desde 2024.</li>
+            <li>Mi política tiene tres verbos — Medir, Reducir, Contribuir. Reduzco emisiones al menos 5 % cada año y soy miembro de 1 % for the Planet.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Circuitos culturales acompañados</strong> <span class="desc">— viajes en grupo con acompañante universitario</span></li>
+            <li><strong>Cruceros culturales</strong> <span class="desc">— rutas marítimas con eje patrimonial</span></li>
+            <li><strong>Estadías temáticas</strong> <span class="desc">— arte, música, historia en un solo lugar</span></li>
+            <li><strong>Viajes individuales a medida</strong> <span class="desc">— versión privada del circuito cultural</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cómo mides el impacto cultural de tu propuesta?</li>
+            <li>¿Quién es la persona experta detrás del contenido? ¿Qué credenciales tiene — universidad, publicaciones, años en terreno?</li>
+            <li>¿Qué tipo de acuerdo o relación tienes con tus proveedores locales?</li>
+            <li>¿Cómo piensas el tema de tus emisiones de carbono?</li>
+            <li>¿Cómo se cuida la relación entre tus viajeros y las comunidades que visitan?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>C</span></div>
+</article>
+
+
+<!-- TARJETA D · SLOW TROTTEURS · DÍA 2 -->
+<article class="card slow">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta D · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Slow<br>Trotteurs</h2>
+            <p class="card-archetype">Operador francés · slow travel · transparencia radical</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés "slow" — estadías largas, encuentros profundos, mobilidad lenta (tren, bici, barco, caminata) por defecto.</li>
+            <li>Dono el 1 % del precio de cada viaje a Restos du Cœur en Francia, sin retener nada del aporte.</li>
+            <li>Compenso el 100 % del carbono de mis viajeros vía ONG locales nombradas — en Colombia trabajo con Envol Vert (reforestación).</li>
+            <li>Publico en mi web los nombres de mis ONG socias por país, mi metodología de cálculo (ADEME) y el nombre de la persona de mi equipo que te va a atender.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes privados a medida</strong> <span class="desc">— el corazón de mi propuesta, todos los viajes son personalizados</span></li>
+            <li><strong>Viajes "slow"</strong> <span class="desc">— estadías largas, ritmo pausado, mínimo 10–12 días</span></li>
+            <li><strong>Viajes en familia</strong> <span class="desc">— variante familiar del viaje slow</span></li>
+            <li><strong>Encuentros con productores y comunidades</strong> <span class="desc">— eje cultural o de naturaleza con tiempo real para conocer</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Qué porcentaje del ingreso del viaje se queda en la zona donde operas? ¿Lo mides? ¿Lo publicas?</li>
+            <li>¿Cómo piensas la compensación del carbono o el impacto ambiental de tu propuesta? ¿Con qué metodología?</li>
+            <li>¿Trabajás con alguna ONG en Colombia? ¿Cómo es la relación?</li>
+            <li>¿Quién es la persona en tu equipo (o en terreno) que va a estar en contacto directo con mi cliente?</li>
+            <li>¿Cómo se mueve tu cliente entre lugares y cuánto tiempo se queda en cada uno?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>D</span></div>
+</article>
+
+
+<!-- TARJETA E · TERRES DES ANDES · DÍA 2 -->
+<article class="card terres">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta E · Día 2 · Profundizar</div>
+            <h2 class="card-logo">TERRES<br>DES ANDES</h2>
+            <p class="card-archetype">Operador francés cooperativo · turismo equitativo y solidario</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador francés con estructura cooperativa (SCOP) — los empleados son socios y comparten las decisiones.</li>
+            <li>Tengo el sello ATES (Turismo Equitativo y Solidario) y gané las Palmes du Tourisme Durable en 2017.</li>
+            <li>Cada viaje se co-construye con representantes locales — guías, familias y comunidades deciden conmigo qué se ofrece. Mis guías locales tienen bio publicada en mi web (en Colombia, Cathy).</li>
+            <li>Mi formato preferido es la inmersión en casa de familia, con tarifa justa y conocida para las familias anfitrionas.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Inmersiones en casa de familia</strong> <span class="desc">— mi formato preferido, estadías de 1–2 semanas</span></li>
+            <li><strong>Circuitos en grupo pequeño</strong> <span class="desc">— co-construidos con representantes locales</span></li>
+            <li><strong>Encuentros con productores y artesanos</strong> <span class="desc">— café, artesanía, sitios precolombinos</span></li>
+            <li><strong>Viajes a medida</strong> <span class="desc">— versión privada, mismo enfoque equitativo</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cómo se decide qué se ofrece en tu propuesta? ¿Quién participa en esa decisión?</li>
+            <li>¿Qué porcentaje del precio se queda con la familia, guía o productor local? ¿Lo publicas?</li>
+            <li>¿Tenés algún sello — ATES, Travelife, Fair Trade Tourism o equivalente local?</li>
+            <li>¿Cómo se distribuyen los ingresos a las familias anfitrionas?</li>
+            <li>¿Qué tipo de acuerdo o relación tienes con tus familias, guías y proveedores locales?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>E</span></div>
+</article>
+
+
+<!-- TARJETA F · BETTER PLACES · DÍA 2 -->
+<article class="card better">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta F · Día 2 · Profundizar</div>
+            <h2 class="card-logo">better<br>places</h2>
+            <p class="card-archetype">Operador holandés · pionero turismo responsable · 100 % a medida</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador holandés pionero en turismo responsable, miembro de ANVR y SGR (las asociaciones holandesas de viajes).</li>
+            <li>Trabajo con expertos locales que viven en el destino — en Colombia, mis colegas Sigrid y Koen organizan los viajes desde adentro.</li>
+            <li>Mis clientes hablan directamente con el experto local, sin intermediarios, desde la planificación hasta el regreso.</li>
+            <li>Mis viajes son 100 % personalizados — no vendo paquetes fijos. Y soy honesto sobre lo que no puedo hacer; eso es parte de mi marca.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes 100 % a medida</strong> <span class="desc">— diseñados con un experto local que vive en el destino</span></li>
+            <li><strong>Viajes en familia activos</strong> <span class="desc">— para padres con hijos, outdoor y ritmo flexible</span></li>
+            <li><strong>Viajes para parejas y lunas de miel</strong> <span class="desc">— con experiencias únicas y privadas</span></li>
+            <li><strong>Viajes en grupo de amigos</strong> <span class="desc">— grupo cerrado, no abierto al público</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Quién organiza y opera la experiencia? ¿Vos o un tercero?</li>
+            <li>¿Qué hospedajes o lugares no-cadena tienes en cada zona?</li>
+            <li>¿Cómo se asegura el contacto real entre mi cliente y la gente del lugar?</li>
+            <li>¿Cómo manejas un imprevisto durante el viaje? ¿Tu cliente puede contactarte directamente?</li>
+            <li>¿Qué cosa NO haces o NO ofreces en tu propuesta?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>F</span></div>
+</article>
+
+
+<!-- TARJETA G · WILD FRONTIERS · DÍA 2 -->
+<article class="card wild">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta G · Día 2 · Profundizar</div>
+            <h2 class="card-logo">WILD<br>FRONTIERS</h2>
+            <p class="card-archetype">Operador británico premium · profundidad cultural · award-winning</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador británico premium con foco en viajes de profundidad cultural — premiado en mi industria.</li>
+            <li>Trabajo con guías historiadores y antropólogos, no guías genéricos. Tienen bio publicada en mi web, con credenciales y años de trabajo.</li>
+            <li>Mis grupos tienen un máximo de unas 12 personas — el límite es cultural (preservar el contenido), no solo logístico.</li>
+            <li>Ofrezco dos formatos en paralelo: viajes a medida (privados) y viajes en grupo pequeño cerrado — los dos con la misma profundidad cultural.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida</strong> <span class="desc">— privados, con eje cultural y acceso a expertos</span></li>
+            <li><strong>Viajes en grupo pequeño cerrado</strong> <span class="desc">— máximo ~12 personas, no abierto al público</span></li>
+            <li><strong>Trekking culturales</strong> <span class="desc">— por ejemplo Lost City Trek, con contenido histórico-antropológico</span></li>
+            <li><strong>Viajes "off-the-beaten-path"</strong> <span class="desc">— con justificación cultural, no por ser diferente</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cuál es la historia profunda detrás de tu lugar o propuesta?</li>
+            <li>¿Quién es la persona experta que diseñó el contenido? ¿Qué credenciales tiene?</li>
+            <li>¿Cómo limitas el tamaño de tu grupo? ¿Por qué ese límite?</li>
+            <li>¿Qué parte de tu propuesta mi cliente no va a ver en otra operación similar?</li>
+            <li>¿Qué tienes para un cliente que ya hizo 3 países latinoamericanos?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>G</span></div>
+</article>
+
+
+<!-- TARJETA H · EARTH CHANGERS · DÍA 2 -->
+<article class="card earth">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta H · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Earth<br>Changers</h2>
+            <p class="card-archetype">Plataforma británica · curaduría · turismo regenerativo con impacto verificable</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma británica de curaduría — selecciono y promuevo proyectos de turismo regenerativo. Mi fundadora es Vicky Smith, voz reconocida en sostenibilidad turística.</li>
+            <li>No soy un operador tradicional. Soy curadora, advocate y consultora — los proyectos en mi plataforma pasan por un proceso de verificación riguroso.</li>
+            <li>Mi criterio es impacto positivo verificable, alineado con los Objetivos de Desarrollo Sostenible (ODS) de la ONU. Pido datos, no buenas intenciones.</li>
+            <li>Mis viajeros buscan algo más que un viaje "responsable" — buscan turismo que regenere (mejore el lugar y a las personas, no solo "no dañe").</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Curaduría rigurosa</strong> <span class="desc">— solo los proyectos que cumplen mi estándar entran a la plataforma</span></li>
+            <li><strong>Promoción y visibilidad</strong> <span class="desc">— exposición a viajeros conscientes y prensa internacional</span></li>
+            <li><strong>Consultoría a operadores</strong> <span class="desc">— cómo demostrar impacto y narrar lo que ya haces</span></li>
+            <li><strong>Conexiones</strong> <span class="desc">— introducciones con compradores, medios y aliados internacionales</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cuáles son los datos concretos del impacto positivo de tu propuesta? ¿Números, ODS, casos?</li>
+            <li>¿Cómo verificas esos datos? ¿Auditoría externa, autodeclaración, registros internos?</li>
+            <li>¿Qué cambió en el lugar gracias a tu propuesta — qué está mejor y qué pudo haber empeorado?</li>
+            <li>¿Cómo se distribuye el valor económico que generas? ¿Quién gana, cuánto, cómo?</li>
+            <li>¿Cómo demuestras que tu propuesta tiene impacto real, más allá de lo que tú mismo cuentas?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>H</span></div>
+</article>
+
+
+<!-- TARJETA I · EVANEOS · DÍA 2 -->
+<article class="card eva">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta I · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Evaneos</h2>
+            <p class="card-archetype">Plataforma francesa · marketplace curado · B-Corp</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma francesa con sede en París que conecta viajeros con agencias locales seleccionadas en unos 160 países.</li>
+            <li>No soy operador — soy un marketplace curado. Solo entran agencias locales que pasan mi proceso de selección riguroso.</li>
+            <li>Soy B-Corp certificada. El viajero diseña su viaje en contacto directo con la agencia local, vía chat, sin intermediarios.</li>
+            <li>Reviso desempeño y reseñas todo el tiempo. Agencias con bajo rating quedan fuera. Los viajeros publican reseñas verificadas después de cada viaje.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Visibilidad</strong> <span class="desc">— exposición a viajeros europeos que buscan viajes a medida</span></li>
+            <li><strong>Plataforma de comunicación</strong> <span class="desc">— chat directo entre viajero y agencia, herramientas integradas</span></li>
+            <li><strong>Tráfico calificado</strong> <span class="desc">— viajeros que ya están decidiendo, no solo inspirándose</span></li>
+            <li><strong>Métricas y reseñas</strong> <span class="desc">— feedback continuo que ayuda a mejorar</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cuántos viajes operaste el año pasado? ¿Cuál es tu capacidad mensual?</li>
+            <li>¿Cómo manejas reseñas o quejas de viajeros? Cuéntame un ejemplo concreto.</li>
+            <li>¿Qué porcentaje de tus viajeros son europeos hoy? ¿Cuáles son tus mercados principales?</li>
+            <li>¿Cómo respondes a una solicitud nueva — en qué idiomas, en cuánto tiempo?</li>
+            <li>¿Tu equipo está disponible para emergencias 24/7? ¿Cómo se gestiona el turno?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>I</span></div>
+</article>
+
+
+<!-- TARJETA J · JOURNEY LATIN AMERICA · DÍA 2 -->
+<article class="card jla">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta J · Día 2 · Profundizar</div>
+            <h2 class="card-logo">JOURNEY<br>LATIN AMERICA</h2>
+            <p class="card-archetype">Operador británico · especialista exclusivo en LatAm desde 1980</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador británico especialista exclusivo en América Latina desde 1980 — más de 40 años solo en esta región.</li>
+            <li>Tengo equipo en Londres y en países latinoamericanos. Conozco las rutas en profundidad porque las he caminado.</li>
+            <li>Soy miembro de AITO (Association of Independent Tour Operators), red de operadores independientes británicos con código ético propio.</li>
+            <li>Ofrezco viajes a medida (tailor-made) y viajes en grupo pequeño — los dos formatos con guías especializados en LatAm.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida (tailor-made)</strong> <span class="desc">— privados, en cualquier país de LatAm</span></li>
+            <li><strong>Viajes en grupo pequeño</strong> <span class="desc">— itinerarios curados, salidas regulares, ~10–14 personas</span></li>
+            <li><strong>Cruceros culturales y Galápagos</strong> <span class="desc">— viajes temáticos en barco con eje natural o histórico</span></li>
+            <li><strong>Trekking, naturaleza y cultura</strong> <span class="desc">— todos los nichos LatAm, desde Patagonia hasta Caribe</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Qué tiene tu propuesta en Colombia que no encuentro en Perú o Ecuador?</li>
+            <li>¿Quién es tu equipo local en Colombia? Nombres, rol y un poco de bio.</li>
+            <li>¿Cómo manejas un imprevisto o cambio de plan en ruta? Un ejemplo concreto.</li>
+            <li>¿Tenés capacidad para grupos de 8–12 personas con regularidad?</li>
+            <li>¿Cuáles son tus referencias de otros operadores británicos o europeos que ya trabajan contigo?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>J</span></div>
+</article>
+
+
+<!-- TARJETA K · WIKINGER REISEN · DÍA 2 -->
+<article class="card wik">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta K · Día 2 · Profundizar</div>
+            <h2 class="card-logo">WIKINGER<br>REISEN</h2>
+            <p class="card-archetype">Operador alemán · senderismo y viajes activos desde 1969</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador alemán activo desde 1969 — más de 55 años especializado en senderismo y viajes activos.</li>
+            <li>Tengo un equipo grande (alrededor de 1000 personas) y opero en muchos países — escala media-grande, no boutique.</li>
+            <li>Soy miembro del Forum Anders Reisen, federación alemana de operadores comprometidos con el turismo responsable.</li>
+            <li>Mi cliente alemán típico camina mucho, lleva su equipo y exige seguridad. Necesita rutas bien preparadas y guías certificados.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes activos en grupo</strong> <span class="desc">— senderismo, montaña, naturaleza, 12–25 personas</span></li>
+            <li><strong>Viajes activos individuales a medida</strong> <span class="desc">— el mismo nivel técnico, en formato privado</span></li>
+            <li><strong>Cicloturismo</strong> <span class="desc">— guiado o autoguiado, con apoyo logístico</span></li>
+            <li><strong>Wellness activo y viajes para senior</strong> <span class="desc">— combinación de actividad y descanso, ritmo adaptado</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Tu equipo tiene capacidad para atender grupos de 12–25 personas con regularidad?</li>
+            <li>¿Qué tipo de seguros tienes? ¿Asistencia médica en ruta?</li>
+            <li>¿Tus guías están certificados? ¿En qué idiomas comunican?</li>
+            <li>¿Cómo está documentada tu propuesta — fichas técnicas, mapas, perfiles de dificultad?</li>
+            <li>¿Cómo respondes a una solicitud de un operador europeo — en qué idiomas y en cuánto tiempo?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>K</span></div>
+</article>
+
+
+<!-- TARJETA L · LOKAL TRAVEL · DÍA 2 -->
+<article class="card lokal">
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta L · Día 2 · Profundizar</div>
+            <h2 class="card-logo">Lokal<br>Travel</h2>
+            <p class="card-archetype">Plataforma estadounidense · curaduría de turismo comunitario</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+    <div class="accent-rule"></div>
+    <div class="section-block">
+        <p class="section-h">4 cosas que debes saber de mí</p>
+        <ul class="facts">
+            <li>Soy una plataforma estadounidense de curaduría — conecto viajeros con experiencias de turismo comunitario en todo el mundo.</li>
+            <li>No soy operador. Soy curadora y marketplace — solo entran experiencias lideradas por las comunidades locales mismas.</li>
+            <li>Mi criterio es propiedad y liderazgo local — la comunidad decide, organiza y se beneficia directamente, sin intermediarios.</li>
+            <li>Mis viajeros son norteamericanos y europeos que buscan turismo con impacto directo y verificable en comunidades.</li>
+        </ul>
+    </div>
+    <div class="section-block">
+        <p class="section-h">Lo que ofrezco</p>
+        <ul class="products">
+            <li><strong>Curaduría comunitaria</strong> <span class="desc">— solo entran experiencias lideradas por comunidades locales</span></li>
+            <li><strong>Visibilidad</strong> <span class="desc">— exposición a viajeros conscientes en EE.UU., Canadá y Europa</span></li>
+            <li><strong>Apoyo en marketing</strong> <span class="desc">— ayuda para que la comunidad cuente su historia</span></li>
+            <li><strong>Pagos directos</strong> <span class="desc">— la comunidad recibe el ingreso sin pasar por terceros</span></li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Quién es el dueño legal de tu negocio — la comunidad, tú, o una mezcla?</li>
+            <li>¿Cómo se distribuye el ingreso de cada viaje? Porcentajes, destinos.</li>
+            <li>¿La comunidad participa en las decisiones operativas? ¿Cómo?</li>
+            <li>Si la comunidad quiere cambiar algo de la propuesta, ¿cómo se decide? ¿Tienen voz real?</li>
+            <li>¿Qué tipo de acuerdo o relación tienes con la comunidad?</li>
+        </ul>
+    </div>
+    <div class="card-footer"><span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span><span>L</span></div>
+</article>
+
+</body>
+</html>

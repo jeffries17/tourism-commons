@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Prototipo · Tarjeta G · Wild Frontiers · Día 1 y Día 2</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            html, body { background: white !important; }
+            .screen-only { display: none !important; }
+            .card { page-break-after: always; box-shadow: none; margin: 0; }
+            .card:last-child { page-break-after: avoid; }
+        }
+
+        :root {
+            --ink: #1A1A1A;
+            --ink-muted: #5A6478;
+            --rule: #D6D8DD;
+
+            /* Wild Frontiers · UK premium cultural · ivory + black + bronze */
+            --wild-bg: #FFFFFF;
+            --wild-ink: #1A1A1A;
+            --wild-accent: #8B6E2F;
+            --wild-rule: #1A1A1A;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--ink);
+            line-height: 1.5;
+            background: #ECEDEE;
+        }
+
+        .screen-only {
+            background: var(--wild-ink);
+            color: white;
+            padding: 1.25rem 2rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+        .screen-only h1 {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+
+        .card {
+            width: 210mm;
+            height: 297mm;
+            padding: 18mm 18mm;
+            background: var(--wild-bg);
+            margin: 18px auto;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10mm;
+        }
+        .card-id {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ink-muted);
+            margin-bottom: 6mm;
+        }
+        .card-logo {
+            font-family: Georgia, serif;
+            font-size: 2.2rem;
+            line-height: 1.05;
+            margin: 0 0 2mm 0;
+            color: var(--wild-ink);
+            letter-spacing: 1px;
+        }
+        .card-archetype {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--wild-ink);
+            font-style: italic;
+        }
+        .card-tag {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 2mm 4mm;
+            border: 1.5px solid var(--wild-ink);
+            color: var(--wild-ink);
+            text-align: center;
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        .accent-rule {
+            height: 3px;
+            background: var(--wild-accent);
+            margin: 6mm 0 8mm 0;
+            width: 30mm;
+        }
+
+        .section-h {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--wild-ink);
+            margin: 0 0 4mm 0;
+        }
+
+        .section-block {
+            margin-bottom: 8mm;
+        }
+
+        ul.facts {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: f;
+        }
+        ul.facts li {
+            counter-increment: f;
+            font-family: Georgia, serif;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            padding: 0 0 3mm 9mm;
+            position: relative;
+        }
+        ul.facts li::before {
+            content: counter(f);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.85rem;
+            width: 6mm;
+            height: 6mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--wild-accent);
+        }
+
+        ul.products {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.products li {
+            font-family: Georgia, serif;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            padding: 0 0 2mm 7mm;
+            position: relative;
+        }
+        ul.products li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3.4mm;
+            width: 3.5mm;
+            height: 3.5mm;
+            background: var(--wild-accent);
+            border-radius: 50%;
+        }
+        ul.products li strong {
+            color: var(--wild-ink);
+        }
+        ul.products li .desc {
+            color: var(--ink-muted);
+            font-size: 0.88rem;
+        }
+
+        ul.questions {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: q;
+        }
+        ul.questions li {
+            counter-increment: q;
+            font-family: Georgia, serif;
+            font-size: 1.02rem;
+            line-height: 1.5;
+            padding: 0 0 4mm 10mm;
+            position: relative;
+        }
+        ul.questions li::before {
+            content: counter(q);
+            position: absolute;
+            left: 0;
+            top: 0.5mm;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.9rem;
+            width: 7mm;
+            height: 7mm;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--wild-ink);
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(26, 26, 26, 0.18);
+            margin: 3mm 0 8mm 0;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 5mm;
+            border-top: 1px dashed var(--wild-rule);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.7rem;
+            color: var(--ink-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="screen-only">
+    <h1>Prototipo · Tarjeta G · Wild Frontiers · Día 1 y Día 2</h1>
+    <p>A4 vertical · una cara · en español. Identidad: operador británico premium, profundidad cultural, guías historiadores/antropólogos con bio publicada, grupos pequeños por razón cultural, tailor-made + small group como formatos paralelos.</p>
+</div>
+
+
+<!-- =====================================================
+     TARJETA G · WILD FRONTIERS · DÍA 1 · CONOCERSE
+     ===================================================== -->
+<article class="card" aria-label="Tarjeta G Wild Frontiers - Día 1">
+
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta G · Día 1 · Conocerse</div>
+            <h2 class="card-logo">WILD<br>FRONTIERS</h2>
+            <p class="card-archetype">Operador británico premium · profundidad cultural · award-winning</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador británico premium con foco en viajes de profundidad cultural — premiado en mi industria.</li>
+            <li>Trabajo con guías historiadores y antropólogos, no guías genéricos. Tienen bio publicada en mi web, con credenciales y años de trabajo.</li>
+            <li>Mis grupos tienen un máximo de unas 12 personas — el límite es cultural (preservar el contenido), no solo logístico.</li>
+            <li>Ofrezco dos formatos en paralelo: viajes a medida (privados) y viajes en grupo pequeño cerrado — los dos con la misma profundidad cultural.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida</strong> <span class="desc">— privados, con eje cultural y acceso a expertos</span></li>
+            <li><strong>Viajes en grupo pequeño cerrado</strong> <span class="desc">— máximo ~12 personas, no abierto al público</span></li>
+            <li><strong>Trekking culturales</strong> <span class="desc">— por ejemplo Lost City Trek, con contenido histórico-antropológico</span></li>
+            <li><strong>Viajes "off-the-beaten-path"</strong> <span class="desc">— con justificación cultural, no por ser diferente</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas que te haré para conocerte</p>
+        <ul class="questions">
+            <li>Contame de tu negocio. ¿Quién sos vos? ¿Qué hacés?</li>
+            <li>¿Cómo nació tu proyecto? ¿Cuál es la historia detrás?</li>
+            <li>¿Quién enseña o cuenta la historia en tu propuesta — vos, un guía local, un experto?</li>
+            <li>¿Cómo cuidás la cultura local — la historia, las comunidades, los sitios — en tu propuesta?</li>
+            <li>¿Quién es tu cliente ideal? ¿Y quién no es para vos?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 1 · Ronda de claridad · Bootcamp Colombia · Medellín · 25 mayo 2026</span>
+        <span>G</span>
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     TARJETA G · WILD FRONTIERS · DÍA 2 · PROFUNDIZAR
+     ===================================================== -->
+<article class="card" aria-label="Tarjeta G Wild Frontiers - Día 2">
+
+    <div class="card-header">
+        <div>
+            <div class="card-id">Tarjeta G · Día 2 · Profundizar</div>
+            <h2 class="card-logo">WILD<br>FRONTIERS</h2>
+            <p class="card-archetype">Operador británico premium · profundidad cultural · award-winning</p>
+        </div>
+        <div class="card-tag">Comprador<br>en rol</div>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <div class="section-block">
+        <p class="section-h">4 cosas que debés saber de mí</p>
+        <ul class="facts">
+            <li>Soy un operador británico premium con foco en viajes de profundidad cultural — premiado en mi industria.</li>
+            <li>Trabajo con guías historiadores y antropólogos, no guías genéricos. Tienen bio publicada en mi web, con credenciales y años de trabajo.</li>
+            <li>Mis grupos tienen un máximo de unas 12 personas — el límite es cultural (preservar el contenido), no solo logístico.</li>
+            <li>Ofrezco dos formatos en paralelo: viajes a medida (privados) y viajes en grupo pequeño cerrado — los dos con la misma profundidad cultural.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <p class="section-h">Lo que vendo</p>
+        <ul class="products">
+            <li><strong>Viajes a medida</strong> <span class="desc">— privados, con eje cultural y acceso a expertos</span></li>
+            <li><strong>Viajes en grupo pequeño cerrado</strong> <span class="desc">— máximo ~12 personas, no abierto al público</span></li>
+            <li><strong>Trekking culturales</strong> <span class="desc">— por ejemplo Lost City Trek, con contenido histórico-antropológico</span></li>
+            <li><strong>Viajes "off-the-beaten-path"</strong> <span class="desc">— con justificación cultural, no por ser diferente</span></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-block">
+        <p class="section-h">5 preguntas más exigentes</p>
+        <ul class="questions">
+            <li>¿Cuál es la historia profunda detrás de tu lugar o propuesta?</li>
+            <li>¿Quién es la persona experta que diseñó el contenido? ¿Qué credenciales tiene?</li>
+            <li>¿Cómo limitás el tamaño de tu grupo? ¿Por qué ese límite?</li>
+            <li>¿Qué parte de tu propuesta mi cliente no va a ver en otra operación similar?</li>
+            <li>¿Qué tenés para un cliente que ya hizo 3 países latinoamericanos?</li>
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <span>Día 2 · Ronda de profundidad · Bootcamp Colombia · Medellín · 26 mayo 2026</span>
+        <span>G</span>
+    </div>
+
+</article>
+
+</body>
+</html>

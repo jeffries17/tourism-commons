@@ -514,7 +514,7 @@ export default function ParticipantDetail() {
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-4">
                 <div className="text-sm font-medium text-purple-700">Positive Reviews</div>
-                <div className="text-3xl font-bold text-purple-900 mt-1">{sentimentData.positive_rate.toFixed(0)}%</div>
+                <div className="text-3xl font-bold text-purple-900 mt-1">{(sentimentData.positive_rate * 100).toFixed(1)}%</div>
               </div>
             </div>
 

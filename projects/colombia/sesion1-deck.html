@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Responsable Vende — Sesión 1 · 27 de abril</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --bg-alt:     #EEF2EF;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.65; color: var(--text); background: var(--white); }
+
+        /* TOPBAR */
+        .topbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 200; padding: 0.75rem 2rem; }
+        .topbar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.35rem; letter-spacing: -0.5px; line-height: 1; display: flex; flex-direction: column; }
+        .trecc-logo .wordmark { display: flex; align-items: baseline; }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: var(--navy); }
+        .trecc-logo .tagline { font-family: 'Arial', sans-serif; font-size: 0.55rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px; margin-top: 1px; }
+        .slide-counter { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+        .slide-section-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-dark); flex: 1; text-align: center; }
+
+        /* NAV BUTTONS */
+        .nav-buttons { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: 0.65rem; z-index: 190; }
+        .nav-btn { padding: 0.65rem 1.35rem; background: var(--navy); color: white; border: none; border-radius: 7px; font-size: 0.875rem; font-family: 'Arial', sans-serif; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.25s; box-shadow: 0 2px 10px rgba(27,43,90,0.25); }
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(27,43,90,0.3); }
+        .nav-btn.prev { background: white; color: var(--text); border: 1.5px solid var(--border); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .nav-btn:disabled { opacity: 0.25; cursor: not-allowed; transform: none; }
+
+        /* SECTIONS */
+        section { min-height: 100vh; padding: 5.5rem 2rem 7rem; display: flex; align-items: center; justify-content: center; }
+        .slide-content { max-width: 900px; width: 100%; }
+        section.bg-white  { background: var(--white); }
+        section.bg-light  { background: var(--bg); }
+        section.bg-alt    { background: var(--bg-alt); }
+        section.bg-navy   { background: var(--navy); }
+
+        /* TYPOGRAPHY */
+        .slide-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.6rem; }
+        .bg-navy .slide-label, .divider-slide .slide-label, .interactive-slide .slide-label { color: rgba(255,255,255,0.65); }
+        .slide-title { font-size: 2.4rem; line-height: 1.15; color: var(--navy); margin-bottom: 0.5rem; }
+        .bg-navy .slide-title, .divider-slide .slide-title, .closing-slide .slide-title { color: white; }
+        .divider-slide .slide-title { font-size: 2.6rem; }
+        .slide-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem; font-family: 'Arial', sans-serif; }
+        .bg-navy .slide-subtitle, .divider-slide .slide-subtitle { color: rgba(255,255,255,0.75); }
+        .accent-bar { height: 3px; width: 60px; background: var(--gold); border-radius: 2px; margin-bottom: 1.5rem; }
+
+        /* HERO */
+        .hero-slide { text-align: center; }
+        .hero-slide .slide-title { font-size: 3rem; }
+        .hero-slide .accent-bar { margin: 1.25rem auto 1.5rem; width: 80px; }
+        .hero-meta { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .meta-chip { display: flex; align-items: center; gap: 0.5rem; background: var(--teal-light); border: 1px solid var(--teal); color: var(--teal-dark); padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.875rem; font-family: 'Arial', sans-serif; }
+        .hero-partner-logos { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; align-items: center; }
+        .partner-text { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text-muted); text-align: center; }
+        .partner-text strong { display: block; color: var(--text); font-size: 0.95rem; }
+
+        /* DIVIDER SLIDE */
+        .divider-slide { background: linear-gradient(135deg, var(--teal-dark) 0%, var(--navy) 100%); text-align: center; }
+        .divider-number { font-family: 'Arial Black', Arial, sans-serif; font-size: 6rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; margin-bottom: -1.5rem; }
+
+        /* PHOTO INTERSTITIAL — block dividers with background photo */
+        .block-intro { position: relative; background-size: cover; background-position: center; text-align: center; }
+        .block-intro::before { content: ''; position: absolute; inset: 0; background: linear-gradient(150deg, rgba(27,43,90,0.87) 30%, rgba(45,122,106,0.70) 100%); }
+        .block-intro .slide-content { position: relative; z-index: 1; }
+        .block-intro .bi-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 9rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; position: absolute; bottom: 1rem; right: 1.5rem; }
+        .block-intro .bi-kicker { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gold); margin-bottom: 1.2rem; }
+        .block-intro .bi-rule { width: 50px; height: 2px; background: var(--gold); margin: 1.2rem auto 1.5rem; border-radius: 2px; }
+        .block-intro .bi-title { font-size: 2.6rem; line-height: 1.15; color: white; }
+        .block-intro .bi-sub { font-family: 'Arial', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.78); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+        /* INTERACTIVE SLIDE */
+        .interactive-slide { background: linear-gradient(135deg, #2D5A27 0%, var(--teal-dark) 100%); text-align: center; }
+        .interactive-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        .interactive-question { font-size: 1.9rem; color: white; line-height: 1.3; font-style: italic; max-width: 700px; margin: 0 auto 2rem; }
+        .interactive-instruction { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-top: 0.75rem; }
+        .chat-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+        /* AGENDA TABLE */
+        .agenda-table { width: 100%; border-collapse: collapse; margin-top: 1.25rem; font-family: 'Arial', sans-serif; font-size: 0.875rem; }
+        .agenda-table th { text-align: left; padding: 0.6rem 1rem; background: var(--navy); color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .agenda-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .agenda-table tr:last-child td { border-bottom: none; }
+        .agenda-table tr:nth-child(even) td { background: var(--bg); }
+        .agenda-table .time-cell { white-space: nowrap; color: var(--teal-dark); font-weight: 700; width: 110px; }
+        .agenda-tag { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 4px; font-size: 0.68rem; font-weight: 700; background: var(--gold-light); color: #7A6000; margin-left: 0.4rem; }
+
+        /* PROGRAM ARC */
+        .program-arc { display: flex; align-items: stretch; gap: 0.5rem; margin: 1.25rem 0; }
+        .program-module { flex: 1; background: var(--bg); border-radius: 10px; padding: 1rem 1.1rem; border: 2px solid var(--border); opacity: 0.55; }
+        .program-module.active { background: var(--teal-light); border-color: var(--teal); opacity: 1; }
+        .arc-connector { display: flex; align-items: center; color: var(--border); font-size: 1.2rem; flex: 0 0 auto; }
+        .module-badge { font-family: 'Arial', sans-serif; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 600; }
+        .program-module.active .module-badge { color: var(--teal-dark); }
+        .module-name { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.1; }
+        .module-focus { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+        .program-module.active .module-focus { color: var(--teal-dark); font-weight: 600; }
+        .module-sessions { list-style: none; padding: 0; margin: 0; }
+        .module-sessions li { font-family: 'Arial', sans-serif; font-size: 0.73rem; color: var(--text-muted); padding: 0.15rem 0 0.15rem 0.85rem; position: relative; line-height: 1.3; }
+        .module-sessions li::before { content: '·'; position: absolute; left: 0.2rem; color: var(--teal); }
+        .module-sessions li.today { color: var(--teal-dark); font-weight: 700; }
+        .module-sessions li.today::before { content: '▶'; font-size: 0.55rem; top: 0.25rem; }
+        .spectrum-card { border-radius:8px; padding:0.85rem 1.1rem; display:flex; align-items:flex-start; gap:0.85rem; cursor:pointer; user-select:none; transition: box-shadow 0.15s; }
+        .spectrum-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.09); }
+        .sc-num { font-family:'Arial Black',Arial,sans-serif; font-size:1.1rem; font-weight:900; flex-shrink:0; min-width:1.5rem; line-height:1; padding-top:0.1rem; }
+        .sc-body { flex:1; }
+        .sc-title { font-family:'Arial',sans-serif; font-size:0.85rem; font-weight:700; line-height:1.3; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; }
+        .sc-desc { font-family:'Arial',sans-serif; font-size:0.78rem; line-height:1.5; max-height:0; overflow:hidden; transition: max-height 0.3s ease, margin-top 0.25s ease; margin-top:0; }
+        .spectrum-card.open .sc-desc { max-height:5rem; margin-top:0.3rem; }
+        .sc-arrow { font-size:0.65rem; color:var(--text-muted); flex-shrink:0; padding-top:0.2rem; transition: transform 0.2s; line-height:1; }
+        .spectrum-card.open .sc-arrow { transform: rotate(180deg); }
+        .session-sub { list-style: none; padding: 0; margin: 0.2rem 0 0.1rem 0; }
+        .session-sub li { font-family: 'Arial', sans-serif; font-size: 0.63rem; color: var(--text-muted); padding: 0.03rem 0 0.03rem 0.7rem; position: relative; line-height: 1.35; font-weight: 400; }
+        .session-sub li::before { content: '–'; position: absolute; left: 0; color: var(--border); }
+        .program-module.active .session-sub li { color: var(--teal-dark); }
+        .program-module.active .session-sub li::before { color: var(--teal); }
+
+        /* RTA INDICATOR GRID */
+        .indicator-category-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+        .category-icon { font-size: 2rem; flex: 0 0 auto; }
+        .category-number { font-family: 'Arial Black', Arial, sans-serif; font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 0.15rem; }
+        .indicator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .indicator-card { background: white; border-radius: 12px; padding: 1.25rem 1.35rem; border-left: 5px solid var(--teal); box-shadow: 0 1px 5px rgba(0,0,0,0.07); }
+        .indicator-card.gold  { border-left-color: var(--gold); }
+        .indicator-card.navy  { border-left-color: var(--navy); }
+        .indicator-card.green { border-left-color: #3A7D44; }
+        .indicator-card.expandable { cursor: pointer; transition: box-shadow 0.2s; }
+        .indicator-card.expandable:hover { box-shadow: 0 3px 14px rgba(0,0,0,0.13); }
+        .indicator-num { font-family: 'Arial', sans-serif; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.5px; color: white; background: var(--teal); display: inline-block; padding: 0.18rem 0.55rem; border-radius: 4px; margin-bottom: 0.55rem; }
+        .indicator-card.gold  .indicator-num { background: var(--gold); color: #5A4400; }
+        .indicator-card.navy  .indicator-num { background: var(--navy); }
+        .indicator-card.green .indicator-num { background: #3A7D44; }
+        .indicator-title { font-family: 'Arial', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.35rem; line-height: 1.3; }
+        .indicator-quote { font-size: 0.82rem; color: var(--text-muted); font-style: italic; line-height: 1.55; }
+        .expand-hint { display: inline-flex; align-items: center; gap: 0.3rem; font-family: 'Arial', sans-serif; font-size: 0.67rem; font-weight: 700; color: var(--teal); margin-top: 0.75rem; padding: 0.25rem 0.7rem; border: 1.5px solid var(--teal); border-radius: 20px; transition: background 0.15s; }
+        .indicator-card.gold  .expand-hint { color: #A07800; border-color: var(--gold); }
+        .indicator-card.navy  .expand-hint { color: var(--navy-mid); border-color: var(--navy-mid); }
+        .indicator-card.green .expand-hint { color: #2D6636; border-color: #3A7D44; }
+        .indicator-card.expandable:hover .expand-hint { background: rgba(0,0,0,0.04); }
+        .indicator-card.open .expand-hint::before { content: '▾ '; }
+        .indicator-card:not(.open) .expand-hint::before { content: '▸ '; }
+        .scale-panel { display: none; margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--border); }
+        .indicator-card.open .scale-panel { display: block; }
+        .scale-label { font-family: 'Arial', sans-serif; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.55rem; }
+        .scale-row { display: flex; gap: 0.5rem; align-items: flex-start; margin-bottom: 0.42rem; }
+        .scale-dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; margin-top: 0.1rem; display: flex; align-items: center; justify-content: center; font-family: 'Arial', sans-serif; font-weight: 900; font-size: 0.52rem; color: white; }
+        .d1 { background: #C5CAD4; color: #555; }
+        .d2 { background: #9BA5B5; }
+        .d3 { background: #C8A800; }
+        .d4 { background: var(--teal); }
+        .d5 { background: #2D7A3A; }
+        .scale-desc { font-family: 'Arial', sans-serif; font-size: 0.73rem; color: var(--text-muted); line-height: 1.45; }
+        .pitch-phrase { margin-top: 0.9rem; padding: 0.65rem 0.9rem; border-left: 3px solid var(--teal); border-radius: 0 7px 7px 0; background: rgba(62,153,135,0.07); font-size: 0.83rem; font-style: italic; color: var(--navy); line-height: 1.5; }
+        .indicator-card.gold  .pitch-phrase { border-left-color: var(--gold); background: rgba(245,196,0,0.08); }
+        .indicator-card.navy  .pitch-phrase { border-left-color: var(--navy-mid); background: rgba(27,43,90,0.07); }
+        .indicator-card.green .pitch-phrase { border-left-color: #3A7D44; background: rgba(58,125,68,0.07); }
+        .biz-types { display: flex; gap: 0.3rem; margin-top: 0.45rem; flex-wrap: wrap; }
+        .biz-type { font-family: 'Arial', sans-serif; font-size: 0.63rem; background: rgba(0,0,0,0.05); padding: 0.12rem 0.45rem; border-radius: 3px; color: var(--text-muted); }
+        .berta-source { font-family: 'Arial', sans-serif; font-size: 0.68rem; color: var(--text-muted); margin-top: 1rem; text-align: right; }
+
+        /* STATS ROW */
+        .stats-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.25rem 0; }
+        .stat-chip { flex: 1; min-width: 130px; text-align: center; padding: 1.25rem 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .bg-navy .stat-chip { background: rgba(255,255,255,0.1); }
+        .stat-value { font-family: 'Arial Black', Arial, sans-serif; font-size: 2rem; font-weight: 900; color: var(--navy); line-height: 1; display: block; }
+        .bg-navy .stat-value { color: white; }
+        .stat-label { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: block; line-height: 1.4; }
+        .bg-navy .stat-label { color: rgba(255,255,255,0.65); }
+
+        /* CALLOUT */
+        .callout { background: var(--teal); color: white; padding: 1.25rem 1.5rem; border-radius: 10px; margin: 1.25rem 0; }
+        .callout.callout-navy { background: var(--navy); }
+        .callout.callout-gold { background: var(--gold); color: var(--navy); }
+        .callout.callout-outline { background: transparent; border: 2px solid var(--teal); color: var(--text); }
+        .callout h3 { font-size: 0.95rem; margin-bottom: 0.35rem; font-family: 'Arial', sans-serif; font-weight: 700; }
+        .callout p { font-size: 0.875rem; line-height: 1.65; opacity: 0.95; }
+
+        /* TWO COLUMN */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.25rem; }
+        .col-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); font-weight: 700; margin-bottom: 0.5rem; }
+        .detail-block { background: var(--bg); border-radius: 8px; padding: 0.9rem 1rem; }
+        .detail-block ul { list-style: none; padding: 0; }
+        .detail-block ul li { font-size: 0.85rem; color: var(--text); padding: 0.25rem 0 0.25rem 1rem; position: relative; line-height: 1.45; }
+        .detail-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.75rem; top: 0.3rem; }
+
+        /* BUYER PROFILE */
+        .profile-slide { }
+        .profile-header-bar { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+        .profile-big-icon { font-size: 2.5rem; flex: 0 0 auto; }
+        .profile-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.4rem; }
+        .profile-tag { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.65rem; border-radius: 4px; background: var(--teal-light); color: var(--teal-dark); }
+        .profile-tag.gold { background: var(--gold-light); color: #7A6000; }
+        .profile-tag.navy { background: #e8ebf5; color: var(--navy); }
+        .profile-body { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .profile-col h4 { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); margin-bottom: 0.5rem; }
+        .profile-col ul { list-style: none; padding: 0; }
+        .profile-col ul li { font-size: 0.85rem; color: var(--text); padding: 0.2rem 0 0.2rem 1rem; position: relative; line-height: 1.45; }
+        .profile-col ul li::before { content: '·'; position: absolute; left: 0.25rem; color: var(--teal); font-weight: 900; }
+        .org-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; align-items: center; }
+        .org-badge { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 5px; background: white; border: 1.5px solid var(--border); color: var(--text-muted); white-space: nowrap; }
+        .logo-badge { height: 32px; width: auto; max-width: 110px; object-fit: contain; background: white; border: 1.5px solid var(--border); border-radius: 5px; padding: 4px 8px; }
+        .closes-bar { background: var(--gold-light); border: 1.5px solid var(--gold); border-radius: 8px; padding: 0.75rem 1rem; margin-top: 0.85rem; font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text); }
+        .closes-bar strong { color: var(--navy); }
+
+        /* B2B B2C ROUTE */
+        .route-diagram { display: flex; gap: 1rem; align-items: stretch; margin: 1.25rem 0; flex-wrap: wrap; }
+        .route-origin { display: flex; align-items: center; justify-content: center; background: var(--navy); color: white; border-radius: 12px; padding: 1.25rem 1.5rem; text-align: center; min-width: 100px; flex-shrink: 0; }
+        .route-origin .origin-icon { font-size: 1.75rem; display: block; margin-bottom: 0.4rem; }
+        .route-origin .origin-label { font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.85rem; }
+        .route-paths { flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+        .route-path { display: flex; align-items: center; gap: 0.6rem; border-radius: 10px; padding: 0.75rem 1rem; flex-wrap: wrap; }
+        .route-path.b2c { background: var(--teal-light); }
+        .route-path.b2b { background: #e8ebf5; }
+        .route-type { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; min-width: 90px; line-height: 1.3; }
+        .route-path.b2c .route-type { color: var(--teal-dark); }
+        .route-path.b2b .route-type { color: var(--navy-mid); }
+        .route-arrow { font-size: 1rem; color: var(--text-muted); flex-shrink: 0; }
+        .route-steps { display: flex; gap: 0.35rem; flex-wrap: wrap; flex: 1; }
+        .route-step { background: white; border: 1px solid var(--border); border-radius: 5px; padding: 0.2rem 0.55rem; font-size: 0.7rem; font-family: 'Arial', sans-serif; color: var(--text-muted); }
+        .route-end { border-radius: 7px; padding: 0.4rem 0.85rem; font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; white-space: nowrap; text-align: center; flex-shrink: 0; }
+        .route-path.b2c .route-end { background: var(--teal); color: white; }
+        .route-path.b2b .route-end { background: var(--navy); color: white; }
+
+        /* NICHE TAGS */
+        .niche-selector { margin-top: 1.25rem; }
+        .niche-instructions { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.85rem; }
+        .niche-cloud { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+        .niche-tag { font-family: 'Arial', sans-serif; font-size: 0.78rem; padding: 0.35rem 0.85rem; border-radius: 20px; border: 1.5px solid var(--border); background: white; color: var(--text); cursor: pointer; transition: all 0.2s; user-select: none; }
+        .niche-tag:hover { border-color: var(--teal); color: var(--teal-dark); background: var(--teal-light); }
+        .niche-tag.selected { background: var(--teal); border-color: var(--teal); color: white; }
+        .niche-count { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.85rem; }
+        .niche-count strong { color: var(--teal-dark); }
+
+        /* REVEAL TABLE */
+        .reveal-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; font-family: 'Arial', sans-serif; }
+        .reveal-table th { padding: 0.65rem 1rem; text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .reveal-table th:first-child { background: var(--navy); color: white; border-radius: 6px 0 0 0; }
+        .reveal-table th:last-child { background: var(--teal); color: white; border-radius: 0 6px 0 0; }
+        .reveal-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .reveal-table tr:last-child td { border-bottom: none; }
+        .reveal-table tr:nth-child(even) td:first-child { background: var(--bg); }
+        .reveal-mask { display: inline-block; background: var(--teal); color: transparent; border-radius: 4px; padding: 0.1rem 0.5rem; cursor: pointer; font-size: 0.8rem; transition: all 0.3s; user-select: none; }
+        .reveal-mask:hover { background: var(--teal-dark); }
+        .reveal-mask.revealed { background: transparent; color: var(--teal-dark); font-style: italic; }
+        .reveal-all-btn { display: block; margin: 0.85rem 0 0; padding: 0.5rem 1.1rem; background: var(--teal); color: white; border: none; border-radius: 6px; font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .reveal-all-btn:hover { background: var(--teal-dark); }
+
+        /* MISMATCH CARDS */
+        .mismatch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-top: 1rem; }
+        .mismatch-card { background: white; border-radius: 10px; padding: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-left: 4px solid var(--teal); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .mismatch-card:nth-child(2) { border-left-color: var(--navy); }
+        .mismatch-card:nth-child(3) { border-left-color: var(--gold); }
+        .mismatch-card:nth-child(4) { border-left-color: var(--red); }
+        .mismatch-card:hover:not(.revealed) { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.11); }
+        .mismatch-card.revealed { border-left-width: 5px; }
+        .mismatch-label { font-family: 'Arial', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.3rem; }
+        .mismatch-setup { font-family: 'Georgia', serif; font-size: 0.88rem; font-style: italic; color: var(--text); margin: 0.4rem 0; line-height: 1.5; border-left: 3px solid var(--border); padding-left: 0.65rem; }
+        .mismatch-hint { font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--teal); font-weight: 700; margin-top: 0.4rem; }
+        .mismatch-reveal { display: none; margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px solid var(--border); }
+        .mismatch-reveal p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+        .mismatch-reveal p strong { color: var(--navy); }
+        .mismatch-card.revealed .mismatch-reveal { display: block; animation: fadeInUp 0.3s ease; }
+        .mismatch-card.revealed .mismatch-hint { display: none; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* WORKSHOP */
+        .workshop-box { background: var(--teal-light); border: 2px solid var(--teal); border-radius: 12px; padding: 1.5rem; margin-top: 1rem; }
+        .workshop-questions { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem; }
+        .workshop-q { display: flex; gap: 0.85rem; align-items: flex-start; background: white; padding: 0.9rem 1rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+        .q-number { flex: 0 0 28px; height: 28px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.85rem; margin-top: 1px; }
+        .workshop-q p { font-size: 0.875rem; color: var(--text); line-height: 1.55; }
+        .timer-display { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--navy); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; margin-top: 0.85rem; }
+
+        /* BREAKOUT */
+        .breakout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; max-width: 680px; margin-left: auto; margin-right: auto; text-align: left; }
+        .breakout-box { background: rgba(255,255,255,0.15); border-radius: 10px; padding: 1.1rem; border: 1px solid rgba(255,255,255,0.2); }
+        .breakout-box h4 { font-family: 'Arial', sans-serif; font-size: 0.875rem; font-weight: 700; color: white; margin-bottom: 0.4rem; }
+        .breakout-box p { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.55; }
+
+        /* CERTIFICATION PILLS */
+        .cert-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.85rem; justify-content: center; }
+        .cert-pill { font-family: 'Arial', sans-serif; font-size: 0.75rem; font-weight: 700; padding: 0.35rem 1rem; border-radius: 20px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35); color: white; }
+
+        /* CLOSING */
+        .closing-slide { background: var(--navy); text-align: center; }
+        .takeaways-list { display: flex; flex-direction: column; gap: 0.65rem; margin: 1.25rem auto; max-width: 640px; text-align: left; }
+        .takeaway-item { display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(255,255,255,0.07); padding: 0.85rem 1rem; border-radius: 8px; }
+        .takeaway-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--gold); line-height: 1; flex: 0 0 auto; margin-top: 1px; }
+        .takeaway-item p { font-size: 0.875rem; color: rgba(255,255,255,0.9); line-height: 1.55; font-family: 'Arial', sans-serif; }
+        .homework-box { background: var(--gold); color: var(--navy); padding: 1.1rem 1.5rem; border-radius: 10px; margin: 1.1rem auto; max-width: 620px; text-align: left; }
+        .hw-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
+        .hw-part { margin-top: 0.55rem; font-family: 'Arial', sans-serif; font-size: 0.82rem; line-height: 1.55; }
+        .next-box { background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.18); padding: 1rem 1.75rem; border-radius: 10px; margin: 1rem auto; max-width: 480px; }
+        .next-box .nxt-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); font-family: 'Arial', sans-serif; margin-bottom: 0.3rem; }
+        .next-box .nxt-title { font-size: 0.95rem; font-family: 'Arial', sans-serif; color: white; }
+        .next-box .nxt-time { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-family: 'Arial', sans-serif; margin-top: 0.15rem; }
+
+        /* ACTORS LIST */
+        .actors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1rem; }
+        .actor-group { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 0.85rem 1rem; }
+        .actor-group h4 { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 0.5rem; }
+        .actor-group ul { list-style: none; padding: 0; }
+        .actor-group ul li { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.85); padding: 0.15rem 0; line-height: 1.4; }
+
+        /* QUOTE BLOCK */
+        .quote-block { border-left: 4px solid var(--gold); padding: 1rem 1.4rem; background: var(--gold-light); border-radius: 0 8px 8px 0; margin: 1.25rem 0; }
+        .quote-block p { font-size: 1.05rem; font-style: italic; color: var(--text); line-height: 1.7; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .indicator-grid { grid-template-columns: 1fr; }
+            .profile-body { grid-template-columns: 1fr; }
+            .two-col { grid-template-columns: 1fr; }
+            .mismatch-grid { grid-template-columns: 1fr; }
+            .breakout-grid { grid-template-columns: 1fr; }
+            .actors-grid { grid-template-columns: 1fr; }
+            .program-arc { flex-direction: column; }
+            .arc-connector { display: none; }
+            section { padding: 5rem 1.25rem 6rem; }
+            .hero-slide .slide-title { font-size: 2.2rem; }
+            .slide-title { font-size: 1.8rem; }
+        }
+        /* LIGHTBOX */
+        .lb-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+            padding: 2rem;
+        }
+        .lb-overlay.open { display: flex; }
+        .lb-overlay img {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 8px;
+            box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+            object-fit: contain;
+        }
+        .lb-close {
+            position: fixed;
+            top: 1.25rem;
+            right: 1.75rem;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 300;
+            cursor: pointer;
+            opacity: 0.75;
+            line-height: 1;
+        }
+        .lb-close:hover { opacity: 1; }
+        .screenshot-thumb {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            cursor: zoom-in;
+            transition: all 0.18s;
+            display: block;
+        }
+        .screenshot-thumb:hover {
+            border-color: var(--teal);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+            transform: scale(1.025);
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+    <div class="topbar-inner">
+        <div class="trecc-logo">
+            <div class="wordmark"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="tagline">Turismo Responsable, Comunitario y Cultural</div>
+        </div>
+        <span id="slideSection" class="slide-section-label"></span>
+        <span class="slide-counter" id="slideCounter">1 / 28</span>
+    </div>
+</nav>
+
+<!-- NAV BUTTONS -->
+<div class="nav-buttons">
+    <button class="nav-btn prev" id="prevBtn" onclick="navigate(-1)" disabled>← Anterior</button>
+    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">Siguiente →</button>
+</div>
+
+
+<!-- ================================================================
+     SLIDES
+     ================================================================ -->
+
+<!-- S0: PORTADA -->
+<section class="bg-white" id="s0" data-section="0">
+    <div class="slide-content hero-slide">
+        <div class="slide-label">TRECC · Institut Français Colombia</div>
+        <h1 class="slide-title">Lo <strong>Responsable</strong><br>Vende</h1>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Sesión 1 — ¿Qué ofreces y a quién? · 27 de abril de 2026</p>
+        <div class="hero-meta">
+            <div class="meta-chip">📺 En línea · Google Meet</div>
+            <div class="meta-chip">🕘 9:00–11:00 Medellín · 16:00–18:00 París</div>
+            <div class="meta-chip">👤 Alex Jeffries, Formador</div>
+        </div>
+        <div class="hero-partner-logos">
+            <img src="img/program_logos.png" alt="Socios del programa" style="max-width:480px; width:100%; height:auto;">
+        </div>
+    </div>
+</section>
+
+
+<!-- S1: INTRODUCCIÓN TRECC -->
+<section class="bg-navy" id="s1" data-section="1" style="text-align:center;">
+    <div class="slide-content" style="max-width:720px;">
+        <div class="accent-bar" style="background:var(--gold); margin:0 auto 2.5rem;"></div>
+        <div style="font-family:'Arial',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--gold); margin-bottom:1.25rem;">Introducción institucional</div>
+        <p style="font-size:1.75rem; line-height:1.4; color:white; margin-bottom:1rem;">
+            Nuestro representante de TRECC<br>presenta la colaboración.
+        </p>
+        <p style="font-family:'Arial',sans-serif; font-size:1rem; color:rgba(255,255,255,0.65); line-height:1.6; max-width:540px; margin:0 auto;">
+            El contexto del programa, los objetivos de la alianza y lo que los participantes pueden esperar de estas sesiones.
+        </p>
+        <div class="accent-bar" style="background:var(--gold); margin:2.5rem auto 0;"></div>
+    </div>
+</section>
+
+
+<!-- S2: EL RECORRIDO -->
+<section class="bg-white" id="s2" data-section="2">
+    <div class="slide-content">
+        <div class="slide-label">EL RECORRIDO · ABRIL–JUNIO 2026</div>
+        <h2 class="slide-title">Tres meses,<br>un destino: el mercado europeo</h2>
+        <div class="accent-bar"></div>
+        <div class="program-arc">
+            <div class="program-module active">
+                <div class="module-badge">💻 En línea</div>
+                <div class="module-name">Módulo 1</div>
+                <div class="module-focus">¿Qué ofreces, a quién, y cómo te ven?</div>
+                <ul class="module-sessions">
+                    <li class="today">Sesión 1 · 27 abr · Hoy
+                        <ul class="session-sub">
+                            <li>Tu nicho responsable + 16 indicadores RTA</li>
+                            <li>Tu mensaje de posicionamiento en una frase</li>
+                        </ul>
+                    </li>
+                    <li>Sesión 2 · 28 abr
+                        <ul class="session-sub">
+                            <li>Presencia digital: cómo te busca un comprador europeo</li>
+                            <li>IA como herramienta de posicionamiento</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module">
+                <div class="module-badge">📍 Medellín</div>
+                <div class="module-name">Módulo 2</div>
+                <div class="module-focus">Tu historia y tu sistema para vender</div>
+                <ul class="module-sessions">
+                    <li>Día 1 · 25 mayo
+                        <ul class="session-sub">
+                            <li>Narrativa comercial + pitch de 10 min para agencias francesas</li>
+                            <li>Turismo responsable como lenguaje de ventas B2B</li>
+                        </ul>
+                    </li>
+                    <li>Día 2 · 26 mayo
+                        <ul class="session-sub">
+                            <li>CRM y gestión de contactos B2B</li>
+                            <li>Embudo de relación: redes sociales → email → contacto directo</li>
+                        </ul>
+                    </li>
+                    <li>Conferencia · 27 mayo
+                        <ul class="session-sub">
+                            <li>Encuentro con agencias francesas — el pitch en práctica</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module">
+                <div class="module-badge">💻 En línea</div>
+                <div class="module-name">Módulo 3</div>
+                <div class="module-focus">Poner a prueba y ajustar</div>
+                <ul class="module-sessions">
+                    <li>Seguimiento · 15 jun
+                        <ul class="session-sub">
+                            <li>Revisión del encuentro: qué funcionó, qué ajustar</li>
+                            <li>Plan de acción de 90 días + hoja de ruta individual</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--text-muted); margin-top:1.25rem; line-height:1.6;">Al final del programa: claridad de posicionamiento · narrativa comercial · presencia digital mejorada · plan de contactos.</p>
+    </div>
+</section>
+
+
+<!-- S3: AGENDA -->
+<section class="bg-light" id="s3" data-section="3">
+    <div class="slide-content">
+        <div class="slide-label">PROGRAMA DE HOY</div>
+        <h2 class="slide-title">Agenda</h2>
+        <div class="accent-bar"></div>
+        <table class="agenda-table">
+            <thead>
+                <tr><th>Horario</th><th>Bloque</th><th>Formato</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-cell">9:00–9:20</td>
+                    <td>Apertura, presentaciones y activación <span class="agenda-tag">Interactivo</span></td>
+                    <td>Ronda grupal</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">9:20–10:05</td>
+                    <td>Bloque 1 — <strong>¿Qué es turismo responsable?</strong> Definición · por qué el mercado europeo lo exige ahora · 16 indicadores RTA <span class="agenda-tag">Interactivo</span></td>
+                    <td>Exposición + reflexión</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">10:05–10:25</td>
+                    <td>Bloque 2 — <strong>¿A quién le vendes?</strong> Los tres perfiles europeos <span class="agenda-tag">Interactivo</span></td>
+                    <td>Perfiles + discusión</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">10:25–10:45</td>
+                    <td>Bloque 3 — <strong>Tu nicho y tu mensaje en una frase</strong> <span class="agenda-tag">Quiz + discusión</span></td>
+                    <td>Individual + plenaria</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">10:45–11:00</td>
+                    <td>Cierre y tarea para mañana</td>
+                    <td>Plenaria</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- S4: DIVIDER BLOQUE 1 -->
+<section class="block-intro" id="s4" data-section="4" style="background-image:url('img/colombia_lodge_salento.avif');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 1</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">¿Qué es turismo<br>responsable?</h2>
+        <p class="bi-sub">Un punto de partida compartido — antes de hablar de ventas</p>
+    </div>
+    <div class="bi-num">1</div>
+</section>
+
+
+<!-- S5: DISCUSIÓN — ¿CÓMO LO DESCRIBES? -->
+<section class="interactive-slide" id="s5" data-section="5">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">💬 1–2 min · chat</div>
+        <p class="interactive-question">"¿Cómo describes la parte responsable de tu operación cuando alguien te pregunta?"</p>
+        <span class="chat-icon">💬</span>
+        <p class="interactive-instruction">Una o dos palabras en el chat — lo que te salga primero</p>
+        <p class="interactive-instruction" style="opacity:0.65; margin-top:0.5rem; font-size:0.82rem;">Sostenible · Comunitario · Responsable · Ecológico · Regenerativo — todos válidos, todos apuntan a lo mismo</p>
+    </div>
+</section>
+
+
+<!-- S6: EL ESPECTRO DE LA RESPONSABILIDAD — CERTIFICACIONES -->
+<section class="bg-white" id="s6" data-section="6">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · EL ESPECTRO</div>
+        <h2 class="slide-title">De la práctica informal<br>a la certificación internacional</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Responsable no es todo o nada — es un espectro. Cada nivel tiene valor comercial.</p>
+        <div style="display:flex; flex-direction:column; gap:0.55rem; margin-top:1.1rem;">
+            <div class="spectrum-card" onclick="toggleSpectrumCard(this)" style="background:var(--bg); border-left:4px solid var(--border);">
+                <div class="sc-num" style="color:var(--border);">1</div>
+                <div class="sc-body">
+                    <div class="sc-title" style="color:var(--text);">Prácticas informales</div>
+                    <div class="sc-desc" style="color:var(--text-muted);">Ya haces algo responsable — pero no está documentado ni es visible para un comprador externo</div>
+                </div>
+                <div class="sc-arrow">▾</div>
+            </div>
+            <div class="spectrum-card" onclick="toggleSpectrumCard(this)" style="background:var(--bg); border-left:4px solid var(--teal-light);">
+                <div class="sc-num" style="color:var(--teal);">2</div>
+                <div class="sc-body">
+                    <div class="sc-title" style="color:var(--text);">Prácticas documentadas</div>
+                    <div class="sc-desc" style="color:var(--text-muted);">Políticas internas, procedimientos escritos, datos de impacto recopilados — ya comunicables a un comprador</div>
+                </div>
+                <div class="sc-arrow">▾</div>
+            </div>
+            <div class="spectrum-card" onclick="toggleSpectrumCard(this)" style="background:var(--teal-light); border-left:4px solid var(--teal);">
+                <div class="sc-num" style="color:var(--teal);">3</div>
+                <div class="sc-body">
+                    <div class="sc-title" style="color:var(--teal-dark);">Certificación local — Sello MinCIT u otra entidad colombiana
+                        <img src="img/sello cct.png" alt="Sello MinCIT" style="height:26px; width:auto; object-fit:contain; vertical-align:middle;">
+                    </div>
+                    <div class="sc-desc" style="color:var(--teal-dark);">Accesible, reconocida en Colombia, buen primer paso para visibilidad con compradores de nivel regional</div>
+                </div>
+                <div class="sc-arrow" style="color:var(--teal);">▾</div>
+            </div>
+            <div class="spectrum-card" onclick="toggleSpectrumCard(this)" style="background:var(--gold-light); border-left:4px solid var(--gold);">
+                <div class="sc-num" style="color:#A07800;">4</div>
+                <div class="sc-body">
+                    <div class="sc-title" style="color:#7A6000;">Certificación internacional
+                        <img src="img/travelife.png" alt="Travelife" style="height:22px; width:auto; object-fit:contain; vertical-align:middle;">
+                        <img src="img/TourCert_Siegel_g.jpg" alt="TourCert" style="height:22px; width:auto; object-fit:contain; vertical-align:middle;">
+                        <img src="img/Rainforest-Alliance_logo.png" alt="Rainforest Alliance" style="height:22px; width:auto; object-fit:contain; vertical-align:middle;">
+                    </div>
+                    <div class="sc-desc" style="color:#7A6000;">Reconocida por compradores europeos — más costosa y exigente, pero abre catálogos que de otra forma están cerrados</div>
+                </div>
+                <div class="sc-arrow" style="color:#A07800;">▾</div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>La mayoría empieza entre el nivel 1 y el 2. El siguiente bloque introduce una herramienta de auto-evaluación gratuita para saber exactamente dónde estás — y qué prácticas ya tienes aunque no estén documentadas.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S7: PUENTE — RESPONSABILIDAD Y DOCUMENTACIÓN -->
+<section class="bg-navy" id="s7" data-section="7" style="text-align:center;">
+    <div class="slide-content" style="max-width:720px;">
+        <div class="accent-bar" style="background:var(--gold); margin:0 auto 2.5rem;"></div>
+        <p style="font-size:2.1rem; line-height:1.4; color:white; font-style:italic; margin-bottom:1.5rem;">
+            "Probablemente ya eres más responsable de lo que crees."
+        </p>
+        <p style="font-size:1.35rem; line-height:1.5; color:rgba(255,255,255,0.8);">
+            El trabajo es saber exactamente dónde estás — y documentarlo.
+        </p>
+        <div class="accent-bar" style="background:var(--gold); margin:2.5rem auto 0;"></div>
+    </div>
+</section>
+
+
+<!-- URGENCIA: MERCADO EUROPEO -->
+<section class="block-intro" id="s8" data-section="8" style="background-image:url('img/itb_2_colombia.jpg');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 1</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Por qué el mercado<br>europeo lo exige ahora</h2>
+        <p class="bi-sub">No es solo un valor — es un requisito de entrada</p>
+    </div>
+    <div class="bi-num">2</div>
+</section>
+
+
+<!-- S11: MERCADO EUROPEO — ESTADÍSTICAS -->
+<section class="bg-navy" id="s9" data-section="9">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 2 · EL MERCADO</div>
+        <h2 class="slide-title">El mercado europeo cambió de reglas</h2>
+        <div class="accent-bar"></div>
+        <div class="stats-row">
+            <div class="stat-chip">
+                <span class="stat-value">76%</span>
+                <span class="stat-label">de viajeros europeos da preferencia activa a opciones más sostenibles</span>
+                <img src="img/Booking.com_logo.svg.png" alt="Booking.com" style="height:18px; width:auto; margin-top:0.4rem; opacity:0.75; filter:brightness(0) invert(1);">
+            </div>
+            <div class="stat-chip">
+                <span class="stat-value">×3</span>
+                <span class="stat-label">el turismo de naturaleza y cultura crece 3 veces más rápido que el convencional</span>
+                <img src="img/170-1700194_unwto-world-tourism-organization-logo-[nwto-world-tourism-organization.png" alt="UNWTO" style="height:22px; width:auto; margin-top:0.4rem; opacity:0.75; filter:brightness(0) invert(1);">
+            </div>
+            <div class="stat-chip">
+                <span class="stat-value">81%</span>
+                <span class="stat-label">de compradores europeos visita tu web antes de cualquier contacto</span>
+                <img src="img/cbi logo.png" alt="CBI" style="height:20px; width:auto; margin-top:0.4rem; opacity:0.75; filter:brightness(0) invert(1);">
+            </div>
+            <div class="stat-chip">
+                <span class="stat-value">6–18</span>
+                <span class="stat-label">meses para que un especialista europeo ponga tu producto en catálogo</span>
+            </div>
+        </div>
+        <div class="callout callout-navy" style="border:1.5px solid rgba(255,255,255,0.18); margin-top:1rem;">
+            <p><strong>Slow travel:</strong> el viajero europeo de hoy busca menos destinos, más tiempo, más profundidad. Los operadores pequeños con autenticidad genuina tienen ventaja real frente a los grandes. Las prácticas responsables pasaron de diferenciador a <strong>requisito de entrada</strong>.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S12: DIRECTIVA EU + ACTORES CLAVE -->
+<section class="bg-navy" id="s10" data-section="10">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 2 · REGULACIÓN Y MERCADO</div>
+        <h2 class="slide-title">Directiva EU 2024/1760<br>y actores clave</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col" style="margin-top:0.75rem;">
+            <div>
+                <div style="color:var(--gold); font-family:'Arial',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.6rem;">La nueva ley europea</div>
+                <div style="background:rgba(255,255,255,0.08); border-radius:8px; padding:1rem 1.1rem;">
+                    <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.6rem;">
+                        <li style="font-family:'Arial',sans-serif; font-size:0.83rem; color:rgba(255,255,255,0.88); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);">→</span> Empresas europeas deben verificar que toda su <strong>cadena de valor</strong> cumple estándares de derechos humanos y medio ambiente</li>
+                        <li style="font-family:'Arial',sans-serif; font-size:0.83rem; color:rgba(255,255,255,0.88); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);">→</span> Vigencia progresiva: <strong>2027–2029</strong> — ya está en preparación</li>
+                        <li style="font-family:'Arial',sans-serif; font-size:0.83rem; color:rgba(255,255,255,0.88); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);">→</span> Alcanza a sus socios en destino — incluyendo operadores turísticos en Colombia</li>
+                        <li style="font-family:'Arial',sans-serif; font-size:0.83rem; color:rgba(255,255,255,0.88); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);">→</span> Quien puede documentar sus prácticas hoy <strong>llega con ventaja</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div style="color:var(--gold); font-family:'Arial',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.6rem;">Actores del mercado europeo</div>
+                <div class="actors-grid" style="margin-top:0; grid-template-columns:1fr 1fr; gap:0.5rem;">
+                    <div class="actor-group">
+                        <h4>🇩🇪 Alemania</h4>
+                        <ul><li>Forum Anders Reisen</li><li>ITB Berlín (marzo)</li></ul>
+                    </div>
+                    <div class="actor-group">
+                        <h4>🇬🇧 Reino Unido</h4>
+                        <ul><li>AITO</li><li>Responsible Travel</li></ul>
+                    </div>
+                    <div class="actor-group">
+                        <h4>🇫🇷 Francia</h4>
+                        <ul><li>ATR</li><li>IFTM Top Résa</li></ul>
+                    </div>
+                    <div class="actor-group">
+                        <h4>🌐 Plataformas</h4>
+                        <ul><li>Evaneos · kimkim</li><li>Ethical Travel Portal</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S16: CITA — REQUISITO DE ENTRADA -->
+<section class="bg-navy" id="s11" data-section="11" style="text-align:center; background: linear-gradient(150deg, #111827 0%, var(--navy) 100%);">
+    <div class="slide-content" style="max-width:740px;">
+        <div class="accent-bar" style="background:var(--gold); margin:0 auto 2.5rem;"></div>
+        <p style="font-size:1.85rem; line-height:1.45; color:white; font-style:italic; margin-bottom:0;">"Las prácticas responsables pasaron de ser un diferenciador</p>
+        <p style="font-size:1.85rem; line-height:1.45; color:var(--gold); font-style:italic; margin-bottom:1.5rem;">a ser un requisito de entrada."</p>
+        <p style="font-family:'Arial',sans-serif; font-size:1rem; color:rgba(255,255,255,0.72); line-height:1.55;">Quien puede demostrarlo llega. Quien no, queda fuera del catálogo.</p>
+        <div class="accent-bar" style="background:var(--gold); margin:2.5rem auto 0;"></div>
+    </div>
+</section>
+
+<!-- EJEMPLOS: COMPRADORES ESPECIALIZADOS EUROPEOS -->
+<section class="bg-light" id="s12" data-section="12">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · COMPRADORES REALES</div>
+        <h2 class="slide-title">Así habla el comprador<br>especializado europeo</h2>
+        <div class="accent-bar"></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:1rem;">
+            <!-- Travel Differently -->
+            <div style="background:white; border-radius:14px; padding:1.25rem 1.3rem; box-shadow:0 1px 8px rgba(0,0,0,0.07); border-top:4px solid var(--gold);">
+                <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.8rem;">
+                    <span style="font-size:1.3rem;">🇫🇷</span>
+                    <div>
+                        <div style="font-family:'Arial Black',Arial,sans-serif; font-size:0.95rem; font-weight:900; color:var(--navy);">Travel Differently</div>
+                        <div style="font-family:'Arial',sans-serif; font-size:0.68rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">Francia · Especialista comunitario</div>
+                    </div>
+                </div>
+                <p style="font-style:italic; font-size:0.85rem; color:var(--navy); line-height:1.5; margin-bottom:0.75rem; border-left:3px solid var(--gold); padding-left:0.7rem;">"Community-based travel — immersive experiences that align with your dreams while respecting local cultures."</p>
+                <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.4rem; margin-bottom:0.9rem;">
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Recorridos diseñados por guías locales expertos</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Grupos pequeños — máximo 12 personas</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Red de ecolodges y socios locales apasionados</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Turismo comunitario en destinos auténticos</li>
+                </ul>
+                <div style="font-family:'Arial',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:0.4rem;">🔍 Su web — clic para ampliar</div>
+                <div style="display:grid; grid-template-columns:1fr; gap:0.4rem;">
+                    <img src="img/traveldifferently_philosophy.png" alt="Travel Differently — Philosophy" class="screenshot-thumb" onclick="openLightbox('img/traveldifferently_philosophy.png')">
+                </div>
+            </div>
+            <!-- Natucate -->
+            <div style="background:white; border-radius:14px; padding:1.25rem 1.3rem; box-shadow:0 1px 8px rgba(0,0,0,0.07); border-top:4px solid var(--teal);">
+                <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.8rem;">
+                    <span style="font-size:1.3rem;">🇩🇪</span>
+                    <div>
+                        <div style="font-family:'Arial Black',Arial,sans-serif; font-size:0.95rem; font-weight:900; color:var(--navy);">Natucate</div>
+                        <div style="font-family:'Arial',sans-serif; font-size:0.68rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">Alemania · Especialista naturaleza</div>
+                    </div>
+                </div>
+                <p style="font-style:italic; font-size:0.85rem; color:var(--navy); line-height:1.5; margin-bottom:0.75rem; border-left:3px solid var(--teal); padding-left:0.7rem;">"Conscious travel — far from mass tourism, in harmony with people and projects that make a difference."</p>
+                <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.4rem; margin-bottom:0.9rem;">
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">→</span> Respeto a la naturaleza — sin turismo masivo ni interacciones irresponsables</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">→</span> Involucración local: comunidades, guías, economía local</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">→</span> Educación y consciencia — cada experiencia enseña algo</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text); padding-left:1.1rem; position:relative;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">→</span> Transparencia e impacto medible en todas las operaciones</li>
+                </ul>
+                <div style="font-family:'Arial',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:0.4rem;">🔍 Su web — clic para ampliar</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem;">
+                    <img src="img/natucate_philosophy.png" alt="Natucate — Philosophy" class="screenshot-thumb" onclick="openLightbox('img/natucate_philosophy.png')">
+                    <img src="img/natucate_mission.png" alt="Natucate — Mission" class="screenshot-thumb" onclick="openLightbox('img/natucate_mission.png')">
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>Dos ejemplos entre decenas de especializados en Francia, Alemania, UK, Países Bajos y más. Todos buscan operadores que hablen su mismo idioma responsable — con evidencia. <strong>Tu socio natural ya existe.</strong></p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- S8: CÓMO FUNCIONA RTA -->
+<section class="bg-white" id="s13" data-section="13">
+    <div class="slide-content">
+        <div class="slide-label">RTA · CÓMO FUNCIONA</div>
+        <h2 class="slide-title">La evaluación que estructura estas 16 prácticas</h2>
+        <div class="accent-bar"></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.1rem; margin-top:0.75rem;">
+            <div style="background:var(--bg); border-radius:12px; padding:1.25rem 1.2rem; border-top:3px solid var(--teal);">
+                <div style="font-size:1.6rem; margin-bottom:0.5rem;">🧳</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.4rem;">El viajero evalúa</div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;">Después del tour, califica estas mismas 16 prácticas del 1 al 5. Sus respuestas construyen el perfil público del operador.</p>
+            </div>
+            <div style="background:var(--bg); border-radius:12px; padding:1.25rem 1.2rem; border-top:3px solid var(--navy);">
+                <div style="font-size:1.6rem; margin-bottom:0.5rem;">🏪</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--navy); margin-bottom:0.4rem;">El operador se auto-evalúa</div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;">Antes de salir al mercado, puntúa sus propias prácticas del 1 al 5. Sabe exactamente dónde está — y qué puede mejorar de forma concreta.</p>
+            </div>
+            <div style="background:var(--teal-light); border-radius:12px; padding:1.25rem 1.2rem; border-top:3px solid var(--gold);">
+                <div style="font-size:1.6rem; margin-bottom:0.5rem;">🌐</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#7A6000; margin-bottom:0.4rem;">La visión</div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;">Una plataforma donde el viajero europeo puede encontrar operadores por criterio responsable — no por precio ni por destino genérico.</p>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1.1rem; font-size:0.875rem;">
+            <p>La plataforma está en construcción — pero las preguntas que evalúa son exactamente las que ya hace un comprador europeo. <strong>Estas 16 prácticas son tu vocabulario comercial.</strong></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S9: RTA CAT 1 — COMUNIDADES -->
+<section class="bg-light" id="s14" data-section="14">
+    <div class="slide-content">
+        <div class="slide-label">RTA · CATEGORÍA 1 DE 4</div>
+        <div class="indicator-category-header">
+            <div class="category-icon">🤝</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.85rem; margin:0;">Involucramiento de la Comunidad Local</h2>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">¿Tienen las comunidades una voz real en cómo opera el turismo?</p>
+            </div>
+        </div>
+        <div class="indicator-grid">
+            <div class="indicator-card expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">01</div>
+                <div class="indicator-title">Diseño del recorrido</div>
+                <div class="indicator-quote">"Las comunidades ayudan a dar forma a la experiencia — no solo la reciben"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No fue necesario consultar a la comunidad para desarrollar este recorrido.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Solo se consultó a autoridades o propietarios de negocios donde para el tour.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Algunos actores identificados y consultados — contribuyeron parcialmente al diseño.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Proceso participativo con líderes comunitarios — co-diseñaron juntos el recorrido.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Una organización local diseña y/o gestiona el tour con nosotros.</span></div>
+                    <div class="pitch-phrase">"No diseñamos tours <em>sobre</em> comunidades — las comunidades diseñan tours <em>con</em> nosotros."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span></div>
+                </div>
+            </div>
+            <div class="indicator-card expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">02</div>
+                <div class="indicator-title">Toma de decisiones</div>
+                <div class="indicator-quote">"Las comunidades tienen voz real sobre accesos, límites de visitas y distribución de beneficios"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No fue necesario ningún acuerdo para operar el tour.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Solo permiso básico de acceso al área.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Acuerdo formal con líderes comunitarios o administración local.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Acuerdo formal con stakeholders principales, incluyendo grupos marginalizados.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Acuerdo formal con organización(es) locales con revisión anual establecida.</span></div>
+                    <div class="pitch-phrase">"Nuestras comunidades deciden qué se muestra, cuántas personas entran y qué queda privado."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span></div>
+                </div>
+            </div>
+            <div class="indicator-card expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">03</div>
+                <div class="indicator-title">Beneficios a la población</div>
+                <div class="indicator-quote">"La comunidad en su conjunto — no solo unos pocos — se beneficia del gasto turístico"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No sabemos quién se beneficia más allá de los negocios directos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Beneficia principalmente a líderes locales / pagamos impuesto de entrada.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Locales comparten tradiciones y conocimiento — reciben pago justo.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Animamos a personas no vinculadas al turismo a desarrollar actividades para el tour.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Investigamos, identificamos y formamos a personas locales para participar en el tour.</span></div>
+                    <div class="pitch-phrase">"Podemos decirte exactamente qué % del gasto de tu cliente se queda en el territorio."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span><span class="biz-type">🍽️ Restaurante</span></div>
+                </div>
+            </div>
+            <div class="indicator-card expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">04</div>
+                <div class="indicator-title">Apoyo a proyectos sociales</div>
+                <div class="indicator-quote">"El operador contribuye a causas locales más allá del turismo mismo"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No apoyamos proyectos locales.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Donamos a causas sin relación directa con el área del tour.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Incluimos visita a proyecto local en el tour / animamos donaciones de viajeros.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Apoyamos regularmente proyectos sociales o ambientales específicos del área.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">% del tour a fondo comunitario gestionado y auditado — reportamos resultados.</span></div>
+                    <div class="pitch-phrase">"Parte de cada reserva financia [proyecto concreto]. Algo que tu cliente puede ver, sentir y contar."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span></div>
+                </div>
+            </div>
+        </div>
+        <p class="berta-source">Fuente: RTA · be-rta.org/indicators</p>
+    </div>
+</section>
+
+
+<!-- S10: RTA CAT 2 — SATISFACCIÓN -->
+<section class="bg-white" id="s15" data-section="15">
+    <div class="slide-content">
+        <div class="slide-label">RTA · CATEGORÍA 2 DE 4</div>
+        <div class="indicator-category-header">
+            <div class="category-icon">⭐</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.85rem; margin:0;">Satisfacción de Residentes y Visitantes</h2>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">¿La experiencia es genuinamente buena — para todos?</p>
+            </div>
+        </div>
+        <div class="indicator-grid">
+            <div class="indicator-card gold expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">05</div>
+                <div class="indicator-title">Satisfacción del visitante</div>
+                <div class="indicator-quote">"El recorrido cumple o supera genuinamente las expectativas del viajero"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">Demanda decreciente — menos del 60% de clientes satisfechos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Entre 60% y 70% de clientes satisfechos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Más del 70% de clientes satisfechos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Más del 80% de clientes satisfechos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Más del 90% — amplia mayoría con valoraciones positivas en plataformas online.</span></div>
+                    <div class="pitch-phrase">"Más del 85% nos califican 5/5. Tenemos los datos y las reseñas para demostrarlo."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span><span class="biz-type">🍽️ Restaurante</span></div>
+                </div>
+            </div>
+            <div class="indicator-card gold expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">06</div>
+                <div class="indicator-title">Nivel de perturbación</div>
+                <div class="indicator-quote">"El turismo no perturba a los residentes ni a los ecosistemas"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No monitoreamos posibles disturbios que generamos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">No somos conscientes de disturbios / no nos sentimos responsables.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Participantes limitados — reconsideraríamos si el tour perturbara.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Tour co-diseñado para no alterar la vida cotidiana; número de participantes controlado.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">La cohesión comunitaria se ha reforzado desde que empezamos el tour.</span></div>
+                    <div class="pitch-phrase">"El límite de visitas es parte del producto — diseñado para no alterar la vida de quien vive aquí."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span></div>
+                </div>
+            </div>
+            <div class="indicator-card gold expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">07</div>
+                <div class="indicator-title">Accesibilidad</div>
+                <div class="indicator-quote">"El producto está diseñado para incluir una amplia variedad de visitantes"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No accesible para personas con discapacidad ni niños pequeños.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Accesible para niños, pero no para personas con discapacidad.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Accesible para discapacidades menores — especificado en la descripción.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Desarrollando soluciones con asociaciones de discapacidad y herramientas adaptadas.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Guías especialmente entrenados — tour adaptado a la mayoría de formas de discapacidad.</span></div>
+                    <div class="pitch-phrase">"El turismo accesible es un mercado europeo grande y poco cubierto. Una ventana real de diferenciación."</div>
+                    <div class="biz-types"><span class="biz-type">🏨 Lodge</span><span class="biz-type">🧭 Tour op</span></div>
+                </div>
+            </div>
+            <div class="indicator-card gold expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">08</div>
+                <div class="indicator-title">Estacionalidad</div>
+                <div class="indicator-quote">"Los visitantes se distribuyen a lo largo del año — no solo en temporada alta"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">Solo disponible en ciertos períodos (4 meses/año o menos).</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Disponible todo el año según condiciones climáticas.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Disponible 6–8 meses con fechas específicas, alternativas planificadas.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Todo el año con mínimo de participantes y alternativas para mal tiempo.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Todo el año, sin mínimo de participantes, siempre con alternativas.</span></div>
+                    <div class="pitch-phrase">"Operamos 11 meses del año — menos presión de precios, viajeros más comprometidos, relación más estable."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span><span class="biz-type">🍽️ Restaurante</span></div>
+                </div>
+            </div>
+        </div>
+        <p class="berta-source">Fuente: RTA · be-rta.org/indicators</p>
+    </div>
+</section>
+
+
+<!-- S11: RTA CAT 3 — HUELLA ECONÓMICA -->
+<section class="bg-light" id="s16" data-section="16">
+    <div class="slide-content">
+        <div class="slide-label">RTA · CATEGORÍA 3 DE 4</div>
+        <div class="indicator-category-header">
+            <div class="category-icon">💰</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.85rem; margin:0;">Huella Económica Local</h2>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">¿El dinero del turismo se queda en la comunidad?</p>
+            </div>
+        </div>
+        <div class="indicator-grid">
+            <div class="indicator-card navy expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">09</div>
+                <div class="indicator-title">Condiciones laborales</div>
+                <div class="indicator-quote">"Los trabajadores locales reciben salarios justos, condiciones seguras y buen trato"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">Guías contratados por día — no gestionamos cómo tratan los subcontratistas a su personal.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Guía con asignaciones regulares pero sin seguro de salud ni contrato formal.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Personal local con salarios justos — política de RRHH que respeta la legislación.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Contratos justos con todos los subcontratistas. Guías con formación regular incluida.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Formamos a personas locales para convertirse en guías adicionales del tour.</span></div>
+                    <div class="pitch-phrase">"Nuestros guías tienen contrato, seguro y formación continua — eso se nota en la calidad y en las reseñas."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span></div>
+                </div>
+            </div>
+            <div class="indicator-card navy expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">10</div>
+                <div class="indicator-title">Medios de vida locales</div>
+                <div class="indicator-quote">"El turismo mejora los medios de vida de la comunidad de manera medible y a largo plazo"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No sabemos / el turismo ha creado problemas pero no somos responsables.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">No podemos medirlo.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Personal local con medios de vida mejorados / socios con más ingresos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Nos reportan mejoras en condiciones de vida / actividades tradicionales revividas.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Monitoreamos: medios de vida mejorados significativamente, incluyendo personas marginalizadas.</span></div>
+                    <div class="pitch-phrase">"Podemos nombrarte tres familias del territorio cuyo ingreso principal vino de nuestra operación este año."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span></div>
+                </div>
+            </div>
+            <div class="indicator-card navy expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">11</div>
+                <div class="indicator-title">Proveedores locales</div>
+                <div class="indicator-quote">"Empresas locales proveen el alojamiento, la comida y el transporte — no cadenas externas"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No usamos servicios locales — ninguno cumple nuestros estándares.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Solo un proveedor local (restaurante o transporte).</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Al menos dos proveedores locales (comida + transporte, guías, etc.).</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Contratos con proveedores seleccionados por buenas prácticas — 30%+ de beneficios les llega.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Monitoreamos. Org. local responsable donde 50%+ de beneficios queda en el territorio.</span></div>
+                    <div class="pitch-phrase">"No usamos cadenas. El comprador europeo necesita documentar exactamente esto para su catálogo."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span></div>
+                </div>
+            </div>
+            <div class="indicator-card navy expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">12</div>
+                <div class="indicator-title">Desarrollo económico sostenible</div>
+                <div class="indicator-quote">"El turismo contribuye a la salud económica del destino a largo plazo — no solo al corto"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No llevamos clientes a negocios locales.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Recomendamos o llevamos a tiendas locales.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Llevamos a negocios/sitios seleccionados por buenas prácticas, souvenirs eco-locales.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Incluimos actividades tradicionales en el tour (artesanía, cocina, agricultura, artes).</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Monitoreamos. Tour incluye experiencia práctica / ayudamos a emprendedores locales a crear servicios responsables.</span></div>
+                    <div class="pitch-phrase">"No solo traemos turistas — co-financiamos mejoras que hacen el destino más atractivo a largo plazo."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span></div>
+                </div>
+            </div>
+        </div>
+        <p class="berta-source">Fuente: RTA · be-rta.org/indicators</p>
+    </div>
+</section>
+
+
+<!-- S12: RTA CAT 4 — PRESERVACIÓN -->
+<section class="bg-white" id="s17" data-section="17">
+    <div class="slide-content">
+        <div class="slide-label">RTA · CATEGORÍA 4 DE 4</div>
+        <div class="indicator-category-header">
+            <div class="category-icon">🌿</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.85rem; margin:0;">Preservación Cultural y Ambiental</h2>
+                <p style="font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">¿El turismo protege lo que hace único al destino?</p>
+            </div>
+        </div>
+        <div class="indicator-grid">
+            <div class="indicator-card green expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">13</div>
+                <div class="indicator-title">Conciencia ambiental</div>
+                <div class="indicator-quote">"Los visitantes se van mejor informados sobre la ecología local que cuando llegaron"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No es nuestra responsabilidad dar formación ambiental.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Conscientes de problemas ambientales pero no sabemos cómo mejorarlos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Instrucciones genéricas de comportamiento ambiental a clientes y guías.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Formaciones regulares sobre protección ambiental para guías y personal.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Formación a proveedores locales y comunidades. Contribuimos a iniciativas locales de sensibilización.</span></div>
+                    <div class="pitch-phrase">"Nuestros guías son naturalistas formados — el viajero llega curioso y se va experto. Eso genera las reseñas más largas."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op (naturaleza)</span></div>
+                </div>
+            </div>
+            <div class="indicator-card green expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">14</div>
+                <div class="indicator-title">Acciones ambientales</div>
+                <div class="indicator-quote">"Se toman medidas concretas y medibles para reducir el impacto ecológico de la operación"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">Las autoridades son responsables — no hemos tomado acciones propias.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Conscientes de problemas ambientales pero no sabemos cómo mejorarlos.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Reducimos plásticos, vehículos recientes, limpiezas periódicas, respetamos áreas protegidas.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Botellas recargables, política bienestar animal, vehículos eco, socios eco-seleccionados.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Monitoreamos resultados. Acciones colectivas con locales para residuos, biodiversidad y sensibilización.</span></div>
+                    <div class="pitch-phrase">"Cinco acciones medibles este año para reducir impacto. El comprador europeo cada vez más lo pide por escrito."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span><span class="biz-type">🍽️ Restaurante</span></div>
+                </div>
+            </div>
+            <div class="indicator-card green expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">15</div>
+                <div class="indicator-title">Conciencia cultural</div>
+                <div class="indicator-quote">"Los visitantes desarrollan respeto genuino por la cultura local a través de la experiencia"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">No ofrecemos sensibilización o formación cultural específica.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Guías dan información básica de costumbres locales cuando es necesario.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Instrucciones genéricas de cultura a viajeros — guías pueden explicar y corregir.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Guías entrenados para introducir cultura/patrimonio local, o guía local especializado.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Tour incluye encuentro con organizaciones turísticas locales o expertos temáticos del destino.</span></div>
+                    <div class="pitch-phrase">"El patrimonio cultural no es decorado — es el core del producto. El viajero que lo vive no lo olvida."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🍽️ Restaurante</span></div>
+                </div>
+            </div>
+            <div class="indicator-card green expandable" onclick="this.classList.toggle('open')">
+                <div class="indicator-num">16</div>
+                <div class="indicator-title">Calidad de la experiencia</div>
+                <div class="indicator-quote">"La sostenibilidad y la calidad se refuerzan mutuamente — no son categorías opuestas"</div>
+                <div class="expand-hint">Escala + argumento comercial</div>
+                <div class="scale-panel">
+                    <div class="scale-label">Autoevaluación del operador</div>
+                    <div class="scale-row"><span class="scale-dot d1">1</span><span class="scale-desc">Recibimos quejas regulares — en algunos casos hemos tenido que reembolsar.</span></div>
+                    <div class="scale-row"><span class="scale-dot d2">2</span><span class="scale-desc">Feedback mixto — varios aspectos necesitan mejora significativa.</span></div>
+                    <div class="scale-row"><span class="scale-dot d3">3</span><span class="scale-desc">Mayoría de clientes satisfecha — trabajamos en mejoras específicas.</span></div>
+                    <div class="scale-row"><span class="scale-dot d4">4</span><span class="scale-desc">Feedback consistentemente positivo — las reseñas lo reflejan con regularidad.</span></div>
+                    <div class="scale-row"><span class="scale-dot d5">5</span><span class="scale-desc">Reconocidos por calidad excepcional — sostenibilidad y experiencia se refuerzan.</span></div>
+                    <div class="pitch-phrase">"Los mejores especialistas europeos buscan exactamente esto: que lo responsable sea también lo más memorable."</div>
+                    <div class="biz-types"><span class="biz-type">🧭 Tour op</span><span class="biz-type">🏨 Lodge</span><span class="biz-type">🍽️ Restaurante</span></div>
+                </div>
+            </div>
+        </div>
+        <p class="berta-source">Fuente: RTA · be-rta.org/indicators</p>
+    </div>
+</section>
+
+
+<!-- S9: REFLEXIÓN RTA -->
+<section class="interactive-slide" id="s18" data-section="18">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">💬 Reflexión · 2 min</div>
+        <p class="interactive-question">"¿Cuáles de estas 16 prácticas ya realizas — aunque sea de forma informal?"</p>
+        <span class="chat-icon">💬</span>
+        <p class="interactive-instruction">Responde en el chat · Un número o una categoría · No hace falta ser exacto</p>
+        <p class="interactive-instruction" style="opacity:0.7; margin-top:0.5rem;">Probablemente ya eres más responsable de lo que crees — el trabajo es documentarlo y comunicarlo</p>
+        <div class="cert-row" style="margin-top:2rem;">
+            <span class="cert-pill">📋 Sello MinCIT</span>
+            <span class="cert-pill">🌿 TourCert</span>
+            <span class="cert-pill">✈️ Travelife</span>
+            <span class="cert-pill">🌎 Rainforest Alliance</span>
+        </div>
+        <p class="interactive-instruction" style="opacity:0.55; margin-top:0.75rem; font-size:0.78rem;">Certificaciones disponibles — el siguiente paso cuando quieras ir más lejos · Tarea: auto-evaluación completa en be-rta.org/indicators</p>
+    </div>
+</section>
+
+
+<!-- S17: DIVIDER BLOQUE 3 -->
+<section class="block-intro" id="s19" data-section="19" style="background-image:url('img/itb_1.jpg');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 2</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">¿A quién<br>le vendes?</h2>
+        <p class="bi-sub">Los tres perfiles europeos — y cuál es tu interlocutor natural</p>
+    </div>
+    <div class="bi-num">3</div>
+</section>
+
+
+<!-- S14: B2B VS B2C -->
+<section class="bg-white" id="s20" data-section="20">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · DOS RUTAS</div>
+        <h2 class="slide-title">Dos rutas al mercado europeo</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Cada ruta tiene un comprador distinto — y requiere un mensaje distinto.</p>
+        <div class="route-diagram">
+            <div class="route-origin">
+                <span class="origin-icon">🏔️</span>
+                <span class="origin-label">TÚ</span>
+            </div>
+            <div class="route-paths">
+                <div class="route-path b2c">
+                    <div class="route-type">B2C<br>Ruta directa</div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-steps">
+                        <span class="route-step">Tu web</span>
+                        <span class="route-step">OTAs (Viator, kimkim, Evaneos)</span>
+                    </div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-end">Viajero FIT</div>
+                </div>
+                <div class="route-path b2b">
+                    <div class="route-type">B2B<br>Ruta indirecta</div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-steps">
+                        <span class="route-step">Tour Operador especialista</span>
+                        <span class="route-step">Agencia receptiva</span>
+                    </div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-end">Grupo / Programa</div>
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="font-size:0.875rem; margin-top:0.85rem;">
+            <p>La mayoría de los participantes en este programa están mejor posicionados para la <strong>ruta B2B</strong> — relaciones más estables, ciclos más largos, y el comprador ayuda a llenar el producto. El Bloque 4 de hoy se orienta a ese perfil.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S15: PERFIL 1 — ESPECIALISTA -->
+<section class="bg-light" id="s21" data-section="21">
+    <div class="slide-content profile-slide">
+        <div class="slide-label">BLOQUE 3 · PERFIL 1 DE 3</div>
+        <div class="profile-header-bar">
+            <div class="profile-big-icon">🌿</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.9rem; margin:0;">Especialista en turismo responsable</h2>
+                <div class="profile-tags" style="margin-top:0.5rem;">
+                    <span class="profile-tag">Ciclo 6–18 meses</span>
+                    <span class="profile-tag">Relaciones duraderas</span>
+                    <span class="profile-tag gold">Alta disposición a pagar</span>
+                </div>
+            </div>
+        </div>
+        <div class="profile-body">
+            <div class="profile-col">
+                <h4>Qué busca en ti</h4>
+                <ul>
+                    <li>Impacto comunitario demostrable — con cifras o historia específica</li>
+                    <li>Coherencia entre lo que dices y lo que haces</li>
+                    <li>Nicho claro que encaje en su catálogo</li>
+                    <li>Fiabilidad operativa + algún idioma europeo</li>
+                </ul>
+            </div>
+            <div class="profile-col">
+                <h4>Lo que cierra el acuerdo</h4>
+                <ul>
+                    <li>Una historia específica y verificable (no genérica)</li>
+                    <li>Testimonio de operador europeo</li>
+                    <li>Propuesta clara de colaboración</li>
+                    <li>Web con sección B2B en inglés</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-top:0.85rem; margin-bottom:0.4rem;">Ejemplos</p>
+            <div class="org-badges">
+                <img src="img/ATR-MEMBRE-COULEUR.png" alt="ATR" class="logo-badge" title="ATR — Agir pour un Tourisme Responsable (FR)">
+                <img src="img/AITO_TheSpecialistTravelAssoc-SQUARE.jpg" alt="AITO" class="logo-badge" title="AITO — The Specialist Travel Association (UK)">
+                <img src="img/forum anders reisen logo.png" alt="Forum Anders Reisen" class="logo-badge" title="Forum Anders Reisen (DE)">
+                <img src="img/responsible travel logo.png" alt="Responsible Travel" class="logo-badge" title="Responsible Travel">
+                <img src="img/lokal travel logo.jpeg" alt="Lokal Travel" class="logo-badge" title="Lokal Travel">
+                <img src="img/ethical travel portal logo.jpeg" alt="Ethical Travel Portal" class="logo-badge" title="Ethical Travel Portal">
+            </div>
+        </div>
+        <div class="closes-bar"><strong>El más exigente — y el más leal cuando te elige.</strong> Una vez en su catálogo, la relación puede durar años.</div>
+    </div>
+</section>
+
+
+<!-- S16: PERFIL 2 — GENERALISTA -->
+<section class="bg-white" id="s22" data-section="22">
+    <div class="slide-content profile-slide">
+        <div class="slide-label">BLOQUE 3 · PERFIL 2 DE 3</div>
+        <div class="profile-header-bar">
+            <div class="profile-big-icon">🌍</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.9rem; margin:0;">Tour operador generalista con línea responsable</h2>
+                <div class="profile-tags" style="margin-top:0.5rem;">
+                    <span class="profile-tag">Ciclo 3–9 meses</span>
+                    <span class="profile-tag">Volumen medio</span>
+                    <span class="profile-tag navy">Operativamente exigente</span>
+                </div>
+            </div>
+        </div>
+        <div class="profile-body">
+            <div class="profile-col">
+                <h4>Qué busca en ti</h4>
+                <ul>
+                    <li>Producto fiable — que también sea responsable</li>
+                    <li>Escalabilidad: puede enviarte grupos regulares</li>
+                    <li>Materiales listos para catálogo (fotos, ficha en inglés)</li>
+                    <li>Precios netos claros con estructura de márgenes</li>
+                </ul>
+            </div>
+            <div class="profile-col">
+                <h4>Lo que cierra el acuerdo</h4>
+                <ul>
+                    <li>Propuesta B2B con tarifas netas</li>
+                    <li>Capacidad de confirmar en 48–72 horas</li>
+                    <li>Historial con al menos un operador europeo</li>
+                    <li>Ficha de producto lista para insertar</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-top:0.85rem; margin-bottom:0.4rem;">Ejemplos</p>
+            <div class="org-badges">
+                <img src="img/evaneos logo.png" alt="Evaneos" class="logo-badge" title="Evaneos">
+                <img src="img/kimkim logo.png" alt="kimkim" class="logo-badge" title="kimkim">
+                <img src="img/djoser logo.png" alt="Djoser" class="logo-badge" title="Djoser (NL)">
+                <img src="img/Sawadee-logo.jpg" alt="Sawadee" class="logo-badge" title="Sawadee (NL)">
+                <img src="img/TUI_Logo_2016.svg.png" alt="TUI" class="logo-badge" title="TUI">
+                <span class="org-badge" style="font-size:0.68rem;">TOs medianos FR/BE/NL</span>
+            </div>
+        </div>
+        <div class="closes-bar"><strong>Escala + criterio.</strong> Necesitan que el producto funcione operativamente — la responsabilidad es el diferenciador, no el único criterio.</div>
+    </div>
+</section>
+
+
+<!-- S17: PERFIL 3 — FIT DESIGNER -->
+<section class="bg-light" id="s23" data-section="23">
+    <div class="slide-content profile-slide">
+        <div class="slide-label">BLOQUE 3 · PERFIL 3 DE 3</div>
+        <div class="profile-header-bar">
+            <div class="profile-big-icon">🧭</div>
+            <div>
+                <h2 class="slide-title" style="font-size:1.9rem; margin:0;">FIT Travel Designer</h2>
+                <div class="profile-tags" style="margin-top:0.5rem;">
+                    <span class="profile-tag">Ciclo 1–6 meses</span>
+                    <span class="profile-tag gold">Alto valor por viajero</span>
+                    <span class="profile-tag">Exclusividad</span>
+                </div>
+            </div>
+        </div>
+        <div class="profile-body">
+            <div class="profile-col">
+                <h4>Qué busca en ti</h4>
+                <ul>
+                    <li>Exclusividad — experiencias que no están en otros catálogos</li>
+                    <li>Acceso a lugares y personas únicas</li>
+                    <li>Flexibilidad para personalizar cada itinerario</li>
+                    <li>Historia contable: su cliente quiere "haber descubierto algo"</li>
+                </ul>
+            </div>
+            <div class="profile-col">
+                <h4>Lo que cierra el acuerdo</h4>
+                <ul>
+                    <li>Respuesta en 24h con conocimiento real del territorio</li>
+                    <li>Propuesta curada — no un menú de opciones</li>
+                    <li>Referencias de viajeros europeos anteriores</li>
+                    <li>No aparecer en catálogos masivos</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-top:0.85rem; margin-bottom:0.4rem;">Ejemplos</p>
+            <div class="org-badges">
+                <img src="img/much better adventures logo.png" alt="Much Better Adventures" class="logo-badge" title="Much Better Adventures (UK)">
+                <img src="img/journey latin america logo.png" alt="Journey Latin America" class="logo-badge" title="Journey Latin America">
+                <img src="img/andean trails logo.webp" alt="Andean Trails" class="logo-badge" title="Andean Trails">
+                <img src="img/Traveling_Spoon_logo.png" alt="Traveling Spoon" class="logo-badge" title="Traveling Spoon">
+                <span class="org-badge" style="font-size:0.68rem;">Consultores independientes</span>
+            </div>
+        </div>
+        <div class="closes-bar"><strong>El curador independiente.</strong> Valora lo que nadie más tiene — y trabaja para clientes que también lo valoran.</div>
+    </div>
+</section>
+
+
+<!-- S18: INTERACTIVE — ¿CON QUIÉN HABLAS? -->
+<section class="interactive-slide" id="s24" data-section="24">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">💬 Discusión guiada · 3 min</div>
+        <p class="interactive-question">"¿Con cuál de estos perfiles encaja mejor tu producto — o todavía no tienes claro?"</p>
+        <div style="display:flex; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin:1.75rem 0;">
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">🌿 Especialista responsable</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">🌍 Tour Operador generalista</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">🧭 FIT Travel Designer</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">🤷 Todavía no tengo claro</div>
+        </div>
+        <p class="interactive-instruction">Responde en el chat · Una línea sobre por qué</p>
+    </div>
+</section>
+
+
+<!-- S23: DIVIDER BLOQUE 4 -->
+<section class="block-intro" id="s25" data-section="25" style="background-image:url('img/colombia_bird_choco.avif');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 3</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Tu nicho<br>y tu mensaje en una frase</h2>
+        <p class="bi-sub">De "somos una empresa responsable" a "somos los mejores para X"</p>
+    </div>
+    <div class="bi-num">4</div>
+</section>
+
+
+<!-- S20: EL ARGUMENTO PARA EL NICHO -->
+<section class="bg-white" id="s26" data-section="26">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · EL ARGUMENTO</div>
+        <h2 class="slide-title">Por qué el nicho<br>es una ventaja, no una limitación</h2>
+        <div class="accent-bar"></div>
+        <div class="quote-block">
+            <p>"El comprador europeo no busca 'podemos hacer de todo' — busca el operador que hace <strong>una cosa muy bien</strong>."</p>
+        </div>
+        <div class="two-col" style="margin-top:0.85rem; gap:1rem;">
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">El nicho te hace más fácil de encontrar</div>
+                <ul>
+                    <li>Apareces en búsquedas específicas — no en el ruido general</li>
+                    <li>El comprador puede decirte sí o no inmediatamente</li>
+                    <li>Eres memorable: "los de birdwatching en Antioquia"</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">El nicho construye confianza más rápido</div>
+                <ul>
+                    <li>Profundidad = credibilidad para el comprador europeo</li>
+                    <li>Tu historia responsable encaja con un perfil específico de viajero</li>
+                    <li>El ciclo de 6–18 meses se acorta cuando el encaje es claro</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>CBI identifica <strong>27 nichos de turismo responsable</strong> con mercado europeo activo. Cada uno tiene una página de market potential que describe lo que el comprador busca. En el taller de hoy vas a identificar el tuyo.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S21: CBI — CÓMO LEE EL MERCADO EL COMPRADOR -->
+<section class="bg-light" id="s27" data-section="27">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · HERRAMIENTA CBI</div>
+        <h2 class="slide-title">Así lee el mercado<br>el comprador europeo</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">CBI (Centre for the Promotion of Imports) publica guías de mercado por nicho — escritas para compradores europeos.</p>
+        <div class="two-col" style="margin-top:0.5rem; gap:1rem;">
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">Qué contiene cada página CBI</div>
+                <ul>
+                    <li>Tamaño del mercado y tendencias actuales</li>
+                    <li>Lo que los compradores buscan en ese nicho</li>
+                    <li>Requisitos de entrada al mercado europeo</li>
+                    <li>Canales recomendados para ese nicho</li>
+                    <li>Ejemplos de operadores exitosos</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">Ejemplo: Adventure Tourism</div>
+                <ul>
+                    <li>Mercado EU: €17.5B · crecimiento acelerado post-COVID</li>
+                    <li>Compradores buscan: guías locales certificados, grupos pequeños, impacto mínimo</li>
+                    <li>Canales clave: ATTA, Much Better Adventures, agencias UK especializadas</li>
+                    <li>Entrada: certificación de guía, web en inglés, perfil en plataformas ATTA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-gold" style="margin-top:1rem;">
+            <p>🔗 <strong>cbi.eu/market-information/tourism</strong> → elige tu nicho → lee la sección "What requirements should tourism services comply with?" — eso es lo que el comprador espera ver en ti.</p>
+            <p style="margin-top:0.6rem; font-size:0.82rem;">🌐 <strong>En español:</strong> <a href="https://www-cbi-eu.translate.goog/market-information/tourism/adventure-tourism?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp" target="_blank" style="color:var(--navy); text-decoration:underline; font-weight:700;">Ejemplo: Adventure Tourism en español</a> — el quiz genera el link directo para tu nicho</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S24: TU NICHO — IDENTIFICACIÓN (TAGS DE REFERENCIA) -->
+<section class="bg-white" id="s28" data-section="28">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · PUNTO DE PARTIDA</div>
+        <h2 class="slide-title">¿En qué nicho(s) operas?</h2>
+        <div class="accent-bar"></div>
+        <div class="niche-selector">
+            <p class="niche-instructions">¿En cuál de estos nichos opera tu empresa? Selecciona 1–2 que mejor describan lo que ofreces — luego lo confirmamos con el quiz.</p>
+            <div class="niche-cloud" id="nicheCloud">
+                <span class="niche-tag" onclick="toggleNiche(this)">🏔️ Turismo de aventura</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">♿ Turismo accesible</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🌾 Agroturismo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🐦 Avistamiento de aves</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🤝 Turismo comunitario</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🎭 Turismo cultural</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🚴 Cicloturismo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🤿 Turismo de buceo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🌿 Ecoturismo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🎣 Turismo de pesca</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🍽️ Turismo gastronómico</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🎒 Gap Year / Año sabático</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">💍 Turismo de luna de miel</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">✨ Turismo de lujo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🌳 Turismo de naturaleza</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🕌 Turismo religioso</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">⛷️ Turismo deportivo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🏖️ Sol y playa</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🏙️ Experiencias urbanas</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🎓 Voluntariado y educativo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🥾 Senderismo</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🌊 Deportes acuáticos</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🧘 Turismo de bienestar</span>
+                <span class="niche-tag" onclick="toggleNiche(this)">🦁 Vida silvestre</span>
+            </div>
+            <p class="niche-count">Seleccionados: <strong id="nicheCount">0</strong> · Comparte en el chat tu nicho principal — una palabra es suficiente</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S25: QUIZ DE NICHO -->
+<section class="bg-navy" id="s29" data-section="29">
+    <div class="slide-content">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:start;">
+            <!-- Left: the quiz -->
+            <div style="text-align:center;">
+                <div class="interactive-badge" style="margin-bottom:0.9rem;">🎯 3–4 minutos · individual</div>
+                <h2 class="slide-title" style="font-size:1.9rem; text-align:left;">Identifica tu nicho<br>responsable</h2>
+                <div class="accent-bar" style="margin:0.9rem 0 1rem;"></div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.8); line-height:1.6; text-align:left; margin-bottom:1.1rem;">Selecciona tu nicho principal (y secundario si aplica), luego 4 preguntas sobre tu ángulo responsable. Al final: tu perfil de nicho y el link directo a tu market potential CBI.</p>
+                <div style="background:rgba(255,255,255,0.07); border:2px solid var(--gold); border-radius:12px; padding:0.9rem 1.5rem; text-align:center;">
+                    <div style="font-family:'Arial',sans-serif; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); margin-bottom:0.3rem;">El facilitador comparte el link en el chat</div>
+                    <a href="https://tourismcommons.org/colombia/quiz-nicho.html" target="_blank" style="font-family:'Arial Black',Arial,sans-serif; font-size:0.95rem; font-weight:900; color:white; text-decoration:none; word-break:break-all;">tourismcommons.org/colombia/quiz-nicho.html</a>
+                    <div style="font-family:'Arial',sans-serif; font-size:0.68rem; color:rgba(255,255,255,0.4); margin-top:0.2rem;">funciona en móvil</div>
+                </div>
+            </div>
+            <!-- Right: example result -->
+            <div style="background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.14); border-radius:14px; padding:1.1rem 1.25rem;">
+                <div style="font-family:'Arial',sans-serif; font-size:0.63rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); margin-bottom:0.9rem;">Ejemplo de resultado</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.65rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.15rem;">Tu nicho principal</div>
+                <div style="font-family:'Arial Black',Arial,sans-serif; font-size:1.05rem; font-weight:900; color:white; margin-bottom:0.75rem;">🌿 Community-Based<br>Adventure Tourism</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.65rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.15rem;">Tu nicho secundario</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.72); margin-bottom:1rem;">🏔️ Nature Tourism · Conservation Focus</div>
+                <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:0.85rem;">
+                    <div style="font-family:'Arial',sans-serif; font-size:0.72rem; font-weight:700; color:var(--gold); margin-bottom:0.3rem;">📖 Market potential de tu nicho</div>
+                    <div style="font-family:'Arial',sans-serif; font-size:0.7rem; color:rgba(255,255,255,0.55); margin-bottom:0.25rem;">cbi.eu/market-information/tourism/adventure-tourism</div>
+                    <div style="font-family:'Arial',sans-serif; font-size:0.7rem; color:rgba(255,255,255,0.4);">🌐 <a href="https://www-cbi-eu.translate.goog/market-information/tourism/adventure-tourism?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp" target="_blank" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Ver en español →</a></div>
+                </div>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.75rem; color:rgba(255,255,255,0.35); margin-top:1rem; text-align:center;">Tu resultado es el punto de partida de la Hoja de Mapeo de Nicho que viene a continuación</p>
+    </div>
+</section>
+
+
+<!-- S22: EL TURISMO ES RELACIONES -->
+<section class="bg-navy" id="s30" data-section="30">
+    <div class="slide-content" style="max-width:820px;">
+        <div class="slide-label" style="color:rgba(255,255,255,0.55);">BLOQUE 4 · CONTEXTO</div>
+        <h2 class="slide-title" style="color:white; font-size:2rem; margin-bottom:0.4rem;">Muchas empresas europeas ya venden Colombia</h2>
+        <div class="accent-bar" style="background:var(--gold);"></div>
+        <div style="display:flex; flex-direction:column; gap:0.85rem; margin-top:0.5rem;">
+            <div style="background:rgba(255,255,255,0.07); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:0.85rem 1.1rem;">
+                <div style="font-family:'Arial',sans-serif; font-size:0.78rem; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">Si ya venden tu destino</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.875rem; color:rgba(255,255,255,0.88); line-height:1.55;">Es una entrada para presentarte, diferenciarte por tu componente responsable, y ver cómo encajas en lo que ya tienen.</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.07); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; padding:0.85rem 1.1rem;">
+                <div style="font-family:'Arial',sans-serif; font-size:0.78rem; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">Si ya tienen socios en destino</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.875rem; color:rgba(255,255,255,0.88); line-height:1.55;">Puedes aprender quién está posicionado en tu espacio — y qué estándar necesitas alcanzar para estar en esa conversación.</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.07); border-left:3px solid rgba(255,255,255,0.35); border-radius:0 8px 8px 0; padding:0.85rem 1.1rem;">
+                <div style="font-family:'Arial',sans-serif; font-size:0.78rem; font-weight:700; color:rgba(255,255,255,0.65); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">Si no están buscando socios activamente</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.875rem; color:rgba(255,255,255,0.88); line-height:1.55;">El primer contacto no es "trabajemos juntos" — es "esto es lo que estamos haciendo, ¿te parece relevante? ¿tienes feedback?" <em>Esa</em> conversación es donde empieza todo.</div>
+            </div>
+        </div>
+        <div style="margin-top:1.5rem; padding:1rem 1.25rem; background:rgba(245,196,0,0.1); border:1px solid rgba(245,196,0,0.35); border-radius:8px; text-align:center;">
+            <p style="font-size:1.15rem; color:white; font-style:italic; line-height:1.45;">El turismo es relaciones. El primer contacto no tiene que ser una propuesta — puede ser una conversación.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S23: LA BRECHA DE PERCEPCIÓN -->
+<section class="bg-light" id="s31" data-section="31">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · LA BRECHA</div>
+        <h2 class="slide-title">Lo que <em>decimos</em> vs.<br>lo que <em>escuchan</em></h2>
+        <div class="accent-bar"></div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--text-muted); margin-bottom:0.5rem;">Haz clic en cada fila para ver lo que escucha el comprador europeo.</p>
+        <table class="reveal-table">
+            <thead>
+                <tr>
+                    <th>El operador colombiano dice…</th>
+                    <th>El comprador europeo escucha…</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Somos una empresa comprometida con el turismo sostenible"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">Todos dicen eso. ¿Qué significa específicamente?</span></td>
+                </tr>
+                <tr>
+                    <td>"Trabajamos con comunidades locales"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">¿Cuántas personas? ¿Qué porcentaje de ingresos? ¿Cómo se toman las decisiones?</span></td>
+                </tr>
+                <tr>
+                    <td>"Ofrecemos experiencias auténticas"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">Todos dicen auténtico. ¿Qué lo hace irreproducible?</span></td>
+                </tr>
+                <tr>
+                    <td>"Tenemos certificación X"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">¿Es reconocida en Europa? ¿Qué garantiza exactamente?</span></td>
+                </tr>
+                <tr>
+                    <td>"Podemos hacer lo que el cliente necesite"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">No tengo tiempo para construir el producto yo. Necesito algo que ya funcione.</span></td>
+                </tr>
+                <tr>
+                    <td>"Llevamos 10 años en el mercado"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">¿Con clientes europeos? ¿O con turistas domésticos?</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="reveal-all-btn" onclick="revealAll()">Revelar todo</button>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>No hay mala intención de ningún lado. Hay dos perspectivas perfectamente lógicas que aún no se han encontrado. La brecha no es de sustancia — es de <strong>traducción</strong>.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S24: LOS 4 DESAJUSTES -->
+<section class="bg-white" id="s32" data-section="32">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · LOS DESAJUSTES</div>
+        <h2 class="slide-title">Los cuatro desajustes<br>más comunes</h2>
+        <div class="accent-bar"></div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.8rem; color:var(--text-muted); margin-bottom:0.25rem;">Haz clic en cada tarjeta para ver el problema.</p>
+        <div class="mismatch-grid">
+            <div class="mismatch-card" onclick="toggleMismatch(this)">
+                <div class="mismatch-label">Desajuste 1 · Especificidad</div>
+                <div class="mismatch-setup">"Somos una empresa comprometida con el turismo sostenible y el impacto comunitario."</div>
+                <div class="mismatch-hint">↓ ¿Qué escucha el comprador?</div>
+                <div class="mismatch-reveal">
+                    <p><strong>El comprador escucha:</strong> "Todos dicen eso."</p>
+                    <p style="margin-top:0.35rem;">"El 30% de nuestros ingresos va a la comunidad Zenú de Tuchín, financiando educación para 45 familias." — Eso sí entra en un catálogo.</p>
+                </div>
+            </div>
+            <div class="mismatch-card" onclick="toggleMismatch(this)">
+                <div class="mismatch-label">Desajuste 2 · Formato</div>
+                <div class="mismatch-setup">"Tenemos toda la información de sostenibilidad en nuestro 'Quiénes somos'."</div>
+                <div class="mismatch-hint">↓ ¿Qué busca el comprador?</div>
+                <div class="mismatch-reveal">
+                    <p><strong>El comprador busca:</strong> testimonio de agencia europea, cifra de impacto, sección B2B con condiciones claras.</p>
+                    <p style="margin-top:0.35rem;">Un párrafo en el "Sobre nosotros" no es suficiente para que un TO le diga sí a su equipo de producto.</p>
+                </div>
+            </div>
+            <div class="mismatch-card" onclick="toggleMismatch(this)">
+                <div class="mismatch-label">Desajuste 3 · Canal</div>
+                <div class="mismatch-setup">"Tenemos 8.000 seguidores en Instagram y publicamos todos los días."</div>
+                <div class="mismatch-hint">↓ ¿Dónde llega el comprador?</div>
+                <div class="mismatch-reveal">
+                    <p><strong>El comprador llega a tu web,</strong> busca una sección B2B, revisa tu LinkedIn.</p>
+                    <p style="margin-top:0.35rem;">Instagram es para el viajero final. El canal correcto para el intermediario europeo es diferente.</p>
+                </div>
+            </div>
+            <div class="mismatch-card" onclick="toggleMismatch(this)">
+                <div class="mismatch-label">Desajuste 4 · Idioma</div>
+                <div class="mismatch-setup">"No dominamos el inglés — no podemos trabajar con Europa."</div>
+                <div class="mismatch-hint">↓ ¿Cuánto inglés hace falta realmente?</div>
+                <div class="mismatch-reveal">
+                    <p><strong>Inglés funcional es suficiente</strong> — email claro, materiales clave, web con sección B2B.</p>
+                    <p style="margin-top:0.35rem;">Web solo en español = barrera infranqueable. Con inglés básico y buena voluntad = relación posible.</p>
+                </div>
+            </div>
+        </div>
+        <div style="display:flex; justify-content:flex-end; margin-top:0.6rem;">
+            <button class="reveal-all-btn" onclick="revealAllMismatches()">Revelar todos</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- S25: TALLER — HOJA DE MAPEO DE NICHO -->
+<section class="bg-light" id="s33" data-section="33">
+    <div class="slide-content">
+        <div class="slide-label">TALLER · 12–15 min · Trabajo individual</div>
+        <h2 class="slide-title">Hoja de Mapeo de Nicho</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Abre el Google Doc compartido y responde estas cuatro preguntas para tu operación.</p>
+        <p style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text-muted); font-style:italic; margin-bottom:0.75rem;">Si eres hotel: piensa en la experiencia central que ofreces, no solo el alojamiento. Si eres restaurante: tu producto es la experiencia gastronómica. Si eres agencia: el programa o producto que diseñas y operas tú.</p>
+        <div class="workshop-box">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">1</div>
+                    <p><strong>¿A qué perfil de comprador europeo le hablas principalmente?</strong> Especialista, generalista con línea responsable, o FIT Travel Designer. ¿Por qué ese y no otro?</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">2</div>
+                    <p><strong>¿Cuál es tu propuesta de valor en 1–2 frases?</strong> Escríbela como se la dirías a ese comprador en un email — no como la pondrías en tu web para viajeros finales.</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">3</div>
+                    <p><strong>¿Qué evidencias ya tienes de esa propuesta?</strong> Aunque sean informales: un dato, una historia, un testimonio, una práctica documentada relacionada con tus indicadores RTA.</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">4</div>
+                    <p><strong>¿Qué le falta para que un comprador europeo la entienda rápido?</strong> Lo más concreto posible — "una cifra de impacto", "web en inglés", "un testimonio de agencia".</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 12 minutos · Trabajo individual</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S26: BREAKOUT -->
+<section class="interactive-slide" id="s34" data-section="34">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">👥 Discusión en pares · 8 min</div>
+        <p class="interactive-question" style="font-size:1.7rem;">Comparte tu Pregunta 2 con un compañero.</p>
+        <div class="breakout-grid">
+            <div class="breakout-box">
+                <h4>Quien habla</h4>
+                <p>Lee tu propuesta de valor (Pregunta 2) tal como la escribiste — sin editar ni explicar.</p>
+            </div>
+            <div class="breakout-box">
+                <h4>Quien escucha</h4>
+                <p>Responde: <em>"Como comprador europeo, me preguntaría…"</em> — una pregunta concreta que quedaría sin respuesta.</p>
+            </div>
+        </div>
+        <p class="interactive-instruction" style="margin-top:1.5rem;">En Google Meet: usa el chat para encontrar pareja · 8 minutos · Volvemos juntos para compartir patrones</p>
+    </div>
+</section>
+
+
+<!-- S27: CIERRE -->
+<section class="closing-slide" id="s35" data-section="35">
+    <div class="slide-content" style="text-align:center;">
+        <div class="slide-label" style="color:var(--gold); letter-spacing:2px;">CIERRE · SESIÓN 1</div>
+        <h2 class="slide-title">Lo que construimos hoy</h2>
+        <div class="accent-bar" style="margin:1rem auto 1.25rem;"></div>
+        <div class="takeaways-list">
+            <div class="takeaway-item">
+                <span class="takeaway-num">1</span>
+                <p>Turismo responsable no es un concepto abstracto — es un conjunto de <strong>prácticas medibles</strong> (RTA). Probablemente ya practicas más de lo que crees. El trabajo es documentarlo.</p>
+            </div>
+            <div class="takeaway-item">
+                <span class="takeaway-num">2</span>
+                <p>El mercado europeo ya lo exige — no como valor agregado sino como <strong>requisito de entrada</strong>. Quien puede demostrarlo, califica. Quien no, queda fuera del catálogo.</p>
+            </div>
+            <div class="takeaway-item">
+                <span class="takeaway-num">3</span>
+                <p>Tu nicho es tu ventaja. Un comprador europeo necesita poder decirte sí o no en <strong>30 segundos</strong>. La especificidad genera confianza — la generalidad genera silencio.</p>
+            </div>
+        </div>
+        <div class="homework-box">
+            <div class="hw-label">📌 Tarea para esta noche — cuatro partes</div>
+            <div class="hw-part"><strong>A · RTA:</strong> visita be-rta.org/indicators · marca los indicadores que ya cumples · trae la lista mañana</div>
+            <div class="hw-part"><strong>B · Nicho + CBI:</strong> si no completaste el quiz durante la sesión, hazlo antes de mañana → usa tu resultado para encontrar y leer la página de market potential de tu nicho en cbi.eu/market-information/tourism (disponible en español vía Google Translate)</div>
+            <div class="hw-part"><strong>C · Hoja de Mapeo:</strong> con tu resultado del quiz en mano, completa la Hoja de Mapeo de Nicho · trae tus respuestas a la Sesión 2</div>
+            <div class="hw-part"><strong>D · Digital:</strong> googlea tu operación · pregúntale a una IA qué sabe de ti · anota lo que encuentras y lo que falta</div>
+        </div>
+        <div class="next-box">
+            <div class="nxt-label">Mañana — Sesión 2</div>
+            <div class="nxt-title">Presencia digital y posicionamiento · Herramientas de IA</div>
+            <div class="nxt-time">Martes 28 de abril · 9:00–11:00 Medellín / 16:00–18:00 París</div>
+        </div>
+        <div style="margin-top:2rem; font-family:Arial,sans-serif; font-size:0.78rem; color:rgba(255,255,255,0.25);">Lo Responsable Vende · TRECC · Institut Français Colombia · 2026</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('section[data-section]');
+
+    const SLIDE_SECTIONS = [
+        '', 'TRECC', 'El recorrido', 'Agenda',
+        'Bloque 1', 'B1 · Definición', 'B1 · Certificaciones', 'B1', 'B1 · RTA', 'B1 · Comunidades', 'B1 · Satisfacción', 'B1 · Huella Económica', 'B1 · Preservación', 'B1',
+        'Bloque 2', 'B2 · El mercado', 'B2 · Regulación', 'B2',
+        'Bloque 3', 'B3 · Dos rutas', 'B3 · Especialista', 'B3 · Generalista', 'B3 · FIT Designer', 'B3', 'B3 · Relaciones',
+        'Bloque 4', 'B4 · El nicho', 'B4 · CBI', 'B4 · Tu nicho', 'B4 · Quiz', 'B4 · La brecha', 'B4 · Desajustes',
+        'B4 · Taller', 'B4 · Discusión', 'Cierre'
+    ];
+
+    function goToSection(n) {
+        sections[n].scrollIntoView({ behavior: 'smooth' });
+        updateUI(n);
+    }
+
+    function navigate(dir) {
+        const next = currentSection + dir;
+        if (next >= 0 && next < sections.length) goToSection(next);
+    }
+
+    function updateUI(n) {
+        currentSection = n;
+        const lbl = document.getElementById('slideSection');
+        if (lbl) lbl.textContent = SLIDE_SECTIONS[n] || '';
+        document.getElementById('prevBtn').disabled = n === 0;
+        document.getElementById('nextBtn').disabled = n === sections.length - 1;
+        document.getElementById('slideCounter').textContent = (n + 1) + ' / ' + sections.length;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                const n = parseInt(entry.target.getAttribute('data-section'));
+                updateUI(n);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(s => observer.observe(s));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+        if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+    });
+
+    // REVEAL TABLE
+    function revealRow(el) {
+        el.classList.add('revealed');
+        el.textContent = '';
+        const hidden = el.nextElementSibling;
+        if (hidden) { hidden.style.display = 'inline'; hidden.style.color = 'var(--teal-dark)'; hidden.style.fontStyle = 'italic'; }
+    }
+
+    function revealAll() {
+        document.querySelectorAll('.reveal-mask:not(.revealed)').forEach(el => revealRow(el));
+    }
+
+    // MISMATCH CARDS
+    function toggleMismatch(card) {
+        card.classList.toggle('revealed');
+    }
+
+    function revealAllMismatches() {
+        document.querySelectorAll('.mismatch-card:not(.revealed)').forEach(c => c.classList.add('revealed'));
+        const btn = document.getElementById('revealMismatchBtn');
+        if (btn) btn.style.display = 'none';
+    }
+
+    // NICHE TAGS
+    function toggleNiche(el) {
+        const selected = document.querySelectorAll('.niche-tag.selected');
+        if (!el.classList.contains('selected') && selected.length >= 3) return;
+        el.classList.toggle('selected');
+        document.getElementById('nicheCount').textContent = document.querySelectorAll('.niche-tag.selected').length;
+    }
+</script>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lbOverlay" onclick="closeLightbox()">
+    <span class="lb-close" onclick="closeLightbox()">✕</span>
+    <img id="lbImg" src="" alt="">
+</div>
+<script>
+function openLightbox(src) {
+    document.getElementById('lbImg').src = src;
+    document.getElementById('lbOverlay').classList.add('open');
+}
+function closeLightbox() {
+    document.getElementById('lbOverlay').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+function toggleSpectrumCard(el) {
+    el.classList.toggle('open');
+}
+</script>
+</body>
+</html>

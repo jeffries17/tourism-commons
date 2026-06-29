@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Resultados · Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --green:      #3A7D44;
+            --green-light:#e8f5ea;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.65; color: var(--text); background: var(--bg); min-height: 100vh; }
+
+        .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .topbar-inner { max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.2rem; letter-spacing: -0.5px; line-height: 1; display: flex; flex-direction: column; }
+        .trecc-logo .wordmark { display: flex; align-items: baseline; }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: var(--navy); }
+        .trecc-logo .tagline { font-family: 'Arial', sans-serif; font-size: 0.5rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px; margin-top: 1px; }
+        .tool-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-dark); }
+
+        .container { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+        .hero { margin-bottom: 2rem; }
+        .hero h1 { font-size: 1.9rem; color: var(--navy); margin-bottom: 0.3rem; }
+        .hero p { font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--text-muted); }
+
+        .search-row { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 2rem; }
+        .search-input { flex: 1; padding: 0.75rem 1rem; font-family: 'Arial', sans-serif; font-size: 0.92rem; color: var(--text); background: white; border: 2px solid var(--border); border-radius: 8px; outline: none; transition: border-color 0.2s; }
+        .search-input:focus { border-color: var(--teal); }
+        .search-btn { font-family: 'Arial Black', sans-serif; font-size: 0.82rem; font-weight: 900; background: var(--navy); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+        .search-btn:hover { background: var(--teal-dark); }
+        .search-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .status-msg { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        .status-msg.error { color: var(--red); }
+
+        .section-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; margin-top: 2rem; }
+        .section-icon { font-size: 1.3rem; }
+        .section-title { font-family: 'Arial Black', sans-serif; font-size: 1rem; font-weight: 900; color: var(--navy); }
+        .section-count { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; color: var(--teal-dark); background: var(--teal-light); padding: 0.2rem 0.6rem; border-radius: 20px; }
+
+        .result-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 0.85rem; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+        .result-card + .result-card { border-top: none; border-radius: 0 0 12px 12px; margin-top: -0.5rem; }
+        .result-card:first-child { border-radius: 12px 12px 0 0; }
+        .result-card:only-child { border-radius: 12px; margin-bottom: 0; }
+
+        .rc-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
+        .rc-ts { font-family: 'Arial', sans-serif; font-size: 0.7rem; color: var(--text-muted); }
+        .rc-name { font-family: 'Arial Black', sans-serif; font-size: 0.95rem; font-weight: 900; color: var(--navy); }
+
+        .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+        .chip { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 20px; }
+        .chip-teal  { background: var(--teal-light); color: var(--teal-dark); border: 1px solid var(--teal); }
+        .chip-navy  { background: #EEF1F7; color: var(--navy); border: 1px solid #CBD3E8; }
+        .chip-gold  { background: var(--gold-light); color: #7A6000; border: 1px solid #DDB300; }
+        .chip-green { background: var(--green-light); color: var(--green); border: 1px solid #A8CCA8; }
+        .chip-red   { background: #fef2f2; color: var(--red); border: 1px solid #F5ADAA; }
+        .chip-grey  { background: var(--bg); color: var(--text-muted); border: 1px solid var(--border); }
+
+        .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; }
+        .field-item { font-family: 'Arial', sans-serif; font-size: 0.8rem; }
+        .field-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.1rem; }
+        .field-val { color: var(--text); line-height: 1.4; }
+
+        .claim-block { background: var(--bg); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }
+        .claim-num { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal-dark); margin-bottom: 0.5rem; }
+        .claim-row { display: grid; grid-template-columns: 80px 1fr; gap: 0.5rem; font-family: 'Arial', sans-serif; font-size: 0.78rem; margin-bottom: 0.2rem; line-height: 1.4; }
+        .claim-row-label { color: var(--text-muted); font-weight: 600; }
+
+        .reviews-preview { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); }
+        .review-excerpt { background: var(--bg); border-radius: 6px; padding: 0.45rem 0.7rem; margin-bottom: 0.3rem; font-style: italic; color: var(--text); border-left: 3px solid var(--border); line-height: 1.4; }
+
+        .empty-state { text-align: center; font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--text-muted); padding: 1.5rem; background: white; border: 1px dashed var(--border); border-radius: 10px; }
+
+        .align-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.35rem; vertical-align: middle; }
+        .dot-high { background: var(--teal); }
+        .dot-mid  { background: var(--gold); }
+        .dot-low  { background: var(--red); }
+
+        #resultsArea { display: none; }
+        #resultsArea.visible { display: block; }
+
+        .divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+        .tab-row { display: flex; gap: 0.35rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
+        .tab-btn { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 20px; border: 1.5px solid var(--border); background: white; cursor: pointer; color: var(--text-muted); transition: all 0.18s; }
+        .tab-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+    </style>
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="topbar-inner">
+        <div class="trecc-logo">
+            <div class="wordmark"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="tagline">Turismo Responsable, Comunitario y Cultural</div>
+        </div>
+        <div class="tool-label">Mis resultados · Lo Responsable Vende</div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>Mis resultados</h1>
+        <p>Ingresa tu correo electrónico para ver tu perfil de nicho, análisis de reseñas e inventario de claims — incluyendo todas las versiones que hayas guardado.</p>
+    </div>
+
+    <div class="search-row">
+        <input type="email" id="emailInput" class="search-input"
+            placeholder="correo@tuoperacion.com"
+            onkeydown="if(event.key==='Enter') doSearch()">
+        <button class="search-btn" id="searchBtn" onclick="doSearch()">Ver mis resultados →</button>
+    </div>
+
+    <div id="statusMsg" class="status-msg" style="display:none;"></div>
+
+    <div id="resultsArea">
+
+        <!-- QUIZ -->
+        <div class="section-head">
+            <span class="section-icon">🎯</span>
+            <div class="section-title">Quiz · Perfil de nicho</div>
+            <div class="section-count" id="quizCount"></div>
+        </div>
+        <div id="quizResults"></div>
+
+        <hr class="divider">
+
+        <!-- RESEÑAS -->
+        <div class="section-head">
+            <span class="section-icon">⭐</span>
+            <div class="section-title">Análisis de reseñas</div>
+            <div class="section-count" id="resenaCount"></div>
+        </div>
+        <div id="resenaResults"></div>
+
+        <hr class="divider">
+
+        <!-- CLAIMS -->
+        <div class="section-head">
+            <span class="section-icon">📋</span>
+            <div class="section-title">Inventario de claims RTA</div>
+            <div class="section-count" id="claimsCount"></div>
+        </div>
+        <div id="claimsResults"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+const API_KEY   = 'AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4';
+const PROJECT   = 'tourism-development-d620c';
+const BASE_URL  = `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/(default)/documents`;
+const AUTH_URL  = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
+
+const ALIGN_LABELS = { high: 'Alta', mid: 'Media', low: 'Baja', none: 'N/A' };
+
+let _authToken = null;
+
+async function ensureAuth() {
+    if (_authToken) return _authToken;
+    try {
+        const resp = await fetch(AUTH_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ returnSecureToken: true })
+        });
+        const data = await resp.json();
+        if (data.idToken) { _authToken = data.idToken; return _authToken; }
+    } catch(e) {}
+    return null;
+}
+
+function fv(fields, key) {
+    const f = fields?.[key];
+    if (!f) return null;
+    return f.stringValue ?? (f.integerValue !== undefined ? String(f.integerValue) : null) ?? null;
+}
+
+function fmtTs(iso) {
+    if (!iso) return '—';
+    try {
+        const d = new Date(iso);
+        return d.toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' }) +
+               ' ' + d.toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' });
+    } catch(e) { return iso.slice(0,16).replace('T', ' '); }
+}
+
+function alignChipClass(cls) {
+    return cls === 'high' ? 'chip-green' : cls === 'mid' ? 'chip-gold' : cls === 'low' ? 'chip-red' : 'chip-grey';
+}
+
+async function queryCollection(collection, email) {
+    const token = await ensureAuth();
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+    const url = token ? `${BASE_URL}:runQuery` : `${BASE_URL}:runQuery?key=${API_KEY}`;
+    const resp = await fetch(url, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+            structuredQuery: {
+                from: [{ collectionId: collection }],
+                where: {
+                    fieldFilter: {
+                        field: { fieldPath: 'email' },
+                        op: 'EQUAL',
+                        value: { stringValue: email }
+                    }
+                }
+            }
+        })
+    });
+    if (!resp.ok) throw new Error('firestore_' + resp.status);
+    const rows = await resp.json();
+    if (!Array.isArray(rows)) return [];
+    return rows.filter(r => r.document).map(r => r.document)
+        .sort((a, b) => {
+            const ta = a.fields?.timestamp?.stringValue || '';
+            const tb = b.fields?.timestamp?.stringValue || '';
+            return tb.localeCompare(ta);
+        });
+}
+
+async function doSearch() {
+    const email = document.getElementById('emailInput').value.trim().toLowerCase();
+    if (!email) return;
+
+    const btn = document.getElementById('searchBtn');
+    const statusEl = document.getElementById('statusMsg');
+    btn.disabled = true;
+    btn.textContent = 'Buscando…';
+    statusEl.className = 'status-msg';
+    statusEl.textContent = '';
+    statusEl.style.display = 'none';
+    document.getElementById('resultsArea').classList.remove('visible');
+
+    try {
+        const [quizDocs, resenaDocs, claimsDocs] = await Promise.all([
+            queryCollection('quiz_results', email),
+            queryCollection('resenas_results', email),
+            queryCollection('claims_results', email),
+        ]);
+
+        document.getElementById('quizCount').textContent = quizDocs.length + (quizDocs.length === 1 ? ' entrega' : ' entregas');
+        document.getElementById('resenaCount').textContent = resenaDocs.length + (resenaDocs.length === 1 ? ' entrega' : ' entregas');
+        document.getElementById('claimsCount').textContent = claimsDocs.length + (claimsDocs.length === 1 ? ' entrega' : ' entregas');
+
+        renderQuiz(quizDocs);
+        renderResenas(resenaDocs);
+        renderClaims(claimsDocs);
+
+        if (quizDocs.length + resenaDocs.length + claimsDocs.length === 0) {
+            statusEl.textContent = 'No se encontraron resultados para ' + email + '. Verifica que el correo esté escrito igual que en las herramientas.';
+            statusEl.style.display = 'block';
+        } else {
+            document.getElementById('resultsArea').classList.add('visible');
+        }
+
+    } catch(e) {
+        statusEl.className = 'status-msg error';
+        if (e.message.includes('403') || e.message.includes('firestore_403')) {
+            statusEl.innerHTML = `<strong>Error 403 — Firestore no permite lecturas sin autenticación.</strong><br><br>
+Para habilitar la página de admin, ve a <strong>Firebase Console → Firestore → Reglas</strong> y reemplaza las reglas con:<br><br>
+<code style="background:#f5f5f5;padding:0.5rem 0.75rem;border-radius:6px;display:block;font-size:0.78rem;margin-top:0.5rem;line-height:1.9;">
+rules_version = '2';<br>
+service cloud.firestore {<br>
+&nbsp;&nbsp;match /databases/{database}/documents {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;match /{document=**} {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allow read, write: if true;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+}
+</code>`;
+        } else {
+            statusEl.textContent = 'Error al consultar Firestore: ' + e.message;
+        }
+        statusEl.style.display = 'block';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Buscar →';
+}
+
+function fmtTabLabel(iso) {
+    if (!iso) return '—';
+    try {
+        const d = new Date(iso);
+        return d.toLocaleDateString('es-CO', { day: '2-digit', month: 'short' });
+    } catch(e) { return '—'; }
+}
+
+function switchTab(groupId, activeIdx) {
+    document.querySelectorAll(`.tab-btn[data-group="${groupId}"]`).forEach((btn, i) => {
+        btn.classList.toggle('active', i === activeIdx);
+    });
+    document.querySelectorAll(`.tab-panel[data-panel="${groupId}"]`).forEach((panel, i) => {
+        panel.classList.toggle('active', i === activeIdx);
+    });
+}
+
+function wrapWithTabs(docs, renderDoc, groupId) {
+    if (docs.length <= 1) return renderDoc(docs[0]);
+    const tabs = docs.map((doc, i) => {
+        const label = fmtTabLabel(fv(doc.fields, 'timestamp'));
+        return `<button class="tab-btn${i === 0 ? ' active' : ''}" data-group="${groupId}" onclick="switchTab('${groupId}',${i})">${i + 1}a · ${label}</button>`;
+    }).join('');
+    const panels = docs.map((doc, i) =>
+        `<div class="tab-panel${i === 0 ? ' active' : ''}" data-panel="${groupId}">${renderDoc(doc)}</div>`
+    ).join('');
+    return `<div class="tab-row">${tabs}</div>${panels}`;
+}
+
+function renderQuiz(docs) {
+    const el = document.getElementById('quizResults');
+    if (!docs.length) { el.innerHTML = '<div class="empty-state">Sin resultados de quiz.</div>'; return; }
+    el.innerHTML = wrapWithTabs(docs, doc => {
+        const f = doc.fields;
+        const ts     = fv(f, 'timestamp');
+        const name   = fv(f, 'name') || '—';
+        const nMain  = fv(f, 'nicheMainEs') || fv(f, 'nicheMain') || '—';
+        const nSec   = fv(f, 'nicheSecondaryEs') || '';
+        const mod    = fv(f, 'modifierEs') || '';
+        const phrase = fv(f, 'positioningPhrase') || '';
+        const docLevel = fv(f, 'docLevel') || '';
+        const cbi    = fv(f, 'cbiUrl') || '';
+        return `
+        <div class="result-card">
+            <div class="rc-meta">
+                <div>
+                    <div class="rc-name">${esc(name)}</div>
+                    <div class="rc-ts">${fmtTs(ts)}</div>
+                </div>
+                <div class="chip chip-teal">${esc(phrase || nMain)}</div>
+            </div>
+            <div class="chip-row">
+                ${nMain ? `<span class="chip chip-navy">Nicho: ${esc(nMain)}</span>` : ''}
+                ${nSec  ? `<span class="chip chip-grey">Secundario: ${esc(nSec)}</span>` : ''}
+                ${mod   ? `<span class="chip chip-gold">Modificador: ${esc(mod)}</span>` : ''}
+                ${docLevel ? `<span class="chip chip-grey">Doc: ${esc(docLevel)}</span>` : ''}
+            </div>
+            ${cbi ? `<div style="font-family:Arial,sans-serif;font-size:0.72rem;color:var(--text-muted);margin-top:0.25rem;">CBI: <a href="${esc(cbi)}" target="_blank" style="color:var(--teal-dark)">${esc(cbi)}</a></div>` : ''}
+        </div>`;
+    }, 'quiz');
+}
+
+function renderResenas(docs) {
+    const el = document.getElementById('resenaResults');
+    if (!docs.length) { el.innerHTML = '<div class="empty-state">Sin resultados de análisis de reseñas.</div>'; return; }
+    el.innerHTML = wrapWithTabs(docs, doc => {
+        const f = doc.fields;
+        const ts         = fv(f, 'timestamp');
+        const nicho      = fv(f, 'nicheLabel') || fv(f, 'nicho') || '—';
+        const align      = fv(f, 'alignClass') || 'none';
+        const nicheAlign = fv(f, 'nicheAlignClass') || 'none';
+        const respCount  = fv(f, 'responsibleCount') || '0';
+        const topTheme   = fv(f, 'topTheme') || '—';
+        const revCount   = fv(f, 'reviewCount') || '?';
+        let reviews = [];
+        try { reviews = JSON.parse(fv(f, 'reviews') || '[]'); } catch(e) {}
+        return `
+        <div class="result-card">
+            <div class="rc-meta">
+                <div>
+                    <div class="rc-name">${esc(nicho)}</div>
+                    <div class="rc-ts">${fmtTs(ts)}</div>
+                </div>
+            </div>
+            <div class="chip-row">
+                <span class="chip ${alignChipClass(align)}">Responsable: ${ALIGN_LABELS[align] || align}</span>
+                <span class="chip ${alignChipClass(nicheAlign)}">Nicho: ${ALIGN_LABELS[nicheAlign] || nicheAlign}</span>
+                <span class="chip chip-grey">${revCount} reseñas</span>
+                <span class="chip chip-navy">Tema principal: ${esc(topTheme)}</span>
+                <span class="chip chip-grey">Vocab resp: ${esc(respCount)}/5</span>
+            </div>
+            ${reviews.length ? `
+            <div style="margin-top:0.75rem;">
+                <div style="font-family:Arial,sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:0.4rem;">Reseñas ingresadas</div>
+                ${reviews.slice(0,3).map(r => `<div class="review-excerpt">"${esc(r.slice(0,160))}${r.length > 160 ? '…' : ''}"</div>`).join('')}
+                ${reviews.length > 3 ? `<div style="font-family:Arial,sans-serif;font-size:0.72rem;color:var(--text-muted);margin-top:0.25rem;">+ ${reviews.length - 3} más</div>` : ''}
+            </div>` : ''}
+        </div>`;
+    }, 'resenas');
+}
+
+function renderClaims(docs) {
+    const el = document.getElementById('claimsResults');
+    if (!docs.length) { el.innerHTML = '<div class="empty-state">Sin resultados de claims.</div>'; return; }
+    el.innerHTML = wrapWithTabs(docs, doc => {
+        const f = doc.fields;
+        const ts = fv(f, 'timestamp');
+        let indicators = [];
+        try { indicators = JSON.parse(fv(f, 'indicadores') || '[]'); } catch(e) {}
+        const claimBlocks = indicators.map(num => {
+            const hoy      = fv(f, `claim_${num}_hoy`)      || '';
+            const mejorado = fv(f, `claim_${num}_mejorado`) || '';
+            const accion   = fv(f, `claim_${num}_accion`)   || '';
+            if (!hoy && !mejorado && !accion) return '';
+            return `
+            <div class="claim-block">
+                <div class="claim-num">Indicador ${num}</div>
+                ${hoy      ? `<div class="claim-row"><span class="claim-row-label">Hoy:</span><span>${esc(hoy)}</span></div>` : ''}
+                ${mejorado ? `<div class="claim-row"><span class="claim-row-label">Mejorado:</span><span>${esc(mejorado)}</span></div>` : ''}
+                ${accion   ? `<div class="claim-row"><span class="claim-row-label">Acción:</span><span>${esc(accion)}</span></div>` : ''}
+            </div>`;
+        }).filter(Boolean).join('');
+        return `
+        <div class="result-card">
+            <div class="rc-meta">
+                <div class="rc-ts">${fmtTs(ts)}</div>
+                ${indicators.length ? `<span class="chip chip-navy">${indicators.length} indicador${indicators.length !== 1 ? 'es' : ''}: ${indicators.join(', ')}</span>` : ''}
+            </div>
+            ${claimBlocks || '<div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--text-muted);">Indicadores seleccionados, sin claims completados.</div>'}
+        </div>`;
+    }, 'claims');
+}
+
+function esc(s) {
+    if (!s) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+</script>
+</body>
+</html>

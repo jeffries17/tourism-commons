@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo — Búsqueda B2B · Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal: #3E9987; --teal-dark: #2D7A6A; --teal-light: #E6F4F1;
+            --navy: #1B2B5A; --gold: #F5C400; --gold-light: #FEF7D6;
+            --red: #C8352A; --green: #1E7E34;
+            --bg: #F7F8F5; --border: #DDE3DC;
+            --text: #1A1A1A; --text-muted: #5A6478;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: #f1f3f4; color: var(--text); }
+
+        /* FACILITATOR BAR */
+        .facilitator-bar {
+            background: var(--navy);
+            padding: 0.6rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .facilitator-bar p { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+        .facilitator-bar strong { color: var(--gold); }
+        .annotation-toggle {
+            padding: 0.3rem 0.85rem;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        /* GOOGLE CHROME MOCK */
+        .browser-chrome {
+            background: #dee1e6;
+            padding: 0.75rem 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 1px solid #c0c4cc;
+        }
+        .browser-dots { display: flex; gap: 5px; }
+        .browser-dots span { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ff5f57; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #28c840; }
+        .browser-bar {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            padding: 0.35rem 1rem;
+            font-size: 0.82rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #ccc;
+        }
+        .browser-bar .lock { color: #333; font-size: 0.75rem; }
+        .browser-bar .url { color: #333; font-size: 0.8rem; }
+        .browser-tab {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px 8px 0 0;
+            font-size: 0.78rem;
+            color: #333;
+            border: 1px solid #c0c4cc;
+            border-bottom: none;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* GOOGLE SEARCH PAGE */
+        .google-page {
+            background: white;
+            min-height: 80vh;
+            padding: 1rem 0;
+        }
+
+        /* Google search bar */
+        .g-search-bar {
+            padding: 0.75rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .g-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .g-logo .b { color: #4285f4; }
+        .g-logo .r1 { color: #ea4335; }
+        .g-logo .y { color: #fbbc05; }
+        .g-logo .b2 { color: #4285f4; }
+        .g-logo .g { color: #34a853; }
+        .g-logo .r2 { color: #ea4335; }
+
+        .g-search-input {
+            flex: 1;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 0.5rem 1rem;
+            gap: 0.5rem;
+            box-shadow: 0 1px 6px rgba(32,33,36,.08);
+        }
+        .g-search-input span { font-size: 0.9rem; color: #202124; flex: 1; }
+        .g-search-input .g-icon { color: #9aa0a6; font-size: 1rem; }
+
+        /* Search tabs */
+        .g-tabs {
+            padding: 0 2.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 0;
+        }
+        .g-tab {
+            padding: 0.6rem 1rem;
+            font-size: 0.82rem;
+            color: #5f6368;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .g-tab.active { color: #1a73e8; border-bottom-color: #1a73e8; }
+
+        /* Results layout */
+        .g-results-layout {
+            display: flex;
+            padding: 1rem 2.5rem;
+            gap: 2rem;
+            max-width: 1100px;
+        }
+        .g-main { flex: 1; max-width: 600px; }
+        .g-sidebar { width: 320px; flex: 0 0 320px; }
+
+        /* Result count */
+        .g-result-count { font-size: 0.78rem; color: #70757a; margin-bottom: 1rem; }
+
+        /* Organic results */
+        .g-result { margin-bottom: 1.5rem; position: relative; }
+        .g-result-url { font-size: 0.78rem; color: #202124; margin-bottom: 0.15rem; display: flex; align-items: center; gap: 0.3rem; }
+        .g-result-url .favicon { width: 16px; height: 16px; background: #e8eaf6; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; }
+        .g-result-url .domain { color: #202124; }
+        .g-result-url .path { color: #5f6368; }
+        .g-result h3 { font-size: 1.1rem; color: #1a0dab; font-weight: 400; margin-bottom: 0.3rem; cursor: pointer; }
+        .g-result h3:hover { text-decoration: underline; }
+        .g-result p { font-size: 0.875rem; color: #4d5156; line-height: 1.55; }
+        .g-result .g-date { color: #70757a; font-size: 0.82rem; }
+
+        /* Annotation overlays */
+        .annotation {
+            position: relative;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .annotation.visible { display: block; }
+        .ann-bubble {
+            background: var(--navy);
+            color: white;
+            padding: 0.6rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            position: relative;
+        }
+        .ann-bubble::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 16px;
+            border: 6px solid transparent;
+            border-bottom-color: var(--navy);
+            border-top: none;
+        }
+        .ann-bubble.good { background: var(--green); }
+        .ann-bubble.bad { background: var(--red); }
+        .ann-bubble.neutral { background: #b05900; }
+        .ann-icon { margin-right: 0.3rem; }
+
+        /* Google Business Panel (sidebar) */
+        .g-business-panel {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.875rem;
+        }
+        .g-bp-image {
+            height: 140px;
+            background: linear-gradient(135deg, #2D7A6A, #1B2B5A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        .g-bp-body { padding: 1rem; }
+        .g-bp-name { font-size: 1.1rem; font-weight: 700; color: #202124; margin-bottom: 0.2rem; }
+        .g-bp-type { font-size: 0.78rem; color: #5f6368; margin-bottom: 0.5rem; }
+        .g-bp-stars { color: #f9ab00; font-size: 0.9rem; }
+        .g-bp-stars span { color: #70757a; font-size: 0.78rem; margin-left: 0.25rem; }
+        .g-bp-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 0.5rem; font-size: 0.8rem; color: #3c4043; }
+        .g-bp-row .icon { color: #5f6368; flex: 0 0 16px; text-align: center; margin-top: 1px; }
+        .g-bp-desc { margin-top: 0.75rem; font-size: 0.8rem; color: #4d5156; line-height: 1.5; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; }
+        .g-bp-actions { display: flex; gap: 0.5rem; margin-top: 0.85rem; flex-wrap: wrap; }
+        .g-bp-btn { padding: 0.4rem 0.85rem; background: #1a73e8; color: white; border: none; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-family: Arial, sans-serif; }
+        .g-bp-btn.secondary { background: white; color: #1a73e8; border: 1px solid #dadce0; }
+
+        /* TripAdvisor style result */
+        .g-trip-snippet {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.35rem;
+        }
+        .g-trip-star { color: #00aa6c; font-size: 0.8rem; }
+
+        /* No result state */
+        .g-no-result {
+            background: #fce8e6;
+            border: 1px solid #f28b82;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            color: #c5221f;
+        }
+        .g-no-result strong { display: block; margin-bottom: 0.2rem; }
+
+        /* Related searches */
+        .g-related { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; }
+        .g-related-title { font-size: 0.82rem; color: #70757a; margin-bottom: 0.75rem; }
+        .g-related-items { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .g-related-item { padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0; border-radius: 20px; font-size: 0.8rem; color: #202124; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; }
+        .g-related-item:hover { background: #f8f9fa; }
+
+        /* SCENARIO SWITCHER */
+        .scenario-bar {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0.6rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .scenario-label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .scenario-btn { padding: 0.3rem 0.85rem; border: 1.5px solid var(--border); border-radius: 20px; font-size: 0.78rem; font-family: Arial, sans-serif; cursor: pointer; background: white; color: var(--text); transition: all 0.2s; }
+        .scenario-btn.active { border-color: var(--navy); background: var(--navy); color: white; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .g-results-layout { flex-direction: column; padding: 0.75rem 1rem; }
+            .g-sidebar { width: 100%; flex: none; }
+            .g-search-bar { padding: 0.75rem 1rem; }
+            .g-tabs { padding: 0 1rem; }
+            .scenario-bar { padding: 0.6rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- FACILITATOR BAR -->
+<div class="facilitator-bar">
+    <p><strong>📺 Demo para pantalla compartida</strong> — Sesión 2 · Bloque 1 · "Lo que ve el comprador europeo cuando te busca"</p>
+    <button class="annotation-toggle" onclick="toggleAnnotations()" id="annBtn">Mostrar anotaciones</button>
+</div>
+
+<!-- BROWSER CHROME -->
+<div class="browser-chrome">
+    <div class="browser-dots">
+        <span class="dot-red"></span>
+        <span class="dot-yellow"></span>
+        <span class="dot-green"></span>
+    </div>
+    <div class="browser-tab">Google — "Selva Viva Colombia responsible tourism"</div>
+    <div class="browser-bar">
+        <span class="lock">🔒</span>
+        <span class="url">google.com/search?q=Selva+Viva+Colombia+responsible+tourism</span>
+    </div>
+</div>
+
+<!-- SCENARIO SWITCHER -->
+<div class="scenario-bar">
+    <span class="scenario-label">Escenario:</span>
+    <button class="scenario-btn active" onclick="setScenario('before', this)">⚠️ Antes — presencia con gaps</button>
+    <button class="scenario-btn" onclick="setScenario('after', this)">✅ Después — presencia trabajada</button>
+    <span style="font-size:0.72rem; color:var(--text-muted); margin-left:0.5rem;">Nota: "Selva Viva Colombia" es un operador ficticio creado para esta demo</span>
+</div>
+
+<!-- GOOGLE PAGE -->
+<div class="google-page">
+
+    <!-- Search bar -->
+    <div class="g-search-bar">
+        <div class="g-logo"><span class="b">G</span><span class="r1">o</span><span class="y">o</span><span class="b2">g</span><span class="g">l</span><span class="r2">e</span></div>
+        <div class="g-search-input">
+            <span id="searchQuery">Selva Viva Colombia responsible tourism</span>
+            <span class="g-icon">🔍</span>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="g-tabs">
+        <div class="g-tab active">🔍 Todos</div>
+        <div class="g-tab">📰 Noticias</div>
+        <div class="g-tab">🖼 Imágenes</div>
+        <div class="g-tab">🗺 Maps</div>
+        <div class="g-tab">▶ Videos</div>
+    </div>
+
+    <!-- Results layout -->
+    <div class="g-results-layout">
+
+        <!-- Main results -->
+        <div class="g-main">
+            <p class="g-result-count" id="resultCount">Cerca de 430 resultados (0,42 segundos)</p>
+
+            <!-- === SCENARIO: BEFORE === -->
+            <div id="scenarioBefore">
+
+                <!-- Result 1: Website — spanish only -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">🌿</div>
+                        <span class="domain">selvavivacolombia.co</span>
+                        <span class="path">› inicio</span>
+                    </div>
+                    <h3>Selva Viva Colombia – Tours de Naturaleza y Ecoturismo</h3>
+                    <p>Bienvenidos a Selva Viva Colombia, tu operador de ecoturismo en el corazón de la selva colombiana. Ofrecemos experiencias únicas y auténticas para viajeros que quieren conocer la naturaleza de Colombia de verdad. Contáctanos para más información.</p>
+                    <div class="annotation" id="ann1">
+                        <div class="ann-bubble bad"><span class="ann-icon">✕</span> <strong>Problema:</strong> El título y la descripción están en español. Un comprador europeo que busca en inglés no sabe qué ofreces, dónde exactamente, ni cómo contactarte. "Contáctanos para más información" no es una propuesta de valor.</div>
+                    </div>
+                </div>
+
+                <!-- Result 2: TripAdvisor — few reviews -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">⭐</div>
+                        <span class="domain">tripadvisor.es</span>
+                        <span class="path">› Actividades › Selva Viva Colombia</span>
+                    </div>
+                    <h3>Selva Viva Colombia - Tripadvisor</h3>
+                    <div class="g-trip-snippet">
+                        <span class="g-trip-star">★★★☆☆</span>
+                        <span style="font-size:0.8rem; color:#4d5156;">3,2 · 4 opiniones · Operador de tours</span>
+                    </div>
+                    <p style="margin-top:0.3rem;">Ver opiniones, fotos y precios de Selva Viva Colombia en TripAdvisor.</p>
+                    <div class="annotation" id="ann2">
+                        <div class="ann-bubble bad"><span class="ann-icon">✕</span> <strong>Problema:</strong> 4 reseñas (todas en español) y 3,2 estrellas. Para un comprador europeo esto es señal de alarma — o de un operador muy nuevo, o de uno con problemas de servicio. Sin reseñas en inglés no hay prueba social para su clientela.</div>
+                    </div>
+                </div>
+
+                <!-- Result 3: Old Facebook -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">f</div>
+                        <span class="domain">facebook.com</span>
+                        <span class="path">› SelvaVivaColombia</span>
+                    </div>
+                    <h3>Selva Viva Colombia | Facebook</h3>
+                    <p>Selva Viva Colombia. 312 Me gusta · 8 personas están hablando de esto. <span class="g-date">Última publicación: hace 11 meses</span> — "¡Felices fiestas a todos nuestros clientes! 🎄"</p>
+                    <div class="annotation" id="ann3">
+                        <div class="ann-bubble bad"><span class="ann-icon">✕</span> <strong>Problema:</strong> Facebook inactivo desde hace casi un año. El comprador europeo no usa Facebook para encontrar operadores — pero sí nota que el único resultado de redes sociales lleva a una cuenta abandonada.</div>
+                    </div>
+                </div>
+
+                <!-- No LinkedIn -->
+                <div class="g-no-result" id="noLinkedIn">
+                    <strong>LinkedIn — sin resultados</strong>
+                    No se encontró ninguna página de empresa ni perfil profesional para "Selva Viva Colombia" en LinkedIn.
+                    <div class="annotation" id="ann4" style="margin-top:0.5rem;">
+                        <div class="ann-bubble bad"><span class="ann-icon">✕</span> <strong>Problema:</strong> LinkedIn es el canal B2B por excelencia. Un operador sin presencia en LinkedIn es invisible para compradores europeos que hacen due diligence profesional.</div>
+                    </div>
+                </div>
+
+                <!-- Related searches -->
+                <div class="g-related">
+                    <p class="g-related-title">Las personas también buscan</p>
+                    <div class="g-related-items">
+                        <div class="g-related-item">🔍 responsible tourism Colombia agencies</div>
+                        <div class="g-related-item">🔍 community tourism Colombia B2B</div>
+                        <div class="g-related-item">🔍 Colombia eco tour operator English</div>
+                        <div class="g-related-item">🔍 Colombia jungle tour sustainable</div>
+                    </div>
+                    <div class="annotation" id="ann5" style="margin-top:0.75rem;">
+                        <div class="ann-bubble neutral"><span class="ann-icon">→</span> <strong>Dato:</strong> Estas son búsquedas reales de compradores europeos. Si tu web no contiene estas palabras en inglés, Google no te mostrará cuando las busquen.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- === SCENARIO: AFTER === -->
+            <div id="scenarioAfter" style="display:none;">
+
+                <!-- Result 1: Website — english, B2B -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">🌿</div>
+                        <span class="domain">selvavivacolombia.co</span>
+                        <span class="path">› en › responsible-tourism</span>
+                    </div>
+                    <h3>Selva Viva Colombia – Community-Based Responsible Tourism | B2B Partners</h3>
+                    <p>Award-winning community tourism operator in the Colombian Amazon. We work with 3 Tikuna communities — 70% of tour revenue stays in the territory. English-speaking guides. B2B rates and itineraries available. <span style="color:#70757a; font-size:0.82rem;">Travelife certified · 12+ European agency partners</span></p>
+                    <div class="annotation" id="ann6">
+                        <div class="ann-bubble good"><span class="ann-icon">✓</span> <strong>Qué funciona:</strong> Título en inglés con palabras clave claras. Datos específicos (3 comunidades, 70%). Sección B2B visible. Certificación y número de socios europeos — prueba social inmediata.</div>
+                    </div>
+                </div>
+
+                <!-- Result 2: TripAdvisor — good -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">⭐</div>
+                        <span class="domain">tripadvisor.com</span>
+                        <span class="path">› Actividades › Selva Viva Colombia</span>
+                    </div>
+                    <h3>Selva Viva Colombia - Tripadvisor</h3>
+                    <div class="g-trip-snippet">
+                        <span class="g-trip-star">★★★★★</span>
+                        <span style="font-size:0.8rem; color:#4d5156;">4,8 · 47 opiniones · Certificado de Excelencia 2025</span>
+                    </div>
+                    <p style="margin-top:0.3rem;">"Absolutely incredible — the community immersion was unlike anything we've experienced..." — James T., London. Ver las 47 opiniones en inglés, francés y alemán.</p>
+                    <div class="annotation" id="ann7">
+                        <div class="ann-bubble good"><span class="ann-icon">✓</span> <strong>Qué funciona:</strong> 47 reseñas con reseña visible en inglés de Londres. Certificado de Excelencia. El comprador europeo puede copiar esto directamente a su catálogo como prueba social.</div>
+                    </div>
+                </div>
+
+                <!-- Result 3: LinkedIn -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">💼</div>
+                        <span class="domain">linkedin.com</span>
+                        <span class="path">› company › selva-viva-colombia</span>
+                    </div>
+                    <h3>Selva Viva Colombia | LinkedIn</h3>
+                    <p>Community-based tourism operator · Amazon · Colombia · 28 seguidores · Responsible travel · B2B partnerships welcome · SIPPO partner 2025</p>
+                    <div class="annotation" id="ann8">
+                        <div class="ann-bubble good"><span class="ann-icon">✓</span> <strong>Qué funciona:</strong> Presencia profesional visible. Mencionar SIPPO como partner señaliza al comprador europeo que ya están en el radar de los programas de apoyo europeos — credibilidad instantánea.</div>
+                    </div>
+                </div>
+
+                <!-- Result 4: Article/press -->
+                <div class="g-result">
+                    <div class="g-result-url">
+                        <div class="favicon">📰</div>
+                        <span class="domain">responsibletravel.com</span>
+                        <span class="path">› blog › community-tourism-colombia</span>
+                    </div>
+                    <h3>Colombia's Community Tourism Revolution — Selva Viva leads the way</h3>
+                    <p>We visited Selva Viva Colombia to understand how indigenous communities are using responsible tourism to protect biodiversity in the Amazon... <span class="g-date">Mar 2025</span></p>
+                    <div class="annotation" id="ann9">
+                        <div class="ann-bubble good"><span class="ann-icon">✓</span> <strong>Qué funciona:</strong> Cobertura editorial en una publicación europea de turismo responsable. Este tipo de resultado no se compra — se construye con relaciones y una buena historia. Exactamente lo que construimos en este programa.</div>
+                    </div>
+                </div>
+
+                <div class="g-related">
+                    <p class="g-related-title">Las personas también buscan</p>
+                    <div class="g-related-items">
+                        <div class="g-related-item">🔍 Selva Viva Colombia B2B rates</div>
+                        <div class="g-related-item">🔍 Selva Viva Colombia FAM trip</div>
+                        <div class="g-related-item">🔍 responsible tourism Amazon Colombia</div>
+                        <div class="g-related-item">🔍 Tikuna community tourism</div>
+                    </div>
+                    <div class="annotation" id="ann10" style="margin-top:0.75rem;">
+                        <div class="ann-bubble good"><span class="ann-icon">✓</span> <strong>Diferencia:</strong> Las búsquedas relacionadas ahora incluyen el nombre de la empresa + "B2B rates" y "FAM trip". El comprador europeo ya está buscando cómo trabajar contigo, no solo qué haces.</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR: Google Business Panel -->
+        <div class="g-sidebar">
+            <!-- BEFORE panel -->
+            <div id="panelBefore" class="g-business-panel">
+                <div class="g-bp-image">🌿</div>
+                <div class="g-bp-body">
+                    <div class="g-bp-name">Selva Viva Colombia</div>
+                    <div class="g-bp-type">Operador de tours</div>
+                    <div class="g-bp-stars">★★★☆☆ <span>3,2 (4)</span></div>
+                    <div class="g-bp-row"><span class="icon">📍</span><span>Leticia, Amazonas, Colombia</span></div>
+                    <div class="g-bp-row"><span class="icon">🌐</span><span style="color:#1a73e8;">selvavivacolombia.co</span></div>
+                    <div class="g-bp-row"><span class="icon">📞</span><span>+57 310 000 0000</span></div>
+                    <div class="g-bp-row"><span class="icon">🕐</span><span style="color:var(--red);">Horario no especificado</span></div>
+                    <div class="g-bp-desc">Tours de ecoturismo en Colombia. Contactar para información.</div>
+                    <div class="g-bp-actions">
+                        <button class="g-bp-btn">Llamar</button>
+                        <button class="g-bp-btn secondary">Cómo llegar</button>
+                    </div>
+                    <div class="annotation" id="annPanel1" style="margin-top:0.75rem;">
+                        <div class="ann-bubble bad"><span class="ann-icon">✕</span> Sin horario, descripción genérica en español, 4 reseñas. Este panel le dice al comprador europeo muy poco sobre quién eres.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFTER panel -->
+            <div id="panelAfter" class="g-business-panel" style="display:none;">
+                <div class="g-bp-image">🌿</div>
+                <div class="g-bp-body">
+                    <div class="g-bp-name">Selva Viva Colombia</div>
+                    <div class="g-bp-type">Responsible Tour Operator · Ecolodge</div>
+                    <div class="g-bp-stars">★★★★★ <span>4,8 (47) · Certificado de Excelencia</span></div>
+                    <div class="g-bp-row"><span class="icon">📍</span><span>Leticia, Amazonas, Colombia</span></div>
+                    <div class="g-bp-row"><span class="icon">🌐</span><span style="color:#1a73e8;">selvavivacolombia.co/en</span></div>
+                    <div class="g-bp-row"><span class="icon">📧</span><span>b2b@selvavivacolombia.co</span></div>
+                    <div class="g-bp-row"><span class="icon">🕐</span><span style="color:var(--green);">Abierto · L–V 8:00–18:00</span></div>
+                    <div class="g-bp-desc">Community-based responsible tourism in the Colombian Amazon. Working with 3 Tikuna communities since 2015. B2B partnerships welcome. Travelife certified. English and French spoken.</div>
+                    <div class="g-bp-actions">
+                        <button class="g-bp-btn">B2B Enquiry</button>
+                        <button class="g-bp-btn secondary">Website</button>
+                    </div>
+                    <div class="annotation" id="annPanel2" style="margin-top:0.75rem;">
+                        <div class="ann-bubble good"><span class="ann-icon">✓</span> Descripción en inglés con datos específicos, email B2B separado, horario claro, certificación visible. En 10 segundos el comprador sabe quién eres y cómo trabajar contigo.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    let annotationsVisible = false;
+
+    function toggleAnnotations() {
+        annotationsVisible = !annotationsVisible;
+        document.querySelectorAll('.annotation').forEach(el => {
+            if (annotationsVisible) el.classList.add('visible');
+            else el.classList.remove('visible');
+        });
+        document.getElementById('annBtn').textContent = annotationsVisible ? 'Ocultar anotaciones' : 'Mostrar anotaciones';
+    }
+
+    function setScenario(scenario, btn) {
+        document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (scenario === 'before') {
+            document.getElementById('scenarioBefore').style.display = 'block';
+            document.getElementById('scenarioAfter').style.display = 'none';
+            document.getElementById('panelBefore').style.display = 'block';
+            document.getElementById('panelAfter').style.display = 'none';
+            document.getElementById('resultCount').textContent = 'Cerca de 430 resultados (0,42 segundos)';
+        } else {
+            document.getElementById('scenarioBefore').style.display = 'none';
+            document.getElementById('scenarioAfter').style.display = 'block';
+            document.getElementById('panelBefore').style.display = 'none';
+            document.getElementById('panelAfter').style.display = 'block';
+            document.getElementById('resultCount').textContent = 'Cerca de 2.840 resultados (0,38 segundos)';
+        }
+
+        // Reapply annotation visibility state
+        if (annotationsVisible) {
+            document.querySelectorAll('.annotation').forEach(el => el.classList.add('visible'));
+        }
+    }
+</script>
+
+</body>
+</html>

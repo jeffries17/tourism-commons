@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Lo Responsable Vende — Sesión 2 · 28 de abril</title>
+    <style>
+        :root {
+            --teal:       #3E9987;
+            --teal-dark:  #2D7A6A;
+            --teal-light: #E6F4F1;
+            --navy:       #1B2B5A;
+            --navy-mid:   #2E4080;
+            --gold:       #F5C400;
+            --gold-light: #FEF7D6;
+            --red:        #C8352A;
+            --white:      #FFFFFF;
+            --bg:         #F7F8F5;
+            --bg-alt:     #EEF2EF;
+            --text:       #1A1A1A;
+            --text-muted: #5A6478;
+            --border:     #DDE3DC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.65; color: var(--text); background: var(--white); }
+
+        /* TOPBAR */
+        .topbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 200; padding: 0.75rem 2rem; }
+        .topbar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.35rem; letter-spacing: -0.5px; line-height: 1; display: flex; flex-direction: column; }
+        .trecc-logo .wordmark { display: flex; align-items: baseline; }
+        .trecc-logo .tr  { color: #8B1A1A; }
+        .trecc-logo .e   { color: #D4302A; font-style: italic; }
+        .trecc-logo .cc  { color: var(--navy); }
+        .trecc-logo .tagline { font-family: 'Arial', sans-serif; font-size: 0.55rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px; margin-top: 1px; }
+        .slide-counter { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+        .slide-section-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-dark); flex: 1; text-align: center; }
+
+        /* NAV BUTTONS */
+        .nav-buttons { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: 0.65rem; z-index: 190; }
+        .nav-btn { padding: 0.65rem 1.35rem; background: var(--navy); color: white; border: none; border-radius: 7px; font-size: 0.875rem; font-family: 'Arial', sans-serif; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.25s; box-shadow: 0 2px 10px rgba(27,43,90,0.25); }
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(27,43,90,0.3); }
+        .nav-btn.prev { background: white; color: var(--text); border: 1.5px solid var(--border); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .nav-btn:disabled { opacity: 0.25; cursor: not-allowed; transform: none; }
+
+        /* SECTIONS */
+        section { min-height: 100vh; padding: 5.5rem 2rem 7rem; display: flex; align-items: center; justify-content: center; }
+        .slide-content { max-width: 900px; width: 100%; }
+        section.bg-white  { background: var(--white); }
+        section.bg-light  { background: var(--bg); }
+        section.bg-alt    { background: var(--bg-alt); }
+        section.bg-navy   { background: var(--navy); }
+
+        /* TYPOGRAPHY */
+        .slide-label { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.6rem; }
+        .bg-navy .slide-label, .interactive-slide .slide-label { color: rgba(255,255,255,0.65); }
+        .slide-title { font-size: 2.4rem; line-height: 1.15; color: var(--navy); margin-bottom: 0.5rem; }
+        .bg-navy .slide-title, .closing-slide .slide-title { color: white; }
+        .slide-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem; font-family: 'Arial', sans-serif; }
+        .bg-navy .slide-subtitle { color: rgba(255,255,255,0.75); }
+        .accent-bar { height: 3px; width: 60px; background: var(--gold); border-radius: 2px; margin-bottom: 1.5rem; }
+
+        /* HERO */
+        .hero-slide { text-align: center; }
+        .hero-slide .slide-title { font-size: 3rem; }
+        .hero-slide .accent-bar { margin: 1.25rem auto 1.5rem; width: 80px; }
+        .hero-meta { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .meta-chip { display: flex; align-items: center; gap: 0.5rem; background: var(--teal-light); border: 1px solid var(--teal); color: var(--teal-dark); padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.875rem; font-family: 'Arial', sans-serif; }
+        .hero-partner-logos { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: center; flex-wrap: wrap; align-items: center; }
+
+        /* PHOTO INTERSTITIAL — block dividers */
+        .block-intro { position: relative; background-size: cover; background-position: center; text-align: center; }
+        .block-intro::before { content: ''; position: absolute; inset: 0; background: linear-gradient(150deg, rgba(27,43,90,0.87) 30%, rgba(45,122,106,0.70) 100%); }
+        .block-intro .slide-content { position: relative; z-index: 1; }
+        .block-intro .bi-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 9rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; position: absolute; bottom: 1rem; right: 1.5rem; }
+        .block-intro .bi-kicker { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gold); margin-bottom: 1.2rem; }
+        .block-intro .bi-rule { width: 50px; height: 2px; background: var(--gold); margin: 1.2rem auto 1.5rem; border-radius: 2px; }
+        .block-intro .bi-title { font-size: 2.6rem; line-height: 1.15; color: white; }
+        .block-intro .bi-sub { font-family: 'Arial', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.78); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+        /* INTERACTIVE SLIDE */
+        .interactive-slide { background: linear-gradient(135deg, #2D5A27 0%, var(--teal-dark) 100%); text-align: center; }
+        .interactive-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        .interactive-question { font-size: 1.9rem; color: white; line-height: 1.3; font-style: italic; max-width: 700px; margin: 0 auto 2rem; }
+        .interactive-instruction { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-top: 0.75rem; }
+        .chat-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+        /* AGENDA TABLE */
+        .agenda-table { width: 100%; border-collapse: collapse; margin-top: 1.25rem; font-family: 'Arial', sans-serif; font-size: 0.875rem; }
+        .agenda-table th { text-align: left; padding: 0.6rem 1rem; background: var(--navy); color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .agenda-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .agenda-table tr:last-child td { border-bottom: none; }
+        .agenda-table tr:nth-child(even) td { background: var(--bg); }
+        .agenda-table .time-cell { white-space: nowrap; color: var(--teal-dark); font-weight: 700; width: 110px; }
+        .agenda-tag { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 4px; font-size: 0.68rem; font-weight: 700; background: var(--gold-light); color: #7A6000; margin-left: 0.4rem; }
+
+        /* PROGRAM ARC */
+        .program-arc { display: flex; align-items: stretch; gap: 0.5rem; margin: 1.25rem 0; }
+        .program-module { flex: 1; background: var(--bg); border-radius: 10px; padding: 1rem 1.1rem; border: 2px solid var(--border); opacity: 0.55; }
+        .program-module.active { background: var(--teal-light); border-color: var(--teal); opacity: 1; }
+        .arc-connector { display: flex; align-items: center; color: var(--border); font-size: 1.2rem; flex: 0 0 auto; }
+        .module-badge { font-family: 'Arial', sans-serif; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 600; }
+        .program-module.active .module-badge { color: var(--teal-dark); }
+        .module-name { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.1; }
+        .module-focus { font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+        .program-module.active .module-focus { color: var(--teal-dark); font-weight: 600; }
+        .module-sessions { list-style: none; padding: 0; margin: 0; }
+        .module-sessions li { font-family: 'Arial', sans-serif; font-size: 0.73rem; color: var(--text-muted); padding: 0.15rem 0 0.15rem 0.85rem; position: relative; line-height: 1.3; }
+        .module-sessions li::before { content: '·'; position: absolute; left: 0.2rem; color: var(--teal); }
+        .module-sessions li.today { color: var(--teal-dark); font-weight: 700; }
+        .module-sessions li.today::before { content: '▶'; font-size: 0.55rem; top: 0.25rem; }
+        .module-sessions li.done { color: var(--text-muted); text-decoration: line-through; opacity: 0.6; }
+
+        /* CALLOUT */
+        .callout { background: var(--teal); color: white; padding: 1.25rem 1.5rem; border-radius: 10px; margin: 1.25rem 0; }
+        .callout.callout-navy { background: var(--navy); }
+        .callout.callout-gold { background: var(--gold); color: var(--navy); }
+        .callout.callout-outline { background: transparent; border: 2px solid var(--teal); color: var(--text); }
+        .callout h3 { font-size: 0.95rem; margin-bottom: 0.35rem; font-family: 'Arial', sans-serif; font-weight: 700; }
+        .callout p { font-size: 0.875rem; line-height: 1.65; opacity: 0.95; }
+
+        /* TWO COLUMN */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.25rem; }
+        .col-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); font-weight: 700; margin-bottom: 0.5rem; }
+        .detail-block { background: var(--bg); border-radius: 8px; padding: 0.9rem 1rem; }
+        .detail-block ul { list-style: none; padding: 0; }
+        .detail-block ul li { font-size: 0.85rem; color: var(--text); padding: 0.25rem 0 0.25rem 1rem; position: relative; line-height: 1.45; }
+        .detail-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.75rem; top: 0.3rem; }
+
+        /* STATS ROW */
+        .stats-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.25rem 0; }
+        .stat-chip { flex: 1; min-width: 130px; text-align: center; padding: 1.25rem 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .bg-navy .stat-chip { background: rgba(255,255,255,0.1); }
+        .stat-value { font-family: 'Arial Black', Arial, sans-serif; font-size: 2rem; font-weight: 900; color: var(--navy); line-height: 1; display: block; }
+        .bg-navy .stat-value { color: white; }
+        .stat-label { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: block; line-height: 1.4; }
+        .bg-navy .stat-label { color: rgba(255,255,255,0.65); }
+
+        /* WORKSHOP */
+        .workshop-box { background: var(--teal-light); border: 2px solid var(--teal); border-radius: 12px; padding: 1.5rem; margin-top: 1rem; }
+        .workshop-questions { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem; }
+        .workshop-q { display: flex; gap: 0.85rem; align-items: flex-start; background: white; padding: 0.9rem 1rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+        .q-number { flex: 0 0 28px; height: 28px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.85rem; margin-top: 1px; }
+        .workshop-q p { font-size: 0.875rem; color: var(--text); line-height: 1.55; }
+        .timer-display { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--navy); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; margin-top: 0.85rem; }
+
+        /* BREAKOUT */
+        .breakout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; max-width: 680px; margin-left: auto; margin-right: auto; text-align: left; }
+        .breakout-box { background: rgba(255,255,255,0.15); border-radius: 10px; padding: 1.1rem; border: 1px solid rgba(255,255,255,0.2); }
+        .breakout-box h4 { font-family: 'Arial', sans-serif; font-size: 0.875rem; font-weight: 700; color: white; margin-bottom: 0.4rem; }
+        .breakout-box p { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.55; }
+
+        /* REVEAL TABLE */
+        .reveal-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; font-family: 'Arial', sans-serif; }
+        .reveal-table th { padding: 0.65rem 1rem; text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .reveal-table th:first-child { background: var(--navy); color: white; border-radius: 6px 0 0 0; }
+        .reveal-table th:last-child { background: var(--teal); color: white; border-radius: 0 6px 0 0; }
+        .reveal-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .reveal-table tr:last-child td { border-bottom: none; }
+        .reveal-table tr:nth-child(even) td:first-child { background: var(--bg); }
+        .reveal-mask { display: inline-block; background: var(--teal); color: transparent; border-radius: 4px; padding: 0.1rem 0.5rem; cursor: pointer; font-size: 0.8rem; transition: all 0.3s; user-select: none; }
+        .reveal-mask:hover { background: var(--teal-dark); }
+        .reveal-mask.revealed { background: transparent; color: var(--teal-dark); font-style: italic; }
+        .reveal-all-btn { display: block; margin: 0.85rem 0 0; padding: 0.5rem 1.1rem; background: var(--teal); color: white; border: none; border-radius: 6px; font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .reveal-all-btn:hover { background: var(--teal-dark); }
+
+        /* INDICATOR CARD */
+        .indicator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .indicator-card { background: var(--bg); border-radius: 10px; padding: 1rem 1.1rem; border-left: 4px solid var(--teal); }
+        .indicator-card.gold  { border-left-color: var(--gold); }
+        .indicator-card.navy  { border-left-color: var(--navy); }
+        .indicator-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--teal); line-height: 1; margin-bottom: 0.25rem; opacity: 0.35; }
+        .indicator-card.gold  .indicator-num { color: #A07800; }
+        .indicator-card.navy  .indicator-num { color: var(--navy); }
+        .indicator-title { font-family: 'Arial', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; line-height: 1.3; }
+        .indicator-quote { font-size: 0.82rem; color: var(--text-muted); font-style: italic; line-height: 1.5; }
+
+        /* QUOTE BLOCK */
+        .quote-block { border-left: 4px solid var(--gold); padding: 1rem 1.4rem; background: var(--gold-light); border-radius: 0 8px 8px 0; margin: 1.25rem 0; }
+        .quote-block p { font-size: 1.05rem; font-style: italic; color: var(--text); line-height: 1.7; }
+
+        /* B2B B2C ROUTE */
+        .route-diagram { display: flex; gap: 1rem; align-items: stretch; margin: 1.25rem 0; flex-wrap: wrap; }
+        .route-origin { display: flex; align-items: center; justify-content: center; background: var(--navy); color: white; border-radius: 12px; padding: 1.25rem 1.5rem; text-align: center; min-width: 100px; flex-shrink: 0; }
+        .route-origin .origin-icon { font-size: 1.75rem; display: block; margin-bottom: 0.4rem; }
+        .route-origin .origin-label { font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.85rem; }
+        .route-paths { flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+        .route-path { display: flex; align-items: center; gap: 0.6rem; border-radius: 10px; padding: 0.75rem 1rem; flex-wrap: wrap; }
+        .route-path.b2c { background: var(--teal-light); }
+        .route-path.b2b { background: #e8ebf5; }
+        .route-type { font-family: 'Arial', sans-serif; font-size: 0.7rem; font-weight: 700; min-width: 90px; line-height: 1.3; }
+        .route-path.b2c .route-type { color: var(--teal-dark); }
+        .route-path.b2b .route-type { color: var(--navy-mid); }
+        .route-arrow { font-size: 1rem; color: var(--text-muted); flex-shrink: 0; }
+        .route-steps { display: flex; gap: 0.35rem; flex-wrap: wrap; flex: 1; }
+        .route-step { background: white; border: 1px solid var(--border); border-radius: 5px; padding: 0.2rem 0.55rem; font-size: 0.7rem; font-family: 'Arial', sans-serif; color: var(--text-muted); }
+        .route-end { border-radius: 7px; padding: 0.4rem 0.85rem; font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; white-space: nowrap; text-align: center; flex-shrink: 0; }
+        .route-path.b2c .route-end { background: var(--teal); color: white; }
+        .route-path.b2b .route-end { background: var(--navy); color: white; }
+
+        /* CLOSING */
+        .closing-slide { background: var(--navy); text-align: center; }
+        .takeaways-list { display: flex; flex-direction: column; gap: 0.65rem; margin: 1.25rem auto; max-width: 640px; text-align: left; }
+        .takeaway-item { display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(255,255,255,0.07); padding: 0.85rem 1rem; border-radius: 8px; }
+        .takeaway-num { font-family: 'Arial Black', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--gold); line-height: 1; flex: 0 0 auto; margin-top: 1px; }
+        .takeaway-item p { font-size: 0.875rem; color: rgba(255,255,255,0.9); line-height: 1.55; font-family: 'Arial', sans-serif; }
+        .homework-box { background: var(--gold); color: var(--navy); padding: 1.1rem 1.5rem; border-radius: 10px; margin: 1.1rem auto; max-width: 620px; text-align: left; }
+        .hw-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
+        .hw-part { margin-top: 0.55rem; font-family: 'Arial', sans-serif; font-size: 0.82rem; line-height: 1.55; }
+        .next-box { background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.18); padding: 1rem 1.75rem; border-radius: 10px; margin: 1rem auto; max-width: 480px; }
+        .next-box .nxt-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); font-family: 'Arial', sans-serif; margin-bottom: 0.3rem; }
+        .next-box .nxt-title { font-size: 0.95rem; font-family: 'Arial', sans-serif; color: white; }
+        .next-box .nxt-time { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-family: 'Arial', sans-serif; margin-top: 0.15rem; }
+
+        /* SESSION 2 SPECIFIC */
+
+        /* ENMARQUE — S4 */
+        .frame-contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.25rem 0; }
+        .frame-card { border-radius: 12px; padding: 1.25rem 1.4rem; }
+        .frame-card.yesterday { background: var(--bg); border: 2px solid var(--border); opacity: 0.72; }
+        .frame-card.today { background: var(--teal-light); border: 2px solid var(--teal); }
+        .frame-card .fc-kicker { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .frame-card.today .fc-kicker { color: var(--teal-dark); }
+        .frame-card .fc-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; line-height: 1.25; }
+        .frame-card .fc-desc { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+        .frame-card.today .fc-desc { color: var(--teal-dark); }
+
+        /* THREE PERSPECTIVES — S12 */
+        .perspective-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .perspective-card { background: white; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-top: 4px solid var(--teal); }
+        .perspective-card:nth-child(2) { border-top-color: var(--navy); }
+        .perspective-card:nth-child(3) { border-top-color: var(--gold); }
+        .perspective-icon { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
+        .perspective-label { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 0.3rem; }
+        .perspective-card:nth-child(2) .perspective-label { color: var(--navy-mid); }
+        .perspective-card:nth-child(3) .perspective-label { color: #7A6000; }
+        .perspective-title { font-family: 'Arial', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.2; }
+        .perspective-question { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; font-style: italic; }
+
+        /* SUMMARY PROMISE — closing */
+        .summary-promise { background: rgba(245,196,0,0.12); border: 1.5px solid rgba(245,196,0,0.45); border-radius: 10px; padding: 1rem 1.5rem; margin: 1rem auto; max-width: 620px; text-align: left; }
+        .summary-promise .sp-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 0.4rem; }
+        .summary-promise p { font-family: 'Arial', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
+
+        /* REVIEW DEMO — S7 */
+        .review-demo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin: 0.85rem 0 1.1rem; transition: opacity 0.5s ease, filter 0.5s ease; }
+        .review-demo-grid.merging { opacity: 0.18; filter: blur(2px); pointer-events: none; }
+        .review-card { background: white; border-radius: 8px; padding: 0.75rem 0.8rem; box-shadow: 0 1px 6px rgba(0,0,0,0.08); transition: all 0.4s ease; position: relative; border-top: 3px solid transparent; }
+        .review-card[data-theme="guia"]  { border-top-color: var(--teal); }
+        .review-card[data-theme="paisaje"] { border-top-color: var(--navy); }
+        .review-card[data-theme="logistica"] { border-top-color: var(--gold); }
+        .review-card[data-theme="comunidad"] { border-top-color: #3A7D44; }
+        .review-stars { color: var(--gold); font-size: 0.68rem; margin-bottom: 0.3rem; letter-spacing: 1px; }
+        .review-text { font-size: 0.72rem; color: var(--text); line-height: 1.5; font-style: italic; }
+        .review-origin { font-family: Arial,sans-serif; font-size: 0.6rem; color: var(--text-muted); margin-top: 0.4rem; }
+        .review-theme-tag { display: inline-block; font-family: Arial,sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.15rem 0.5rem; border-radius: 3px; margin-top: 0.4rem; opacity: 0; transition: opacity 0.4s ease 0.6s; }
+        .review-card[data-theme="guia"]      .review-theme-tag { background: var(--teal-light); color: var(--teal-dark); opacity: 0; }
+        .review-card[data-theme="paisaje"]   .review-theme-tag { background: #e8ebf5; color: var(--navy); opacity: 0; }
+        .review-card[data-theme="logistica"] .review-theme-tag { background: var(--gold-light); color: #7A6000; opacity: 0; }
+        .review-card[data-theme="comunidad"] .review-theme-tag { background: #e8f5ea; color: #2D6636; opacity: 0; }
+        .review-demo-grid.tagged .review-theme-tag { opacity: 1; }
+
+        .demo-synthesis { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s; pointer-events: none; }
+        .demo-synthesis.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+        .theme-bar { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0; }
+        .theme-bar-label { font-family: Arial,sans-serif; font-size: 0.78rem; font-weight: 700; min-width: 160px; }
+        .theme-bar-track { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .theme-bar-fill { height: 100%; border-radius: 4px; width: 0; transition: width 1s ease 0.8s; }
+        .theme-bar-fill.teal { background: var(--teal); }
+        .theme-bar-fill.navy { background: var(--navy); }
+        .theme-bar-fill.gold { background: var(--gold); }
+        .theme-bar-fill.green { background: #3A7D44; }
+        .theme-bar-count { font-family: Arial,sans-serif; font-size: 0.75rem; color: var(--text-muted); min-width: 30px; text-align: right; }
+        .demo-gap { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0; padding: 0.85rem 1.1rem; margin: 1rem 0; }
+        .demo-gap p { font-family: Arial,sans-serif; font-size: 0.82rem; color: var(--text); line-height: 1.65; }
+        .demo-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-family: Arial,sans-serif; font-size: 0.82rem; font-weight: 700; padding: 0.55rem 1.25rem; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s; }
+        .demo-btn.primary { background: var(--navy); color: white; }
+        .demo-btn.primary:hover { background: var(--navy-mid); }
+        .demo-btn.secondary { background: white; color: var(--text); border: 1.5px solid var(--border); }
+        .demo-btn.secondary:hover { border-color: var(--teal); color: var(--teal-dark); }
+
+        /* BRECHA SLIDES */
+        .brecha-num { font-family: 'Arial Black', sans-serif; font-size: 3rem; line-height: 1; margin-bottom: 0.1rem; }
+        .brecha-num.teal  { color: var(--teal); }
+        .brecha-num.gold  { color: var(--gold); }
+        .brecha-num.navy  { color: var(--navy); }
+        .diag-col-label { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.55rem; }
+        .diag-col-label.prob { color: #9A7A00; }
+        .diag-col-label.task { color: var(--teal-dark); }
+        .brecha-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+        .brecha-list li { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text); line-height: 1.55; padding-left: 1.1rem; position: relative; }
+        .brecha-list li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+        .brecha-list.prob li::before { content: '—'; color: var(--gold); }
+        .may-bridge { border-top: 1px solid var(--border); margin-top: 1rem; padding-top: 0.75rem; font-family: 'Arial', sans-serif; font-size: 0.78rem; color: var(--text-muted); font-style: italic; }
+
+        /* AIEO DEMO */
+        .aieo-src-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.85rem 0 1rem; transition: opacity 0.55s ease, filter 0.55s ease; }
+        .aieo-src-grid.merging { opacity: 0.1; filter: blur(3px); pointer-events: none; }
+        .aieo-src-card { background: white; border: 1.5px solid var(--border); border-radius: 10px; padding: 0.85rem 1rem; transition: border-color 0.4s, background 0.4s; }
+        .aieo-src-grid.tagged .aieo-src-card { border-color: var(--teal); background: var(--teal-light); }
+        .aieo-src-tag { font-family: 'Arial', sans-serif; font-size: 0.68rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.35rem; letter-spacing: 0.3px; }
+        .aieo-src-quote { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: var(--text); line-height: 1.5; font-style: italic; margin: 0; }
+        .aieo-synthesis { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s; pointer-events: none; }
+        .aieo-synthesis.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+        .aieo-brain { font-size: 2rem; text-align: center; margin-bottom: 0.3rem; }
+        .aieo-infer-label { font-family: 'Arial', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); text-align: center; margin-bottom: 0.65rem; }
+        .aieo-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; margin-bottom: 0.85rem; }
+        .aieo-tag { font-family: 'Arial Black', sans-serif; font-size: 0.75rem; font-weight: 900; padding: 0.3rem 0.7rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .aieo-tag.high { background: var(--teal-light); color: var(--teal-dark); }
+        .aieo-tag.mid  { background: var(--gold-light); color: #7A6000; }
+        .aieo-tag.low  { background: var(--bg); color: var(--text-muted); border: 1px dashed var(--border); }
+        .aieo-conf { font-family: 'Arial', sans-serif; font-size: 0.62rem; font-weight: 400; opacity: 0.7; }
+        .aieo-result { font-family: 'Arial', sans-serif; font-size: 0.83rem; color: var(--text); line-height: 1.65; max-width: 600px; margin: 0 auto; background: var(--bg); padding: 0.85rem 1.1rem; border-radius: 8px; border-left: 4px solid var(--teal); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+            .frame-contrast { grid-template-columns: 1fr; }
+            .perspective-grid { grid-template-columns: 1fr; }
+            .indicator-grid { grid-template-columns: 1fr; }
+            .breakout-grid { grid-template-columns: 1fr; }
+            .review-demo-grid { grid-template-columns: 1fr 1fr; }
+            .program-arc { flex-direction: column; }
+            .arc-connector { display: none; }
+            section { padding: 5rem 1.25rem 6rem; }
+            .hero-slide .slide-title { font-size: 2.2rem; }
+            .slide-title { font-size: 1.8rem; }
+        }
+
+        /* ── FLIP CARDS (s_capas) ─────────────────────────── */
+        .capas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.85rem; }
+        .flip-card { perspective: 1000px; cursor: pointer; height: 148px; }
+        .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.52s cubic-bezier(.4,0,.2,1); transform-style: preserve-3d; }
+        .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+        .flip-card-front,
+        .flip-card-back { position: absolute; inset: 0; border-radius: 10px; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.1rem 1.25rem; text-align: center; }
+        .flip-card-back { transform: rotateY(180deg); justify-content: center; }
+        .flip-emoji { font-size: 2.1rem; margin-bottom: 0.55rem; line-height: 1; }
+        .flip-title { font-family: 'Arial Black', Arial, sans-serif; font-size: 0.82rem; font-weight: 900; line-height: 1.3; }
+        .flip-hint { font-family: 'Arial', sans-serif; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.45; margin-top: 0.55rem; }
+        .flip-card-back p { font-family: 'Arial', sans-serif; font-size: 0.78rem; line-height: 1.55; margin: 0; }
+    </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+    <div class="topbar-inner">
+        <div class="trecc-logo">
+            <div class="wordmark"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="tagline">Turismo Responsable, Comunitario y Cultural</div>
+        </div>
+        <span id="slideSection" class="slide-section-label"></span>
+        <span class="slide-counter" id="slideCounter">1 / 32</span>
+    </div>
+</nav>
+
+<!-- NAV BUTTONS -->
+<div class="nav-buttons">
+    <button class="nav-btn prev" id="prevBtn" onclick="navigate(-1)" disabled>← Anterior</button>
+    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">Siguiente →</button>
+</div>
+
+
+<!-- ================================================================
+     SLIDES
+     ================================================================ -->
+
+<!-- S0: PORTADA -->
+<section class="bg-white" id="s0" data-section="0">
+    <div class="slide-content hero-slide">
+        <div class="slide-label">TRECC · Institut Français Colombia</div>
+        <h1 class="slide-title">Lo <strong>Responsable</strong><br>Vende</h1>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Sesión 2 — Tu presencia digital · 28 de abril de 2026</p>
+        <div class="hero-meta">
+            <div class="meta-chip">📺 En línea · Google Meet</div>
+            <div class="meta-chip">🕘 9:00–11:00 Medellín · 16:00–18:00 París</div>
+            <div class="meta-chip">👤 Alex Jeffries, Formador</div>
+        </div>
+        <div class="hero-partner-logos">
+            <img src="img/program_logos.png" alt="Socios del programa" style="max-width:480px; width:100%; height:auto;">
+        </div>
+    </div>
+</section>
+
+
+<!-- S1: AGENDA -->
+<section class="bg-light" id="s1" data-section="1">
+    <div class="slide-content">
+        <div class="slide-label">PROGRAMA DE HOY</div>
+        <h2 class="slide-title">Agenda</h2>
+        <div class="accent-bar"></div>
+        <table class="agenda-table">
+            <thead>
+                <tr><th>Horario</th><th>Bloque</th><th>Formato</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-cell">9:00–9:10</td>
+                    <td>Apertura — retomamos el quiz: <strong>¿qué nicho te salió y qué te sorprendió?</strong> <span class="agenda-tag">Interactivo</span></td>
+                    <td>Activación grupal</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">9:10–9:30</td>
+                    <td>Bloque 1 — <strong>Tus reseñas como espejo</strong> <span class="agenda-tag">Taller</span></td>
+                    <td>Ejercicio individual + reflexión</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">9:30–9:50</td>
+                    <td>Bloque 2 — <strong>Especificidad y ubicación de tus claims</strong> <span class="agenda-tag">Interactivo</span></td>
+                    <td>Tabla + auditoría + mini-taller</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">9:50–10:15</td>
+                    <td>Bloque 3 — <strong>Visibilidad: SEO y AIEO</strong></td>
+                    <td>Exposición + reflexión</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">10:15–10:55</td>
+                    <td>Bloque 4 — <strong>Tu plan de acción para mayo</strong> <span class="agenda-tag">Taller</span></td>
+                    <td>Individual + plenaria</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">10:55–11:00</td>
+                    <td>Cierre y próximos pasos</td>
+                    <td>Plenaria</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- S2: EL RECORRIDO -->
+<section class="bg-white" id="s2" data-section="2">
+    <div class="slide-content">
+        <div class="slide-label">EL RECORRIDO · ABRIL–JUNIO 2026</div>
+        <h2 class="slide-title">Dónde estamos hoy</h2>
+        <div class="accent-bar"></div>
+        <div class="program-arc">
+            <div class="program-module active">
+                <div class="module-badge">💻 En línea</div>
+                <div class="module-name">Módulo 1</div>
+                <div class="module-focus">¿Qué ofreces, a quién, y cómo te ven?</div>
+                <ul class="module-sessions">
+                    <li class="done">Sesión 1 · 27 abr · Completada</li>
+                    <li class="today">Sesión 2 · 28 abr · Hoy</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module">
+                <div class="module-badge">📍 Medellín</div>
+                <div class="module-name">Módulo 2</div>
+                <div class="module-focus">Tu historia y tu sistema para vender</div>
+                <ul class="module-sessions">
+                    <li>Día 1 · 25 mayo</li>
+                    <li>Día 2 · 26 mayo</li>
+                </ul>
+            </div>
+            <div class="arc-connector">→</div>
+            <div class="program-module">
+                <div class="module-badge">💻 En línea</div>
+                <div class="module-name">Módulo 3</div>
+                <div class="module-focus">Poner a prueba y ajustar</div>
+                <ul class="module-sessions">
+                    <li>Seguimiento · 15 jun</li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--text-muted); margin-top:1.25rem; line-height:1.6;">Ayer construimos el ideal — cómo te ves a ti mismo. Hoy lo comparamos con lo que otros encuentran cuando te buscan.</p>
+    </div>
+</section>
+
+
+<!-- S3: APERTURA -->
+<section class="interactive-slide" id="s3" data-section="3">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">✦ Apertura · Retomamos de ayer</div>
+        <p class="interactive-question">"¿Qué nicho te salió en el quiz — y cómo te sentiste con ese resultado?"</p>
+        <span class="chat-icon">🎯</span>
+        <div style="display:flex; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin:1.5rem 0;">
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.75rem 1.35rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">✅ Me representa muy bien</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.75rem 1.35rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">〜 Le añadiría algo</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.75rem 1.35rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">🤔 Es más complejo de lo que parece</div>
+        </div>
+        <p class="interactive-instruction">3–4 participantes comparten en voz alta · ¿Cuál fue el nicho y qué les sorprendió?</p>
+        <p class="interactive-instruction" style="opacity:0.65; margin-top:0.5rem; font-size:0.82rem;">El nicho no es definitivo — es el punto de partida. Hoy vemos cómo aparece ese nicho cuando alguien te busca.</p>
+    </div>
+</section>
+
+
+<!-- S4: EL ENMARQUE -->
+<section class="bg-white" id="s4" data-section="4">
+    <div class="slide-content">
+        <div class="slide-label">EL MARCO DE HOY</div>
+        <h2 class="slide-title">Tu historia digital se escribe<br>— con o sin ti</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">La pregunta de hoy: ¿lo que encuentran coincide con lo que construiste ayer?</p>
+        <div class="frame-contrast">
+            <div class="frame-card yesterday">
+                <div class="fc-kicker">Sesión 1 — Ayer</div>
+                <div class="fc-title">Cómo me veo a mí mismo</div>
+                <div class="fc-desc">Tu propuesta de valor. Tu nicho responsable. Lo que identificaste en el quiz — en tus palabras, con tu encuadre.</div>
+            </div>
+            <div class="frame-card today">
+                <div class="fc-kicker">Sesión 2 — Hoy</div>
+                <div class="fc-title">Cómo me ven los demás</div>
+                <div class="fc-desc">Lo que encuentran tus viajeros en reseñas. Lo que lee un comprador europeo cuando busca. Lo que sabe — o no sabe — una IA sobre ti. Lo que dice un operador similar en tu nicho.</div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;">
+            <p>Reseñas, resultados de búsqueda, respuestas de IA, listados en plataformas — <strong>alguien está escribiendo tu historia digital ahora mismo.</strong> La tarea de hoy es entender qué dice esa historia y reducir la brecha con la que quieres contar.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S_CAPAS: PRESENCIA DIGITAL Y POSICIONAMIENTO -->
+<section class="bg-white" id="s_capas" data-section="4b">
+    <div class="slide-content">
+        <div class="slide-label">EL MAPA DE HOY · PRESENCIA DIGITAL Y POSICIONAMIENTO</div>
+        <h2 class="slide-title">Tu presencia digital<br>tiene cuatro capas</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Las controlas en distinto grado — y el comprador europeo las recorre todas antes de decidir.</p>
+        <div class="capas-grid">
+
+            <!-- Card 1 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                        <div class="flip-emoji">📝</div>
+                        <div class="flip-title" style="color:var(--teal-dark);">1 · Lo que tú publicas</div>
+                        <div class="flip-hint">toca para revelar</div>
+                    </div>
+                    <div class="flip-card-back" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                        <p style="color:var(--text);">Tu web, tus redes sociales, tus materiales B2B — y los claims con los que comunicás tu diferencial responsable. Control total — pero solo una fracción de lo que lee el comprador. <span style="color:var(--teal); font-weight:700;">→ Bloque 2</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background:var(--bg); border:1.5px solid var(--border);">
+                        <div class="flip-emoji">🔍</div>
+                        <div class="flip-title" style="color:var(--navy);">3 · Lo que aparece cuando te buscan</div>
+                        <div class="flip-hint">toca para revelar</div>
+                    </div>
+                    <div class="flip-card-back" style="background:var(--bg); border:1.5px solid var(--border);">
+                        <p style="color:var(--text);">Posición en Google, listados en plataformas B2B, directorios especializados. <strong>SEO.</strong> <span style="color:var(--teal); font-weight:700;">→ Bloque 3</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background:var(--bg); border:1.5px solid var(--border);">
+                        <div class="flip-emoji">⭐</div>
+                        <div class="flip-title" style="color:var(--navy);">2 · Lo que dicen de ti</div>
+                        <div class="flip-hint">toca para revelar</div>
+                    </div>
+                    <div class="flip-card-back" style="background:var(--bg); border:1.5px solid var(--border);">
+                        <p style="color:var(--text);">Reseñas en TripAdvisor, Google, Viator. Sin filtro — y el comprador europeo las lee antes que tu "Quiénes somos". <span style="color:var(--teal); font-weight:700;">→ Bloque 1</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background:var(--gold-light); border:1.5px solid var(--gold);">
+                        <div class="flip-emoji">🤖</div>
+                        <div class="flip-title" style="color:var(--gold-dark);">4 · Lo que sabe la IA de ti</div>
+                        <div class="flip-hint">toca para revelar</div>
+                    </div>
+                    <div class="flip-card-back" style="background:var(--gold-light); border:1.5px solid var(--gold);">
+                        <p style="color:var(--text);">ChatGPT, Claude, Gemini — nueva capa de búsqueda que los compradores usan. <strong>AIEO.</strong> <span style="color:#7A6000; font-weight:700;">→ Bloque 3</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="callout callout-outline" style="margin-top:0.85rem; font-size:0.875rem;">
+            <p><strong>La mayoría de operadores solo gestiona la capa 1.</strong> Hoy trabajamos las cuatro — y cada bloque de esta sesión cubre una de ellas. La pregunta es siempre la misma: ¿lo que encuentran coincide con lo que construiste ayer?</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S5: DIVIDER BLOQUE 1 -->
+<section class="block-intro" id="s5" data-section="5" style="background-image:url('img/colombia_medellin_gift.avif');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 1 · 9:10–9:30</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Tus reseñas<br>como espejo</h2>
+        <p class="bi-sub">Antes de cambiar lo que dices, hay que entender qué está llegando</p>
+    </div>
+    <div class="bi-num">1</div>
+</section>
+
+
+<!-- S6: RESEÑAS COMO DATO EXTERNO -->
+<section class="bg-white" id="s6" data-section="6">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · RESEÑAS</div>
+        <h2 class="slide-title">Lo que tus reseñas<br>revelan que tú no puedes</h2>
+        <div class="accent-bar"></div>
+        <div class="quote-block">
+            <p>Las reseñas son la única superficie donde alguien que no eres tú describe tu producto a un desconocido.</p>
+        </div>
+        <div class="two-col" style="margin-top:0.75rem; gap:1rem;">
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">Qué capturan las reseñas</div>
+                <ul>
+                    <li>El lenguaje que usa tu viajero — no el tuyo</li>
+                    <li>Lo que fue memorable, sin filtro editorial</li>
+                    <li>Señales de confianza que un comprador europeo puede leer directamente</li>
+                    <li>Lo que sorprendió — y lo que faltó</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">La pregunta clave</div>
+                <ul>
+                    <li>¿Aparece la parte responsable, comunitaria o ambiental en alguna reseña?</li>
+                    <li>¿O solo en tus propias descripciones?</li>
+                    <li>Un comprador europeo especializado lee las reseñas antes que tu "Quiénes somos"</li>
+                    <li>Si no aparece ahí, para él no existe</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>No se trata de que las reseñas sean perfectas. Se trata de que sean <strong>coherentes con tu posicionamiento</strong>. Si te describes como operador comunitario y ninguna reseña menciona la comunidad — esa es la brecha que trabaja hoy.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S7: DEMO — ¿QUÉ EMERGE DE 8 RESEÑAS? -->
+<section class="bg-white" id="s7" data-section="7">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · DEMOSTRACIÓN</div>
+        <h2 class="slide-title">Lo que tus reseñas<br>revelan</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle" id="demoSubtitle">¿Qué emerge de 8 reseñas? Un operador de turismo de naturaleza comunitario. Reseñas reales. ¿Qué ve el análisis — y qué no ve?</p>
+
+        <!-- PHASE 1: review grid -->
+        <div class="review-demo-grid" id="reviewGrid">
+            <div class="review-card" data-theme="guia">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Daniel es el mejor guía que hemos tenido. Conoce cada especie, vimos el Cotinga azul antes del amanecer."</div>
+                <div class="review-origin">— Sarah K., Países Bajos</div>
+                <div class="review-theme-tag">Guía</div>
+            </div>
+            <div class="review-card" data-theme="paisaje">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"El páramo nos dejó sin palabras. Todo muy bien organizado, sin ningún contratiempo en toda la ruta."</div>
+                <div class="review-origin">— Marco T., Italia</div>
+                <div class="review-theme-tag">Paisaje</div>
+            </div>
+            <div class="review-card" data-theme="logistica">
+                <div class="review-stars">★★★★</div>
+                <div class="review-text">"La logística fue perfecta, nos recogieron puntuales. El transporte cómodo y el hotel recomendado, excelente."</div>
+                <div class="review-origin">— Claudia R., Alemania</div>
+                <div class="review-theme-tag">Organización</div>
+            </div>
+            <div class="review-card" data-theme="comunidad">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Desayunamos con la familia de Don Carlos antes de salir. Ese momento fue lo más auténtico del viaje."</div>
+                <div class="review-origin">— Emma B., Francia</div>
+                <div class="review-theme-tag">Comunidad</div>
+            </div>
+            <div class="review-card" data-theme="guia">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"We saw over 180 species in 4 days. Incredible expertise — worth every penny, would return immediately."</div>
+                <div class="review-origin">— James L., Reino Unido</div>
+                <div class="review-theme-tag">Guía</div>
+            </div>
+            <div class="review-card" data-theme="paisaje">
+                <div class="review-stars">★★★★</div>
+                <div class="review-text">"Beautiful cloud forest route. The coffee tasting at the end was a lovely surprise — very well curated."</div>
+                <div class="review-origin">— Lena M., Alemania</div>
+                <div class="review-theme-tag">Paisaje</div>
+            </div>
+            <div class="review-card" data-theme="comunidad">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"El equipo nos presentó a los artesanos del pueblo. Me traje una mochila hecha a mano — lo mejor del viaje."</div>
+                <div class="review-origin">— Marie C., Francia</div>
+                <div class="review-theme-tag">Comunidad</div>
+            </div>
+            <div class="review-card" data-theme="logistica">
+                <div class="review-stars">★★★★</div>
+                <div class="review-text">"Muy profesional en todo. La comunicación previa fue clara y la operación impecable. Volvería sin dudar."</div>
+                <div class="review-origin">— Pedro A., España</div>
+                <div class="review-theme-tag">Organización</div>
+            </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+            <button class="demo-btn primary" id="demoAnalyzeBtn" onclick="runDemoAnalysis()">Ver lo que emerge →</button>
+            <button class="demo-btn secondary" id="demoResetBtn" onclick="resetDemo()" style="display:none;">← Ver reseñas</button>
+            <span id="demoScanMsg" style="font-family:Arial,sans-serif; font-size:0.78rem; color:var(--teal); display:none;">Analizando patrones…</span>
+        </div>
+
+        <!-- PHASE 2: synthesis -->
+        <div class="demo-synthesis" id="demoSynthesis">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:1.25rem;">
+                <div>
+                    <div style="font-family:Arial,sans-serif; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--teal); margin-bottom:0.75rem;">Lo que mencionan tus viajeros</div>
+                    <div class="theme-bar">
+                        <div class="theme-bar-label" style="color:var(--teal-dark);">Guía / expertise</div>
+                        <div class="theme-bar-track"><div class="theme-bar-fill teal" data-width="75%"></div></div>
+                        <div class="theme-bar-count">3 ×</div>
+                    </div>
+                    <div class="theme-bar">
+                        <div class="theme-bar-label" style="color:var(--navy);">Paisaje / naturaleza</div>
+                        <div class="theme-bar-track"><div class="theme-bar-fill navy" data-width="50%"></div></div>
+                        <div class="theme-bar-count">2 ×</div>
+                    </div>
+                    <div class="theme-bar">
+                        <div class="theme-bar-label" style="color:#7A6000;">Organización / logística</div>
+                        <div class="theme-bar-track"><div class="theme-bar-fill gold" data-width="50%"></div></div>
+                        <div class="theme-bar-count">2 ×</div>
+                    </div>
+                    <div class="theme-bar">
+                        <div class="theme-bar-label" style="color:#2D6636;">Comunidad / local</div>
+                        <div class="theme-bar-track"><div class="theme-bar-fill green" data-width="50%"></div></div>
+                        <div class="theme-bar-count">2 ×</div>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-family:Arial,sans-serif; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--teal); margin-bottom:0.75rem;">Lo que no menciona nadie</div>
+                    <div style="background:var(--bg); border-radius:8px; padding:0.85rem 1rem;">
+                        <div style="font-family:Arial,sans-serif; font-size:0.82rem; color:var(--text-muted); line-height:1.6;">
+                            <div style="margin-bottom:0.4rem;">✗ &nbsp;Impacto en comunidades locales</div>
+                            <div style="margin-bottom:0.4rem;">✗ &nbsp;Prácticas responsables o certificaciones</div>
+                            <div style="margin-bottom:0.4rem;">✗ &nbsp;Porcentaje de ingreso a productores</div>
+                            <div>✗ &nbsp;Huella ambiental de la ruta</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-gap">
+                <p><strong>La brecha:</strong> el nicho declarado es turismo responsable comunitario. Lo que recuerdan los viajeros es el guía y el paisaje. La parte "responsable" aparece en 2 de 8 reseñas — y solo de forma indirecta. No porque no exista, sino porque <strong>no se comunica en el momento correcto de la experiencia.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S8a: EJERCICIO Q1 -->
+<section class="bg-light" id="s8a" data-section="8a">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · EJERCICIO · 1 DE 3</div>
+        <h2 class="slide-title">Abre tus reseñas ahora</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">TripAdvisor, Google, Viator — lo que tengas. Lee las últimas 3 a 5.</p>
+        <div class="workshop-box">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">1</div>
+                    <p><strong>¿Qué mencionan específicamente?</strong> Anota las palabras exactas de tus viajeros — el guía por su nombre, el lugar, el momento concreto. No tu interpretación de lo que dijeron.</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 2 minutos · Trabajo individual</div>
+        </div>
+        <div style="margin-top:1rem; padding:0.8rem 1.1rem; background:var(--teal-light); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--teal-dark); line-height:1.55;">
+            <strong>Compartimos:</strong> ¿Qué palabras exactas usó tu viajero? ¿Alguien por su nombre? ¿Un lugar específico? ¿Un momento que no esperabas?
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.75rem; color:var(--text-muted); margin-top:0.65rem; font-style:italic;">Sin reseñas todavía: anota de qué plataformas estás ausente — eso también es un dato.</p>
+    </div>
+</section>
+
+
+<!-- S8b: EJERCICIO Q2 -->
+<section class="bg-light" id="s8b" data-section="8b">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · EJERCICIO · 2 DE 3</div>
+        <h2 class="slide-title">Lo que no aparece<br>— y debería</h2>
+        <div class="accent-bar"></div>
+        <div class="workshop-box">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">2</div>
+                    <p><strong>¿Qué no aparece que esperarías?</strong> Lo que para ti define tu operación — el componente responsable, comunitario, ambiental. ¿Está en las palabras del viajero, o solo en las tuyas?</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 2 minutos · Trabajo individual</div>
+        </div>
+        <div style="margin-top:1rem; padding:0.8rem 1.1rem; background:var(--teal-light); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--teal-dark); line-height:1.55;">
+            <strong>Compartimos:</strong> ¿Qué parte de tu operación es invisible para quien solo lee tus reseñas? ¿El componente responsable aparece — o solo un buen servicio?
+        </div>
+    </div>
+</section>
+
+
+<!-- S8c: EJERCICIO Q3 -->
+<section class="bg-light" id="s8c" data-section="8c">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · EJERCICIO · 3 DE 3</div>
+        <h2 class="slide-title">La perspectiva del<br>comprador europeo</h2>
+        <div class="accent-bar"></div>
+        <div class="workshop-box">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">3</div>
+                    <p><strong>Si un comprador europeo leyera solo estas reseñas,</strong> ¿qué conclusión sacaría? ¿Le quedaría claro que eres un operador responsable — o vería un buen operador genérico con buenas reseñas?</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 2 minutos · Trabajo individual</div>
+        </div>
+        <div style="margin-top:1rem; padding:0.8rem 1.1rem; background:var(--teal-light); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--teal-dark); line-height:1.55;">
+            <strong>Compartimos:</strong> ¿Tus reseñas te posicionan como operador responsable — o como operador de calidad sin diferencial? ¿Cuál es la brecha?
+        </div>
+    </div>
+</section>
+
+
+<!-- S9: HERRAMIENTA DE ANÁLISIS -->
+<section class="bg-white" id="s9" data-section="9">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 1 · HERRAMIENTA</div>
+        <h2 class="slide-title">Ahora hazlo<br>con más reseñas</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">El ojo humano capta lo que recuerda. La herramienta detecta patrones en 5 a 10 reseñas que el ojo pasa por alto.</p>
+        <div class="two-col" style="gap:1rem; margin-top:0.5rem;">
+            <div class="detail-block" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.68rem; font-weight:900; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark); margin-bottom:0.65rem;">Qué analiza</div>
+                <ul style="margin:0; padding-left:1.1rem;">
+                    <li>Temas dominantes en tus reseñas — y con qué consistencia aparecen</li>
+                    <li>Alineación con tu nicho declarado (del quiz de ayer)</li>
+                    <li>Vocabulario de turismo responsable que ya aparece — y el que falta</li>
+                    <li>Las palabras exactas que tus viajeros ya validaron</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.68rem; font-weight:900; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark); margin-bottom:0.65rem;">Cómo usarla ahora</div>
+                <ul style="margin:0; padding-left:1.1rem;">
+                    <li>Copia 5 a 10 reseñas — <strong>no las más recientes, las más específicas.</strong> Una que nombre tu práctica responsable vale más que cinco que dicen "muy buena experiencia"</li>
+                    <li>Selecciona tu nicho o escríbelo si es diferente</li>
+                    <li>Pega cada reseña en un campo y haz clic en Analizar</li>
+                    <li>Guarda el resultado — lo usamos en el plan de acción</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;">
+                <p style="margin:0; font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;"><strong>Link en el chat ahora.</strong> También disponible después de la sesión — úsala con más reseñas antes del módulo presencial de mayo.</p>
+            </div>
+            <a href="herramienta-analisis-resenas.html" target="_blank" style="font-family:'Arial Black',sans-serif; font-size:0.72rem; font-weight:900; background:var(--navy); color:white; padding:0.5rem 1.1rem; border-radius:7px; white-space:nowrap; flex-shrink:0; text-decoration:none; display:inline-block;">
+                herramienta-analisis-resenas →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- S8: CHAT — REFLEXIÓN -->
+<section class="interactive-slide" id="s10" data-section="10">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">💬 Reflexión · 2 min · chat</div>
+        <p class="interactive-question">"¿El análisis de tus reseñas confirmó tu diferencial responsable — o reveló que tus viajeros no lo mencionan?"</p>
+        <span class="chat-icon">💬</span>
+        <div style="display:flex; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin:1.5rem 0;">
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">✅ Lo confirmó — aparece claro</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">〜 Parcialmente — algo sí, algo no</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.7rem 1.25rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.875rem;">✕ No aparece — hay brecha</div>
+        </div>
+        <p class="interactive-instruction">Escribe en el chat qué encontraste que no esperabas</p>
+        <p class="interactive-instruction" style="opacity:0.65; margin-top:0.5rem; font-size:0.82rem;">La brecha no es un fracaso — es exactamente el material de trabajo de hoy</p>
+    </div>
+</section>
+
+
+<!-- S9: DIVIDER BLOQUE 2 -->
+<section class="block-intro" id="s11" data-section="11" style="background-image:url('img/colombia_bogota_monserrate.avif');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 2 · 9:30–9:50</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Especificidad y<br>ubicación de tus claims</h2>
+        <p class="bi-sub">La diferencia entre un argumento que convence y uno que se ignora</p>
+    </div>
+    <div class="bi-num">2</div>
+</section>
+
+
+<!-- S10: CLAIMS GENÉRICOS VS. VERIFICABLES -->
+<section class="bg-light" id="s12" data-section="12">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 2 · CLAIMS</div>
+        <h2 class="slide-title">De claims genéricos<br>a claims verificables</h2>
+        <div class="accent-bar"></div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--text-muted); margin-bottom:0.5rem;">Haz clic en cada fila para ver lo que necesita el comprador europeo para confiar.</p>
+        <table class="reveal-table">
+            <thead>
+                <tr>
+                    <th>Lo que dice el operador</th>
+                    <th>Lo que necesita el comprador para confiar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Somos sostenibles"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">Una práctica documentada con un dato medible. Ejemplo: "60% de proveedores locales · política de impacto mínimo vigente desde 2022 · indicador RTA Cat. 3 activo."</span></td>
+                </tr>
+                <tr>
+                    <td>"Trabajamos con comunidades"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">Quiénes, cuántos, qué porcentaje del ingreso llega a ellos. Ejemplo: "3 familias Zenú en Tuchín · 30% del ingreso al fondo comunitario · voz en el diseño del recorrido."</span></td>
+                </tr>
+                <tr>
+                    <td>"Experiencias auténticas"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">El nombre, el lugar, lo que no puede reproducirse en ningún otro catálogo. Ejemplo: "Único acceso a la finca familiar Ospina en Jardín · cuatro generaciones de caficultores de altura."</span></td>
+                </tr>
+                <tr>
+                    <td>"Tenemos compromiso ambiental"</td>
+                    <td><span class="reveal-mask" onclick="revealRow(this)">ver ▶</span><span class="hidden-text" style="display:none;">Una acción concreta más un resultado con fecha. Ejemplo: "Monitoreo mensual de fauna con ProAves · cero plásticos de un solo uso en rutas desde enero 2024."</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="reveal-all-btn" onclick="revealAll()">Revelar todo</button>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>Un número, un nombre, una historia, una fecha — eso es todo lo que separa un claim genérico de un argumento que entra en un catálogo europeo. <strong>Una frase específica que nadie más puede decir igual.</strong></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S13: CONSTRUCTOR DE CLAIMS RTA — EJEMPLO + ACTIVIDAD -->
+<section class="bg-white" id="s13" data-section="13">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 2 · HERRAMIENTA · 10 MIN</div>
+        <h2 class="slide-title">Tus indicadores RTA<br>en palabras concretas</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Dos salidas concretas: los claims que ya podés usar hoy — y un mapa de lo que querés construir antes de mayo. En el módulo presencial refinamos esto para cada audiencia: agencias europeas, ferias, distribuidores.</p>
+        <div class="two-col" style="gap:1rem; margin-top:0.75rem; align-items:flex-start;">
+            <div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); margin-bottom:0.6rem;">Ejemplo — indicador 03 · Beneficios a la población</div>
+                <div style="border:1.5px solid var(--border); border-radius:10px; overflow:hidden; font-family:'Arial',sans-serif;">
+                    <div style="padding:0.7rem 0.85rem; border-bottom:1px solid var(--border); background:var(--bg);">
+                        <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:0.15rem;">¿Cómo lo comunicás hoy?</div>
+                        <div style="font-size:0.78rem; color:var(--text); font-style:italic;">"Trabajamos con proveedores locales y apoyamos a la comunidad en cada tour."</div>
+                    </div>
+                    <div style="padding:0.7rem 0.85rem; border-bottom:1px solid var(--border); background:white;">
+                        <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark); margin-bottom:0.15rem;">¿Qué podrías decir con más especificidad?</div>
+                        <div style="font-size:0.78rem; color:var(--text); font-style:italic;">"El 40% del costo queda en la comunidad de Salento — 3 familias proveen el desayuno, el transporte y el alojamiento. Podés conocerlas."</div>
+                    </div>
+                    <div style="padding:0.7rem 0.85rem; background:var(--bg);">
+                        <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:0.15rem;">¿Qué necesitarías implementar o documentar?</div>
+                        <div style="font-size:0.78rem; color:var(--text); font-style:italic;">"Calcular el % real con nuestros proveedores, conseguir foto del proceso, añadirlo a Viator."</div>
+                    </div>
+                </div>
+                <div style="margin-top:0.6rem; padding:0.5rem 0.75rem; background:var(--teal-light); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; font-family:'Arial',sans-serif; font-size:0.75rem; color:var(--teal-dark); line-height:1.5; font-style:italic;">"Podemos decirte exactamente qué % del gasto de tu cliente se queda en el territorio."</div>
+            </div>
+            <div class="detail-block" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.68rem; font-weight:900; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark); margin-bottom:0.65rem;">⏱ 10 min · Trabajo individual</div>
+                <ul style="margin:0; padding-left:1.1rem; display:flex; flex-direction:column; gap:0.45rem;">
+                    <li style="font-family:'Arial',sans-serif; font-size:0.8rem; color:var(--text); line-height:1.55;">Abrí la herramienta — link abajo</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.8rem; color:var(--text); line-height:1.55;">Seleccioná tu tipo de negocio — verás cuáles indicadores son más comunes para vos</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.8rem; color:var(--text); line-height:1.55;">Elegí <strong>3 a 5 indicadores</strong> que ya aplicás o que querés desarrollar</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.8rem; color:var(--text); line-height:1.55;">Para cada uno, completá las tres preguntas con la mayor honestidad posible</li>
+                    <li style="font-family:'Arial',sans-serif; font-size:0.8rem; color:var(--text); line-height:1.55;">Al terminar, copiá el resumen — lo usamos como base en mayo</li>
+                </ul>
+                <div style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px solid rgba(42,127,111,0.25); font-family:'Arial',sans-serif; font-size:0.75rem; color:var(--teal-dark); line-height:1.5;">No hay respuestas incorrectas. La columna <em>"para llegar ahí"</em> es tan valiosa como la de <em>"hoy"</em>.</div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;">
+                <p style="margin:0; font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;"><strong>Link en el chat ahora.</strong> También disponible después de la sesión — completá el resumen antes del módulo de mayo.</p>
+            </div>
+            <a href="herramienta-claims-rta.html" target="_blank" style="font-family:'Arial Black',sans-serif; font-size:0.72rem; font-weight:900; background:var(--navy); color:white; padding:0.5rem 1.1rem; border-radius:7px; white-space:nowrap; flex-shrink:0; text-decoration:none; display:inline-block;">
+                herramienta-claims-rta →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- S11: ¿DÓNDE VIVEN TUS CLAIMS? -->
+<section class="interactive-slide" id="s14" data-section="14">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">💬 Poll · 1 min · chat</div>
+        <p class="interactive-question">"¿Dónde viven hoy tus claims responsables?"</p>
+        <span class="chat-icon">📍</span>
+        <div style="display:flex; justify-content:center; gap:0.7rem; flex-wrap:wrap; margin:1.25rem 0;">
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.65rem 1.1rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.82rem;">Solo en mi web</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.65rem 1.1rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.82rem;">Solo en redes sociales</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.65rem 1.1rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.82rem;">En materiales B2B también</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.65rem 1.1rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.82rem;">Tengo certificación visible</div>
+            <div style="background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3); padding:0.65rem 1.1rem; border-radius:8px; color:white; font-family:Arial,sans-serif; font-size:0.82rem;">En ningún lugar específico</div>
+        </div>
+        <p class="interactive-instruction">El 81% de compradores europeos va primero a tu web · Instagram llega al viajero final, no al intermediario</p>
+        <p class="interactive-instruction" style="opacity:0.65; margin-top:0.4rem; font-size:0.82rem;">Si tus claims responsables solo viven en tu web en español, no llegan al comprador europeo</p>
+    </div>
+</section>
+
+
+<!-- S13: AUDITORÍA RÁPIDA -->
+<section class="bg-light" id="s16" data-section="16">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 2 · MINI-TALLER · 4 MIN</div>
+        <h2 class="slide-title">Auditoría rápida<br>de claims</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Basándote en los indicadores RTA que marcaste ayer.</p>
+        <div class="workshop-box">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">1</div>
+                    <p><strong>¿Cuál es tu claim responsable más específico y verificable?</strong> Una frase — no un párrafo. Al menos un dato concreto: un número, un nombre, una práctica documentada. Escríbela como se la dirías a un comprador europeo en un email.</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">2</div>
+                    <p><strong>¿Dónde aparece ese claim hoy?</strong> Nombre el canal exacto: web (¿qué sección?), materiales B2B, plataforma, certificación visible. O anota que todavía no aparece en ningún lugar — también es información.</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 4 minutos · Trabajo individual</div>
+        </div>
+        <p style="font-family:'Arial',sans-serif; font-size:0.78rem; color:var(--text-muted); margin-top:0.85rem; font-style:italic;">En el Bloque 4 este claim se convierte en una de las tres acciones de tu plan para mayo.</p>
+    </div>
+</section>
+
+
+<!-- S14: DIVIDER BLOQUE 3 -->
+<section class="block-intro" id="s17" data-section="17" style="background-image:url('img/pereira_colombia.avif');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 3 · 9:50–10:15</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Visibilidad:<br>SEO y AIEO</h2>
+        <p class="bi-sub">Si no apareces cuando te buscan, tu propuesta de valor no importa</p>
+    </div>
+    <div class="bi-num">3</div>
+</section>
+
+
+<!-- S15: POR QUÉ APARECER IMPORTA -->
+<section class="bg-navy" id="s18" data-section="18">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · VISIBILIDAD</div>
+        <h2 class="slide-title">Por qué aparecer importa<br>tanto como qué dices</h2>
+        <div class="accent-bar"></div>
+        <div class="stats-row">
+            <div class="stat-chip">
+                <span class="stat-value">81%</span>
+                <span class="stat-label">de compradores europeos verifica tu presencia online antes de decidir — incluso si llegaron por una recomendación</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-value">2</span>
+                <span class="stat-label">capas que necesitas cubrir: búsqueda humana (Google, plataformas) y búsqueda por IA (ChatGPT, Claude, Gemini)</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">trabaja tu presencia digital — mientras tú estás en otra reunión, en otra feria, o durmiendo</span>
+            </div>
+        </div>
+        <div class="callout callout-navy" style="border:1.5px solid rgba(255,255,255,0.18); margin-top:1rem;">
+            <p>Las relaciones abren la puerta — los contactos directos, las ferias, las referencias son un canal real y seguirán siéndolo. Pero hay un momento que ocurre sin ti: cuando el comprador escucha tu nombre y verifica solo. Lo que encuentra ahí confirma la conversación — o la cancela. La visibilidad digital no reemplaza la relación: es lo que trabaja para ti mientras no estás en la sala.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S15b: SEO + AIEO — INTRODUCCIÓN -->
+<section class="bg-light" id="s19" data-section="19">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · VISIBILIDAD</div>
+        <h2 class="slide-title">Dos formas en que<br>te buscan hoy</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col" style="gap:1.25rem; margin-top:0.75rem; align-items:stretch;">
+            <div class="detail-block" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                <div style="font-family:'Arial Black',sans-serif; font-size:1.1rem; font-weight:900; color:var(--teal-dark); letter-spacing:-0.5px; margin-bottom:0.35rem;">SEO</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal); margin-bottom:0.65rem;">Search Engine Optimization</div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--text); line-height:1.65; margin:0;">Optimizar tu presencia para que motores de búsqueda como Google te encuentren cuando alguien busca lo que haces. Un comprador en Ámsterdam que escribe "birdwatching tour Antioquia" — ¿apareces?</p>
+                <div style="margin-top:0.85rem; padding:0.6rem 0.75rem; background:white; border-radius:7px; font-family:'Arial',sans-serif; font-size:0.75rem; color:var(--teal-dark); line-height:1.5;"><strong>Impacto en visibilidad:</strong> te ubica en el momento exacto en que el comprador tiene intención de contratar — antes de que contacte a nadie.</div>
+            </div>
+            <div class="detail-block" style="background:var(--navy); border:1.5px solid var(--navy);">
+                <div style="font-family:'Arial Black',sans-serif; font-size:1.1rem; font-weight:900; color:var(--gold); letter-spacing:-0.5px; margin-bottom:0.35rem;">AIEO</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:rgba(255,255,255,0.55); margin-bottom:0.65rem;">AI Engine Optimization</div>
+                <p style="font-family:'Arial',sans-serif; font-size:0.82rem; color:rgba(255,255,255,0.9); line-height:1.65; margin:0;">Optimizar tu presencia para que modelos de IA como ChatGPT, Claude o Gemini te mencionen cuando alguien pide recomendaciones. Cada vez más compradores preguntan a la IA antes de buscar en Google.</p>
+                <div style="margin-top:0.85rem; padding:0.6rem 0.75rem; background:rgba(255,255,255,0.08); border-radius:7px; font-family:'Arial',sans-serif; font-size:0.75rem; color:rgba(255,255,255,0.75); line-height:1.5;"><strong style="color:var(--gold);">Impacto en visibilidad:</strong> si la IA no tiene señales suficientes sobre ti, no te menciona — aunque tengas el producto exacto que el comprador busca.</div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem;">
+            <p>El vocabulario que usas en tus plataformas — tu web, TripAdvisor, Google Business — alimenta <strong>ambas</strong> formas de búsqueda. El mismo trabajo sirve para los dos.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S16: SEO PARA OPERADORES DE NICHO -->
+<section class="bg-white" id="s20" data-section="20">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · SEO</div>
+        <h2 class="slide-title">El nicho es tu ventaja<br>en búsqueda</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Ser nicho es una ventaja real — "birdwatching tours Antioquia" es ganable. "tours Colombia" no lo es.</p>
+        <div class="two-col" style="gap:1rem;">
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">La lógica del nicho en búsqueda</div>
+                <ul>
+                    <li>Menos competencia en búsquedas específicas — un operador pequeño puede posicionarse</li>
+                    <li>Quien busca tu nicho exacto está más cerca de decidir</li>
+                    <li>El vocabulario CBI que leíste en la tarea es el mismo que usa el comprador para buscar</li>
+                    <li>Una búsqueda de nicho tiene tasa de conversión más alta que una genérica</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">Los 3 elementos de mayor impacto</div>
+                <ul>
+                    <li><strong>Título de página con palabras clave del nicho</strong> — no solo el nombre de tu empresa: "Community Coffee Tours Antioquia Colombia"</li>
+                    <li><strong>Texto descriptivo con vocabulario CBI</strong> — las palabras exactas que usa el mercado para buscar lo que ofreces</li>
+                    <li><strong>Presencia en plataformas reconocidas</strong> — TripAdvisor, Viator, o la plataforma específica de tu nicho (ATTA, Ethical Travel Portal)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-gold" style="margin-top:1rem;">
+            <p>Un perfil activo en una plataforma reconocida vale más que una web perfecta que Google no indexa. Empieza donde ya existe la audiencia.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S18: AIEO DEMO — cómo aprende la IA -->
+<section class="bg-white" id="s21" data-section="21">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · AIEO</div>
+        <h2 class="slide-title">¿Cómo sabe la IA<br>quién eres?</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle" id="aieoSubtitle">Cuatro fuentes. Un mismo operador. Esto es lo que lee y acumula la IA.</p>
+
+        <div class="aieo-src-grid" id="aieoGrid">
+            <div class="aieo-src-card">
+                <div class="aieo-src-tag">⭐ TripAdvisor · Reseña</div>
+                <p class="aieo-src-quote">"The guides had deep knowledge of bird species — we spotted over 80 in two days. Best eco-tour in the region."</p>
+            </div>
+            <div class="aieo-src-card">
+                <div class="aieo-src-tag">🌐 Tu sitio web</div>
+                <p class="aieo-src-quote">"Especialistas en aviturismo responsable en Antioquia. Guías locales certificados, trabajo comunitario directo."</p>
+            </div>
+            <div class="aieo-src-card">
+                <div class="aieo-src-tag">📰 Blog de viajero · Artículo</div>
+                <p class="aieo-src-quote">"One of Colombia's most respected responsible birdwatching operators — community-run, ethically operated."</p>
+            </div>
+            <div class="aieo-src-card">
+                <div class="aieo-src-tag">🗺️ Viator · Perfil</div>
+                <p class="aieo-src-quote">"Community Birdwatching Tours · Antioquia · ⭐ 5.0 · Eco-certified operator · 47 reviews"</p>
+            </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+            <button class="demo-btn primary" id="aieoRunBtn" onclick="runAieoDemo()">Ver cómo la IA procesa →</button>
+            <button class="demo-btn secondary" id="aieoResetBtn" onclick="resetAieoDemo()" style="display:none;">← Ver fuentes</button>
+        </div>
+
+        <div class="aieo-synthesis" id="aieoSynthesis">
+            <div class="aieo-brain">🤖</div>
+            <div class="aieo-infer-label">La IA infiere — con alta confianza:</div>
+            <div class="aieo-tags">
+                <span class="aieo-tag high">birdwatching <span class="aieo-conf">4 fuentes</span></span>
+                <span class="aieo-tag high">Colombia <span class="aieo-conf">4 fuentes</span></span>
+                <span class="aieo-tag high">eco-tour <span class="aieo-conf">3 fuentes</span></span>
+                <span class="aieo-tag mid">responsable <span class="aieo-conf">3 fuentes</span></span>
+                <span class="aieo-tag mid">comunidad <span class="aieo-conf">2 fuentes</span></span>
+                <span class="aieo-tag low">Antioquia <span class="aieo-conf">2 fuentes</span></span>
+            </div>
+            <div class="aieo-result">
+                Cuando alguien le pregunta a ChatGPT: <em>"¿cuál es el mejor operador de aviturismo responsable en Colombia?"</em> — este operador puede aparecer. Con una sola fuente, o con contenido disperso y poco específico, la IA no puede construir esa asociación aunque quiera.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S18: AIEO CONTENT -->
+<section class="bg-light" id="s22" data-section="22">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · AIEO</div>
+        <h2 class="slide-title">AIEO — visibilidad<br>en inteligencia artificial</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">AIEO: AI Engine Optimization — cómo los modelos de IA construyen su conocimiento sobre operadores turísticos.</p>
+        <div class="two-col" style="gap:1rem;">
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">Cómo aprende la IA sobre ti</div>
+                <ul>
+                    <li>Páginas web indexadas con texto claro y vocabulario específico</li>
+                    <li>Reseñas en plataformas reconocidas (TripAdvisor, Google, Viator)</li>
+                    <li>Menciones en medios especializados, blogs de viajeros, directorios de nicho</li>
+                    <li>Perfiles en plataformas B2B con descripción completa y vocabulario de nicho</li>
+                </ul>
+            </div>
+            <div class="detail-block">
+                <div style="font-family:'Arial',sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:0.5rem;">La ventaja del operador específico</div>
+                <ul>
+                    <li>Un operador con contenido específico en inglés tiene ventaja desproporcionada sobre uno genérico</li>
+                    <li>La IA recomienda lo que puede describir con confianza — la especificidad genera confianza</li>
+                    <li>Un perfil activo en Viator con vocabulario de birdwatching puede aparecer en respuestas de IA</li>
+                    <li>Sin eso, la IA no puede encontrarte aunque quiera</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p><strong>Acción mínima:</strong> vocabulario de tu nicho CBI en al menos una descripción visible — web, perfil de plataforma, lo que sea indexable. Presencia consistente antes que perfección lingüística.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S18: CHAT — ¿QUÉ ENCONTRÓ LA IA? -->
+<section class="interactive-slide" id="s23" data-section="23">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">🎤 Compartir · 3–4 personas</div>
+        <p class="interactive-question">"¿Qué encontró la IA cuando preguntaste por tu operación?"</p>
+        <span class="chat-icon">🤖</span>
+        <p class="interactive-instruction">3–4 participantes comparten en voz alta · El facilitador nota los patrones</p>
+        <div class="breakout-grid" style="margin-top:1.75rem;">
+            <div class="breakout-box">
+                <h4>Si la IA te conoce</h4>
+                <p>¿Qué dijo exactamente? ¿Coincide con tu posicionamiento? ¿Mencionó la parte responsable o comunitaria?</p>
+            </div>
+            <div class="breakout-box">
+                <h4>Si la IA no sabe nada</h4>
+                <p>¿Qué tiene tu operación en el idioma de tu comprador? ¿Estás en alguna plataforma indexable? Esas son las dos variables que cambian primero.</p>
+            </div>
+        </div>
+        <p class="interactive-instruction" style="opacity:0.65; margin-top:1.25rem; font-size:0.82rem;">Los que aparecen están haciendo algo bien que el resto puede copiar — ese es el punto del ejercicio</p>
+    </div>
+</section>
+
+
+<!-- ¿QUÉ HACEN VISIBLE OPERADORES SIMILARES? -->
+<section class="bg-white" id="s15" data-section="15">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · AUDITORÍA COMPETITIVA</div>
+        <h2 class="slide-title">¿Qué hacen visible<br>operadores similares?</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">La última pregunta de esta sección es la más incómoda: ¿qué tiene visible un competidor en tu nicho que tú todavía no tienes?</p>
+        <div class="workshop-box" style="margin-top:0.75rem;">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">1</div>
+                    <p><strong>Busca un operador similar en tu nicho</strong> — del mismo mercado o de otra región que trabaje el mismo segmento. No necesita ser tu competidor directo. Solo uno.</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">2</div>
+                    <p><strong>¿Qué tiene que tú no tienes visible?</strong> Certificaciones mostradas, claims específicos, número de comunidades, porcentajes, fotos con contexto, presencia en plataformas B2B.</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">3</div>
+                    <p><strong>Anota una sola cosa</strong> que ese operador hace visible y que tú podrías documentar o mostrar antes de mayo. Solo una — concreta y realizable.</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 4 minutos · Trabajo individual</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S19: LOS CANALES CORRECTOS -->
+<section class="bg-white" id="s24" data-section="24">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 3 · CANALES</div>
+        <h2 class="slide-title">Los canales correctos<br>para cada objetivo</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">B2C y B2B son dos audiencias distintas — el mismo canal no sirve para las dos.</p>
+        <div class="route-diagram">
+            <div class="route-origin">
+                <span class="origin-icon">🏔️</span>
+                <span class="origin-label">TÚ</span>
+            </div>
+            <div class="route-paths">
+                <div class="route-path b2c">
+                    <div class="route-type">B2C<br>Viajero final</div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-steps">
+                        <span class="route-step">Instagram · TikTok</span>
+                        <span class="route-step">Viator · TripAdvisor</span>
+                        <span class="route-step">Reserva directa</span>
+                    </div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-end">Viajero FIT</div>
+                </div>
+                <div class="route-path b2b">
+                    <div class="route-type">B2B<br>Intermediario EU</div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-steps">
+                        <span class="route-step">Presencia B2B</span>
+                        <span class="route-step">LinkedIn</span>
+                        <span class="route-step">Email directo</span>
+                        <span class="route-step">ATTA · Ethical Travel Portal</span>
+                    </div>
+                    <div class="route-arrow">→</div>
+                    <div class="route-end">Catálogo EU</div>
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:0.85rem; font-size:0.875rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;">
+                <p style="margin:0; font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;"><strong>El error más frecuente:</strong> construir solo la presencia B2C y no tener sección B2B en la web. Instagram llega al viajero final. El intermediario europeo va a tu web — busca condiciones, tarifas netas, ficha de producto. <strong>Confundir las dos audiencias en el mismo canal diluye ambos mensajes.</strong></p>
+            </div>
+            <a href="referencia-plataformas.html" target="_blank" style="font-family:'Arial Black',sans-serif; font-size:0.72rem; font-weight:900; background:var(--navy); color:white; padding:0.5rem 1.1rem; border-radius:7px; white-space:nowrap; flex-shrink:0; text-decoration:none; display:inline-block;">
+                referencia-plataformas →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- S20: DIVIDER BLOQUE 4 -->
+<section class="block-intro" id="s25" data-section="25" style="background-image:url('img/colombia_minca_marta.avif');">
+    <div class="slide-content" style="max-width:700px;">
+        <div class="bi-kicker">Bloque 4 · 10:15–10:55</div>
+        <div class="bi-rule"></div>
+        <h2 class="bi-title">Tu plan de acción<br>para mayo</h2>
+        <p class="bi-sub">De la brecha al paso concreto — hoy construimos la lista de reparaciones</p>
+    </div>
+    <div class="bi-num">4</div>
+</section>
+
+
+<!-- S21: LA BRECHA QUE IDENTIFICASTE HOY -->
+<section class="bg-white" id="s26" data-section="26">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · LAS TRES BRECHAS</div>
+        <h2 class="slide-title">La brecha que<br>identificaste hoy</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Tres superficies — tres oportunidades de reparación. Ninguna es un fracaso.</p>
+        <div class="indicator-grid" style="grid-template-columns: 1fr 1fr 1fr; margin-top:1rem;">
+            <div class="indicator-card">
+                <div class="indicator-num">01</div>
+                <div class="indicator-title">Reseñas</div>
+                <div class="indicator-quote">Tu posicionamiento responsable puede no aparecer en las palabras de tus viajeros — no porque sea falso, sino porque no llega al momento de la experiencia.</div>
+            </div>
+            <div class="indicator-card gold">
+                <div class="indicator-num">02</div>
+                <div class="indicator-title">Claims</div>
+                <div class="indicator-quote">Tus argumentos responsables pueden ser demasiado genéricos para que un comprador europeo los tome en serio — o estar en el canal equivocado para llegar a él.</div>
+            </div>
+            <div class="indicator-card navy">
+                <div class="indicator-num">03</div>
+                <div class="indicator-title">Visibilidad</div>
+                <div class="indicator-quote">Tu presencia digital puede no ser encontrable por los canales que usan los compradores europeos — ni en búsqueda humana ni en búsqueda por IA.</div>
+            </div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; font-size:0.875rem;">
+            <p>Estas tres brechas son <strong>problemas de traducción y de canal</strong>, no de producto. Tu operación ya tiene el contenido. La tarea es hacerlo legible para quien necesita leerlo. Eso es el plan de hoy.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- S25: BRECHA 01 · RESEÑAS -->
+<section class="bg-light" id="s27" data-section="27">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · BRECHA 01</div>
+        <div class="brecha-num teal">01</div>
+        <h2 class="slide-title" style="margin-top:0.1rem">Reseñas</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col" style="gap:1rem; margin-top:0.75rem;">
+            <div class="detail-block" style="background:var(--gold-light); border:1.5px solid var(--gold);">
+                <div class="diag-col-label prob">¿Qué puede estar pasando?</div>
+                <ul class="brecha-list prob">
+                    <li>Pocas reseñas — el comprador europeo no tiene señal suficiente para confiar en ti antes del primer contacto</li>
+                    <li>Las reseñas mencionan el guía y el paisaje, pero no tu diferencial responsable ni tu nicho</li>
+                    <li>Lo que para ti define tu operación — lo comunitario, lo ambiental — está ausente de las palabras de tus viajeros</li>
+                    <li>Las reseñas pueden estar en un idioma que el comprador B2B europeo no lee — o no hay suficientes para generar confianza</li>
+                </ul>
+            </div>
+            <div class="detail-block" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                <div class="diag-col-label task">Qué hacer antes de mayo</div>
+                <ul class="brecha-list">
+                    <li><strong>Implementa un proceso de solicitud de reseñas</strong> — momento concreto, canal específico, mensaje preparado. Hazlo sistemático.</li>
+                    <li>¿Tu operación nombra explícitamente su diferencial responsable durante la experiencia? ¿Cuándo y cómo?</li>
+                    <li>Tu restaurante sí usa insumos locales — ¿lo decís durante el servicio? Si no lo nombrás, el viajero tampoco lo escribirá.</li>
+                    <li>Identifica el momento exacto de la experiencia donde el nicho y la práctica responsable podrían nombrarse de forma natural.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S27b: BRECHA 01 · EJERCICIO MATCHING RESEÑAS -->
+<section class="bg-light" id="s27b" data-section="27b">
+    <div class="slide-content" style="display:flex; flex-direction:column; gap:0;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+                <div class="slide-label">BLOQUE 4 · BRECHA 01 · EJERCICIO</div>
+                <h2 class="slide-title">¿Cuál reseña<br>refuerza qué sección?</h2>
+            </div>
+            <div style="font-family:'Arial',sans-serif; font-size:0.75rem; color:var(--text-muted); max-width:320px; line-height:1.5; text-align:right; padding-top:0.5rem;">Mismo operador ficticio — tres secciones de su web, tres reseñas reales. Cada una encaja con exactamente una sección.</div>
+        </div>
+        <div class="accent-bar" style="margin-bottom:0.7rem;"></div>
+
+        <!-- SECTION CARDS (claims) -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.6rem; margin-bottom:0.55rem;">
+
+            <div id="sec1" style="border:1.5px solid var(--border); border-radius:10px; padding:0.8rem 0.9rem; background:white; transition:background 0.4s, border-color 0.4s;">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.58rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-muted); margin-bottom:0.2rem;">Sección del sitio</div>
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.82rem; color:var(--navy); margin-bottom:0.4rem; line-height:1.25;">Nuestro impacto</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.72rem; color:var(--text); line-height:1.5; font-style:italic; border-left:3px solid var(--border); padding-left:0.6rem; margin-bottom:0.4rem;">"El 40% del gasto de tu tour queda en la comunidad de Salento — podés conocer a las tres familias que participan."</div>
+                <div id="sec1-match" style="display:none; font-family:'Arial Black',sans-serif; font-size:0.65rem; color:var(--teal-dark); margin-top:0.2rem;">✓ Reseña A</div>
+            </div>
+
+            <div id="sec2" style="border:1.5px solid var(--border); border-radius:10px; padding:0.8rem 0.9rem; background:white; transition:background 0.4s, border-color 0.4s;">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.58rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-muted); margin-bottom:0.2rem;">Sección del sitio</div>
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.82rem; color:var(--navy); margin-bottom:0.4rem; line-height:1.25;">La experiencia</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.72rem; color:var(--text); line-height:1.5; font-style:italic; border-left:3px solid var(--border); padding-left:0.6rem; margin-bottom:0.4rem;">"Expertos locales en biodiversidad del Eje Cafetero. Caminadas diseñadas para dejar cero huella."</div>
+                <div id="sec2-match" style="display:none; font-family:'Arial Black',sans-serif; font-size:0.65rem; color:var(--navy); margin-top:0.2rem;">✓ Reseña B</div>
+            </div>
+
+            <div id="sec3" style="border:1.5px solid var(--border); border-radius:10px; padding:0.8rem 0.9rem; background:white; transition:background 0.4s, border-color 0.4s;">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.58rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-muted); margin-bottom:0.2rem;">Sección del sitio</div>
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.82rem; color:var(--navy); margin-bottom:0.4rem; line-height:1.25;">Por qué elegirnos</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.72rem; color:var(--text); line-height:1.5; font-style:italic; border-left:3px solid var(--border); padding-left:0.6rem; margin-bottom:0.4rem;">"Transparencia completa: tarifas netas, condiciones y destino de tu dinero — antes de reservar."</div>
+                <div id="sec3-match" style="display:none; font-family:'Arial Black',sans-serif; font-size:0.65rem; color:var(--gold-dark); margin-top:0.2rem;">✓ Reseña C</div>
+            </div>
+
+        </div>
+
+        <!-- REVEAL + DEMO BUTTONS -->
+        <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin:0.3rem 0 0.55rem;">
+            <button id="revealBtn" onclick="revelarMatch()" style="font-family:'Arial Black',sans-serif; font-size:0.72rem; font-weight:900; background:var(--navy); color:white; padding:0.45rem 1.4rem; border-radius:7px; border:none; cursor:pointer; letter-spacing:0.5px; transition:opacity 0.3s;">Revelar →</button>
+            <a href="demo-resenas-sitio.html" target="_blank" style="font-family:'Arial Black',sans-serif; font-size:0.72rem; font-weight:900; background:var(--teal); color:white; padding:0.45rem 1.1rem; border-radius:7px; text-decoration:none; display:inline-block; letter-spacing:0.5px;">Ver en sitio web →</a>
+        </div>
+
+        <!-- REVIEW CARDS -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.6rem;">
+
+            <div id="rev1" style="border:1.5px solid var(--border); border-radius:10px; padding:0.75rem 0.9rem; background:white; transition:background 0.4s, border-color 0.4s;">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.68rem; font-weight:900; color:var(--text-muted); margin-bottom:0.3rem;">Reseña A</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.73rem; color:var(--text); line-height:1.55; font-style:italic;">"Antes del tour nos explicaron exactamente a qué familia íbamos y por qué parte del pago queda en Salento. Nunca había tenido ese contexto en un tour."</div>
+                <div id="rev1-match" style="display:none; font-family:'Arial Black',sans-serif; font-size:0.65rem; color:var(--teal-dark); margin-top:0.4rem;">→ Nuestro impacto</div>
+            </div>
+
+            <div id="rev2" style="border:1.5px solid var(--border); border-radius:10px; padding:0.75rem 0.9rem; background:white; transition:background 0.4s, border-color 0.4s;">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.68rem; font-weight:900; color:var(--text-muted); margin-bottom:0.3rem;">Reseña B</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.73rem; color:var(--text); line-height:1.55; font-style:italic;">"El guía identificaba cada especie por nombre científico y nos enseñó a movernos sin dejar rastro. Completamente diferente a cualquier tour estándar."</div>
+                <div id="rev2-match" style="display:none; font-family:'Arial Black',sans-serif; font-size:0.65rem; color:var(--navy); margin-top:0.4rem;">→ La experiencia</div>
+            </div>
+
+            <div id="rev3" style="border:1.5px solid var(--border); border-radius:10px; padding:0.75rem 0.9rem; background:white; transition:background 0.4s, border-color 0.4s;">
+                <div style="font-family:'Arial Black',sans-serif; font-size:0.68rem; font-weight:900; color:var(--text-muted); margin-bottom:0.3rem;">Reseña C</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.73rem; color:var(--text); line-height:1.55; font-style:italic;">"Son honestos sobre lo que ofrecen y lo que no. Antes de pagar te explican todo. En Colombia, eso es muy difícil de encontrar."</div>
+                <div id="rev3-match" style="display:none; font-family:'Arial Black',sans-serif; font-size:0.65rem; color:var(--gold-dark); margin-top:0.4rem;">→ Por qué elegirnos</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- S26: BRECHA 02 · CLAIMS -->
+<section class="bg-light" id="s28" data-section="28">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · BRECHA 02</div>
+        <div class="brecha-num gold">02</div>
+        <h2 class="slide-title" style="margin-top:0.1rem">Claims</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col" style="gap:1rem; margin-top:0.75rem;">
+            <div class="detail-block" style="background:var(--gold-light); border:1.5px solid var(--gold);">
+                <div class="diag-col-label prob">¿Qué puede estar pasando?</div>
+                <ul class="brecha-list prob">
+                    <li>Tus argumentos son genéricos — "somos sostenibles", "trabajamos con la comunidad" — nadie puede verificarlos ni diferenciarte</li>
+                    <li>No has revisado los indicadores RTA para saber cuáles cumples — y por eso no los cuentas</li>
+                    <li>Tus claims están en tu web pero no en tus materiales B2B ni en las plataformas donde te busca el comprador</li>
+                    <li>Las prácticas responsables existen en tu operación, pero no están documentadas ni comunicadas</li>
+                </ul>
+            </div>
+            <div class="detail-block" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                <div class="diag-col-label task">Qué hacer antes de mayo</div>
+                <ul class="brecha-list">
+                    <li><strong>Regresa a la autoevaluación RTA.</strong> ¿Cuáles indicadores ya cumples? Esos son tus claims legítimos — empieza por documentarlos.</li>
+                    <li>Para cada práctica: ¿tienes una cifra, un nombre o una historia específica que la respalde? Si no, eso es lo que construyes.</li>
+                    <li>¿Qué claims querés poder hacer en mayo? ¿Qué necesitás implementar o documentar para llegar ahí?</li>
+                    <li>Escribe UNA frase específica y verificable que podrías añadir esta semana a tu descripción.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- S27: BRECHA 03 · VISIBILIDAD -->
+<section class="bg-light" id="s29" data-section="29">
+    <div class="slide-content">
+        <div class="slide-label">BLOQUE 4 · BRECHA 03</div>
+        <div class="brecha-num navy">03</div>
+        <h2 class="slide-title" style="margin-top:0.1rem">Visibilidad</h2>
+        <div class="accent-bar"></div>
+        <div class="two-col" style="gap:1rem; margin-top:0.75rem;">
+            <div class="detail-block" style="background:var(--gold-light); border:1.5px solid var(--gold);">
+                <div class="diag-col-label prob">¿Qué puede estar pasando?</div>
+                <ul class="brecha-list prob">
+                    <li>Tus perfiles cuentan historias distintas — la web dice una cosa, TripAdvisor otra, Instagram otra</li>
+                    <li>Ninguna plataforma tiene una descripción con el vocabulario específico de tu nicho donde el comprador te busca</li>
+                    <li>Google Business desactualizado, sin descripción actual, sin categoría que refleje lo que haces hoy</li>
+                    <li>La IA no tiene señales suficientes para asociarte con tu nicho — aunque tengas el producto</li>
+                </ul>
+            </div>
+            <div class="detail-block" style="background:var(--teal-light); border:1.5px solid var(--teal);">
+                <div class="diag-col-label task">Qué hacer antes de mayo</div>
+                <ul class="brecha-list">
+                    <li><strong>Elige UNA plataforma esta semana</strong> y actualiza: añade descripción con el vocabulario de tu nicho CBI — web, TripAdvisor, Google Business o Viator.</li>
+                    <li>Revisa la coherencia entre tus canales: ¿alguien que te busca en 3 plataformas llega a la misma conclusión sobre quién sos?</li>
+                    <li>Actualiza Google Business: fotos, categoría, descripción — que refleje tu operación hoy, no la de hace 3 años.</li>
+                    <li>Objetivo: que búsqueda humana y búsqueda por IA encuentren señales consistentes que te asocien con tu nicho.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="may-bridge">En mayo profundizamos en cada una de estas brechas — llegarás con las tres identificadas y, idealmente, con algo de avance concreto en al menos una. El módulo presencial construye sobre esta base, no desde cero.</div>
+    </div>
+</section>
+
+
+<!-- S22: TALLER — 3 ACCIONES -->
+<section class="bg-light" id="s30" data-section="30">
+    <div class="slide-content">
+        <div class="slide-label">TALLER · 10 MIN · Trabajo individual</div>
+        <h2 class="slide-title">Tu plan para mayo</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">Una pregunta por cada brecha. Escribe lo que tenga sentido para tu operación — no hay respuesta correcta.</p>
+        <div class="workshop-box">
+            <div class="workshop-questions">
+                <div class="workshop-q">
+                    <div class="q-number">1</div>
+                    <p><strong>Reseñas</strong> — ¿Qué harías diferente para que tus viajeros mencionen lo que más importa de tu operación?</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">2</div>
+                    <p><strong>Claims</strong> — ¿Qué es lo más específico y verificable que podrías empezar a decir sobre tu diferencial responsable?</p>
+                </div>
+                <div class="workshop-q">
+                    <div class="q-number">3</div>
+                    <p><strong>Visibilidad</strong> — ¿Dónde tiene más sentido que aparezcas con ese mensaje antes del 25 de mayo?</p>
+                </div>
+            </div>
+            <div class="timer-display">⏱ 10 minutos · Google Doc compartido</div>
+        </div>
+        <div class="callout callout-outline" style="margin-top:1rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;">
+                <p style="margin:0; font-family:'Arial',sans-serif; font-size:0.85rem; color:var(--text); line-height:1.6;">¿Buscás por dónde empezar? Esta herramienta lista acciones rápidas ordenadas por brecha — elegí las que tienen más sentido para tu operación.</p>
+            </div>
+            <a href="quick-wins.html" target="_blank" style="font-family:'Arial Black',sans-serif; font-size:0.72rem; font-weight:900; background:var(--navy); color:white; padding:0.5rem 1.1rem; border-radius:7px; white-space:nowrap; flex-shrink:0; text-decoration:none; display:inline-block;">
+                quick-wins →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- S23: PLENARIA -->
+<section class="interactive-slide" id="s31" data-section="31">
+    <div class="slide-content" style="text-align:center;">
+        <div class="interactive-badge">🎤 Plenaria · 2–3 participantes</div>
+        <p class="interactive-question">"Comparte una acción de tu plan — la más concreta que escribiste."</p>
+        <span class="chat-icon">📋</span>
+        <p class="interactive-instruction">Una acción · El facilitador extrae patrones · La especificidad es el único criterio</p>
+        <div class="breakout-grid" style="margin-top:1.75rem;">
+            <div class="breakout-box">
+                <h4>Quien comparte</h4>
+                <p>Lee tu acción tal como la escribiste — sin explicar ni justificar. Una frase.</p>
+            </div>
+            <div class="breakout-box">
+                <h4>El facilitador pregunta</h4>
+                <p><em>"¿Qué necesitas para que eso esté hecho antes del 25 de mayo?"</em></p>
+            </div>
+        </div>
+        <p class="interactive-instruction" style="opacity:0.6; margin-top:1.25rem; font-size:0.82rem;">Llegar a Medellín con algo ya hecho cambia completamente la sesión presencial</p>
+    </div>
+</section>
+
+
+<!-- TAREA: AUDITORÍA DE PRESENCIA DIGITAL -->
+<section class="bg-light" id="s_audit" data-section="s_audit">
+    <div class="slide-content">
+        <div class="slide-label">ANTES DEL MÓDULO 2 · TAREA INDIVIDUAL</div>
+        <h2 class="slide-title">Audita tu presencia<br>digital antes del 25 de mayo</h2>
+        <div class="accent-bar"></div>
+        <p class="slide-subtitle">La herramienta te guía por los cinco puntos que revisa un comprador europeo antes de decidir. Llegar con el diagnóstico hecho cambia la conversación presencial.</p>
+
+        <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:0.65rem; margin:1.25rem 0;">
+            <div style="text-align:center; padding:0.85rem 0.5rem; background:white; border:1.5px solid var(--border); border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+                <div style="font-size:1.4rem;">🌐</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; color:var(--navy); margin-top:0.35rem; line-height:1.3;">Web propia</div>
+            </div>
+            <div style="text-align:center; padding:0.85rem 0.5rem; background:white; border:1.5px solid var(--border); border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+                <div style="font-size:1.4rem;">🔍</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; color:var(--navy); margin-top:0.35rem; line-height:1.3;">Google Business</div>
+            </div>
+            <div style="text-align:center; padding:0.85rem 0.5rem; background:white; border:1.5px solid var(--border); border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+                <div style="font-size:1.4rem;">📱</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; color:var(--navy); margin-top:0.35rem; line-height:1.3;">Redes sociales</div>
+            </div>
+            <div style="text-align:center; padding:0.85rem 0.5rem; background:white; border:1.5px solid var(--border); border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+                <div style="font-size:1.4rem;">⭐</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; color:var(--navy); margin-top:0.35rem; line-height:1.3;">Reputación online</div>
+            </div>
+            <div style="text-align:center; padding:0.85rem 0.5rem; background:white; border:1.5px solid var(--border); border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+                <div style="font-size:1.4rem;">🔎</div>
+                <div style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; color:var(--navy); margin-top:0.35rem; line-height:1.3;">Visibilidad en búsqueda</div>
+            </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap; background:white; border:1.5px solid var(--teal); border-radius:12px; padding:1.1rem 1.25rem;">
+            <div style="flex:1; min-width:200px;">
+                <div style="font-family:'Arial',sans-serif; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); margin-bottom:0.3rem;">Compartirás los resultados en el módulo presencial</div>
+                <p style="margin:0; font-family:'Arial',sans-serif; font-size:0.82rem; color:var(--text); line-height:1.6;">Completá la auditoría con honestidad — no para mostrar una imagen perfecta, sino para identificar exactamente dónde está la brecha. Eso es el punto de partida para mayo.</p>
+            </div>
+            <a href="auditoria-presencia-digital.html" target="_blank" style="font-family:'Arial Black',sans-serif; font-size:0.78rem; font-weight:900; background:var(--teal); color:white; padding:0.75rem 1.4rem; border-radius:8px; white-space:nowrap; flex-shrink:0; text-decoration:none; display:inline-block; letter-spacing:0.2px;">
+                Abrir herramienta →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- S24: CIERRE -->
+<section class="closing-slide" id="s32" data-section="32">
+    <div class="slide-content" style="text-align:center;">
+        <div class="slide-label" style="color:var(--gold); letter-spacing:2px;">CIERRE · SESIÓN 2</div>
+        <h2 class="slide-title">Lo que construimos hoy</h2>
+        <div class="accent-bar" style="margin:1rem auto 1.25rem;"></div>
+        <div class="takeaways-list">
+            <div class="takeaway-item">
+                <span class="takeaway-num">1</span>
+                <p>Tu presencia digital no es lo que quieres mostrar — es lo que otros encuentran. Reseñas, resultados de búsqueda, respuestas de IA. El trabajo es <strong>reducir la brecha</strong> entre tu ideal y esa realidad.</p>
+            </div>
+            <div class="takeaway-item">
+                <span class="takeaway-num">2</span>
+                <p>Las prácticas responsables que no son visibles no cuentan para el comprador europeo. <strong>Especificidad + presencia + canales correctos</strong> = el diferencial llega. Sin eso, queda invisible.</p>
+            </div>
+            <div class="takeaway-item">
+                <span class="takeaway-num">3</span>
+                <p>Identificaste tu brecha principal y escribiste hacia dónde querés moverla. <strong>Avanza en algo concreto antes del 25 de mayo.</strong> En el presencial construimos sobre lo que ya hiciste.</p>
+            </div>
+        </div>
+        <div class="summary-promise">
+            <div class="sp-label">📊 Antes del Módulo 2 — tu diagnóstico personalizado</div>
+            <p>Recibirás un <strong style="color:white;">análisis de tu presencia digital</strong> — cómo apareces en búsqueda, qué sabe la IA sobre ti, y cómo te ubicas dentro de tu nicho frente a operadores similares. Para llegar a Medellín con un diagnóstico real en mano.</p>
+        </div>
+        <div class="next-box">
+            <div class="nxt-label">Módulo 2 · Presencial · Medellín</div>
+            <div class="nxt-title">Tu historia de venta y tu sistema de contactos</div>
+            <div class="nxt-time">Lunes 25 y martes 26 de mayo · Comfama</div>
+        </div>
+        <div style="margin-top:2rem; font-family:Arial,sans-serif; font-size:0.78rem; color:rgba(255,255,255,0.25);">Lo Responsable Vende · TRECC · Institut Français Colombia · 2026</div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('section[data-section]');
+
+    const SLIDE_SECTIONS = [
+        '',                       // 0: Portada
+        'Agenda',                 // 1: Agenda
+        'El recorrido',           // 2: El recorrido
+        'Apertura',               // 3: Activación (quiz recap)
+        'El enmarque',            // 4: Enmarque
+        'Presencia digital',      // 5: Las 4 capas (NUEVO)
+        'Bloque 1',               // 6: Divider B1
+        'B1 · Reseñas',           // 7: Reseñas como dato
+        'B1 · Demo',              // 8: Demo análisis reseñas
+        'B1 · Ejercicio',         // 9: Ejercicio Q1 (NUEVO)
+        'B1 · Ejercicio',         // 10: Ejercicio Q2 (NUEVO)
+        'B1 · Ejercicio',         // 11: Ejercicio Q3 (NUEVO)
+        'B1 · Herramienta',       // 12: Tool intro
+        'B1',                     // 13: Chat reflexión
+        'Bloque 2',               // 14: Divider B2
+        'B2 · Claims',            // 15: Claims reveal
+        'B2 · Herramienta',       // 16: Constructor claims RTA
+        'B2 · Canales',           // 17: ¿Dónde viven?
+        'B2 · Auditoría',         // 18: Auditoría rápida
+        'Bloque 3',               // 19: Divider B3
+        'B3 · Visibilidad',       // 20: Por qué aparecer
+        'B3 · SEO + AIEO',        // 21: Intro SEO y AIEO
+        'B3 · SEO',               // 22: SEO nicho
+        'B3 · AIEO',              // 23: AIEO demo
+        'B3 · AIEO',              // 24: AIEO contenido
+        'B3',                     // 25: Chat IA
+        'B3 · Competitiva',       // 26: ¿Qué hacen visible? (moved from B2)
+        'B3 · Canales',           // 27: Canales correctos
+        'Bloque 4',               // 28: Divider B4
+        'B4 · La brecha',         // 29: Las tres brechas
+        'B4 · Reseñas',           // 30: Brecha 01
+        'B4 · Reseñas · Usar',    // 31: Implementar reseñas
+        'B4 · Claims',            // 32: Brecha 02
+        'B4 · Visibilidad',       // 32: Brecha 03
+        'B4 · Taller',            // 33: Taller plan mayo
+        'B4 · Plenaria',          // 34: Plenaria
+        'Tarea · Auditoría',      // 35: Auditoría digital standalone
+        'Cierre'                  // 36: Cierre
+    ];
+
+    function goToSection(n) {
+        sections[n].scrollIntoView({ behavior: 'smooth' });
+        updateUI(n);
+    }
+
+    function navigate(dir) {
+        const next = currentSection + dir;
+        if (next >= 0 && next < sections.length) goToSection(next);
+    }
+
+    function updateUI(n) {
+        currentSection = n;
+        const lbl = document.getElementById('slideSection');
+        if (lbl) lbl.textContent = SLIDE_SECTIONS[n] || '';
+        document.getElementById('prevBtn').disabled = n === 0;
+        document.getElementById('nextBtn').disabled = n === sections.length - 1;
+        document.getElementById('slideCounter').textContent = (n + 1) + ' / ' + sections.length;
+    }
+
+    const sectionList = Array.from(sections);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                const n = sectionList.indexOf(entry.target);
+                if (n >= 0) updateUI(n);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(s => observer.observe(s));
+
+    function revelarMatch() {
+        const tl = 'var(--teal)', tlLight = 'var(--teal-light)', tlDark = 'var(--teal-dark)';
+        const nv = 'var(--navy)', nvLight = '#EEF1F7';
+        const gd = 'var(--gold)', gdLight = 'var(--gold-light)';
+        // Section 1 + Review A → teal
+        ['sec1','rev1'].forEach(id => {
+            document.getElementById(id).style.borderColor = 'var(--teal)';
+            document.getElementById(id).style.background = 'var(--teal-light)';
+        });
+        document.getElementById('sec1-match').style.display = 'block';
+        document.getElementById('rev1-match').style.display = 'block';
+        // Section 2 + Review B → navy
+        ['sec2','rev2'].forEach(id => {
+            document.getElementById(id).style.borderColor = 'var(--navy)';
+            document.getElementById(id).style.background = '#EEF1F7';
+        });
+        document.getElementById('sec2-match').style.display = 'block';
+        document.getElementById('rev2-match').style.display = 'block';
+        // Section 3 + Review C → gold
+        ['sec3','rev3'].forEach(id => {
+            document.getElementById(id).style.borderColor = 'var(--gold)';
+            document.getElementById(id).style.background = 'var(--gold-light)';
+        });
+        document.getElementById('sec3-match').style.display = 'block';
+        document.getElementById('rev3-match').style.display = 'block';
+        const btn = document.getElementById('revealBtn');
+        btn.textContent = 'Revelado ✓';
+        btn.disabled = true;
+        btn.style.opacity = '0.45';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+        if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+    });
+
+    // REVIEW DEMO ANIMATION
+    function runDemoAnalysis() {
+        const grid = document.getElementById('reviewGrid');
+        const synthesis = document.getElementById('demoSynthesis');
+        const btn = document.getElementById('demoAnalyzeBtn');
+        const resetBtn = document.getElementById('demoResetBtn');
+        const scanMsg = document.getElementById('demoScanMsg');
+        const subtitle = document.getElementById('demoSubtitle');
+
+        // Step 1: show scanning message
+        btn.style.display = 'none';
+        scanMsg.style.display = 'inline';
+
+        // Step 2: tag the cards after a short delay
+        setTimeout(() => {
+            grid.classList.add('tagged');
+        }, 900);
+
+        // Step 3: blur the grid and show synthesis
+        setTimeout(() => {
+            grid.classList.add('merging');
+            synthesis.classList.add('visible');
+            subtitle.textContent = 'Esto es lo que emerge. ¿Coincide con tu nicho declarado?';
+            // animate theme bars
+            document.querySelectorAll('.theme-bar-fill').forEach(bar => {
+                bar.style.width = bar.getAttribute('data-width');
+            });
+            scanMsg.style.display = 'none';
+            resetBtn.style.display = 'inline-flex';
+        }, 2000);
+    }
+
+    function resetDemo() {
+        const grid = document.getElementById('reviewGrid');
+        const synthesis = document.getElementById('demoSynthesis');
+        const btn = document.getElementById('demoAnalyzeBtn');
+        const resetBtn = document.getElementById('demoResetBtn');
+        const subtitle = document.getElementById('demoSubtitle');
+
+        grid.classList.remove('merging', 'tagged');
+        synthesis.classList.remove('visible');
+        document.querySelectorAll('.theme-bar-fill').forEach(bar => { bar.style.width = '0'; });
+        btn.style.display = 'inline-flex';
+        resetBtn.style.display = 'none';
+        subtitle.textContent = 'Un operador de turismo de naturaleza comunitario. 8 reseñas reales. ¿Qué ve el análisis — y qué no ve?';
+    }
+
+    // AIEO DEMO
+    function runAieoDemo() {
+        const grid = document.getElementById('aieoGrid');
+        const synthesis = document.getElementById('aieoSynthesis');
+        document.getElementById('aieoRunBtn').style.display = 'none';
+        document.getElementById('aieoResetBtn').style.display = 'inline-flex';
+        document.getElementById('aieoSubtitle').textContent = 'La IA consolida señales de múltiples fuentes. Cuantas más fuentes dicen lo mismo, mayor la confianza — y más probable la recomendación.';
+        setTimeout(() => { grid.classList.add('tagged'); }, 400);
+        setTimeout(() => { grid.classList.add('merging'); }, 1500);
+        setTimeout(() => { synthesis.classList.add('visible'); }, 2100);
+    }
+
+    function resetAieoDemo() {
+        const grid = document.getElementById('aieoGrid');
+        const synthesis = document.getElementById('aieoSynthesis');
+        grid.classList.remove('tagged', 'merging');
+        synthesis.classList.remove('visible');
+        document.getElementById('aieoRunBtn').style.display = 'inline-flex';
+        document.getElementById('aieoResetBtn').style.display = 'none';
+        document.getElementById('aieoSubtitle').textContent = 'Cuatro fuentes. Un mismo operador. Esto es lo que lee y acumula la IA.';
+    }
+
+    // REVEAL TABLE
+    function revealRow(el) {
+        el.classList.add('revealed');
+        el.textContent = '';
+        const hidden = el.nextElementSibling;
+        if (hidden) { hidden.style.display = 'inline'; hidden.style.color = 'var(--teal-dark)'; hidden.style.fontStyle = 'italic'; }
+    }
+
+    function revealAll() {
+        document.querySelectorAll('.reveal-mask:not(.revealed)').forEach(el => revealRow(el));
+    }
+</script>
+
+</body>
+</html>

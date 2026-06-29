@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gambia Institutional Capacity Workshop — Day 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink:    #E6007E;
+  --navy:    #1A2B4A;
+  --text:    #3D3D3D;
+  --muted:   #7A7A7A;
+  --surface: #F4F4F4;
+  --accent:  #0091D4;
+  --bg:      #ffffff;
+  --bdr:     #E2E2E2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bdr); z-index: 100; padding: .8rem 2rem;
+}
+.nav-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-weight: 700; font-size: .88rem; color: var(--navy); }
+.nav-badge { background: var(--navy); color: #fff; padding: .25rem .9rem; border-radius: 20px; font-size: .71rem; font-weight: 600; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed; left: 1.4rem; top: 50%; transform: translateY(-50%);
+  z-index: 99; display: flex; flex-direction: column; gap: .42rem;
+  max-height: 90vh; overflow-y: auto; padding: .4rem 0;
+}
+.sidebar::-webkit-scrollbar { width: 0; }
+.sb-item { display: flex; align-items: center; gap: .55rem; cursor: pointer; transition: all .22s; }
+.sb-item:hover { transform: scale(1.1); }
+.sb-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--bdr); transition: all .22s; }
+.sb-item:hover  .sb-dot { background: var(--pink); transform: scale(1.4); }
+.sb-item.active .sb-dot { background: var(--pink); width: 11px; height: 11px; min-width: 11px; }
+.sb-label { font-size: .67rem; color: var(--muted); font-weight: 500; transition: all .22s; max-width: 115px; line-height: 1.3; }
+.sb-item:hover  .sb-label { color: var(--text); font-weight: 600; }
+.sb-item.active .sb-label { color: var(--pink); font-weight: 700; }
+.sb-sep { height: 1px; background: var(--bdr); margin: .1rem 0; }
+.sb-group { font-size: .55rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; padding-left: 1.2rem; font-weight: 700; }
+
+/* ── NAV BUTTONS ── */
+.nav-btns { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: .7rem; z-index: 98; }
+.nav-btn {
+  padding: .72rem 1.5rem; background: var(--pink); color: #fff;
+  border: none; border-radius: 8px; font-size: .88rem; cursor: pointer;
+  display: flex; align-items: center; gap: .4rem;
+  transition: all .22s; box-shadow: 0 2px 10px rgba(230,0,126,.22);
+  font-family: inherit; font-weight: 600;
+}
+.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(230,0,126,.32); }
+.nav-btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
+.nav-btn.prev { background: #fff; color: var(--text); border: 2px solid var(--bdr); box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.nav-btn.prev:hover { box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+
+/* ── SECTIONS ── */
+section { height: 100vh; padding: 5rem 2rem 7.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.wrap { max-width: 960px; width: 100%; }
+.bg-surface { background: var(--surface); }
+
+/* ── TYPOGRAPHY ── */
+.eyebrow { font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--pink); margin-bottom: .75rem; }
+.h1 { font-size: 2.5rem; font-weight: 900; line-height: 1.15; color: var(--navy); margin-bottom: .7rem; }
+.h2 { font-size: 1.75rem; font-weight: 800; color: var(--navy); margin-bottom: .45rem; }
+.lead { font-size: 1.05rem; color: var(--text); line-height: 1.65; }
+.pink-rule { height: 4px; width: 52px; background: var(--pink); border-radius: 2px; margin-bottom: 1.4rem; }
+
+/* ── L1 COVER ── */
+.cover { position: relative; color: #fff; text-align: center; overflow: hidden; }
+.cover-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.cover-bg::after { content: ''; position: absolute; inset: 0; background: rgba(26,43,74,.82); }
+.cover .wrap { position: relative; z-index: 1; }
+.cover .h1 { color: #fff; font-size: 2.8rem; }
+.cover-accent { width: 52px; height: 3px; background: var(--pink); border-radius: 2px; margin: 1.4rem auto; }
+.cover-badge {
+  display: inline-block; background: rgba(230,0,126,.22); color: var(--pink);
+  border: 1px solid rgba(230,0,126,.4); padding: .3rem 1rem; border-radius: 20px;
+  font-size: .73rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1.5rem;
+}
+.cover-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: .88rem; color: rgba(255,255,255,.5); margin-top: 1.5rem; }
+
+/* ── L2 DIVIDER ── */
+.divider { background: var(--navy); text-align: center; color: #fff; position: relative; overflow: hidden; }
+.divider .eyebrow { color: var(--pink); margin-bottom: 1rem; }
+.divider .h1 { color: #fff; font-size: 2.5rem; max-width: 680px; margin: 0 auto .75rem; }
+.divider .sub-text { font-size: 1.1rem; color: rgba(255,255,255,.6); max-width: 540px; margin: 0 auto; line-height: 1.65; }
+.divider-deco { font-size: 9rem; font-weight: 900; color: rgba(255,255,255,.04); position: absolute; right: 8%; top: 50%; transform: translateY(-50%); line-height: 1; pointer-events: none; }
+
+/* ── PHOTO SECTION ── */
+.photo-section { position: relative; color: #fff; overflow: hidden; }
+.photo-section .photo-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.photo-section .photo-overlay { position: absolute; inset: 0; background: rgba(26,43,74,.72); z-index: 1; }
+.photo-section .wrap { position: relative; z-index: 2; }
+
+/* ── L3 CONTENT + IMAGE ── */
+.content-img { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.text-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .85rem; margin: .85rem 0; }
+.text-col ul li { font-size: 1rem; color: var(--text); line-height: 1.6; padding-left: 1.2rem; position: relative; }
+.text-col ul li::before { content: '—'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+.photo-real { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.15); }
+.photo-real img { width: 100%; height: 320px; object-fit: cover; display: block; }
+
+/* ── GRID ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin: .75rem 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: .9rem; margin: .85rem 0; }
+
+/* ── CARDS ── */
+.card { background: #fff; border-radius: 10px; padding: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,.07); border-top: 4px solid var(--bdr); }
+.card.card-pink  { border-top-color: var(--pink); }
+.card.card-navy  { border-top-color: var(--navy); }
+.card.card-accent { border-top-color: var(--accent); }
+.card h4 { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
+.card p  { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+.card-label { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+
+/* ── L7 QUOTE ── */
+.quote-slide { background: var(--navy); text-align: center; }
+.big-quote { font-size: 1.95rem; font-weight: 800; line-height: 1.35; color: #fff; max-width: 700px; margin: 0 auto 1rem; }
+.big-quote em { color: var(--pink); font-style: normal; }
+.quote-rule { width: 48px; height: 3px; background: rgba(255,255,255,.2); border-radius: 2px; margin: 1.4rem auto; }
+.quote-body { font-size: 1.1rem; color: rgba(255,255,255,.65); max-width: 520px; margin: .75rem auto 0; line-height: 1.65; }
+
+/* ── L9 EXERCISE ── */
+.exercise-card { background: #fff; border-radius: 12px; border: 2px solid var(--pink); overflow: hidden; }
+.exercise-header { background: var(--pink); color: #fff; padding: .7rem 1.4rem; display: flex; align-items: center; gap: .75rem; }
+.exercise-icon { font-size: 1.15rem; }
+.exercise-header h3 { font-size: .95rem; font-weight: 700; }
+.exercise-time { font-size: .76rem; opacity: .85; margin-left: auto; white-space: nowrap; }
+.exercise-body { padding: 1.3rem 1.5rem; }
+.exercise-scenario { background: var(--surface); border-radius: 8px; padding: .9rem 1.1rem; font-size: .95rem; font-style: italic; color: var(--text); margin-bottom: 1rem; line-height: 1.6; }
+.exercise-steps { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .7rem; }
+.exercise-steps li { display: flex; gap: .85rem; align-items: flex-start; font-size: .95rem; color: var(--text); line-height: 1.55; }
+.step-num { min-width: 24px; height: 24px; border-radius: 50%; background: var(--navy); color: #fff; font-size: .72rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: .1rem; }
+.exercise-alt { margin-top: .9rem; padding: .65rem .9rem; background: var(--surface); border-radius: 7px; font-size: .84rem; color: var(--muted); line-height: 1.55; border-left: 3px solid var(--muted); }
+
+/* ── L10 3-STEP ── */
+.steps-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 1.25rem 0; position: relative; }
+.steps-row::before { content: ''; position: absolute; top: 42px; left: 14%; right: 14%; height: 2px; background: var(--bdr); z-index: 0; }
+.step-item { text-align: center; padding: 1.2rem .75rem .8rem; background: var(--surface); border-radius: 10px; position: relative; z-index: 1; margin: 0 .3rem; }
+.step-num-lg { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; font-size: .85rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto .7rem; }
+.step-item.step-pink .step-num-lg { background: var(--pink); }
+.step-item h4 { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
+.step-item p { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+
+/* ── NOTE BOXES ── */
+.note-box { background: var(--surface); border-left: 3px solid var(--bdr); border-radius: 7px; padding: .8rem 1.1rem; font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.note-box.nb-pink { border-left-color: var(--pink); background: #FFF0F7; color: var(--text); }
+
+/* ── BROWSER MOCKUP ── */
+.browser-mock { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.15); border: 1px solid var(--bdr); background: #fff; }
+.browser-bar { background: #F0F0F0; border-bottom: 1px solid var(--bdr); padding: .55rem .85rem; display: flex; align-items: center; gap: .75rem; }
+.browser-dots { display: flex; gap: .35rem; }
+.browser-dots span { width: 10px; height: 10px; border-radius: 50%; background: #D8D8D8; display: block; }
+.browser-dots span:nth-child(1) { background: #FF5F57; }
+.browser-dots span:nth-child(2) { background: #FEBC2E; }
+.browser-dots span:nth-child(3) { background: #28C840; }
+.browser-url { background: #fff; border: 1px solid var(--bdr); border-radius: 5px; padding: .22rem .65rem; font-size: .72rem; color: var(--muted); flex: 1; max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.browser-content img { width: 100%; display: block; max-height: 270px; object-fit: cover; object-position: top; }
+
+/* ── CATEGORY TILES ── */
+.cat-tiles { display: flex; gap: .85rem; margin: 1rem 0; }
+.cat-tile { flex: 1; border-radius: 10px; padding: 1.1rem 1.25rem; text-align: center; }
+.cat-tile h4 { font-size: .95rem; font-weight: 800; margin-bottom: .3rem; }
+.cat-tile p { font-size: .82rem; line-height: 1.45; }
+.ct-navy  { background: var(--navy); color: #fff; }
+.ct-navy p { color: rgba(255,255,255,.7); }
+.ct-pink  { background: var(--pink); color: #fff; }
+.ct-pink p { color: rgba(255,255,255,.8); }
+.ct-accent { background: var(--accent); color: #fff; }
+.ct-accent p { color: rgba(255,255,255,.8); }
+.ct-surface { background: var(--surface); color: var(--navy); border: 1px solid var(--bdr); }
+.ct-surface p { color: var(--muted); }
+
+/* ── COMMITMENT BOARD ── */
+.board-cols { display: grid; gap: .75rem; margin: 1rem 0; }
+.board-cols-4 { grid-template-columns: repeat(4,1fr); }
+.board-col { background: #fff; border-radius: 10px; border-top: 4px solid var(--bdr); padding: 1rem 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.board-col.bc-navy  { border-top-color: var(--navy); }
+.board-col.bc-acnt  { border-top-color: var(--accent); }
+.board-col.bc-green { border-top-color: #22A860; }
+.board-col.bc-red   { border-top-color: var(--pink); }
+.bc-label { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .4rem; }
+.bc-navy  .bc-label { color: var(--navy); }
+.bc-acnt  .bc-label { color: var(--accent); }
+.bc-green .bc-label { color: #22A860; }
+.bc-red   .bc-label { color: var(--pink); }
+.bc-desc { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+.bc-empty { min-height: 90px; border: 2px dashed var(--bdr); border-radius: 6px; margin-top: .6rem; }
+
+/* ── KPI TABLE ── */
+.kpi-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.kpi-table th { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: .65rem 1rem; border-bottom: 2px solid var(--bdr); text-align: left; background: var(--surface); }
+.kpi-table td { font-size: .92rem; padding: .65rem 1rem; border-bottom: 1px solid var(--bdr); color: var(--text); }
+.kpi-table tr:last-child td { border-bottom: none; }
+.kpi-col-target { color: var(--pink) !important; font-weight: 700; }
+
+/* ── TIER TABLE ── */
+.tier-table { display: flex; flex-direction: column; gap: .6rem; margin: .9rem 0; }
+.tier-row { display: grid; grid-template-columns: 160px 1fr; gap: .85rem; align-items: start; background: #fff; border-radius: 10px; padding: .9rem 1.1rem; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.tier-label { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; line-height: 1.4; }
+.tier-content { font-size: .9rem; color: var(--text); line-height: 1.6; }
+
+/* ── FACILITATOR SYNTHESIS ── */
+.synthesis-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin: 1.1rem 0; }
+.synthesis-card { border-radius: 12px; border: 2px dashed var(--bdr); padding: 1.25rem 1.4rem; min-height: 170px; display: flex; flex-direction: column; }
+.synthesis-card-label { font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); padding-bottom: .5rem; border-bottom: 2px solid var(--bdr); }
+
+/* ── AGREE ITEMS ── */
+.agree-items { display: flex; flex-direction: column; gap: .9rem; margin: 1.25rem 0; }
+.agree-item { display: flex; gap: 1rem; align-items: flex-start; background: #fff; border-radius: 10px; padding: 1rem 1.25rem; box-shadow: 0 2px 6px rgba(0,0,0,.06); border-left: 4px solid var(--navy); }
+.agree-item.ai-pink { border-left-color: var(--pink); }
+.agree-num { font-size: 1.6rem; font-weight: 900; color: var(--bdr); min-width: 2rem; line-height: 1; margin-top: .1rem; }
+.agree-item h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
+.agree-item p { font-size: .9rem; color: var(--muted); line-height: 1.5; }
+
+/* ── DISCUSSION PROMPTS ── */
+.discussion-prompts { display: flex; flex-direction: column; gap: .65rem; margin: .9rem 0; }
+.discussion-prompt { background: var(--surface); border-radius: 8px; padding: .85rem 1.1rem; font-size: .95rem; color: var(--text); line-height: 1.6; border-left: 3px solid var(--navy); }
+.discussion-prompt:first-child { border-left-color: var(--pink); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px) {
+  .content-img { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; gap: .5rem; }
+  .steps-row::before { display: none; }
+  .sidebar { display: none; }
+  .nav-btns { bottom: 1.25rem; right: 1.25rem; left: 1.25rem; justify-content: space-between; }
+  .h1 { font-size: 1.75rem; }
+  .cover .h1 { font-size: 2rem; }
+  section { padding: 4.5rem 1.25rem 7rem; }
+  .cat-tiles { flex-direction: column; }
+  .board-cols-4 { grid-template-columns: 1fr 1fr; }
+  .synthesis-cards, .grid-3 { grid-template-columns: 1fr; }
+  .tier-row { grid-template-columns: 1fr; }
+}
+html { scroll-behavior: smooth; scroll-padding-top: 75px; }
+</style>
+</head>
+<body>
+<div id="app">
+
+<nav>
+<div class="nav-content">
+  <div class="nav-logo">Gambia Institutional Capacity Workshop</div>
+  <div class="nav-badge">Day 2 · ITC YEP · Banjul · May 2026</div>
+</div>
+</nav>
+
+<div class="sidebar">
+  <div class="sb-group">Opening</div>
+  <div class="sb-item active" onclick="go(0)"><div class="sb-dot"></div><span class="sb-label">Cover</span></div>
+  <div class="sb-item" onclick="go(1)"><div class="sb-dot"></div><span class="sb-label">What we agreed</span></div>
+  <div class="sb-item" onclick="go(2)"><div class="sb-dot"></div><span class="sb-label">Arc of today</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Block 4 · Track + Coordinate</div>
+  <div class="sb-item" onclick="go(4)"><div class="sb-dot"></div><span class="sb-label">Block 4 intro</span></div>
+  <div class="sb-item" onclick="go(6)"><div class="sb-dot"></div><span class="sb-label">Three questions</span></div>
+  <div class="sb-item" onclick="go(7)"><div class="sb-dot"></div><span class="sb-label">Three tools</span></div>
+  <div class="sb-item" onclick="go(11)"><div class="sb-dot"></div><span class="sb-label">Crisis + governance</span></div>
+  <div class="sb-item" onclick="go(13)"><div class="sb-dot"></div><span class="sb-label">KPI + sharing</span></div>
+  <div class="sb-item" onclick="go(15)"><div class="sb-dot"></div><span class="sb-label">Monitoring together</span></div>
+  <div class="sb-item" onclick="go(16)"><div class="sb-dot"></div><span class="sb-label">Coordination call</span></div>
+  <div class="sb-item" onclick="go(17)"><div class="sb-dot"></div><span class="sb-label">Who convenes</span></div>
+  <div class="sb-item" onclick="go(18)"><div class="sb-dot"></div><span class="sb-label">Activity: checklist</span></div>
+  <div class="sb-item" onclick="go(20)"><div class="sb-dot"></div><span class="sb-label">Activity: indicators</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Block 5 · Commitments</div>
+  <div class="sb-item" onclick="go(22)"><div class="sb-dot"></div><span class="sb-label">Block 5 intro</span></div>
+  <div class="sb-item" onclick="go(23)"><div class="sb-dot"></div><span class="sb-label">Facilitator synthesis</span></div>
+  <div class="sb-item" onclick="go(25)"><div class="sb-dot"></div><span class="sb-label">30-day commitments</span></div>
+  <div class="sb-item" onclick="go(27)"><div class="sb-dot"></div><span class="sb-label">Coordination amplifies</span></div>
+  <div class="sb-item" onclick="go(29)"><div class="sb-dot"></div><span class="sb-label">Appetite for more</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Close</div>
+  <div class="sb-item" onclick="go(31)"><div class="sb-dot"></div><span class="sb-label">Maintain momentum</span></div>
+  <div class="sb-item" onclick="go(32)"><div class="sb-dot"></div><span class="sb-label">One word</span></div>
+  <div class="sb-item" onclick="go(33)"><div class="sb-dot"></div><span class="sb-label">Thank you</span></div>
+</div>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 0 · COVER                           -->
+<!-- ═══════════════════════════════════ -->
+<section class="cover" data-s="0">
+<div class="cover-bg" style="background-image:url('img/aboodi-vesakaran.jpg');"></div>
+<div class="wrap">
+  <div class="cover-badge">Day 2 of 2</div>
+  <div class="cover-accent"></div>
+  <h1 class="h1">Tracking Progress &amp;<br>Institutional Coordination</h1>
+  <p style="color:rgba(255,255,255,.65);font-size:1.05rem;max-width:480px;margin:.65rem auto 0;">Institutional Capacity Workshop · ITC EU Youth Empowerment Project</p>
+  <div class="cover-meta">
+    <span>Banjul, The Gambia</span>
+    <span>May 2026</span>
+    <span>8:30 – 13:00</span>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 1 · WHAT WE AGREED YESTERDAY       -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="1">
+<div class="wrap">
+  <div class="eyebrow">Yesterday's commitments</div>
+  <h2 class="h2">What we agreed on Day 1</h2>
+  <p class="lead" style="margin-bottom:1.5rem;max-width:640px;">Your commitment cards are organised around four themes. Today we return to them — to confirm, refine, and coordinate.</p>
+  <div class="cat-tiles">
+    <div class="cat-tile ct-navy">
+      <h4>Monitor</h4>
+      <p>Track what the world sees about The Gambia — consistently, not occasionally</p>
+    </div>
+    <div class="cat-tile ct-accent">
+      <h4>Make findable</h4>
+      <p>Ensure your sector and members are discoverable on the platforms visitors use</p>
+    </div>
+    <div class="cat-tile ct-surface">
+      <h4>Open a door</h4>
+      <p>Connect one Gambian operator to one international platform or buyer</p>
+    </div>
+    <div class="cat-tile ct-pink">
+      <h4>Share + coordinate</h4>
+      <p>Share what you observe with other institutions and act on it together</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 2 · ARC OF TODAY                   -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="2">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Today's arc</div>
+      <h2 class="h2">From individual action to shared momentum</h2>
+      <div class="pink-rule"></div>
+      <p style="font-size:1rem;color:var(--text);line-height:1.65;margin-bottom:1rem;"><strong>Yesterday</strong> was about what exists and what each of you can do — individually, within your mandate, with free tools.</p>
+      <p style="font-size:1rem;color:var(--text);line-height:1.65;"><strong>Today</strong> is about two things: how you know it's working, and where doing this <em style="font-style:normal;color:var(--pink);font-weight:700;">together</em> produces more than doing it separately.</p>
+    </div>
+    <div>
+      <div class="grid-2" style="margin-top:0;">
+        <div class="card card-navy" style="padding:1.4rem;">
+          <div class="card-label" style="margin-bottom:.5rem;color:rgba(255,255,255,.45);">Morning</div>
+          <h4 style="color:#fff;">Block 4</h4>
+          <p style="color:rgba(255,255,255,.65);">Track + Coordinate<br>9:00 – 10:30</p>
+        </div>
+        <div class="card card-pink" style="padding:1.4rem;">
+          <div class="card-label" style="margin-bottom:.5rem;color:rgba(255,255,255,.55);">After break</div>
+          <h4 style="color:#fff;">Block 5</h4>
+          <p style="color:rgba(255,255,255,.75);">Commitments<br>10:45 – 12:45</p>
+        </div>
+        <div class="card" style="padding:1.4rem;grid-column:1/-1;">
+          <div class="card-label" style="margin-bottom:.5rem;">Before you leave</div>
+          <h4>Three agreements</h4>
+          <p>Date · Convener · Format — the minimum viable coordination mechanism</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 3 · TODAY'S PROGRAMME              -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="3">
+<div class="wrap">
+  <div class="eyebrow">Friday · 8:30 – 13:00</div>
+  <h2 class="h2">Programme for today</h2>
+  <div class="tier-table" style="margin-top:1.2rem;">
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--muted);">8:30 – 9:00</div>
+      <div class="tier-content">Opening — recap of Day 1 commitments, arc of today</div>
+    </div>
+    <div class="tier-row" style="border-left:4px solid var(--navy);">
+      <div class="tier-label" style="color:var(--navy);">9:00 – 10:30</div>
+      <div class="tier-content"><strong>Block 4 · Track + Coordinate</strong> — monitoring framework, KPI baseline, quarterly coordination call, activity: draft your indicators</div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--muted);">10:30 – 10:45</div>
+      <div class="tier-content">Break</div>
+    </div>
+    <div class="tier-row" style="border-left:4px solid var(--pink);">
+      <div class="tier-label" style="color:var(--pink);">10:45 – 12:45</div>
+      <div class="tier-content"><strong>Block 5 · Commitments and Coordination</strong> — facilitator synthesis, 30-day commitments, minimum viable mechanism</div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--muted);">12:45 – 13:00</div>
+      <div class="tier-content">Close — one word round the room</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 4 · BLOCK 4 DIVIDER                -->
+<!-- ═══════════════════════════════════ -->
+<section class="divider" data-s="4">
+<div class="divider-deco">4</div>
+<div class="wrap">
+  <div class="eyebrow">Block 4</div>
+  <h1 class="h1">Tracking and<br>Coordination</h1>
+  <p class="sub-text">A simple check done consistently is more valuable than a comprehensive study done once every two years.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 5 · PULL QUOTE: ROUTINE BEATS      -->
+<!-- ═══════════════════════════════════ -->
+<section class="quote-slide" data-s="5">
+<div class="wrap" style="text-align:center;">
+  <div class="quote-rule"></div>
+  <p class="big-quote">"Routine beats <em>sophistication.</em>"</p>
+  <div class="quote-rule"></div>
+  <p class="quote-body">The goal is awareness, not analysis.<br>Three questions. Monthly. Shared.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 6 · THREE MONITORING QUESTIONS     -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="6">
+<div class="wrap">
+  <div class="eyebrow">The monitoring routine</div>
+  <h2 class="h2">Three questions a monitoring routine answers</h2>
+  <div class="steps-row" style="margin-top:1.5rem;">
+    <div class="step-item">
+      <div class="step-num-lg">1</div>
+      <h4>Are we being found?</h4>
+      <p>By the right audiences, on the platforms they use to plan and book</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num-lg">2</div>
+      <h4>Right experience?</h4>
+      <p>Are visitors having the experience we want them to have and report?</p>
+    </div>
+    <div class="step-item step-pink">
+      <div class="step-num-lg">3</div>
+      <h4>Improving over time?</h4>
+      <p>Consistency is where the value builds — <em style="font-style:normal;color:var(--pink);">over time</em> is where it compounds</p>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="margin-top:1.25rem;">These aren't reporting questions. They're the questions that tell you whether your actions are working.</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 7 · THREE TOOLS OVERVIEW           -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="7">
+<div class="wrap">
+  <div class="eyebrow">A simple monitoring framework</div>
+  <h2 class="h2">Three tools. Three habits. All free.</h2>
+  <div class="grid-3" style="margin-top:1.25rem;">
+    <div class="card card-navy">
+      <div class="card-label" style="margin-bottom:.4rem;color:rgba(255,255,255,.45);">Quarterly</div>
+      <h4 style="color:#fff;">Operator catalogue check</h4>
+      <p style="color:rgba(255,255,255,.65);">Visit 10 key operators selling The Gambia — same ones each quarter. Note what they feature and how your sector appears.</p>
+      <p style="margin-top:.65rem;font-size:.82rem;color:rgba(255,255,255,.4);">2 hours / quarter</p>
+    </div>
+    <div class="card card-accent">
+      <div class="card-label" style="margin-bottom:.4rem;color:rgba(255,255,255,.55);">Monthly</div>
+      <h4 style="color:#fff;">Review sentiment scan</h4>
+      <p style="color:rgba(255,255,255,.7);">Read the 20 most recent TripAdvisor reviews. Note recurring themes — positive and negative. Track the direction of travel.</p>
+      <p style="margin-top:.65rem;font-size:.82rem;color:rgba(255,255,255,.4);">1 hour / month</p>
+    </div>
+    <div class="card card-pink">
+      <div class="card-label" style="margin-bottom:.4rem;color:rgba(255,255,255,.55);">Annual</div>
+      <h4 style="color:#fff;">Benchmarking snapshot</h4>
+      <p style="color:rgba(255,255,255,.75);">Once a year: assess The Gambia's digital presence using the same D1 dimensions. The baselines are your Year 1 starting point.</p>
+      <p style="margin-top:.65rem;font-size:.82rem;color:rgba(255,255,255,.4);">Half a day / year</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 8 · TOOL 1: QUARTERLY CATALOGUE    -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="8">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Tool 1 · Quarterly</div>
+      <h2 class="h2">Operator catalogue check</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>Visit the websites of <strong>10 key operators</strong> selling The Gambia — same 10 each quarter</li>
+        <li>Note: How is The Gambia described? Which experiences are featured? What images are used? Is your sector present?</li>
+        <li>Record in a simple shared spreadsheet. Compare quarter-on-quarter.</li>
+        <li>Flag anything that misrepresents The Gambia's offer or excludes your sector</li>
+      </ul>
+      <div class="note-box" style="margin-top:1rem;"><strong>Time required:</strong> 2 hours per quarter. One person can run this for all institutions.</div>
+    </div>
+    <div>
+      <div class="card card-navy" style="margin-bottom:.75rem;">
+        <div class="card-label" style="margin-bottom:.4rem;color:rgba(255,255,255,.45);">What to record</div>
+        <h4 style="color:#fff;">Four questions per operator</h4>
+        <p style="color:rgba(255,255,255,.65);">How is Gambia described? What's featured? What images? Is your sector there?</p>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label" style="margin-bottom:.4rem;color:rgba(255,255,255,.55);">What changes over time</div>
+        <h4 style="color:#fff;">Track direction, not perfection</h4>
+        <p style="color:rgba(255,255,255,.7);">Are descriptions improving? Is creative tourism appearing more? The trend matters more than any single snapshot.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 9 · TOOL 2: MONTHLY SENTIMENT SCAN -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="9">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Tool 2 · Monthly</div>
+      <h2 class="h2">Review sentiment scan</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>Read the <strong>20 most recent TripAdvisor reviews</strong> for The Gambia destination page and 2–3 key attractions</li>
+        <li>Note recurring themes — both positive and negative</li>
+        <li>Flag anything requiring a response: below 3 stars, specific complaint, or factual error</li>
+        <li>Track direction: <em style="font-style:normal;font-weight:700;color:var(--pink);">improving / stable / declining</em></li>
+      </ul>
+      <div class="note-box" style="margin-top:1rem;"><strong>Time required:</strong> 1 hour per month. The Gambia's average sentiment score is currently +0.24 — a ready-made baseline to track against.</div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">tripadvisor.com · The Gambia destination</div>
+        </div>
+        <div class="browser-content">
+          <img src="img/tripadvisor_gambia_top9.png" alt="TripAdvisor Top 9 Gambia">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 10 · TOOL 3: ANNUAL BENCHMARKING   -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="10">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Tool 3 · Annual</div>
+      <h2 class="h2">Annual benchmarking snapshot</h2>
+      <div class="pink-rule"></div>
+      <ul>
+        <li>Once a year: assess The Gambia's digital presence using the <strong>same D1 dimensions</strong> — social media activity, website currency, discoverability, booking capability</li>
+        <li>Compare year-on-year to track overall progress across sectors</li>
+        <li>D1 and D2 baselines provide your <strong>Year 1 starting point</strong> — no need to design from scratch</li>
+        <li>Share the summary across all institutions before the first quarterly call of the year</li>
+      </ul>
+      <div class="note-box nb-pink" style="margin-top:1rem;">You are not starting from zero. The assessments are your baseline. Year 1 is already documented.</div>
+    </div>
+    <div>
+      <div class="photo-real">
+        <img src="img/the-gambia-pfivvKSHE18.jpg" alt="The Gambia beach" style="height:360px;">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- NEW · CRISIS MANAGEMENT            -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="11">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">When things go wrong</div>
+      <h2 class="h2">Crisis and reputation management</h2>
+      <div class="pink-rule"></div>
+      <p style="font-size:1rem;color:var(--text);line-height:1.65;margin-bottom:1rem;">Your monitoring routine will surface problems. Institutions need an agreed protocol for when they do — agreed before a crisis, not during one.</p>
+      <ul>
+        <li>Designate <strong>one person per institution</strong> responsible for weekly monitoring</li>
+        <li>Agree a response threshold — e.g. any review below 3 stars on an official platform</li>
+        <li>Agree tone and messaging guidelines in advance</li>
+        <li>Share patterns of negative reviews at the quarterly call — don't manage them in isolation</li>
+      </ul>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <span class="browser-dots"></span>
+          <span class="browser-url">google.com/alerts</span>
+        </div>
+        <img src="img/google_alert_visit_gambia.png" alt="Google Alerts set up for Visit Gambia" style="width:100%;display:block;border-radius:0 0 8px 8px;">
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.6rem;text-align:center;">Google Alerts — free, takes 5 minutes to set up, runs automatically</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- NEW · PLATFORM GOVERNANCE          -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="12">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Platform governance</div>
+      <h2 class="h2">Who owns what?</h2>
+      <div class="pink-rule"></div>
+      <p style="font-size:1rem;color:var(--text);line-height:1.65;margin-bottom:1rem;">Platform governance is an organisational question, not a technical one. For each official platform — website, social media, Google Business profile — who has admin access? Who is responsible for updates? What happens when that person leaves?</p>
+      <div style="background:var(--surface);border-radius:8px;padding:1rem 1.25rem;margin-bottom:.85rem;border-left:4px solid var(--navy);">
+        <p style="font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.4rem;">Digital orphans</p>
+        <p style="font-size:.92rem;color:var(--text);line-height:1.6;">Platforms created for projects that ended without a handover plan — still live, appearing credible to visitors, but containing outdated information. The D1 baseline identified this as a systemic gap.</p>
+      </div>
+      <div class="note-box nb-pink">Starting action: one spreadsheet, one hour. List every official digital touchpoint, note when it was last updated, and identify who has access.</div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <span class="browser-dots"></span>
+          <span class="browser-url">visitthegambia.com</span>
+        </div>
+        <img src="img/visit_the_gambia_homepage.png" alt="Visit The Gambia homepage" style="width:100%;display:block;border-radius:0 0 8px 8px;">
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.6rem;text-align:center;">The Gambia's official tourism website — a key touchpoint for every prospective visitor</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 11 · KPI STARTING SET              -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="13">
+<div class="wrap">
+  <div class="eyebrow">D2 · Table 20</div>
+  <h2 class="h2">The starting KPI set</h2>
+  <p class="lead" style="margin-bottom:1.25rem;">These are ready-made. You don't need to design your own starting framework.</p>
+  <table class="kpi-table">
+    <thead>
+      <tr>
+        <th>Indicator</th>
+        <th>2025 Baseline</th>
+        <th class="kpi-col-target">2026 Target</th>
+        <th>How to track</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ITO creative tourism visibility</td>
+        <td>52%</td>
+        <td class="kpi-col-target">60%</td>
+        <td>Quarterly operator catalogue check</td>
+      </tr>
+      <tr>
+        <td>Average visitor sentiment score</td>
+        <td>+0.24</td>
+        <td class="kpi-col-target">+0.30</td>
+        <td>Monthly TripAdvisor scan</td>
+      </tr>
+      <tr>
+        <td>Verified TripAdvisor reviews</td>
+        <td>Current count</td>
+        <td class="kpi-col-target">+25%</td>
+        <td>Monthly count on destination page</td>
+      </tr>
+      <tr>
+        <td>Average review rating</td>
+        <td>4.06</td>
+        <td class="kpi-col-target">4.20</td>
+        <td>Monthly TripAdvisor scan</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note-box" style="margin-top:1rem;">Starting indicators, not a final framework. Add or adapt based on what your institutions can realistically track.</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- NEW · SHARING INTELLIGENCE         -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="14">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Closing the loop</div>
+      <h2 class="h2">From monitoring to SME guidance</h2>
+      <div class="pink-rule"></div>
+      <p style="font-size:1rem;color:var(--text);line-height:1.65;margin-bottom:1rem;">Monitoring shared only within institutions has limited value. The goal is to translate intelligence into guidance that SMEs can actually act on.</p>
+      <div class="agree-items" style="margin-bottom:1rem;">
+        <div class="agree-item">
+          <div class="agree-num" style="background:var(--pink);color:#fff;">Q</div>
+          <div><strong>Quarterly briefing note</strong><br><span style="color:var(--muted);font-size:.88rem;">One page. What the data shows, what it means for operators. 2 hours to produce — distributed via WhatsApp or email.</span></div>
+        </div>
+        <div class="agree-item">
+          <div class="agree-num">!</div>
+          <div><strong>Short alert</strong><br><span style="color:var(--muted);font-size:.88rem;">When something significant changes — a new operator selling The Gambia, a cluster of negative reviews. Triggered, not scheduled.</span></div>
+        </div>
+        <div class="agree-item">
+          <div class="agree-num">A</div>
+          <div><strong>Annual shared meeting</strong><br><span style="color:var(--muted);font-size:.88rem;">Institutions share findings. SMEs respond with ground-level experience. The exchange works in both directions.</span></div>
+        </div>
+      </div>
+      <div class="note-box">Tone: "here is what we are seeing and what it might mean for you" — not evaluation or judgment.</div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <span class="browser-dots"></span>
+          <span class="browser-url">WhatsApp Business · Catalogue</span>
+        </div>
+        <img src="img/whatsapp_catalog.png" alt="WhatsApp Business catalogue" style="width:100%;display:block;border-radius:0 0 8px 8px;">
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.6rem;text-align:center;">WhatsApp Business — a practical channel for distributing briefing notes to SMEs</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 12 · VALUE OF MONITORING TOGETHER  -->
+<!-- ═══════════════════════════════════ -->
+<section class="photo-section" data-s="15">
+<div class="photo-bg" style="background-image:url('img/the-gambia-YBRTHVDB4bQ.jpg');"></div>
+<div class="photo-overlay"></div>
+<div class="wrap">
+  <div class="eyebrow" style="color:rgba(230,0,126,.9);">Monitoring as coordination</div>
+  <h2 class="h2" style="color:#fff;font-size:2rem;margin-bottom:1.25rem;">The value of monitoring together</h2>
+  <div class="grid-3">
+    <div style="background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:1.2rem;">
+      <h4 style="color:#fff;font-size:.92rem;margin-bottom:.4rem;">One institution monitors</h4>
+      <p style="color:rgba(255,255,255,.65);font-size:.87rem;line-height:1.55;">Produces one view — partial, limited to one mandate and one sector</p>
+    </div>
+    <div style="background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:1.2rem;">
+      <h4 style="color:#fff;font-size:.92rem;margin-bottom:.4rem;">Three institutions share</h4>
+      <p style="color:rgba(255,255,255,.65);font-size:.87rem;line-height:1.55;">Produces a common picture that no single institution could create alone</p>
+    </div>
+    <div style="background:rgba(230,0,126,.25);border:1px solid rgba(230,0,126,.4);border-radius:10px;padding:1.2rem;">
+      <h4 style="color:#fff;font-size:.92rem;margin-bottom:.4rem;">Shared picture enables</h4>
+      <p style="color:rgba(255,255,255,.8);font-size:.87rem;line-height:1.55;">Shared action — the quarterly call turns observation into coordination</p>
+    </div>
+  </div>
+  <p style="color:rgba(255,255,255,.6);font-size:.97rem;margin-top:1.25rem;max-width:600px;line-height:1.65;">The quarterly call is the mechanism. Two to three hours per quarter. GT Board convenes. NCAC, associations, and sector bodies share what they've seen.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 13 · QUARTERLY COORDINATION CALL   -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="16">
+<div class="wrap">
+  <div class="eyebrow">The coordination mechanism</div>
+  <h2 class="h2">The quarterly coordination call</h2>
+  <div class="steps-row" style="margin-top:1.5rem;">
+    <div class="step-item">
+      <div class="step-num-lg">1</div>
+      <h4>Share</h4>
+      <p>What has each institution observed in the past quarter? One thing each.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num-lg">2</div>
+      <h4>Identify</h4>
+      <p>What's new, changing, or worth acting on together? Where are the patterns?</p>
+    </div>
+    <div class="step-item step-pink">
+      <div class="step-num-lg">3</div>
+      <h4>Agree</h4>
+      <p>Is there <em style="font-style:normal;color:var(--pink);">one joint response</em> this quarter? Assign it before the call ends.</p>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="margin-top:1.25rem;">"Format: a call, a brief meeting, or a shared document — whatever is most likely to actually happen."</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 14 · WHO CONVENES?                 -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="17">
+<div class="wrap">
+  <div class="eyebrow">Governance</div>
+  <h2 class="h2">Who convenes?</h2>
+  <div class="tier-table" style="margin-top:1.25rem;">
+    <div class="tier-row" style="border-left:4px solid var(--pink);">
+      <div class="tier-label" style="color:var(--pink);">GT Board</div>
+      <div class="tier-content">Lead coordinator and custodian of shared KPI data. Convenes the quarterly call. Maintains the monitoring spreadsheet. Distributes the annual benchmarking summary.</div>
+    </div>
+    <div class="tier-row" style="border-left:4px solid var(--navy);">
+      <div class="tier-label" style="color:var(--navy);">NCAC + associations</div>
+      <div class="tier-content">Core participants. Each brings their sector's observation from the past quarter. Contribute to the shared TripAdvisor scan and operator catalogue check where mandates align.</div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-label" style="color:var(--muted);">Ministry of Tourism</div>
+      <div class="tier-content">Invited, not required for every call. Summary briefing note shared after each quarterly meeting. Engages when a joint response requires policy or budget support.</div>
+    </div>
+  </div>
+  <div class="note-box" style="margin-top:1rem;">Start with a small, committed group. The key criterion is not who <em>should</em> be there — it's who will reliably show up.</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 18 · ACTIVITY: TRIPADVISOR LIVE (1)-->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="18">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">⭐</span>
+      <h3>Activity — Read TripAdvisor right now</h3>
+      <span class="exercise-time">15 min</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario">Open TripAdvisor on your phone or laptop. Search: "The Gambia". Go to the destination page. Read 10–15 of the most recent reviews.</div>
+      <ol class="exercise-steps">
+        <li><span class="step-num">1</span><span>Go to <strong>tripadvisor.com</strong> → search "The Gambia" → open the destination page → sort by Most Recent</span></li>
+        <li><span class="step-num">2</span><span>Read 10–15 reviews. On paper, note: <strong>(a)</strong> the main positive theme you see repeated, <strong>(b)</strong> any complaint or criticism, <strong>(c)</strong> whether your sector, institution, or members are mentioned anywhere</span></li>
+        <li><span class="step-num">3</span><span>Also note: what is the overall rating? Are there responses from management to any reviews? What do the most recent reviews say?</span></li>
+      </ol>
+      <div class="exercise-alt">↔ If internet is unavailable: the facilitator projects the TripAdvisor Gambia page. Note what you observe from the projected screen — the exercise still works.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 19 · ACTIVITY: TRIPADVISOR LIVE (2)-->
+<!-- ═══════════════════════════════════ -->
+<section data-s="19">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">Activity share-back</div>
+      <h2 class="h2">What did you find?</h2>
+      <div class="pink-rule"></div>
+      <p class="lead" style="margin-bottom:1rem;">Groups of 3 — compare notes. Then share back to the room:</p>
+      <ul>
+        <li>What was the <strong>main positive theme</strong> repeated across reviews?</li>
+        <li>Was there a <strong>recurring complaint</strong> or criticism?</li>
+        <li>Was your sector or institution <strong>mentioned anywhere</strong>?</li>
+        <li>What would change if an institution responded to more reviews regularly?</li>
+      </ul>
+      <div class="note-box nb-pink" style="margin-top:.9rem;">This is 15 minutes of exactly what your monthly TripAdvisor scan looks like in practice. The only difference: you take notes and share findings with your members.</div>
+    </div>
+    <div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">tripadvisor.com · The Gambia · Reviews · Most Recent</div>
+        </div>
+        <img src="img/tripadvisor_gambia_top9.png" alt="TripAdvisor Gambia destination page" style="width:100%;display:block;max-height:320px;object-fit:cover;object-position:top;">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 15 · ACTIVITY: INDICATORS (1)      -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="20">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">✏️</span>
+      <h3>Activity — Draft your three indicators</h3>
+      <span class="exercise-time">20 minutes · Individual then pairs</span>
+    </div>
+    <div class="exercise-body">
+      <p class="exercise-scenario">Each participant drafts on a printed sheet. Be specific — a monitoring plan that can't be assigned to a real person won't happen.</p>
+      <ul class="exercise-steps">
+        <li><span class="step-num">1</span><div>Three things you will track — drawn from the framework above, or adapted for your sector and mandate</div></li>
+        <li><span class="step-num">2</span><div>How often — monthly, quarterly, or annual</div></li>
+        <li><span class="step-num">3</span><div>Who is responsible — a specific role or name, not "the institution"</div></li>
+        <li><span class="step-num">4</span><div>How you will share findings — WhatsApp group, email, sector meeting, or quarterly call</div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 16 · ACTIVITY: INDICATORS (2)      -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="21">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">💬</span>
+      <h3>Pairs exchange + brief share-back</h3>
+      <span class="exercise-time">10 minutes exchange · 5 minutes share-back</span>
+    </div>
+    <div class="exercise-body">
+      <p class="exercise-scenario">Exchange your draft with a partner from a different institution. Offer one piece of feedback on theirs.</p>
+      <ul class="exercise-steps">
+        <li><span class="step-num">1</span><div>Is the responsible person <strong>specific enough</strong>? A role or a name — not "GT Board" or "the association"</div></li>
+        <li><span class="step-num">2</span><div>Are the indicators <strong>checkable</strong>? You'll know unambiguously whether they happened</div></li>
+        <li><span class="step-num">3</span><div>Is the sharing channel <strong>realistic</strong>? Something that will actually happen, not something aspirational</div></li>
+      </ul>
+      <div class="exercise-alt">↔ If participants are from a single institution: produce one shared plan as a group. Assign specific indicators to specific roles within the institution.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 17 · BLOCK 5 DIVIDER               -->
+<!-- ═══════════════════════════════════ -->
+<section class="divider" data-s="22">
+<div class="divider-deco">5</div>
+<div class="wrap">
+  <div class="eyebrow">Block 5</div>
+  <h1 class="h1">Commitments and<br>Coordination</h1>
+  <p class="sub-text">Specific. Checkable. Realistic. — and agreed before you leave the room.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 18 · FACILITATOR SYNTHESIS         -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="23">
+<div class="wrap">
+  <div class="eyebrow">Facilitator synthesis · Part 1</div>
+  <h2 class="h2">What came up across the two days?</h2>
+  <p style="color:var(--muted);font-size:.95rem;margin-bottom:1.1rem;">3–4 themes from across the workshop — populated live by the facilitator</p>
+  <div class="synthesis-cards">
+    <div class="synthesis-card">
+      <div class="synthesis-card-label">Theme 1</div>
+    </div>
+    <div class="synthesis-card">
+      <div class="synthesis-card-label">Theme 2</div>
+    </div>
+    <div class="synthesis-card">
+      <div class="synthesis-card-label">Theme 3</div>
+    </div>
+  </div>
+  <div class="note-box nb-pink">"What confirmed existing assumptions, and what challenged them? Both are useful — but they call for different responses."</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 19 · ONE THING THAT STUCK          -->
+<!-- ═══════════════════════════════════ -->
+<section class="quote-slide" data-s="24">
+<div class="wrap" style="text-align:center;max-width:680px;margin:0 auto;">
+  <div class="quote-rule"></div>
+  <p class="big-quote" style="font-size:1.7rem;">"In one sentence: the finding or idea that was most useful or most surprising."</p>
+  <div class="quote-rule"></div>
+  <p class="quote-body">Round the table. One sentence each. No extended discussion yet.</p>
+  <p style="color:rgba(255,255,255,.38);font-size:.85rem;margin-top:1rem;">Facilitator: note any themes that haven't been captured — they may surface here.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 20 · ONE CONCRETE ACTION (1)       -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="25">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">📋</span>
+      <h3>One concrete action in 30 days</h3>
+      <span class="exercise-time">15 minutes · Individual</span>
+    </div>
+    <div class="exercise-body">
+      <p class="exercise-scenario">Revisit your commitment from yesterday's board. Confirm or refine it. The question is: "What is one specific thing I will do in the next 30 days?"</p>
+      <ul class="exercise-steps">
+        <li><span class="step-num" style="background:var(--pink);">S</span><div><strong>Specific</strong> — not "improve our digital presence" but "conduct a platform audit and identify three outdated pages to update by June"</div></li>
+        <li><span class="step-num">C</span><div><strong>Checkable</strong> — you'll know unambiguously whether it happened or not</div></li>
+        <li><span class="step-num">R</span><div><strong>Realistic</strong> — within current budget, team size, and institutional mandate</div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 21 · COMMITMENTS BOARD (2)         -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="26">
+<div class="wrap">
+  <div class="eyebrow">Commitments board</div>
+  <h2 class="h2">Capture by theme</h2>
+  <p style="color:var(--muted);font-size:.92rem;margin-bottom:1rem;">Facilitator collects commitments and groups them on the board by category</p>
+  <div class="board-cols board-cols-4">
+    <div class="board-col bc-navy">
+      <div class="bc-label">Monitor</div>
+      <div class="bc-desc">Track what the world sees — consistently</div>
+      <div class="bc-empty"></div>
+    </div>
+    <div class="board-col bc-acnt">
+      <div class="bc-label">Make findable</div>
+      <div class="bc-desc">Ensure your sector is discoverable</div>
+      <div class="bc-empty"></div>
+    </div>
+    <div class="board-col bc-green">
+      <div class="bc-label">Open a door</div>
+      <div class="bc-desc">Connect one operator to one platform</div>
+      <div class="bc-empty"></div>
+    </div>
+    <div class="board-col bc-red">
+      <div class="bc-label">Share + coordinate</div>
+      <div class="bc-desc">Act on what you see together</div>
+      <div class="bc-empty"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 27 · ACTIVITY: BRIEFING DRAFT       -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="27">
+<div class="wrap">
+  <div class="exercise-card">
+    <div class="exercise-header">
+      <span class="exercise-icon">✍️</span>
+      <h3>Activity — Draft one briefing paragraph</h3>
+      <span class="exercise-time">10 min</span>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-scenario">Using what you found in this morning's TripAdvisor exercise: write three sentences for your members. This is what a quarterly briefing looks like before it's polished.</div>
+      <div class="grid-2" style="margin-top:.9rem;">
+        <div>
+          <ol class="exercise-steps">
+            <li><span class="step-num">1</span><span><strong>What we saw:</strong> One finding from this morning's TripAdvisor exercise — a recurring theme, a complaint, or a gap you noticed.</span></li>
+            <li><span class="step-num">2</span><span><strong>What it means for you:</strong> One direct implication for your members' businesses — specific, not abstract.</span></li>
+            <li><span class="step-num">3</span><span><strong>One thing to do:</strong> A concrete action your members could take this month in response.</span></li>
+          </ol>
+          <div class="note-box nb-pink" style="margin-top:.85rem;font-size:.9rem;">This doesn't need to be complete. It needs to be true — based on what you actually read this morning, addressed to people you actually represent. Three sentences is enough.</div>
+        </div>
+        <div>
+          <div class="briefing-mock">
+            <div class="briefing-header">
+              <div class="briefing-to">To: [your members]</div>
+              <div class="briefing-subject">Market update · What we're seeing · [month] 2026</div>
+            </div>
+            <div class="briefing-section">
+              <div class="briefing-section-label">What we saw</div>
+              <div class="briefing-text">[Your TripAdvisor finding — a theme, a complaint, or a gap you noticed in this morning's exercise]</div>
+            </div>
+            <div class="briefing-section">
+              <div class="briefing-section-label">What it means for you</div>
+              <div class="briefing-text">[One implication for your members' businesses — direct, not abstract]</div>
+            </div>
+            <div class="briefing-section">
+              <div class="briefing-section-label">One thing to do</div>
+              <div class="briefing-text">[A specific action this month — name the step, not the outcome]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 22 · WHERE DOES COORDINATION AMPLIFY? -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="28">
+<div class="wrap">
+  <div class="eyebrow">Discussion · Part 2</div>
+  <h2 class="h2">Where does coordination amplify?</h2>
+  <div class="pink-rule"></div>
+  <p style="font-size:1.05rem;color:var(--text);line-height:1.65;margin-bottom:1.5rem;max-width:680px;">Look at the board: where would two institutions doing something together produce more than two doing it separately?</p>
+  <div class="discussion-prompts">
+    <div class="discussion-prompt">"One quarterly operator spot-check, shared between GT Board and NCAC, covers more ground than two separate ones."</div>
+    <div class="discussion-prompt">"A joint response to a pattern of negative reviews carries more weight than two individual responses."</div>
+    <div class="discussion-prompt">"A shared list of verified operators means one institution's update reaches everyone."</div>
+  </div>
+  <div class="note-box" style="margin-top:1.25rem;">Identify 2–3 specific amplification pairs from what's on the board. Name the institutions involved.</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 23 · MINIMUM VIABLE MECHANISM      -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="29">
+<div class="wrap">
+  <div class="eyebrow">Coordination mechanism · Part 3</div>
+  <h2 class="h2">A minimum viable mechanism</h2>
+  <div class="steps-row" style="margin-top:1.5rem;">
+    <div class="step-item step-pink">
+      <div class="step-num-lg">1</div>
+      <h4>Quarterly check-in</h4>
+      <p>GT Board + NCAC + willing associations. <em style="font-style:normal;color:var(--pink);">Start here. Nothing more required.</em></p>
+    </div>
+    <div class="step-item">
+      <div class="step-num-lg">2</div>
+      <h4>Share observations</h4>
+      <p>Each institution shares what they've observed and one thing they've done in the past quarter</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num-lg">3</div>
+      <h4>Agree joint responses</h4>
+      <p>Is there one shared action for next quarter? Assign it before the call ends. That's it.</p>
+    </div>
+  </div>
+  <div class="note-box nb-pink" style="margin-top:1.25rem;">"Format: a call, a brief meeting, or a shared document — whatever is most likely to actually happen."</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 24 · IF THERE'S APPETITE FOR MORE  -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="30">
+<div class="wrap">
+  <div class="content-img">
+    <div class="text-col">
+      <div class="eyebrow">When the routine is established</div>
+      <h2 class="h2">If there's appetite for more</h2>
+      <div class="pink-rule"></div>
+      <p style="font-size:1rem;color:var(--text);line-height:1.65;margin-bottom:1rem;">A lightweight quarterly briefing note — shared across institutions and select SMEs — summarising what the monitoring data shows.</p>
+      <ul>
+        <li>Designed to be produced in 2 hours</li>
+        <li>Distributed via WhatsApp or email</li>
+        <li>Not a new project — it is what consistent monitoring produces</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.65rem;">Discussion questions</p>
+      <div class="discussion-prompts">
+        <div class="discussion-prompt">What would it take to make this monitoring routine stick beyond this project cycle?</div>
+        <div class="discussion-prompt">What are the realistic barriers — time, skills, political will?</div>
+        <div class="discussion-prompt">Is there one person or one mechanism that could serve as the anchor for coordination?</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 25 · BEFORE LEAVING THE ROOM       -->
+<!-- ═══════════════════════════════════ -->
+<section data-s="31">
+<div class="wrap" style="max-width:740px;margin:0 auto;">
+  <div class="eyebrow">Before you leave</div>
+  <h2 class="h2" style="margin-bottom:.5rem;">Three things to agree before the room empties</h2>
+  <div class="pink-rule"></div>
+  <div class="agree-items">
+    <div class="agree-item ai-pink">
+      <div class="agree-num">1</div>
+      <div>
+        <h4>Date of the first quarterly check-in</h4>
+        <p>A specific date — not "sometime in Q3." Write it down. Put it in a calendar before you leave.</p>
+      </div>
+    </div>
+    <div class="agree-item">
+      <div class="agree-num">2</div>
+      <div>
+        <h4>Who convenes</h4>
+        <p>A specific person, not an institution. The convener sends the invite, sets the agenda, and keeps the shared KPI log.</p>
+      </div>
+    </div>
+    <div class="agree-item">
+      <div class="agree-num">3</div>
+      <div>
+        <h4>What format</h4>
+        <p>Video call, in-person meeting, or shared document update — whatever is most likely to actually happen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 26 · CLOSE PULL QUOTE              -->
+<!-- ═══════════════════════════════════ -->
+<section class="quote-slide" data-s="32">
+<div class="wrap" style="text-align:center;">
+  <div class="quote-rule"></div>
+  <p class="big-quote">"Maintain momentum.<br>Don't start something new."</p>
+  <div class="quote-rule"></div>
+  <p class="quote-body">The SMEs you met this week are building their digital presence. The infrastructure they need to connect to the world is what you build next.</p>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 27 · ONE WORD ROUND THE ROOM       -->
+<!-- ═══════════════════════════════════ -->
+<section class="bg-surface" data-s="33">
+<div class="wrap" style="max-width:640px;margin:0 auto;text-align:center;">
+  <div class="exercise-card" style="border-color:var(--navy);">
+    <div class="exercise-header" style="background:var(--navy);">
+      <span class="exercise-icon">🔵</span>
+      <h3>One word, round the room</h3>
+      <span class="exercise-time">Close · 5 minutes</span>
+    </div>
+    <div class="exercise-body" style="padding:2.5rem 2rem;">
+      <p style="font-size:1.25rem;font-weight:700;color:var(--navy);line-height:1.5;margin-bottom:1.1rem;">"One word: what are you taking away from these two days?"</p>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.6;">No explanation needed. No right answer.<br>Go round the room — one word each.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════ -->
+<!-- 28 · THANK YOU                     -->
+<!-- ═══════════════════════════════════ -->
+<section class="cover" data-s="34">
+<div class="cover-bg" style="background-image:url('img/aboodi-vesakaran.jpg');"></div>
+<div class="wrap">
+  <div class="cover-badge">ITC EU Youth Empowerment Project</div>
+  <div class="cover-accent"></div>
+  <h1 class="h1">Thank you.</h1>
+  <p style="color:rgba(255,255,255,.65);font-size:1.05rem;max-width:480px;margin:.65rem auto 0;">Institutional Capacity Workshop · Banjul, The Gambia · May 2026</p>
+  <div class="cover-meta">
+    <span>For follow-up: ITC YEP project team</span>
+  </div>
+</div>
+</section>
+
+
+</div><!-- /#app -->
+
+<div class="nav-btns">
+  <button class="nav-btn prev" id="prevBtn" onclick="prev()" style="display:none">← Prev</button>
+  <button class="nav-btn" id="nextBtn" onclick="next()">Next →</button>
+</div>
+
+<script>
+  const secs = document.querySelectorAll('section');
+  const total = secs.length;
+  const SB_ACTIVE = [
+    [0,0],    // Cover
+    [1,1],    // What we agreed
+    [2,3],    // Arc of today + programme
+    [4,5],    // Block 4 intro + pull quote
+    [6,6],    // Three questions
+    [7,10],   // Three tools
+    [11,12],  // Crisis + platform governance
+    [13,14],  // KPI + sharing with SMEs
+    [15,15],  // Monitoring together
+    [16,16],  // Coordination call
+    [17,17],  // Who convenes
+    [18,19],  // Activity: TripAdvisor live exercise
+    [20,21],  // Activity: indicators
+    [22,22],  // Block 5 divider
+    [23,24],  // Facilitator synthesis + one thing that stuck
+    [25,27],  // 30-day commitments + briefing draft
+    [28,29],  // Coordination amplifies + min viable
+    [30,31],  // Appetite for more + before leaving
+    [32,32],  // Maintain momentum
+    [33,33],  // One word
+    [34,34],  // Thank you
+  ];
+
+  let cur = 0;
+
+  function go(n) {
+    if (n < 0 || n >= total) return;
+    secs[n].scrollIntoView({ behavior: 'smooth' });
+    cur = n;
+    sync();
+  }
+  function next() { if (cur < total - 1) go(cur + 1); }
+  function prev() { if (cur > 0)         go(cur - 1); }
+
+  function sync() {
+    document.querySelectorAll('.sb-item').forEach((el, i) => {
+      if (i >= SB_ACTIVE.length) { el.classList.remove('active'); return; }
+      const [from, to] = SB_ACTIVE[i];
+      el.classList.toggle('active', cur >= from && cur <= to);
+    });
+    document.getElementById('prevBtn').style.display = cur === 0 ? 'none' : 'flex';
+    document.getElementById('nextBtn').disabled = cur === total - 1;
+  }
+
+  let t;
+  window.addEventListener('scroll', () => {
+    clearTimeout(t);
+    t = setTimeout(() => {
+      const mid = window.scrollY + window.innerHeight / 2;
+      secs.forEach((s, i) => {
+        if (mid >= s.offsetTop && mid < s.offsetTop + s.offsetHeight) { cur = i; sync(); }
+      });
+    }, 90);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft' ) { e.preventDefault(); prev(); }
+  });
+
+  document.addEventListener('DOMContentLoaded', sync);
+</script>
+</body>
+</html>

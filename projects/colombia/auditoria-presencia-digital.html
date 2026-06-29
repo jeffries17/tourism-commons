@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoría de Presencia Digital — Lo Responsable Vende</title>
+    <style>
+        :root {
+            --teal: #3E9987; --teal-dark: #2D7A6A; --teal-light: #E6F4F1;
+            --navy: #1B2B5A; --gold: #F5C400; --gold-light: #FEF7D6;
+            --green: #1E7E34; --green-light: #e8f5e9;
+            --amber: #B8620A; --amber-light: #FEF3E2;
+            --red: #C8352A; --red-light: #fde8e6;
+            --bg: #F7F8F5; --border: #DDE3DC;
+            --text: #1A1A1A; --text-muted: #5A6478;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: var(--bg); padding: 1.5rem; color: var(--text); }
+        .page { max-width: 820px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 3px 16px rgba(0,0,0,0.08); overflow: hidden; }
+
+        /* HEADER */
+        .header { background: var(--navy); padding: 1.5rem 2rem; }
+        .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+        .trecc-logo { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size: 1.1rem; }
+        .trecc-logo .tr { color: #cc3333; } .trecc-logo .e { color: #e05050; font-style: italic; } .trecc-logo .cc { color: white; }
+        .session-chip { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
+        .header h1 { color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .header p { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+
+        /* PARTICIPANT BAR */
+        .participant-bar { padding: 1rem 2rem; border-bottom: 1px solid var(--border); display: flex; gap: 1.5rem; flex-wrap: wrap; background: var(--bg); }
+        .field-inline { display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 200px; }
+        .field-inline label { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+        .field-inline input { flex: 1; border: none; border-bottom: 1.5px solid var(--border); padding: 0.3rem 0.1rem; font-size: 0.9rem; color: var(--text); background: transparent; outline: none; font-family: Arial, sans-serif; }
+        .field-inline input:focus { border-bottom-color: var(--teal); }
+
+        /* INSTRUCTIONS */
+        .instructions { padding: 0.85rem 2rem; background: var(--teal-light); border-bottom: 2px solid var(--teal); font-size: 0.8rem; color: var(--teal-dark); line-height: 1.5; display: flex; gap: 0.6rem; align-items: flex-start; }
+        .instructions .icon { flex: 0 0 auto; font-size: 1rem; margin-top: 1px; }
+
+        /* SECTIONS */
+        .audit-body { padding: 0 2rem 2rem; }
+
+        .section { margin-top: 1.75rem; }
+        .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+        .section-icon { font-size: 1.2rem; }
+        .section-title { font-size: 1rem; font-weight: 700; color: var(--navy); }
+        .section-subtitle { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+        /* STATUS PICKER */
+        .status-row { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.7rem 0; border-bottom: 1px solid var(--bg); }
+        .status-row:last-of-type { border-bottom: none; }
+        .status-label { flex: 1; font-size: 0.85rem; color: var(--text); line-height: 1.4; padding-top: 0.25rem; }
+        .status-picker { display: flex; gap: 0.3rem; flex: 0 0 auto; }
+        .status-btn { width: 32px; height: 28px; border: 1.5px solid var(--border); border-radius: 5px; background: white; cursor: pointer; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+        .status-btn:hover { transform: scale(1.1); }
+        .status-btn.sel-green { background: var(--green-light); border-color: var(--green); }
+        .status-btn.sel-amber { background: var(--amber-light); border-color: var(--amber); }
+        .status-btn.sel-red { background: var(--red-light); border-color: var(--red); }
+
+        .status-legend { display: flex; gap: 1rem; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.75rem; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 0.3rem; }
+
+        /* OPEN NOTES */
+        .notes-row { margin-top: 0.75rem; }
+        .notes-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 0.3rem; }
+        textarea { width: 100%; border: 1.5px solid var(--border); border-radius: 6px; padding: 0.65rem 0.85rem; font-size: 0.85rem; color: var(--text); line-height: 1.55; resize: vertical; outline: none; background: var(--bg); font-family: Arial, sans-serif; min-height: 60px; transition: border-color 0.2s, background 0.2s; }
+        textarea:focus { border-color: var(--teal); background: white; }
+        textarea::placeholder { color: #b0bac8; font-style: italic; }
+
+        /* PRIORITY ACTION */
+        .priority-action { background: var(--gold-light); border: 1.5px solid var(--gold); border-radius: 8px; padding: 0.85rem 1rem; margin-top: 1rem; }
+        .priority-action .pa-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #7A6000; margin-bottom: 0.4rem; }
+        .priority-action input { width: 100%; border: none; border-bottom: 1.5px solid #e5c84a; background: transparent; padding: 0.3rem 0; font-size: 0.875rem; color: var(--text); outline: none; font-family: Arial, sans-serif; }
+        .priority-action input::placeholder { color: #c5ac50; font-style: italic; }
+
+        /* SCORE SUMMARY */
+        .score-summary { margin-top: 2rem; background: var(--navy); border-radius: 10px; padding: 1.25rem 1.5rem; }
+        .score-title { color: white; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; }
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; }
+        .score-chip { background: rgba(255,255,255,0.1); border-radius: 7px; padding: 0.75rem; text-align: center; }
+        .score-chip .sc-label { font-size: 0.68rem; color: rgba(255,255,255,0.6); margin-bottom: 0.35rem; }
+        .score-chip .sc-dots { display: flex; gap: 0.2rem; justify-content: center; }
+        .sc-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+        .sc-dot.green { background: #4caf50; }
+        .sc-dot.amber { background: var(--gold); }
+        .sc-dot.red { background: #ef5350; }
+
+        /* NEXT STEPS */
+        .next-steps { margin-top: 1.5rem; border: 2px solid var(--teal); border-radius: 8px; padding: 1.1rem 1.25rem; }
+        .ns-title { font-size: 0.78rem; font-weight: 700; color: var(--teal-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.85rem; }
+        .ns-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
+        .ns-col h4 { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
+        .ns-col textarea { min-height: 70px; font-size: 0.8rem; }
+
+        /* FOOTER */
+        .footer-bar { background: var(--navy); padding: 0.6rem 2rem; display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; }
+        .footer-bar p { font-size: 0.62rem; color: rgba(255,255,255,0.4); }
+        .print-btn { padding: 0.3rem 0.85rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; font-size: 0.7rem; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; }
+
+        @media print { body { background: white; padding: 0; } .page { box-shadow: none; } .print-btn { display: none; } .section { break-inside: avoid; } }
+        @media (max-width: 600px) { body { padding: 0; } .page { border-radius: 0; } .audit-body { padding: 0 1rem 2rem; } .participant-bar { padding: 1rem; } .ns-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="header">
+        <div class="header-top">
+            <div class="trecc-logo"><span class="tr">TR</span><span class="e">e</span><span class="cc">CC</span></div>
+            <div class="session-chip">Sesión 2 · Bloque 1 · 28 de abril de 2026</div>
+        </div>
+        <h1>Auditoría de Presencia Digital</h1>
+        <p>Lo Responsable Vende · TRECC / Institut Français Colombia</p>
+    </div>
+
+    <div class="participant-bar">
+        <div class="field-inline"><label>Nombre</label><input type="text" id="inputNombre" placeholder="Tu nombre"></div>
+        <div class="field-inline"><label>Operación</label><input type="text" id="inputOperacion" placeholder="Nombre de tu empresa"></div>
+        <div class="field-inline"><label>Web</label><input type="text" id="inputWeb" placeholder="www.tuoperacion.com"></div>
+        <div class="field-inline"><label>Email</label><input type="email" id="inputEmail" placeholder="correo@tuoperacion.com"></div>
+    </div>
+
+    <div class="instructions">
+        <span class="icon">👁</span>
+        <p><strong>Instrucciones:</strong> Abre tu web y tus perfiles en otra pestaña. Para cada elemento, marca verde ✓ si está bien, naranja → si necesita mejora, rojo ✗ si no existe o está mal. Sé honesto — esto es solo para ti. Al final identifica 1 acción prioritaria por sección.</p>
+    </div>
+
+    <div class="audit-body">
+
+        <!-- LEGEND -->
+        <div class="status-legend" style="margin-top:1.25rem;">
+            <div class="legend-item">✅ <strong>Verde</strong> = Bien / existe</div>
+            <div class="legend-item">🟡 <strong>Naranja</strong> = Existe pero necesita mejora</div>
+            <div class="legend-item">🔴 <strong>Rojo</strong> = No existe / problema real</div>
+        </div>
+
+        <!-- 1. WEB PROPIA -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🌐</span>
+                <div>
+                    <div class="section-title">Web propia</div>
+                    <div class="section-subtitle">El punto de entrada principal — lo que ve el comprador antes de cualquier contacto</div>
+                </div>
+            </div>
+
+            <div class="status-row">
+                <span class="status-label">¿La web existe y carga correctamente?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')" title="Bien">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')" title="Mejorar">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')" title="Problema">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Hay contenido en inglés (al menos una página)?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Hay una sección o página dirigida a agencias/operadores (B2B)?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿El impacto responsable / comunitario tiene sección propia con datos?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿El email de contacto o formulario es visible y está actualizado?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Hay testimonios de agencias o viajeros europeos visibles?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+
+            <div class="notes-row">
+                <div class="notes-label">Notas</div>
+                <textarea placeholder="¿Qué llama la atención? ¿Qué te sorprendió al revisarla hoy?"></textarea>
+            </div>
+            <div class="priority-action">
+                <div class="pa-label">⭐ Mi acción prioritaria para la web</div>
+                <input type="text" placeholder="Ej: Crear una página en inglés con mi propuesta B2B antes del 15 de mayo">
+            </div>
+        </div>
+
+        <!-- 2. GOOGLE BUSINESS -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🔍</span>
+                <div>
+                    <div class="section-title">Google Business Profile</div>
+                    <div class="section-subtitle">Lo que aparece cuando alguien te busca directamente en Google</div>
+                </div>
+            </div>
+
+            <div class="status-row">
+                <span class="status-label">¿El perfil está reclamado y verificado?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿La descripción menciona turismo responsable y tiene palabras en inglés?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Hay al menos 5 fotos de calidad (reales, no de stock)?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Hay reseñas recientes (últimos 6 meses)?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+
+            <div class="priority-action">
+                <div class="pa-label">⭐ Mi acción prioritaria para Google Business</div>
+                <input type="text" placeholder="Ej: Actualizar la descripción con palabras clave en inglés esta semana">
+            </div>
+        </div>
+
+        <!-- 3. REDES SOCIALES -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📱</span>
+                <div>
+                    <div class="section-title">Redes sociales</div>
+                    <div class="section-subtitle">Instagram, LinkedIn — lo que el comprador encuentra fuera de tu web</div>
+                </div>
+            </div>
+
+            <div class="status-row">
+                <span class="status-label">Instagram: ¿la bio menciona lo que haces en inglés?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">Instagram: ¿publicación en los últimos 3 meses?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">LinkedIn: ¿existe página de empresa con descripción en inglés?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+
+            <div class="notes-row">
+                <div class="notes-label">Notas — ¿qué ves cuando lo revisas como si fueras el comprador europeo?</div>
+                <textarea placeholder="Ej: Instagram activo pero todo en español. LinkedIn no existe. Facebook abandonado desde 2024..."></textarea>
+            </div>
+            <div class="priority-action">
+                <div class="pa-label">⭐ Mi acción prioritaria para redes sociales</div>
+                <input type="text" placeholder="Ej: Crear página de LinkedIn con descripción en inglés">
+            </div>
+        </div>
+
+        <!-- 4. REPUTACIÓN ONLINE -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">⭐</span>
+                <div>
+                    <div class="section-title">Reputación online</div>
+                    <div class="section-subtitle">TripAdvisor, Google Reviews — prueba social para el comprador europeo</div>
+                </div>
+            </div>
+
+            <div class="status-row">
+                <span class="status-label">¿Hay reseñas en TripAdvisor o Google en inglés/francés/alemán?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Las reseñas negativas (si las hay) tienen respuesta?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+            <div class="status-row">
+                <span class="status-label">¿Hay testimonios de agencias europeas (no solo viajeros finales)?</span>
+                <div class="status-picker">
+                    <button class="status-btn" onclick="pick(this,'green')">✅</button>
+                    <button class="status-btn" onclick="pick(this,'amber')">🟡</button>
+                    <button class="status-btn" onclick="pick(this,'red')">🔴</button>
+                </div>
+            </div>
+
+            <div class="priority-action">
+                <div class="pa-label">⭐ Mi acción prioritaria para reputación online</div>
+                <input type="text" placeholder="Ej: Pedir reseñas a los 3 grupos de viajeros europeos del año pasado">
+            </div>
+        </div>
+
+        <!-- 5. VISIBILIDAD EN BÚSQUEDA -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🔎</span>
+                <div>
+                    <div class="section-title">Visibilidad en búsqueda</div>
+                    <div class="section-subtitle">¿Qué encuentra el comprador europeo cuando te busca en Google?</div>
+                </div>
+            </div>
+
+            <div class="notes-row" style="margin-top:0;">
+                <div class="notes-label">Busca tu operación en Google ahora: "[nombre de tu operación] responsible tourism" — ¿qué ves?</div>
+                <textarea rows="3" placeholder="Ej: Aparece mi web en primer lugar (en español). No hay Google Business. TripAdvisor aparece con 3 reseñas. No hay nada en inglés en la primera página..."></textarea>
+            </div>
+            <div class="notes-row">
+                <div class="notes-label">¿Qué NO aparece que debería aparecer?</div>
+                <textarea rows="2" placeholder="Ej: No aparece LinkedIn. La web no aparece cuando busco en inglés. No hay nada sobre mi impacto comunitario..."></textarea>
+            </div>
+            <div class="priority-action">
+                <div class="pa-label">⭐ Mi acción prioritaria para visibilidad</div>
+                <input type="text" placeholder="Ej: Añadir palabras clave en inglés a la web y Google Business esta semana">
+            </div>
+        </div>
+
+        <!-- RESUMEN DE PRÓXIMOS PASOS -->
+        <div class="next-steps">
+            <div class="ns-title">🗓 Mis próximos pasos — a partir de hoy</div>
+            <div class="ns-grid">
+                <div class="ns-col">
+                    <h4>Esta semana</h4>
+                    <textarea placeholder="Acciones rápidas (&lt; 1 hora)&#10;&#10;1.&#10;2.&#10;3."></textarea>
+                </div>
+                <div class="ns-col">
+                    <h4>Este mes</h4>
+                    <textarea placeholder="Proyectos de 1–2 horas&#10;&#10;1.&#10;2.&#10;3."></textarea>
+                </div>
+                <div class="ns-col">
+                    <h4>En 3 meses</h4>
+                    <textarea placeholder="Proyectos de fondo&#10;&#10;1.&#10;2.&#10;3."></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bar">
+        <p>Lo Responsable Vende · TRECC / Institut Français Colombia · Sesión 2 · 28 de abril de 2026</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span id="saveStatus" style="font-size:0.7rem;color:rgba(255,255,255,0.5);"></span>
+            <button id="guardarBtn" class="print-btn" onclick="guardar()" style="background:var(--teal);border-color:var(--teal-dark);color:white;">💾 Guardar</button>
+            <button class="print-btn" onclick="window.print()">🖨 Imprimir</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function pick(btn, color) {
+        const picker = btn.parentElement;
+        picker.querySelectorAll('.status-btn').forEach(b => {
+            b.classList.remove('sel-green','sel-amber','sel-red');
+        });
+        btn.classList.add('sel-' + color);
+    }
+
+    const STATUS_KEYS = [
+        'web_carga','web_ingles','web_b2b','web_responsable','web_email_contacto','web_testimonios',
+        'google_reclamado','google_descripcion','google_fotos','google_resenas',
+        'redes_ig_bio','redes_ig_activo','redes_linkedin',
+        'rep_idiomas','rep_negativas','rep_agencias'
+    ];
+    const TEXTAREA_KEYS = ['notas_web','notas_redes','busqueda_que_ves','busqueda_que_falta','semana','mes','tres_meses'];
+    const PRIORITY_KEYS = ['accion_web','accion_google','accion_redes','accion_reputacion','accion_visibilidad'];
+
+    async function saveToFirestore(collection, data) {
+        const fields = {};
+        for (const [k, v] of Object.entries(data)) {
+            if (v === null || v === undefined) continue;
+            if (typeof v === 'number') fields[k] = { integerValue: v };
+            else if (typeof v === 'object') fields[k] = { stringValue: JSON.stringify(v) };
+            else fields[k] = { stringValue: String(v) };
+        }
+        await fetch(
+            'https://firestore.googleapis.com/v1/projects/tourism-development-d620c/databases/(default)/documents/' + collection + '?key=AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4',
+            { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ fields }) }
+        );
+    }
+
+    async function guardar() {
+        const email = (document.getElementById('inputEmail')?.value || '').trim();
+        if (!email) {
+            alert('Ingresa tu correo electrónico antes de guardar.');
+            document.getElementById('inputEmail').focus();
+            return;
+        }
+        const statusData = {};
+        document.querySelectorAll('.status-picker').forEach((picker, i) => {
+            const sel = picker.querySelector('.sel-green,.sel-amber,.sel-red');
+            statusData[STATUS_KEYS[i] || 'item_' + i] = sel
+                ? (sel.classList.contains('sel-green') ? 'green' : sel.classList.contains('sel-amber') ? 'amber' : 'red')
+                : '';
+        });
+        const taData = {};
+        document.querySelectorAll('textarea').forEach((ta, i) => {
+            taData[TEXTAREA_KEYS[i] || 'ta_' + i] = ta.value.trim();
+        });
+        const paData = {};
+        document.querySelectorAll('.priority-action input').forEach((inp, i) => {
+            paData[PRIORITY_KEYS[i] || 'pa_' + i] = inp.value.trim();
+        });
+        const data = {
+            tool: 'auditoria_presencia', timestamp: new Date().toISOString(),
+            email,
+            nombre:    (document.getElementById('inputNombre')?.value   || '').trim(),
+            operacion: (document.getElementById('inputOperacion')?.value || '').trim(),
+            web:       (document.getElementById('inputWeb')?.value       || '').trim(),
+            ...statusData, ...taData, ...paData,
+        };
+        const btn = document.getElementById('guardarBtn');
+        const statusEl = document.getElementById('saveStatus');
+        btn.disabled = true; btn.textContent = 'Guardando…';
+        try {
+            await saveToFirestore('auditoria_results', data);
+            btn.textContent = '✓ Guardado';
+            statusEl.textContent = 'Guardado · ' + new Date().toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'});
+            statusEl.style.color = '#4caf50';
+        } catch(e) {
+            btn.textContent = 'Error — reintentar';
+            statusEl.textContent = 'No se pudo guardar';
+            statusEl.style.color = '#C8352A';
+        }
+        setTimeout(() => { btn.disabled = false; btn.textContent = '💾 Guardar'; }, 3000);
+    }
+</script>
+
+</body>
+</html>

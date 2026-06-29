@@ -1,0 +1,329 @@
+{
+  "universal": {
+    "cultural_heritage": {
+      "display_name": "Cultural & Heritage Value",
+      "keywords": [
+        "culture", "cultural", "heritage", "history", "historical",
+        "authentic", "authenticity", "traditional", "significance", "preservation",
+        "legacy", "ancestor", "ancestral", "origin", "custom", "ritual",
+        "tribe", "tribal", "monument", "historic", "colonial", "ancient",
+        "sacred", "spiritual", "religion", "religious"
+      ],
+      "weight": 1.0,
+      "description": "Cultural authenticity and heritage preservation"
+    },
+    "service_staff": {
+      "display_name": "Service & Staff Quality",
+      "keywords": [
+        "staff", "guide", "service", "friendly", "helpful",
+        "knowledgeable", "hospitable", "welcoming", "professional",
+        "courteous", "attentive", "tour guide", "host", "hostess",
+        "informative", "passionate", "enthusiastic", "crew",
+        "employee", "worker", "receptionist", "manager"
+      ],
+      "weight": 1.0,
+      "description": "Quality of customer service and staff interactions"
+    },
+    "facilities_infrastructure": {
+      "display_name": "Facilities & Infrastructure",
+      "keywords": [
+        "facilities", "facility", "infrastructure", "building", "maintenance",
+        "clean", "cleanliness", "condition", "restroom", "bathroom", "toilet",
+        "amenities", "upkeep", "repair", "modern", "renovate", "renovation",
+        "structure", "construction", "air condition", "lighting",
+        "deteriorat", "decay", "neglect", "dirty", "filthy", "old"
+      ],
+      "weight": 1.0,
+      "description": "Physical facilities and infrastructure quality"
+    },
+    "accessibility_transport": {
+      "display_name": "Accessibility & Transport",
+      "keywords": [
+        "access", "accessible", "transport", "transportation",
+        "location", "parking", "directions", "signage", "sign", "signpost",
+        "ferry", "boat", "bus", "taxi", "drive", "driving", "walk", "walking",
+        "reach", "reaching", "find", "finding", "navigate", "navigation",
+        "wayfinding", "entrance", "approach", "arrive", "arrival",
+        "distance", "far", "close", "nearby", "remote", "isolated"
+      ],
+      "weight": 1.0,
+      "description": "Ease of access and transportation options"
+    },
+    "value_money": {
+      "display_name": "Value for Money",
+      "keywords": [
+        "price", "pricing", "value", "expensive", "cheap",
+        "worth", "worthwhile", "money", "cost", "fee", "charge", "admission",
+        "ticket", "affordable", "overpriced", "reasonable", "bargain",
+        "rip off", "ripoff", "waste", "free", "donation",
+        "budget", "payment", "paid", "pay"
+      ],
+      "weight": 1.0,
+      "description": "Perceived value relative to price"
+    },
+    "safety_security": {
+      "display_name": "Safety & Security",
+      "keywords": [
+        "safe", "safety", "security", "dangerous", "danger",
+        "risk", "risky", "crime", "guard", "secure", "protection",
+        "protect", "threat", "threatening", "hazard", "precaution",
+        "unsafe", "insecure", "theft", "steal", "robber", "robbery",
+        "police", "emergency", "fear"
+      ],
+      "weight": 1.0,
+      "description": "Safety measures and security"
+    },
+    "educational_value": {
+      "display_name": "Educational & Informational Value",
+      "keywords": [
+        "learn", "learning", "educational", "education", "information",
+        "informative", "exhibit", "exhibition", "explanation", "explain",
+        "knowledge", "knowledgeable", "teach", "teaching", "insight", "discover",
+        "understand", "understanding", "interpretation", "label", "plaque",
+        "display", "museum", "gallery", "tour", "presentation",
+        "fact", "detail", "detailed", "description"
+      ],
+      "weight": 1.0,
+      "description": "Educational content and learning opportunities"
+    },
+    "artistic_creative": {
+      "display_name": "Artistic & Creative Quality",
+      "keywords": [
+        "art", "artistic", "creative", "creativity", "beautiful", "beauty",
+        "crafts", "craftsman", "craftsmanship", "design", "aesthetic", "gallery",
+        "artist", "artwork", "collection", "masterpiece", "piece",
+        "visual", "handmade", "hand made", "music", "musical", "performance",
+        "perform", "show", "display", "colorful", "vibrant",
+        "sculpture", "paint", "painting", "draw", "drawing"
+      ],
+      "weight": 1.0,
+      "description": "Artistic quality and creative elements"
+    },
+    "atmosphere_experience": {
+      "display_name": "Atmosphere & Overall Experience",
+      "keywords": [
+        "atmosphere", "atmospheric", "ambiance", "ambience", "experience",
+        "enjoyable", "pleasant", "memorable", "vibe", "feel", "feeling",
+        "environment", "setting", "mood", "wonderful", "fantastic",
+        "amazing", "excellent", "great", "good", "nice", "lovely",
+        "boring", "dull", "disappointing", "disappointment", "underwhelming",
+        "impressive", "stunning", "breathtaking", "peaceful", "serene"
+      ],
+      "weight": 1.0,
+      "description": "Overall atmosphere and visitor experience"
+    }
+  },
+  "activities": {
+    "activity_quality": {
+      "display_name": "Activity Quality",
+      "keywords": [
+        "activity", "activities", "excursion", "tour", "experience",
+        "quality", "well-organized", "fun", "enjoyable", "engaging",
+        "interactive", "participatory", "hands-on", "immersive"
+      ],
+      "weight": 1.2,
+      "description": "Overall quality and execution of activities"
+    },
+    "guide_expertise": {
+      "display_name": "Guide Expertise",
+      "keywords": [
+        "guide", "instructor", "leader", "expert", "knowledgeable",
+        "professional", "skilled", "experienced", "informative",
+        "passionate", "enthusiastic", "helpful", "friendly"
+      ],
+      "weight": 1.3,
+      "description": "Guide knowledge and teaching ability"
+    },
+    "safety_measures": {
+      "display_name": "Safety Measures",
+      "keywords": [
+        "safe", "safety", "secure", "protected", "equipment",
+        "helmet", "life jacket", "safety briefing", "supervision",
+        "well-maintained", "professional", "experienced"
+      ],
+      "weight": 1.2,
+      "description": "Safety protocols and equipment"
+    },
+    "equipment_quality": {
+      "display_name": "Equipment Quality",
+      "keywords": [
+        "equipment", "gear", "tools", "materials", "quality",
+        "modern", "well-maintained", "professional", "adequate",
+        "condition", "broken", "old", "outdated"
+      ],
+      "weight": 1.0,
+      "description": "Quality and condition of equipment provided"
+    },
+    "duration_timing": {
+      "display_name": "Duration & Timing",
+      "keywords": [
+        "duration", "length", "time", "schedule", "timing",
+        "too short", "too long", "perfect", "adequate",
+        "punctual", "on time", "late", "early", "rushed"
+      ],
+      "weight": 1.0,
+      "description": "Activity duration and scheduling"
+    }
+  },
+  "accommodations": {
+    "room_quality": {
+      "display_name": "Room Quality",
+      "keywords": [
+        "room", "bedroom", "suite", "accommodation", "sleeping",
+        "comfortable", "spacious", "clean", "decorated", "furnished",
+        "bed", "mattress", "pillow", "sheets", "bathroom",
+        "shower", "bathtub", "air conditioning", "heating"
+      ],
+      "weight": 1.3,
+      "description": "Room comfort, size, and quality"
+    },
+    "facilities_amenities": {
+      "display_name": "Facilities & Amenities",
+      "keywords": [
+        "pool", "spa", "gym", "restaurant", "bar", "lounge",
+        "wifi", "internet", "parking", "laundry", "concierge",
+        "amenities", "facilities", "service", "breakfast",
+        "buffet", "dining"
+      ],
+      "weight": 1.2,
+      "description": "On-site facilities and services"
+    },
+    "location_access": {
+      "display_name": "Location & Access",
+      "keywords": [
+        "location", "position", "situated", "central", "downtown",
+        "beach", "waterfront", "close to", "near", "far from",
+        "transport", "accessible", "parking", "walking distance"
+      ],
+      "weight": 1.1,
+      "description": "Location convenience and accessibility"
+    },
+    "breakfast_dining": {
+      "display_name": "Breakfast & Dining",
+      "keywords": [
+        "breakfast", "meal", "dining", "restaurant", "food",
+        "buffet", "continental", "fresh", "variety", "selection",
+        "service", "wait time", "quality", "taste"
+      ],
+      "weight": 1.1,
+      "description": "Dining options and breakfast quality"
+    },
+    "cleanliness": {
+      "display_name": "Cleanliness",
+      "keywords": [
+        "clean", "cleanliness", "hygiene", "dirty", "messy",
+        "tidy", "spotless", "maintained", "sanitary",
+        "housekeeping", "fresh", "smell", "odour", "stain"
+      ],
+      "weight": 1.2,
+      "description": "Overall cleanliness and maintenance"
+    }
+  },
+  "restaurants": {
+    "food_quality": {
+      "display_name": "Food Quality",
+      "keywords": [
+        "food", "dish", "meal", "cuisine", "cooking",
+        "delicious", "tasty", "flavor", "flavour", "fresh",
+        "quality", "excellent", "amazing", "wonderful",
+        "bland", "tasteless", "overcooked", "undercooked"
+      ],
+      "weight": 1.4,
+      "description": "Food taste, quality, and preparation"
+    },
+    "service_speed": {
+      "display_name": "Service Speed",
+      "keywords": [
+        "service", "wait", "waiting", "time", "speed",
+        "quick", "fast", "slow", "prompt", "efficient",
+        "attentive", "responsive", "delay", "rush"
+      ],
+      "weight": 1.2,
+      "description": "Service speed and responsiveness"
+    },
+    "atmosphere": {
+      "display_name": "Atmosphere",
+      "keywords": [
+        "atmosphere", "ambiance", "ambience", "decor", "setting",
+        "romantic", "cozy", "intimate", "lively", "vibrant",
+        "quiet", "noisy", "crowded", "peaceful"
+      ],
+      "weight": 1.1,
+      "description": "Restaurant atmosphere and ambiance"
+    },
+    "value_money": {
+      "display_name": "Value for Money",
+      "keywords": [
+        "price", "expensive", "cheap", "value", "worth",
+        "affordable", "overpriced", "reasonable", "bargain",
+        "portion", "size", "quality", "cost"
+      ],
+      "weight": 1.2,
+      "description": "Value relative to price"
+    },
+    "dietary_options": {
+      "display_name": "Dietary Options",
+      "keywords": [
+        "vegetarian", "vegan", "gluten-free", "halal", "kosher",
+        "allergy", "dietary", "restriction", "option", "menu",
+        "accommodate", "substitute", "alternative"
+      ],
+      "weight": 1.0,
+      "description": "Dietary requirement accommodations"
+    }
+  },
+  "tour_operators": {
+    "guide_quality": {
+      "display_name": "Guide Quality",
+      "keywords": [
+        "guide", "tour guide", "driver", "instructor",
+        "knowledgeable", "friendly", "professional", "expert",
+        "passionate", "enthusiastic", "helpful", "informative"
+      ],
+      "weight": 1.4,
+      "description": "Quality of tour guides and drivers"
+    },
+    "itinerary_planning": {
+      "display_name": "Itinerary Planning",
+      "keywords": [
+        "itinerary", "schedule", "planning", "route", "program",
+        "organized", "well-planned", "structured", "efficient",
+        "flexible", "rigid", "rushed", "too much", "too little"
+      ],
+      "weight": 1.3,
+      "description": "Tour planning and itinerary quality"
+    },
+    "transportation": {
+      "display_name": "Transportation",
+      "keywords": [
+        "vehicle", "bus", "car", "van", "boat",
+        "comfortable", "clean", "reliable", "modern",
+        "air conditioning", "space", "seats",
+        "old", "broken", "uncomfortable"
+      ],
+      "weight": 1.2,
+      "description": "Transportation quality and comfort"
+    },
+    "organization": {
+      "display_name": "Organization",
+      "keywords": [
+        "organized", "organization", "coordination", "efficient",
+        "smooth", "professional", "well-coordinated",
+        "chaotic", "disorganized", "confusion", "miscommunication"
+      ],
+      "weight": 1.2,
+      "description": "Overall organization and coordination"
+    },
+    "responsiveness": {
+      "display_name": "Responsiveness",
+      "keywords": [
+        "responsive", "communication", "contact", "reply",
+        "email", "phone", "booking", "confirmation",
+        "helpful", "supportive", "unresponsive", "slow"
+      ],
+      "weight": 1.1,
+      "description": "Communication and booking responsiveness"
+    }
+  }
+}
+

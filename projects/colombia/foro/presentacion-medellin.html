@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Más que un sentimiento — Foro de Tendencias, Medellín</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --blue:   #28B5E1;
+      --dblue:  #1B5FA8;
+      --mag:    #E91876;
+      --pur:    #7E3D9B;
+      --grn:    #5AAD2E;
+      --navy:   #0E1A2E;
+      --tx1:    #1A2B40;
+      --tx2:    #506070;
+      --lt:     #8FA4B8;
+      --bg:     #FFFFFF;
+      --bgsf:   #F4F7FA;
+      --bdr:    #DDE4ED;
+    }
+
+    /* ── REVEAL BASE ── */
+    .reveal {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #fff;
+    }
+    .reveal .slides section {
+      padding: 0;
+      height: 100%;
+      text-align: left;
+      overflow: hidden;
+    }
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Inter', sans-serif;
+      text-transform: none;
+      margin: 0;
+    }
+    .reveal aside.notes { display: none; }
+
+    /* ── UNIVERSAL INNER CONTAINER (fixes Reveal.js flex override) ── */
+    /* Every slide puts its content in .si which is absolutely positioned */
+    .si {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 96px 152px;
+    }
+    .si-left  { justify-content: flex-start; }
+    .si-col   { flex-direction: column; align-items: flex-start; }
+    /* When both are applied (column + left), si-left's justify-content controls vertical;
+       force vertical centering so content sits mid-screen instead of pinning to the top. */
+    .si-col.si-left { justify-content: center; }
+    .si-wrap  { max-width: 1640px; width: 100%; }
+
+    /* ── SPONSOR STRIP ── */
+    .ss {
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 84%;
+      background: white;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      padding: 11px 24px 9px;
+      box-shadow: 0 3px 14px rgba(0,0,0,.07);
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; flex-wrap: wrap;
+      z-index: 10;
+    }
+    .ss-lbl { font-size: 9px; color: var(--lt); font-weight: 500; }
+    .ss-chip {
+      background: #EDF2F7; color: var(--tx2);
+      padding: 4px 8px; border-radius: 4px;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.04em;
+    }
+
+    /* ── WAVE ── */
+    .wave {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 36%; pointer-events: none; z-index: 1;
+    }
+    .wave-tl { top: 5%; bottom: auto; height: 30%; }
+
+    /* ── DECO: large faint country code ── */
+    .deco-code {
+      position: absolute; right: 3%; bottom: 4%;
+      font-size: 280px; font-weight: 900;
+      color: rgba(255,255,255,.10);
+      letter-spacing: -0.06em; line-height: 1;
+      pointer-events: none; z-index: 4; user-select: none;
+      text-shadow: 0 0 28px rgba(0,0,0,.4);
+    }
+    /* ── DECO: subtle grid lines on dark slides ── */
+    .deco-grid {
+      position: absolute; inset: 0; pointer-events: none; z-index: 1;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* S1 — COLD OPEN                                      */
+    /* ─────────────────────────────────────────────────── */
+    .cold-line {
+      font-size: 60px; font-weight: 300; color: white; line-height: 1.18;
+    }
+    .cold-turn { font-weight: 700; color: var(--blue); }
+    .cold-sub  {
+      font-size: 22px; color: rgba(255,255,255,.45);
+      margin-top: 36px; font-weight: 400;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* S2 — TITLE                                          */
+    /* ─────────────────────────────────────────────────── */
+    .title-h1 {
+      font-size: 92px; font-weight: 300; color: #6B7280;
+      line-height: 1.0; margin-top: 80px;
+    }
+    .title-h1 em  { font-style: normal; color: var(--blue); font-weight: 800; }
+    .title-h2 {
+      font-size: 54px; font-weight: 300; color: #6B7280;
+      line-height: 1.05; margin-top: 18px;
+    }
+    .title-h2 strong { color: var(--blue); font-weight: 800; }
+    .title-meta {
+      position: absolute; bottom: 10%; left: 152px;
+      font-size: 20px; color: var(--tx2); font-weight: 500;
+    }
+    .title-meta strong { color: var(--dblue); }
+
+    /* ─────────────────────────────────────────────────── */
+    /* S3 — FRAMING                                        */
+    /* ─────────────────────────────────────────────────── */
+    .frame-line {
+      font-size: 74px; font-weight: 300; color: white; line-height: 1.1;
+    }
+    .frame-line strong { font-weight: 800; color: var(--blue); }
+    .frame-regions {
+      margin-top: 44px; font-size: 26px;
+      color: rgba(255,255,255,.4); letter-spacing: 0.06em;
+    }
+    .frame-regions span { color: var(--blue); font-weight: 600; }
+    .frame-note {
+      margin-top: 18px; font-size: 20px;
+      color: rgba(255,255,255,.25); font-style: italic;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* S4 — TRES VOCES                                     */
+    /* ─────────────────────────────────────────────────── */
+    .v-head {
+      font-size: 42px; font-weight: 300; color: var(--tx2);
+      margin-bottom: 52px; text-align: center;
+    }
+    .v-head strong { color: var(--blue); font-weight: 700; }
+    .v-row {
+      display: flex; justify-content: center; gap: 44px; align-items: stretch;
+      width: 100%;
+    }
+    .voice {
+      flex: 1; max-width: 380px; padding: 44px 36px; border-radius: 18px;
+      color: white; text-align: center;
+      display: flex; flex-direction: column; justify-content: center;
+      min-height: 270px;
+    }
+    .voice .vv { font-size: 24px; text-transform: uppercase; letter-spacing: 0.15em; opacity: .8; margin-bottom: 14px; font-weight: 700; }
+    .voice .vw { font-size: 32px; font-weight: 800; line-height: 1.1; }
+    .voice.v1 { background: var(--dblue); }
+    .voice.v2 { background: var(--mag); }
+    .voice.v3 { background: var(--grn); color: #1a2e00; }
+    .v-otros {
+      margin-top: 36px; font-size: 20px; color: var(--lt);
+      font-style: italic; text-align: center; width: 100%;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* COUNTRY INTRO SLIDES — Layout C (image-as-backdrop) */
+    /* ─────────────────────────────────────────────────── */
+    .ci2-veil {
+      position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(180deg,
+        rgba(0,0,0,.42) 0%,
+        rgba(0,0,0,.34) 30%,
+        rgba(0,0,0,.30) 55%,
+        rgba(0,0,0,.42) 75%,
+        rgba(0,0,0,.72) 100%);
+    }
+    .ci2-inner {
+      position: absolute; inset: 0; z-index: 3;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 0 152px;
+    }
+    .ci2-wrap { max-width: 1500px; }
+    .ci2-kicker {
+      font-size: 24px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.22em; color: rgba(255,255,255,.95);
+      margin-bottom: 36px;
+      text-shadow: 0 2px 16px rgba(0,0,0,.85), 0 0 4px rgba(0,0,0,.5);
+    }
+    .ci2-accent {
+      height: 5px; width: 80px; border-radius: 3px;
+      background: rgba(255,255,255,.45);
+      margin: 0 auto 52px;
+    }
+    .ci2-name {
+      font-size: 220px; font-weight: 900; color: white;
+      letter-spacing: -0.035em; line-height: 0.92;
+      margin-bottom: 56px;
+      text-shadow: 0 4px 36px rgba(0,0,0,.55);
+    }
+    .ci2-q {
+      font-size: 46px; color: rgba(255,255,255,.95);
+      font-style: italic; font-weight: 300; line-height: 1.3;
+      max-width: 1200px; margin: 0 auto;
+      text-shadow: 0 2px 22px rgba(0,0,0,.6);
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* CORNER LOCATOR MAP                                  */
+    /* ─────────────────────────────────────────────────── */
+    .cmap {
+      position: absolute;
+      top: 64px; right: 64px;
+      width: 210px;
+      background: white;
+      border-radius: 10px;
+      padding: 8px 8px 6px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.10);
+      z-index: 5;
+    }
+    .cmap img { width: 100%; display: block; border-radius: 4px; }
+    .cmap-lbl {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--lt); text-align: center;
+      margin-top: 6px;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* DATA SLIDES — Sorbonne fl-card pattern, hall scale  */
+    /* ─────────────────────────────────────────────────── */
+
+    /* Slide heading */
+    .sh {
+      font-size: 44px; font-weight: 300; color: var(--tx2);
+      line-height: 1.12; margin-bottom: 10px;
+    }
+    .sh strong { font-weight: 700; color: var(--tx1); }
+    /* Accent bar (like Sorbonne .accent) */
+    .acc {
+      height: 4px; width: 56px; border-radius: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--pur), var(--mag));
+      margin-bottom: 28px;
+    }
+    /* Lead text */
+    .lead {
+      font-size: 28px; color: var(--tx2); line-height: 1.5;
+      margin-bottom: 40px; max-width: 1200px;
+    }
+
+    /* Finding cards — 3-col grid (Sorbonne .fl / .findings-row) */
+    .fl-row {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 24px; width: 100%;
+    }
+    .fl {
+      background: white; border-radius: 14px;
+      padding: 36px 30px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+      border-top: 5px solid var(--dblue);
+    }
+    .fl.f1 { border-top-color: var(--mag); }
+    .fl.f2 { border-top-color: var(--pur); }
+    .fl.f3 { border-top-color: var(--blue); }
+    .fl.fa { border-top-color: var(--blue); }
+    .fl.fb { border-top-color: var(--grn); }
+    .fl-lbl {
+      font-size: 14px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--lt); margin-bottom: 8px;
+    }
+    .fl-stat {
+      font-size: 88px; font-weight: 900; color: var(--dblue);
+      line-height: 1; margin: 10px 0 14px;
+    }
+    .fl.f1 .fl-stat { color: var(--mag); }
+    .fl.f2 .fl-stat { color: var(--pur); }
+    .fl.f3 .fl-stat { color: var(--blue); }
+    .fl.fa .fl-stat { color: var(--blue); }
+    .fl.fb .fl-stat { color: var(--grn); }
+    .fl h4 {
+      font-size: 26px; font-weight: 700; color: var(--tx1);
+      margin-bottom: 10px; line-height: 1.28;
+    }
+    .fl p {
+      font-size: 22px; color: var(--tx2); line-height: 1.45;
+    }
+    /* Note callout (Sorbonne .note) */
+    .note {
+      background: var(--bgsf);
+      border-left: 5px solid var(--blue);
+      padding: 22px 28px; border-radius: 8px;
+      font-size: 26px; color: var(--tx2); line-height: 1.45;
+      margin-top: 28px; width: 100%;
+    }
+    .note strong { color: var(--tx1); }
+
+    /* ─────────────────────────────────────────────────── */
+    /* ESWATINI STAT (big number pattern)                  */
+    /* ─────────────────────────────────────────────────── */
+    .stat-row {
+      display: grid; grid-template-columns: 260px 1fr;
+      align-items: baseline; gap: 28px;
+      padding: 22px 0; border-bottom: 1px solid var(--bdr);
+    }
+    .stat-row:last-child { border-bottom: none; }
+    .snum {
+      font-size: 88px; font-weight: 800;
+      color: var(--blue); line-height: 1;
+    }
+    .snum.hi { color: var(--mag); }
+    .sdesc { font-size: 26px; color: var(--tx2); font-weight: 400; line-height: 1.2; }
+
+    /* ─────────────────────────────────────────────────── */
+    /* GAMBIA BAR CHART                                    */
+    /* ─────────────────────────────────────────────────── */
+    .hero-num {
+      font-size: 200px; font-weight: 800;
+      color: var(--blue); line-height: 0.9; letter-spacing: -0.04em;
+    }
+    .hero-lbl {
+      font-size: 24px; color: var(--tx2); font-weight: 300;
+      margin-top: 14px; line-height: 1.3;
+    }
+    .hero-lbl strong { color: var(--mag); font-weight: 700; }
+    .bar-chart { margin: 12px 0 20px; }
+    .bar-row {
+      display: grid; grid-template-columns: 160px 1fr 90px;
+      align-items: center; gap: 22px;
+      margin-bottom: 22px; font-size: 30px;
+    }
+    .bn { color: var(--tx2); font-weight: 700; }
+    .bb { height: 54px; border-radius: 6px; background: var(--dblue); }
+    .hl .bb { background: var(--mag); box-shadow: 0 4px 16px rgba(233,24,118,.22); }
+    .bv { font-weight: 800; color: var(--dblue); text-align: right; font-size: 36px; }
+    .hl .bv { color: var(--mag); }
+    .hl .bn { color: var(--mag); }
+    .bar-src { font-size: 18px; color: var(--lt); font-style: italic; }
+
+    /* ─────────────────────────────────────────────────── */
+    /* VENN (Tonga)                                        */
+    /* ─────────────────────────────────────────────────── */
+    .venn-sub {
+      margin-top: 28px; font-size: 24px; color: var(--tx2);
+      font-style: italic; text-align: center; max-width: 900px;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* KEYWORD MATCHUP CARDS (Tonga)                       */
+    /* ─────────────────────────────────────────────────── */
+    .mu-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 28px; width: 100%; margin-top: 8px;
+    }
+    .mu {
+      background: var(--bgsf); border-radius: 14px;
+      padding: 28px 36px 30px;
+      border-left: 6px solid var(--mag);
+    }
+    .mu.win { border-left-color: var(--lt); opacity: .82; }
+    .mu-q {
+      font-size: 26px; font-weight: 700; color: var(--tx1);
+      margin-bottom: 4px; line-height: 1.2;
+    }
+    .mu-vol { font-size: 16px; color: var(--lt); margin-bottom: 18px; font-weight: 500; }
+    .mu-intent {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      padding: 3px 9px; border-radius: 4px;
+      background: var(--mag); color: white;
+      vertical-align: middle; margin-left: 8px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .mu-faceoff {
+      display: grid; grid-template-columns: 1fr 50px 1fr;
+      align-items: center; gap: 14px;
+    }
+    .mu-side { text-align: center; }
+    .mu-rank {
+      font-size: 84px; font-weight: 900; line-height: 1;
+      color: var(--lt);
+    }
+    .mu-side.lose .mu-rank { color: var(--mag); }
+    .mu-side.lead .mu-rank { color: var(--grn); }
+    .mu-who {
+      font-size: 13px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--lt); margin-top: 8px;
+    }
+    .mu-vs {
+      font-size: 22px; font-weight: 800; color: var(--lt);
+      text-align: center; text-transform: lowercase;
+    }
+    .mu-src { margin-top: 18px; font-size: 16px; color: var(--lt); font-style: italic; text-align: right; }
+
+    /* ─────────────────────────────────────────────────── */
+    /* COUNTRY CONCLUSION                                  */
+    /* ─────────────────────────────────────────────────── */
+    .cl-line {
+      font-size: 74px; font-weight: 300;
+      color: rgba(255,255,255,.52); line-height: 1.1;
+    }
+    .cl-line + .cl-line { margin-top: 12px; }
+    .cl-line strong { color: white; font-weight: 800; }
+    .cl-sub {
+      margin-top: 36px; font-size: 28px;
+      color: var(--blue); font-style: italic;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* ACTIONS SLIDE                                       */
+    /* ─────────────────────────────────────────────────── */
+    .al-grid {
+      display: grid; grid-template-columns: 1fr 1.3fr;
+      gap: 80px; align-items: center; width: 100%;
+    }
+    .al-head {
+      font-size: 64px; font-weight: 300; color: var(--tx2); line-height: 1.1;
+    }
+    .al-head strong { color: var(--blue); font-weight: 800; }
+    .al-list { list-style: none; counter-reset: step; padding: 0; margin: 0; }
+    .al-list li {
+      counter-increment: step; padding: 16px 0;
+      border-bottom: 1px solid var(--bdr);
+      display: grid; grid-template-columns: 72px 1fr;
+      align-items: baseline; gap: 16px;
+    }
+    .al-list li:last-child { border-bottom: none; }
+    .al-list li::before {
+      content: counter(step); font-size: 68px; font-weight: 800;
+      color: var(--blue); line-height: 1;
+    }
+    .al-text { font-size: 21px; color: var(--tx2); line-height: 1.4; }
+    .al-text strong { color: var(--tx1); font-weight: 700; display: block; margin-bottom: 4px; font-size: 23px; }
+
+    /* ─────────────────────────────────────────────────── */
+    /* GRACIAS                                             */
+    /* ─────────────────────────────────────────────────── */
+    .gracias-card {
+      background: white; padding: 60px 100px; border-radius: 28px;
+      box-shadow: 0 12px 56px rgba(0,0,0,.09); z-index: 2;
+    }
+    .gracias-text {
+      font-size: 160px; font-weight: 900; line-height: 1;
+      background: linear-gradient(90deg, var(--blue), var(--pur), var(--mag));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; letter-spacing: -0.03em;
+    }
+    .gracias-meta {
+      position: absolute; bottom: 8%;
+      font-size: 18px; color: var(--tx2); text-align: center; z-index: 2;
+      left: 0; right: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══ S1 — TITLE ═══ -->
+<section>
+  <div class="ss">
+    <span class="ss-lbl">Coorganizan:</span>
+    <span class="ss-chip">FRANCE</span><span class="ss-chip">CØMPÁS URBANO</span><span class="ss-chip">comfama</span>
+    <span class="ss-lbl">Organizan:</span>
+    <span class="ss-chip">CLUSTER TURISMO</span><span class="ss-chip">CCMA</span>
+    <span class="ss-lbl">Aliados:</span>
+    <span class="ss-chip">COL. MAYOR</span><span class="ss-chip">EAFIT</span><span class="ss-chip">YORK</span><span class="ss-chip">PROANTIOQUIA</span><span class="ss-chip">MEDELLÍN</span><span class="ss-chip">ANTIOQUIA</span>
+  </div>
+
+  <div class="si si-col" style="align-items:center; justify-content:center; text-align:center;">
+    <div class="si-wrap" style="text-align:center;">
+      <h1 class="title-h1">Más que un <em>sentimiento</em></h1>
+      <h2 class="title-h2">La <strong>matemática</strong> de la marca turística</h2>
+    </div>
+  </div>
+
+  <div class="title-meta">
+    <strong>Alex Jeffries</strong> &nbsp;·&nbsp; III Foro de Tendencias en el Turismo &nbsp;·&nbsp; Medellín, 27 mayo 2026
+  </div>
+
+  <svg class="wave" viewBox="0 0 1920 410" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="wA" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="#28B5E1"/>
+        <stop offset="55%"  stop-color="#7E3D9B"/>
+        <stop offset="100%" stop-color="#E91876"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,270 Q480,130 960,210 T1920,170 L1920,410 L0,410 Z" fill="url(#wA)" opacity="0.85"/>
+    <path d="M0,340 Q480,210 960,280 T1920,250 L1920,410 L0,410 Z" fill="url(#wA)" opacity="0.4"/>
+  </svg>
+  <aside class="notes">~20s</aside>
+</section>
+
+<!-- ═══ S3 — FRAMING ═══ -->
+<section data-background-color="#0E1A2E">
+  <svg class="deco-grid" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" style="opacity:.04;">
+    <line x1="0" y1="360" x2="1920" y2="360" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="720" x2="1920" y2="720" stroke="white" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="1080" stroke="white" stroke-width="1"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080" stroke="white" stroke-width="1"/>
+  </svg>
+  <div class="si si-col" style="align-items:center; justify-content:center; text-align:center;">
+    <div class="si-wrap">
+      <div class="frame-line">Tres países.</div>
+      <div class="frame-line" style="margin-top:.15em;">Tres regiones.</div>
+      <div class="frame-line" style="margin-top:.15em;"><strong>Los patrones se repiten.</strong></div>
+      <div class="frame-regions">
+        <span>África Occidental</span> &nbsp;·&nbsp; <span>África Austral</span> &nbsp;·&nbsp; <span>Pacífico Sur</span>
+      </div>
+      <div class="frame-note">Hallazgos seleccionados — lo que viaja.</div>
+    </div>
+  </div>
+  <aside class="notes">~20s</aside>
+</section>
+
+<!-- ═══ S4 — TRES VOCES ═══ -->
+<section>
+  <div class="si" style="flex-direction:column; align-items:center;">
+    <div style="max-width:1400px; width:100%;">
+      <h2 class="v-head">Tres voces construyen <strong>toda marca turística</strong></h2>
+      <div class="v-row">
+        <div class="voice v1"><div class="vv">Afirma</div><div class="vw">El DMO</div></div>
+        <div class="voice v2"><div class="vv">Vende</div><div class="vw">El operador internacional</div></div>
+        <div class="voice v3"><div class="vv">Dice</div><div class="vw">El visitante</div></div>
+      </div>
+      <div class="v-otros">Y otras voces: medios, cine, boca a boca — pero estas tres se pueden mover.</div>
+    </div>
+  </div>
+  <aside class="notes">~45s</aside>
+</section>
+
+<!-- ══════════════════════════════════ ESWATINI ══════════════════════════════════ -->
+
+<!-- ═══ S5 — ESWATINI INTRO ═══ -->
+<section style="background:#000 url('foro_images/eswatini_hero.jpg') center/cover no-repeat;">
+  <div class="ci2-veil"></div>
+  <div class="deco-code">SZ</div>
+  <div class="ci2-inner">
+    <div class="ci2-wrap">
+      <div class="ci2-kicker">Investigación aplicada · Estadía · África Austral</div>
+      <div class="ci2-accent"></div>
+      <div class="ci2-name">Eswatini</div>
+      <p class="ci2-q">¿Estás contando una historia que invite a quedarse?</p>
+    </div>
+  </div>
+  <aside class="notes">~15s</aside>
+</section>
+
+<!-- ═══ S6 — ESWATINI STAT ═══ -->
+<section>
+  <div class="cmap"><img src="foro_images/map_eswatini.png" alt=""><div class="cmap-lbl">Eswatini · África Austral</div></div>
+  <div class="si" style="align-items:center;">
+    <div style="max-width:1640px; width:100%;">
+      <div class="acc"></div>
+      <h2 class="sh" style="margin-bottom:40px;"><strong>La mitad solo pasa.</strong></h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div style="background:var(--bgsf); border-top:6px solid var(--mag); border-radius:18px; padding:52px 48px;">
+          <div style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lt);margin-bottom:16px;">Visitantes en tránsito</div>
+          <div style="font-size:130px;font-weight:800;color:var(--mag);line-height:.9;">48,76%</div>
+          <div style="font-size:26px;color:var(--tx2);margin-top:20px;line-height:1.3;">en tránsito o una sola noche</div>
+        </div>
+        <div style="background:var(--bgsf); border-top:6px solid var(--blue); border-radius:18px; padding:52px 48px;">
+          <div style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lt);margin-bottom:16px;">Estadía media — turista de ocio</div>
+          <div style="font-size:130px;font-weight:800;color:var(--blue);line-height:.9;">1,8 <span style="font-size:52px;font-weight:400;color:var(--lt);">noches</span></div>
+          <div style="font-size:26px;color:var(--tx2);margin-top:20px;line-height:1.3;">promedio nacional</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">~30s</aside>
+</section>
+
+<!-- ═══ S7 — ESWATINI REVEAL ═══ -->
+<section>
+  <div class="si" style="align-items:center;">
+    <div style="max-width:1640px; width:100%;">
+      <div class="acc"></div>
+      <h2 class="sh" style="margin-bottom:36px;">Los nichos que sí se quedan — <strong>ya existen.</strong></h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+
+        <!-- Francia card -->
+        <div style="background:var(--bgsf); border-top:6px solid var(--blue); border-radius:18px; padding:44px 48px;">
+          <div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lt);margin-bottom:12px;">Francia · 25–34 años · senderismo y cultura</div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin:16px 0 8px;">
+            <span style="font-size:120px;font-weight:800;color:var(--blue);line-height:.9;">2,70</span>
+            <span style="font-size:40px;font-weight:400;color:var(--tx2);">días</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:16px;">
+            <span style="font-size:20px;color:var(--lt);">vs promedio nacional:</span>
+            <span style="font-size:28px;font-weight:700;color:var(--mag);">1,8 noches</span>
+          </div>
+          <div style="font-size:17px;color:var(--lt);margin-top:10px;">Encuestas de salida ETA</div>
+        </div>
+
+        <!-- Reino Unido card -->
+        <div style="background:var(--bgsf); border-top:6px solid var(--grn); border-radius:18px; padding:44px 48px;">
+          <div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lt);margin-bottom:12px;">Reino Unido · 45–64 años · aventura y naturaleza</div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin:16px 0 8px;">
+            <span style="font-size:120px;font-weight:800;color:var(--grn);line-height:.9;">4–9</span>
+            <span style="font-size:40px;font-weight:400;color:var(--tx2);">días</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:16px;">
+            <span style="font-size:20px;color:var(--lt);">vs promedio nacional:</span>
+            <span style="font-size:28px;font-weight:700;color:var(--mag);">1,8 noches</span>
+          </div>
+          <div style="font-size:17px;color:var(--lt);margin-top:10px;">ETA database · adventure + wildlife segments</div>
+        </div>
+
+      </div>
+      <div class="note" style="border-left-color:var(--dblue);margin-top:28px;">
+        Operadores internacionales ya piden paquetes de <strong>4+ días</strong>. El producto — no. Los itinerarios conectados — tampoco.
+      </div>
+    </div>
+  </div>
+  <aside class="notes">~30s</aside>
+</section>
+
+<!-- ═══ S8 — ESWATINI CONCLUSION ═══ -->
+<section data-background-color="#0E1A2E">
+  <svg class="deco-grid" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" style="opacity:.04;">
+    <line x1="0" y1="360" x2="1920" y2="360" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="720" x2="1920" y2="720" stroke="white" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="1080" stroke="white" stroke-width="1"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080" stroke="white" stroke-width="1"/>
+  </svg>
+  <div class="deco-code">SZ</div>
+  <div class="si si-col" style="align-items:center; justify-content:center; text-align:center;">
+    <div class="si-wrap">
+      <div class="cl-line">El problema no es la demanda.</div>
+      <div class="cl-line" style="margin-top:12px;"><strong>Es la imagen.</strong></div>
+      <div class="cl-sub">Mientras el destino se vende como escala, se visitará como escala.</div>
+    </div>
+  </div>
+  <aside class="notes">~20s</aside>
+</section>
+
+<!-- ══════════════════════════════════ GAMBIA ══════════════════════════════════ -->
+
+<!-- ═══ S9 — GAMBIA INTRO ═══ -->
+<section style="background:#000 url('foro_images/gambia_hero.jpg') center/cover no-repeat;">
+  <div class="ci2-veil"></div>
+  <div class="deco-code">GM</div>
+  <div class="ci2-inner">
+    <div class="ci2-wrap">
+      <div class="ci2-kicker">Investigación aplicada · Presencia digital · África Occidental</div>
+      <div class="ci2-accent"></div>
+      <div class="ci2-name">Gambia</div>
+      <p class="ci2-q">¿Quién está contando la historia de tu destino?</p>
+    </div>
+  </div>
+  <aside class="notes">~15s</aside>
+</section>
+
+<!-- ═══ S10 — GAMBIA BAR CHART ═══ -->
+<section>
+  <div class="cmap"><img src="foro_images/map_gambia.png" alt=""><div class="cmap-lbl">Gambia · África Occidental</div></div>
+  <div class="si" style="align-items: center;">
+    <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:110px; align-items:center; max-width:1640px; width:100%;">
+      <div>
+        <div class="hero-num">9<span style="font-size:.45em;color:#9aa;font-weight:300;">%</span></div>
+        <div class="hero-lbl" style="font-size:30px; margin-top:18px;">de itinerarios internacionales menciona cultura o artesanía <strong>gambiana</strong></div>
+      </div>
+      <div>
+        <div class="acc"></div>
+        <h2 class="sh" style="font-size:44px; margin-bottom:36px;">¿Por qué tan poco?</h2>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <span class="bn">Senegal</span><span class="bb" style="width:100%;"></span><span class="bv">26%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bn">Ghana</span><span class="bb" style="width:81%;"></span><span class="bv">21%</span>
+          </div>
+          <div class="bar-row hl">
+            <span class="bn">Gambia</span><span class="bb" style="width:35%;"></span><span class="bv">9%</span>
+          </div>
+        </div>
+        <div class="bar-src">239 páginas de operadores analizadas · contenido cultural en itinerarios</div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">~35s</aside>
+</section>
+
+<!-- ═══ S11 — GAMBIA DIGITAL GAP ═══ -->
+<section>
+  <div class="si si-left si-col">
+    <div class="si-wrap">
+      <div class="acc"></div>
+      <h2 class="sh">El producto existe. <strong>La huella digital, no.</strong></h2>
+      <div class="fl-row" style="margin-top:32px;">
+        <div class="fl f1">
+          <div class="fl-lbl">Capacidad digital</div>
+          <div class="fl-stat">61%</div>
+          <h4>Sin presencia digital básica</h4>
+          <p>de actores del sector cultural y creativo</p>
+        </div>
+        <div class="fl f2">
+          <div class="fl-lbl">Actividad en redes</div>
+          <div class="fl-stat">64%</div>
+          <h4>Publican menos de una vez al mes</h4>
+          <p>en redes sociales</p>
+        </div>
+        <div class="fl f3">
+          <div class="fl-lbl">Visibilidad en búsqueda</div>
+          <div class="fl-stat" style="font-size:60px;">&lt;25%</div>
+          <h4>Invisible para clientes internacionales</h4>
+          <p>puntuación máxima en búsquedas orgánicas</p>
+        </div>
+      </div>
+      <div class="note">Si no pueden encontrarte, <strong>solo cuentan lo que conocen.</strong></div>
+    </div>
+  </div>
+  <aside class="notes">~35s</aside>
+</section>
+
+<!-- ═══ S12 — GAMBIA CONCLUSION ═══ -->
+<section data-background-color="#0E1A2E">
+  <svg class="deco-grid" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" style="opacity:.04;">
+    <line x1="0" y1="360" x2="1920" y2="360" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="720" x2="1920" y2="720" stroke="white" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="1080" stroke="white" stroke-width="1"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080" stroke="white" stroke-width="1"/>
+  </svg>
+  <div class="deco-code">GM</div>
+  <div class="si si-col" style="align-items:center; justify-content:center; text-align:center;">
+    <div class="si-wrap">
+      <div class="cl-line">Cambiar lo que te venden</div>
+      <div class="cl-line" style="margin-top:12px;"><strong>= cambiar cuándo te visitan.</strong></div>
+      <div class="cl-sub">Y eso empieza por hacerte encontrable.</div>
+    </div>
+  </div>
+  <aside class="notes">~20s</aside>
+</section>
+
+<!-- ══════════════════════════════════ TONGA ══════════════════════════════════ -->
+
+<!-- ═══ S13 — TONGA INTRO ═══ -->
+<section style="background:#000 url('foro_images/tonga_hero.jpg') center/cover no-repeat;">
+  <div class="ci2-veil"></div>
+  <div class="deco-code">TO</div>
+  <div class="ci2-inner">
+    <div class="ci2-wrap">
+      <div class="ci2-kicker">Investigación aplicada · Posicionamiento digital · Pacífico Sur</div>
+      <div class="ci2-accent"></div>
+      <div class="ci2-name">Tonga</div>
+      <p class="ci2-q">¿Cómo aparece tu marca cuando alguien te busca?</p>
+    </div>
+  </div>
+  <aside class="notes">~15s</aside>
+</section>
+
+<!-- ═══ S14 — TONGA VENN ═══ -->
+<section>
+  <div class="cmap"><img src="foro_images/map_tonga.png" alt=""><div class="cmap-lbl">Tonga · Pacífico Sur</div></div>
+  <div class="si" style="flex-direction:column; align-items:center; justify-content:center;">
+    <div style="max-width:1500px; width:100%; text-align:center;">
+      <div class="acc" style="margin: 0 auto 20px;"></div>
+      <h2 style="font-size:56px; font-weight:300; color:var(--tx2); margin-bottom:32px;">
+        Dos sitios. <strong style="color:var(--mag); font-weight:700;">Un solo mercado.</strong>
+      </h2>
+      <img src="foro_images/tonga_overlap.png" alt="Solapamiento de keywords entre tongatourism.travel y thekingdomoftonga.com" style="display:block; margin: 0 auto; max-width: 880px; width: 100%; border-radius: 10px;">
+      <p class="venn-sub" style="font-size:30px; margin-top:32px; max-width:1100px; margin-left:auto; margin-right:auto;">El sitio abandonado sigue activo, sigue indexado, sigue <strong style="color:var(--mag); font-weight:700;">capturando visitantes</strong>.</p>
+    </div>
+  </div>
+  <aside class="notes">~25s</aside>
+</section>
+
+<!-- ═══ S15 — TONGA KEYWORDS ═══ -->
+<section>
+  <div class="si si-left si-col">
+    <div class="si-wrap">
+      <div class="acc"></div>
+      <h2 class="sh" style="margin-bottom:32px;">El sitio abandonado <strong>sigue ganando.</strong></h2>
+      <div class="mu-grid">
+
+        <div class="mu">
+          <div class="mu-q">"kingdom of tonga"</div>
+          <div class="mu-vol">12.100 búsquedas/mes</div>
+          <div class="mu-faceoff">
+            <div class="mu-side lose">
+              <div class="mu-rank">#30</div>
+              <div class="mu-who">tongatourism.travel</div>
+            </div>
+            <div class="mu-vs">vs</div>
+            <div class="mu-side lead">
+              <div class="mu-rank">#3</div>
+              <div class="mu-who">thekingdomoftonga.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mu">
+          <div class="mu-q">"hotels in tonga"<span class="mu-intent">Comercial</span></div>
+          <div class="mu-vol">Intento de compra · alto valor</div>
+          <div class="mu-faceoff">
+            <div class="mu-side lose">
+              <div class="mu-rank">#20</div>
+              <div class="mu-who">tongatourism.travel</div>
+            </div>
+            <div class="mu-vs">vs</div>
+            <div class="mu-side lead">
+              <div class="mu-rank">#4</div>
+              <div class="mu-who">thekingdomoftonga.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mu">
+          <div class="mu-q">"where is tonga"</div>
+          <div class="mu-vol">Curiosidad geográfica · tráfico de descubrimiento</div>
+          <div class="mu-faceoff">
+            <div class="mu-side lose">
+              <div class="mu-rank">#32</div>
+              <div class="mu-who">tongatourism.travel</div>
+            </div>
+            <div class="mu-vs">vs</div>
+            <div class="mu-side lead">
+              <div class="mu-rank">#9</div>
+              <div class="mu-who">thekingdomoftonga.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mu win">
+          <div class="mu-q">"tonga"</div>
+          <div class="mu-vol">49.500 búsquedas/mes · marca genérica</div>
+          <div class="mu-faceoff">
+            <div class="mu-side lead">
+              <div class="mu-rank">#22</div>
+              <div class="mu-who">tongatourism.travel</div>
+            </div>
+            <div class="mu-vs">vs</div>
+            <div class="mu-side">
+              <div class="mu-rank">#31</div>
+              <div class="mu-who">thekingdomoftonga.com</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="mu-src">Fuente: SEMRush, marzo 2025</div>
+    </div>
+  </div>
+  <aside class="notes">~35s</aside>
+</section>
+
+<!-- ═══ S16 — TONGA CONCLUSION ═══ -->
+<section data-background-color="#0E1A2E">
+  <svg class="deco-grid" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" style="opacity:.04;">
+    <line x1="0" y1="360" x2="1920" y2="360" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="720" x2="1920" y2="720" stroke="white" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="1080" stroke="white" stroke-width="1"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080" stroke="white" stroke-width="1"/>
+  </svg>
+  <div class="deco-code">TO</div>
+  <div class="si si-col" style="align-items:center; justify-content:center; text-align:center;">
+    <div class="si-wrap">
+      <div class="cl-line">Tu competidor más fuerte:</div>
+      <div class="cl-line" style="margin-top:12px;"><strong>eres tú mismo.</strong></div>
+      <div class="cl-sub">La versión que olvidaste desactivar.</div>
+    </div>
+  </div>
+  <aside class="notes">~25s</aside>
+</section>
+
+<!-- ═══ S17 — CIERRE ═══ -->
+<section data-background-color="#0E1A2E">
+  <svg class="deco-grid" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" style="opacity:.04;">
+    <line x1="0" y1="360" x2="1920" y2="360" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="720" x2="1920" y2="720" stroke="white" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="1080" stroke="white" stroke-width="1"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080" stroke="white" stroke-width="1"/>
+  </svg>
+  <div class="si si-col" style="align-items:center; justify-content:center; text-align:center;">
+    <div class="si-wrap">
+      <div class="cl-line">La marca de su destino</div>
+      <div class="cl-line" style="margin-top:8px;"><strong>ya existe.</strong></div>
+      <div class="cl-line" style="margin-top:40px; color:rgba(255,255,255,.45);">Su trabajo es <span style="color:var(--mag); font-weight:700;">escucharla.</span></div>
+    </div>
+  </div>
+  <aside class="notes">~30s</aside>
+</section>
+
+<!-- ═══ S18 — GRACIAS ═══ -->
+<section>
+  <svg class="wave wave-tl" viewBox="0 0 1920 410" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="wB" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="#28B5E1"/>
+        <stop offset="55%"  stop-color="#7E3D9B"/>
+        <stop offset="100%" stop-color="#E91876"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,160 Q480,40 960,100 T1920,80 L1920,410 L0,410 Z" fill="url(#wB)" opacity="0.2"/>
+  </svg>
+  <svg class="wave" viewBox="0 0 1920 410" preserveAspectRatio="none">
+    <path d="M0,280 Q480,140 960,220 T1920,180 L1920,410 L0,410 Z" fill="url(#wB)" opacity="0.85"/>
+    <path d="M0,340 Q480,210 960,280 T1920,250 L1920,410 L0,410 Z" fill="url(#wB)" opacity="0.4"/>
+  </svg>
+  <div class="si" style="flex-direction:column; align-items:center; justify-content:center;">
+    <div class="gracias-card">
+      <div class="gracias-text">¡Gracias!</div>
+    </div>
+    <div class="gracias-meta">
+      III Foro de Tendencias en el Turismo · País invitado: Francia · Medellín 2026
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1920, height: 1080, margin: 0.0,
+    hash: true, controls: true, progress: true,
+    slideNumber: 'c/t',
+    transition: 'fade', transitionSpeed: 'default',
+    backgroundTransition: 'fade'
+  });
+</script>
+</body>
+</html>

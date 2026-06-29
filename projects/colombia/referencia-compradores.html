@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compradores Europeos — Referencia Rápida</title>
+    <style>
+        :root {
+            --teal:        #3E9987;
+            --teal-dark:   #2D7A6A;
+            --teal-light:  #E6F4F1;
+            --navy:        #1B2B5A;
+            --navy-mid:    #2E4080;
+            --gold:        #F5C400;
+            --gold-light:  #FEF7D6;
+            --red:         #C8352A;
+            --bg:          #F7F8F5;
+            --border:      #DDE3DC;
+            --text:        #1A1A1A;
+            --text-muted:  #5A6478;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--bg);
+            padding: 1.5rem;
+            color: var(--text);
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            background: var(--navy);
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .header-left h1 {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .header-left p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.72rem;
+            margin-top: 0.2rem;
+        }
+        .header-badge {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* KEY STAT */
+        .key-stat {
+            background: var(--teal);
+            padding: 0.75rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .key-stat .stat-num {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+        }
+        .key-stat .stat-text {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.4;
+        }
+        .key-stat .stat-text strong { color: white; }
+        .key-stat .divider {
+            width: 1px;
+            height: 30px;
+            background: rgba(255,255,255,0.25);
+            margin: 0 0.25rem;
+        }
+
+        /* PROFILES GRID */
+        .profiles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .profile {
+            padding: 1.25rem 1.5rem;
+            border-right: 1px solid var(--border);
+        }
+        .profile:last-child { border-right: none; }
+
+        .profile-head {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .profile:nth-child(1) .profile-head { border-bottom-color: var(--teal); }
+        .profile:nth-child(2) .profile-head { border-bottom-color: var(--navy-mid); }
+        .profile:nth-child(3) .profile-head { border-bottom-color: var(--gold); }
+
+        .profile-icon { font-size: 1.3rem; }
+        .profile-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.25;
+        }
+
+        .profile-section-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+            margin-top: 0.75rem;
+        }
+        .profile-section-label:first-of-type { margin-top: 0; }
+
+        .profile ul {
+            list-style: none;
+            padding: 0;
+        }
+        .profile ul li {
+            font-size: 0.8rem;
+            color: var(--text);
+            padding: 0.18rem 0 0.18rem 1rem;
+            position: relative;
+            line-height: 1.4;
+        }
+        .profile ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-size: 0.7rem;
+            top: 0.22rem;
+        }
+
+        .profile-examples {
+            margin-top: 0.6rem;
+            padding-top: 0.6rem;
+            border-top: 1px dashed var(--border);
+        }
+        .example-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.15rem 0.15rem 0 0;
+            line-height: 1.4;
+        }
+
+        /* JOURNEY ROW */
+        .journey {
+            padding: 1.1rem 2rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+        .journey-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+        .journey-steps {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .journey-step {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+        .step-box {
+            flex: 1;
+            text-align: center;
+            padding: 0.5rem 0.25rem;
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            min-width: 0;
+        }
+        .step-box .step-num {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--teal);
+            display: block;
+        }
+        .step-box .step-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            display: block;
+            line-height: 1.2;
+        }
+        .step-box .step-note {
+            font-size: 0.62rem;
+            color: var(--text-muted);
+            display: block;
+            line-height: 1.3;
+            margin-top: 0.15rem;
+        }
+        .step-arrow {
+            color: var(--teal);
+            font-size: 1rem;
+            padding: 0 0.3rem;
+            flex: 0 0 auto;
+        }
+
+        /* BOTTOM ROW */
+        .bottom-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .bottom-section {
+            padding: 1rem 1.5rem;
+            border-right: 1px solid var(--border);
+        }
+        .bottom-section:last-child { border-right: none; }
+        .bottom-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+        .criteria-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .criteria-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: var(--text);
+        }
+        .criteria-item .ci-icon { flex: 0 0 auto; font-size: 0.85rem; }
+
+        .killers-list { display: flex; flex-direction: column; gap: 0.3rem; }
+        .killer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: var(--text);
+        }
+        .killer-item .ki-x {
+            flex: 0 0 16px;
+            height: 16px;
+            background: #fde8e8;
+            border-radius: 3px;
+            color: var(--red);
+            font-size: 0.65rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        /* FOOTER */
+        .footer-bar {
+            background: var(--navy);
+            padding: 0.6rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .footer-bar p {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .print-btn {
+            padding: 0.3rem 0.85rem;
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.2s;
+        }
+        .print-btn:hover { background: rgba(255,255,255,0.2); color: white; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page { box-shadow: none; border-radius: 0; }
+            .print-btn { display: none; }
+        }
+
+        @media (max-width: 700px) {
+            .profiles { grid-template-columns: 1fr; }
+            .profile { border-right: none; border-bottom: 1px solid var(--border); }
+            .bottom-row { grid-template-columns: 1fr; }
+            .bottom-section { border-right: none; border-bottom: 1px solid var(--border); }
+            body { padding: 0; }
+            .page { border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <h1>Compradores Europeos de Turismo Responsable</h1>
+            <p>Referencia rápida · Lo Responsable Vende · TRECC / Institut Français Colombia</p>
+        </div>
+        <div class="header-badge">Recurso de sesión</div>
+    </div>
+
+    <!-- KEY STAT -->
+    <div class="key-stat">
+        <div class="stat-num">81%</div>
+        <div class="stat-text"><strong>de compradores europeos visitan tu web</strong> antes de hacer cualquier contacto<br><span style="font-size:0.75rem; opacity:0.75;">Fuente: CBI · Centre for the Promotion of Imports</span></div>
+        <div class="divider"></div>
+        <div class="stat-num">6–18</div>
+        <div class="stat-text"><strong>meses</strong> para que un especialista<br>ponga tu producto en catálogo</div>
+        <div class="divider"></div>
+        <div style="font-size:0.82rem; color:rgba(255,255,255,0.85); max-width:220px;">La sostenibilidad ya no es un plus — es un <strong>requisito de entrada</strong> para los compradores europeos.</div>
+    </div>
+
+    <!-- 3 PROFILES -->
+    <div class="profiles">
+
+        <!-- Especialista -->
+        <div class="profile">
+            <div class="profile-head">
+                <span class="profile-icon">🌿</span>
+                <div class="profile-name">Especialista en<br>turismo responsable</div>
+            </div>
+
+            <div class="profile-section-label">Qué busca en ti</div>
+            <ul>
+                <li>Impacto comunitario con cifras reales</li>
+                <li>Nicho claro — encaja en su catálogo</li>
+                <li>Coherencia entre discurso y práctica</li>
+                <li>Algún idioma europeo en el equipo</li>
+            </ul>
+
+            <div class="profile-section-label">Qué cierra el acuerdo</div>
+            <ul>
+                <li>Una historia específica y verificable</li>
+                <li>Testimonios de operadores europeos</li>
+                <li>FAM trip satisfactorio</li>
+            </ul>
+
+            <div class="profile-examples">
+                <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); letter-spacing:0.5px; margin-bottom:0.3rem;">Ejemplos</div>
+                <span class="example-tag">ATR France</span>
+                <span class="example-tag">AITO UK</span>
+                <span class="example-tag">Forum Anders Reisen DE</span>
+                <span class="example-tag">Better Places NL</span>
+                <span class="example-tag">Ethical Travel Portal</span>
+                <span class="example-tag">Lokal Travel</span>
+            </div>
+        </div>
+
+        <!-- Generalista -->
+        <div class="profile">
+            <div class="profile-head">
+                <span class="profile-icon">🌍</span>
+                <div class="profile-name">Tour operador generalista<br>con línea responsable</div>
+            </div>
+
+            <div class="profile-section-label">Qué busca en ti</div>
+            <ul>
+                <li>Fiabilidad operativa + responsabilidad</li>
+                <li>Escalabilidad — puede enviar grupos</li>
+                <li>Precios netos claros y competitivos</li>
+                <li>Materiales para catálogo listos</li>
+            </ul>
+
+            <div class="profile-section-label">Qué cierra el acuerdo</div>
+            <ul>
+                <li>Propuesta con precios netos</li>
+                <li>Confirmación de grupos en 48h</li>
+                <li>Historial con otros operadores</li>
+            </ul>
+
+            <div class="profile-examples">
+                <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); letter-spacing:0.5px; margin-bottom:0.3rem;">Ejemplos</div>
+                <span class="example-tag">DERTOUR</span>
+                <span class="example-tag">TUI</span>
+                <span class="example-tag">Sunweb</span>
+                <span class="example-tag">Evaneos</span>
+                <span class="example-tag">kimkim</span>
+                <span class="example-tag">Operadores FR/BE/NL medianos</span>
+            </div>
+        </div>
+
+        <!-- FIT -->
+        <div class="profile">
+            <div class="profile-head">
+                <span class="profile-icon">🧭</span>
+                <div class="profile-name">FIT Travel Designer<br>/ Agencia boutique</div>
+            </div>
+
+            <div class="profile-section-label">Qué busca en ti</div>
+            <ul>
+                <li>Exclusividad — fuera de los catálogos masivos</li>
+                <li>Acceso a lugares y personas únicas</li>
+                <li>Flexibilidad para personalizar</li>
+                <li>Interlocutor que entienda al viajero europeo</li>
+            </ul>
+
+            <div class="profile-section-label">Qué cierra el acuerdo</div>
+            <ul>
+                <li>Propuesta curada, no un menú genérico</li>
+                <li>Respuesta rápida y conocimiento del territorio</li>
+                <li>Referencias de viajeros europeos anteriores</li>
+            </ul>
+
+            <div class="profile-examples">
+                <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); letter-spacing:0.5px; margin-bottom:0.3rem;">Ejemplos</div>
+                <span class="example-tag">Much Better Adventures</span>
+                <span class="example-tag">Traveling Spoon</span>
+                <span class="example-tag">Consultores independientes</span>
+                <span class="example-tag">Agencias boutique UK / FR / DE</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BUYER JOURNEY -->
+    <div class="journey">
+        <div class="journey-label">El recorrido del comprador europeo — especialista</div>
+        <div class="journey-steps">
+            <div class="journey-step">
+                <div class="step-box">
+                    <span class="step-num">1</span>
+                    <span class="step-name">Identificar</span>
+                    <span class="step-note">Ferias, redes, recomendaciones</span>
+                </div>
+                <span class="step-arrow">›</span>
+            </div>
+            <div class="journey-step">
+                <div class="step-box">
+                    <span class="step-num">2</span>
+                    <span class="step-name">Contactar</span>
+                    <span class="step-note">Email frío o en feria</span>
+                </div>
+                <span class="step-arrow">›</span>
+            </div>
+            <div class="journey-step">
+                <div class="step-box" style="border-color:var(--teal); background:var(--teal-light);">
+                    <span class="step-num" style="color:var(--teal-dark);">3</span>
+                    <span class="step-name" style="color:var(--teal-dark);">Convencerse</span>
+                    <span class="step-note" style="color:var(--teal-dark);">Web · 81% empieza aquí</span>
+                </div>
+                <span class="step-arrow">›</span>
+            </div>
+            <div class="journey-step">
+                <div class="step-box">
+                    <span class="step-num">4</span>
+                    <span class="step-name">FAM trip</span>
+                    <span class="step-note">Visita al destino</span>
+                </div>
+                <span class="step-arrow">›</span>
+            </div>
+            <div class="journey-step">
+                <div class="step-box" style="border-color:var(--gold); background:var(--gold-light);">
+                    <span class="step-num" style="color:#7A6000;">5</span>
+                    <span class="step-name" style="color:var(--navy);">Comprar</span>
+                    <span class="step-note">Producto en catálogo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM ROW: CRITERIA + KILLERS -->
+    <div class="bottom-row">
+
+        <div class="bottom-section">
+            <div class="bottom-title">✓ Lo que todos los compradores tienen en común</div>
+            <div class="criteria-list">
+                <div class="criteria-item"><span class="ci-icon">🌐</span>Verifican tu web antes de hacer cualquier cosa</div>
+                <div class="criteria-item"><span class="ci-icon">🔢</span>Necesitan datos concretos para justificar tu producto ante sus clientes</div>
+                <div class="criteria-item"><span class="ci-icon">🤝</span>Buscan un socio de largo plazo, no un proveedor de precio</div>
+                <div class="criteria-item"><span class="ci-icon">🌍</span>Necesitan comunicarse en inglés, francés o alemán</div>
+                <div class="criteria-item"><span class="ci-icon">📋</span>La sostenibilidad debe estar integrada al producto, no añadida</div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="bottom-title">✗ Lo que descarta a un operador — en cualquier perfil</div>
+            <div class="killers-list">
+                <div class="killer-item"><div class="ki-x">✕</div>Web solo en español sin sección B2B</div>
+                <div class="killer-item"><div class="ki-x">✕</div>"Somos sostenibles" sin ninguna evidencia específica</div>
+                <div class="killer-item"><div class="ki-x">✕</div>"Podemos hacer cualquier cosa para el cliente"</div>
+                <div class="killer-item"><div class="ki-x">✕</div>Respuesta lenta al primer email de contacto</div>
+                <div class="killer-item"><div class="ki-x">✕</div>Sin testimonios ni referencias de operadores europeos</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BAR -->
+    <div class="footer-bar">
+        <p>Lo Responsable Vende · TRECC · Institut Français Colombia · 2026 · Recurso para participantes</p>
+        <button class="print-btn" onclick="window.print()">🖨 Imprimir</button>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>IREST — Turismo para el Desarrollo | Delegación Colombiana 2026</title>
+  <style>
+    :root {
+      --ink:   #0F1B2D;
+      --navy:  #1B3A6B;
+      --gold:  #B8892E;
+      --green: #2D7A4F;
+      --teal:  #0077A8;
+      --warm:  #C05C3A;
+      --bg:    #FFFFFF;
+      --bg2:   #F5F2EC;
+      --tx1:   #1A2B40;
+      --tx2:   #506070;
+      --bdr:   #DDD8CF;
+      --lt:    #A8D4E8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-snap-type:y mandatory; overflow-y:scroll; }
+    body { font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; line-height:1.55; color:var(--tx1); background:var(--bg); }
+
+    /* ── NAV ── */
+    nav { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--bdr); z-index:100; padding:.8rem 2rem; }
+    .nav-content { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+    .nav-logo { font-weight:700; font-size:.88rem; color:var(--tx1); }
+    .nav-logo strong { color:var(--navy); }
+    .nav-badge { background:var(--navy); color:#fff; padding:.22rem .85rem; border-radius:20px; font-size:.7rem; font-weight:600; letter-spacing:.03em; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position:fixed; left:1.1rem; top:50%; transform:translateY(-50%); z-index:99; display:flex; flex-direction:column; gap:.36rem; max-height:90vh; overflow-y:auto; padding:.3rem 0; }
+    .sidebar::-webkit-scrollbar { width:0; }
+    .sb-item { display:flex; align-items:center; gap:.48rem; cursor:pointer; transition:all .2s; }
+    .sb-dot { width:6px; height:6px; min-width:6px; border-radius:50%; background:var(--bdr); transition:all .22s; }
+    .sb-item:hover .sb-dot { background:var(--navy); transform:scale(1.4); }
+    .sb-item.active .sb-dot { background:var(--navy); width:9px; height:9px; min-width:9px; }
+    .sb-label { font-size:.62rem; color:var(--tx2); font-weight:500; transition:all .2s; max-width:105px; line-height:1.3; }
+    .sb-item:hover .sb-label, .sb-item.active .sb-label { color:var(--navy); font-weight:700; }
+    .sb-sep { height:1px; background:var(--bdr); margin:.06rem 0; }
+    .sb-group { font-size:.52rem; color:var(--tx2); text-transform:uppercase; letter-spacing:.1em; padding-left:1.1rem; font-weight:700; }
+
+    /* ── NAV BUTTONS ── */
+    .nav-btns { position:fixed; bottom:1.75rem; right:1.75rem; display:flex; gap:.6rem; z-index:98; }
+    .nav-btn { padding:.7rem 1.4rem; background:var(--navy); color:#fff; border:none; border-radius:8px; font-size:.86rem; cursor:pointer; display:flex; align-items:center; gap:.4rem; transition:all .22s; box-shadow:0 2px 10px rgba(27,58,107,.22); }
+    .nav-btn:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(27,58,107,.3); }
+    .nav-btn:disabled { opacity:.25; cursor:not-allowed; transform:none; }
+    .nav-btn.prev { background:#fff; color:var(--tx1); border:2px solid var(--bdr); box-shadow:0 2px 6px rgba(0,0,0,.06); }
+
+    /* ── SECTIONS ── */
+    section { scroll-snap-align:start; min-height:100vh; padding:5.25rem 2rem 6.5rem; display:flex; align-items:center; justify-content:center; }
+    .wrap { max-width:940px; width:100%; }
+    .bg2 { background:var(--bg2); }
+
+    /* ── TYPOGRAPHY ── */
+    .h2   { font-size:1.8rem; color:var(--tx1); margin-bottom:.4rem; line-height:1.22; }
+    .lead { font-size:1rem; color:var(--tx2); margin-bottom:.85rem; line-height:1.65; }
+    .accent { height:4px; width:56px; background:linear-gradient(90deg,var(--navy),var(--gold),var(--green)); margin-bottom:1.3rem; border-radius:2px; }
+
+    /* ── DARK SLIDES ── */
+    .dark-slide { color:#fff; position:relative; overflow:hidden; background-size:cover; background-position:center; }
+    .dark-slide .wrap { position:relative; z-index:2; }
+    .collab-bg { background:linear-gradient(150deg,#141428 0%,#1A2845 55%,#141428 100%); }
+    .slide-deco { position:absolute; inset:0; z-index:1; pointer-events:none; }
+    .deco-num { font-size:11rem; font-weight:900; color:rgba(255,255,255,.035); position:absolute; right:3%; bottom:5%; line-height:1; pointer-events:none; letter-spacing:-.06em; z-index:1; user-select:none; }
+
+    /* ── COVER ── */
+    .cover-kicker { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.22em; color:rgba(255,255,255,.42); margin-bottom:1.4rem; }
+    .cover-title { font-size:2.65rem; font-weight:800; color:#fff; line-height:1.18; margin-bottom:.62rem; }
+    .cover-title em { color:#D4A832; font-style:normal; }
+    .cover-sub { font-size:1rem; color:rgba(255,255,255,.58); margin-bottom:1.65rem; max-width:540px; margin-left:auto; margin-right:auto; line-height:1.65; }
+    .cover-meta { display:inline-flex; gap:1.4rem; flex-wrap:wrap; justify-content:center; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:.82rem 1.6rem; font-size:.8rem; color:rgba(255,255,255,.62); }
+    .cover-meta strong { color:#fff; }
+    .cover-meta .sep { color:rgba(255,255,255,.2); }
+
+    /* ── COUNTRY INTRO LAYOUT ── */
+    .ci-grid { display:flex; align-items:center; gap:2.5rem; }
+    .ci-left { flex:1; }
+    .ci-kicker { font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:rgba(255,255,255,.4); margin-bottom:.9rem; }
+    .ci-accent { height:4px; width:52px; background:rgba(255,255,255,.22); border-radius:2px; margin-bottom:1.1rem; }
+    .ci-country { font-size:3.4rem; font-weight:900; color:#fff; letter-spacing:-.03em; line-height:1; margin-bottom:.55rem; }
+    .ci-question { font-size:1.15rem; color:rgba(255,255,255,.76); line-height:1.58; font-style:italic; max-width:500px; }
+    .ci-map-box { flex-shrink:0; background:rgba(0,0,0,.28); border:1px solid rgba(255,255,255,.13); border-radius:10px; padding:.5rem; }
+
+    /* ── FINDINGS (light) ── */
+    .findings-row { display:grid; grid-template-columns:repeat(3,1fr); gap:.9rem; margin:.8rem 0; }
+    .fl { background:#fff; border-radius:10px; padding:1.05rem; box-shadow:0 2px 8px rgba(0,0,0,.065); border-top:3px solid var(--navy); }
+    .fl.f1 { border-top-color:var(--navy); }
+    .fl.f2 { border-top-color:var(--green); }
+    .fl.f3 { border-top-color:var(--warm); }
+    .fl.f4 { border-top-color:var(--gold); }
+    .fl-label { font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--tx2); margin-bottom:.28rem; }
+    .fl h4 { font-size:.93rem; font-weight:700; color:var(--tx1); margin-bottom:.22rem; line-height:1.35; }
+    .fl p  { font-size:.84rem; color:var(--tx2); line-height:1.52; }
+    .fl-stat { font-size:1.65rem; font-weight:900; color:var(--navy); line-height:1; margin:.3rem 0 .12rem; }
+    .fl.f2 .fl-stat { color:var(--green); }
+    .fl.f3 .fl-stat { color:var(--warm); }
+
+    /* ── CARDS & NOTES ── */
+    .note { background:var(--bg2); border-left:4px solid var(--teal); padding:.7rem 1rem; border-radius:7px; font-size:.87rem; color:var(--tx2); line-height:1.55; margin-top:.75rem; }
+    .note.gold  { border-left-color:var(--gold); }
+    .note.green { border-left-color:var(--green); }
+    .note.navy  { border-left-color:var(--navy); }
+
+    /* ── PROGRAMS ── */
+    .prog-row { display:grid; grid-template-columns:repeat(5,1fr); gap:.65rem; margin:.75rem 0; }
+    .prog-card { background:#fff; border-radius:9px; padding:1rem; box-shadow:0 2px 7px rgba(0,0,0,.065); border-left:4px solid var(--navy); transition:transform .2s; }
+    .prog-card:hover { transform:translateY(-2px); }
+    .prog-card.p1 { border-left-color:var(--ink);   } .prog-card.p2 { border-left-color:var(--navy); }
+    .prog-card.p3 { border-left-color:var(--teal);  } .prog-card.p4 { border-left-color:var(--green); }
+    .prog-card.p5 { border-left-color:var(--gold);  }
+    .prog-acr  { font-size:1rem; font-weight:900; color:var(--navy); margin-bottom:.16rem; }
+    .prog-card.p1 .prog-acr { color:var(--ink); } .prog-card.p3 .prog-acr { color:var(--teal); }
+    .prog-card.p4 .prog-acr { color:var(--green); } .prog-card.p5 .prog-acr { color:#7a5818; }
+    .prog-name { font-size:.8rem; font-weight:700; color:var(--tx1); margin-bottom:.25rem; line-height:1.35; }
+    .prog-desc { font-size:.78rem; color:var(--tx2); line-height:1.45; }
+
+    /* ── DESTINATION CARDS (Marketing Intel) ── */
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:.8rem 0; }
+    .dest-card { background:#fff; border-radius:12px; padding:1.25rem; box-shadow:0 2px 10px rgba(0,0,0,.08); border-top:4px solid var(--teal); }
+    .dest-card.arran    { border-top-color:var(--green); }
+    .dest-card.shetland { border-top-color:var(--navy);  }
+    .dest-photo { height:110px; background-size:cover; background-position:center; margin:-1.25rem -1.25rem .85rem; border-radius:8px 8px 0 0; }
+    .dest-name    { font-size:1.4rem; font-weight:900; color:var(--tx1); margin-bottom:.06rem; }
+    .dest-country { font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--tx2); margin-bottom:.7rem; }
+    .dest-items   { list-style:none; padding:0; }
+    .dest-items li { font-size:.86rem; color:var(--tx2); padding:.32rem 0; border-bottom:1px solid var(--bdr); display:flex; gap:.48rem; align-items:flex-start; line-height:1.4; }
+    .dest-items li:last-child { border-bottom:none; }
+    .dest-items li::before { content:'→'; font-weight:700; flex-shrink:0; margin-top:.04rem; }
+    .dest-card.arran    .dest-items li::before { color:var(--green); }
+    .dest-card.shetland .dest-items li::before { color:var(--navy);  }
+
+    /* ── COLOMBIA FLAG ── */
+    .col-flag { display:flex; height:4px; border-radius:2px; overflow:hidden; margin-bottom:1.35rem; max-width:105px; }
+    .cf-y { flex:2; background:#FCD116; } .cf-b { flex:1; background:#003893; } .cf-r { flex:1; background:#CE1126; }
+
+    /* ── OFFER BOX ── */
+    .offer-box { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.13); border-radius:12px; padding:1.35rem; margin-top:.9rem; }
+    .offer-box h3 { font-size:.93rem; font-weight:700; color:var(--lt); margin-bottom:.7rem; }
+    .offer-items  { list-style:none; padding:0; }
+    .offer-items li { font-size:.88rem; color:rgba(255,255,255,.8); padding:.42rem 0; border-bottom:1px solid rgba(255,255,255,.07); display:flex; gap:.6rem; align-items:flex-start; line-height:1.5; }
+    .offer-items li:last-child { border-bottom:none; }
+    .offer-num { font-size:.72rem; font-weight:800; color:#D4A832; min-width:20px; line-height:1.65; flex-shrink:0; }
+
+    /* ── DARK TEXT ELEMENTS ── */
+    .dark-h2 { font-size:1.8rem; font-weight:800; color:#fff; line-height:1.22; margin-bottom:.4rem; }
+    .dark-lead { font-size:1rem; color:rgba(255,255,255,.68); line-height:1.65; }
+    .dark-kicker { font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:rgba(255,255,255,.4); margin-bottom:.9rem; }
+    .dark-accent { height:4px; width:52px; background:rgba(255,255,255,.22); border-radius:2px; margin-bottom:1.25rem; }
+
+    /* ── IMAGE + FINDINGS GRID ── */
+    .img-findings-grid { display:grid; grid-template-columns:1.15fr 1fr; gap:1.1rem; margin:.75rem 0; align-items:start; }
+    .bcg-img { width:100%; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,.1); border:1px solid var(--bdr); }
+    .findings-col { display:flex; flex-direction:column; gap:.6rem; }
+    .findings-col .fl { margin:0; }
+
+    /* ── JOURNEY STAGES ── */
+    .journey-row { display:grid; grid-template-columns:repeat(5,1fr); gap:.6rem; margin:.75rem 0; }
+    .jstage { background:#fff; border-radius:10px; padding:.85rem .8rem; box-shadow:0 2px 8px rgba(0,0,0,.065); border-top:3px solid var(--green); }
+    .jstage.js-critical { border-top-color:var(--warm); box-shadow:0 3px 14px rgba(192,92,58,.18); outline:2px solid rgba(192,92,58,.22); outline-offset:-1px; }
+    .jstage.js-weak     { border-top-color:var(--gold); }
+    .jstage.js-moderate { border-top-color:#9A8060; }
+    .js-stage-name { font-size:.56rem; font-weight:800; text-transform:uppercase; letter-spacing:.13em; color:var(--tx2); margin-bottom:.32rem; }
+    .js-badge { display:inline-block; font-size:.5rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; padding:.14rem .48rem; border-radius:20px; margin-bottom:.45rem; }
+    .js-badge.b-strong   { background:#E6F4ED; color:var(--green); }
+    .js-badge.b-critical { background:#FCEEE9; color:var(--warm); }
+    .js-badge.b-weak     { background:#FEF6E6; color:#9A6A00; }
+    .js-badge.b-moderate { background:#F2EDE5; color:#7a5818; }
+    .js-section-label { font-size:.54rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--tx2); margin:.4rem 0 .14rem; }
+    .js-text { font-size:.77rem; color:var(--tx1); line-height:1.42; }
+    .js-friction-text { font-size:.75rem; color:var(--warm); line-height:1.42; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px) { .prog-row { grid-template-columns:repeat(3,1fr); } .findings-row { grid-template-columns:1fr; } .journey-row { grid-template-columns:1fr 1fr; } }
+    @media(max-width:768px) { .grid-2,.ci-grid { flex-direction:column; } .sidebar { display:none; } .cover-title { font-size:1.9rem; } }
+    @media(max-width:500px) { .prog-row { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-content">
+    <span class="nav-logo"><strong>IREST</strong> · Université Paris 1 Panthéon-Sorbonne</span>
+    <span class="nav-badge">Delegación Colombiana · Abril 2026</span>
+  </div>
+</nav>
+
+<!-- ── SIDEBAR ── -->
+<div class="sidebar" id="sidebar">
+  <div class="sb-group">Inicio</div>
+  <div class="sb-item active" data-target="0" onclick="goTo(0)"><div class="sb-dot"></div><span class="sb-label">Portada</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">IREST</div>
+  <div class="sb-item" data-target="1" onclick="goTo(1)"><div class="sb-dot"></div><span class="sb-label">Institución y programas</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Investigación</div>
+  <div class="sb-item" data-target="2" onclick="goTo(2)"><div class="sb-dot"></div><span class="sb-label">Uganda</span></div>
+  <div class="sb-item" data-target="3" onclick="goTo(3)"><div class="sb-dot"></div><span class="sb-label">Uganda · hallazgos</span></div>
+  <div class="sb-item" data-target="4" onclick="goTo(4)"><div class="sb-dot"></div><span class="sb-label">Eswatini</span></div>
+  <div class="sb-item" data-target="5" onclick="goTo(5)"><div class="sb-dot"></div><span class="sb-label">Eswatini · hallazgos</span></div>
+  <div class="sb-item" data-target="6" onclick="goTo(6)"><div class="sb-dot"></div><span class="sb-label">Timor-Leste</span></div>
+  <div class="sb-item" data-target="7" onclick="goTo(7)"><div class="sb-dot"></div><span class="sb-label">Timor-Leste · hallazgos</span></div>
+  <div class="sb-item" data-target="8" onclick="goTo(8)"><div class="sb-dot"></div><span class="sb-label">Tonga</span></div>
+  <div class="sb-item" data-target="9" onclick="goTo(9)"><div class="sb-dot"></div><span class="sb-label">Tonga · hallazgos</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Docencia</div>
+  <div class="sb-item" data-target="10" onclick="goTo(10)"><div class="sb-dot"></div><span class="sb-label">Intel. de Marketing</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-group">Colaboración</div>
+  <div class="sb-item" data-target="11" onclick="goTo(11)"><div class="sb-dot"></div><span class="sb-label">Propuesta</span></div>
+</div>
+
+<!-- ── NAV BUTTONS ── -->
+<div class="nav-btns">
+  <button class="nav-btn prev" id="prevBtn" onclick="navigate(-1)" disabled>← Anterior</button>
+  <button class="nav-btn"      id="nextBtn" onclick="navigate(1)">Siguiente →</button>
+</div>
+
+
+<!-- ══ 0 · PORTADA ══ -->
+<section class="dark-slide" data-s="0" style="background:linear-gradient(160deg,rgba(10,22,40,.82) 0%,rgba(20,41,75,.78) 40%,rgba(10,22,40,.88) 100%),url('https://images.unsplash.com/photo-1747463065960-64d41233256d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <svg class="slide-deco" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" style="opacity:.05;">
+    <line x1="0" y1="180" x2="1200" y2="180" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="360" x2="1200" y2="360" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1200" y2="540" stroke="white" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="900" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="900" stroke="white" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="900" stroke="white" stroke-width="1"/>
+    <path d="M0,620 Q300,480 600,530 Q900,580 1200,440" fill="none" stroke="#D4A832" stroke-width="1.5" opacity="0.5"/>
+  </svg>
+  <div class="wrap" style="text-align:center;position:relative;z-index:2;">
+    <div class="cover-kicker">Institut de Recherche et d'Études Supérieures du Tourisme</div>
+    <h1 class="cover-title">Turismo para el Desarrollo:<br><em>Investigación, Métodos</em> y Alianzas</h1>
+    <p class="cover-sub">Investigación aplicada en destinos emergentes y colaboración con actores del turismo colombiano.</p>
+    <div class="cover-meta">
+      <strong>IREST</strong>
+      <span class="sep">·</span>
+      <span>Université Paris 1 Panthéon-Sorbonne</span>
+      <span class="sep">·</span>
+      <span>Presentado por <strong>Alex Jeffries</strong></span>
+      <span class="sep">·</span>
+      <span>Abril 2026</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 1 · IREST + PROGRAMAS ══ -->
+<section class="bg2" data-s="1">
+<div class="wrap">
+  <div class="accent"></div>
+  <h2 class="h2">IREST — Université Paris 1 Panthéon-Sorbonne</h2>
+  <p class="lead">Cinco másteres especializados en turismo, con proyectos de campo en destinos reales. <strong>Mi vínculo con el IREST</strong> es a través del curso de Inteligencia de Marketing (MIT) — los demás proyectos son investigaciones independientes con autoridades nacionales de turismo.</p>
+  <div class="prog-row">
+    <div class="prog-card p1"><div class="prog-acr">EDTI</div><div class="prog-name">Economía del Desarrollo Turístico Internacional</div><div class="prog-desc">Modelización económica, política sectorial y crecimiento sostenible.</div></div>
+    <div class="prog-card p2"><div class="prog-acr">DATT</div><div class="prog-name">Desarrollo y Ordenamiento Turístico de los Territorios</div><div class="prog-desc">Estrategias territoriales, desarrollo regional y planificación espacial.</div></div>
+    <div class="prog-card p3"><div class="prog-acr">GATH</div><div class="prog-name">Gestión de las Actividades del Turismo y la Hotelería</div><div class="prog-desc">Gestión operativa, hotelería y competitividad empresarial.</div></div>
+    <div class="prog-card p4"><div class="prog-acr">GVTP</div><div class="prog-name">Gestión y Valorización Turística de los Patrimonios</div><div class="prog-desc">Patrimonio cultural y natural como motor de valor turístico.</div></div>
+    <div class="prog-card p5"><div class="prog-acr">MIT</div><div class="prog-name">Management of International Tourism</div><div class="prog-desc">Estrategia internacional, posicionamiento y gestión de destinos.</div></div>
+  </div>
+  <div class="note gold">Los estudiantes entregan análisis accionables a destinos reales — no trabajos académicos.</div>
+</div>
+</section>
+
+
+<!-- ══ 2 · UGANDA INTRO ══ -->
+<section class="dark-slide" data-s="2" style="background:linear-gradient(150deg,rgba(25,46,15,.88) 0%,rgba(39,74,29,.82) 45%,rgba(26,48,16,.92) 100%),url('https://images.unsplash.com/photo-1515694590185-73647ba02c10?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <div class="deco-num">UG</div>
+  <div class="wrap">
+    <div class="ci-grid">
+      <div class="ci-left">
+        <div class="ci-kicker">Investigación aplicada · Turismo cafetero · África Oriental</div>
+        <div class="ci-accent"></div>
+        <div class="ci-country">Uganda</div>
+        <p class="ci-question">¿Puede el turismo cafetero duplicar los ingresos de los pequeños productores — o solo bajo las condiciones correctas?</p>
+      </div>
+      <div class="ci-map-box">
+        <!-- East Africa locator map -->
+        <svg viewBox="0 0 185 130" width="185" height="130">
+          <!-- DRC -->
+          <path d="M12,28 L62,16 L76,46 L78,73 L66,88 L42,102 L14,82 L10,52 Z" fill="#444" opacity=".75"/>
+          <!-- South Sudan -->
+          <path d="M62,16 L76,6 L108,8 L112,28 L93,43 L76,46 Z" fill="#444" opacity=".75"/>
+          <!-- Ethiopia -->
+          <path d="M108,8 L152,12 L158,36 L142,52 L118,52 L112,28 Z" fill="#444" opacity=".75"/>
+          <!-- Kenya -->
+          <path d="M93,43 L112,28 L142,52 L138,86 L118,96 L103,88 L96,74 L100,60 Z" fill="#444" opacity=".75"/>
+          <!-- Rwanda (tiny) -->
+          <path d="M68,68 L78,65 L78,75 L68,76 Z" fill="#555" opacity=".9"/>
+          <!-- Tanzania -->
+          <path d="M66,88 L78,75 L96,74 L103,88 L118,96 L108,118 L76,118 L58,104 Z" fill="#444" opacity=".75"/>
+          <!-- Uganda HIGHLIGHTED -->
+          <path d="M68,44 L90,42 L98,58 L95,72 L76,74 L66,62 Z" fill="#2D7A4F" opacity=".95"/>
+          <!-- Labels -->
+          <text x="82" y="62" font-size="8.5" font-weight="700" fill="white" text-anchor="middle" font-family="Inter,sans-serif">Uganda</text>
+          <text x="120" y="72" font-size="6.5" fill="rgba(255,255,255,.45)" text-anchor="middle" font-family="Inter,sans-serif">Kenya</text>
+          <text x="36" y="58" font-size="6.5" fill="rgba(255,255,255,.45)" text-anchor="middle" font-family="Inter,sans-serif">RDC</text>
+          <text x="88" y="105" font-size="6.5" fill="rgba(255,255,255,.45)" text-anchor="middle" font-family="Inter,sans-serif">Tanzania</text>
+          <text x="178" y="126" font-size="5.5" fill="rgba(255,255,255,.28)" text-anchor="end" font-family="Inter,sans-serif">África Oriental</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 3 · UGANDA HALLAZGOS ══ -->
+<section data-s="3">
+<div class="wrap">
+  <div class="accent"></div>
+  <h2 class="h2">Uganda — El turismo cafetero como desarrollo inclusivo</h2>
+  <p class="lead">Viabilidad del turismo en fincas cafeteras como fuente de ingresos complementaria para pequeños productores.</p>
+  <div class="findings-row">
+    <div class="fl f1">
+      <div class="fl-label">Potencial</div>
+      <div class="fl-stat">2×</div>
+      <h4>Duplicar ingresos es posible</h4>
+      <p>Solo si confluyen flujos turísticos existentes, calidad del café y redes colaborativas entre productores.</p>
+    </div>
+    <div class="fl f2">
+      <div class="fl-label">Condición</div>
+      <div class="fl-stat">3</div>
+      <h4>Sin las tres, el impacto se dispersa</h4>
+      <p>Flujos turísticos · Calidad del café · Red colaborativa. Ausente cualquiera, el beneficio no escala.</p>
+    </div>
+    <div class="fl f3">
+      <div class="fl-label">Implicación política</div>
+      <h4>Alianzas con operadores &gt; programas verticales</h4>
+      <p>Conectar con operadores turísticos genera más impacto que los programas nacionales de arriba a abajo.</p>
+    </div>
+  </div>
+  <div class="note green">"Es factible que las fincas dupliquen sus ingresos — pero no ocurre por accidente."</div>
+</div>
+</section>
+
+
+<!-- ══ 4 · ESWATINI INTRO ══ -->
+<section class="dark-slide" data-s="4" style="background:linear-gradient(150deg,rgba(25,20,10,.88) 0%,rgba(50,38,18,.82) 45%,rgba(30,22,8,.92) 100%),url('https://images.unsplash.com/photo-1663527026548-5c001bb15222?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <div class="deco-num">SZ</div>
+  <div class="wrap">
+    <div class="ci-grid">
+      <div class="ci-left">
+        <div class="ci-kicker">Investigación aplicada · Segmentación de mercado · África Austral</div>
+        <div class="ci-accent"></div>
+        <div class="ci-country">Eswatini</div>
+        <p class="ci-question">¿Saber de dónde vienen los visitantes es suficiente — o necesitas saber quiénes son y qué valen?</p>
+      </div>
+      <div class="ci-map-box">
+        <!-- Southern Africa locator map -->
+        <svg viewBox="0 0 185 130" width="185" height="130">
+          <!-- Zimbabwe -->
+          <path d="M88,14 L148,14 L152,40 L128,48 L102,40 Z" fill="#444" opacity=".75"/>
+          <!-- Mozambique strip -->
+          <path d="M148,14 L175,18 L178,82 L158,88 L152,62 L148,40 Z" fill="#444" opacity=".75"/>
+          <!-- South Africa (large) -->
+          <path d="M14,22 L88,14 L102,40 L128,48 L152,62 L150,72 L132,58 L128,62 L128,68 L110,62 L108,88 L90,102 L55,115 L28,108 L14,75 Z" fill="#444" opacity=".7"/>
+          <!-- Lesotho (tiny enclave) -->
+          <ellipse cx="72" cy="92" rx="8" ry="7" fill="#555" opacity=".85"/>
+          <!-- Eswatini HIGHLIGHTED -->
+          <path d="M128,48 L148,44 L152,62 L132,58 L128,62 Z" fill="#B8892E" opacity=".95"/>
+          <!-- Labels -->
+          <text x="140" y="57" font-size="7" font-weight="700" fill="white" text-anchor="middle" font-family="Inter,sans-serif">Eswatini</text>
+          <text x="75" y="68" font-size="7" fill="rgba(255,255,255,.4)" text-anchor="middle" font-family="Inter,sans-serif">Sudáfrica</text>
+          <text x="163" y="52" font-size="6" fill="rgba(255,255,255,.4)" text-anchor="middle" font-family="Inter,sans-serif">Moz.</text>
+          <text x="115" y="24" font-size="6.5" fill="rgba(255,255,255,.4)" text-anchor="middle" font-family="Inter,sans-serif">Zimbabwe</text>
+          <text x="178" y="126" font-size="5.5" fill="rgba(255,255,255,.28)" text-anchor="end" font-family="Inter,sans-serif">África Austral</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 5 · ESWATINI HALLAZGOS ══ -->
+<section class="bg2" data-s="5">
+<div class="wrap">
+  <div class="accent"></div>
+  <h2 class="h2">Eswatini — Segmentación de mercado y prioridad estratégica</h2>
+  <p class="lead">6 mercados emisores ampliados con encuestas de visitantes y análisis de gasto — 11 segmentos mapeados por crecimiento del país y duración de estancia.</p>
+  <div class="img-findings-grid">
+    <img src="eswatini-bcg-matrix.png" class="bcg-img" alt="Marketing Segment Priority Matrix — Eswatini">
+    <div class="findings-col">
+      <div class="fl f1">
+        <div class="fl-label">Base fiable</div>
+        <div class="fl-stat">Reino Unido</div>
+        <h4>Alta implicación, crecimiento estable</h4>
+        <p>UK Mature (45–54) y UK Young (25–34) — estancias largas, rentables sin inversión significativa.</p>
+      </div>
+      <div class="fl f2">
+        <div class="fl-label">Oportunidad prioritaria</div>
+        <div class="fl-stat">6 segmentos</div>
+        <h4>Europa continental: potencial sin activar</h4>
+        <p>DEU, FRA y NED — alto crecimiento, engagement aún incierto. Ninguno ha alcanzado el cuadrante ideal.</p>
+      </div>
+      <div class="fl f3">
+        <div class="fl-label">Contraargumento</div>
+        <h4>Proximidad no equivale a prioridad</h4>
+        <p>RSA y MOZ: bajo crecimiento, baja implicación — pese a ser los mercados más cercanos.</p>
+      </div>
+    </div>
+  </div>
+  <div class="note gold"><strong>El cuadrante Stars está vacío.</strong> Convertir los segmentos europeos requiere campañas dirigidas y posicionamiento de nicho.</div>
+</div>
+</section>
+
+
+<!-- ══ 6 · TIMOR-LESTE INTRO ══ -->
+<section class="dark-slide" data-s="6" style="background:linear-gradient(150deg,rgba(13,42,74,.86) 0%,rgba(11,74,126,.80) 55%,rgba(7,48,96,.92) 100%),url('https://images.unsplash.com/photo-1591325408953-ef9298125f96?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <div class="deco-num">TL</div>
+  <div class="wrap">
+    <div class="ci-grid">
+      <div class="ci-left">
+        <div class="ci-kicker">Investigación aplicada · Evaluación digital · Sudeste Asiático</div>
+        <div class="ci-accent"></div>
+        <div class="ci-country">Timor-Leste</div>
+        <p class="ci-question">El destino genera curiosidad. Los operadores ya lo venden. ¿Entonces por qué el viajero no llega a reservar?</p>
+      </div>
+      <div class="ci-map-box">
+        <!-- SE Asia / Timor-Leste locator map -->
+        <svg viewBox="0 0 185 130" width="185" height="130">
+          <!-- Java -->
+          <ellipse cx="44" cy="66" rx="40" ry="11" fill="#444" opacity=".75" transform="rotate(-8 44 66)"/>
+          <!-- Bali -->
+          <circle cx="89" cy="60" r="4" fill="#444" opacity=".75"/>
+          <!-- Flores / lesser Sundas -->
+          <path d="M97,57 L128,53 L132,62 L116,65 L97,62 Z" fill="#444" opacity=".72"/>
+          <!-- West Timor (Indonesia) -->
+          <path d="M133,60 L153,57 L158,67 L145,72 L133,66 Z" fill="#444" opacity=".75"/>
+          <!-- Timor-Leste HIGHLIGHTED -->
+          <path d="M153,57 L173,56 L177,65 L162,70 L153,65 Z" fill="#0077A8" opacity=".95"/>
+          <!-- Australia coast (hint) -->
+          <path d="M75,98 L185,92 L185,128 L14,128 Z" fill="#444" opacity=".55"/>
+          <!-- Labels -->
+          <text x="163" y="64" font-size="7.5" font-weight="700" fill="white" text-anchor="middle" font-family="Inter,sans-serif">T-L</text>
+          <text x="44" y="63" font-size="6.5" fill="rgba(255,255,255,.42)" text-anchor="middle" font-family="Inter,sans-serif">Java</text>
+          <text x="143" y="65" font-size="5.5" fill="rgba(255,255,255,.38)" text-anchor="middle" font-family="Inter,sans-serif">IDN</text>
+          <text x="120" y="112" font-size="6.5" fill="rgba(255,255,255,.35)" text-anchor="middle" font-family="Inter,sans-serif">Australia</text>
+          <text x="178" y="126" font-size="5.5" fill="rgba(255,255,255,.28)" text-anchor="end" font-family="Inter,sans-serif">Asia / Pacífico</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 7 · TIMOR-LESTE HALLAZGOS ══ -->
+<section data-s="7">
+<div class="wrap">
+  <div class="accent"></div>
+  <h2 class="h2">Timor-Leste — Dónde se detiene el viajero</h2>
+  <p class="lead">Cinco etapas del recorrido digital del viajero — y dónde Timor-Leste pierde el impulso.</p>
+  <div class="journey-row">
+    <div class="jstage">
+      <div class="js-stage-name">Awareness</div>
+      <span class="js-badge b-strong">Sólido</span>
+      <div class="js-section-label">Funciona</div>
+      <p class="js-text">Cobertura mediática de nicho genera curiosidad real.</p>
+      <div class="js-section-label">Fricción</div>
+      <p class="js-friction-text">El contenido de planificación no emerge desde los puntos de entrada.</p>
+    </div>
+    <div class="jstage js-critical">
+      <div class="js-stage-name">Investigación ▲</div>
+      <span class="js-badge b-critical">Brecha crítica</span>
+      <div class="js-section-label">Funciona</div>
+      <p class="js-text">Contenido existe sobre temas, alojamiento y experiencias.</p>
+      <div class="js-section-label">Fricción</div>
+      <p class="js-friction-text">Sin hub de planificación — el viajero debe armar el viaje por su cuenta.</p>
+    </div>
+    <div class="jstage js-weak">
+      <div class="js-stage-name">Reserva</div>
+      <span class="js-badge b-weak">Débil</span>
+      <div class="js-section-label">Funciona</div>
+      <p class="js-text">Operadores internacionales venden Timor-Leste con itinerarios estructurados.</p>
+      <div class="js-section-label">Fricción</div>
+      <p class="js-friction-text">Errores técnicos erosionan la confianza en el momento de reservar.</p>
+    </div>
+    <div class="jstage">
+      <div class="js-stage-name">Experiencia</div>
+      <span class="js-badge b-strong">Sólido</span>
+      <div class="js-section-label">Funciona</div>
+      <p class="js-text">Seguridad, logística de llegada e información en destino son fiables.</p>
+      <div class="js-section-label">Fricción</div>
+      <p class="js-friction-text">Consistencia del alojamiento varía según el sitio.</p>
+    </div>
+    <div class="jstage js-moderate">
+      <div class="js-stage-name">Difusión</div>
+      <span class="js-badge b-moderate">Moderado</span>
+      <div class="js-section-label">Funciona</div>
+      <p class="js-text">Visitantes muy motivados a recomendar — sentimiento muy positivo.</p>
+      <div class="js-section-label">Fricción</div>
+      <p class="js-friction-text">Las reseñas no se integran en el recorrido de planificación oficial.</p>
+    </div>
+  </div>
+  <div class="note" style="border-left-color:var(--warm);background:#FEF5F2;"><strong>Conclusión:</strong> La brecha se cierra con decisiones de gobernanza de contenidos — no con nuevas plataformas.</div>
+</div>
+</section>
+
+
+<!-- ══ 8 · TONGA INTRO ══ -->
+<section class="dark-slide" data-s="8" style="background:linear-gradient(150deg,rgba(0,46,69,.88) 0%,rgba(0,92,130,.80) 50%,rgba(0,32,48,.92) 100%),url('https://images.unsplash.com/photo-1549889577-cda81b471223?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <div class="deco-num">TO</div>
+  <div class="wrap">
+    <div class="ci-grid">
+      <div class="ci-left">
+        <div class="ci-kicker">Investigación aplicada · Auditoría digital · Pacífico Sur</div>
+        <div class="ci-accent"></div>
+        <div class="ci-country">Tonga</div>
+        <p class="ci-question">El producto es sólido. Las reseñas son positivas. ¿Dónde se rompe la cadena?</p>
+      </div>
+      <div class="ci-map-box">
+        <!-- Pacific locator map -->
+        <svg viewBox="0 0 185 130" width="185" height="130">
+          <!-- Australia (left, simplified) -->
+          <path d="M4,18 L38,14 L48,68 L28,82 L8,72 L4,40 Z" fill="#444" opacity=".65"/>
+          <!-- New Zealand (bottom-left) -->
+          <path d="M14,88 L26,82 L30,104 L22,115 L14,108 Z" fill="#444" opacity=".7"/>
+          <!-- Vanuatu (island dots) -->
+          <circle cx="72" cy="54" r="4" fill="#444" opacity=".7"/>
+          <circle cx="70" cy="65" r="3" fill="#444" opacity=".65"/>
+          <!-- Fiji -->
+          <circle cx="116" cy="48" r="7" fill="#444" opacity=".72"/>
+          <circle cx="128" cy="54" r="4" fill="#444" opacity=".6"/>
+          <!-- Samoa -->
+          <circle cx="162" cy="36" r="4.5" fill="#444" opacity=".65"/>
+          <circle cx="171" cy="42" r="3" fill="#444" opacity=".6"/>
+          <!-- Tonga HIGHLIGHTED (archipelago) -->
+          <circle cx="140" cy="66" r="6.5" fill="#0077A8" opacity=".95"/>
+          <circle cx="136" cy="78" r="4.5" fill="#0077A8" opacity=".85"/>
+          <circle cx="138" cy="89" r="3.5" fill="#0077A8" opacity=".75"/>
+          <!-- Labels -->
+          <text x="140" y="64" font-size="7.5" font-weight="700" fill="white" text-anchor="middle" font-family="Inter,sans-serif">Tonga</text>
+          <text x="116" y="45" font-size="6.5" fill="rgba(255,255,255,.42)" text-anchor="middle" font-family="Inter,sans-serif">Fiji</text>
+          <text x="70" y="47" font-size="6.5" fill="rgba(255,255,255,.42)" text-anchor="middle" font-family="Inter,sans-serif">Vanuatu</text>
+          <text x="164" y="30" font-size="6.5" fill="rgba(255,255,255,.42)" text-anchor="middle" font-family="Inter,sans-serif">Samoa</text>
+          <text x="20" y="120" font-size="6" fill="rgba(255,255,255,.32)" text-anchor="middle" font-family="Inter,sans-serif">N. Zelanda</text>
+          <text x="178" y="126" font-size="5.5" fill="rgba(255,255,255,.28)" text-anchor="end" font-family="Inter,sans-serif">Pacífico Sur</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 9 · TONGA HALLAZGOS ══ -->
+<section class="bg2" data-s="9">
+<div class="wrap">
+  <div class="accent"></div>
+  <h2 class="h2">Tonga — Auditoría digital, sentimiento y segmentación de mercado</h2>
+  <p class="lead">Auditoría web · 8.173 reseñas TripAdvisor en 4 grupos de islas · segmentación BCG basada en encuestas de salida.</p>
+  <div class="findings-row">
+    <div class="fl f1">
+      <div class="fl-label">El problema más crítico</div>
+      <div class="fl-stat">2 sitios</div>
+      <h4>Dos webs oficiales se canibalizan entre sí</h4>
+      <p>TongaTourism.travel y TheKingdomOfTonga.com compiten por las mismas búsquedas — el dominio antiguo roba miles de visitas al mes al nuevo.</p>
+    </div>
+    <div class="fl f2">
+      <div class="fl-label">Tráfico vs. conversión</div>
+      <div class="fl-stat">+107% / −12,65%</div>
+      <h4>Más tráfico, menos implicación</h4>
+      <p>Usuarios activos +107% anual, pero tiempo de interacción −12,65% — con una carga móvil de 7,5 s frente al umbral de 2,5 s.</p>
+    </div>
+    <div class="fl f3">
+      <div class="fl-label">Sentimiento competitivo</div>
+      <div class="fl-stat">#1 Pacífico</div>
+      <h4>Líder en alojamiento, peor percepción de valor</h4>
+      <p>Supera a Fiji (0,275 vs. 0,237) en sentimiento de alojamiento — pero tiene la percepción de valor más baja de la región y un CTR del 2% con 330.000 impresiones en EE.UU.</p>
+    </div>
+  </div>
+  <div class="note">El producto es sólido. La infraestructura digital — fragmentada, lenta, sin arquitectura de conversión — es el eslabón que falla.</div>
+</div>
+</section>
+
+
+<!-- ══ 10 · INTELIGENCIA DE MARKETING ══ -->
+<section data-s="10">
+<div class="wrap">
+  <div class="accent"></div>
+  <h2 class="h2">Inteligencia de Marketing — Los estudiantes como investigadores aplicados</h2>
+  <p class="lead">Equipos de estudiantes del MIT del IREST asumen encargos reales de destinos y entregan análisis que el DMO puede aplicar directamente.</p>
+  <div class="grid-2">
+    <div class="dest-card arran">
+      <div class="dest-photo" style="background-image:url('https://images.unsplash.com/photo-1655658786619-b50dafb92701?auto=format&fit=crop&w=800&q=80');background-position:center 60%;"></div>
+      <div class="dest-name">Visit Arran</div>
+      <div class="dest-country">Escocia · Geoparque UNESCO</div>
+      <ul class="dest-items">
+        <li><strong>Activación del Geoparque:</strong> convertir el reconocimiento UNESCO en demanda en temporada baja</li>
+        <li><strong>Brecha de conversión:</strong> dónde se pierden los visitantes con alta intención antes de reservar</li>
+        <li><strong>Mapa de temporada baja:</strong> reposicionar experiencias para abril–mayo y septiembre–octubre</li>
+      </ul>
+    </div>
+    <div class="dest-card shetland">
+      <div class="dest-photo" style="background-image:url('https://images.unsplash.com/photo-1603208672506-9522a92ef451?auto=format&fit=crop&w=800&q=80');background-position:center 40%;"></div>
+      <div class="dest-name">Visit Shetland</div>
+      <div class="dest-country">Escocia · Archipiélago subártico</div>
+      <ul class="dest-items">
+        <li><strong>Temporada baja:</strong> extender el turismo más allá del pico estival</li>
+        <li><strong>Turismo textil:</strong> convertir el patrimonio del tejido en oferta cultural durante todo el año</li>
+        <li><strong>"Verano fresco":</strong> posicionar Shetland para el viajero lento y consciente del clima</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note navy">Experiencia real para los estudiantes — análisis accionable para los destinos.</div>
+</div>
+</section>
+
+
+<!-- ══ 11 · COLABORACIÓN ══ -->
+<section class="dark-slide collab-bg" data-s="11">
+  <svg class="slide-deco" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" style="opacity:.038;">
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="white" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="900" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="900" stroke="white" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="900" stroke="white" stroke-width="1"/>
+  </svg>
+  <div class="deco-num">→</div>
+  <div class="wrap" style="max-width:800px;">
+    <div class="col-flag"><div class="cf-y"></div><div class="cf-b"></div><div class="cf-r"></div></div>
+    <div class="dark-kicker">Propuesta · Otoño 2026</div>
+    <div class="dark-accent"></div>
+    <h2 class="dark-h2" style="font-size:1.95rem;">Si existe el interés, estaríamos encantados de explorar una colaboración</h2>
+    <p class="dark-lead" style="max-width:660px;margin-bottom:.6rem;">Colombia — biodiversidad, riqueza cultural y desafíos de posicionamiento digital — es exactamente el tipo de destino que genera investigación aplicada de alto impacto.</p>
+    <div class="offer-box">
+      <h3>Lo que podríamos explorar para otoño 2026</h3>
+      <ul class="offer-items">
+        <li><span class="offer-num">01</span><span><strong style="color:#fff;">Proyectos de Inteligencia de Marketing:</strong> Análisis de percepción digital, segmentación o brechas de conversión para destinos colombianos.</span></li>
+        <li><span class="offer-num">02</span><span><strong style="color:#fff;">Tesis de máster aplicadas:</strong> Estudiantes trabajando con contrapartes colombianas en turismo cafetero, ecoturismo, patrimonio o transformación digital.</span></li>
+        <li><span class="offer-num">03</span><span><strong style="color:#fff;">Intercambio académico:</strong> Visitas, conferencias conjuntas o expertos colombianos participando en la formación en París.</span></li>
+      </ul>
+    </div>
+    <p style="font-size:.77rem;color:rgba(255,255,255,.38);margin-top:.9rem;font-style:italic;">Abiertos a explorar qué formato tiene más sentido para las prioridades de la delegación.</p>
+  </div>
+</section>
+
+
+<script>
+  const sections = document.querySelectorAll('section[data-s]');
+  const total    = sections.length;
+  let   current  = 0;
+  function updateNav() {
+    document.getElementById('prevBtn').disabled = current === 0;
+    document.getElementById('nextBtn').disabled = current === total - 1;
+    document.querySelectorAll('.sb-item').forEach(el => el.classList.toggle('active', +el.dataset.target === current));
+  }
+  function goTo(idx) {
+    current = Math.max(0, Math.min(total - 1, idx));
+    sections[current].scrollIntoView({ behavior:'smooth' });
+    updateNav();
+  }
+  function navigate(dir) { goTo(current + dir); }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting && e.intersectionRatio >= 0.5) { current = +e.target.dataset.s; updateNav(); } });
+  }, { threshold: 0.5 });
+  sections.forEach(s => io.observe(s));
+  document.addEventListener('keydown', e => {
+    if (['ArrowDown','ArrowRight',' '].includes(e.key)) { e.preventDefault(); navigate(1); }
+    if (['ArrowUp','ArrowLeft'].includes(e.key))         { e.preventDefault(); navigate(-1); }
+  });
+  updateNav();
+</script>
+</body>
+</html>
