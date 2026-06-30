@@ -9,7 +9,7 @@
     "app"
   ],
   "scripts": {
-    "build:legacy": "node scripts/build.js",
+    "build:legacy": "node scripts/build.cjs",
     "deploy:legacy": "npm run build:legacy && firebase deploy --only hosting"
   },
   "engines": {

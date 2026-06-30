@@ -7,6 +7,8 @@
   ],
   "projects": [
     { "id": "botswana",    "type": "react",       "src": "projects/botswana/dashboard" },
+    { "id": "gambia-birdfair-prep", "type": "static-file", "src": "projects/gambia/birding/birdfair-prep-deck.html", "dest": "gambia-birdfair/prep-deck.html" },
+    { "id": "gambia-b2b-toolkit",   "type": "static-file", "src": "projects/gambia/birding/b2b-toolkit.html",         "dest": "gambia-birdfair-toolkit/index.html" },
     { "id": "colombia",           "type": "static-file", "src": "projects/colombia/trecc-innovation-proposal.html", "dest": "colombia/index.html" },
     { "id": "colombia-sesion1",   "type": "static-file", "src": "projects/colombia/sesion1-deck.html",            "dest": "colombia/sesion1-deck.html" },
     { "id": "colombia-sesion2",   "type": "static-file", "src": "projects/colombia/sesion2-deck.html",            "dest": "colombia/sesion2-deck.html" },
