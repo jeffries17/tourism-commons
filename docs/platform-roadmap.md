@@ -26,14 +26,26 @@ Rather than acting as another OTA, Tourism Commons provides destinations, associ
 
 ## Current State (June 2026)
 
-The repository has grown organically across multiple consulting projects. The stack is fragmented:
+**STATUS: Platform build complete, deployed to Vercel, awaiting env var configuration.**
 
-- **Hosting:** Firebase Hosting (single site, custom build script)
-- **Frontend:** Mix of React/Vite SPAs, standalone HTML deliverables, static HTML directories
-- **Backend:** Firebase Cloud Functions (Node/Express)
-- **Build system:** Custom `scripts/build.js` + `projects.json` registry — assembles a `build/` output dir
-- **Design system:** None — every project has its own styles
-- **Platform:** No coherent public face — just a routing table
+The repository has been restructured from a fragmented monolith to a modern monorepo:
+
+- **Hosting:** Vercel (formerly Firebase Hosting)
+- **Frontend:** Next.js 15 App Router + shared `@tourism-commons/ui` design system
+- **Build system:** npm workspaces (packages/ui, app/)
+- **Design system:** Centralized Tailwind config with brand tokens + 6 core components
+- **Platform:** Unified public interface with protected content via per-project passwords
+- **Backend:** Firebase Cloud Functions (temporary), Supabase migration planned
+
+**Completed June 29–30, 2026:**
+- ✅ Step 1: Git cleanup (1,066 files deleted)
+- ✅ Step 2: Design system (packages/ui/)
+- ✅ Step 3: Next.js app (app/)
+- ✅ Step 4: Project registry (content/projects/)
+- ✅ Step 5: Protection mechanism (per-project passwords)
+- ✅ Step 6: Vercel setup (vercel.json, config, legacy routes)
+- ✅ Local dev tested and working
+- ⏳ Vercel deploy in progress (env vars pending)
 
 **Active projects:**
 
@@ -243,6 +255,36 @@ This allows Tourism Commons to demonstrate the scope and nature of work publicly
 
 ---
 
+## Pending (Next Session)
+
+Before the platform is fully live:
+
+1. **Set environment variables in Vercel:**
+   - `GAMBIA_PASSWORD`
+   - `COLOMBIA_PASSWORD`
+   - `INDIAN_OCEAN_PASSWORD`
+   - `BOTSWANA_PASSWORD`
+   - `BENIN_PASSWORD`
+   - `TIMORLESTE_PASSWORD`
+   
+   See: Vercel dashboard → tourism-commons project → Settings → Environment Variables
+
+2. **Configure custom domain:**
+   - Vercel dashboard → Settings → Domains → Add tourismcommons.org
+   - Update DNS at registrar with Vercel's CNAME record
+   
+3. **Test unlock flow:**
+   - Visit tourismcommons.org/projects/gambia
+   - Click protected link
+   - Enter password from env var
+   - Verify cookie-based access works for 30 days
+
+4. **Verify legacy route rewrites:**
+   - Test /gambia-birdfair, /botswana, etc. still work
+   - Ensure build/ directory assets are accessible
+
+---
+
 ## Later Phases (Not This Sprint)
 
 - Supabase migration (Firebase → PostgreSQL)
@@ -254,3 +296,44 @@ This allows Tourism Commons to demonstrate the scope and nature of work publicly
 - Converting standalone HTML deliverables to Next.js pages
 - Newsletter (Resend or Beehiiv)
 - Public API for destination data
+
+---
+
+## Development Notes
+
+### Key Files
+- `vercel.json` — Build/dev commands, rewrites for legacy routes
+- `packages/ui/` — Shared design system (components, tokens, config)
+- `app/` — Next.js app (routes, API endpoints, layouts)
+- `content/projects/*.json` — Project metadata registry
+- `docs/VERCEL_SETUP.md` — Detailed Vercel deployment guide
+
+### Local Development
+```bash
+npm install --workspaces
+cd app && npm run dev
+# Visit http://localhost:3000
+```
+
+### Project Structure
+```
+tourism-commons/
+├── app/                      # Next.js 15 app
+├── packages/ui/              # Shared design system
+├── content/projects/         # Project metadata registry
+├── projects/                 # Client project working files
+├── pipeline/                 # Python analysis tools
+├── tools/                    # Internal React SPAs (to migrate)
+├── functions/                # Firebase Cloud Functions (to migrate)
+├── build/                    # Legacy Firebase build output
+├── vercel.json               # Vercel config
+└── docs/                     # Documentation
+```
+
+### Git History
+- `dee330f` — Fix: vercel.json env format
+- `12fe07b` — Simplify vercel.json, remove env array
+- `0abe7a2` — Fix: Add tailwind.config export
+- `b87f4a8` — Step 6: Vercel setup
+- `eaa9096` — Steps 2-5: Platform build complete
+- `e6b53ea` — Step 1: Git cleanup
