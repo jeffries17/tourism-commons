@@ -4,8 +4,10 @@
   "description": "Shared component library and design system for Tourism Commons",
   "type": "module",
   "exports": {
+    ".": "./index.ts",
     "./components/*": "./components/*.tsx",
-    "./lib/*": "./lib/*.ts"
+    "./lib/*": "./lib/*.ts",
+    "./tailwind.config": "./tailwind.config.ts"
   },
   "dependencies": {
     "react": "^18.2.0",
