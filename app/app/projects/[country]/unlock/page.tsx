@@ -1,14 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 
-interface UnlockPageProps {
-  params: { country: string }
-}
-
-export default function UnlockPage({ params }: UnlockPageProps) {
+export default function UnlockPage() {
   const router = useRouter()
+  const params = useParams() as { country: string }
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
