@@ -9,7 +9,7 @@ interface UnlockPageProps {
 
 export default function UnlockPage({ params }: UnlockPageProps) {
   const router = useRouter()
-  const [token, setToken] = useState('')
+  const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
@@ -24,12 +24,12 @@ export default function UnlockPage({ params }: UnlockPageProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           country: params.country,
-          token,
+          password,
         }),
       })
 
       if (!response.ok) {
-        throw new Error('Invalid access token')
+        throw new Error('Invalid password')
       }
 
       // Redirect back to project page
@@ -46,23 +46,23 @@ export default function UnlockPage({ params }: UnlockPageProps) {
       <div className="rounded-lg border border-neutral-200 bg-white p-8">
         <h1 className="mb-2 text-2xl font-bold text-neutral-900">Access Required</h1>
         <p className="mb-6 text-neutral-600">
-          This project content is password-protected. Enter the access token provided by Tourism Commons.
+          This project content is password-protected. Enter the password provided by Tourism Commons.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
-              htmlFor="token"
+              htmlFor="password"
               className="block text-sm font-medium text-neutral-700"
             >
-              Access Token
+              Password
             </label>
             <input
-              id="token"
+              id="password"
               type="password"
-              value={token}
-              onChange={(e) => setToken(e.target.value)}
-              placeholder="Enter your access token"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
               className="mt-2 w-full rounded-lg border border-neutral-300 px-4 py-2 text-neutral-900 placeholder-neutral-400 focus:border-accent-500 focus:outline-none"
               disabled={isLoading}
             />
@@ -76,7 +76,7 @@ export default function UnlockPage({ params }: UnlockPageProps) {
 
           <button
             type="submit"
-            disabled={isLoading || !token}
+            disabled={isLoading || !password}
             className="w-full rounded-lg bg-accent-600 py-2 font-semibold text-white transition-colors hover:bg-accent-700 disabled:opacity-50"
           >
             {isLoading ? 'Unlocking...' : 'Unlock'}

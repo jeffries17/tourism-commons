@@ -1,42 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// Token storage — will be replaced with env vars
-const ACCESS_TOKENS: Record<string, string> = {
-  gambia: process.env.GAMBIA_ACCESS_TOKEN || '',
-  colombia: process.env.COLOMBIA_ACCESS_TOKEN || '',
-  'indian-ocean': process.env.INDIAN_OCEAN_ACCESS_TOKEN || '',
-  botswana: process.env.BOTSWANA_ACCESS_TOKEN || '',
-  benin: process.env.BENIN_ACCESS_TOKEN || '',
-  timorleste: process.env.TIMORLESTE_ACCESS_TOKEN || '',
+// Project-specific passwords
+const PROJECT_PASSWORDS: Record<string, string> = {
+  gambia: process.env.GAMBIA_PASSWORD || '',
+  colombia: process.env.COLOMBIA_PASSWORD || '',
+  'indian-ocean': process.env.INDIAN_OCEAN_PASSWORD || '',
+  botswana: process.env.BOTSWANA_PASSWORD || '',
+  benin: process.env.BENIN_PASSWORD || '',
+  timorleste: process.env.TIMORLESTE_PASSWORD || '',
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { country, token } = body
+    const { country, password } = body
 
     // Validate input
-    if (!country || !token) {
+    if (!country || !password) {
       return NextResponse.json(
-        { error: 'Missing country or token' },
+        { error: 'Missing country or password' },
         { status: 400 }
       )
     }
 
-    // Validate token
-    const expectedToken = ACCESS_TOKENS[country]
-    if (!expectedToken || token !== expectedToken) {
+    // Validate password
+    const expectedPassword = PROJECT_PASSWORDS[country]
+    if (!expectedPassword || password !== expectedPassword) {
       return NextResponse.json(
-        { error: 'Invalid access token' },
+        { error: 'Invalid password' },
         { status: 401 }
       )
     }
 
-    // Set cookie with the token
+    // Set cookie with the password
     const response = NextResponse.json({ success: true })
     response.cookies.set({
-      name: `tc-${country}-token`,
-      value: token,
+      name: `tc-${country}-access`,
+      value: password,
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',

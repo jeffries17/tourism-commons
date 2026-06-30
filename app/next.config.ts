@@ -7,39 +7,51 @@ const nextConfig: NextConfig = {
     domains: [],
     remotePatterns: [],
   },
-  redirects: async () => [
-    // Temporary rewrites to keep old Firebase routes working during transition
-    {
-      source: '/gambia-birdfair/:path*',
-      destination: '/build/gambia-birdfair/:path*',
-      permanent: false,
-    },
-    {
-      source: '/gambia-birdfair-toolkit/:path*',
-      destination: '/build/gambia-birdfair-toolkit/:path*',
-      permanent: false,
-    },
-    {
-      source: '/colombia/:path*',
-      destination: '/build/colombia/:path*',
-      permanent: false,
-    },
-    {
-      source: '/indian-ocean/:path*',
-      destination: '/build/indian-ocean/:path*',
-      permanent: false,
-    },
-    {
-      source: '/botswana/:path*',
-      destination: '/build/botswana/:path*',
-      permanent: false,
-    },
-    {
-      source: '/timorleste/:path*',
-      destination: '/build/timorleste/:path*',
-      permanent: false,
-    },
-  ],
+  rewrites: async () => ({
+    beforeFiles: [
+      // Temporary rewrites to keep old Firebase routes working during transition
+      {
+        source: '/gambia-birdfair/:path*',
+        destination: '/build/gambia-birdfair/:path*',
+      },
+      {
+        source: '/gambia-birdfair-toolkit/:path*',
+        destination: '/build/gambia-birdfair-toolkit/:path*',
+      },
+      {
+        source: '/colombia/:path*',
+        destination: '/build/colombia/:path*',
+      },
+      {
+        source: '/indian-ocean/:path*',
+        destination: '/build/indian-ocean/:path*',
+      },
+      {
+        source: '/botswana/:path*',
+        destination: '/build/botswana/:path*',
+      },
+      {
+        source: '/timorleste/:path*',
+        destination: '/build/timorleste/:path*',
+      },
+      {
+        source: '/sentiment-analysis/:path*',
+        destination: '/build/sentiment-analysis/:path*',
+      },
+      {
+        source: '/cbt-monitoring/:path*',
+        destination: '/build/cbt-monitoring/:path*',
+      },
+      {
+        source: '/tourism-instagram-index/:path*',
+        destination: '/build/tourism-instagram-index/:path*',
+      },
+      {
+        source: '/gambia-itc/:path*',
+        destination: '/build/gambia-itc/:path*',
+      },
+    ],
+  }),
 }
 
 export default nextConfig
