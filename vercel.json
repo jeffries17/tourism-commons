@@ -6,36 +6,26 @@
   "outputDirectory": "app/.next",
   "devCommand": "cd app && npm run dev",
   "installCommand": "npm install --workspaces",
-  "env": [
-    {
-      "key": "TOURISM_COMMONS_ACCESS_TOKEN",
-      "description": "Shared password for protected project content"
-    },
-    {
-      "key": "GAMBIA_PASSWORD",
+  "env": {
+    "GAMBIA_PASSWORD": {
       "description": "Password for Gambia project"
     },
-    {
-      "key": "COLOMBIA_PASSWORD",
+    "COLOMBIA_PASSWORD": {
       "description": "Password for Colombia project"
     },
-    {
-      "key": "INDIAN_OCEAN_PASSWORD",
+    "INDIAN_OCEAN_PASSWORD": {
       "description": "Password for Indian Ocean Blue Tourism project"
     },
-    {
-      "key": "BOTSWANA_PASSWORD",
+    "BOTSWANA_PASSWORD": {
       "description": "Password for Botswana project"
     },
-    {
-      "key": "BENIN_PASSWORD",
+    "BENIN_PASSWORD": {
       "description": "Password for Benin project"
     },
-    {
-      "key": "TIMORLESTE_PASSWORD",
+    "TIMORLESTE_PASSWORD": {
       "description": "Password for Timor-Leste project"
     }
-  ],
+  },
   "rewrites": [
     {
       "source": "/gambia-birdfair/:path*",
