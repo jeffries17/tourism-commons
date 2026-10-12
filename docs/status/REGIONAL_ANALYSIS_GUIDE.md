@@ -24,7 +24,7 @@ You need 3 API keys (all free tiers available):
 
 ```bash
 # 1. Google Custom Search API (100 searches/day free)
-export GOOGLE_API_KEY='AIzaSyCgPKAJRRguxmiLJigKT5r42-Sfxu0zaYw'
+export GOOGLE_API_KEY='<YOUR_GOOGLE_API_KEY>'
 export GOOGLE_SEARCH_ENGINE_ID='your-search-engine-id'
 
 # 2. OpenAI API (pay as you go, ~$0.01 per assessment)

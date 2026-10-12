@@ -1,7 +1,7 @@
 # Google Custom Search API Setup (2 minutes)
 
 ## ✅ You Have: API Key
-`AIzaSyCgPKAJRRguxmiLJigKT5r42-Sfxu0zaYw`
+`<YOUR_GOOGLE_API_KEY>`
 
 ## 🔍 You Need: Search Engine ID
 
@@ -21,7 +21,7 @@
 
 ### Step 3: Test It
 ```bash
-export GOOGLE_API_KEY='AIzaSyCgPKAJRRguxmiLJigKT5r42-Sfxu0zaYw'
+export GOOGLE_API_KEY='<YOUR_GOOGLE_API_KEY>'
 export GOOGLE_SEARCH_ENGINE_ID='your-search-engine-id-here'
 python3 test_google_search.py
 ```

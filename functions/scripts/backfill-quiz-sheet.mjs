@@ -12,7 +12,8 @@
 
 import { google } from 'googleapis';
 
-const FIRESTORE_API_KEY = 'AIzaSyD_oUwfnUATP48ah2K48AWSaNEYJLgoaW4';
+const FIRESTORE_API_KEY = process.env.FIRESTORE_API_KEY;
+if (!FIRESTORE_API_KEY) throw new Error('Set FIRESTORE_API_KEY before running this script');
 const PROJECT_ID = 'tourism-development-d620c';
 const COLLECTION = 'quiz_results';
 const TAB = 'Resultados';
